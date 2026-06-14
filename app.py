@@ -107,6 +107,10 @@ table.x402 td.cost { color: #f9a825; white-space: nowrap; }
 pre { white-space: pre-wrap; word-wrap: break-word; color: #bbb; font-size: 13px; }
 .full-text { font-size: 12px; color: #aaa; white-space: pre-wrap; background: #0a0a0a; border: 1px solid #1e1e1e; border-radius: 4px; padding: 12px; max-height: 400px; overflow-y: auto; }
 .nav { margin-bottom: 20px; font-size: 13px; }
+details summary::-webkit-details-marker { display: none; }
+details summary { outline: none; }
+details[open] .match-header { border-bottom: 1px solid #222; }
+details[open] summary span.chevron { transform: rotate(180deg); display: inline-block; }
 </style>
 """
 
@@ -215,13 +219,16 @@ async def dashboard():
                 </div>'''
 
             cards += f"""<div class="match-card">
+              <details>
+              <summary style="list-style:none;cursor:pointer;">
               <div class="match-header">
                 <div>
                   <div class="match-title">{_team(r['home'])} vs {_team(r['away'])}</div>
-                  <div class="match-time">{r.get("kickoff","")[:16].replace("T"," ")} UTC</div>
+                  <div class="match-time">{r.get("kickoff","")[:16].replace("T"," ")} UTC &nbsp;·&nbsp; Pick: <b>{_team(_pick_display(pred.get('pick','?'), r['home'], r['away']))}</b> &nbsp;·&nbsp; conf {pred.get("confidence","?")}/10</div>
                 </div>
-                {_badge(r)}
+                <div style="display:flex;align-items:center;gap:8px;">{_badge(r)}<span style="color:#444;font-size:16px;">⌄</span></div>
               </div>
+              </summary>
               <div class="match-body">
                 <div class="pred-row">
                   <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick','?'), r['home'], r['away']))}</div></div>
@@ -234,6 +241,7 @@ async def dashboard():
                 {result_html}
                 <a href="/match/{_esc(r['home'])}_{_esc(r['away'])}" class="detail-link">Full reasoning & reflection →</a>
               </div>
+              </details>
             </div>"""
         html += f'<div class="section"><h2>Predictions</h2>{cards}</div>'
     else:
