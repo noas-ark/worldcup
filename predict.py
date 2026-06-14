@@ -18,6 +18,7 @@ import gemini
 import requests
 from dotenv import load_dotenv
 
+import discord_notify
 import wallet
 
 # ── Setup ──────────────────────────────────────────────────────────────────
@@ -177,7 +178,7 @@ if research_plan:
                 log("paid $%.4f → %s", cost, url)
                 data_text = r.text[:2000]  # cap at 2000 chars
                 context.append({"source": url, "cost": cost, "data": data_text})
-                services_used.append({"source": url, "cost": cost, "reason": svc.get("reason", "")})
+                services_used.append({"source": url, "cost": cost, "reason": svc.get("reason", ""), "data": data_text})
                 total_spent += cost
             except Exception as e:
                 err("Failed %s: %s", url, e)
@@ -290,6 +291,12 @@ try:
     log("Pushed to HF Space — dashboard updating")
 except Exception as e:
     err("Git push failed (prediction saved locally): %s", e)
+
+discord_notify.notify_prediction(
+    match=MATCH, pick=pick, confidence=confidence, bet=bet,
+    reasoning=reasoning, research_cost=total_spent,
+    services_used=services_used, kickoff=kickoff,
+)
 
 print(f"\n{'='*50}")
 print(f"PREDICTION: {MATCH}")

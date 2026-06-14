@@ -219,14 +219,45 @@ async def match_detail(match_key: str):
         result_html = f'<div class="result-bar {cls}" style="margin-bottom:16px;"><span class="result-score">{_esc(home)} {res["home_score"]}–{res["away_score"]} {_esc(away)}</span> &nbsp;{_badge(entry)}</div>'
 
     used_urls = {s["source"] for s in used}
+
+    # Build per-endpoint cards for purchased data
+    endpoint_cards = ""
+    for s in used:
+        data_content = _esc(s.get("data", "(no data saved)"))
+        endpoint_cards += f"""
+<div style="background:#0a0a0a;border:1px solid #2a2a2a;border-radius:4px;margin-bottom:12px;overflow:hidden;">
+  <div style="background:#161616;padding:8px 12px;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;">
+    <div style="color:#4dabf7;font-size:12px;word-break:break-all;">{_esc(s['source'])}</div>
+    <div style="color:#f9a825;font-size:12px;white-space:nowrap;margin-left:12px;">${s['cost']:.4f} USDC</div>
+  </div>
+  <div style="padding:8px 12px;">
+    <div style="font-size:11px;color:#666;margin-bottom:6px;">Why purchased: {_esc(s.get('reason',''))}</div>
+    <div style="font-size:11px;color:#555;text-transform:uppercase;margin-bottom:4px;">Data received:</div>
+    <div style="font-size:12px;color:#aaa;white-space:pre-wrap;max-height:200px;overflow-y:auto;background:#050505;padding:8px;border-radius:3px;border:1px solid #1a1a1a;">{data_content}</div>
+  </div>
+</div>"""
+
+    # Summary table of all planned endpoints
     plan_rows = ""
     for s in planned:
-        status = '✓ bought' if s["url"] in used_urls else '<span style="color:#555">skipped</span>'
+        if s["url"] in used_urls:
+            status = '<span style="color:#4caf50">✓ purchased</span>'
+        else:
+            status = '<span style="color:#555">skipped</span>'
         plan_rows += f'<tr><td class="url">{_esc(s["url"])}</td><td class="cost">${s.get("cost",0):.4f}</td><td>{status}</td><td>{_esc(s.get("reason",""))}</td></tr>'
 
     x402_section = ""
-    if planned:
-        x402_section = f'<div class="section"><h2>x402 Research — ${entry.get("research_cost",0):.4f} spent</h2><table class="x402"><tr><th>Endpoint</th><th>Cost</th><th>Status</th><th>Reason</th></tr>{plan_rows}</table></div>'
+    if planned or used:
+        total = entry.get("research_cost", 0)
+        budget = 0.50
+        cards_html = endpoint_cards if endpoint_cards else '<div class="no-data">No endpoints were purchased.</div>'
+        table_html = f'<table class="x402"><tr><th>Endpoint</th><th>Cost</th><th>Status</th><th>Reason</th></tr>{plan_rows}</table>' if plan_rows else ""
+        x402_section = f"""<div class="section">
+  <h2>x402 Data Purchases — ${total:.4f} spent of ${budget:.2f} budget</h2>
+  <div style="font-size:12px;color:#666;margin-bottom:12px;">{len(used)} of {len(planned)} planned endpoints purchased</div>
+  {cards_html}
+  {f'<details style="margin-top:8px;"><summary style="font-size:11px;color:#555;cursor:pointer;">All considered endpoints</summary><div style="margin-top:8px;">{table_html}</div></details>' if table_html else ""}
+</div>"""
 
     eval_html = f'<div class="section"><h2>Reflection & Evaluation</h2><div class="full-text">{_esc(entry.get("evaluation","(not yet reflected)"))}</div></div>' if entry.get("evaluation") else ""
     snapshot_html = f'<div class="section"><h2>Strategy at Prediction Time</h2><div class="full-text">{_esc(entry.get("strategy_snapshot","(empty)"))}</div></div>' if entry.get("strategy_snapshot") is not None else ""
