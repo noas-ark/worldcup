@@ -1368,5 +1368,169 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "ESP vs CPV",
+    "home": "ESP",
+    "away": "CPV",
+    "kickoff": "2026-06-15T16:00Z",
+    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Late-breaking Team News:* Vital for assessing the fitness of key central playmakers or defenders, but must be purchased sparingly to avoid information overload.\n* **Not Useful / Wasteful:**\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Betting Odds & Macro-Tournament Rules:* Abstract factors like 48-team progression structures provide no actionable value for head-to-head matchups (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate, hyper-specific fitness queries leads to high costs and information overload. Consolidate search queries to 1-2 comprehensive tactical previews to keep research costs under $0.0300 per match.",
+    "information_needs": "FORM\n- How many goals did Cape Verde concede per game in their final CAF qualifiers and pre-tournament warm-ups, and did Spain struggle to break down deep defensive low-blocks in their June friendlies?\n\nPLAYERS\n- Are Spain's key progressive passers (like Pedri) and dynamic wingers (like Lamine Yamal) carrying any lingering knocks or muscle fatigue from the end of the European club season?\n- Does Cape Verde have a fit, high-pace transition outlet striker capable of exploiting the high defensive line Spain's center-backs typically employ?\n\nTACTICS\n- Will Spain deploy a traditional focal-point striker to contest aerial duels inside the box, or will they use a fluid front three to drag Cape Verde's center-backs out of position?\n- Does Cape Verde utilize a low-block 5-4-1 or a mid-block 4-3-3 when facing elite UEFA opposition, and what is their statistical PPDA (Passes Per Defensive Action) in those defensive phases?\n\nH2H\n- What is Spain\u2019s historical record, goal differential, and tactical vulnerability in World Cup group stages against CAF opponents, particularly since their 2022 match against Morocco?\n\nCONTEXT\n- Given that this 2026 World Cup features 48 teams where the best third-place teams qualify, does Cape Verde\u2019s manager view a narrow 1-0 or 2-0 defeat as a \"safe\" goal-difference result, or must they risk playing for a draw?\n\nMARKET\n- What are the current Asian Handicap and Over/Under lines, and does the market implied probability suggest a comfortable multi-goal margin (e.g., Spain -2.25) or a low-scoring, tight affair?\n\nNEWS\n- Are there any reported logistical delays, climate adaptation struggles, or internal federation disputes regarding bonuses within the Cape Verde camp since their arrival at their North American base?\n\nVENUE\n- Which North American host stadium is staging this match, and does the venue feature an artificial turf pitch or a temporary grass surface that could slow down Spain's rapid, horizontal ball circulation?",
+    "research_gaps": [
+      {
+        "need": "Given that this 2026 World Cup features 48 teams where the best third-place teams qualify, does Cape Verde\u2019s manager view a narrow 1-0 or 2-0 defeat as a 'safe' goal-difference result, or must they risk playing for a draw?",
+        "category": "CONTEXT",
+        "ideal_service": "An exclusive sports journalism or coaching interview database featuring translated, direct quotes regarding tournament math and tactical risk tolerance from managers."
+      },
+      {
+        "need": "What are the current Asian Handicap and Over/Under lines, and does the market implied probability suggest a comfortable multi-goal margin (e.g., Spain -2.25) or a low-scoring, tight affair?",
+        "category": "MARKET",
+        "ideal_service": "A real-time sports betting odds API returning Asian Handicap lines, Over/Under parameters, and bookmaker implied probabilities."
+      },
+      {
+        "need": "Which North American host stadium is staging this match, and does the venue feature an artificial turf pitch or a temporary grass surface that could slow down Spain's rapid, horizontal ball circulation?",
+        "category": "VENUE",
+        "ideal_service": "A stadium specifications API with detailed pitch composition logs, turf dampness configurations, and operational history."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.transfermarkt.com/kap-verde/startseite/verein/4207"
+        },
+        "cost": 0.002,
+        "reason": "Extracts squad listings and player profiles for Cape Verde to identify high-pace transitional forwards currently in the team.",
+        "need": "Does Cape Verde have a fit, high-pace transition outlet striker capable of exploiting the high defensive line Spain's center-backs typically employ?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://fbref.com/en/squads/9fa08b9b/Cape-Verde-Men-Stats"
+        },
+        "cost": 0.002,
+        "reason": "Provides exact recent defensive performance metrics, clean sheets, and goals conceded per game for Cape Verde.",
+        "need": "How many goals did Cape Verde concede per game in their final CAF qualifiers and pre-tournament warm-ups, and did Spain struggle to break down deep defensive low-blocks in their June friendlies?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.coachesvoice.com/cv/luis-de-la-fuente-spain-tactics/"
+        },
+        "cost": 0.002,
+        "reason": "Provides a deep tactical breakdown of Luis de la Fuente's build-up structures, central attacking preferences, and defensive transition vulnerabilities.",
+        "need": "Will Spain deploy a traditional focal-point striker to contest aerial duels inside the box, or will they use a fluid front three to drag Cape Verde's center-backs out of position?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://theanalyst.com/eu/2024/01/cape-verde-africa-cup-of-nations-tactics/"
+        },
+        "cost": 0.002,
+        "reason": "Extracts detailed defensive phase structures, block heights, and pressing metrics (PPDA) for Cape Verde.",
+        "need": "Does Cape Verde utilize a low-block 5-4-1 or a mid-block 4-3-3 when facing elite UEFA opposition, and what is their statistical PPDA (Passes Per Defensive Action) in those defensive phases?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Spain_at_the_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Aggregates historical group stage performance and tactical patterns of Spain when facing African opposition.",
+        "need": "What is Spain\u2019s historical record, goal differential, and tactical vulnerability in World Cup group stages against CAF opponents, particularly since their 2022 match against Morocco?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Spain national team Pedri Lamine Yamal injury fitness",
+          "query": "Spain national team Pedri Lamine Yamal injury fitness"
+        },
+        "cost": 0.01,
+        "reason": "Provides real-time news and injury reports on Spain's key attacking players, addressing the highest-priority player fitness need.",
+        "need": "Are Spain's key progressive passers (like Pedri) and dynamic wingers (like Lamine Yamal) carrying any lingering knocks or muscle fatigue from the end of the European club season?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Cape Verde national team bonus dispute logistics",
+          "query": "Cape Verde national team bonus dispute logistics"
+        },
+        "cost": 0.01,
+        "reason": "Screens for potential internal squad disruption, federation disputes, or physical adaptation issues affecting team harmony.",
+        "need": "Are there any reported logistical delays, climate adaptation struggles, or internal federation disputes regarding bonuses within the Cape Verde camp since their arrival at their North American base?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Aggregates historical group stage performance and tactical patterns of Spain when facing African opposition.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/Spain_at_the_FIFA_World_Cup\",\"finalUrl\":\"https://en.wikipedia.org/wiki/Spain_at_the_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"From Wikipedia, the free encyclopedia\\n\\n[Spain](https://en.wikipedia.org/wiki/Spain_national_football_team \\\"Spain national football team\\\") is one of only eight countries ever to have won the [FIFA World Cup](https://en.wikipedia.org/wiki/FIFA_World_Cup \\\"FIFA World Cup\\\"), doing so in South Africa in [2010](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup \\\"2010 FIFA World Cup\\\"), the first time the team had reached the final.[\\\\[1\\\\]](#cite_note-1)\\n\\n[![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/FIFA_World_Cup_2010_Spain_with_cup.jpg/330px-FIFA_World_Cup_2010_Spain_with_cup.jpg)](https://en.wikipedia.org/wiki/File:FIFA_World_Cup_2010_Spain_with_cup.jpg)\\n\\nSpain celebrating victory in the [2010 FIFA World Cup](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup \\\"2010 FIFA World Cup\\\") in South Africa.\\n\\nThe team is [one of the most present at the World Cup](https://en.wikipedia.org/wiki/National_team_appearances_in_the_FIFA_World_Cup \\\"National team appearances in the FIFA World Cup\\\"), with 16 appearances out of the 22 tournaments. Prior to their win in 2010, Spain's best World Cup result was a fourth-place finish in [1950](https://en.wikipedia.org/wiki/1950_FIFA_World_Cup \\\"1950 FIFA World Cup\\\").[\\\\[2\\\\]](#cite_note-2)\\n\\nSpain have reached the semi-finals twice and the quarter-finals six times, but have not reached the last 8 since their triumph in 2010.\\n\\n## FIFA World Cup record\\n\\n\\\\[[edit](https://en.wikipedia.org/w/index.php?title=Spain_at_the_FIFA_World_Cup&action=edit&section=1 \\\"Edit section: FIFA World Cup record\\\")\\\\]\\n\\n[FIFA World Cup](https://en.wikipedia.org/wiki/FIFA_World_Cup \\\"FIFA World Cup\\\") record\\n\\n[FIFA World Cup qualification](https://en.wikipedia.org/wiki/FIFA_World_Cup_qualification \\\"FIFA World Cup qualification\\\") record\\n\\nYear\\n\\nRound\\n\\nPositio"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Provides real-time news and injury reports on Spain's key attacking players, addressing the highest-priority player fitness need.",
+        "data": "{\"topic\":\"Spain national team Pedri Lamine Yamal injury fitness\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Screens for potential internal squad disruption, federation disputes, or physical adaptation issues affecting team harmony.",
+        "data": "{\"topic\":\"Cape Verde national team bonus dispute logistics\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read/js",
+        "cost": 0.002,
+        "reason": "Bypasses previous simple reading failures by using Skim's JS-rendered engine on Transfermarkt's squad list, which dynamically lists active forwards, market values, and player profiles.",
+        "data": "{\"url\":\"https://www.transfermarkt.us/kap-verde/kader/verein/14163\",\"finalUrl\":\"https://www.transfermarkt.us/kap-verde/kader/verein/14163\",\"mode\":\"js\",\"markdown\":\"[DISCOVER](https://www.transfermarkt.us/) [World Cup 2026](https://www.transfermarkt.us/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.us/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.us/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.us/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.us/navigation/statistiken) [FORUM](https://www.transfermarkt.us/navigation/community) [GAMING](https://www.transfermarkt.us/navigation/gaming)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/mvu-mls-desktop-june-2026.jpg)](https://www.transfermarkt.us/major-league-soccer-market-values-heung-min-son-drops-sebastian-berhalter-up-by-euro-3m/view/news/480074)\\n\\nThis page displays a detailed overview of the club's current squad. It shows all personal information about the players, including age, nationality, contract duration and market value. It also contains a table with average age, cumulative market value and average market value for each player position and overall.\\n\\n[#](https://www.transfermarkt.us/kap-verde/kader/verein/14163/sort/trikotNumber.desc)\\n\\n[Player](https://www.transfermarkt.us/kap-verde/kader/verein/14163/sort/name)\\n\\n[Age](https://www.transfermarkt.us/kap-verde/kader/verein/14163/sort/age)\\n\\nClub\\n\\n[Market value](https://www.transfermarkt.us/kap-verde/kader/verein/14163/sort/marketValueRaw)\\n\\n\\\\-\\n\\n![Djibrilla Kassali](https://img.a.transfermarkt.technology/portrait/medium/1021787-1755261462.jpg?lm=1 \\\"Djibrilla Kassali\\\")\\n\\n[Djibrilla Kassali](https://www.transfermarkt.us/djibrilla-kassali/profil/spieler/1021787)\\n\\nGoalkeeper\\n\\n29\\n\\n[![Simba SC](https://tmssl.akamaized.net//images/wappen/verysmall/14191.png?lm=1770203476 \\\"Simba SC\\\")](https://www.transfermarkt.us/simba-s"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Avoids static page blocks by pulling recent global news intelligence and tactical analysis articles discussing De la Fuente's offensive shape and striker selections.",
+        "data": "{\"topic\":\"Spain national football team tactics Alvaro Morata\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Queries Soccerway's match archive instead of Wikipedia, providing clean, raw tabular data of Cape Verde's recent international results and scorelines.",
+        "data": "{\"url\":\"https://int.soccerway.com/teams/cape-verde-islands/cape-verde-islands/2103/matches/\",\"finalUrl\":\"https://www.soccerway.com/team/gramenet/xCObZ3wD/fixtures/\",\"mode\":\"basic\",\"markdown\":\"AD\\n\\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\\n\\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\\n\\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\\n\\n](https://www.joueurs-info-service.fr/)\\n\\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\\n\\n18+. Verantwortungsbewusst wetten.\\n\\n18+ Jogue com responsabilidade\\n\\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\\n\\n## [Spain](https://www.soccerway.com/spain/)\\n\\n![Gramenet](https://static.flashscore.com/res/image/data/bLSHRfZA-pEtKo6C5.png)\\n\\nGramenet\\n\\n[Summary](https://www.soccerway.com/team/gramenet/xCObZ3wD/ \\\"Summary\\\")[Odds](https://www.soccerway.com/team/gramenet/xCObZ3wD/odds/ \\\"Odds\\\")[Results](https://www.soccerway.com/team/gramenet/xCObZ3wD/results/ \\\"Results\\\")[Fixtures](https://www.soccerway.com/team/gramenet/xCObZ3wD/fixtures/ \\\"Fixtures\\\")[Standings](https://www.soccerway.com/team/gramenet/xCObZ3wD/standings/ \\\"Standings\\\")[Transfers](https://www.soccerway.com/team/gramenet/xCObZ3wD/transfers/ \\\"Transfers\\\")\",\"text\":\"AD\\n        Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\\n        Retrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\\n        18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter buwei.de\\n        18+. Verantwortungsbewusst wetten.\\n        18+ Jogue com responsabilidade\\n        21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Leverages GDELT news intelligence to search tactical previews and match reports covering Bubista's defensive system against high-tier football nations.",
+        "data": "{\"topic\":\"Cape Verde national football team defensive block tactics\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Extracts specialized post-match analyses from global football press regarding Spain's structural issues against ultra-defensive setups in their warm-up games.",
+        "data": "{\"topic\":\"Spain friendly match low block struggle\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      }
+    ],
+    "research_cost": 0.056,
+    "wallet_before": 4.697,
+    "wallet_after": 4.641,
+    "prediction": {
+      "pick": "home",
+      "confidence": 9,
+      "confidence_reason": "Spain's world-class tactical cohesion, elite playmaking depth, and clean bill of health raise confidence to near-maximum, with only the typical low-block frustration of tournament football preventing a perfect ten.",
+      "reasoning": "Spain's superior positional play, elite central playmaking, and dynamic wingers will comfortably dismantle Cape Verde's defensive structure."
+    },
+    "full_reasoning": "Spain\u2019s encounter with Cape Verde presents a significant mismatch in technical quality, tactical organization, and squad depth. Unlike other dominant sides that rely purely on isolated individual talent on the flanks, Spain under Luis de la Fuente boasts a highly cohesive and structured possession game. Their midfield, anchored by elite progressive playmakers, is masterfully designed to break down defensive blocks through quick vertical combinations and superior positional play, meaning they are unlikely to fall into the typical \"individual talent trap\" against lower-ranked opponents.\n\nCape Verde has shown defensive resilience in regional competitions, but the sheer speed, pressing intensity, and technical execution of Spain's counter-press will likely starve them of transition opportunities. Spain's ability to stretch the pitch with elite wingers like Lamine Yamal and Nico Williams, combined with their central playmaking depth, provides too many avenues of attack for Cape Verde's defensive unit to contain over 90 minutes.\n\nPICK: home\nCONFIDENCE: 9\nCONFIDENCE_REASON: Spain's world-class tactical cohesion, elite playmaking depth, and clean bill of health raise confidence to near-maximum, with only the typical low-block frustration of tournament football preventing a perfect ten.\nREASONING: Spain's superior positional play, elite central playmaking, and dynamic wingers will comfortably dismantle Cape Verde's defensive structure.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
