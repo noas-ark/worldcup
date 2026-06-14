@@ -471,5 +471,135 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "GER vs CUW",
+    "home": "GER",
+    "away": "CUW",
+    "kickoff": "2026-06-14T17:00Z",
+    "strategy_snapshot": "",
+    "information_needs": "FORM\n- How did Germany fare in their final pre-tournament warm-up fixtures in late May and early June 2026, and did they show defensive stability under Julian Nagelsmann?\n- What was Cura\u00e7ao's competitive form during the final stages of CONCACAF World Cup qualifying, and how did they perform in their recent friendlies against high-ranking non-CONCACAF opposition?\n\nPLAYERS\n- Are Germany's key creative catalysts, Jamal Musiala and Florian Wirtz, fully fit and free of lingering club-season fatigue to start in the attacking midfield?\n- Which of Cura\u00e7ao's key European-based players (such as those playing in the Dutch Eredivisie or English Football League) are fit and expected to anchor their midfield and defense?\n\nTACTICS\n- Will Cura\u00e7ao employ an ultra-defensive low-block 5-4-1 system to deny central space, and does Germany plan to counter this by using a traditional physical target man (like Niclas F\u00fcllkrug) or a fluid false-nine setup?\n\nH2H\n- Since this is a historic first senior meeting between the two nations, how has Germany historically performed in World Cup group openers against lower-ranked CONCACAF opponents?\n\nCONTEXT\n- As the opening match of the 2026 World Cup Group Stage for both teams, how does the tournament format (where goal difference is crucial for third-place qualification safety) affect Cura\u00e7ao\u2019s risk tolerance if they fall behind early?\n\nMARKET\n- What are the current Asian Handicap and Over/Under goal lines for this match, and what is the market's implied probability of Germany winning by a margin of 3 or more goals?\n\nNEWS\n- Are there any late-fitness tests or sudden illness outbreaks reported from either team's training camps in the 48 hours leading up to kickoff?\n\nVENUE\n- Which North American city and stadium is hosting this match, is it an enclosed air-conditioned dome or an open-air stadium, and how will local weather conditions (temperature/humidity) affect Germany\u2019s high-pressing intensity?",
+    "research_gaps": [
+      {
+        "need": "What are the current Asian Handicap and Over/Under goal lines for this match, and what is the market's implied probability of Germany winning by a margin of 3 or more goals?",
+        "category": "MARKET",
+        "ideal_service": "A sports betting and odds data API that aggregates pre-match bookmaker lines, including Asian Handicaps, Over/Under totals, and implied outcome probabilities."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Germany_national_football_team"
+        },
+        "cost": 0.002,
+        "reason": "Extracts Germany's recent match results, including the 2026 pre-tournament warm-up fixtures and defensive records under Nagelsmann.",
+        "need": "How did Germany fare in their final pre-tournament warm-up fixtures in late May and early June 2026, and did they show defensive stability under Julian Nagelsmann?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Cura%C3%A7ao_national_football_team"
+        },
+        "cost": 0.002,
+        "reason": "Extracts Cura\u00e7ao's qualifying campaign results and recent friendlies list to assess their competitive form.",
+        "need": "What was Cura\u00e7ao's competitive form during the final stages of CONCACAF World Cup qualifying, and how did they perform in their recent friendlies against high-ranking non-CONCACAF opposition?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Germany_at_the_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Reviews historical German World Cup group stage opening match records, specifically targeting previous CONCACAF matchups.",
+        "need": "Since this is a historic first senior meeting between the two nations, how has Germany historically performed in World Cup group openers against lower-ranked CONCACAF opponents?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Provides the official tournament regulations and format rules to analyze how goal difference affects qualification.",
+        "need": "As the opening match of the 2026 World Cup Group Stage for both teams, how does the tournament format (where goal difference is crucial for third-place qualification safety) affect Cura\u00e7ao\u2019s risk tolerance if they fall behind early?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Identifies the host city, venue specifications (roof type/dome), and allows assessment of climate impacts on high-pressing play.",
+        "need": "Which North American city and stadium is hosting this match, is it an enclosed air-conditioned dome or an open-air stadium, and how will local weather conditions (temperature/humidity) affect Germany\u2019s high-pressing intensity?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Germany squad fitness Musiala Wirtz preview"
+        },
+        "cost": 0.01,
+        "reason": "Fetches pre-match news updates regarding the physical condition and fitness of Musiala and Wirtz.",
+        "need": "Are Germany's key creative catalysts, Jamal Musiala and Florian Wirtz, fully fit and free of lingering club-season fatigue to start in the attacking midfield?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Curacao squad players fitness Eredivisie preview"
+        },
+        "cost": 0.01,
+        "reason": "Retrieves news about the European-based players in Cura\u00e7ao's squad and their fitness status.",
+        "need": "Which of Cura\u00e7ao's key European-based players (such as those playing in the Dutch Eredivisie or English Football League) are fit and expected to anchor their midfield and defense?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Germany Curacao tactical preview formation line-ups"
+        },
+        "cost": 0.01,
+        "reason": "Fetches tactical analysis and predicted formations/systems for both teams.",
+        "need": "Will Cura\u00e7ao employ an ultra-defensive low-block 5-4-1 system to deny central space, and does Germany plan to counter this by using a traditional physical target man (like Niclas F\u00fcllkrug) or a fluid false-nine setup?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Germany Curacao late fitness test injury illness preview"
+        },
+        "cost": 0.01,
+        "reason": "Scans recent news reports in the final 48 hours for training camp updates, illness outbreaks, or late withdrawals.",
+        "need": "Are there any late-fitness tests or sudden illness outbreaks reported from either team's training camps in the 48 hours leading up to kickoff?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Extracts Germany's recent match results, including the 2026 pre-tournament warm-up fixtures and defensive records under Nagelsmann.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/Germany_national_football_team\",\"finalUrl\":\"https://en.wikipedia.org/wiki/Germany_national_football_team\",\"mode\":\"basic\",\"markdown\":\"Germany\\n\\n[![Shirt badge/Association crest](https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/DFBEagle.svg/250px-DFBEagle.svg.png)](https://en.wikipedia.org/wiki/File:DFBEagle.svg \\\"Shirt badge/Association crest\\\")\\n\\n[Nickname(s)](https://en.wikipedia.org/wiki/List_of_national_association_football_teams_by_nickname \\\"List of national association football teams by nickname\\\")\\n\\n_DFB-Team_ ([DFB](https://en.wikipedia.org/wiki/German_Football_Association \\\"German Football Association\\\") Team)  \\n_Die Nationalelf_ (The National Eleven)  \\n_DFB-Elf_ (DFB Eleven)  \\n_Die Mannschaft_ (The Team)[\\\\[a\\\\]](#cite_note-5)\\n\\nAssociation\\n\\n[Deutscher Fu\u00dfball-Bund](https://en.wikipedia.org/wiki/German_Football_Association \\\"German Football Association\\\") (DFB)\\n\\nConfederation\\n\\n[UEFA](https://en.wikipedia.org/wiki/UEFA \\\"UEFA\\\") (Europe)\\n\\nHead coach\\n\\n[Julian Nagelsmann](https://en.wikipedia.org/wiki/Julian_Nagelsmann \\\"Julian Nagelsmann\\\")\\n\\n[Captain](https://en.wikipedia.org/wiki/Captain_\\\\(association_football\\\\) \\\"Captain (association football)\\\")\\n\\n[Joshua Kimmich](https://en.wikipedia.org/wiki/Joshua_Kimmich \\\"Joshua Kimmich\\\")\\n\\nMost [caps](https://en.wikipedia.org/wiki/Cap_\\\\(sport\\\\)#Association_football \\\"Cap (sport)\\\")\\n\\n[Lothar Matth\u00e4us](https://en.wikipedia.org/wiki/Lothar_Matth%C3%A4us \\\"Lothar Matth\u00e4us\\\") (150)\\n\\nTop scorer\\n\\n[Miroslav Klose](https://en.wikipedia.org/wiki/Miroslav_Klose \\\"Miroslav Klose\\\") ([71](https://en.wikipedia.org/wiki/List_of_international_goals_scored_by_Miroslav_Klose \\\"List of international goals scored by Miroslav Klose\\\"))\\n\\nHome stadium\\n\\n_[Various](#Home_stadium)_\\n\\n[FIFA code](https://en.wikipedia.org/wiki/List_of_FIFA_country_codes \\\"List of FIFA country codes\\\")\\n\\nGER\\n\\n![](https://upload.wikimedia.org/wikipedia/commons/9/93/Kit_left_arm_ger"
+      }
+    ],
+    "research_cost": 0.002,
+    "wallet_before": 4.969,
+    "wallet_after": 4.967,
+    "prediction": {
+      "pick": "home",
+      "confidence": 5,
+      "bet": 0.1,
+      "reasoning": "Insufficient data for strong prediction"
+    },
+    "full_reasoning": "To better evaluate the matchup between Germany and Cura\u00e7ao, we need to inspect Cura\u00e7ao's team profile, including their qualification pathway, head coach, key players, and recent results, while also analyzing Germany's squad under Julian Nagelsmann.\n\nLet's retrieve details on the Cura\u00e7ao national football team.\n\n```json\n{\n  \"url\": \"https://skim402.com/api/v2/read\",\n  \"params\": {\n    \"url\": \"https://en.wikipedia.org/wiki/Cura%C3%A7ao_national_football_team\"\n  }\n}\n```",
+    "retroactive": true,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
