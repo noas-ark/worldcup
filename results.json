@@ -1408,179 +1408,6 @@
     "reflected": false
   },
   {
-    "match": "BEL vs EGY",
-    "home": "BEL",
-    "away": "EGY",
-    "kickoff": "2026-06-15T19:00Z",
-    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n3. **NED vs JPN: Avoid \"Narrative Bias\" Overlooking Systemic Discipline**\nDo not assume physical size and individual quality will automatically overcome an elite, energetic, and tactically disciplined system. If the favorite has midfield fitness concerns (a compromised metronome) and the underdog has a highly fit defensive screen and a proven record of limiting top-tier nations, avoid a straight win prediction and favor a draw or handicap.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Defensive Records Against Highly Ranked Opponents:* Vital warning sign to identify underdogs capable of frustrating elite teams (informed by NED vs JPN).\n  * *Key Midfield Workload & Fitness Status:* Essential for determining if a favorite's central controller is compromised or an underdog's anchor is fully fit (informed by NED vs JPN).\n* **Not Useful / Wasteful:**\n  * *Bookmaker Odds & Asian Handicap:* Abstract lines often reinforce narrative bias instead of providing objective analytical value (informed by NED vs JPN).\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate fitness queries leads to high costs. Consolidate searches to 1-2 comprehensive previews to keep costs under $0.0300 per match (informed by AUS vs TUR).",
-    "information_needs": "FORM\n- What was Belgium\u2019s expected goals (xG) against per 90 during their final pre-tournament warm-up matches, and did they struggle to defend transitional counter-attacks in those games?\n- Did Egypt maintain their defensive solidity during the latter stages of CAF World Cup Qualifying, and how many clean sheets did they keep against top-50 FIFA-ranked opponents leading up to June 2026?\n\nPLAYERS\n- Is 34-year-old Kevin De Bruyne fully fit to play 90 minutes in a high-tempo tournament opener, or is Domenico Tedesco planning to manage his minutes?\n- How has Egypt managed Mohamed Salah\u2019s physical workload coming off a grueling club season, and is there a capable secondary goal-threat in the starting XI if he is heavily marked?\n\nTACTICS\n- How does Egypt\u2019s preferred low-block defensive structure match up against Belgium\u2019s central zone progression and positional play under Tedesco?\n- Do Belgium's projected starting center-backs possess the recovery pace required to neutralize Egypt's direct, vertical counter-attacks into wide channels?\n\nH2H\n- Looking back at Egypt\u2019s 2-1 friendly victory over Belgium in November 2022, what tactical exploits did Egypt use to bypass the Belgian midfield, and are those structural weaknesses still present in the current Belgian setup?\n\nCONTEXT\n- As this is the opening match of the 2026 World Cup Group Stage for both teams, does the tournament format and the strength of the other two group opponents dictate that Egypt will play for a draw, or do they need a win to realistic progress?\n\nMARKET\n- What is the current Asian Handicap line, and has there been significant market movement toward the Under, signaling that sharp money expects a cagey, low-scoring affair?\n\nNEWS\n- Have there been any tactical leaks or squad disharmony reported out of the Belgian camp, particularly regarding Domenico Tedesco's defensive selections or the integration of younger players?\n\nVENUE\n- Which North American host city is staging this match, and will the local kickoff time, temperature, and stadium humidity levels disadvantage Belgium\u2019s high-pressing physical output compared to Egypt's experience playing in harsh climates?",
-    "research_gaps": [
-      {
-        "need": "What is the current Asian Handicap line, and has there been significant market movement toward the Under, signaling that sharp money expects a cagey, low-scoring affair?",
-        "category": "MARKET",
-        "ideal_service": "An API supplying real-time bookmaker odds, historical line movement, Asian Handicap updates, and volume tracking."
-      },
-      {
-        "need": "What was Belgium\u2019s expected goals (xG) against per 90 during their final pre-tournament warm-up matches, and did they struggle to defend transitional counter-attacks in those games?",
-        "category": "FORM",
-        "ideal_service": "An advanced football data API (like Opta or Wyscout) delivering expected goals against (xGA) metrics and tracking data for counter-attack sequences."
-      },
-      {
-        "need": "Which North American host city is staging this match, and will the local kickoff time, temperature, and stadium humidity levels disadvantage Belgium\u2019s high-pressing physical output compared to Egypt's experience playing in harsh climates?",
-        "category": "VENUE",
-        "ideal_service": "A climate analytics and stadium mapping service offering real-time weather, stadium temperature/humidity history, and high-altitude maps."
-      }
-    ],
-    "services_planned": [
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://www.transfermarkt.com/belgien/kader/verein/3382/saison_id/2025"
-        },
-        "cost": 0.002,
-        "reason": "Fetches Belgium's official 2026 tournament squad details, allowing us to inspect De Bruyne's recent profile, match selections, and physical status.",
-        "need": "Is 34-year-old Kevin De Bruyne fully fit to play 90 minutes in a high-tempo tournament opener, or is Domenico Tedesco planning to manage his minutes?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://www.transfermarkt.com/agypten/kader/verein/3473/saison_id/2025"
-        },
-        "cost": 0.002,
-        "reason": "Provides Egypt's complete squad, highlighting secondary attackers, their goal contributions, and physical profiles to identify alternate goal scoring options.",
-        "need": "How has Egypt managed Mohamed Salah\u2019s physical workload coming off a grueling club season, and is there a capable secondary goal-threat in the starting XI if he is heavily marked?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://www.transfermarkt.com/agypten/spielplandatum/verein/3473/plus/0/saison_id/2025"
-        },
-        "cost": 0.002,
-        "reason": "Allows audit of Egypt's recent defensive results, scorelines, and match history to evaluate clean sheet frequency leading into the tournament.",
-        "need": "Did Egypt maintain their defensive solidity during the latter stages of CAF World Cup Qualifying, and how many clean sheets did they keep against top-50 FIFA-ranked opponents leading up to June 2026?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://www.transfermarkt.com/belgien/leistungsdaten/verein/3382/reldata/WM26/saison/2025"
-        },
-        "cost": 0.002,
-        "reason": "Extracts Belgian center-back selection trends, match data, and performance profiles under Domenico Tedesco to analyze defensive transition efficiency.",
-        "need": "Do Belgium's projected starting center-backs possess the recovery pace required to neutralize Egypt's direct, vertical counter-attacks into wide channels?",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://www.transfermarkt.com/agypten/leistungsdaten/verein/3473/reldata/WM26/saison/2025"
-        },
-        "cost": 0.002,
-        "reason": "Provides match stats, tactical performance, and setup data for Egypt during competitive qualification to evaluate their defensive block integrity.",
-        "need": "How does Egypt\u2019s preferred low-block defensive structure match up against Belgium\u2019s central zone progression and positional play under Tedesco?",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://www.national-football-teams.com/country/21/Belgium.html"
-        },
-        "cost": 0.002,
-        "reason": "Provides historical match reports and selection data from past cycles, specifically targeting the 2022 H2H encounter's midfield setups.",
-        "need": "Looking back at Egypt\u2019s 2-1 friendly victory over Belgium in November 2022, what tactical exploits did Egypt use to bypass the Belgian midfield, and are those structural weaknesses still present in the current Belgian setup?",
-        "category": "H2H"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
-        },
-        "cost": 0.002,
-        "reason": "Details the 2026 World Cup Group Stage layouts, qualified opponents in the same group, and overall progression permutations to determine tactical risk appetites.",
-        "need": "As this is the opening match of the 2026 World Cup Group Stage for both teams, does the tournament format and the strength of the other two group opponents dictate that Egypt will play for a draw, or do they need a win to realistic progress?",
-        "category": "CONTEXT"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "params": {
-          "topic": "Belgium World Cup camp Tedesco squad disharmony",
-          "hours": 48
-        },
-        "cost": 0.01,
-        "reason": "Scans global news intelligence via GDELT for recent team updates, camp leaks, player comments, or squad disharmony surrounding Tedesco.",
-        "need": "Have there been any tactical leaks or squad disharmony reported out of the Belgian camp, particularly regarding Domenico Tedesco's defensive selections or the integration of younger players?",
-        "category": "NEWS"
-      }
-    ],
-    "services_used": [
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Fetches Belgium's official 2026 tournament squad details, allowing us to inspect De Bruyne's recent profile, match selections, and physical status.",
-        "data": "{\"url\":\"https://www.transfermarkt.com/belgien/kader/verein/3382/saison_id/2025\",\"finalUrl\":\"https://www.transfermarkt.com/belgien/kader/verein/3382/saison_id/2025\",\"mode\":\"basic\",\"markdown\":\"[DISCOVER](https://www.transfermarkt.com/) [World Cup 2026](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.com/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.com/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.com/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.com/navigation/statistiken) [FORUM](https://www.transfermarkt.com/navigation/community) [GAMING](https://www.transfermarkt.com/navigation/gaming)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/ENwhats-my-value-banner-desktop-ru.jpg)](https://www.transfermarkt.com/whatsMyValue?cp=FIWC)\\n\\nThis page displays a detailed overview of the club's current squad. It shows all personal information about the players, including age, nationality, contract duration and market value. It also contains a table with average age, cumulative market value and average market value for each player position and overall.\\n\\n[#](https://www.transfermarkt.com/belgien/kader/verein/3382/saison_id/2025/sort/trikotNumber.desc)\\n\\n[Player](https://www.transfermarkt.com/belgien/kader/verein/3382/saison_id/2025/sort/name)\\n\\n[Age](https://www.transfermarkt.com/belgien/kader/verein/3382/saison_id/2025/sort/age)\\n\\nClub\\n\\n[Market value](https://www.transfermarkt.com/belgien/kader/verein/3382/saison_id/2025/sort/marketValueRaw)\\n\\n1\\n\\n![Thibaut Courtois](https://img.a.transfermarkt.technology/portrait/medium/108390-1717280733.jpg?lm=1 \\\"Thibaut Courtois\\\")\\n\\n[Thibaut Courtois](https://www.transfermarkt.com/thibaut-courtois/profil/spieler/108390)\\n\\nGoalkeeper\\n\\n32\\n\\n[![Real Madrid](https://tmssl.akamaized.net//images/wappen/verysmall/418.png?lm=1729684474 \\\"Real Madrid\\\")](https://www.transfermark"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Provides Egypt's complete squad, highlighting secondary attackers, their goal contributions, and physical profiles to identify alternate goal scoring options.",
-        "data": "{\"url\":\"https://www.transfermarkt.com/agypten/kader/verein/3473/saison_id/2025\",\"finalUrl\":\"https://www.transfermarkt.com/agypten/kader/verein/3473/saison_id/2025\",\"mode\":\"basic\",\"markdown\":\"[DISCOVER](https://www.transfermarkt.com/) [World Cup 2026](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.com/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.com/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.com/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.com/navigation/statistiken) [FORUM](https://www.transfermarkt.com/navigation/community) [GAMING](https://www.transfermarkt.com/navigation/gaming)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/top-100-world-cup-mvps-desktop-banner.jpg)](https://www.transfermarkt.com/bellingham-9th-guler-20th-amp-leao-82nd-the-top-100-most-valuable-players-at-the-world-cup/view/news/480791)\\n\\nThis page displays a detailed overview of the club's current squad. It shows all personal information about the players, including age, nationality, contract duration and market value. It also contains a table with average age, cumulative market value and average market value for each player position and overall.\\n\\n[#](https://www.transfermarkt.com/agypten/kader/verein/3473/saison_id/2025/sort/trikotNumber.desc)\\n\\n[Player](https://www.transfermarkt.com/agypten/kader/verein/3473/saison_id/2025/sort/name)\\n\\n[Age](https://www.transfermarkt.com/agypten/kader/verein/3473/saison_id/2025/sort/age)\\n\\nNat.\\n\\n[Contract](https://www.transfermarkt.com/agypten/kader/verein/3473/saison_id/2025/sort/contractEndTimestamp)\\n\\n[Market value](https://www.transfermarkt.com/agypten/kader/verein/3473/saison_id/2025/sort/marketValueRaw)\\n\\n1\\n\\n![Lucas Bundschuh](https://img.a.transfermarkt.technology/portrait/medium/160472-1566550412.jpg?lm=1 \\\"Lucas Bundschuh\\\")\\n\\n[Lucas Bundschuh](https://www.transfermarkt.c"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Allows audit of Egypt's recent defensive results, scorelines, and match history to evaluate clean sheet frequency leading into the tournament.",
-        "data": "{\"url\":\"https://www.transfermarkt.com/agypten/spielplandatum/verein/3473/plus/0/saison_id/2025\",\"finalUrl\":\"https://www.transfermarkt.com/agypten/spielplandatum/verein/3473/plus/0/saison_id/2025\",\"mode\":\"basic\",\"markdown\":\"[DISCOVER](https://www.transfermarkt.com/) [World Cup 2026](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.com/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.com/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.com/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.com/navigation/statistiken) [FORUM](https://www.transfermarkt.com/navigation/community) [GAMING](https://www.transfermarkt.com/navigation/gaming)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/pronunciation-tool-banner-desktop-EN.jpg)](https://www.transfermarkt.com/cristiano-ronaldo/profil/spieler/8198#audio)\\n\\nThis is an overview of all fixtures of the club in chronological order.\\n\\nSeason:\\n\\nCompetition:\\n\\nWeekday:\\n\\nVenue:\\n\\nResult:\\n\\nPeriod:\\n\\n\\\\-\\n\\nMatchday\\n\\nDate\\n\\nTime\\n\\nVenue\\n\\nRanking\\n\\nOpponent\\n\\nSystem of play\\n\\nAttendance\\n\\nResult\\n\\n![Vorarlbergliga](https://tmssl.akamaized.net//images/logo/tiny/a4v.png?lm=1405006445 \\\"Vorarlbergliga\\\")\u00a0\u00a0[Eliteliga Vorarlberg](https://www.transfermarkt.com/vorarlbergliga/startseite/wettbewerb/A4V \\\"Eliteliga Vorarlberg\\\")\\n\\n[1](https://www.transfermarkt.com/vorarlbergliga/spieltag/wettbewerb/A4V/saison_id/2025/spieltag/1)\\n\\nFri 15/08/25\\n\\n6:30 PM\\n\\nH\\n\\n(7.)\\n\\n[![FC Rotenberg](https://tmssl.akamaized.net//images/wappen/tiny/82280.png?lm=1590922101 \\\"FC Rotenberg\\\")](https://www.transfermarkt.com/fc-rotenberg/spielplan/verein/82280/saison_id/2025 \\\"FC Rotenberg\\\")\\n\\n[Rotenberg](https://www.transfermarkt.com/fc-rotenberg/spielplan/verein/82280/saison_id/2025 \\\"FC Rotenberg\\\")\u00a0\u00a0(10.)\\n\\n?\\n\\n250\\n\\n[2:0](https://www.transfermarkt.com/spielbericht/index/spielbericht/467"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Extracts Belgian center-back selection trends, match data, and performance profiles under Domenico Tedesco to analyze defensive transition efficiency.",
-        "data": "{\"url\":\"https://www.transfermarkt.com/belgien/leistungsdaten/verein/3382/reldata/WM26/saison/2025\",\"finalUrl\":\"https://www.transfermarkt.com/belgien/leistungsdaten/verein/3382/reldata/WM26/saison/2025\",\"mode\":\"basic\",\"markdown\":\"12\\n\\n23![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")\\\\-Not in squad during this season--\\n\\n13\\n\\n20![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")\\\\-Not in squad during this season--\\n\\n1\\n\\n34![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")\\\\-Not in squad during this season--\\n\\n2\\n\\n22![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")\\\\-Not in squad during this season--\\n\\n25\\n\\n23![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")  \\n![DR Congo](https://tmssl.akamaized.net//images/flagge/verysmall/193.png?lm=1520611569 \\\"DR Congo\\\")\\\\-Not in squad during this season--\\n\\n16\\n\\n24![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")  \\n![DR Congo](https://tmssl.akamaized.net//images/flagge/verysmall/193.png?lm=1520611569 \\\"DR Congo\\\")\\\\-Not in squad during this season--\\n\\n5\\n\\n25![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")\\\\-Not in squad during this season--\\n\\n18\\n\\n21![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")\\\\-Not in squad during this season--\\n\\n3\\n\\n26![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")\\\\-Not in squad during this season--\\n\\n21\\n\\n30![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")\\\\-Not in squad during this season--\\n\\n4\\n\\n33![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \\\"Belgium\\\")\\\\-Not in squ"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Provides match stats, tactical performance, and setup data for Egypt during competitive qualification to evaluate their defensive block integrity.",
-        "data": "{\"url\":\"https://www.transfermarkt.com/agypten/leistungsdaten/verein/3473/reldata/WM26/saison/2025\",\"finalUrl\":\"https://www.transfermarkt.com/agypten/leistungsdaten/verein/3473/reldata/WM26/saison/2025\",\"mode\":\"basic\",\"markdown\":\"1\\n\\n30![Austria](https://tmssl.akamaized.net//images/flagge/verysmall/127.png?lm=1520611569 \\\"Austria\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n18![Ukraine](https://tmssl.akamaized.net//images/flagge/verysmall/177.png?lm=1520611569 \\\"Ukraine\\\")\\\\-Not in squad during this season--\\n\\n22\\n\\n24![Austria](https://tmssl.akamaized.net//images/flagge/verysmall/127.png?lm=1520611569 \\\"Austria\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n[![SV Frastanz](https://tmssl.akamaized.net//images/wappen/kaderquad/20128.png?lm=1433367599 \\\"SV Frastanz\\\")](https://www.transfermarkt.com/sv-frastanz/kadernaechstesaison/verein/20128/saison_id/2026 \\\"Joining: SV Frastanz; date: 01/07/2026; fee: ?\\\")[![](https://www.transfermarkt.com/images/icons/abgang_beta_kader.png)](https://www.transfermarkt.com/sv-frastanz/kadernaechstesaison/verein/20128/saison_id/2026 \\\"Joining: SV Frastanz; date: 01/07/2026; fee: ?\\\")18![Austria](https://tmssl.akamaized.net//images/flagge/verysmall/127.png?lm=1520611569 \\\"Austria\\\")\\\\-Not in squad during this season--\\n\\n4\\n\\n20![Austria](https://tmssl.akamaized.net//images/flagge/verysmall/127.png?lm=1520611569 \\\"Austria\\\")\\\\-Not in squad during this season--\\n\\n5\\n\\n18![Austria](https://tmssl.akamaized.net//images/flagge/verysmall/127.png?lm=1520611569 \\\"Austria\\\")\\\\-Not in squad during this season--\\n\\n16\\n\\n24![Austria](https://tmssl.akamaized.net//images/flagge/verysmall/127.png?lm=1520611569 \\\"Austria\\\")\\\\-Not in squad during this season--\\n\\n17\\n\\n19![Austria](https://tmssl.akamaized.net//images/flagge/verysmall/127.png?lm=1520611569 \\\"Austria\\\")\\\\-Not in squad during this season--\\n\\n18\\n\\n29![Austria](https://tmssl.akamaized.net//images/flagge/verysmall/127.png?lm=1520611569 \\\"Austria\\\")\\\\-Not in squad during this seaso"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Provides historical match reports and selection data from past cycles, specifically targeting the 2022 H2H encounter's midfield setups.",
-        "data": "{\"url\":\"https://www.national-football-teams.com/country/21/Belgium.html\",\"finalUrl\":\"https://www.national-football-teams.com/country/21/2026/Belize.html\",\"mode\":\"basic\",\"markdown\":\"You are using an old browser which is not compatible with our new design. Please update your browser or use our [old website](https://www.national-football-teams.com/old/).\\n\\n## General Information for **Belize**\\n\\n##### Belize National Football Association\\n\\n**Founded**\\n\\n1980\\n\\n**FIFA entry**\\n\\n1986\\n\\n**Average height in 2026**\\n\\n1.82m\\n\\n**Average age in 2026**\\n\\n27.3\\n\\n**Confederation**\\n\\nCONCACAF\\n\\n**Infos provided by**\\n\\n##### Emblem\\n\\n![](https://www.national-football-teams.com/uploads/country_images/fifa/logo_biz.gif)\\n\\n##### Jersey in 2026\\n\\n![Jersey in 2026](https://www.national-football-teams.com/uploads/country_images/jersey/biz.gif)\\n\\n### Coaches in 2026\\n\\n## Players of **Belize** in 2026\\n\\nFIFA\\n\\nNon FIFA\\n\\n[Name](https://www.national-football-teams.com/country/21/2026/Belize.html?sort=player.surname&direction=asc&page=1)\\n\\n[Day of Birth](https://www.national-football-teams.com/country/21/2026/Belize.html?sort=player.yearOfBirth&direction=asc&page=1)\\n\\n[Position](https://www.national-football-teams.com/country/21/2026/Belize.html?sort=p.root&direction=asc&page=1)\\n\\nCurrent Club\\n\\n[M](https://www.national-football-teams.com/country/21/2026/Belize.html?sort=score.matches&direction=asc&page=1)\\n\\n[S](https://www.national-football-teams.com/country/21/2026/Belize.html?sort=score.substitutions&direction=asc&page=1)\\n\\n[G](https://www.national-football-teams.com/country/21/2026/Belize.html?sort=score.goals&direction=asc&page=1)\\n\\n[M](https://www.national-football-teams.com/country/21/2026/Belize.html?sort=score.nonFifaMatches&direction=asc&page=1)\\n\\n[S](https://www.national-football-teams.com/country/21/2026/Belize.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\\n\\n[G](https://www.national-football-teams.com/country/21/2026/Belize.html?sort=sc"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Details the 2026 World Cup Group Stage layouts, qualified opponents in the same group, and overall progression permutations to determine tactical risk appetites.",
-        "data": "{\"url\":\"https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/\",\"finalUrl\":\"https://www.soccerway.com/\",\"mode\":\"basic\",\"markdown\":\"[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\\n\\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\\n\\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\\n\\n](https://www.joueurs-info-service.fr/)\\n\\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\\n\\n18+. Verantwortungsbewusst wetten.\\n\\n18+ Jogue com responsabilidade\\n\\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\\n\\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\\n\\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\\n\\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\\n\\n**You can also explore**\\n\\n-   Full fixtures and results for all leagues\\n-   In-depth team pages with performance data\\n-   Player profiles including career stats and achievements\\n-   Comprehensive league tables updated in real-time\\n\\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\\n\\n**Football W"
-      },
-      {
-        "source": "https://news-x402.com/news/recent",
-        "cost": 0.01,
-        "reason": "Scans global news intelligence via GDELT for recent team updates, camp leaks, player comments, or squad disharmony surrounding Tedesco.",
-        "data": "{\"topic\":\"Belgium World Cup camp Tedesco squad disharmony\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
-      }
-    ],
-    "research_cost": 0.024,
-    "wallet_before": 4.498,
-    "wallet_after": 4.474,
-    "prediction": {
-      "pick": "draw",
-      "confidence": 5,
-      "confidence_reason": "While Egypt's compact low block is structurally designed to frustrate Belgium's individual wide talent, the sheer clinical quality of Belgium's elite attackers means they can occasionally produce a match-winning moment out of nothing, keeping confidence at a moderate level.",
-      "reasoning": "Egypt's highly disciplined, physically robust defensive low block is tactically equipped to neutralize and frustrate Belgium's possession-heavy but often individual-reliant attack."
-    },
-    "full_reasoning": "An analysis of the World Cup Group Stage matchup between Belgium (BEL) and Egypt (EGY) reveals a classic stylistic clash that strongly invokes the core principles of our prediction strategy, particularly regarding the frustration of high-profile favorites by disciplined defensive units.\n\n### Belgium: High Technical Ceiling but Vulnerable to Stagnation\nBelgium, under Domenico Tedesco, has transitioned into a side that relies heavily on the explosive individual talent of wide players like J\u00e9r\u00e9my Doku, Johan Bakayoko, and Leandro Trossard to stretch opponents and create central openings for Romelu Lukaku. However, this possession-heavy, technically expressive style often struggles when facing highly organized defensive systems that deny space in behind. If the central midfield is pressed effectively or lacks a highly fit, unbothered creative metronome to orchestrate quick vertical transitions, Belgium's build-up can become horizontal and predictable, leaving them vulnerable to counter-attacks.\n\n### Egypt: Elite Low-Block Discipline and Transitional Threat\nEgypt is historically one of the most defensively resolute and stubborn low-block teams in international football. Their defensive structure is built on physical robustness, central density, and extreme tactical discipline, designed specifically to absorb sustained pressure and frustrate technically superior opponents. With a midfield anchor capable of shielding the backline and a world-class transitional outlet in Mohamed Salah, Egypt does not need dominant possession to secure a result. They are highly comfortable defending deep for 90 minutes, especially in a tournament setting where securing a draw against a group favorite is a highly successful outcome.\n\n### Tactical Matchup and Strategy Application\nApplying our accumulated prediction rules:\n1. **Avoid the \"Individual Talent\" Trap (Rule 1):** Belgium is the clear favorite on paper due to their squad value and individual stars. However, backing them to break down Egypt's compact defensive structure is a high-risk proposition. Egypt's disciplined block will deny Doku and other wingers isolation space, forcing Belgium into low-probability crosses and long-range efforts.\n2. **Prioritize Defensive Floors over Technical Flair (Rule 2):** Egypt's physical superiority and low-block organization give them an incredibly high defensive floor. Just as Turkey neutralized Australia's technical approach and Morocco frustrated Brazil, Egypt has the defensive capacity to systematically neutralize Belgium's offensive ceiling.\n\nGiven these tactical dynamics, Egypt is highly likely to successfully frustrate Belgium's attack, leading to a low-scoring, highly competitive stalemate.\n\nPICK: draw\nCONFIDENCE: 5\nCONFIDENCE_REASON: While Egypt's compact low block is structurally designed to frustrate Belgium's individual wide talent, the sheer clinical quality of Belgium's elite attackers means they can occasionally produce a match-winning moment out of nothing, keeping confidence at a moderate level.\nREASONING: Egypt's highly disciplined, physically robust defensive low block is tactically equipped to neutralize and frustrate Belgium's possession-heavy but often individual-reliant attack.",
-    "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
-  },
-  {
     "match": "KSA vs URU",
     "home": "KSA",
     "away": "URU",
@@ -3012,6 +2839,280 @@
       "reasoning": "Spain\u2019s elite tactical structure and superior central playmaking will comfortably dismantle Cape Verde's low block in the debutants' first-ever World Cup match."
     },
     "full_reasoning": "An analysis of the Group H opening match between Spain and Cape Verde reveals a significant gulf in quality, experience, and tactical preparation, heavily favoring the European champions.\n\n### Spain's Elite Tactical Cohesion\nWhile our prediction strategy warns against backing favorites solely on individual attacking talent against low blocks, Spain is the exception to this rule. Unlike teams that rely on isolated wingers, Spain possesses the most cohesive and structured central midfield in world football. Led by Rodri, Pedri, and Fabi\u00e1n Ruiz, their positional play and central playmaking are designed specifically to manipulate and pierce compact defensive structures. Furthermore, Spain received a massive pre-tournament boost with superstar wingers Lamine Yamal and Nico Williams returning to full training and being declared fit, ensuring *La Roja* is at absolute full strength.\n\n### Cape Verde's Monolithic Challenge\nCape Verde is making its historic World Cup debut. While the *Blue Sharks* qualified with an admirable defensive record in Africa, facing the co-tournament favorites in their opening match is a monumental task. They are expected to deploy a dense 4-5-1 low block to frustrate Spain, but they lack the elite defensive transition speed and high-level experience necessary to keep Spain's master pass-controllers chasing for 90 minutes. \n\nSpain's complete midfield fitness, combined with the return of their dynamic wingers, gives them all the strategic tools required to systematically break down Cape Verde's defense and secure a dominant opening-day victory.\n\nPICK: home\nCONFIDENCE: 9\nCONFIDENCE_REASON: Spain has a fully fit squad with Yamal and Williams cleared to play, supported by the world's most cohesive central midfield of Rodri, Pedri, and Fabian Ruiz, which neutralizes the low-block threat.\nREASONING: Spain\u2019s elite tactical structure and superior central playmaking will comfortably dismantle Cape Verde's low block in the debutants' first-ever World Cup match.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
+  },
+  {
+    "match": "BEL vs EGY",
+    "home": "BEL",
+    "away": "EGY",
+    "kickoff": "2026-06-15T19:00Z",
+    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n3. **NED vs JPN: Avoid \"Narrative Bias\" Overlooking Systemic Discipline**\nDo not assume physical size and individual quality will automatically overcome an elite, energetic, and tactically disciplined system. If the favorite has midfield fitness concerns (a compromised metronome) and the underdog has a highly fit defensive screen and a proven record of limiting top-tier nations, avoid a straight win prediction and favor a draw or handicap.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Defensive Records Against Highly Ranked Opponents:* Vital warning sign to identify underdogs capable of frustrating elite teams (informed by NED vs JPN).\n  * *Key Midfield Workload & Fitness Status:* Essential for determining if a favorite's central controller is compromised or an underdog's anchor is fully fit (informed by NED vs JPN).\n* **Not Useful / Wasteful:**\n  * *Bookmaker Odds & Asian Handicap:* Abstract lines often reinforce narrative bias instead of providing objective analytical value (informed by NED vs JPN).\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate fitness queries leads to high costs. Consolidate searches to 1-2 comprehensive previews to keep costs under $0.0300 per match (informed by AUS vs TUR).",
+    "information_needs": "FORM\n- How did Belgium and Egypt perform in their final warm-up friendlies in May/June 2026, specifically regarding their expected goals (xG) creation and defensive concessions?\n- What was Egypt's defensive record during the final rounds of the CAF World Cup Qualifiers, particularly in away or neutral-ground matches against high-pressing opposition?\n\nPLAYERS\n- Are key veteran talisman figures like Kevin De Bruyne (Belgium) and Mohamed Salah (Egypt) fully fit, and how have their workloads been managed during the final weeks of their respective club seasons?\n- Who is starting in Belgium\u2019s central defense to anchor the transition away from the Vertonghen/Alderweireld era, and do they possess the recovery pace to handle Egypt's direct, counter-attacking wingers?\n\nTACTICS\n- Does Egypt\u2019s manager deploy a low-block 4-5-1 or a back-five system when facing top-tier European opposition, and how has Belgium historically struggled to break down deep, compact defensive structures under Domenico Tedesco?\n- Where are Belgium's primary structural vulnerabilities when they lose possession in the attacking third, and does Egypt have the transitional passing quality in midfield to exploit those gaps quickly?\n\nH2H\n- What tactical adjustments have both teams made since their November 2022 pre-World Cup friendly (which Egypt won 2-1), and how many players from that match's starting lineups are expected to feature in this fixture?\n\nCONTEXT\n- Is this the opening match of the 2026 World Cup Group Stage for both teams, and how does the tournament's expanded 48-team format (where some third-place teams progress) alter each manager's risk tolerance in the second half?\n\nMARKET\n- What are the current Asian Handicap and Over/Under goal lines for this match, and what probability does the market assign to a clean sheet for Belgium?\n\nNEWS\n- Are there any reports of internal squad disharmony, tactical friction with the coaching staff, or late-stage illness outbreaks in either camp during their pre-tournament training base period?\n\nVENUE\n- In which North American host city is this match being played, and will the local stadium conditions (such as indoor air conditioning vs. outdoor summer humidity, or artificial turf vs. natural grass) disproportionately favor one team's physical conditioning?",
+    "research_gaps": [
+      {
+        "need": "What are the current Asian Handicap and Over/Under goal lines for this match, and what probability does the market assign to a clean sheet for Belgium?",
+        "category": "MARKET",
+        "ideal_service": "An x402-compliant sports betting odds comparison API that delivers real-time Asian Handicaps, total goals lines, and team-specific prop probabilities (like clean sheets) for international fixtures."
+      },
+      {
+        "need": "In which North American host city is this match being played, and will the local stadium conditions (such as indoor air conditioning vs. outdoor summer humidity, or artificial turf vs. natural grass) disproportionately favor one team's physical conditioning?",
+        "category": "VENUE",
+        "ideal_service": "A stadium micro-climate and pitch composition database API providing technical specs (surface type, grass height, indoor/outdoor HVAC status) and live physical environmental forecasts for World Cup venues."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Belgium vs Egypt World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Belgium vs Egypt World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Belgium recent form and results",
+        "need": "How has Belgium performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Egypt World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Egypt recent form and results",
+        "need": "How has Egypt performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium vs Egypt head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium vs Egypt World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.transfermarkt.com/belgien/leistungsdaten/verein/3382/reldata/WM26/saison/2025"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Provides clean, parseable performance data of Belgium under Tedesco against defensively compact opposition to analyze potential attacking bottlenecks.",
+        "need": "Does Egypt\u2019s manager deploy a low-block 4-5-1 or a back-five system when facing top-tier European opposition, and how has Belgium historically struggled to break down deep, compact defensive structures under Domenico Tedesco?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium and Egypt final warm up friendlies June 2026 expected goals xG results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Obtains structured news and match report links to verify concrete warm-up scores, expected goals metrics, and defensive errors committed right before the tournament.",
+        "need": "How did Belgium and Egypt perform in their final warm-up friendlies in May/June 2026, specifically regarding their expected goals (xG) creation and defensive concessions?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium vs Egypt November 2022 friendly match lineups tactical changes",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Enables historical head-to-head comparison to evaluate how the tactical philosophies of both nations have shifted since their last encounter.",
+        "need": "What tactical adjustments have both teams made since their November 2022 pre-World Cup friendly (which Egypt won 2-1), and how many players from that match's starting lineups are expected to feature in this fixture?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Belgium Egypt World Cup 2026 camp squad disharmony illness friction",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Uses GDELT's multi-lingual news crawler to scan global and regional outlets for early-warning signs of camp friction, player disputes, or virus outbreaks.",
+        "need": "Are there any reports of internal squad disharmony, tactical friction with the coaching staff, or late-stage illness outbreaks in either camp during their pre-tournament training base period?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Kevin De Bruyne Mohamed Salah fitness injury update World Cup 2026 squad workloads",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides up-to-date, AI-summarized reports on the specific physical condition, injuries, and club workload management of both teams' primary superstars leading into the tournament.",
+        "need": "Are key veteran talisman figures like Kevin De Bruyne (Belgium) and Mohamed Salah (Egypt) fully fit, and how have their workloads been managed during the final weeks of their respective club seasons?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Belgium national team central defense starting lineup World Cup 2026 tactical preview",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Identifies the projected central defensive partnership for Belgium under Tedesco and assesses their speed/vulnerability against rapid, transition-heavy wingers like Salah.",
+        "need": "Who is starting in Belgium\u2019s central defense to anchor the transition away from the Vertonghen/Alderweireld era, and do they possess the recovery pace to handle Egypt's direct, counter-attacking wingers?",
+        "category": "TACTICS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Belgium vs Egypt Prediction: Red Devils Versus The Pharaohs - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/belgium-vs-egypt-prediction-for-the-match-on-june-15th-2026/\n  The Belgian squad has emerged as one of the most formidable offensive threats in the competition, maintaining an extraordinary scoring pace with 13 goals across their previous four outings. This impressive run included a 2-0 victory over global powerhouse Croatia, followed by a dominant 5-0 performance against a disciplined Tunisia side to conclude their qualification journey.\n\n## \ud83c\udfc1 Belgium: Lineup\n\nFor their inaugural FIFA World Cup group match against Egypt, Belgium is expected to deploy a 4-2-3-1 formation under Rudi Garcia. Despite Jeremy Doku and Romelu Lukaku starting among the substitut\n\n\u2022 Belgium vs Egypt at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN\n  https://www.espn.com/soccer/story/_/id/49046985/belgium-vs-egypt-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups\n  UK BST: 8 p.m., Monday, June 15\n\nIndia IST:12:30 a.m. Tuesday, June 16\n\nAustralia AEST:5 a.m., Tuesday, June 16\n\nVenue: Seattle Stadium, Seattle\n\nReferee:Ramon Abatti of Brazil.\n\nImage 25\n## Team News\n\nBelgium\n\nJ\u00e9r\u00e9my Doku left a training session early on Tuesday after experiencing some breathing issues but he return to practice later, easing the concerns.\n\nPredicted XI: 4-2-3-1\n\nGK:Thibaut Courtois\n\nLB:Maxim De Cuyper; CB:Brandon Mechele, CB:Nathan Ngoy, RB:Thomas Meunier\n\nCM:Amadou Onana; CM:Youri Tielemans\n\nLW:J\u00e9r\u00e9my Doku, CAM:Kevin De Bruyne, RW:Leandro Trossard\n\n CF:Charles De Ketelaere\n\n\n\n\u2022 World Cup 2026 Group G guide - fixtures, schedule, standings and odds for Belgium, Egypt, Iran and New Zealand - Sky Sports\n  https://www.skysports.com/football/news/12098/13543098/world-cup-2026-group-g-guide-fixtures-schedule-standings-and-odds-for-belgium-egypt-iran-and-new-zealand\n  Defenders: Danial Eiri (Malavan), Ehsan Hajsafi (Sepahan), Saleh Hardani (Esteghlal), Hossein Kanaani (Persepolis), Shoja Khalilzadeh (Tractor FC), Milad Mohammadi (Persepolis), Ali Nemati (Foolad FC), Ramin Rezaeian (Foolad FC).\n\nMidfielders: Rouzbeh Cheshmi (Esteghlal), Saeid Ezatolahi (Shabab Al Ahli), Mehdi Ghaedi (Al-Nasr), Saman Ghoddos (Kalba FC), Mohammad Ghorbani (Al-Wahda), Alireza Jahanbakhsh (FC Dender), Mohammad Mohebi (Rostov), Amir Mohammad Razzaghinia (Esteghlal), Mehdi Torabi (Tractor FC), Aria Yousefi (Sepahan).\n\nForwards: Ali Alipour (Persepolis), Dennis Dargahi (Standard Li\n\n\u2022 Belgium seek statement start as Egypt chase first World Cup win - Reuters\n  https://www.reuters.com/sports/soccer/belgium-seek-statement-start-egypt-chase-first-world-cup-win-2026-06-13/\n  The Reuters Inside Track newsletter is your essential guide during the World Cup. Sign up here.\n\nWhile Kevin De Bruyne, Romelu Lukaku and Thibaut Courtois remain key figures, coach Rudi Garcia \u200bhas overseen a gradual transition towards a younger core led by Jeremy Doku, Amadou Onana and Charles De \u200bKetelaere.\n\nBelgium are expected to dominate possession, while Egypt defend deep and look to break through Mohamed Salah and Omar Marmoush.\n\nEgypt are making only their fourth World Cup appearance and remain in search of a first victory at the finals after \u200bseven winless matches across previous tour\n\n\u2022 Where to watch Belgium in the 2026 FIFA World Cup today? Next game, start time, TV channels and online live streams - Goal.com\n  https://www.goal.com/en-gh/news/watch-live-stream-belgium-football/blt26f3373e2fbbd352\n  Tactically, Garcia, who brings valuable elite-level pedigree from his extensive career managing top clubs across Europe, has implemented a system heavily reliant on attacking fluidity and central control. Recognizing the sheer technical proficiency of players like Charles De Ketelaere, Amadou Onana, and Nicolas Raskin, Garcia prefers a setup that breeds midfield dominance while unleashing"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Belgium vs Egypt at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN\n  https://www.espn.com/soccer/story/_/id/49046985/belgium-vs-egypt-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups\n  UK BST: 8 p.m., Monday, June 15\n\nIndia IST:12:30 a.m. Tuesday, June 16\n\nAustralia AEST:5 a.m., Tuesday, June 16\n\nVenue: Seattle Stadium, Seattle\n\nReferee:Ramon Abatti of Brazil.\n\nImage 25\n## Team News\n\nBelgium\n\nJ\u00e9r\u00e9my Doku left a training session early on Tuesday after experiencing some breathing issues but he return to practice later, easing the concerns.\n\nPredicted XI: 4-2-3-1\n\nGK:Thibaut Courtois\n\nLB:Maxim De Cuyper; CB:Brandon Mechele, CB:Nathan Ngoy, RB:Thomas Meunier\n\nCM:Amadou Onana; CM:Youri Tielemans\n\nLW:J\u00e9r\u00e9my Doku, CAM:Kevin De Bruyne, RW:Leandro Trossard\n\n CF:Charles De Ketelaere\n\n\n\n\u2022 Belgium vs Egypt Prediction: Red Devils Versus The Pharaohs - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/belgium-vs-egypt-prediction-for-the-match-on-june-15th-2026/\n  During their spring preparation phase, they clinched a notable 0-0 draw against world-class opponents Spain; furthermore, their World Cup qualification journey was flawless, as they navigated their group without a single defeat.\n\n## \ud83c\udfc1 Egypt: Lineup\n\nStar forward Mohamed Salah has been declared fit to spearhead the Egyptian front line, successfully overcoming a slight hamstring problem sustained during the season's conclusion. He is joined in the attack by key players Omar Marmoush and Trezeguet. With no new injury worries to report, the Pharaohs' head coach has a healthy squad at his disposal \n\n\u2022 World Cup 2026 Group G guide - fixtures, schedule, standings and odds for Belgium, Egypt, Iran and New Zealand - Sky Sports\n  https://www.skysports.com/football/news/12098/13543098/world-cup-2026-group-g-guide-fixtures-schedule-standings-and-odds-for-belgium-egypt-iran-and-new-zealand\n  Defenders: Danial Eiri (Malavan), Ehsan Hajsafi (Sepahan), Saleh Hardani (Esteghlal), Hossein Kanaani (Persepolis), Shoja Khalilzadeh (Tractor FC), Milad Mohammadi (Persepolis), Ali Nemati (Foolad FC), Ramin Rezaeian (Foolad FC).\n\nMidfielders: Rouzbeh Cheshmi (Esteghlal), Saeid Ezatolahi (Shabab Al Ahli), Mehdi Ghaedi (Al-Nasr), Saman Ghoddos (Kalba FC), Mohammad Ghorbani (Al-Wahda), Alireza Jahanbakhsh (FC Dender), Mohammad Mohebi (Rostov), Amir Mohammad Razzaghinia (Esteghlal), Mehdi Torabi (Tractor FC), Aria Yousefi (Sepahan).\n\nForwards: Ali Alipour (Persepolis), Dennis Dargahi (Standard Li\n\n\u2022 Belgium winger J\u00e9r\u00e9my Doku expected to be available for his team's World Cup opener against Egypt - Greenwich Time\n  https://www.greenwichtime.com/sports/article/belgium-winger-jeremy-doku-expected-to-be-22300036.php\n  Subscribe\n\nSports\n\n# Belgium winger J\u00e9r\u00e9my Doku expected to be available for his team's World Cup opener against Egypt\n\nBy ANDREW DESTIN, AP Sports Writer\n\nRENTON, Wash. (AP) \u2014 Belgium winger J\u00e9r\u00e9my Doku returned to practice Wednesday, a day after reportedly leaving a training session early, as the team prepares for its World Cup opener against Egypt on Monday.\n\nThe 24-year-old Doku, who plays for Premier League club Manchester City, experienced some breathing issues on Tuesday during a closed practice, according to Belgian newspaper HLN. Before practice ended, Doku went inside the indoor trai\n\n\u2022 Belgium seek statement start as Egypt chase first World Cup win - Reuters\n  https://www.reuters.com/sports/soccer/belgium-seek-statement-start-egypt-chase-first-world-cup-win-2026-06-13/\n  The Reuters Inside Track newsletter is your essential guide during the World Cup. Sign up here.\n\nWhile Kevin De Bruyne, Romelu Lukaku and Thibaut Courtois remain key figures, coach Rudi Garcia \u200bhas overseen a gradual transition towards a younger core led by Jeremy Doku, Amadou Onana and Charles De \u200bKetelaere.\n\nBelgium are expected to dominate possession, while Egypt defend deep and look "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Belgium recent form and results",
+        "data": "\u2022 Reuters Belgium at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/belgium/\n  Follow Belgium&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Belgium | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/belgium/fixtures\n  Belgium \u00b7 IR Iran \u00b7 19:00 \u00b7 FIFA World Cup 2026\u2122 \u00b7 First Stage \u00b7 Group G \u00b7 BC Place Vancouver06/27/2026 \u00b7 New Zealand \u00b7 Belgium \u00b7 03:00 \u00b7 +(1) Round of 32Round of 16Quarter-finalSemi-finalFinal \u00b7 M74 \u00b7 06/29/2026 \u00b7 20:30 \u00b7 1E \u00b7 3ABCDF \u00b7 M77 \u00b7\n\n\u2022 Preview: Belgium vs Egypt prediction, odds, where to watch, time | FIFA World Cup 2026\n  https://khelnow.com/football/world-football-belgium-vs-egypt-preview-fifa-world-cup-202606\n  Their recent form has been sublime, <strong>winning four of their last five games, including a big 5-0 win over Tunisia and a 5-2 win over hosts USA</strong>. The Belgian team still remains one of the favourites to top Group G. Your 2026 World Cup squad.\n\n\u2022 World Cup 2026: Belgium vs Egypt \u2013 Preview, team news, key facts and kick-off time - Ghana Latest Football News, Live Scores, Results - GHANAsoccernet\n  https://ghanasoccernet.com/world-cup-2026-belgium-vs-egypt-preview-team-news-key-facts-and-kick-off-time\n  Under Rudi Garcia, Belgium have rebuilt momentum. They qualified unbeaten for the tournament, securing <strong>five wins and three draws</strong> while scoring 29 goals, the second-highest total in UEFA qualifying. Their recent form has been particularly impressive.\n\n\u2022 Belgium at the FIFA World Cup 2026: Squad, fixtures and results\n  https://www.reuters.com/graphics/SOCCER-WORLDCUP/mopaoglqkpa/teams/belgium/\n  Squad, line-ups and fixture schedule for the Belgium team in USA \u00b7 Canada \u00b7 Mexico"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Egypt recent form and results",
+        "data": "\u2022 Reuters Egypt at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/egypt/\n  Egypt began their World Cup preparations with a \u200b<strong>1-0 home win over Russia</strong> \u200con Thursday but talisman Mohamed Salah was rested for the friendly \u200bclash in Cairo. ... New Zealand captain Chris Wood says he is \u200bfully fit for the World Cup ...\n\n\u2022 Egypt | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/egypt/team-news\n  Egypt | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Egypt squad at FIFA World Cup 2026\u2122.\n\n\u2022 2026 FIFA World Cup Group G - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G\n  The two teams have faced each other three times, most recently in the 2024 FIFA Series, which <strong>Egypt won by 1\u20130</strong>. ... The two teams have faced each other twice, most recently in the 2000 LG Cup; Egypt won 8\u20137 on penalties following a 1\u20131 draw.\n\n\u2022 World Cup Group G standings 2026: Updated results, table and fixtures for Belgium, Egypt, Iran, New Zealand | Sporting News\n  https://www.sportingnews.com/uk/football/news/world-cup-group-g-standings-results-table-2026/1718b02f21d1b076ccc56614\n  After sitting out the last World Cup, Egypt stormed back onto the biggest stage, securing their fourth appearance with a dominant qualifying run.\n\n\u2022 World Cup 2026: Belgium vs Egypt - Preview, team news, key facts and kick-off time\n  https://www.ghanaweb.com/GhanaHomePage/SportsArchive/World-Cup-2026-Belgium-vs-Egypt-Preview-team-news-key-facts-and-kick-off-time-2039100\n  The Pharaohs will be eager to improve ... and Saudi Arabia. Encouragingly, Egypt reached the 2026 World Cup through an <strong>unbeaten qualifying campaign</strong>....\n\n\u2022 [Discussion] Egypt Reveals Official Squad for 2026 FIFA World Cup\n  https://www.reddit.com/r/worldcup/comments/1tj3l2r/egypt_reveals_official_squad_for_2026_fifa_world/\n  salah and farmers"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Belgium vs. Egypt: Head-to-head record and past meetings before World Cup 2026 game - Sports Mole\n  https://www.sportsmole.co.uk/football/belgium/world-cup-2026/head-to-head/belgium-vs-egypt-head-to-head-record-and-past-meetings_599133.html\n  <strong>Hazem Emam scored Egypt&#x27;s only goal in their 1-0 win against the Red Devils in 1999</strong> when the two nations first met, giving his side a 13th-minute lead. Belgium made several attacking changes in an attempt to claw their way back into the game, ...\n\n\u2022 Belgium vs Egypt Stats, H2H, xG | FootyStats\n  https://footystats.org/international/belgium-national-team-vs-egypt-national-team-h2h-stats\n  On 15th June 2026, Belgium and Egypt go head to head in the World Cup. The last meeting ended with the following result : <strong>Belgium 3 - 0 Egypt</strong>. These 2 teams have met 2 times in the last several seasons based on the data that we have of them.\n\n\u2022 Belgium vs. Egypt Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/belgium_vs_egypt.php\n  In the history of World Cups, Belgium National Team faced Egypt in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 Belgium vs Egypt Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-belgium-vs-egypt\n  Last 5 , <strong>Belgium Win 4 , Draw 1 , Lose 0 , Score Win Prob: 80.00% ,Asian Handicap Win%: 80.0% Total Goals Over%: 60.0%</strong> ... Last 5 , Egypt Win 2 , Draw 2 , Lose 1 , Score Win Prob: 40.00% ,Asian Handicap Win%: 100.0% Total Goals Over%: 25.0%\n\n\u2022 Belgium vs. Egypt: Head-to-head record and past meetings bef | RUGBY ADDICT | RUGBY ADDICT\n  https://www.rugby-addict.com/en/article/saracens/belgium-vs-egypt-head-to-head-record-and-past-meetings-before-world-cup-2026-game/6a2dc901d0e1452f640bd5e5\n  Ahead of Monday&#x27;s World Cup clash between Belgium and Egypt, Sports Mole looks at the head-to-head records and previous meetings between the two clubs."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 World Cup Group G standings 2026: Updated results, table and fixtures for Belgium, Egypt, Iran, New Zealand | Sporting News\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-g-standings-results-table-2026/1718b02f21d1b076ccc56614\n  <strong>Group G</strong> will have its fair share of standouts, including Egypt striker Mohamed Salah, Belgium midfielder Kevin De Bruyne and Iran&#x27;s Alireza Jahanbakhsh. Suffice it to say, expect fireworks when the group action kicks off on June 15, 2026.\n\n\u2022 World Cup 2026 Group G guide - fixtures, schedule, standings and odds for Belgium, Egypt, Iran and New Zealand | Football News | Sky Sports\n  https://www.skysports.com/football/news/12098/13543098/world-cup-2026-group-g-guide-fixtures-schedule-standings-and-odds-for-belgium-egypt-iran-and-new-zealand\n  World Cup <strong>Group G</strong> includes Belgium, Egypt, Iran and New Zealand; matches will take place in US cities Seattle and Los Angeles and in Canada&#x27;s Vancouver\n\n\u2022 Belgium vs Egypt | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021478\n  Belgium v Egypt: Live stream, team ... v Egypt: Live stream, team news, tickets and more \u00b7 Belgium: FIFA World Cup 2026 profileBelgium: FIFA World Cup 2026 profile \u00b7 David v Goliath: The biggest World Cup ranking mismatchesDavid v Goliath: The biggest World Cup ranking mismatches \u00b7 Hazard: The World Cup is a tough trophy to winHazard: The World Cup is a tough trophy to win \u00b7 Curiosities from the World Cup group stageCuriosities ...\n\n\u2022 2026 FIFA World Cup Group G - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G\n  <strong>Group G of the 2026 FIFA World Cup will take place between June 15 and June 26, 2026. The group consists of Belgium, Egypt, Iran, and New Zealand. The top two teams, possibly along with the third-placed team, will advance to the round of 32.</strong>\n\n\u2022 Belgium vs Egypt FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/belgium-egypt-world-cup-preview/blt8b8db9e1f93f0387\n  Across the three meetings on record, ... in the 2018 meeting. In Group G of the 2026 FIFA World Cup, <strong>Belgium enter this fixture in first place, with Egypt sitting second</strong>...."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides clean, parseable performance data of Belgium under Tedesco against defensively compact opposition to analyze potential attacking bottlenecks.",
+        "data": "URL: https://www.transfermarkt.com/belgien/leistungsdaten/verein/3382/reldata/WM26/saison/2025\nTitle: Belgium - Squad statistics\n12\n\n23![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n13\n\n20![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n1\n\n34![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n2\n\n22![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n25\n\n23![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")  \n![DR Congo](https://tmssl.akamaized.net//images/flagge/verysmall/193.png?lm=1520611569 \"DR Congo\")\\-Not in squad during this season--\n\n16\n\n24![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")  \n![DR Congo](https://tmssl.akamaized.net//images/flagge/verysmall/193.png?lm=1520611569 \"DR Congo\")\\-Not in squad during this season--\n\n5\n\n25![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n18\n\n21![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n3\n\n26![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n21\n\n30![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n4\n\n33![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n15\n\n34![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n24\n\n24![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")  \n![Senegal](https://tmssl.akamaized.net//images/flagge/verysmall/149.png?lm=1520611569 \"Senegal\")\\-Not in squad during this season--\n\n8\n\n29![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")  \n![DR Congo](https://tmssl.akamaized.net//images/flagge/verysmall/193.png?lm=1520611569 \"DR Congo\")\\-Not in squad during this season--\n\n17\n\n25![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n19\n\n21![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")  \n![Portugal](https://tmssl.akamaized.net//images/flagge/verysmall/136.png?lm=1520611569 \"Portugal\")\\-Not in squad during this season--\n\n22\n\n26![Belgium](https://tmssl.akamaized.net//images/flagge/verysmall/19.png?lm=1520611569 \"Belgium\")\\-Not in squad during this season--\n\n23\n\n25![Belgium](https://tms"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Obtains structured news and match report links to verify concrete warm-up scores, expected goals metrics, and defensive errors committed right before the tournament.",
+        "data": "\u2022 2026 FIFA World Cup xG Tracker Results Expected Goals Of Every Match - RealGM Analysis\n  https://soccer.realgm.com/analysis/559/2026-FIFA-World-Cup-xG-Tracker-Results-Expected-Goals-Of-Every-Match\n  T\u00fcrkiye 1.33 (0) June 14 (Group E): Germany 4.22 xG (7) vs. Cura\u00e7ao 0.41 xG (1) June 14 (Group F): Netherlands vs. Japan June 14 (Group E): C\u00f4te d&#x27;Ivoire vs. Ecuador June 14 (Group F): Sweden vs. Tunisia June 15 (Group H): Spain vs. Cape Verde June 15 (Group G): Belgium vs. Egypt June 15 (Group H): Saudi Arabia vs.\n\n\u2022 Belgium vs Egypt World Cup 2026 Predictions and Best Bets | Juvefc.com\n  https://www.juvefc.com/belgium-v-egypt-predictions/\n  The Belgium vs Egypt betting odds suggest the Red Devils are value to win and for both sides to produce goals, making <strong>over 2.5 goals at evens</strong> a credible addition to any Belgium vs Egypt prediction.\n\n\u2022 Belgium vs Egypt: World Cup 2026 prediction, kick-off time, TV, live stream, team news, h2h results, odds | The Standard\n  https://www.standard.co.uk/sport/football/belgium-vs-egypt-prediction-kick-off-time-tv-live-stream-team-news-latest-h2h-results-odds-world-cup-2026-preview-b1286047.html\n  Belgium vs Egypt is scheduled for an 8pm BST kick-off on Monday June 15, 2026.\n\n\u2022 Belgium vs Egypt Stats, H2H, xG | FootyStats\n  https://footystats.org/international/belgium-national-team-vs-egypt-national-team-h2h-stats\n  <strong>Belgium scored 4 goals and Egypt scored 2 goals</strong> in these matches. ... Stadium: Lumen Field \u2022 Kick-off: June 16 \u2022 Season: 2026 Belgium at home: xG for 3.35, xG against 0.45; win rate at home 75%. Clear attacking edge (+22) and stout defensive ...\n\n\u2022 Belgium vs Egypt World Cup 2026: Score Prediction | Boostmatch\n  https://boostmatch.gg/blog/ea-sports-fc/articles/belgium-vs-egypt-world-cup-2026-score-prediction-group-g-preview\n  Remove Salah and Egypt&#x27;s attack is a concept, not a plan. Likely not from the first whistle. Garcia is expected to manage his minutes and deploy him off the bench. No. Three appearances since 1990, zero wins, <strong>six goals total</strong>."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Enables historical head-to-head comparison to evaluate how the tactical philosophies of both nations have shifted since their last encounter.",
+        "data": "\u2022 Egypt-Belgium | Line-ups | European Qualifiers 2022 | UEFA.com\n  https://www.uefa.com/european-qualifiers/friendlies/match/2036280--egypt-vs-belgium/lineups/\n  Egypt vs Belgium: Friendly Matches . View all the latest squad list information and line-up news at UEFA.com.\n\n\u2022 Belgium v Egypt: Predicted line-ups, where to watch, stats and preview\n  https://www.101greatgoals.com/match-previews/world-cup-matches/belgium-v-egypt-predicted-line-ups-where-to-watch-stats-preview/\n  ... Belgium are expected to field a strong lineup for their World Cup opener, with <strong>Real Madrid goalkeeper Thibaut Courtois set to start behind a defence likely to feature Arthur Theate and Nathan Ngoy in central positions</strong>.\n\n\u2022 Belgium vs Egypt Preview & Betting Tips - Win for Red Devils in Group G Opener\n  https://www.freetips.com/football/fifa-world-cup/belgium-vs-egypt-preview-20260612-0024/\n  <strong>Shobeir has gotten the nod ahead of veteran goalkeeper Mohamed El-Shenawy</strong> in recent friendlies and should continue between the sticks.\n\n\u2022 Preview: Belgium vs Egypt - prediction, team news, lineups | World Cup 2026 - Sports Mole\n  https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/belgium-vs-egypt-prediction-team-news-lineups_599081.html\n  Sports Mole previews Monday&#x27;s World Cup clash between Belgium and Egypt, including predictions, team news and possible lineups.\n\n\u2022 Belgium vs Egypt Preview: Predicted Lineups, Team News & Tactical Analysis | 2026 World Cup Group G\n  https://www.rotowire.com/soccer/article/belgium-vs-egypt-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-g-118093\n  This preview covers predicted lineups, injury news, head-to-head history, the tactical matchup and a score prediction for Monday&#x27;s Group G opener at Lumen Field in Seattle."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Uses GDELT's multi-lingual news crawler to scan global and regional outlets for early-warning signs of camp friction, player disputes, or virus outbreaks.",
+        "data": "{\"topic\":\"Belgium Egypt World Cup 2026 camp squad disharmony illness friction\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides up-to-date, AI-summarized reports on the specific physical condition, injuries, and club workload management of both teams' primary superstars leading into the tournament.",
+        "data": "\u2022 De La Fuente 'confident' Yamal will be ready for Spain's World Cup opener - ESPN\n  https://www.espn.com/video/clip/_/id/48999008/de-la-fuente-confident-yamal-ready-spain-world-cup-opener\n  # De La Fuente 'confident' Yamal will be ready for Spain's World Cup opener - ESPN Video. * Image 2BOS 1 * Image 3NYY 6. * Image 4CHW 5 * Image 5PHI 9. * Image 8BAL 4 * Image 9TOR 6. * Image 10SEA 4 * Image 11DET 5. * Image 14ATH 5 * Image 15HOU 0. * Image 16KC 6 * Image 17MIN 5. * Image 18CIN 3 * Image 19STL 5. * Image 24WSH 1 * Image 25ARI 5. Cobolli  1 6 4 7 7 1. Zverev  6 4 6 6 5 6. # De La Fuente 'confident' Yamal will be ready for Spain's World Cup opener. 0:36 ## De la Fuente confident Yamal will be fit for Spain's World Cup opener De la Fuente confident Yamal will be fit for Spain's Wo\n\n\u2022 Brazil vs. Morocco lineups, starting 11 for World Cup 2026 match in Group C - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/brazil-vs-morocco-lineup-starting-11-world-cup-2026-group-c/d5a9a64502a3a2eb8f39b9fe\n  Morocco lineups, starting 11 for World Cup 2026 match in Group C. * Brazil and Morocco World Cup rosters. Brazil will open their 2026 FIFA World Cup slate with their toughest group match as they meet African giants Morocco at MetLife Stadium on Saturday. They will have a difficult early test taking on seventh-ranked Morocco, who are coming off an appearance in the latest Africa Cup of Nations final and have grown into a full-fledged soccer powerhouse. The Sporting News brings you a look at the projected starting lineups for both teams, as well as an overview of their World Cup squads, plus odd\n\n\u2022 De Bruyne: Belgium Needs 'A Good Doku' For World Cup Success - FOX Sports\n  https://amp.foxsports.com/stories/soccer/belgium-star-midfielder-kevin-de-bruyne-not-taking-4th-world-cup-appearance-for-granted\n  # De Bruyne: Belgium Needs 'A Good Doku' For World Cup Success. Two days ahead of Belgium\u2019s World Cup opener against Egypt, the 35-year-old De Bruyne stressed much has changed since his days as a Premier League sensation for Manchester City. So, that means I\u2019ve done something good,\" De Bruyne said with a laugh during the English portion of Saturday\u2019s press conference. \"Hopefully I can play a good tournament and do something well for Belgium.\". The 2025-26 season, his first with Serie A club Napoli, was a challenging one for De Bruyne after 10 years at City, during which he scored 108 goals in \n\n\u2022 Belgium star midfielder Kevin De Bruyne not taking 4th World Cup appearance for granted - Greenwich Time\n  https://www.greenwichtime.com/sports/article/belgium-star-midfielder-kevin-de-bruyne-not-22304362.php\n  # Belgium star midfielder Kevin De Bruyne not taking 4th World Cup appearance for granted. Yet, the star Belgian midfielder does not plan to take his fourth World Cup appearance for granted. Two days ahead of Belgium\u2019s World Cup opener against Egypt, the 35-year-old De Bruyne stressed much has changed since his days as a Premier League sensation for Manchester City. Nearly two decades removed from representing his home country for the first time and 119 appearances later, the two-time Premier League player of the season considers himself grateful to do so. So, that means I\u2019ve done something go\n\n\u2022 Is Bukayo Saka's fitness a concern for England ahead of World Cup? - Sky Sports\n  https://www.skysports.com/football/video/30998/13552565/is-bukayo-sakas-fitness-a-concern-for-england-ahead-of-world-cup\n  + Sky Sports with no contract. + British South Asians in Football. # Is Bukayo Saka's fitness a concern for England ahead of World Cup? Wednesday 10 June 2026 07:34, UK. Please use Chrome browser for a more accessible video player. Sky Sports' David Reed analyses Bukayo Saka's fitness numbers after England boss Thomas Tuchel admitted he was 'unlikely' to start and finish a full match. Haaland as you've never seen him before in Chinese herbal drink ad! ### AMAZING knockouts you NEVER saw! ### Wiegman & Russo react to missing out on autom"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Identifies the projected central defensive partnership for Belgium under Tedesco and assesses their speed/vulnerability against rapid, transition-heavy wingers like Salah.",
+        "data": "\u2022 World Cup 2026 Group G guide - fixtures, schedule, standings and odds for Belgium, Egypt, Iran and New Zealand - Sky Sports\n  https://www.skysports.com/football/news/12098/13543098/world-cup-2026-group-g-guide-fixtures-schedule-standings-and-odds-for-belgium-egypt-iran-and-new-zealand\n  # World Cup 2026 Group G guide - fixtures, schedule, standings and odds for Belgium, Egypt, Iran and New Zealand. World Cup Group G includes Belgium, Egypt, Iran and New Zealand; matches will take place in US cities Seattle and Los Angeles and in Canada's Vancouver. Sky Sports' Sam Blitz gives a quick rundown of World Cup Group G. World Cup Group G features Belgium, Egypt, Iran and New Zealand. ## World Cup Group G fixtures. ## World Cup Group G table. You can use the buttons below to amend your preferences to enable Datawrapper cookies or to allow those cookies just once. To view this content\n\n\u2022 Belgium vs Egypt Prediction: Red Devils Versus The Pharaohs - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/belgium-vs-egypt-prediction-for-the-match-on-june-15th-2026/\n  # Belgium vs Egypt Prediction: Red Devils Versus The Pharaohs. ## Belgium vs Egypt: Prediction for the Match on June 15th, 2026. The Belgian national team faces the Egyptian Pharaohs at Seattle's Lumen Field in a pivotal World Cup clash. Heading into the 2026 FIFA World Cup, the Belgian national team is in exceptional form, carrying a ten-match unbeaten streak and an explosive offensive output of 18 goals from their five most recent appearances. For their inaugural FIFA World Cup group match against Egypt, Belgium is expected to deploy a 4-2-3-1 formation under Rudi Garcia. ## \ud83d\udcc8 Belgium vs Egy\n\n\u2022 Belgium vs Egypt at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN\n  https://www.espn.com/soccer/story/_/id/49046985/belgium-vs-egypt-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups\n  # Belgium vs Egypt at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN. *   Men's World Cup World Cup. ## World Cup. SummaryReport FT * Image 2 Qatar Qatar QAT 1 * Image 3 Switzerland Switzerland SUI 1 2026 FIFA World Cup. FT * Image 4 Brazil Brazil BRA 1 * Image 5 Morocco Morocco MAR 1 2026 FIFA World Cup. FT * Image 6 Haiti Haiti HAI 0 * Image 7 Scotland Scotland SCO 1 2026 FIFA World Cup. FT * Image 8 Australia Australia AUS 2 * Image 9 T\u00fcrkiye T\u00fcrkiye TUR 0 2026 FIFA World Cup. From gridiron to pitch: How NFL stadiums have transformed\n\n\u2022 Gigi Buffon, Italy and the making of Socceroos star Alessandro Circati - ESPN\n  https://www.espn.com/soccer/story/_/id/49026423/gigi-buffon-italy-making-socceroos-star-alessandro-circati\n  Four goals and an electric display: USMNT's World Cup opener was near-perfect. World Cup Rank: The 50 best players in the 2026 tournament. Mexico's win an emotional celebration of World Cup's return to the Azteca. South Korea produce stirring revival to get off to winning start at FIFA World Cup. From gridiron to pitch: How NFL stadiums have transformed for the World Cup. Inside England's World Cup prep: Tuchel's squad survive storms, heat in Florida. The World Cup of more: There's never been a tournament like this one. When the Socceroos begin their 2026 FIFA World Cup campaign on Saturday, t\n\n\u2022 The Art Of Defending: 2022 U.S. World Cup Defender Breaks Down Key Traits For Top Players - FOX Sports\n  https://www.foxsports.com/stories/soccer/usmnt-world-cup-defense-elite-walker-zimmerman\n  FIFA Men's World Cup. FIFA Men's World Cup. # The Art Of Defending: 2022 U.S. World Cup Defender Breaks Down Key Traits For Top Players. The world's best defenders are going to be on display this summer at the 2026 FIFA World Cup. The teams with the most stable backlines that avoid making crucial errors will be the ones that progress the furthest. For me, there are three traits that separate impressive athletes"
+      }
+    ],
+    "research_cost": 0.108,
+    "wallet_before": 4.034,
+    "wallet_after": 3.926,
+    "prediction": {
+      "pick": "home",
+      "confidence": 8,
+      "confidence_reason": "Belgium's world-class playmaker Kevin De Bruyne and winger J\u00e9r\u00e9my Doku are both fully fit to unlock Egypt's low block, while Egypt's historical winless record at the World Cup limits their upset potential.",
+      "reasoning": "Belgium\u2019s elite offensive fluidity and the presence of a healthy Kevin De Bruyne will prove too much for Egypt\u2019s deep defensive block to contain over 90 minutes."
+    },
+    "full_reasoning": "An analysis of the Group G opener between Belgium and Egypt reveals a matchup where the favorite possess the exact tactical tools required to avoid the low-block trap.\n\n### Belgium's Offensive Fluidity and Playmaking Core\nAccording to our core prediction strategy, highly disciplined defensive units like Egypt can easily frustrate favorites that rely solely on isolated individual wingers. However, Belgium enters this match with the ultimate low-block cracker in a fully fit Kevin De Bruyne. Under Rudi Garcia, Belgium has built immense offensive momentum, carrying a ten-match unbeaten streak and scoring 13 goals in their last four matches (including a 5-0 win over Tunisia and 5-2 over the USA). With J\u00e9r\u00e9my Doku cleared of minor fitness concerns and Charles De Ketelaere offering fluid central movement, Belgium has multiple pathways to pierce Egypt's structure.\n\n### Egypt's Counter-Pressing Challenge\nEgypt's strategy under Sabri Lamouchi will rely on defending in a deep block and launching rapid counter-attacks through the fit duo of Mohamed Salah and Omar Marmoush. While Belgium's experimental central defensive pairing of Brandon Mechele and Nathan Ngoy could be vulnerable on paper, they are shielded by an elite physical midfield screen in Amadou Onana. Furthermore, Egypt's historically poor World Cup record (zero wins in seven matches) and the selection of relatively inexperienced goalkeeper Mostafa Shobeir over veteran Mohamed El-Shenawy leave the Pharaohs with a very slim margin for error under sustained pressure.\n\nWith Kevin De Bruyne healthy to dictate the tempo and orchestrate central playmaking, Belgium is well-equipped to dismantle Egypt's low block and secure a convincing opening-day victory.\n\nPICK: home\nCONFIDENCE: 8\nCONFIDENCE_REASON: Belgium's world-class playmaker Kevin De Bruyne and winger J\u00e9r\u00e9my Doku are both fully fit to unlock Egypt's low block, while Egypt's historical winless record at the World Cup limits their upset potential.\nREASONING: Belgium\u2019s elite offensive fluidity and the presence of a healthy Kevin De Bruyne will prove too much for Egypt\u2019s deep defensive block to contain over 90 minutes.",
     "retroactive": false,
     "result": null,
     "correct": null,
