@@ -45,6 +45,11 @@ log = logging.info
 err = logging.error
 
 
+def _git_env() -> dict:
+    """Git subprocess env — drop stale GITHUB_TOKEN so gh auth credentials are used."""
+    env = os.environ.copy()
+    env.pop("GITHUB_TOKEN", None)
+    return env
 
 
 # ── Step 1: Get match result ───────────────────────────────────────────────
@@ -235,17 +240,18 @@ with open(lock_path, "w") as lock_file:
 log("Updated results.json")
 
 try:
+    git_env = _git_env()
     subprocess.run(
         ["git", "add", "results.json", "strategy.md"],
-        cwd=WORK_DIR, check=True, capture_output=True,
+        cwd=WORK_DIR, check=True, capture_output=True, env=git_env,
     )
     subprocess.run(
         ["git", "commit", "-m", f"reflect: {MATCH}"],
-        cwd=WORK_DIR, check=True, capture_output=True,
+        cwd=WORK_DIR, check=True, capture_output=True, env=git_env,
     )
-    subprocess.run(["git", "push", "origin", "master"], cwd=WORK_DIR, check=True, capture_output=True)
+    subprocess.run(["git", "push", "origin", "master"], cwd=WORK_DIR, check=True, capture_output=True, env=git_env)
     log("Pushed to GitHub")
-    subprocess.run(["git", "push", "hf", "master:main"], cwd=WORK_DIR, check=True, capture_output=True)
+    subprocess.run(["git", "push", "hf", "master:main"], cwd=WORK_DIR, check=True, capture_output=True, env=git_env)
     log("Pushed to HF Space — dashboard updating")
 except Exception as e:
     err("Git push failed (files saved locally): %s", e)
