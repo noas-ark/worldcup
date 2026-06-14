@@ -1304,5 +1304,219 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "BRA vs MAR",
+    "home": "BRA",
+    "away": "MAR",
+    "kickoff": "2026-06-13T22:00Z",
+    "strategy_snapshot": "",
+    "information_needs": "FORM\n- How did Brazil close out their 2025/2026 CONMEBOL World Cup qualifying campaign, specifically regarding their goal-scoring consistency and defensive solidity under Dorival J\u00fanior?\n- What was Morocco\u2019s competitive form in the lead-up to this tournament, particularly their defensive record in CAF qualifiers and their performances in the 2025 Africa Cup of Nations?\n\nPLAYERS\n- Is Neymar Jr. fit and included in Brazil's matchday squad, and if so, is he projected to start or serve as an impact substitute?\n- How has Brahim D\u00edaz\u2019s integration into the Moroccan national team progressed, and is he expected to start in a central playmaker role or on the wing?\n\nTACTICS\n- Will Walid Regragui employ the deep, compact low-block 4-1-4-1 system that served Morocco so well in the 2022 World Cup, or has he transitioned to a more possession-heavy, expansive style?\n- How does Dorival J\u00fanior plan to break down a low block\u2014will he utilize a traditional physical striker (like Endrick) to occupy the center-backs, or a fluid, position-switching front three featuring Vin\u00edcius J\u00fanior and Rodrygo?\n\nH2H\n- What tactical adjustments have both managers made since their last meeting in March 2023 in Tangier, where Morocco defeated Brazil 2-1?\n\nCONTEXT\n- Since this is the opening match of the group stage for both teams, how does the group's composition (the other two teams) affect each manager's risk tolerance for settling for a draw?\n\nMARKET\n- What are the current 1X2 Moneyline odds and the Over/Under goal lines, and how much has the market shifted in Brazil's favor since the group stage draw?\n\nNEWS\n- Are there any late-fitness tests or confirmed injuries to key defensive personnel, specifically regarding Brazil's starting left-back position or Morocco's starting center-back partnership?\n\nVENUE\n- Which North American stadium is hosting this match, and will the local climate (high summer humidity/temperature) or the pitch installation (such as temporary grass over turf) impact Morocco\u2019s high-intensity pressing and physical transition play?",
+    "research_gaps": [],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONMEBOL)"
+        },
+        "cost": 0.002,
+        "reason": "Extracts the complete match results, table, and statistics from the CONMEBOL qualification campaign to evaluate Brazil's defensive and offensive form.",
+        "need": "How did Brazil close out their 2025/2026 CONMEBOL World Cup qualifying campaign, specifically regarding their goal-scoring consistency and defensive solidity under Dorival J\u00fanior?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations"
+        },
+        "cost": 0.002,
+        "reason": "Extracts Morocco's performances and defensive records during the 2025 Africa Cup of Nations.",
+        "need": "What was Morocco\u2019s competitive form in the lead-up to this tournament, particularly their defensive record in CAF qualifiers and their performances in the 2025 Africa Cup of Nations?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Allows identification of the group stage composition, the other opponents, and how the tournament structure affects strategic risk tolerance.",
+        "need": "Since this is the opening match of the group stage for both teams, how does the group's composition (the other two teams) affect each manager's risk tolerance for settling for a draw?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Neymar Brazil squad 2026 (preview OR form OR squad)",
+          "query": "Neymar Brazil squad 2026 (preview OR form OR squad)",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Fetches pre-match news reports on Neymar's fitness, training status, and projected role for Brazil's opening World Cup match.",
+        "need": "Is Neymar Jr. fit and included in Brazil's matchday squad, and if so, is he projected to start or serve as an impact substitute?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Brahim Diaz Morocco tactical (preview OR form OR squad)",
+          "query": "Brahim Diaz Morocco tactical (preview OR form OR squad)",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Retrieves tactical previews and updates regarding Brahim Diaz's expected position and role in the Moroccan team.",
+        "need": "How has Brahim D\u00edaz\u2019s integration into the Moroccan national team progressed, and is he expected to start in a central playmaker role or on the wing?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Morocco Walid Regragui tactical system (preview OR form OR squad)",
+          "query": "Morocco Walid Regragui tactical system (preview OR form OR squad)",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Provides tactical preview articles analyzing Morocco's gameplay style, defensive setups, and potential shifts in system under Regragui.",
+        "need": "Will Walid Regragui employ the deep, compact low-block 4-1-4-1 system that served Morocco so well in the 2022 World Cup, or has he transitioned to a more possession-heavy, expansive style?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Brazil Dorival Junior tactical line-up (preview OR form OR squad)",
+          "query": "Brazil Dorival Junior tactical line-up (preview OR form OR squad)",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Finds pre-match tactical analyses of Brazil's projected attacking setup and plans to unlock compact defenses.",
+        "need": "How does Dorival J\u00fanior plan to break down a low block\u2014will he utilize a traditional physical striker (like Endrick) to occupy the center-backs, or a fluid, position-switching front three featuring Vin\u00edcius J\u00fanior and Rodrygo?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Brazil vs Morocco head to head history (preview OR form OR squad)",
+          "query": "Brazil vs Morocco head to head history (preview OR form OR squad)",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Finds preview articles comparing the current teams to the March 2023 friendly and analyzing the tactical evolution of both squads.",
+        "need": "What tactical adjustments have both managers made since their last meeting in March 2023 in Tangier, where Morocco defeated Brazil 2-1?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Brazil vs Morocco betting odds market (preview OR form OR squad)",
+          "query": "Brazil vs Morocco betting odds market (preview OR form OR squad)",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Gives pre-match betting odds and market moves from news sources before kickoff.",
+        "need": "What are the current 1X2 Moneyline odds and the Over/Under goal lines, and how much has the market shifted in Brazil's favor since the group stage draw?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Brazil vs Morocco team injury news (preview OR form OR squad)",
+          "query": "Brazil vs Morocco team injury news (preview OR form OR squad)",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Provides late breaking team news, training updates, and pre-match injury reports.",
+        "need": "Are there any late-fitness tests or confirmed injuries to key defensive personnel, specifically regarding Brazil's starting left-back position or Morocco's starting center-back partnership?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Brazil vs Morocco World Cup stadium venue (preview OR form OR squad)",
+          "query": "Brazil vs Morocco World Cup stadium venue (preview OR form OR squad)",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Identifies the match venue and collects analyses on how pitch conditions and local weather could affect high-intensity systems.",
+        "need": "Which North American stadium is hosting this match, and will the local climate (high summer humidity/temperature) or the pitch installation (such as temporary grass over turf) impact Morocco\u2019s high-intensity pressing and physical transition play?",
+        "category": "VENUE"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Extracts the complete match results, table, and statistics from the CONMEBOL qualification campaign to evaluate Brazil's defensive and offensive form.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONMEBOL)\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONMEBOL)\",\"mode\":\"basic\",\"markdown\":\"From Wikipedia, the free encyclopedia\\n\\n2026 FIFA World Cup qualification (CONMEBOL)\\n\\nTournament details\\n\\nDates\\n\\n7 September 2023 \u2013 9 September 2025\\n\\nTeams\\n\\n10\u00a0(from 1 confederation)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n90\\n\\nGoals scored\\n\\n183\u00a0(2.03 per match)\\n\\nAttendance\\n\\n3,437,526\u00a0(38,195 per match)\\n\\nTop scorer\\n\\n[![Argentina](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/40px-Flag_of_Argentina.svg.png)](https://en.wikipedia.org/wiki/Argentina_national_football_team \\\"Argentina national football team\\\") [Lionel Messi](https://en.wikipedia.org/wiki/Lionel_Messi \\\"Lionel Messi\\\") (8 goals)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_qualification_\\\\(CONMEBOL\\\\) \\\"2022 FIFA World Cup qualification (CONMEBOL)\\\")\\n\\n_2030_ \u2192\\n\\nThe South American section of the **[2026 FIFA World Cup qualification](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification \\\"2026 FIFA World Cup qualification\\\")** acted as qualifiers for the [2026 FIFA World Cup](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup \\\"2026 FIFA World Cup\\\") to be held in Canada, Mexico, and the United States for national teams who are members of [CONMEBOL](https://en.wikipedia.org/wiki/CONMEBOL \\\"CONMEBOL\\\"). A total of 6 direct slots in the final tournament and 1 inter-confederation play-off slot were available for CONMEBOL teams.[\\\\[1\\\\]](#cite_note-1)[\\\\[2\\\\]](#cite_note-2)\\n\\nCONMEBOL was the first confederation to begin its qualification process for the 2026 FIFA World Cup, with [Paraguay\u2013Peru](#PAR_v_PER) being the first match of the global qualification process.[\\\\[3\\\\]](#cite_note-3)[\\\\[4\\\\]](#cite_note-4)\\n\\nOn 22 August 2022, CONMEBOL sent a request to FIFA asking to keep the current qualification format that had been"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Extracts Morocco's performances and defensive records during the 2025 Africa Cup of Nations.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations\",\"mode\":\"basic\",\"markdown\":\"[![Page semi-protected](https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png)](https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#semi \\\"This article is semi-protected until August 17, 2026 at 14:23 UTC.\\\")\\n\\nFrom Wikipedia, the free encyclopedia\\n\\n\\\"2025 AFCON\\\" redirects here. For the women's tournament initially scheduled for 2024 but held in 2025, see [2024 Women's Africa Cup of Nations](https://en.wikipedia.org/wiki/2024_Women%27s_Africa_Cup_of_Nations \\\"2024 Women's Africa Cup of Nations\\\").\\n\\n2025 Africa Cup of Nations\\n\\n\u0643\u0623\u0633 \u0627\u0644\u0623\u0645\u0645 \u0627\u0644\u0625\u0641\u0631\u064a\u0642\u064a\u0629 2025  \\n\u2d5c\u2d30\u2d59\u2d30 \u2d4f \u2d49\u2d4e\u2d53\u2d54\u2d4f \u2d4f \u2d53\u2d3c\u2d54\u2d49\u2d3d\u2d30 2025\\n\\n[![](https://upload.wikimedia.org/wikipedia/en/thumb/8/85/2025_Africa_Cup_of_Nations_logo.svg/250px-2025_Africa_Cup_of_Nations_logo.svg.png)](https://en.wikipedia.org/wiki/File:2025_Africa_Cup_of_Nations_logo.svg)\\n\\nOfficial logo[\\\\[1\\\\]](#cite_note-1)\\n\\nTournament details\\n\\nHost country\\n\\nMorocco\\n\\nDates\\n\\n21\u00a0December\u00a02025\u00a0\u2013 18\u00a0January\u00a02026\\n\\nTeams\\n\\n24\\n\\nVenue\\n\\n9\u00a0(in 6 host cities)\\n\\nFinal positions\\n\\nChampions\\n\\n\u00a0![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/40px-Flag_of_Morocco.svg.png)[Morocco](https://en.wikipedia.org/wiki/Morocco_national_football_team \\\"Morocco national football team\\\") (2nd title)\\n\\nRunners-up\\n\\n\u00a0![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/40px-Flag_of_Senegal.svg.png)[Senegal](https://en.wikipedia.org/wiki/Senegal_national_football_team \\\"Senegal national football team\\\")\\n\\nThird place\\n\\n\u00a0![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/40px-Flag_of_Nigeria.svg.png)[Nigeria](https://en.wikipedia.org/wiki/Nigeria_national_football_team \\\"Nigeria national football team\\\")\\n\\nFourth place\\n\\n\u00a0![](https://"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Allows identification of the group stage composition, the other opponents, and how the tournament structure affects strategic risk tolerance.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"2026 FIFA World Cup\\n\\nFIFA World Cup 26  \\nFIFA World Cup 2026  \\n_Copa Mundial de la FIFA 2026_\u00a0([Spanish](https://en.wikipedia.org/wiki/Spanish_language \\\"Spanish language\\\"))  \\n_Coupe du Monde de la FIFA 2026_\u00a0([French](https://en.wikipedia.org/wiki/French_language \\\"French language\\\"))\\n\\n[![Emblem of the 2026 FIFA World Cup, showing numbers \\\"2\\\" (top) and \\\"6\\\" (bottom) placed behind the World Cup trophy](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/250px-2026_FIFA_World_Cup_emblem.svg.png)](https://en.wikipedia.org/wiki/File:2026_FIFA_World_Cup_emblem.svg)\\n\\nTournament details\\n\\nHost countries\\n\\nCanada  \\nMexico  \\nUnited States\\n\\nDates\\n\\nJune 11 \u2013 July 19\\n\\nTeams\\n\\n48\u00a0(from 6 confederations)\\n\\nVenue\\n\\n16\u00a0(in 16 host cities)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n9\\n\\nGoals scored\\n\\n27\u00a0(3 per match)\\n\\nAttendance\\n\\n572,596\u00a0(63,622 per match)\\n\\nTop scorers\\n\\n-   [![Germany national football team](https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)](https://en.wikipedia.org/wiki/Germany_national_football_team \\\"Germany national football team\\\") [Kai Havertz](https://en.wikipedia.org/wiki/Kai_Havertz \\\"Kai Havertz\\\")\\n-   [![United States men's national soccer team](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)](https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team \\\"United States men's national soccer team\\\") [Folarin Balogun](https://en.wikipedia.org/wiki/Folarin_Balogun \\\"Folarin Balogun\\\")\\n-   (2 goals each)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\")\\n\\n_[2030](https://en.wikipedia.org/wiki/2030_FIFA_World_Cup \\\"2030 FIFA World Cup\\\")_ \u2192\\n\\nAll statistics correct "
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Fetches pre-match news reports on Neymar's fitness, training status, and projected role for Brazil's opening World Cup match.",
+        "data": "{\"topic\":\"Neymar Brazil squad 2026 (preview OR form OR squad)\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Provides tactical preview articles analyzing Morocco's gameplay style, defensive setups, and potential shifts in system under Regragui.",
+        "data": "{\"topic\":\"Morocco Walid Regragui tactical system (preview OR form OR squad)\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Finds pre-match tactical analyses of Brazil's projected attacking setup and plans to unlock compact defenses.",
+        "data": "{\"topic\":\"Brazil Dorival Junior tactical line-up (preview OR form OR squad)\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Finds preview articles comparing the current teams to the March 2023 friendly and analyzing the tactical evolution of both squads.",
+        "data": "{\"topic\":\"Brazil vs Morocco head to head history (preview OR form OR squad)\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Gives pre-match betting odds and market moves from news sources before kickoff.",
+        "data": "{\"topic\":\"Brazil vs Morocco betting odds market (preview OR form OR squad)\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Provides late breaking team news, training updates, and pre-match injury reports.",
+        "data": "{\"topic\":\"Brazil vs Morocco team injury news (preview OR form OR squad)\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Identifies the match venue and collects analyses on how pitch conditions and local weather could affect high-intensity systems.",
+        "data": "{\"topic\":\"Brazil vs Morocco World Cup stadium venue (preview OR form OR squad)\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      }
+    ],
+    "research_cost": 0.076,
+    "wallet_before": 4.787,
+    "wallet_after": 4.711,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "bet": 2.0,
+      "reasoning": "Brazil's superior individual attacking talent, led by Vin\u00edcius J\u00fanior and Rodrygo, should prove decisive in breaking down Morocco's highly organized defensive structure."
+    },
+    "full_reasoning": "Based on an analysis of both teams heading into their Group C opener at the 2026 FIFA World Cup, Brazil enters as the favorite, but they face an incredibly challenging test. \n\nMorocco is in exceptional form, having recently won the 2025 Africa Cup of Nations and boasting a highly disciplined, world-class defensive structure under Walid Regragui. Their squad features elite talent like Achraf Hakimi, Brahim D\u00edaz, and Yassine Bounou, capable of neutralizing top-tier attacks. However, Brazil's attacking depth\u2014spearheaded by Vin\u00edcius J\u00fanior, Rodrygo, and their dynamic midfield\u2014possesses the individual brilliance and tactical flexibility necessary to unlock compact defensive blocks under pressure. While Morocco will make it highly competitive, Brazil's tournament pedigree and superior offensive firepower should ultimately carry them to a narrow victory.\n\nPICK: home\nCONFIDENCE: 6\nBET: $2.00\nREASONING: Brazil's superior individual attacking talent, led by Vin\u00edcius J\u00fanior and Rodrygo, should prove decisive in breaking down Morocco's highly organized defensive structure.",
+    "retroactive": true,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
