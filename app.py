@@ -152,7 +152,45 @@ def _badge(r):
         return '<span class="badge correct">✓ CORRECT</span>'
     if r.get("correct") is False:
         return '<span class="badge incorrect">✗ INCORRECT</span>'
-    return '<span class="badge pending">PENDING</span>'
+    # Determine if match is in the past
+    kickoff_str = r.get("kickoff", "")
+    try:
+        from datetime import timedelta
+        kdt = datetime.fromisoformat(kickoff_str.replace("Z", "+00:00"))
+        now = datetime.now(timezone.utc)
+        secs_since = (now - kdt).total_seconds()
+        if secs_since > 7200:  # more than 2h after kickoff = finished
+            return '<span class="badge" style="background:#1a1a1a;color:#666;border:1px solid #333;">AWAITING REFLECT</span>'
+        if secs_since > 0:  # kicked off, less than 2h = live
+            return '<span class="badge" style="background:#1a2a1a;color:#66bb6a;border:1px solid #66bb6a;">● LIVE</span>'
+    except Exception:
+        pass
+    return '<span class="badge pending">UPCOMING</span>'
+
+def _time_rel(kickoff_str: str) -> tuple[str, str]:
+    """Return (label, color) for a kickoff time relative to now."""
+    try:
+        kdt = datetime.fromisoformat(kickoff_str.replace("Z", "+00:00"))
+        now = datetime.now(timezone.utc)
+        delta = kdt - now
+        secs = delta.total_seconds()
+        abs_secs = abs(secs)
+        if abs_secs < 3600:
+            mins = int(abs_secs / 60)
+            label = f"{mins}m {'away' if secs > 0 else 'ago'}"
+        elif abs_secs < 86400:
+            hrs = abs_secs / 3600
+            label = f"{hrs:.1f}h {'away' if secs > 0 else 'ago'}"
+        else:
+            days = abs_secs / 86400
+            label = f"{days:.1f}d {'away' if secs > 0 else 'ago'}"
+        if secs > 0:
+            color = "#4caf50" if secs > 86400 else ("#f9a825" if secs > 3600 else "#f44336")
+        else:
+            color = "#555"
+        return label, color
+    except Exception:
+        return "", "#555"
 
 def _esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
@@ -187,7 +225,7 @@ async def dashboard():
         for f in upcoming:
             items += f"""<div class="upcoming-item">
               <div><b>{_team(f['home'])} vs {_team(f['away'])}</b> <span style="color:#555;font-size:11px;margin-left:8px;">{_esc(f.get('stage',''))}</span></div>
-              <div style="color:#666;font-size:12px;">{f['kickoff_utc'][:16].replace('T',' ')} UTC</div>
+              <div style="color:{_time_rel(f['kickoff_utc'])[1]};font-size:12px;">{_time_rel(f['kickoff_utc'])[0]} &nbsp;<span style="color:#444;">({f['kickoff_utc'][:16].replace('T',' ')} UTC)</span></div>
             </div>"""
         html += f'<div class="section"><h2>Upcoming</h2>{items}</div>'
 
@@ -224,7 +262,7 @@ async def dashboard():
               <div class="match-header">
                 <div>
                   <div class="match-title">{_team(r['home'])} vs {_team(r['away'])}</div>
-                  <div class="match-time">{r.get("kickoff","")[:16].replace("T"," ")} UTC &nbsp;·&nbsp; Pick: <b>{_team(_pick_display(pred.get('pick','?'), r['home'], r['away']))}</b> &nbsp;·&nbsp; conf {pred.get("confidence","?")}/10</div>
+                  <div class="match-time">{(lambda t,c: f'<span style="color:{c}">{t}</span> &nbsp;·&nbsp; ')(*_time_rel(r.get("kickoff","")))}Pick: <b>{_team(_pick_display(pred.get('pick','?'), r['home'], r['away']))}</b> &nbsp;·&nbsp; conf {pred.get("confidence","?")}/10</div>
                 </div>
                 <div style="display:flex;align-items:center;gap:8px;">{_badge(r)}<span style="color:#444;font-size:16px;">⌄</span></div>
               </div>
