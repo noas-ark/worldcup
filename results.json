@@ -12,52 +12,6 @@
     "wallet_after": 20.0,
     "prediction": {
       "pick": "home",
-      "confidence": 5,
-      "bet": 0.1,
-      "reasoning": "Insufficient data for strong prediction"
-    },
-    "full_reasoning": "",
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
-  },
-  {
-    "match": "NED vs JPN",
-    "home": "NED",
-    "away": "JPN",
-    "kickoff": "2026-06-14T20:00Z",
-    "strategy_snapshot": "",
-    "services_planned": [],
-    "services_used": [],
-    "research_cost": 0.0,
-    "wallet_before": 20.0,
-    "wallet_after": 20.0,
-    "prediction": {
-      "pick": "home",
-      "confidence": 5,
-      "bet": 0.1,
-      "reasoning": "Insufficient data for strong prediction"
-    },
-    "full_reasoning": "",
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
-  },
-  {
-    "match": "NED vs JPN",
-    "home": "NED",
-    "away": "JPN",
-    "kickoff": "2026-06-14T20:00Z",
-    "strategy_snapshot": "",
-    "services_planned": [],
-    "services_used": [],
-    "research_cost": 0.0,
-    "wallet_before": 20.0,
-    "wallet_after": 20.0,
-    "prediction": {
-      "pick": "home",
       "confidence": 6,
       "bet": 1.0,
       "reasoning": "Netherlands possesses superior individual talent and tournament experience to edge out a highly disciplined Japanese side."
