@@ -364,10 +364,11 @@ Research data purchased:
 Recent match history and outcomes:
 {json.dumps(recent_results, indent=2) if recent_results else "(no history yet)"}
 
-Analyze the match thoroughly, then end your response with EXACTLY these 4 lines:
+Analyze the match thoroughly, then end your response with EXACTLY these 5 lines:
 PICK: [home|away|draw]
 CONFIDENCE: [1-10]
-REASONING: [one sentence max]"""
+CONFIDENCE_REASON: [one sentence explaining why confidence is that specific number — what raises or lowers it]
+REASONING: [one sentence summarizing the key factor driving the pick]"""
 
 log("Asking Gemini for prediction...")
 try:
@@ -386,7 +387,7 @@ pick_raw = _parse(r"PICK:\s*(\w+)", full_reasoning, "home").lower()
 pick = pick_raw if pick_raw in ("home", "away", "draw") else "home"
 confidence_raw = _parse(r"CONFIDENCE:\s*(\d+)", full_reasoning, "5")
 confidence = max(1, min(10, int(confidence_raw)))
-try:
+confidence_reason = _parse(r"CONFIDENCE_REASON:\s*(.+)", full_reasoning, "")
 reasoning = _parse(r"REASONING:\s*(.+)", full_reasoning, "Insufficient data for strong prediction")
 
 log("Prediction: PICK=%s CONFIDENCE=%d", pick, confidence)
@@ -410,6 +411,7 @@ entry = {
     "prediction": {
         "pick": pick,
         "confidence": confidence,
+            "confidence_reason": confidence_reason,
         "reasoning": reasoning,
     },
     "full_reasoning": full_reasoning,

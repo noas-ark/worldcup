@@ -4,6 +4,7 @@ FastAPI app deployed on HF Spaces. Renders HTML directly (no Jinja2).
 """
 
 import json
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -111,6 +112,9 @@ details summary::-webkit-details-marker { display: none; }
 details summary { outline: none; }
 details[open] .match-header { border-bottom: 1px solid #222; }
 details[open] summary span.chevron { transform: rotate(180deg); display: inline-block; }
+.tooltip-wrap { position: relative; display: inline-block; cursor: help; border-bottom: 1px dashed #555; }
+.tooltip-wrap .tooltip-box { visibility: hidden; opacity: 0; background: #1e1e1e; color: #ccc; font-size: 11px; line-height: 1.5; border: 1px solid #333; border-radius: 4px; padding: 8px 10px; position: absolute; z-index: 10; bottom: 125%; left: 50%; transform: translateX(-50%); width: 260px; pointer-events: none; transition: opacity 0.15s; white-space: normal; font-weight: normal; font-style: normal; }
+.tooltip-wrap:hover .tooltip-box { visibility: visible; opacity: 1; }
 </style>
 """
 
@@ -198,7 +202,7 @@ def _esc(s):
 def _page(body, title="⚽ World Cup Prediction Agent"):
     results = _load("results.json", [])
     w, l, pct = _stats(results)
-    nav = '<div class="nav"><a href="/">Dashboard</a> · <a href="/strategy">Strategy</a></div>'
+    nav = '<div class="nav"><a href="/">Dashboard</a> · <a href="/learnings">Learnings</a> · <a href="/strategy">Strategy</a></div>'
     header = f"""
 <header>
   <h1>⚽ World Cup Prediction Agent</h1>
@@ -270,7 +274,7 @@ async def dashboard():
               <div class="match-body">
                 <div class="pred-row">
                   <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick','?'), r['home'], r['away']))}</div></div>
-                  <div class="pred-item"><div class="label">Confidence</div><div class="value">{pred.get("confidence","?")}/10</div></div>
+                  <div class="pred-item"><div class="label">Confidence</div><div class="value"><span class="tooltip-wrap">{pred.get("confidence","?")}/10<span class="tooltip-box">{_esc(pred.get("confidence_reason","Hover reason not available for this prediction."))}</span></span></div></div>
                   <div class="pred-item"><div class="label">Research cost</div><div class="value" style="color:#f9a825;">${r.get("research_cost",0):.4f}</div></div>
                 </div>
                 <div class="reasoning">"{_esc(pred.get("reasoning",""))}"</div>
@@ -381,7 +385,7 @@ async def match_detail(match_key: str):
 <div class="section"><h2>Prediction</h2>
   <div class="pred-row">
     <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick','?'), home, away))}</div></div>
-    <div class="pred-item"><div class="label">Confidence</div><div class="value">{pred.get("confidence","?")}/10</div></div>
+    <div class="pred-item"><div class="label">Confidence</div><div class="value"><span class="tooltip-wrap">{pred.get("confidence","?")}/10<span class="tooltip-box">{_esc(pred.get("confidence_reason","Hover reason not available for this prediction."))}</span></span></div></div>
   </div>
   <div class="reasoning">"{_esc(pred.get("reasoning",""))}"</div>
 </div>
@@ -413,6 +417,151 @@ async def strategy_page():
 
     body = f'<div class="section"><h2>Current Strategy</h2>{current}</div>{hist_html}'
     return _page(body, "Strategy — World Cup Predictions")
+
+
+def _strategy_history() -> list[dict]:
+    """Return list of {match, date, sha, content, prev_content} from git log."""
+    try:
+        log = subprocess.run(
+            ["git", "log", "--pretty=format:%H|%ai|%s", "--", "strategy.md"],
+            cwd=BASE, capture_output=True, text=True, check=True,
+        )
+    except Exception:
+        return []
+
+    entries = []
+    lines = [l for l in log.stdout.strip().splitlines() if l]
+    for line in lines:
+        parts = line.split("|", 2)
+        if len(parts) != 3:
+            continue
+        sha, date_str, subject = parts
+        # subject looks like "reflect: NED vs JPN" or "init: ..."
+        match_name = subject.replace("reflect: ", "").replace("init: ", "").strip()
+        try:
+            dt = datetime.fromisoformat(date_str.strip())
+        except Exception:
+            dt = None
+        try:
+            content = subprocess.run(
+                ["git", "show", f"{sha}:strategy.md"],
+                cwd=BASE, capture_output=True, text=True, check=True,
+            ).stdout
+        except Exception:
+            content = ""
+        entries.append({"match": match_name, "date": dt, "sha": sha, "subject": subject, "content": content})
+
+    # Chronological order (oldest first), attach previous content for diff
+    entries.reverse()
+    for i, e in enumerate(entries):
+        e["prev_content"] = entries[i - 1]["content"] if i > 0 else ""
+    return entries
+
+
+def _text_diff_html(old: str, new: str) -> str:
+    """Produce simple line-level added/removed/unchanged HTML."""
+    old_lines = old.splitlines()
+    new_lines = new.splitlines()
+    old_set = set(old_lines)
+    new_set = set(new_lines)
+    parts = []
+    for line in new_lines:
+        esc = _esc(line)
+        if line not in old_set:
+            parts.append(f'<div class="diff-add">+ {esc}</div>')
+        else:
+            parts.append(f'<div class="diff-same">  {esc}</div>')
+    for line in old_lines:
+        if line not in new_set:
+            esc = _esc(line)
+            parts.append(f'<div class="diff-remove">- {esc}</div>')
+    return "\n".join(parts) if parts else '<div class="diff-same">(no change)</div>'
+
+
+@app.get("/learnings", response_class=HTMLResponse)
+async def learnings_page():
+    history = _strategy_history()
+    results = _load("results.json", [])
+    # Index evaluations by match name for quick lookup
+    evals = {r.get("match", ""): r for r in results if r.get("evaluation")}
+
+    DIFF_CSS = """
+<style>
+.diff-add    { color: #4caf50; background: #0d1f0d; padding: 1px 6px; white-space: pre-wrap; word-break: break-word; }
+.diff-remove { color: #f44336; background: #1f0d0d; padding: 1px 6px; white-space: pre-wrap; word-break: break-word; }
+.diff-same   { color: #444;    padding: 1px 6px; white-space: pre-wrap; word-break: break-word; }
+.learning-card { background: #111; border: 1px solid #2a2a2a; border-radius: 6px; margin-bottom: 24px; overflow: hidden; }
+.learning-header { background: #161616; border-bottom: 1px solid #222; padding: 10px 16px; display: flex; justify-content: space-between; align-items: baseline; }
+.learning-match { font-size: 15px; font-weight: bold; color: #fff; }
+.learning-date  { font-size: 11px; color: #555; }
+.learning-body  { padding: 14px 16px; }
+.eval-box { background: #0a0a0a; border: 1px solid #1e1e1e; border-radius: 4px; padding: 10px 12px; font-size: 12px; color: #888; white-space: pre-wrap; max-height: 220px; overflow-y: auto; margin-bottom: 12px; }
+.diff-box { background: #050505; border: 1px solid #1e1e1e; border-radius: 4px; padding: 8px 4px; font-size: 12px; font-family: monospace; max-height: 320px; overflow-y: auto; }
+.section-label { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; margin-top: 12px; }
+</style>"""
+
+    body = DIFF_CSS
+
+    if not history:
+        body += '<div style="color:#444;font-style:italic;padding:32px 0;">No strategy history yet — predictions are still being reflected.</div>'
+        return _page(body, "Learnings — World Cup Predictions")
+
+    # Show newest first, skip the init commit if it has no match in results
+    reflect_entries = [e for e in reversed(history) if e["subject"].startswith("reflect:")]
+
+    if not reflect_entries:
+        body += '<div style="color:#444;font-style:italic;padding:32px 0;">No reflections recorded yet.</div>'
+        return _page(body, "Learnings — World Cup Predictions")
+
+    cards = ""
+    for e in reflect_entries:
+        match_name = e["match"]
+        date_str = e["date"].strftime("%Y-%m-%d %H:%M UTC") if e["date"] else ""
+        result_entry = evals.get(match_name, {})
+
+        # Outcome badge
+        if result_entry.get("correct") is True:
+            badge = '<span class="badge correct">✓ CORRECT</span>'
+        elif result_entry.get("correct") is False:
+            badge = '<span class="badge incorrect">✗ INCORRECT</span>'
+        else:
+            badge = ""
+
+        # Score
+        res = result_entry.get("result")
+        score_html = ""
+        if res:
+            score_html = f'<div style="font-size:12px;color:#666;margin-bottom:10px;">{_esc(result_entry.get("home",""))} {res["home_score"]}–{res["away_score"]} {_esc(result_entry.get("away",""))}</div>'
+
+        # Evaluation
+        eval_text = result_entry.get("evaluation", "")
+        eval_html = ""
+        if eval_text:
+            eval_html = f'<div class="section-label">Evaluator assessment</div><div class="eval-box">{_esc(eval_text)}</div>'
+
+        # Strategy diff
+        diff_html = _text_diff_html(e["prev_content"], e["content"])
+        is_first = not e["prev_content"].strip()
+        diff_label = "Initial strategy written" if is_first else "Strategy change"
+
+        cards += f"""<div class="learning-card">
+  <div class="learning-header">
+    <div>
+      <div class="learning-match">{_esc(match_name)}</div>
+      <div class="learning-date">{date_str}</div>
+    </div>
+    {badge}
+  </div>
+  <div class="learning-body">
+    {score_html}
+    {eval_html}
+    <div class="section-label">{diff_label}</div>
+    <div class="diff-box">{diff_html}</div>
+  </div>
+</div>"""
+
+    body += f'<div class="section"><h2>Strategy Evolution — {len(reflect_entries)} reflection{"s" if len(reflect_entries) != 1 else ""}</h2>{cards}</div>'
+    return _page(body, "Learnings — World Cup Predictions")
 
 
 @app.get("/api/results")
