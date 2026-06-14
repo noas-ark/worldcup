@@ -1,0 +1,9 @@
+google-generativeai
+eth-account
+x402[requests,evm]
+web3
+requests
+python-dotenv
+fastapi
+uvicorn[standard]
+jinja2
