@@ -171,5 +171,165 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "HAI vs SCO",
+    "home": "HAI",
+    "away": "SCO",
+    "kickoff": "2026-06-14T01:00Z",
+    "strategy_snapshot": "",
+    "information_needs": "FORM\n- How did Haiti and Scotland perform in their final pre-tournament warm-up friendlies in late May and early June 2026, particularly regarding their defensive shape and clean sheet records?\n- What was Scotland's path through UEFA qualifying (automatic vs. playoffs), and did their performances in the final competitive matches of that campaign show tactical consistency or vulnerability under pressure?\n\nPLAYERS\n- Is Haiti's primary goal threat, Frantzdy Pierrot, fully fit to lead the line, or will coach S\u00e9bastien Mign\u00e9 have to rely on Duckens Nazon or a younger alternative?\n- How has Scotland's key midfield engine, Scott McTominay, recovered from the grueling European club season, and are there any late fitness tests pending for key left-backs like Andrew Robertson or Kieran Tierney?\n\nTACTICS\n- Will Haiti adopt a low-block 4-5-1 to stifle Scotland's midfield progression, or will they attempt to use a high-pressing 4-3-3 to exploit transitions?\n- Will Scotland deploy Steve Clarke's preferred back-three system to dictate possession from the back, and how do they plan to break down a compact, physical low-block defense?\n\nH2H\n- Do these two nations have any historical head-to-head fixtures (competitive or friendly), and if so, did Scotland struggle against Haiti's athletic and direct style of play?\n\nCONTEXT\n- What are the current standings in this World Cup group, and does the 48-team tournament structure (where some third-place teams advance) mean a draw is a mutually acceptable result, or is this a must-win for both?\n\nMARKET\n- What are the current 1X2 moneyline odds and the Asian Handicap line, and does the market movement suggest sharp money backing a low-scoring Scottish victory or a Haitian upset?\n\nNEWS\n- Have there been any reported camp illnesses, disciplinary actions, or logistics/travel delays for either squad since arriving at their base camps?\n\nVENUE\n- Which North American stadium is hosting this match, and will the local weather conditions (extreme summer heat or high humidity) favor the CONCACAF-based players of Haiti over Scotland's UK-based squad?",
+    "research_gaps": [],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Scotland_national_football_team"
+        },
+        "cost": 0.002,
+        "reason": "Extracts detailed historical qualification details and campaign context from Scotland's official team profile.",
+        "need": "What was Scotland's path through UEFA qualifying (automatic vs. playoffs), and did their performances in the final competitive matches of that campaign show tactical consistency or vulnerability under pressure?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Haiti_national_football_team"
+        },
+        "cost": 0.002,
+        "reason": "Analyzes Haiti's tournament history and matches against European opposition.",
+        "need": "Do these two nations have any historical head-to-head fixtures (competitive or friendly), and if so, did Scotland struggle against Haiti's athletic and direct style of play?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Haiti Frantzdy Pierrot Duckens Nazon fitness preview OR squad"
+        },
+        "cost": 0.01,
+        "reason": "Fetches recent pre-match news updates on the fitness and selection of Haiti's key forwards.",
+        "need": "Is Haiti's primary goal threat, Frantzdy Pierrot, fully fit to lead the line, or will coach S\u00e9bastien Mign\u00e9 have to rely on Duckens Nazon or a younger alternative?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Scotland Robertson Tierney McTominay fitness preview OR squad"
+        },
+        "cost": 0.01,
+        "reason": "Provides up-to-date reports on key Scottish players' physical status heading into the match.",
+        "need": "How has Scotland's key midfield engine, Scott McTominay, recovered from the grueling European club season, and are there any late fitness tests pending for key left-backs like Andrew Robertson or Kieran Tierney?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Haiti Scotland warm up friendlies defensive form OR preview"
+        },
+        "cost": 0.01,
+        "reason": "Obtains defensive analysis and friendly statistics leading up to the tournament kickoff.",
+        "need": "How did Haiti and Scotland perform in their final pre-tournament warm-up friendlies in late May and early June 2026, particularly regarding their defensive shape and clean sheet records?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Haiti tactical system low block formation preview"
+        },
+        "cost": 0.01,
+        "reason": "Gives insight into Haiti's defensive and transitional game plan.",
+        "need": "Will Haiti adopt a low-block 4-5-1 to stifle Scotland's midfield progression, or will they attempt to use a high-pressing 4-3-3 to exploit transitions?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Scotland tactical system Steve Clarke formation preview"
+        },
+        "cost": 0.01,
+        "reason": "Assesses tactical previews of Scotland's expected system and offensive strategies.",
+        "need": "Will Scotland deploy Steve Clarke's preferred back-three system to dictate possession from the back, and how do they plan to break down a compact, physical low-block defense?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Scotland Haiti head to head history preview"
+        },
+        "cost": 0.01,
+        "reason": "Reveals any historical meetings and styles matchup history.",
+        "need": "Do these two nations have any historical head-to-head fixtures (competitive or friendly), and if so, did Scotland struggle against Haiti's athletic and direct style of play?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "World Cup 2026 Scotland Haiti group format preview"
+        },
+        "cost": 0.01,
+        "reason": "Determines group standings math, progression rules, and tactical motivations.",
+        "need": "What are the current standings in this World Cup group, and does the 48-team tournament structure (where some third-place teams advance) mean a draw is a mutually acceptable result, or is this a must-win for both?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Scotland Haiti betting odds preview"
+        },
+        "cost": 0.01,
+        "reason": "Grabs pre-match sports betting market dynamics and sentiment data.",
+        "need": "What are the current 1X2 moneyline odds and the Asian Handicap line, and does the market movement suggest sharp money backing a low-scoring Scottish victory or a Haitian upset?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Scotland Haiti camp illness logistics preview"
+        },
+        "cost": 0.01,
+        "reason": "Uncovers internal camp situations, travel stresses, or disruptions before match day.",
+        "need": "Have there been any reported camp illnesses, disciplinary actions, or logistics/travel delays for either squad since arriving at their base camps?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Scotland Haiti World Cup match stadium weather preview"
+        },
+        "cost": 0.01,
+        "reason": "Examines venue details and how the forecast conditions relate to the athletic adaptation of both squads.",
+        "need": "Which North American stadium is hosting this match, and will the local weather conditions (extreme summer heat or high humidity) favor the CONCACAF-based players of Haiti over Scotland's UK-based squad?",
+        "category": "VENUE"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Extracts detailed historical qualification details and campaign context from Scotland's official team profile.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/Scotland_national_football_team\",\"finalUrl\":\"https://en.wikipedia.org/wiki/Scotland_national_football_team\",\"mode\":\"basic\",\"markdown\":\"Scotland\\n\\n[![Shirt badge/Association crest](https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Scotland_national_football_team_logo_2014.svg/250px-Scotland_national_football_team_logo_2014.svg.png)](https://en.wikipedia.org/wiki/File:Scotland_national_football_team_logo_2014.svg \\\"Shirt badge/Association crest\\\")\\n\\n[Nickname](https://en.wikipedia.org/wiki/List_of_national_association_football_teams_by_nickname \\\"List of national association football teams by nickname\\\")\\n\\n[The Tartan Army](https://en.wikipedia.org/wiki/Tartan_Army \\\"Tartan Army\\\") (supporters)\\n\\nAssociation\\n\\n[Scottish Football Association](https://en.wikipedia.org/wiki/Scottish_Football_Association \\\"Scottish Football Association\\\") (SFA)\\n\\nConfederation\\n\\n[UEFA](https://en.wikipedia.org/wiki/UEFA \\\"UEFA\\\") (Europe)\\n\\nHead coach\\n\\n[Steve Clarke](https://en.wikipedia.org/wiki/Steve_Clarke \\\"Steve Clarke\\\")\\n\\n[Captain](https://en.wikipedia.org/wiki/Captain_\\\\(association_football\\\\) \\\"Captain (association football)\\\")\\n\\n[Andy Robertson](https://en.wikipedia.org/wiki/Andy_Robertson \\\"Andy Robertson\\\")\\n\\nMost [caps](https://en.wikipedia.org/wiki/Cap_\\\\(sport\\\\)#Association_football \\\"Cap (sport)\\\")\\n\\n[Kenny Dalglish](https://en.wikipedia.org/wiki/Kenny_Dalglish \\\"Kenny Dalglish\\\") (102)\\n\\nTop scorer\\n\\n[Kenny Dalglish](https://en.wikipedia.org/wiki/Kenny_Dalglish \\\"Kenny Dalglish\\\")  \\n[Denis Law](https://en.wikipedia.org/wiki/Denis_Law \\\"Denis Law\\\") (30)\\n\\nHome stadium\\n\\n[Hampden Park](https://en.wikipedia.org/wiki/Hampden_Park \\\"Hampden Park\\\")\\n\\n[FIFA code](https://en.wikipedia.org/wiki/List_of_FIFA_country_codes \\\"List of FIFA country codes\\\")\\n\\nSCO\\n\\n![](https://upload.wikimedia.org/wikipedia/commons/c/cb/Kit_left_arm_sco26h.png)\\n\\n![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Kit_left_ar"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Analyzes Haiti's tournament history and matches against European opposition.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/Haiti_national_football_team\",\"finalUrl\":\"https://en.wikipedia.org/wiki/Haiti_national_football_team\",\"mode\":\"basic\",\"markdown\":\"From Wikipedia, the free encyclopedia\\n\\nHaiti\\n\\n[![Shirt badge/Association crest](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/250px-Flag_of_Haiti.svg.png)](https://en.wikipedia.org/wiki/File:Flag_of_Haiti.svg \\\"Shirt badge/Association crest\\\")\\n\\n[Nickname(s)](https://en.wikipedia.org/wiki/List_of_national_association_football_teams_by_nickname \\\"List of national association football teams by nickname\\\")\\n\\n_Les Grenadiers_[\\\\[1\\\\]](#cite_note-1)  \\n(The Grenadiers)  \\n_Le Rouge et Bleu_[\\\\[2\\\\]](#cite_note-2)  \\n(The Red and Blue)  \\n_Les Bicolores_[\\\\[3\\\\]](#cite_note-3)  \\n(The Bicolor)  \\n_La S\u00e9lection Nationale_[\\\\[4\\\\]](#cite_note-4) (The National Selection)\\n\\nAssociation\\n\\n[F\u00e9d\u00e9ration Ha\u00eftienne de Football](https://en.wikipedia.org/wiki/Haitian_Football_Federation \\\"Haitian Football Federation\\\") (FHF)\\n\\nConfederation\\n\\n[CONCACAF](https://en.wikipedia.org/wiki/CONCACAF \\\"CONCACAF\\\") (North America)\\n\\nSub-confederation\\n\\n[CFU](https://en.wikipedia.org/wiki/Caribbean_Football_Union \\\"Caribbean Football Union\\\") (Caribbean)\\n\\nHead coach\\n\\n[S\u00e9bastien Mign\u00e9](https://en.wikipedia.org/wiki/S%C3%A9bastien_Mign%C3%A9 \\\"S\u00e9bastien Mign\u00e9\\\")\\n\\n[Captain](https://en.wikipedia.org/wiki/Captain_\\\\(association_football\\\\) \\\"Captain (association football)\\\")\\n\\n[Johny Placide](https://en.wikipedia.org/wiki/Johny_Placide \\\"Johny Placide\\\")\\n\\nMost [caps](https://en.wikipedia.org/wiki/Cap_\\\\(sport\\\\)#Association_football \\\"Cap (sport)\\\")\\n\\n[Pierre Richard Bruny](https://en.wikipedia.org/wiki/Pierre_Richard_Bruny \\\"Pierre Richard Bruny\\\") (95)\\n\\nTop scorer\\n\\n[Duckens Nazon](https://en.wikipedia.org/wiki/Duckens_Nazon \\\"Duckens Nazon\\\") (44)\\n\\nHome stadium\\n\\n[Stade Sylvio Cator](https://en.wikipedia.org/wiki/Stade_Sylvio_Cator \\\"Stade Sylvio Cator\\\")\\n\\n[FIFA code](https"
+      }
+    ],
+    "research_cost": 0.004,
+    "wallet_before": 4.975,
+    "wallet_after": 4.971,
+    "prediction": {
+      "pick": "away",
+      "confidence": 7,
+      "bet": 2.0,
+      "reasoning": "Scotland's superior quality, tactical discipline, and elite European experience will be too much for Haiti to overcome."
+    },
+    "full_reasoning": "The match between Haiti (HAI) and Scotland (SCO) in the group stage of the 2026 World Cup presents a significant contrast in styles, tournament experience, and overall squad quality. \n\n### Squad Quality and Key Players\nScotland enters this match as the clear favorites. Under Steve Clarke, the Scots have developed a highly organized, cohesive unit that has consistently competed at the European Championship level. Their squad is anchored by proven English Premier League and Serie A talent, including captain Andy Robertson (Liverpool), John McGinn (Aston Villa), Scott McTominay, and Billy Gilmour. This midfield core gives Scotland a massive advantage in controlling the tempo, maintaining possession, and transition play.\n\nHaiti, representing CONCACAF, relies on a direct and athletic style of play. While they possess dangerous individual attackers like Duckens Nazon and Frantzdy Pierrot, who can cause problems with their physicality and pace, the majority of their squad plays in lower-tier European leagues, MLS, or domestic leagues. Haiti lacks the depth and elite-level experience required to match a disciplined European side over 90 minutes.\n\n### Tactical Matchup\nScotland is renowned for their defensive stability and prowess from set-pieces. With deliverers like Andy Robertson and physical targets like Scott McTominay and John McGinn entering the box, Scotland will look to exploit Haiti's historical vulnerability to aerial crosses and set-piece organization. \n\nHaiti's head coach, S\u00e9bastien Mign\u00e9, will likely deploy a compact defensive block and look to hit Scotland on the counter-attack utilizing their speed on the wings. However, Scotland's experienced backline and defensive midfielders are highly proficient at stopping counter-attacks and restricting space in transition.\n\n### Venue and Context\nWhile the match is played in North America (neutral territory), Scotland's famously passionate travelling supporters (the Tartan Army) are expected to turn the venue into a virtual home environment. In a major tournament opener or crucial group stage match, Scotland\u2019s experience in high-pressure environments will play a crucial role.\n\n### Conclusion\nHaiti's athletic threat cannot be entirely ignored, but Scotland\u2019s superior tactical organization, midfield dominance, and physical edge\u2014especially on set-pieces\u2014should prove to be decisive in securing a comfortable victory.\n\nPICK: away\nCONFIDENCE: 7\nBET: $2.00\nREASONING: Scotland's superior quality, tactical discipline, and elite European experience will be too much for Haiti to overcome.",
+    "retroactive": true,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
