@@ -10,6 +10,8 @@ pinned: false
 
 # World Cup Prediction Agent
 
+https://huggingface.co/spaces/Noaleetz/worldcup-predictor-hack
+
 A self-improving match prediction agent for the 2026 FIFA World Cup. Before each match it autonomously purchases real-time sports data via [x402](https://x402.org) micropayments, reasons over that data with Gemini, records the result afterward, and updates its own strategy document so future predictions get better.
 
 Live dashboard: deployed on Hugging Face Spaces (Docker).
