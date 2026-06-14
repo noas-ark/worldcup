@@ -1110,5 +1110,199 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "QAT vs SUI",
+    "home": "QAT",
+    "away": "SUI",
+    "kickoff": "2026-06-13T19:00Z",
+    "strategy_snapshot": "",
+    "information_needs": "FORM\n- What were the results and underlying performance metrics (such as expected goals/xG and big chances created) of Qatar's final three warm-up friendlies in May/June 2026?\n- How did Switzerland fare in their European World Cup qualification group, and did they show any vulnerability against lower-ranked, defensive sides in their recent fixtures?\n\nPLAYERS\n- Is Qatar's key playmaker and Asian Cup hero Akram Afif fully fit, and who is projected to partner with him in attack?\n- Has Gregor Kobel officially established himself as Switzerland's undisputed starting goalkeeper over veteran Yann Sommer for this tournament, and what is his current physical condition?\n\nTACTICS\n- Will Qatar's manager opt for a compact 5-3-2 low-block to absorb pressure and counter-attack, or will they attempt to replicate their possession-heavy style used in AFC competitions?\n- How does Switzerland's midfield pivot (anchored by Granit Xhaka) plan to progress the ball through central areas to break down a potentially stubborn Qatari mid-block?\n\nH2H\n- What tactical trends can be extracted from the only previous modern meeting between these nations\u2014Qatar's 1-0 friendly upset over Switzerland in 2018\u2014and how many core players from that match are still expected to start?\n\nCONTEXT\n- Given the 48-team World Cup group stage format, how does the strength of the other two teams in this group affect each side's risk tolerance (i.e., is this a must-win for Switzerland, or is a draw acceptable)?\n\nMARKET\n- What are the current 1X2 and Asian Handicap betting lines, and has there been any significant line movement in favor of Qatar in the 48 hours leading up to kickoff?\n\nNEWS\n- Are there any late fitness tests or undisclosed illnesses reported in either camp, specifically concerning key Swiss defenders like Manuel Akanji?\n\nVENUE\n- Which North American stadium is hosting this fixture, and will the local climate (potential high heat/humidity or an indoor air-conditioned stadium) heavily favor the physical conditioning of one team over the other?",
+    "research_gaps": [
+      {
+        "need": "What are the current 1X2 and Asian Handicap betting lines, and has there been any significant line movement in favor of Qatar in the 48 hours leading up to kickoff?",
+        "category": "MARKET",
+        "ideal_service": "A dedicated sports betting odds API providing historical and pre-match market movements, 1X2, and Asian handicap odds."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(UEFA)"
+        },
+        "cost": 0.002,
+        "reason": "Reads the Wikipedia entry for UEFA World Cup qualification to assess Switzerland's path, group performance, and style vulnerabilities.",
+        "need": "How did Switzerland fare in their European World Cup qualification group, and did they show any vulnerability against lower-ranked, defensive sides in their recent fixtures?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Switzerland_national_football_team_results_(2010%E2%80%932019)"
+        },
+        "cost": 0.002,
+        "reason": "Allows extraction of Switzerland's historical matches, specifically the 2018 friendly line-up and details to compare with modern squads.",
+        "need": "What tactical trends can be extracted from the only previous modern meeting between these nations\u2014Qatar's 1-0 friendly upset over Switzerland in 2018\u2014and how many core players from that match are still expected to start?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Analyzes the tournament group structure and group stage advancement rules of the 48-team tournament.",
+        "need": "Given the 48-team World Cup group stage format, how does the strength of the other two teams in this group affect each side's risk tolerance (i.e., is this a must-win for Switzerland, or is a draw acceptable)?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Retrieves details about the 2026 FIFA World Cup host venues, locations, and stadium conditions.",
+        "need": "Which North American stadium is hosting this fixture, and will the local climate (potential high heat/humidity or an indoor air-conditioned stadium) heavily favor the physical conditioning of one team over the other?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "\"Akram Afif\" AND (preview OR form OR squad OR fitness)",
+          "language": "english",
+          "hours": 168
+        },
+        "cost": 0.01,
+        "reason": "Fetches recent news reports on Akram Afif's fitness and projected attacking partners prior to the match.",
+        "need": "Is Qatar's key playmaker and Asian Cup hero Akram Afif fully fit, and who is projected to partner with him in attack?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "\"Gregor Kobel\" AND \"Yann Sommer\" AND (preview OR form OR squad)",
+          "language": "english",
+          "hours": 168
+        },
+        "cost": 0.01,
+        "reason": "Queries recent sports news to check Switzerland's goalkeeper hierarchy and Kobel's starting status and condition.",
+        "need": "Has Gregor Kobel officially established himself as Switzerland's undisputed starting goalkeeper over veteran Yann Sommer for this tournament, and what is his current physical condition?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "\"Manuel Akanji\" AND (preview OR form OR squad OR injury OR fitness)",
+          "language": "english",
+          "hours": 72
+        },
+        "cost": 0.01,
+        "reason": "Checks recent news for late updates on Manuel Akanji's fitness and availability.",
+        "need": "Are there any late fitness tests or undisclosed illnesses reported in either camp, specifically concerning key Swiss defenders like Manuel Akanji?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "\"Qatar\" AND \"friendlies\" AND (preview OR form OR squad) AND \"2026\"",
+          "language": "english",
+          "hours": 168
+        },
+        "cost": 0.01,
+        "reason": "Retrieves pre-match warm-up performance reviews and friendly metrics for Qatar's national team.",
+        "need": "What were the results and underlying performance metrics (such as expected goals/xG and big chances created) of Qatar's final three warm-up friendlies in May/June 2026?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "\"Qatar\" AND \"tactics\" AND (preview OR form OR squad OR tactical)",
+          "language": "english",
+          "hours": 168
+        },
+        "cost": 0.01,
+        "reason": "Provides pre-match tactical previews detailing Qatar's expected tactical setup and defensive/possession approach.",
+        "need": "Will Qatar's manager opt for a compact 5-3-2 low-block to absorb pressure and counter-attack, or will they attempt to replicate their possession-heavy style used in AFC competitions?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "\"Granit Xhaka\" AND \"Switzerland\" AND (preview OR form OR squad OR tactical)",
+          "language": "english",
+          "hours": 168
+        },
+        "cost": 0.01,
+        "reason": "Searches for tactical news and analysis concerning Granit Xhaka's role in the Swiss midfield pivot.",
+        "need": "How does Switzerland's midfield pivot (anchored by Granit Xhaka) plan to progress the ball through central areas to break down a potentially stubborn Qatari mid-block?",
+        "category": "TACTICS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Reads the Wikipedia entry for UEFA World Cup qualification to assess Switzerland's path, group performance, and style vulnerabilities.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(UEFA)\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(UEFA)\",\"mode\":\"basic\",\"markdown\":\"[![Page semi-protected](https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png)](https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#semi \\\"This article is semi-protected.\\\")\\n\\nFrom Wikipedia, the free encyclopedia\\n\\n2026 FIFA World Cup qualification (UEFA)\\n\\nTournament details\\n\\nDates\\n\\n21 March 2025 \u2013 31 March 2026\\n\\nTeams\\n\\n54\u00a0(from 1 confederation)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n204\\n\\nGoals scored\\n\\n676\u00a0(3.31 per match)\\n\\nAttendance\\n\\n4,448,339\u00a0(21,806 per match)\\n\\nTop scorer\\n\\n[![Norway](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/40px-Flag_of_Norway.svg.png)](https://en.wikipedia.org/wiki/Norway_national_football_team \\\"Norway national football team\\\") [Erling Haaland](https://en.wikipedia.org/wiki/Erling_Haaland \\\"Erling Haaland\\\") (16 goals)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_qualification_\\\\(UEFA\\\\) \\\"2022 FIFA World Cup qualification (UEFA)\\\")\\n\\n_2030_ \u2192\\n\\nThe European section of the **[2026 FIFA World Cup qualification](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification \\\"2026 FIFA World Cup qualification\\\") competition** acted as qualifiers for the [2026 FIFA World Cup](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup \\\"2026 FIFA World Cup\\\"), to be held in Canada, Mexico and the United States, for national teams that are members of the Union of European Football Associations ([UEFA](https://en.wikipedia.org/wiki/UEFA \\\"UEFA\\\")). A total of 16 slots in the final tournament were available for UEFA teams.\\n\\n## Format\\n\\nA revised qualification format was confirmed by the UEFA Executive Committee during their meeting in [Nyon](https://en.wikipedia.org/wiki/Nyon \\\"Nyon\\\"), Switzerland, on 25 January "
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Allows extraction of Switzerland's historical matches, specifically the 2018 friendly line-up and details to compare with modern squads.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/Switzerland_national_football_team_results_(2010%E2%80%932019)\",\"finalUrl\":\"https://en.wikipedia.org/wiki/Switzerland_national_football_team_results_(2010%E2%80%932019)\",\"mode\":\"basic\",\"markdown\":\"From Wikipedia, the free encyclopedia\\n\\n\u00a0\u00a0Win\u00a0\u00a0\u00a0\u00a0Draw\u00a0\u00a0\u00a0\u00a0Loss\\n\\nThis article lists the results for the [Switzerland national football team](https://en.wikipedia.org/wiki/Switzerland_national_football_team \\\"Switzerland national football team\\\") from 2000 to 2019.\\n\\nMatches highlighted in purple are competitive fixtures.\\n\\n19 February 2000 [Oman Cup 2000](https://en.wikipedia.org/wiki/Exhibition_game \\\"Exhibition game\\\")\\n\\n**[Oman](https://en.wikipedia.org/wiki/Oman_national_football_team \\\"Oman national football team\\\")\u00a0![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/40px-Flag_of_Oman.svg.png)**\u00a0\\n\\n**1\u20134**\\n\\n **![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/20px-Flag_of_Switzerland_%28Pantone%29.svg.png) Switzerland**\\n\\n[Muscat](https://en.wikipedia.org/wiki/Muscat \\\"Muscat\\\"), Oman\\n\\n[UTC+4](https://en.wikipedia.org/wiki/UTC%2B04:00 \\\"UTC+04:00\\\")\\n\\n[Al-Mahruqy](https://en.wikipedia.org/wiki/Badar_Al-Mahruqy \\\"Badar Al-Mahruqy\\\") ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Soccerball_shade.svg/20px-Soccerball_shade.svg.png) 77'\u00a0([pen.](https://en.wikipedia.org/wiki/Penalty_kick_\\\\(association_football\\\\) \\\"Penalty kick (association football)\\\"))\\n\\n[Report](https://eu-football.info/_match.php?id=26432)\\n\\n[Cantaluppi](https://en.wikipedia.org/wiki/Mario_Cantaluppi \\\"Mario Cantaluppi\\\") ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Soccerball_shade.svg/20px-Soccerball_shade.svg.png) 17', 67'  \\n[Rey](https://en.wikipedia.org/wiki/Alexandre_Rey \\\"Alexandre Rey\\\") ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Soccerball_shade.svg/20px-Soccerball_shade.svg.png) 38'  \\n[H. Yakin](https://en.wikiped"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Analyzes the tournament group structure and group stage advancement rules of the 48-team tournament.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"2026 FIFA World Cup\\n\\nFIFA World Cup 26  \\nFIFA World Cup 2026  \\n_Copa Mundial de la FIFA 2026_\u00a0([Spanish](https://en.wikipedia.org/wiki/Spanish_language \\\"Spanish language\\\"))  \\n_Coupe du Monde de la FIFA 2026_\u00a0([French](https://en.wikipedia.org/wiki/French_language \\\"French language\\\"))\\n\\n[![Emblem of the 2026 FIFA World Cup, showing numbers \\\"2\\\" (top) and \\\"6\\\" (bottom) placed behind the World Cup trophy](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/250px-2026_FIFA_World_Cup_emblem.svg.png)](https://en.wikipedia.org/wiki/File:2026_FIFA_World_Cup_emblem.svg)\\n\\nTournament details\\n\\nHost countries\\n\\nCanada  \\nMexico  \\nUnited States\\n\\nDates\\n\\nJune 11 \u2013 July 19\\n\\nTeams\\n\\n48\u00a0(from 6 confederations)\\n\\nVenue\\n\\n16\u00a0(in 16 host cities)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n9\\n\\nGoals scored\\n\\n27\u00a0(3 per match)\\n\\nAttendance\\n\\n572,596\u00a0(63,622 per match)\\n\\nTop scorers\\n\\n-   [![Germany national football team](https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)](https://en.wikipedia.org/wiki/Germany_national_football_team \\\"Germany national football team\\\") [Kai Havertz](https://en.wikipedia.org/wiki/Kai_Havertz \\\"Kai Havertz\\\")\\n-   [![United States men's national soccer team](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)](https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team \\\"United States men's national soccer team\\\") [Folarin Balogun](https://en.wikipedia.org/wiki/Folarin_Balogun \\\"Folarin Balogun\\\")\\n-   (2 goals each)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\")\\n\\n_[2030](https://en.wikipedia.org/wiki/2030_FIFA_World_Cup \\\"2030 FIFA World Cup\\\")_ \u2192\\n\\nAll statistics correct "
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Retrieves details about the 2026 FIFA World Cup host venues, locations, and stadium conditions.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"2026 FIFA World Cup\\n\\nFIFA World Cup 26  \\nFIFA World Cup 2026  \\n_Copa Mundial de la FIFA 2026_\u00a0([Spanish](https://en.wikipedia.org/wiki/Spanish_language \\\"Spanish language\\\"))  \\n_Coupe du Monde de la FIFA 2026_\u00a0([French](https://en.wikipedia.org/wiki/French_language \\\"French language\\\"))\\n\\n[![Emblem of the 2026 FIFA World Cup, showing numbers \\\"2\\\" (top) and \\\"6\\\" (bottom) placed behind the World Cup trophy](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/250px-2026_FIFA_World_Cup_emblem.svg.png)](https://en.wikipedia.org/wiki/File:2026_FIFA_World_Cup_emblem.svg)\\n\\nTournament details\\n\\nHost countries\\n\\nCanada  \\nMexico  \\nUnited States\\n\\nDates\\n\\nJune 11 \u2013 July 19\\n\\nTeams\\n\\n48\u00a0(from 6 confederations)\\n\\nVenue\\n\\n16\u00a0(in 16 host cities)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n9\\n\\nGoals scored\\n\\n27\u00a0(3 per match)\\n\\nAttendance\\n\\n572,596\u00a0(63,622 per match)\\n\\nTop scorers\\n\\n-   [![Germany national football team](https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)](https://en.wikipedia.org/wiki/Germany_national_football_team \\\"Germany national football team\\\") [Kai Havertz](https://en.wikipedia.org/wiki/Kai_Havertz \\\"Kai Havertz\\\")\\n-   [![United States men's national soccer team](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)](https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team \\\"United States men's national soccer team\\\") [Folarin Balogun](https://en.wikipedia.org/wiki/Folarin_Balogun \\\"Folarin Balogun\\\")\\n-   (2 goals each)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\")\\n\\n_[2030](https://en.wikipedia.org/wiki/2030_FIFA_World_Cup \\\"2030 FIFA World Cup\\\")_ \u2192\\n\\nAll statistics correct "
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Checks recent news for late updates on Manuel Akanji's fitness and availability.",
+        "data": "{\"topic\":\"\\\"Manuel Akanji\\\" AND (preview OR form OR squad OR injury OR fitness)\",\"timespan_hours\":72,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Retrieves pre-match warm-up performance reviews and friendly metrics for Qatar's national team.",
+        "data": "{\"topic\":\"\\\"Qatar\\\" AND \\\"friendlies\\\" AND (preview OR form OR squad) AND \\\"2026\\\"\",\"timespan_hours\":72,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Provides pre-match tactical previews detailing Qatar's expected tactical setup and defensive/possession approach.",
+        "data": "{\"topic\":\"\\\"Qatar\\\" AND \\\"tactics\\\" AND (preview OR form OR squad OR tactical)\",\"timespan_hours\":72,\"total_found\":8,\"articles\":[{\"title\":\"Messi vs Ronaldo : 2026 World Cup Could Deliver Historic Final Clash Between Legends\",\"url\":\"https://www.ibtimes.com.au/messi-ronaldo-final-showdown-2026-world-cup-1870535\",\"source\":\"ibtimes.com.au\",\"published_at\":\"2026-06-12T09:30:00Z\",\"language\":\"English\",\"source_country\":\"Australia\",\"sentiment_score\":null,\"image_url\":\"https://d.ibtimes.com.au/en/full/1845607/lionel-messi-paris-saint-germain.jpg\"},{\"title\":\"Brazil vs Morocco World Cup 2026 Preview : Five - Time Champs Face Tough African Test in Group C Opener\",\"url\":\"https://www.ibtimes.com.au/brazil-vs-morocco-world-cup-metlife-stadium-1870589\",\"source\":\"ibtimes.com.au\",\"published_at\":\"2026-06-13T11:00:00Z\",\"language\":\"English\",\"source_country\":\"Australia\",\"sentiment_score\":null,\"image_url\":\"https://d.ibtimes.com.au/en/full/1720379/worlds-most-expensive-player-neymar-has-been-hit-string-legal-woes.jpg\"},{\"title\":\"What Do Sri Lankan Fans Think ? Ranking the Top Contenders for the FIFA World Cup 2026 - Breaking News\",\"url\":\"https://www.dailymirror.lk/fifa_world_cup_2026/What-Do-Sri-Lankan-Fans-Think-Ranking-the-Top-Contenders-for-the-FIFA-World-Cup-2026/574-342523\",\"source\":\"dailymirror.lk\",\"published_at\":\"2026-06-13T07:00:00Z\",\"language\":\"English\",\"source_country\":\"Sri Lanka\",\"sentiment_score\":null,\"image_url\":\"https://bmkltsly13vb.compat.objectstorage.ap-singapore-1.oraclecloud.com/cdn.sg.dailymirror.lk/assets/uploads/image_1d0b9e8f2b.jpg\"},{\"title\":\"\u062a\u06cc\u0645 \u0645\u0644\u06cc \u0641\u0648\u062a\u0628\u0627\u0644 \u061b \u062f\u0648\u06af\u0627\u0646\u0647\u0654 \u0639\u0634\u0642 \u0628\u0647 \u0627\u06cc\u0631\u0627\u0646 \u0648 \u062e\u0634\u0645 \u0627\u0632 \u062d\u06a9\u0648\u0645\u062a\",\"url\":\"https://www.radiofarda.com/a/33779737.html\",\"source\":\"radiofarda.com\",\"published_at\":\"2026-06-13T14:45:00Z\",\"language\":\"Persian\",\"source_country\":\"Iran\",\"sentiment_score\":null,\"image_url\":\"https://gdb.rferl.org/554AE051-05D5-4001-A12E-BDC887F4E48B.jpg\"},{\"title\":\"Brazil vs Morocco : Preview and Prediction\",\"url\":\"https://thehardtackle.com/round-up/2026/06/12/brazil-vs-mor"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Searches for tactical news and analysis concerning Granit Xhaka's role in the Swiss midfield pivot.",
+        "data": "{\"topic\":\"\\\"Granit Xhaka\\\" AND \\\"Switzerland\\\" AND (preview OR form OR squad OR tactical)\",\"timespan_hours\":72,\"total_found\":0,\"articles\":[]}"
+      }
+    ],
+    "research_cost": 0.048,
+    "wallet_before": 4.945,
+    "wallet_after": 4.897,
+    "prediction": {
+      "pick": "away",
+      "confidence": 8,
+      "bet": 3.0,
+      "reasoning": "Switzerland's elite European experience, tactical discipline, and midfield dominance will prove too strong for Qatar's domestic-based squad."
+    },
+    "full_reasoning": "### Match Analysis\n\nThe matchup between Qatar (QAT) and Switzerland (SUI) in the 2026 FIFA World Cup represents a significant disparity in competitive experience, squad depth, and individual quality. Although Qatar enters this match as the reigning Asian champions (having won the 2023 AFC Asian Cup), their previous showing at the 2022 World Cup highlighted their struggles when facing high-intensity, physical opposition from outside their confederation.\n\n#### Switzerland (Away)\nSwitzerland is one of Europe's most consistent tournament teams, regularly progressing to the knockout rounds of both the UEFA European Championships and the FIFA World Cup. Anchored by world-class defensive and midfield talent\u2014such as Manuel Akanji (Manchester City), Granit Xhaka (Bayer Leverkusen), and goalkeeper Gregor Kobel (Borussia Dortmund)\u2014the Swiss possess a highly disciplined tactical structure. Their ability to control possession, press effectively, and transition smoothly will make it incredibly difficult for Qatar to establish any sustained rhythm.\n\n#### Qatar (Home)\nWhile Qatar possesses genuine attacking threats in Akram Afif and Almoez Ali, who can be highly dangerous on the counter-attack, their domestic-based roster lacks regular exposure to elite European-style pressing and speed. In neutral North American venues, Qatar will struggle to match Switzerland\u2019s physical dominance in the midfield and will likely find themselves pinned back in a defensive low block for large portions of the match.\n\n#### Conclusion\nSwitzerland's tactical sophistication, physical advantages, and superior technical quality across all areas of the pitch should allow them to break down Qatar's defensive lines and secure a comfortable victory in this group-stage encounter.\n\nPICK: away\nCONFIDENCE: 8\nBET: $3.00\nREASONING: Switzerland's elite European experience, tactical discipline, and midfield dominance will prove too strong for Qatar's domestic-based squad.",
+    "retroactive": true,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
