@@ -928,5 +928,187 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "AUS vs TUR",
+    "home": "AUS",
+    "away": "TUR",
+    "kickoff": "2026-06-14T04:00Z",
+    "strategy_snapshot": "",
+    "information_needs": "FORM\n- What were the specific results, expected goals (xG) metrics, and defensive structures shown by both Australia and T\u00fcrkiye in their final pre-World Cup warm-up friendlies in May/June 2026?\n- How did T\u00fcrkiye's performance in their recent competitive campaigns (UEFA Nations League and World Cup Qualifiers) compare to Australia's third-round AFC qualifying campaign in terms of consistency against top-50 FIFA-ranked opponents?\n\nPLAYERS\n- Is T\u00fcrkiye's captain and midfield engine Hakan \u00c7alhano\u011flu fully fit, and has Arda G\u00fcler been locked into a starting right-wing/creative role or is he being utilized as a super-sub?\n- Who is starting as Australia\u2019s primary center-forward (e.g., Kusini Yengi, Mitchell Duke, or Nestory Irankunda in a fluid role), and are there any lingering injury doubts over their first-choice center-back pairing?\n\nTACTICS\n- How does Vincenzo Montella\u2019s T\u00fcrkiye plan to break down Australia\u2019s notoriously compact, low-to-mid defensive block? Will they employ a fluid \"strikerless\" system or use a physical target man?\n- Will Australia attempt to press T\u00fcrkiye high to disrupt their build-up from the back, or will they rely on a low block and direct vertical transitions targeting T\u00fcrkiye's transition-defense vulnerabilities?\n\nH2H\n- What historical tactical trends or psychological factors exist from their rare previous encounters, and do any current squad members or coaching staff have direct head-to-head experience against the opposing nation?\n\nCONTEXT\n- As this is the opening match of the 2026 FIFA World Cup Group Stage for both teams, how does the new 48-team format (where the 8 best 3rd-place teams advance) affect each manager's risk tolerance in the second half?\n\nMARKET\n- What are the current three-way moneyline, Asian Handicap, and Goal Total (Over/Under) market prices, and which way has the sharp money moved since the lines opened?\n\nNEWS\n- Have there been any reports of camp illness, training ground injuries, or tactical leaks from either Australia's base camp or T\u00fcrkiye's hotel in the 48 hours leading up to kickoff?\n\nVENUE\n- Which North American host city and stadium is staging this match, is it being played on temporary grass over artificial turf, and will the local climate/stadium roof status impact the physical intensity of the match?",
+    "research_gaps": [
+      {
+        "need": "What are the current three-way moneyline, Asian Handicap, and Goal Total (Over/Under) market prices, and which way has the sharp money moved since the lines opened?",
+        "category": "MARKET",
+        "ideal_service": "A real-time sports betting odds aggregator API showing three-way moneylines, spreads, and market movement history for the 2026 FIFA World Cup."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://fbref.com/en/squads/d04db919/Turkey-Men-Stats"
+        },
+        "cost": 0.002,
+        "reason": "Extracts Turkey's recent friendly matches, underlying expected goals (xG) data, and defensive tracking prior to the tournament kickoff.",
+        "need": "What were the specific results, expected goals (xG) metrics, and defensive structures shown by both Australia and T\u00fcrkiye in their final pre-World Cup warm-up friendlies in May/June 2026?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(AFC)_%E2%80%93_Third_Round"
+        },
+        "cost": 0.002,
+        "reason": "Provides exact details of Australia's matches, opponents, and consistency in the AFC Third Round qualifiers.",
+        "need": "How did T\u00fcrkiye's performance in their recent competitive campaigns (UEFA Nations League and World Cup Qualifiers) compare to Australia's third-round AFC qualifying campaign in terms of consistency against top-50 FIFA-ranked opponents?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Australia_national_football_team_head_to_head_record"
+        },
+        "cost": 0.002,
+        "reason": "Identifies historical head-to-head records and trends between Australia and Turkey.",
+        "need": "What historical tactical trends or psychological factors exist from their rare previous encounters, and do any current squad members or coaching staff have direct head-to-head experience against the opposing nation?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Retrieves the definitive host stadium mapping, surface composition, and stadium physical environment details.",
+        "need": "Which North American host city and stadium is staging this match, is it being played on temporary grass over artificial turf, and will the local climate/stadium roof status impact the physical intensity of the match?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Turkey squad Arda Guler Hakan Calhanoglu fitness preview",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Fetches recent pre-match news coverage concerning Arda G\u00fcler's expected role and Hakan \u00c7alhano\u011flu's fitness status going into the group stage.",
+        "need": "Is T\u00fcrkiye's captain and midfield engine Hakan \u00c7alhano\u011flu fully fit, and has Arda G\u00fcler been locked into a starting right-wing/creative role or is he being utilized as a super-sub?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Australia Socceroos forward line defense injury preview",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Provides the latest Australian national team lineup predictions, forward-line selections, and center-back fitness status.",
+        "need": "Who is starting as Australia\u2019s primary center-forward (e.g., Kusini Yengi, Mitchell Duke, or Nestory Irankunda in a fluid role), and are there any lingering injury doubts over their first-choice center-back pairing?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Vincenzo Montella Turkey tactics strikerless preview",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Gathers pre-match tactical analyses of Vincenzo Montella's preferred attacking patterns and shape against defensive blocks.",
+        "need": "How does Vincenzo Montella\u2019s T\u00fcrkiye plan to break down Australia\u2019s notoriously compact, low-to-mid defensive block? Will they employ a fluid 'strikerless' system or use a physical target man?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Australia national team tactics low block transition preview",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Fetches tactical analysis regarding Australia's defensive setup and transition strategy.",
+        "need": "Will Australia attempt to press T\u00fcrkiye high to disrupt their build-up from the back, or will they rely on a low block and direct vertical transitions targeting T\u00fcrkiye's transition-defense vulnerabilities?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "World Cup 48 team format group stage tactics preview",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Analyses how managers adjust risk tolerance under the new 48-team structure where 3rd-place teams can advance.",
+        "need": "As this is the opening match of the 2026 FIFA World Cup Group Stage for both teams, how does the new 48-team format (where the 8 best 3rd-place teams advance) affect each manager's risk tolerance in the second half?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Australia Turkey national team camp news preview",
+          "language": "en"
+        },
+        "cost": 0.01,
+        "reason": "Monitors any last-minute camp updates, illnesses, or late injury updates from both training bases.",
+        "need": "Have there been any reports of camp illness, training ground injuries, or tactical leaks from either Australia's base camp or T\u00fcrkiye's hotel in the 48 hours leading up to kickoff?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Retrieves the definitive host stadium mapping, surface composition, and stadium physical environment details.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"2026 FIFA World Cup\\n\\nFIFA World Cup 26  \\nFIFA World Cup 2026  \\n_Copa Mundial de la FIFA 2026_\u00a0([Spanish](https://en.wikipedia.org/wiki/Spanish_language \\\"Spanish language\\\"))  \\n_Coupe du Monde de la FIFA 2026_\u00a0([French](https://en.wikipedia.org/wiki/French_language \\\"French language\\\"))\\n\\n[![Emblem of the 2026 FIFA World Cup, showing numbers \\\"2\\\" (top) and \\\"6\\\" (bottom) placed behind the World Cup trophy](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/250px-2026_FIFA_World_Cup_emblem.svg.png)](https://en.wikipedia.org/wiki/File:2026_FIFA_World_Cup_emblem.svg)\\n\\nTournament details\\n\\nHost countries\\n\\nCanada  \\nMexico  \\nUnited States\\n\\nDates\\n\\nJune 11 \u2013 July 19\\n\\nTeams\\n\\n48\u00a0(from 6 confederations)\\n\\nVenue\\n\\n16\u00a0(in 16 host cities)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n9\\n\\nGoals scored\\n\\n27\u00a0(3 per match)\\n\\nAttendance\\n\\n572,596\u00a0(63,622 per match)\\n\\nTop scorers\\n\\n-   [![Germany national football team](https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)](https://en.wikipedia.org/wiki/Germany_national_football_team \\\"Germany national football team\\\") [Kai Havertz](https://en.wikipedia.org/wiki/Kai_Havertz \\\"Kai Havertz\\\")\\n-   [![United States men's national soccer team](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)](https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team \\\"United States men's national soccer team\\\") [Folarin Balogun](https://en.wikipedia.org/wiki/Folarin_Balogun \\\"Folarin Balogun\\\")\\n-   (2 goals each)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\")\\n\\n_[2030](https://en.wikipedia.org/wiki/2030_FIFA_World_Cup \\\"2030 FIFA World Cup\\\")_ \u2192\\n\\nAll statistics correct "
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Fetches recent pre-match news coverage concerning Arda G\u00fcler's expected role and Hakan \u00c7alhano\u011flu's fitness status going into the group stage.",
+        "data": "{\"topic\":\"Turkey squad Arda Guler Hakan Calhanoglu fitness preview\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Provides the latest Australian national team lineup predictions, forward-line selections, and center-back fitness status.",
+        "data": "{\"topic\":\"Australia Socceroos forward line defense injury preview\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Gathers pre-match tactical analyses of Vincenzo Montella's preferred attacking patterns and shape against defensive blocks.",
+        "data": "{\"topic\":\"Vincenzo Montella Turkey tactics strikerless preview\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Fetches tactical analysis regarding Australia's defensive setup and transition strategy.",
+        "data": "{\"topic\":\"Australia national team tactics low block transition preview\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Analyses how managers adjust risk tolerance under the new 48-team structure where 3rd-place teams can advance.",
+        "data": "{\"topic\":\"World Cup 48 team format group stage tactics preview\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Monitors any last-minute camp updates, illnesses, or late injury updates from both training bases.",
+        "data": "{\"topic\":\"Australia Turkey national team camp news preview\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
+      }
+    ],
+    "research_cost": 0.062,
+    "wallet_before": 4.969,
+    "wallet_after": 4.907,
+    "prediction": {
+      "pick": "away",
+      "confidence": 6,
+      "bet": 1.5,
+      "reasoning": "Turkey's superior technical midfield quality and attacking flair should overcome Australia's physical and defensive resilience."
+    },
+    "full_reasoning": "The group stage matchup between Australia and Turkey at the 2026 World Cup features a distinct contrast in styles. Australia relies heavily on a disciplined defensive low block, physical organization, and maximizing set-piece opportunities through aerial targets like Harry Souttar. However, they frequently struggle when forced to chase the game or progress the ball through technically sophisticated press systems. \n\nTurkey enters the match with a highly creative, technically gifted squad under Vincenzo Montella. With a midfield engine run by Hakan \u00c7alhano\u011flu and high-flair attackers such as Arda G\u00fcler and Kenan Y\u0131ld\u0131z, Turkey possesses the close-control quality and vertical passing ability needed to unlock compact defensive lines. While Australia's resilience and physicality will keep the scoreline respectable, Turkey's superior playmaking and individual match-winners on neutral ground should secure them the victory.\n\nPICK: away\nCONFIDENCE: 6\nBET: $1.50\nREASONING: Turkey's superior technical midfield quality and attacking flair should overcome Australia's physical and defensive resilience.",
+    "retroactive": true,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
