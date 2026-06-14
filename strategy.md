@@ -1,18 +1,16 @@
-# World Cup Prediction Strategy Document
+### Prediction Rules
 
-## Core Prediction Rules
-
-*   **QAT vs SUI: Account for Cohesion and Low-Blocks Over Raw Starpower.** Do not overestimate mid-tier favorites relying purely on "midfield dominance" or individual star power when facing highly cohesive, defensively disciplined underdogs (especially domestic-based squads with high tactical synergy). When analyzing these matchups, evaluate the favorite's clinical efficiency in the final third against a low-block, temper confidence levels, and heavily account for the probability of a draw. 
+*   **AUS vs TUR:** **Prioritize Tactical Structure Over Technical Flair.** Do not default to assuming superior technical midfield quality and possession-heavy attacking styles will overcome physical, highly disciplined defensive units with established counter-attacking structures. When a high-possession team struggles to penetrate deep blocks and is vulnerable on the break, favor the defensive/transition-oriented team.
 
 ---
 
-## Research Endpoint Utility (x402 Data)
+### Data Endpoint Valuation
 
-### Highly Valuable Endpoints
-*   **Tactical Setup & Defensive/Possession Approaches:** Crucial for identifying how underdogs plan to frustrate possession-dominant favorites.
-*   **Recent Warm-Up/Form Performance Reviews:** Essential for capturing realistic, current metrics on defensive stability and team cohesion leading into the tournament.
+*   **Highly Useful Endpoints:**
+    *   *Tactical Setup & Transition Strategy:* Highly valuable for understanding how defensive units plan to absorb pressure and launch counters.
+    *   *Manager Attacking/Defensive Patterns Against Blocks:* Essential to identify friction points, such as an attacking team's struggle to break down low-to-mid blocks.
+    *   *Lineup & Key Player Fitness:* Critical for confirming if key physical defenders are available to execute deep defensive game plans.
 
-### Low Value / Wasteful Endpoints
-*   **Outdated Historical Data & Qualification Paths:** Avoid spending on years-old friendly details or general qualification paths, which do not reflect modern tournament readiness.
-*   **Tournament Logistics:** General group structures and host venue details have zero impact on 90-minute tactical outcomes.
-*   **Isolated Player Profiles:** Individual fitness and role profiles are inefficient unless directly synthesized with how they impact a team's collective ability to break down defensive structures.
+*   **Low/No Value Endpoints:**
+    *   *Stadium Mapping, Surface, and Environment:* Negligible impact on tactical match outcomes.
+    *   *Manager Risk Tolerance under 48-Team Structure:* Too broad and theoretical to assist with specific tactical matchups.
