@@ -13,7 +13,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-import google.generativeai as genai
+import gemini
 import requests
 from dotenv import load_dotenv
 
@@ -42,8 +42,8 @@ logging.basicConfig(
 log = logging.info
 err = logging.error
 
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel("gemini-2.0-flash")
+
+
 
 # ── Step 1: Get match result ───────────────────────────────────────────────
 
@@ -160,8 +160,8 @@ Be specific and critical. This evaluation will update the agent's strategy."""
 
 log("Asking Gemini for evaluation...")
 try:
-    eval_resp = model.generate_content(eval_prompt)
-    evaluation = eval_resp.text
+    eval_resp_text = gemini.generate(eval_prompt)
+    evaluation = eval_resp_text
 except Exception as e:
     err("Gemini evaluation call failed: %s", e)
     evaluation = f"Evaluation unavailable: {e}"
@@ -197,8 +197,8 @@ Return ONLY the updated strategy document text. No preamble, no explanation."""
 
 log("Asking Gemini to update strategy...")
 try:
-    strat_resp = model.generate_content(reflect_prompt)
-    new_strategy = strat_resp.text.strip()
+    strat_resp_text = gemini.generate(reflect_prompt)
+    new_strategy = strat_resp_text.strip()
 except Exception as e:
     err("Gemini strategy update failed: %s", e)
     new_strategy = strategy  # keep current if update fails
@@ -232,7 +232,7 @@ try:
     )
     subprocess.run(["git", "push", "origin", "master"], cwd=WORK_DIR, check=True, capture_output=True)
     log("Pushed to GitHub")
-    subprocess.run(["git", "push", "hf", "master"], cwd=WORK_DIR, check=True, capture_output=True)
+    subprocess.run(["git", "push", "hf", "master:main"], cwd=WORK_DIR, check=True, capture_output=True)
     log("Pushed to HF Space — dashboard updating")
 except Exception as e:
     err("Git push failed (files saved locally): %s", e)

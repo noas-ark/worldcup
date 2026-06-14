@@ -14,7 +14,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-import google.generativeai as genai
+import gemini
 import requests
 from dotenv import load_dotenv
 
@@ -45,8 +45,8 @@ logging.basicConfig(
 log = logging.info
 err = logging.error
 
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel("gemini-2.0-flash")
+
+
 BUDGET = float(os.getenv("MATCH_RESEARCH_BUDGET", "0.50"))
 
 # ── Step 1: Load state ─────────────────────────────────────────────────────
@@ -82,7 +82,8 @@ services = []
 try:
     resp = requests.get("https://x402-list.com/api/v1/services", timeout=10)
     resp.raise_for_status()
-    all_services = resp.json()
+    payload = resp.json()
+    all_services = payload if isinstance(payload, list) else payload.get("data", [])
     services = [s for s in all_services if network in s.get("networks", [])]
     log("Service directory: %d services available for %s", len(services), network)
 except Exception as e:
@@ -123,8 +124,8 @@ research_plan = []
 if services:
     try:
         log("Asking Gemini to plan research purchases...")
-        resp = model.generate_content(plan_prompt)
-        raw = resp.text.strip()
+        research_plan_text = gemini.generate(plan_prompt)
+        raw = research_plan_text.strip()
         # Strip markdown code fences if present
         raw = re.sub(r"^```[a-z]*\n?", "", raw)
         raw = re.sub(r"\n?```$", "", raw)
@@ -220,8 +221,8 @@ REASONING: [one sentence max]"""
 
 log("Asking Gemini for prediction...")
 try:
-    pred_resp = model.generate_content(predict_prompt)
-    full_reasoning = pred_resp.text
+    pred_resp_text = gemini.generate(predict_prompt)
+    full_reasoning = pred_resp_text
 except Exception as e:
     err("Gemini prediction call failed: %s", e)
     full_reasoning = ""
@@ -285,7 +286,7 @@ try:
     )
     subprocess.run(["git", "push", "origin", "master"], cwd=WORK_DIR, check=True, capture_output=True)
     log("Pushed to GitHub")
-    subprocess.run(["git", "push", "hf", "master"], cwd=WORK_DIR, check=True, capture_output=True)
+    subprocess.run(["git", "push", "hf", "master:main"], cwd=WORK_DIR, check=True, capture_output=True)
     log("Pushed to HF Space — dashboard updating")
 except Exception as e:
     err("Git push failed (prediction saved locally): %s", e)

@@ -40,6 +40,10 @@ def add_cron_entries(home: str, away: str, kickoff_utc: str) -> tuple[str, str]:
     result = subprocess.run(["crontab", "-l"], capture_output=True, text=True)
     existing = result.stdout if result.returncode == 0 else ""
 
+    # Ensure SHELL=bash at top so 'source' works
+    if "SHELL=/bin/bash" not in existing:
+        existing = "SHELL=/bin/bash\n" + existing
+
     skip_marker = f"predict.py {home} {away}"
     if skip_marker in existing:
         return predict_line, reflect_line  # already scheduled, skip
