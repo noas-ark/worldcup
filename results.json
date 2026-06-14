@@ -44,5 +44,28 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "NED vs JPN",
+    "home": "NED",
+    "away": "JPN",
+    "kickoff": "2026-06-14T20:00Z",
+    "strategy_snapshot": "",
+    "services_planned": [],
+    "services_used": [],
+    "research_cost": 0.0,
+    "wallet_before": 20.0,
+    "wallet_after": 20.0,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "bet": 1.0,
+      "reasoning": "Netherlands possesses superior individual talent and tournament experience to edge out a highly disciplined Japanese side."
+    },
+    "full_reasoning": "The Netherlands (NED) face Japan (JPN) in an intriguing World Cup matchup. The Dutch squad enters the tournament with a strong blend of elite defensive stability, anchored by world-class center-backs, and creative midfield options playing at the highest levels in Europe. Japan, known for their exceptional tactical discipline, high-pressing intensity, and dangerous counter-attacks led by technically gifted wingers, will pose a significant threat. While Japan has a history of upsetting European giants in recent tournaments, the Netherlands' superior physical presence, squad depth, and clinical finishing edge give them the advantage in this opening clash.\n\nPICK: home\nCONFIDENCE: 6\nBET: $1.00\nREASONING: Netherlands possesses superior individual talent and tournament experience to edge out a highly disciplined Japanese side.",
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
