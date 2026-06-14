@@ -1884,5 +1884,174 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "KSA vs URU",
+    "home": "KSA",
+    "away": "URU",
+    "kickoff": "2026-06-15T22:00Z",
+    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n3. **NED vs JPN: Avoid \"Narrative Bias\" Overlooking Systemic Discipline**\nDo not assume physical size and individual quality will automatically overcome an elite, energetic, and tactically disciplined system. If the favorite has midfield fitness concerns (a compromised metronome) and the underdog has a highly fit defensive screen and a proven record of limiting top-tier nations, avoid a straight win prediction and favor a draw or handicap.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Defensive Records Against Highly Ranked Opponents:* Vital warning sign to identify underdogs capable of frustrating elite teams (informed by NED vs JPN).\n  * *Key Midfield Workload & Fitness Status:* Essential for determining if a favorite's central controller is compromised or an underdog's anchor is fully fit (informed by NED vs JPN).\n* **Not Useful / Wasteful:**\n  * *Bookmaker Odds & Asian Handicap:* Abstract lines often reinforce narrative bias instead of providing objective analytical value (informed by NED vs JPN).\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate fitness queries leads to high costs. Consolidate searches to 1-2 comprehensive previews to keep costs under $0.0300 per match (informed by AUS vs TUR).",
+    "information_needs": "FORM\n- How did Saudi Arabia perform in their final AFC qualifying matches against physically dominant, transition-heavy sides (like Australia or South Korea), and did they show vulnerability to high-turnover situations?\n- Did Marcelo Bielsa's Uruguay maintain their high-intensity defensive metrics (such as PPDA - Passes Per Defensive Action) during the final rounds of CONMEBOL qualification, or did they show signs of physical regression late in the cycle?\n\nPLAYERS\n- Is Federico Valverde fully fit and fresh after a grueling European club season, or are there underlying fatigue metrics that might limit his box-to-box engine for Uruguay?\n- Who is slated to start as Saudi Arabia's primary striker (e.g., Firas Al-Buraikan or Saleh Al-Shehri), and how have they performed against physically imposing center-backs in recent Saudi Pro League and international matches?\n\nTACTICS\n- How does Saudi Arabia's defensive setup (likely a mid-to-low block) plan to bypass Uruguay's aggressive man-to-man pressing system to transition the ball into the final third?\n- Will Uruguay deploy a dual-striker system to overwhelm Saudi Arabia's central defenders, or will they utilize inverted wingers to exploit the half-spaces behind Saudi's full-backs?\n\nH2H\n- Are there any tactical or psychological hangovers remaining from Uruguay's narrow 1-0 win over Saudi Arabia in the 2018 World Cup, and how many players from those starting XIs are still active in the current squads?\n\nCONTEXT\n- Since this is a June 15 fixture (very early in the 2026 World Cup group stage), what are the historical patterns of both managers (Bielsa vs. Saudi Arabia's coach) in tournament openers regarding risk tolerance and starting lineup consistency?\n\nMARKET\n- What is the current Asian Handicap line, and does the market's implied probability heavily favor a comfortable Uruguay victory (e.g., -1.5) or is it anticipating a low-scoring, tight affair (Under 2.5 goals)?\n\nNEWS\n- Have there been any reports of camp unrest or late-fitness dropouts in the Saudi Arabian camp, which has historically been prone to sudden managerial or squad friction right before major tournaments?\n\nVENUE\n- In which North American host city is this match being played, and will the local June climate (specifically high humidity or high altitude) disproportionately exhaust Uruguay\u2019s high-pressing system compared to Saudi Arabia\u2019s acclimatization to heat?",
+    "research_gaps": [
+      {
+        "need": "What is the current Asian Handicap line, and does the market's implied probability heavily favor a comfortable Uruguay victory (e.g., -1.5) or is it anticipating a low-scoring, tight affair (Under 2.5 goals)?",
+        "category": "MARKET",
+        "ideal_service": "An x402-compatible sports betting aggregator API that outputs live Asian Handicap lines, moneyline prices, and total goals lines (Over/Under) from major global bookmakers."
+      },
+      {
+        "need": "Since this is a June 15 fixture (very early in the 2026 World Cup group stage), what are the historical patterns of both managers (Bielsa vs. Saudi Arabia's coach) in tournament openers regarding risk tolerance and starting lineup consistency?",
+        "category": "CONTEXT",
+        "ideal_service": "A historical football coaching statistics database that catalogs tactical structures, starting lineups, and substitution timing specifically for tournament openers (Matchday 1)."
+      },
+      {
+        "need": "In which North American host city is this match being played, and will the local June climate (specifically high humidity or high altitude) disproportionately exhaust Uruguay\u2019s high-pressing system compared to Saudi Arabia\u2019s acclimatization to heat?",
+        "category": "VENUE",
+        "ideal_service": "A geographical and meteorological sports-science API detailing fixture location elevation, expected wet-bulb temperatures, and physiological data on high-altitude heat exhaustion."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://int.soccerway.com/teams/ksa/saudi-arabien/3436/matches/"
+        },
+        "cost": 0.002,
+        "reason": "Provides match outcomes, goal patterns, and tactical consistency of Saudi Arabia in their recent qualifiers against diverse opposition.",
+        "need": "How did Saudi Arabia perform in their final AFC qualifying matches against physically dominant, transition-heavy sides (like Australia or South Korea), and did they show vulnerability to high-turnover situations?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://int.soccerway.com/teams/uru/uruguay/3444/matches/"
+        },
+        "cost": 0.002,
+        "reason": "Extracts raw match logs and goal margins for Uruguay to assess late-cycle regression or fatigue in CONMEBOL fixtures.",
+        "need": "Did Marcelo Bielsa's Uruguay maintain their high-intensity defensive metrics (such as PPDA) during the final rounds of CONMEBOL qualification, or did they show signs of physical regression late in the cycle?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.transfermarkt.com/saudi-arabien/kader/verein/3436/saison_id/2025"
+        },
+        "cost": 0.002,
+        "reason": "Gives direct access to Saudi Arabia's updated roster, individual performance metrics, and age/physical attributes of their forwards.",
+        "need": "Who is slated to start as Saudi Arabia's primary striker (e.g., Firas Al-Buraikan or Saleh Al-Shehri), and how have they performed against physically imposing center-backs in recent Saudi Pro League and international matches?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.theguardian.com/football/saudi-arabia"
+        },
+        "cost": 0.002,
+        "reason": "Examines detailed journalistic analyses, features, and tactical insights regarding Saudi Arabia's buildup and transition patterns.",
+        "need": "How does Saudi Arabia's defensive setup (likely a mid-to-low block) plan to bypass Uruguay's aggressive man-to-man pressing system to transition the ball into the final third?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.national-football-teams.com/country/208/Uruguay.html"
+        },
+        "cost": 0.002,
+        "reason": "Provides historical player rosters and timeline records to trace which active veterans played in the 2018 match against Saudi Arabia.",
+        "need": "Are there any tactical or psychological hangovers remaining from Uruguay's narrow 1-0 win over Saudi Arabia in the 2018 World Cup, and how many players from those starting XIs are still active in the current squads?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Uruguay Federico Valverde fitness Real Madrid fatigue",
+          "hours": 48
+        },
+        "cost": 0.01,
+        "reason": "Searches for real-time news regarding Valverde's physical condition, post-season fitness tests, or fatigue warnings from the national team camp.",
+        "need": "Is Federico Valverde fully fit and fresh after a grueling European club season, or are there underlying fatigue metrics that might limit his box-to-box engine for Uruguay?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Uruguay tactical setup Bielsa formation 2026",
+          "hours": 48
+        },
+        "cost": 0.01,
+        "reason": "Leverages GDELT news intelligence to extract tactical blueprints, lineup predictions, and tactical leaks surrounding Bielsa's offensive structures.",
+        "need": "Will Uruguay deploy a dual-striker system to overwhelm Saudi Arabia's central defenders, or will they utilize inverted wingers to exploit the half-spaces behind Saudi's full-backs?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Saudi Arabia squad camp dispute injury World Cup",
+          "hours": 48
+        },
+        "cost": 0.01,
+        "reason": "Scans news feeds for any friction, dispute, coaching controversies, or sudden player withdrawals in the Saudi camp.",
+        "need": "Have there been any reports of camp unrest or late-fitness dropouts in the Saudi Arabian camp, which has historically been prone to sudden managerial or squad friction right before major tournaments?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides match outcomes, goal patterns, and tactical consistency of Saudi Arabia in their recent qualifiers against diverse opposition.",
+        "data": "{\"url\":\"https://int.soccerway.com/teams/ksa/saudi-arabien/3436/matches/\",\"finalUrl\":\"https://www.soccerway.com/team/saida/pWAiN7Lc/fixtures/\",\"mode\":\"basic\",\"markdown\":\"AD\\n\\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\\n\\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\\n\\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\\n\\n](https://www.joueurs-info-service.fr/)\\n\\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\\n\\n18+. Verantwortungsbewusst wetten.\\n\\n18+ Jogue com responsabilidade\\n\\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\\n\\n## [Algeria](https://www.soccerway.com/algeria/)\\n\\n![Saida](https://static.flashscore.com/res/image/data/Oh1DSeZg-EXAfHfrO.png)\\n\\nSaida\\n\\n[Summary](https://www.soccerway.com/team/saida/pWAiN7Lc/ \\\"Summary\\\")[Odds](https://www.soccerway.com/team/saida/pWAiN7Lc/odds/ \\\"Odds\\\")[Results](https://www.soccerway.com/team/saida/pWAiN7Lc/results/ \\\"Results\\\")[Fixtures](https://www.soccerway.com/team/saida/pWAiN7Lc/fixtures/ \\\"Fixtures\\\")[Standings](https://www.soccerway.com/team/saida/pWAiN7Lc/standings/ \\\"Standings\\\")[Transfers](https://www.soccerway.com/team/saida/pWAiN7Lc/transfers/ \\\"Transfers\\\")\\n\\n [![](https://static.flashscore.com/res/_fs/image/2_others/gambling_greece1.svg) ![](https://static.flashscore.com/res/_fs/image/2_others/gambling_greece2.svg)\\n\\n#### 21+ | COMPETENT REGULATOR EEEP | RISK OF ADDICTION & LOSS OF PROPERTY | KETHEA HELPLINE: 210 9237777 | PLAY RESPONSIBLY & SAFELY |](https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/AffiliatesOnline.aspx)\\n\\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\\n\\n#### Les jeux d\u2019argent et de hasard pe"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Extracts raw match logs and goal margins for Uruguay to assess late-cycle regression or fatigue in CONMEBOL fixtures.",
+        "data": "{\"url\":\"https://int.soccerway.com/teams/uru/uruguay/3444/matches/\",\"finalUrl\":\"https://www.soccerway.com/team/harrach/YVkFoJW0/fixtures/\",\"mode\":\"basic\",\"markdown\":\"AD\\n\\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\\n\\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\\n\\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\\n\\n](https://www.joueurs-info-service.fr/)\\n\\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\\n\\n18+. Verantwortungsbewusst wetten.\\n\\n18+ Jogue com responsabilidade\\n\\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\\n\\n## [Algeria](https://www.soccerway.com/algeria/)\\n\\n![Harrach](https://static.flashscore.com/res/image/data/vaGSQwzB-nom0tPkO.png)\\n\\nHarrach\\n\\n[Summary](https://www.soccerway.com/team/harrach/YVkFoJW0/ \\\"Summary\\\")[Odds](https://www.soccerway.com/team/harrach/YVkFoJW0/odds/ \\\"Odds\\\")[Results](https://www.soccerway.com/team/harrach/YVkFoJW0/results/ \\\"Results\\\")[Fixtures](https://www.soccerway.com/team/harrach/YVkFoJW0/fixtures/ \\\"Fixtures\\\")[Draw](https://www.soccerway.com/team/harrach/YVkFoJW0/draw/ \\\"Draw\\\")[Transfers](https://www.soccerway.com/team/harrach/YVkFoJW0/transfers/ \\\"Transfers\\\")\\n\\n [![](https://static.flashscore.com/res/_fs/image/2_others/gambling_greece1.svg) ![](https://static.flashscore.com/res/_fs/image/2_others/gambling_greece2.svg)\\n\\n#### 21+ | COMPETENT REGULATOR EEEP | RISK OF ADDICTION & LOSS OF PROPERTY | KETHEA HELPLINE: 210 9237777 | PLAY RESPONSIBLY & SAFELY |](https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/AffiliatesOnline.aspx)\\n\\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\\n\\n#### Les jeux d\u2019argent et de hasard peuve"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Gives direct access to Saudi Arabia's updated roster, individual performance metrics, and age/physical attributes of their forwards.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/saudi-arabien/kader/verein/3436/saison_id/2025\",\"finalUrl\":\"https://www.transfermarkt.com/saudi-arabien/kader/verein/3436/saison_id/2025\",\"mode\":\"basic\",\"markdown\":\"[DISCOVER](https://www.transfermarkt.com/) [World Cup 2026](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.com/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.com/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.com/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.com/navigation/statistiken) [FORUM](https://www.transfermarkt.com/navigation/community) [GAMING](https://www.transfermarkt.com/navigation/gaming)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/top-100-world-cup-mvps-desktop-banner.jpg)](https://www.transfermarkt.com/bellingham-9th-guler-20th-amp-leao-82nd-the-top-100-most-valuable-players-at-the-world-cup/view/news/480791)\\n\\nThis page displays a detailed overview of the club's current squad. It shows all personal information about the players, including age, nationality, contract duration and market value. It also contains a table with average age, cumulative market value and average market value for each player position and overall.\\n\\n[#](https://www.transfermarkt.com/saudi-arabien/kader/verein/3436/saison_id/2025/sort/trikotNumber.desc)\\n\\n[Player](https://www.transfermarkt.com/saudi-arabien/kader/verein/3436/saison_id/2025/sort/name)\\n\\n[Age](https://www.transfermarkt.com/saudi-arabien/kader/verein/3436/saison_id/2025/sort/age)\\n\\nClub\\n\\n[Market value](https://www.transfermarkt.com/saudi-arabien/kader/verein/3436/saison_id/2025/sort/marketValueRaw)\\n\\n16\\n\\n![Mads Hermansen](https://img.a.transfermarkt.technology/portrait/medium/400536-1707386039.jpg?lm=1 \\\"Mads Hermansen\\\")\\n\\n[Mads Hermansen](https://www.transfermarkt.com/mads-hermansen/profil/spieler/400536)\\n\\nGoalkeeper\\n\\n25\\n\\n[![West Ham Un"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides historical player rosters and timeline records to trace which active veterans played in the 2018 match against Saudi Arabia.",
+        "data": "{\"url\":\"https://www.national-football-teams.com/country/208/Uruguay.html\",\"finalUrl\":\"https://www.national-football-teams.com/country/208/2026/Zimbabwe.html\",\"mode\":\"basic\",\"markdown\":\"You are using an old browser which is not compatible with our new design. Please update your browser or use our [old website](https://www.national-football-teams.com/old/).\\n\\n## General Information for **Zimbabwe**\\n\\n##### Zimbabwe Football Association\\n\\n**Founded**\\n\\n1965\\n\\n**FIFA entry**\\n\\n1965\\n\\n**Average height in 2026**\\n\\n1.81m\\n\\n**Average age in 2026**\\n\\n26.4\\n\\n**Confederation**\\n\\nCAF\\n\\n**Infos provided by**\\n\\n##### Emblem\\n\\n![](https://www.national-football-teams.com/uploads/country_images/fifa/logo_zim.gif)\\n\\n##### Jersey in 2026\\n\\n![Jersey in 2026](https://www.national-football-teams.com/uploads/country_images/jersey/Zimbabwe_208-5afcd9d415f4a.jpeg)\\n\\n### Coaches in 2026\\n\\n## Players of **Zimbabwe** in 2026\\n\\nFIFA\\n\\nNon FIFA\\n\\n[Name](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=player.surname&direction=asc&page=1)\\n\\n[Day of Birth](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=player.yearOfBirth&direction=asc&page=1)\\n\\n[Position](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=p.root&direction=asc&page=1)\\n\\nCurrent Club\\n\\n[M](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.matches&direction=asc&page=1)\\n\\n[S](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.substitutions&direction=asc&page=1)\\n\\n[G](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.goals&direction=asc&page=1)\\n\\n[M](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.nonFifaMatches&direction=asc&page=1)\\n\\n[S](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\\n\\n[G](https://www.national-football-t"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Searches for real-time news regarding Valverde's physical condition, post-season fitness tests, or fatigue warnings from the national team camp.",
+        "data": "{\"topic\":\"Uruguay Federico Valverde fitness Real Madrid fatigue\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Leverages GDELT news intelligence to extract tactical blueprints, lineup predictions, and tactical leaks surrounding Bielsa's offensive structures.",
+        "data": "{\"topic\":\"Uruguay tactical setup Bielsa formation 2026\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Scans news feeds for any friction, dispute, coaching controversies, or sudden player withdrawals in the Saudi camp.",
+        "data": "{\"topic\":\"Saudi Arabia squad camp dispute injury World Cup\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      }
+    ],
+    "research_cost": 0.038,
+    "wallet_before": 4.474,
+    "wallet_after": 4.436,
+    "prediction": {
+      "pick": "away",
+      "confidence": 8,
+      "confidence_reason": "Uruguay's elite physical profile and intense vertical pressing system under Marcelo Bielsa are tactically designed to overwhelm Saudi Arabia's defensive block, though typical opening-match caution prevents a maximum rating.",
+      "reasoning": "Uruguay's superior physicality and high-tempo transitional play will systematically disrupt Saudi Arabia's build-up and break down their defensive structure."
+    },
+    "full_reasoning": "### Tactical Analysis\n\nThe matchup between Saudi Arabia (KSA) and Uruguay (URU) at the 2026 World Cup presents a clear contrast in physical intensity, tactical systems, and transitional speed. Applying our established prediction rules allows us to analyze this fixture beyond mere squad values and surface-level narratives.\n\n#### 1. Avoiding the \"Individual Talent\" Trap (Rule 1)\nWhile Uruguay boasts world-class individuals like Federico Valverde and Darwin N\u00fa\u00f1ez, their attacking threat is fundamentally systemic rather than reliant on isolated individual wingers. Under Marcelo Bielsa, Uruguay employs a highly coordinated, high-intensity vertical passing game. They do not rely on slow, horizontal possession that allows low blocks to shift and comfortably settle. Instead, they attack spaces via rapid central combinations and third-man runs. Consequently, Saudi Arabia's compact defensive block will find it incredibly difficult to isolate and neutralize Uruguay's threats, as the danger is collectively distributed and direct.\n\n#### 2. Prioritizing Defensive Floors and Physicality (Rule 2)\nThis rule is highly applicable to this matchup. Uruguay possesses an elite defensive floor and supreme physical superiority over Saudi Arabia. In terms of aerial duels, second-ball recoveries, and defensive transitions, Uruguay's backline and midfield (anchored by Manuel Ugarte and Valverde) are built to dominate physical contact. Saudi Arabia historically struggles against high-tempo, physically imposing opponents who do not afford them time on the ball. Uruguay\u2019s intense counter-press will likely force high-turnover sequences deep in KSA's defensive third, preventing KSA from establishing any sustained possession or transition outlets.\n\n#### 3. Overcoming Systemic Discipline with Physical Intensity (Rule 3)\nWhile Saudi Arabia is a highly disciplined team capable of executing a rigid defensive game plan, they lack the physical robustness and high-altitude endurance required to withstand Bielsa's 90-minute pressing machine. Unlike top-tier UEFA or CONMEBOL sides that might look to control the tempo, Uruguay plays at a chaotic, vertical pace that systematically breaks down defensively disciplined teams by forcing them into rapid, physical duals. Saudi Arabia\u2019s midfield metronomes will be heavily pressured, starving their forward line of service.\n\n### Conclusion\nUruguay's tactical identity under Bielsa is the perfect counter to a disciplined but physically outmatched low-block team like Saudi Arabia. The combination of Uruguay's physical dominance, relentless high-pressing, and direct attacking patterns makes an upset highly unlikely.\n\nPICK: away\nCONFIDENCE: 8\nCONFIDENCE_REASON: Uruguay's elite physical profile and intense vertical pressing system under Marcelo Bielsa are tactically designed to overwhelm Saudi Arabia's defensive block, though typical opening-match caution prevents a maximum rating.\nREASONING: Uruguay's superior physicality and high-tempo transitional play will systematically disrupt Saudi Arabia's build-up and break down their defensive structure.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
