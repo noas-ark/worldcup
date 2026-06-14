@@ -136,29 +136,32 @@ research_summary = ""
 for svc in entry.get("services_used", []):
     research_summary += f"\n- {svc['source']} (${svc['cost']:.4f}): {svc.get('reason', '')}"
 
-eval_prompt = f"""You are an independent evaluator assessing a World Cup match prediction.
+mistake_section = "" if correct else """MISTAKE:
+- One sentence: what the pick got wrong.
+- One sentence: the specific reasoning error.
+"""
+
+eval_prompt = f"""Write a terse post-match learning note for a prediction agent.
 
 Match: {MATCH}
-Result: {HOME} {result_data['home_score']}-{result_data['away_score']} {AWAY}
-Actual winner: {actual_winner}
+Result: {HOME} {result_data['home_score']}-{result_data['away_score']} {AWAY} (winner: {actual_winner})
+Predicted: {pick} (confidence {prediction.get('confidence')}/10) — {'CORRECT' if correct else 'WRONG'}
+Reasoning given: {prediction.get('reasoning')}
+Research purchased (${entry.get('research_cost', 0):.4f}):{research_summary if research_summary else " none"}
 
-Prediction that was made:
-- Pick: {pick}
-- Confidence: {prediction.get('confidence')}/10
-- Reasoning: {prediction.get('reasoning')}
+Rules:
+- Plain text only. No preamble, praise, or filler ("Here is...", "honest evaluation", etc.).
+- No markdown headers, bold, or horizontal rules.
+- Max 120 words.
+- Be blunt and specific. Name the exact mistake, not abstract narratives.
 
-Research purchased (${entry.get('research_cost', 0):.4f} total):{research_summary if research_summary else " (none purchased)"}
+Format exactly:
 
-Outcome: prediction was {'CORRECT' if correct else 'INCORRECT'}
-Research cost: ${entry.get('research_cost', 0):.4f} USDC
+{mistake_section}DATA:
+- useful: [source] — one line on what it told us that mattered
+- useless: [source] — one line on why it didn't help
 
-Evaluate honestly:
-1. Was the prediction correct? Why or why not?
-2. Which purchased research was valuable (if any)?
-3. What was the key factor that determined the outcome?
-4. What should the agent learn from this match?
-
-Be specific and critical. This evaluation will update the agent's strategy."""
+List only endpoints that were actually purchased. 2-5 bullets total across useful/useless."""
 
 log("Asking Gemini for evaluation...")
 try:
@@ -170,32 +173,28 @@ except Exception as e:
 
 # ── Step 4: Reflector call (updates strategy) ─────────────────────────────
 
-recent_results = results[-5:]
+reflect_prompt = f"""Update the agent's strategy document. Write like engineering notes — terse, direct, no marketing language or dramatic rule names.
 
-reflect_prompt = f"""You are updating a World Cup prediction strategy document.
+Current strategy:
+{strategy if strategy else "(empty — first match)"}
 
-Current strategy (may be empty if this is the first match):
-{strategy if strategy else "(empty — this is the first match)"}
-
-Evaluator's assessment of the latest match ({MATCH}):
+Latest match note ({MATCH}):
 {evaluation}
 
-Recent match history for context:
-{json.dumps([{
-    "match": r.get("match"),
-    "pick": r.get("prediction", {}).get("pick"),
-    "correct": r.get("correct"),
-    "reasoning": r.get("prediction", {}).get("reasoning"),
-} for r in recent_results], indent=2)}
+Rewrite with EXACTLY ONE rule change from this match. Keep still-valid existing rules.
 
-Rewrite the strategy document with EXACTLY ONE change based on this match:
-- Add a new rule, modify an existing rule, or remove an outdated rule
-- Keep all still-valid rules from the current strategy
-- Note which x402 data endpoints have been useful vs not useful
-- Include the match that informed each rule (e.g., "NED vs JPN: ...")
-- Stay under 500 words total
+Format:
 
-Return ONLY the updated strategy document text. No preamble, no explanation."""
+# Strategy
+
+## Rules
+- MATCH: one sentence rule
+
+## Data sources
+- use: source type — why (MATCH)
+- skip: source type — why (MATCH)
+
+Max 250 words. Return ONLY the document."""
 
 log("Asking Gemini to update strategy...")
 try:
@@ -227,6 +226,7 @@ with open(lock_path, "w") as lock_file:
         "evaluation": evaluation,
         "reflected": True,
         "reflected_at": datetime.now(timezone.utc).isoformat(),
+        "strategy_after": new_strategy,
     })
     tmp = results_path.with_suffix(f".tmp.{HOME}_{AWAY}")
     tmp.write_text(json.dumps(results, indent=2))
