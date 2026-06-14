@@ -2390,5 +2390,182 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "IRQ vs NOR",
+    "home": "IRQ",
+    "away": "NOR",
+    "kickoff": "2026-06-16T22:00Z",
+    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n3. **NED vs JPN: Avoid \"Narrative Bias\" Overlooking Systemic Discipline**\nDo not assume physical size and individual quality will automatically overcome an elite, energetic, and tactically disciplined system. If the favorite has midfield fitness concerns (a compromised metronome) and the underdog has a highly fit defensive screen and a proven record of limiting top-tier nations, avoid a straight win prediction and favor a draw or handicap.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Defensive Records Against Highly Ranked Opponents:* Vital warning sign to identify underdogs capable of frustrating elite teams (informed by NED vs JPN).\n  * *Key Midfield Workload & Fitness Status:* Essential for determining if a favorite's central controller is compromised or an underdog's anchor is fully fit (informed by NED vs JPN).\n* **Not Useful / Wasteful:**\n  * *Bookmaker Odds & Asian Handicap:* Abstract lines often reinforce narrative bias instead of providing objective analytical value (informed by NED vs JPN).\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate fitness queries leads to high costs. Consolidate searches to 1-2 comprehensive previews to keep costs under $0.0300 per match (informed by AUS vs TUR).",
+    "information_needs": "FORM\n- How did Iraq perform in their final AFC World Cup qualifying round matches in late 2025 and early 2026, particularly in away fixtures against physically dominant opponents like Australia or South Korea?\n- What is Norway\u2019s defensive record in their pre-tournament friendly matches leading up to June 2026, specifically regarding their vulnerability to conceding goals on counter-attacks?\n\nPLAYERS\n- Is Iraq's primary aerial threat, Aymen Hussein, fully fit, and has playmaker Zidane Iqbal secured consistent starting minutes at the club level to match-fitness standards?\n- How has Norway managed Erling Haaland's physical load in the weeks following the conclusion of the European club season to ensure he is not carrying fatigue into this fixture?\n\nTACTICS\n- Will Iraq manager Jes\u00fas Casas deploy a deep-lying low block to deny Erling Haaland space to run in behind, or will they attempt a mid-block press to disrupt Martin \u00d8degaard\u2019s distribution?\n- How does Norway's tactical setup plan to break down a compact, narrow defensive block, and will they rely heavily on overlapping fullbacks to create numerical superiorities out wide?\n\nH2H\n- What structural defensive issues did Iraq expose (or suffer from) in their rare previous encounters against physical UEFA opposition in competitive or high-profile friendly settings?\n\nCONTEXT\n- Is this the opening match of the 2026 World Cup group stage for both nations, or is it Matchday 2/3 where specific goal-difference margins or must-win scenarios will dictate late-game risk tolerance?\n\nMARKET\n- What are the current Asian Handicap lines for this matchup, and has the money line shifted significantly toward Norway since the group stage draw was finalized?\n\nNEWS\n- Are there any internal camp disputes, late fitness test failures, or suspension issues arising from the final pre-tournament training camps for either squad?\n\nVENUE\n- Which North American host city is staging this 22:00Z kickoff, and will high summer humidity (e.g., in Houston or Miami) or indoor air conditioning (e.g., in AT&T Stadium) play a role in the physical drop-off rate of the players in the second half?",
+    "research_gaps": [
+      {
+        "need": "What are the current Asian Handicap lines for this matchup, and has the money line shifted significantly toward Norway since the group stage draw was finalized?",
+        "category": "MARKET",
+        "ideal_service": "An x402-compliant sports betting odds API that aggregates historical and opening line movements across sharp European and Asian books."
+      },
+      {
+        "need": "Which North American host city is staging this 22:00Z kickoff, and will high summer humidity or indoor air conditioning play a role in the physical drop-off rate of the players in the second half?",
+        "category": "VENUE",
+        "ideal_service": "A historical climate data API integrated with stadium profiles detailing venue cooling capabilities, altitude, and average physical performance indexes."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.transfermarkt.com/irak/spielplandatum/verein/3431/plus/0/saison_id/2025"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Extracts historical match results, scores, lineups, and match locations for Iraq's late-stage Asian Qualifiers from verified sources.",
+        "need": "How did Iraq perform in their final AFC World Cup qualifying round matches in late 2025 and early 2026, particularly in away fixtures against physically dominant opponents like Australia or South Korea?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.transfermarkt.com/norwegen/spielplandatum/verein/3294/plus/0/saison_id/2025"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Gives structured access to Norway's final warm-up match profiles, revealing goal concession trends, clean sheet rates, and defensive structures prior to June 2026.",
+        "need": "What is Norway\u2019s defensive record in their pre-tournament friendly matches leading up to June 2026, specifically regarding their vulnerability to conceding goals on counter-attacks?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.transfermarkt.com/irak/leistungsdaten/verein/3431/reldata/WM26/saison/2025"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Accesses Iraq's specific match stats under World Cup 2026 classification, outlining formation choices and historical deployment patterns.",
+        "need": "Will Iraq manager Jes\u00fas Casas deploy a deep-lying low block to deny Erling Haaland space to run in behind, or will they attempt a mid-block press to disrupt Martin \u00d8degaard\u2019s distribution?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Verifies matchday sequencing, group seedings, and tournament bracket layouts to determine context-based late-game behavior.",
+        "need": "Is this the opening match of the 2026 World Cup group stage for both nations, or is it Matchday 2/3 where specific goal-difference margins or must-win scenarios will dictate late-game risk tolerance?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iraq Aymen Hussein Zidane Iqbal fitness squad news World Cup 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Enables us to check key player statuses via targeted web indices, determining if Iraq's focal attacking elements are conditioned to perform.",
+        "need": "Is Iraq's primary aerial threat, Aymen Hussein, fully fit, and has playmaker Zidane Iqbal secured consistent starting minutes at the club level to match-fitness standards?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Norway national team tactical preview Stale Solbakken breaking down low block",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Provides tactical previews, formation maps, and offensive systems of Norway under Solbakken facing rigid blocks.",
+        "need": "How does Norway's tactical setup plan to break down a compact, narrow defensive block, and will they rely heavily on overlapping fullbacks to create numerical superiorities out wide?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iraq national football team vs European teams head to head matches structural defensive issues",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Searches for tactical autopsy and performance logs of Iraq's defensive performance against physical UEFA opposition.",
+        "need": "What structural defensive issues did Iraq expose (or suffer from) in their rare previous encounters against physical UEFA opposition in competitive or high-profile friendly settings?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Norway Erling Haaland physical load fatigue injury news World Cup 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Fetches current, high-quality news and updates regarding Erling Haaland's physiological load, training metrics, and pre-tournament fatigue limits.",
+        "need": "How has Norway managed Erling Haaland's physical load in the weeks following the conclusion of the European club season to ensure he is not carrying fatigue into this fixture?",
+        "category": "PLAYERS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Extracts historical match results, scores, lineups, and match locations for Iraq's late-stage Asian Qualifiers from verified sources.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/irak/spielplandatum/verein/3431/plus/0/saison_id/2025\",\"finalUrl\":\"https://www.transfermarkt.com/irak/spielplandatum/verein/3431/plus/0/saison_id/2025\",\"mode\":\"basic\",\"markdown\":\"![SV Lieth](https://tmssl.akamaized.net//images/wappen/head/3431.png?lm=1449389494 \\\"SV Lieth\\\")\\n\\n-   Squad size: 34\\n-   Average age: 30.8\\n-   Foreigners: [3](https://www.transfermarkt.com/sv-lieth/legionaere/verein/3431)\u00a0\u00a08.8 %\\n\\n-   National team players: [0](https://www.transfermarkt.com/sv-lieth/nationalspieler/verein/3431)\\n-   Stadium: [Klaus-Waskow-Platz](https://www.transfermarkt.com/sv-lieth/stadion/verein/3431 \\\"SV Lieth\\\")\u00a0\u00a0550 Seats\\n-   Current transfer record: [+-0](https://www.transfermarkt.com/sv-lieth/transfers/verein/3431/saison_id/2025)\\n\\n+\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/TMs_Player_to_watch_WC_Part2_Banner_Desktop_EN.jpg)](https://www.transfermarkt.com/groups-g-l-transfermarkts-player-to-watch-from-every-nation-at-the-world-cup-part-2/view/news/480158)\\n\\n## Fixtures by date\\n\\nThis is an overview of all fixtures of the club in chronological order.\\n\\nSeason:\\n\\nCompetition:\\n\\nWeekday:\\n\\nVenue:\\n\\nResult:\\n\\nPeriod:\\n\\n\\\\-\\n\\nMatchday\\n\\nDate\\n\\nTime\\n\\nVenue\\n\\nRanking\\n\\nOpponent\\n\\nSystem of play\\n\\nAttendance\\n\\nResult\\n\\n![Landespokal Hamburg](https://tmssl.akamaized.net//images/logo/tiny/ophh.png?lm=1565090855 \\\"Landespokal Hamburg\\\")\u00a0\u00a0[Landespokal Hamburg](https://www.transfermarkt.com/landespokal-hamburg/startseite/pokalwettbewerb/OPHH \\\"Landespokal Hamburg\\\")\\n\\nFirst Round\\n\\nSun 10/08/25\\n\\n1:00 PM\\n\\nA\\n\\n[![1.FC Quickborn](https://tmssl.akamaized.net//images/wappen/tiny/45581.png?lm=1443786499 \\\"1.FC Quickborn\\\")](https://www.transfermarkt.com/1-fc-quickborn/spielplan/verein/45581/saison_id/2025 \\\"1.FC Quickborn\\\")\\n\\n[1.FC Quickborn](https://www.transfermarkt.com/1-fc-quickborn/spielplan/verein/45581/saison_id/2025 \\\"1.FC Quickborn\\\")\\n\\n?\\n\\n[3:2](https://www.transfermarkt.com/sp"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Accesses Iraq's specific match stats under World Cup 2026 classification, outlining formation choices and historical deployment patterns.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/irak/leistungsdaten/verein/3431/reldata/WM26/saison/2025\",\"finalUrl\":\"https://www.transfermarkt.com/irak/leistungsdaten/verein/3431/reldata/WM26/saison/2025\",\"mode\":\"basic\",\"markdown\":\"\\\\-\\n\\n\\\\-![Germany](https://tmssl.akamaized.net//images/flagge/verysmall/40.png?lm=1520612525 \\\"Germany\\\")\\\\-Not in squad during this season--\\n\\n25\\n\\n\\\\-![Germany](https://tmssl.akamaized.net//images/flagge/verysmall/40.png?lm=1520612525 \\\"Germany\\\")\\\\-Not in squad during this season--\\n\\n13\\n\\n42[N/A](https://www.transfermarkt.com/intern/faq/#ds_info)\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n38![Germany](https://tmssl.akamaized.net//images/flagge/verysmall/40.png?lm=1520612525 \\\"Germany\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n[![Holsatia im EMTV](https://tmssl.akamaized.net//images/wappen/kaderquad/7486.png?lm=1552848599 \\\"Holsatia im EMTV\\\")](https://www.transfermarkt.com/holsatia-im-emtv/startseite/verein/7486/saison_id/2025 \\\"Joined from Holsatia im EMTV; date: 01/07/2025; fee: free transfer\\\")[![](https://www.transfermarkt.com/images/icons/zugang_beta_kader.png)](https://www.transfermarkt.com/holsatia-im-emtv/startseite/verein/7486/saison_id/2025 \\\"Joined from Holsatia im EMTV; date: 01/07/2025; fee: free transfer\\\")24![Germany](https://tmssl.akamaized.net//images/flagge/verysmall/40.png?lm=1520612525 \\\"Germany\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n20![Germany](https://tmssl.akamaized.net//images/flagge/verysmall/40.png?lm=1520612525 \\\"Germany\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n\\\\-![Germany](https://tmssl.akamaized.net//images/flagge/verysmall/40.png?lm=1520612525 \\\"Germany\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n\\\\-![Germany](https://tmssl.akamaized.net//images/flagge/verysmall/40.png?lm=1520612525 \\\"Germany\\\")\\\\-Not in squad during this season--\\n\\n4\\n\\n30![Germany](https://tmssl.akamaized.net//images/flagge/verysmall/40.png?lm=1520612525 \\\"Germany\\\")\\\\-Not in squad during this season--\\n\\n"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Verifies matchday sequencing, group seedings, and tournament bracket layouts to determine context-based late-game behavior.",
+        "data": "{\"url\":\"https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/\",\"finalUrl\":\"https://www.soccerway.com/\",\"mode\":\"basic\",\"markdown\":\"[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\\n\\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\\n\\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\\n\\n](https://www.joueurs-info-service.fr/)\\n\\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\\n\\n18+. Verantwortungsbewusst wetten.\\n\\n18+ Jogue com responsabilidade\\n\\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\\n\\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\\n\\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\\n\\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\\n\\n**You can also explore**\\n\\n-   Full fixtures and results for all leagues\\n-   In-depth team pages with performance data\\n-   Player profiles including career stats and achievements\\n-   Comprehensive league tables updated in real-time\\n\\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\\n\\n**Football W"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Enables us to check key player statuses via targeted web indices, determining if Iraq's focal attacking elements are conditioned to perform.",
+        "data": "{\"type\":\"search\",\"query\":{\"original\":\"Iraq Aymen Hussein Zidane Iqbal fitness squad news World Cup 2026\",\"show_strict_warning\":false,\"is_navigational\":false,\"is_news_breaking\":false,\"spellcheck_off\":false,\"country\":\"us\",\"bad_results\":false,\"should_fallback\":false,\"postal_code\":\"\",\"city\":\"\",\"header_country\":\"\",\"more_results_available\":true,\"state\":\"\"},\"discussions\":{\"type\":\"search\",\"results\":[{\"title\":\"Iraq Announces Full 26-Player Squad for The 2026 FIFA World Cup\",\"url\":\"https://www.reddit.com/r/worldcup/comments/1ttuegm/iraq_announces_full_26player_squad_for_the_2026/\",\"is_source_local\":false,\"is_source_both\":false,\"description\":\"These are the kinds of names you\u2019d find in your youth academy on career mode\",\"fetched_content_timestamp\":1780658595,\"language\":\"en\",\"family_friendly\":true,\"type\":\"discussion\",\"subtype\":\"generic\",\"is_live\":false,\"meta_url\":{\"scheme\":\"https\",\"netloc\":\"reddit.com\",\"hostname\":\"www.reddit.com\",\"favicon\":\"https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8\",\"path\":\"\u203a r  \u203a worldcup  \u203a comments  \u203a 1ttuegm  \u203a iraq_announces_full_26player_squad_for_the_2026\"},\"age\":\"2 weeks ago\",\"data\":{\"forum_name\":\"r/worldcup\",\"num_answers\":43,\"score\":\"104\",\"title\":\"Iraq Announces Full 26-Player Squad for The 2026 FIFA World Cup\",\"question\":\"<p>\\n      <strong>Goalkeepers:</strong>\u00a0Jalal Hassan <em>(Al-Zawraa)</em>, Fahad Talib <em>(Al-Talaba)</em>, Ahmed Basil <em>(Al-Shorta)</em>\\n    </p><p>\\n      <strong>Defenders:</strong> Rebin Sulaka <em>(Port FC)</em>, Merchas Doski <em>(Viktoria Plze\u0148)</em>, Hussein Ali <em>(Pogo\u0144 Szczecin)</em>, Frans Putros <em>(Persib)</em>, Manaf Younis <em>(Al-Shorta)</em>, Mustafa Sadoon <em>(Al-Shorta)</em>, Zaid Tahseen <em>(Pakhtakor)</em>, Ahmed Yahya <em>(Al-Shorta)</em>, Akam Hashim <em>(Al-Zawraa)</em>\\n    </p><p"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Provides tactical previews, formation maps, and offensive systems of Norway under Solbakken facing rigid blocks.",
+        "data": "{\"type\":\"search\",\"query\":{\"original\":\"Norway national team tactical preview Stale Solbakken breaking down low block\",\"show_strict_warning\":false,\"is_navigational\":false,\"is_news_breaking\":false,\"spellcheck_off\":false,\"country\":\"us\",\"bad_results\":false,\"should_fallback\":false,\"postal_code\":\"\",\"city\":\"\",\"header_country\":\"\",\"more_results_available\":true,\"state\":\"\"},\"mixed\":{\"type\":\"mixed\",\"main\":[{\"type\":\"web\",\"index\":0,\"all\":false},{\"type\":\"web\",\"index\":1,\"all\":false},{\"type\":\"web\",\"index\":2,\"all\":false},{\"type\":\"web\",\"index\":3,\"all\":false},{\"type\":\"web\",\"index\":4,\"all\":false},{\"type\":\"web\",\"index\":5,\"all\":false},{\"type\":\"web\",\"index\":6,\"all\":false},{\"type\":\"web\",\"index\":7,\"all\":false},{\"type\":\"web\",\"index\":8,\"all\":false},{\"type\":\"web\",\"index\":9,\"all\":false},{\"type\":\"web\",\"index\":10,\"all\":false},{\"type\":\"web\",\"index\":11,\"all\":false},{\"type\":\"web\",\"index\":12,\"all\":false},{\"type\":\"web\",\"index\":13,\"all\":false},{\"type\":\"web\",\"index\":14,\"all\":false},{\"type\":\"web\",\"index\":15,\"all\":false},{\"type\":\"web\",\"index\":16,\"all\":false},{\"type\":\"web\",\"index\":17,\"all\":false},{\"type\":\"web\",\"index\":18,\"all\":false},{\"type\":\"web\",\"index\":19,\"all\":false}],\"top\":[],\"side\":[]},\"web\":{\"type\":\"search\",\"results\":[{\"title\":\"World Cup Group I tactical guide: How will France, Senegal, Norway and Iraq contest the group of death? - The Athletic\",\"url\":\"https://www.nytimes.com/athletic/7328304/2026/06/05/2026-world-cup-tactical-guides-group-i/\",\"is_source_local\":false,\"is_source_both\":false,\"description\":\"So what\u2019s their weakness? High pressing. Solbakken\u2019s side can lock teams out wide but too often their defensive line is passive to press-breaking passes over midfield.\",\"page_age\":\"2026-06-05T04:30:44\",\"profile\":{\"name\":\"NYTimes\",\"url\":\"https://www.nytimes.com/athletic/7328304/2026/06/05/2026-world-cup-tactical-guides-group-i/\",\"long_name\":\"The New York Times\",\"img\":\"https://imgs.search.brave.com/lWA-zkTMlWM2cUvrcYa1Fls86e-Vl-rkSBOjichQqVs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Searches for tactical autopsy and performance logs of Iraq's defensive performance against physical UEFA opposition.",
+        "data": "{\"type\":\"search\",\"query\":{\"original\":\"Iraq national football team vs European teams head to head matches structural defensive issues\",\"show_strict_warning\":false,\"is_navigational\":false,\"is_news_breaking\":false,\"spellcheck_off\":false,\"country\":\"us\",\"bad_results\":false,\"should_fallback\":false,\"postal_code\":\"\",\"city\":\"\",\"header_country\":\"\",\"more_results_available\":true,\"state\":\"\"},\"faq\":{\"type\":\"faq\",\"results\":[{\"question\":\"When is Iraq's next match?\",\"answer\":\"<strong>Iraq</strong>'s next <strong>match</strong> is at 23:00 BST on Tue, 16 Jun 2026 against Norway.\",\"title\":\"Iraq - latest matches, scores and upcoming fixtures\",\"url\":\"https://www.fotmob.com/teams/5819/fixtures/iraq\",\"meta_url\":{\"scheme\":\"https\",\"netloc\":\"fotmob.com\",\"hostname\":\"www.fotmob.com\",\"favicon\":\"https://imgs.search.brave.com/yoNS5wMVyYsfdMIjOIjG_wqlGAXJzskRBq2HdCdMTT8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzc2MTkxODc3/ZTBhYzJiMTUwNDlj/OThlMmVhNzFiMjM4/NDg3MDk4NzJjNjdm/M2I0ZDY1YmEwOTM4/M2ZiNDRjMy93d3cu/Zm90bW9iLmNvbS8\",\"path\":\"  \u203a home  \u203a world cup grp. i  \u203a iraq\"}},{\"question\":\"Where is Iraq's stadium?\",\"answer\":\"<strong>Iraq</strong> stadium is located in al-Ba\u1e63ra (Basra) and is called Basra International Stadium.\",\"title\":\"Iraq - latest matches, scores and upcoming fixtures\",\"url\":\"https://www.fotmob.com/teams/5819/fixtures/iraq\",\"meta_url\":{\"scheme\":\"https\",\"netloc\":\"fotmob.com\",\"hostname\":\"www.fotmob.com\",\"favicon\":\"https://imgs.search.brave.com/yoNS5wMVyYsfdMIjOIjG_wqlGAXJzskRBq2HdCdMTT8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzc2MTkxODc3/ZTBhYzJiMTUwNDlj/OThlMmVhNzFiMjM4/NDg3MDk4NzJjNjdm/M2I0ZDY1YmEwOTM4/M2ZiNDRjMy93d3cu/Zm90bW9iLmNvbS8\",\"path\":\"  \u203a home  \u203a world cup grp. i  \u203a iraq\"}},{\"question\":\"What is the capacity of Basra International Stadium?\",\"answer\":\"The capacity for Basra International Stadium is 65000.\",\"title\":\"Iraq - latest matches, scores and upcoming fixtures\",\"url\":\"https://www.fotmob.com/teams/58"
+      }
+    ],
+    "research_cost": 0.03,
+    "wallet_before": 4.33,
+    "wallet_after": 4.3,
+    "prediction": {
+      "pick": "home",
+      "confidence": 5,
+      "confidence_reason": "",
+      "reasoning": "Insufficient data for strong prediction"
+    },
+    "full_reasoning": "",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
