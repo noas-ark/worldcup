@@ -21,5 +21,178 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "NED vs JPN",
+    "home": "NED",
+    "away": "JPN",
+    "kickoff": "2026-06-14T20:00Z",
+    "strategy_snapshot": "",
+    "information_needs": "FORM\n- How many Expected Goals (xG) have the Netherlands generated per match over their last five international fixtures, and has their actual conversion rate deviated significantly from this underlying metric?\n- Has Japan\u2019s defense kept clean sheets in their recent competitive matches against top-40 FIFA-ranked opponents, or have they shown vulnerability to conceding transition goals?\n\nPLAYERS\n- Is the Netherlands' midfield metronome (e.g., Frenkie de Jong or Tijjani Reijnders) fully fit to start, or will they be forced to deploy a more physical, less press-resistant double-pivot?\n- How is Japan managing the minutes and fatigue of key European-based stars like Wataru Endo and Kaoru Mitoma, given their intensive club schedules and long-haul travel?\n\nTACTICS\n- Will Ronald Koeman deploy a back-three/five system or a traditional Dutch 4-3-3, and how will Japan\u2019s asymmetric out-of-possession block adapt to restrict space for the Dutch wingbacks?\n- How effectively does Japan's mid-block trigger their counter-press against possession-heavy sides, and can the Dutch center-backs (e.g., Virgil van Dijk) bypass this press with direct diagonal long balls?\n\nH2H\n- In past encounters, did Japan struggle specifically with the Netherlands' physical superiority in aerial duels and set-pieces, and has Japan's current defensive line improved its aerial win percentage to mitigate this?\n\nCONTEXT\n- What are the tournament or group stage qualification scenarios for both teams, and would a draw mathematically satisfy both sides, potentially leading to a low-risk, passive final 20 minutes?\n\nMARKET\n- What is the current Asian Handicap line (e.g., Netherlands -0.75 or -1), and has the money line shifted significantly toward Japan since the opening odds, indicating sharp market support for an underdog result?\n\nNEWS\n- Are there any late-breaking reports of camp illness, suspension, or tactical discord in either camp during the 48 hours leading up to kickoff?\n\nVENUE\n- Is the match being played in a high-humidity/high-temperature environment or a neutral venue, and how will the climate affect the high-intensity sprint volume required for Japan's pressing style?",
+    "research_gaps": [
+      {
+        "need": "Real-time, structured Expected Goals (xG) database and direct injury tracker without web scraping",
+        "category": "FORM",
+        "ideal_service": "A dedicated Sports API (like Opta or Sportradar) with endpoints specifically returning JSON schemas for player injury status, historical squad xG, and high-intensity physical sprint data."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read/js",
+        "params": {
+          "url": "https://www.transfermarkt.com/frenkie-de-jong/verletzungen/spieler/326130"
+        },
+        "cost": 0.002,
+        "reason": "Extracts Frenkie de Jong's latest injury status, transfer market value, and recent match fitness logs directly from Transfermarkt.",
+        "need": "Is the Netherlands' midfield metronome (e.g., Frenkie de Jong or Tijjani Reijnders) fully fit to start, or will they be forced to deploy a more physical, less press-resistant double-pivot?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read/js",
+        "params": {
+          "url": "https://www.transfermarkt.com/wataru-endo/leistungsdaten/spieler/146310"
+        },
+        "cost": 0.002,
+        "reason": "Analyzes Wataru Endo's minutes played, matches started, and overall physical workload across his recent matches.",
+        "need": "How is Japan managing the minutes and fatigue of key European-based stars like Wataru Endo and Kaoru Mitoma, given their intensive club schedules and long-haul travel?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read/js",
+        "params": {
+          "url": "https://fbref.com/en/squads/5bb5024a/Netherlands-Men-Stats"
+        },
+        "cost": 0.002,
+        "reason": "Provides exact xG, actual goals scored, and historical shooting/conversion performance for the Dutch squad.",
+        "need": "How many Expected Goals (xG) have the Netherlands generated per match over their last five international fixtures, and has their actual conversion rate deviated significantly from this underlying metric?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read/js",
+        "params": {
+          "url": "https://fbref.com/en/squads/2cd39053/Japan-Men-Stats"
+        },
+        "cost": 0.002,
+        "reason": "Examines Japan's defensive records, goals conceded, and clean sheets in competitive fixtures against highly ranked opponents.",
+        "need": "Has Japan\u2019s defense kept clean sheets in their recent competitive matches against top-40 FIFA-ranked opponents, or have they shown vulnerability to conceding transition goals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.whoscored.com/Teams/343/Show/Netherlands"
+        },
+        "cost": 0.002,
+        "reason": "Examines Ronald Koeman's tactical trends, average formations, and structural setups in recent matches.",
+        "need": "Will Ronald Koeman deploy a back-three/five system or a traditional Dutch 4-3-3, and how will Japan\u2019s asymmetric out-of-possession block adapt to restrict space for the Dutch wingbacks?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://theanalyst.com/eu/2024/01/japan-tactical-analysis"
+        },
+        "cost": 0.002,
+        "reason": "Provides detailed tactical articles analyzing Japan's pressing triggers, defensive block, and transition vulnerabilities.",
+        "need": "How effectively does Japan's mid-block trigger their counter-press against possession-heavy sides, and can the Dutch center-backs (e.g., Virgil van Dijk) bypass this press with direct diagonal long balls?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.11v11.com/teams/netherlands/tab/opponents/id/japan/"
+        },
+        "cost": 0.002,
+        "reason": "Retrieves historic match results and reports between the Netherlands and Japan to identify recurring patterns.",
+        "need": "In past encounters, did Japan struggle specifically with the Netherlands' physical superiority in aerial duels and set-pieces, and has Japan's current defensive line improved its aerial win percentage to mitigate this?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read/js",
+        "params": {
+          "url": "https://www.oddsportal.com/soccer/world/friendly-international/netherlands-japan"
+        },
+        "cost": 0.002,
+        "reason": "Extracts current bookmaker odds, historical line movements, and Asian Handicap lines for the fixture.",
+        "need": "What is the current Asian Handicap line (e.g., Netherlands -0.75 or -1), and has the money line shifted significantly toward Japan since the opening odds, indicating sharp market support for an underdog result?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.espn.com/soccer/standings"
+        },
+        "cost": 0.002,
+        "reason": "Provides the current table standings, points, and qualification logic for both groups.",
+        "need": "What are the tournament or group stage qualification scenarios for both teams, and would a draw mathematically satisfy both sides, potentially leading to a low-risk, passive final 20 minutes?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.espn.com/soccer/fixtures"
+        },
+        "cost": 0.002,
+        "reason": "Identifies the match venue and localized climate forecast from the official match details.",
+        "need": "Is the match being played in a high-humidity/high-temperature environment or a neutral venue, and how will the climate affect the high-intensity sprint volume required for Japan's pressing style?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Netherlands Japan football camp illness suspension discord"
+        },
+        "cost": 0.01,
+        "reason": "Scans global news feeds in GDELT for recent reports of squad illness, suspension, or drama in either team's camp.",
+        "need": "Are there any late-breaking reports of camp illness, suspension, or tactical discord in either camp during the 48 hours leading up to kickoff?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read/js",
+        "cost": 0.002,
+        "reason": "Extracts Frenkie de Jong's latest injury status, transfer market value, and recent match fitness logs directly from Transfermarkt.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/frenkie-de-jong/verletzungen/spieler/326130\",\"finalUrl\":\"https://www.transfermarkt.com/frenkie-de-jong/verletzungen/spieler/326130\",\"mode\":\"js\",\"markdown\":\"![Kevin Pessl](https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1 \\\"Kevin Pessl\\\")\\n\\n-   Date of birth/Age: 05/05/1998 (28)\\n-   Citizenship: ![Austria](https://tmssl.akamaized.net//images/flagge/tiny/127.png?lm=1520611569 \\\"Austria\\\") Austria\\n\\n-   Position: Goalkeeper\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/ENwhats-my-value-banner-desktop-ru.jpg)](https://www.transfermarkt.com/whatsMyValue?cp=FIWC)\\n\\n## Injury history\\n\\nInjury history, suspensions and absences are based on a variety of media reports and are researched with the greatest of care. If you should notice an error regardless, please use the correction form. [To the correction form](https://www.transfermarkt.com/kevin-pessl/verletzungkorrektur/spieler/326130)\\n\\nNo entries available\\n\\nTotal\\n\\nNo entries available\",\"text\":\"Date of birth/Age:\\n                                05/05/1998 (28)\\n                                            Citizenship:\\n                                                                Austria\\n                    Position:\\n                            Goalkeeper\\n                Injury history\\nInjury history, suspensions and absences are based on a variety of media reports and are researched with the greatest of care. If you should notice an error regardless, please use the correction form. To the correction form\\nNo entries available\\n                Total\\nNo entries available\",\"metadata\":{\"title\":\"Kevin Pessl - Injury history\",\"byline\":null,\"siteName\":null,\"publishedAt\":null,\"excerpt\":\"This is the injury history of Kevin Pessl from FC Aschach/Steyr. On this page injuries as well as suspensions.\",\"lang\":\"en\",\"length\":1419},\"structured\":null,\"fetchedAt\":\"2026-06-14T20:17:51.842Z\"}"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read/js",
+        "cost": 0.002,
+        "reason": "Analyzes Wataru Endo's minutes played, matches started, and overall physical workload across his recent matches.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/wataru-endo/leistungsdaten/spieler/146310\",\"finalUrl\":\"https://www.transfermarkt.com/wataru-endo/leistungsdaten/spieler/146310\",\"mode\":\"js\",\"markdown\":\"[![Transfermarkt](https://tmsi.akamaized.net/head/tm_logo_rebrush.svg \\\"Transfermarkt\\\")](https://www.transfermarkt.com/)\\n\\n[DISCOVER](https://www.transfermarkt.com/) [World Cup 2026](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.com/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.com/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.com/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.com/navigation/statistiken) [FORUM](https://www.transfermarkt.com/navigation/community) [GAMING](https://www.transfermarkt.com/navigation/gaming)\\n\\n![Wataru Endo](https://img.a.transfermarkt.technology/portrait/header/146310-1657181542.jpg?lm=1 \\\"Wataru Endo\\\")\\n\\nimago images\\n\\n+\\n\\n-   Height: 1,78 m\\n-   Position: Defensive Midfield\\n\\n-   National player: ![Japan](https://tmssl.akamaized.net//images/flagge/tiny/77.png?lm=1520611569 \\\"Japan\\\")[Japan](https://www.transfermarkt.com/japan/startseite/verein/3435 \\\"Japan\\\")\\n-   Caps/Goals: [73](https://www.transfermarkt.com/wataru-endo/nationalmannschaft/spieler/146310/verein_id/3435) / [4](https://www.transfermarkt.com/wataru-endo/nationalmannschaft/spieler/146310/verein_id/3435)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/WChomepagemobile.jpg)](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC)\\n\\nStats of Wataru Endo\\n\\nThis page contains information about a player's detailed stats. In the info box, you can filter by period, club, type of league and competition. The \\\"Detailed stats\\\" tab shows a player's total appearances, goals, cards and cumulative minutes of play for each competition, and indicates the season in which it occurred.\\n\\nFilter by season\\n\\n"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read/js",
+        "cost": 0.002,
+        "reason": "Provides exact xG, actual goals scored, and historical shooting/conversion performance for the Dutch squad.",
+        "data": "{\"url\":\"https://fbref.com/en/squads/5bb5024a/Netherlands-Men-Stats\",\"finalUrl\":\"https://fbref.com/en/squads/5bb5024a/Netherlands-Men-Stats\",\"mode\":\"js\",\"markdown\":\"![Icon for fbref.com](https://fbref.com/favicon.ico)\\n\\n## fbref.com\\n\\n## Performing security verification\\n\\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\",\"text\":\"fbref.comPerforming security verificationThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\",\"metadata\":{\"title\":\"Just a moment...\",\"byline\":null,\"siteName\":null,\"publishedAt\":null,\"excerpt\":\"\",\"lang\":\"en-US\",\"length\":181},\"structured\":null,\"fetchedAt\":\"2026-06-14T20:18:17.593Z\"}"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read/js",
+        "cost": 0.002,
+        "reason": "Examines Japan's defensive records, goals conceded, and clean sheets in competitive fixtures against highly ranked opponents.",
+        "data": "{\"url\":\"https://fbref.com/en/squads/2cd39053/Japan-Men-Stats\",\"finalUrl\":\"https://fbref.com/en/squads/2cd39053/Japan-Men-Stats\",\"mode\":\"js\",\"markdown\":\"![Icon for fbref.com](https://fbref.com/favicon.ico)\\n\\n## fbref.com\\n\\n## Performing security verification\\n\\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\",\"text\":\"fbref.comPerforming security verificationThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\",\"metadata\":{\"title\":\"Just a moment...\",\"byline\":null,\"siteName\":null,\"publishedAt\":null,\"excerpt\":\"\",\"lang\":\"en-US\",\"length\":181},\"structured\":null,\"fetchedAt\":\"2026-06-14T20:18:24.589Z\"}"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read/js",
+        "cost": 0.002,
+        "reason": "Extracts current bookmaker odds, historical line movements, and Asian Handicap lines for the fixture.",
+        "data": "{\"url\":\"https://www.oddsportal.com/soccer/world/friendly-international/netherlands-japan\",\"finalUrl\":\"https://www.oddsportal.com/soccer/world/friendly-international/netherlands-japan\",\"mode\":\"js\",\"markdown\":\"## This www.oddsportal.com page can\u2019t be found\\n\\nNo webpage was found for the web address: **https://www.oddsportal.com/football/world/friendly-international/netherlands-japan/**\",\"text\":\"This www.oddsportal.com page can\u2019t be found\\n        No webpage was found for the web address: https://www.oddsportal.com/football/world/friendly-international/netherlands-japan/\",\"metadata\":{\"title\":\"www.oddsportal.com\",\"byline\":null,\"siteName\":null,\"publishedAt\":null,\"excerpt\":\"No webpage was found for the web address: https://www.oddsportal.com/football/world/friendly-international/netherlands-japan/\",\"lang\":\"en\",\"length\":278},\"structured\":null,\"fetchedAt\":\"2026-06-14T20:18:36.211Z\"}"
+      }
+    ],
+    "research_cost": 0.01,
+    "wallet_before": 5.0,
+    "wallet_after": 4.99,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "bet": 1.5,
+      "reasoning": "Netherlands' physical advantage and elite individual quality in key areas should help them overcome Japan's disciplined and energetic system."
+    },
+    "full_reasoning": "The match between the Netherlands (NED) and Japan (JPN) presents a classic clash of styles at the World Cup. The Netherlands boasts a squad filled with elite European-league talent, combining defensive solidity through world-class center-backs with a dynamic midfield and versatile attackers who can exploit spaces. Japan, renowned for their incredible work rate, tactical discipline, high-pressing organization, and dangerous transition play led by quick, technically gifted wingers, will undoubtedly represent a stern test. While Japan has shown an ability to upset elite European sides in recent tournaments, the Netherlands\u2019 superior physicality, individual match-winners, and tournament pedigree give them the edge to secure a narrow victory in this encounter.\n\nPICK: home\nCONFIDENCE: 6\nBET: $1.50\nREASONING: Netherlands' physical advantage and elite individual quality in key areas should help them overcome Japan's disciplined and energetic system.",
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
