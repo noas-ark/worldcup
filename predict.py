@@ -129,75 +129,138 @@ for s in services:
 home_name = next((f.get("home_name", HOME) for f in schedule if f.get("home") == HOME and f.get("away") == AWAY), HOME)
 away_name = next((f.get("away_name", AWAY) for f in schedule if f.get("home") == HOME and f.get("away") == AWAY), AWAY)
 
-plan_prompt = f"""You are a deep research agent preparing a comprehensive intelligence brief before a World Cup match.
+REQUIRED_CATEGORIES = ["FORM", "PLAYERS", "TACTICS", "H2H", "CONTEXT", "MARKET", "NEWS", "VENUE"]
 
-Match: {home_name} ({HOME}) vs {away_name} ({AWAY})
-Kickoff: {kickoff}
-Wallet balance: ${balance:.4f} USDC
-Research budget cap: ${BUDGET:.2f} USDC
+# ── Stage 1: Analyst — what do we need to know? (no services shown yet) ───
 
-Current strategy:
-{strategy if strategy else "(no strategy yet — first match)"}
+stage1_prompt = f"""You are a professional football analyst preparing to predict {home_name} vs {away_name}.
 
-Recent prediction history:
-{json.dumps(recent_results, indent=2) if recent_results else "(no history yet)"}
+Before looking at any data sources, list every specific question you need answered
+to make a high-quality prediction. Be granular and specific, not generic.
 
-AVAILABLE x402 SERVICES WITH REAL ENDPOINTS:
-{json.dumps(service_summary, indent=2) if service_summary else "(no services available)"}
+Good examples:
+- Is {home_name}'s first-choice striker fit after the qualifying campaign?
+- How does {away_name} defend against high-pressing European-style teams?
+- What does each team need from this match given group standings?
+- What are the current betting odds and what do they imply about expected outcome?
+- What is the weather in the host city and does it favor a particular style?
 
-YOUR TASK: Plan a comprehensive research campaign. Think like an analyst who needs to know everything about this match. You want to read:
-- FIFA official team/player pages for both teams
-- Recent match results and form for both teams
-- Injury and squad news for both teams
-- Head-to-head history between these teams
-- Tournament group standings and context
-- Expert match previews and analysis
-- Odds and betting markets if available
+List 8-12 specific questions grouped by these exact categories:
+FORM, PLAYERS, TACTICS, H2H, CONTEXT, MARKET, NEWS, VENUE
 
-Use Skim (url: https://skim402.com/api/v2/read) to read ANY useful web page by passing its URL as a param.
-Use GDELT (url: https://news-x402.com/news/recent) for news queries.
+Format your response as:
+FORM
+- question
+- question
 
-GOOD URLs TO SKIM for this match:
-- https://www.fifa.com/fifaplus/en/match-centre (tournament overview)
-- https://fbref.com/en/squads/ (team stats)
-- https://www.bbc.com/sport/football/world-cup (latest WC news)
-- https://www.espn.com/soccer/match/_/gameId/ (match preview)
-- Search Google News for "{home_name} World Cup 2026" or "{away_name} World Cup 2026"
+PLAYERS
+- question
+...etc"""
 
-RULES:
-1. ONLY use endpoint URLs that appear in the "endpoints" lists above — exact URLs, no modifications
-2. For Skim params: {{"url": "https://any-real-website.com/page"}} — the target URL can be any website
-3. For GDELT params: {{"query": "search terms"}}
-4. Total cost must not exceed ${BUDGET:.2f} USDC
-5. Be aggressive — use up to 10 calls if they fit in budget and are genuinely useful
+information_needs = ""
+try:
+    log("Stage 1: Analyst identifying information needs...")
+    information_needs = gemini.generate(stage1_prompt)
+    log("Stage 1 complete — information needs identified")
 
-Return ONLY a valid JSON array, no markdown, no explanation:
-[
-  {{"url": "exact_endpoint_url", "params": {{"key": "value"}}, "cost": 0.01, "reason": "what intelligence this gives us"}}
-]"""
+    # Ensure all required categories are covered
+    missing = [c for c in REQUIRED_CATEGORIES if c not in information_needs.upper()]
+    if missing:
+        information_needs += f"\n\nAlso ensure coverage of these categories: {', '.join(missing)}"
+        log("Added missing categories: %s", missing)
+except Exception as e:
+    err("Stage 1 failed: %s", e)
+    information_needs = "\n".join(f"{c}\n- General {c.lower()} information" for c in REQUIRED_CATEGORIES)
+
+log("Information needs:\n%s", information_needs)
+
+# ── Stage 2: Shopper — map needs to available services ────────────────────
 
 research_plan = []
+research_gaps = []  # needs with no matching service
+
 if services:
+    stage2_prompt = f"""You identified these information needs for {home_name} vs {away_name}:
+
+{information_needs}
+
+Here is the complete x402 service directory with real endpoints:
+{json.dumps(service_summary, indent=2)}
+
+Your research budget: ${BUDGET:.2f} USDC
+Your strategy so far: {strategy if strategy else "(none yet)"}
+
+Map each information need to the best available service.
+
+KEY RULES:
+1. ONLY use endpoint URLs that appear in the "endpoints" lists above — exact URLs only
+2. For Skim (/api/v2/read or /api/v2/read/js): params must be {{"url": "https://real-page.com"}}
+   - Good Skim targets: BBC Sport, ESPN, FBref, Transfermarkt, FlashScore, WhoScored, Sky Sports
+   - Use /api/v2/read/js for pages that require JavaScript rendering
+3. For GDELT (/news/recent, /news/sentiment): params must be {{"query": "search terms"}}
+4. Prioritize: PLAYERS/injuries > FORM > TACTICS > H2H > MARKET/odds > CONTEXT > NEWS > VENUE
+5. Total cost must not exceed ${BUDGET:.2f} USDC
+6. For each need with NO matching service, include it in a "gaps" field
+
+Return ONLY valid JSON with this exact structure, no markdown:
+{{
+  "purchases": [
+    {{
+      "need": "the specific question this answers",
+      "category": "FORM|PLAYERS|TACTICS|H2H|CONTEXT|MARKET|NEWS|VENUE",
+      "url": "exact_endpoint_url",
+      "params": {{}},
+      "cost": 0.01,
+      "why": "what intelligence this gives us"
+    }}
+  ],
+  "gaps": [
+    {{
+      "need": "question that no available service can answer",
+      "category": "FORM",
+      "ideal_service": "description of what x402 service would be needed"
+    }}
+  ]
+}}"""
+
     try:
-        log("Asking Gemini to plan research purchases...")
-        research_plan_text = gemini.generate(plan_prompt)
-        raw = research_plan_text.strip()
+        log("Stage 2: Mapping needs to services...")
+        stage2_text = gemini.generate(stage2_prompt)
+        raw = stage2_text.strip()
         raw = re.sub(r"^```[a-z]*\n?", "", raw)
         raw = re.sub(r"\n?```$", "", raw)
-        research_plan = json.loads(raw)
-        log("Gemini planned %d service calls", len(research_plan))
+        stage2_result = json.loads(raw)
+        research_plan = stage2_result.get("purchases", [])
+        research_gaps = stage2_result.get("gaps", [])
+        log("Stage 2 complete: %d purchases planned, %d gaps identified", len(research_plan), len(research_gaps))
+        for gap in research_gaps:
+            log("GAP [%s]: %s → needs: %s", gap.get("category"), gap.get("need"), gap.get("ideal_service"))
     except Exception as e:
-        err("Failed to parse Gemini research plan: %s — skipping paid data", e)
+        err("Stage 2 failed: %s — skipping paid data", e)
         research_plan = []
+
+    # Remap field names from stage 2 format to internal format
+    normalized_plan = []
+    for item in research_plan:
+        normalized_plan.append({
+            "url": item.get("url", ""),
+            "params": item.get("params", {}),
+            "cost": item.get("cost", 0),
+            "reason": item.get("why", item.get("need", "")),
+            "need": item.get("need", ""),
+            "category": item.get("category", ""),
+        })
+    research_plan = normalized_plan
 
 # Validate: URL must start with a known service base_url
 valid_base_urls = {s["base_url"].rstrip("/") for s in services}
 def _url_is_valid(url):
     return any(url.startswith(base) for base in valid_base_urls)
 
+before = len(research_plan)
 research_plan = [p for p in research_plan if _url_is_valid(p.get("url", ""))]
-if len(research_plan) < len([p for p in research_plan]):
-    log("Removed hallucinated URLs not matching any known service base_url")
+if len(research_plan) < before:
+    log("Removed %d hallucinated URLs not matching any known service", before - len(research_plan))
 
 # Trim to budget (remove most expensive first)
 research_plan.sort(key=lambda x: x.get("cost", 0))
@@ -310,6 +373,8 @@ entry = {
     "away": AWAY,
     "kickoff": kickoff,
     "strategy_snapshot": strategy,
+    "information_needs": information_needs,
+    "research_gaps": research_gaps,
     "services_planned": research_plan,
     "services_used": services_used,
     "research_cost": round(total_spent, 6),

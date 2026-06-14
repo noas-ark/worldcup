@@ -262,6 +262,23 @@ async def match_detail(match_key: str):
     eval_html = f'<div class="section"><h2>Reflection & Evaluation</h2><div class="full-text">{_esc(entry.get("evaluation","(not yet reflected)"))}</div></div>' if entry.get("evaluation") else ""
     snapshot_html = f'<div class="section"><h2>Strategy at Prediction Time</h2><div class="full-text">{_esc(entry.get("strategy_snapshot","(empty)"))}</div></div>' if entry.get("strategy_snapshot") is not None else ""
 
+    # Information needs (Stage 1 analyst output)
+    needs_html = ""
+    if entry.get("information_needs"):
+        needs_html = f'<div class="section"><h2>Analyst Information Needs (Stage 1)</h2><div class="full-text">{_esc(entry["information_needs"])}</div></div>'
+
+    # Research gaps
+    gaps_html = ""
+    if entry.get("research_gaps"):
+        gap_rows = "".join(
+            f'<tr><td style="color:#f9a825">{_esc(g.get("category","?"))}</td><td>{_esc(g.get("need",""))}</td><td style="color:#555;font-size:11px;">{_esc(g.get("ideal_service",""))}</td></tr>'
+            for g in entry["research_gaps"]
+        )
+        gaps_html = f'''<div class="section"><h2>Research Gaps — No x402 Service Available</h2>
+<div style="font-size:12px;color:#666;margin-bottom:8px;">These intelligence needs had no matching service in the directory. This is a demand signal for the x402 ecosystem.</div>
+<table class="x402"><tr><th>Category</th><th>Need</th><th>Ideal Service</th></tr>{gap_rows}</table>
+</div>'''
+
     body = f"""
 <div style="margin-bottom:12px;"><a href="/" style="color:#555;font-size:12px;">← Back</a></div>
 <h2 style="font-size:18px;color:#fff;border:none;margin-bottom:8px;">{_esc(entry["match"])}</h2>
@@ -275,7 +292,9 @@ async def match_detail(match_key: str):
   </div>
   <div class="reasoning">"{_esc(pred.get("reasoning",""))}"</div>
 </div>
+{needs_html}
 {x402_section}
+{gaps_html}
 <div class="section"><h2>Full Gemini Reasoning</h2><div class="full-text">{_esc(entry.get("full_reasoning","(none)"))}</div></div>
 {eval_html}
 {snapshot_html}"""
