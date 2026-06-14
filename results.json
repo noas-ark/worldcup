@@ -1227,5 +1227,146 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "SWE vs TUN",
+    "home": "SWE",
+    "away": "TUN",
+    "kickoff": "2026-06-15T02:00Z",
+    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Late-breaking Team News:* Vital for assessing the fitness of key central playmakers or defenders, but must be purchased sparingly to avoid information overload.\n* **Not Useful / Wasteful:**\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Betting Odds & Macro-Tournament Rules:* Abstract factors like 48-team progression structures provide no actionable value for head-to-head matchups (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate, hyper-specific fitness queries leads to high costs and information overload. Consolidate search queries to 1-2 comprehensive tactical previews to keep research costs under $0.0300 per match.",
+    "information_needs": "FORM\n- How has Sweden\u2019s attacking output (specifically non-penalty xG and big chances created) trended over their last five competitive matches leading into the tournament?\n- Did Tunisia rely primarily on low-scoring, defensive structures (e.g., under 1.0 expected goals against per game) to secure qualification, or have they shown a more expansive, high-scoring transition phase in recent friendly matches?\n\nPLAYERS\n- Are Sweden's primary central attacking threats\u2014specifically Viktor Gy\u00f6keres, Alexander Isak, and Dejan Kulusevski\u2014fully fit, and how has their club-level chemistry translated to the national team dynamic?\n- Who is slated to anchor Tunisia's midfield (e.g., Ellyes Skhiri or a younger progressive profile), and do they have the mobility to match Sweden's physical, high-tempo midfield runners?\n\nTACTICS\n- How does Sweden's progressive, high-pressing style under their current tactical setup plan to break down Tunisia\u2019s historically compact, disciplined low-mid block?\n- What are Tunisia's statistical triggers for counter-attacking, and can they exploit the space left behind Sweden's advanced full-backs?\n\nH2H\n- How did Tunisia fare in their most recent competitive encounters against structurally similar, physical European opponents (such as their 0-0 draw against Denmark in the 2022 World Cup)?\n\nCONTEXT\n- As this is a group stage match in the 2026 World Cup, what does the group draw look like? Does a draw serve Tunisia's tournament progression strategy, or are both teams forced to play for a win due to a powerhouse third opponent in the group?\n\nMARKET\n- What are the current Asian Handicap and Over/Under lines, and has there been any significant market movement suggesting sharp money backing a low-scoring Tunisia upset or a comfortable Sweden victory?\n\nNEWS\n- Have there been any recent training camp reports regarding squad disharmony, tactical friction, or late-stage illnesses/minor knocks for either team in the 48 hours leading up to media day?\n\nVENUE\n- Which North American host city and stadium is staging this match, is it played on natural grass or temporary turf, and will the local indoor climate-control or outdoor humidity at 02:00Z favor the high-intensity physical demands of Sweden's press?",
+    "research_gaps": [
+      {
+        "need": "What are the current Asian Handicap and Over/Under lines, and has there been any significant market movement suggesting sharp money backing a low-scoring Tunisia upset or a comfortable Sweden victory?",
+        "category": "MARKET",
+        "ideal_service": "A dedicated sports betting odds API that aggregates real-time Asian Handicap and Over/Under lines from major global sportsbooks, including line movement history and sharp money indicators."
+      },
+      {
+        "need": "Which North American host city and stadium is staging this match, is it played on natural grass or temporary turf, and will the local indoor climate-control or outdoor humidity at 02:00Z favor the high-intensity physical demands of Sweden's press?",
+        "category": "VENUE",
+        "ideal_service": "A sports venue conditions and localized microclimate API providing stadium roof status, turf materials, and hour-by-hour relative humidity/temperature projections for sporting fixtures."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://fbref.com/en/squads/9002237d/Sweden-Men-Stats"
+        },
+        "cost": 0.002,
+        "reason": "Provides match-by-match expected goals (xG), non-penalty xG, and shot-creating actions for Sweden's recent competitive matches.",
+        "need": "How has Sweden\u2019s attacking output (specifically non-penalty xG and big chances created) trended over their last five competitive matches leading into the tournament?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://fbref.com/en/squads/94639908/Tunisia-Men-Stats"
+        },
+        "cost": 0.002,
+        "reason": "Provides tactical metrics like xG against (xGA) and goals conceded for Tunisia to assess their defensive floor during qualification.",
+        "need": "Did Tunisia rely primarily on low-scoring, defensive structures (e.g., under 1.0 expected goals against per game) to secure qualification, or have they shown a more expansive, high-scoring transition phase in recent friendly matches?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Group_D"
+        },
+        "cost": 0.002,
+        "reason": "Pulls historical World Cup group performance and match stats for Tunisia against Denmark to understand their tactical baseline against physical European opposition.",
+        "need": "How did Tunisia fare in their most recent competitive encounters against structurally similar, physical European opponents (such as their 0-0 draw against Denmark in the 2022 World Cup)?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Retrieves group listings and progression scenarios to outline the tournament mathematical context for both nations.",
+        "need": "As this is a group stage match in the 2026 World Cup, what does the group draw look like? Does a draw serve Tunisia's tournament progression strategy, or are both teams forced to play for a win due to a powerhouse third opponent in the group?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Sweden Gyokeres Isak Kulusevski fitness chemistry"
+        },
+        "cost": 0.01,
+        "reason": "Provides recent news updates regarding the physical status and collective chemistry of Sweden's premier attacking trident.",
+        "need": "Are Sweden's primary central attacking threats\u2014specifically Viktor Gy\u00f6keres, Alexander Isak, and Dejan Kulusevski\u2014fully fit, and how has their club-level chemistry translated to the national team dynamic?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Tunisia midfield Ellyes Skhiri mobility"
+        },
+        "cost": 0.01,
+        "reason": "Fetches recent tactical insights and news on Tunisia's projected midfield starting lineup and individual athletic profiles.",
+        "need": "Who is slated to anchor Tunisia's midfield (e.g., Ellyes Skhiri or a younger progressive profile), and do they have the mobility to match Sweden's physical, high-tempo midfield runners?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Sweden progressive high press tactics Tunisia compact low block"
+        },
+        "cost": 0.01,
+        "reason": "Retrieves tactical match previews analyzing Sweden's pressing systems against a disciplined low-mid block.",
+        "need": "How does Sweden's progressive, high-pressing style under their current tactical setup plan to break down Tunisia\u2019s historically compact, disciplined low-mid block?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Tunisia counter attack tactics Sweden advanced full backs"
+        },
+        "cost": 0.01,
+        "reason": "Provides transition phase analysis highlighting how Tunisia's quick counter-attacks can exploit spaces vacated by Sweden's offensive full-backs.",
+        "need": "What are Tunisia's statistical triggers for counter-attacking, and can they exploit the space left behind Sweden's advanced full-backs?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Sweden Tunisia training camp squad disharmony tactical friction illness knock"
+        },
+        "cost": 0.01,
+        "reason": "Fetches breaking news from training camps regarding squad atmosphere, minor injuries, or last-minute illnesses.",
+        "need": "Have there been any recent training camp reports regarding squad disharmony, tactical friction, or late-stage illnesses/minor knocks for either team in the 48 hours leading up to media day?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Pulls historical World Cup group performance and match stats for Tunisia against Denmark to understand their tactical baseline against physical European opposition.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Group_D\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Group_D\",\"mode\":\"basic\",\"markdown\":\"From Wikipedia, the free encyclopedia\\n\\n[![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/2022_FIFA_World_Cup_France_4%E2%80%931_Australia_-_%2811%29.jpg/330px-2022_FIFA_World_Cup_France_4%E2%80%931_Australia_-_%2811%29.jpg)](https://en.wikipedia.org/wiki/File:2022_FIFA_World_Cup_France_4%E2%80%931_Australia_-_\\\\(11\\\\).jpg)\\n\\nFrance vs Australia\\n\\nGroup D of the [2022 FIFA World Cup](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\") took place from 22 to 30 November 2022. The group consisted of national assosiation football teams [France](https://en.wikipedia.org/wiki/France_national_football_team \\\"France national football team\\\"), [Australia](https://en.wikipedia.org/wiki/Australia_men%27s_national_soccer_team \\\"Australia men's national soccer team\\\"), [Denmark](https://en.wikipedia.org/wiki/Denmark_national_football_team \\\"Denmark national football team\\\") and [Tunisia](https://en.wikipedia.org/wiki/Tunisia_national_football_team \\\"Tunisia national football team\\\"). The top two teams, France and Australia advanced to the [round of 16](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_knockout_stage#Round_of_16 \\\"2022 FIFA World Cup knockout stage\\\").[\\\\[1\\\\]](#cite_note-regulations-1) France won the group by goal difference, defeating Australia and Denmark before losing to Tunisia on the final matchday. Australia finished second and made to the first knockout stage since [2006](https://en.wikipedia.org/wiki/2006_FIFA_World_Cup \\\"2006 FIFA World Cup\\\"). France, Denmark and Australia had also played in [Group C](https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_Group_C \\\"2018 FIFA World Cup Group C\\\") at the [previous FIFA World Cup](https://en.wikipedia.org/wiki/2018_FIFA_World_Cup \\\"2018 FIFA World Cup\\\").\\n\\nThe teams were decided by the [World Cup draw](https"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Retrieves group listings and progression scenarios to outline the tournament mathematical context for both nations.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"2026 FIFA World Cup\\n\\nFIFA World Cup 26  \\nFIFA World Cup 2026  \\n_Copa Mundial de la FIFA 2026_\u00a0([Spanish](https://en.wikipedia.org/wiki/Spanish_language \\\"Spanish language\\\"))  \\n_Coupe du Monde de la FIFA 2026_\u00a0([French](https://en.wikipedia.org/wiki/French_language \\\"French language\\\"))\\n\\n[![Emblem of the 2026 FIFA World Cup, showing numbers \\\"2\\\" (top) and \\\"6\\\" (bottom) placed behind the World Cup trophy](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/250px-2026_FIFA_World_Cup_emblem.svg.png)](https://en.wikipedia.org/wiki/File:2026_FIFA_World_Cup_emblem.svg)\\n\\nTournament details\\n\\nHost countries\\n\\nCanada  \\nMexico  \\nUnited States\\n\\nDates\\n\\nJune 11 \u2013 July 19\\n\\nTeams\\n\\n48\u00a0(from 6 confederations)\\n\\nVenue\\n\\n16\u00a0(in 16 host cities)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n9\\n\\nGoals scored\\n\\n27\u00a0(3 per match)\\n\\nAttendance\\n\\n572,596\u00a0(63,622 per match)\\n\\nTop scorers\\n\\n-   [![Germany national football team](https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)](https://en.wikipedia.org/wiki/Germany_national_football_team \\\"Germany national football team\\\") [Kai Havertz](https://en.wikipedia.org/wiki/Kai_Havertz \\\"Kai Havertz\\\")\\n-   [![United States men's national soccer team](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)](https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team \\\"United States men's national soccer team\\\") [Folarin Balogun](https://en.wikipedia.org/wiki/Folarin_Balogun \\\"Folarin Balogun\\\")\\n-   (2 goals each)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\")\\n\\n_[2030](https://en.wikipedia.org/wiki/2030_FIFA_World_Cup \\\"2030 FIFA World Cup\\\")_ \u2192\\n\\nAll statistics correct "
+      }
+    ],
+    "research_cost": 0.004,
+    "wallet_before": 4.705,
+    "wallet_after": 4.701,
+    "prediction": {
+      "pick": "draw",
+      "confidence": 5,
+      "confidence_reason": "While Tunisia's disciplined low block is structurally designed to frustrate Sweden's offensive flow, the world-class clinical finishing of Gy\u00f6keres and Isak means Sweden can break a deadlock out of nothing, keeping confidence at a moderate level.",
+      "reasoning": "Tunisia's highly organized, physical low block is tactically equipped to neutralize Sweden's fluid but transition-reliant attack, resulting in a low-scoring defensive stalemate."
+    },
+    "full_reasoning": "An analysis of the Group Stage match between Sweden (SWE) and Tunisia (TUN) reveals a classic clash between a high-octane, individual-talent-heavy attack and a highly disciplined, defensively organized low block.\n\n### Sweden: Elite Attacking Firepower vs. Tactical Vulnerability\nUnder the stewardship of Jon Dahl Tomasson, Sweden plays an incredibly aggressive, fluid, and offensive brand of football. Armed with some of the most in-form forward players in world football\u2014including Alexander Isak, Dejan Kulusevski, and the prolific Viktor Gy\u00f6keres\u2014Sweden possesses immense individual attacking quality. \n\nHowever, Sweden\u2019s high-pressing system has a tendency to leave their defensive line exposed to quick transitions. Furthermore, when forced to play against deep, compact defensive units that deny space in behind, Sweden can struggle to find central playmaking solutions, often relying on isolated wing play or individual brilliance.\n\n### Tunisia: Low-Block Discipline and Defensive Resilience\nTunisia has consistently proven to be one of the most stubborn and defensively organized units in international football. Their campaign in the 2022 FIFA World Cup demonstrated this defensive floor, where they kept clean sheets against Denmark (0-0) and France (1-0), conceding only a single goal in the entire group stage. \n\nTunisia excels at maintaining physical and defensive discipline, crowding the box, and playing for low-scoring results, particularly in group-stage openers where securing a point is highly valuable. They are comfortable without the ball and will deliberately look to frustrate Sweden\u2019s creative players.\n\n### Tactical Matchup and Strategic Application\nApplying the core prediction rules:\n1. **The Individual Talent Trap (Rule 1):** Sweden is the clear favorite on paper due to their world-class attackers. However, backing them solely on individual offensive flair against an elite low block is a trap. Tunisia\u2019s compact shape will starve Gy\u00f6keres and Isak of space, forcing Sweden into low-percentage crosses and long-range efforts.\n2. **Defensive Floor over Technical Ceiling (Rule 2):** Tunisia\u2019s physical robustness and disciplined defensive unit are well-suited to withstand Sweden\u2019s pressure. Sweden's open system also leaves them vulnerable to Tunisian counter-attacks, which will force Sweden to play with more caution as the match progresses.\n\nGiven these dynamics, Tunisia is highly likely to successfully frustrate Sweden, leading to a hard-fought, low-scoring stalemate.\n\nPICK: draw\nCONFIDENCE: 5\nCONFIDENCE_REASON: While Tunisia's disciplined low block is structurally designed to frustrate Sweden's offensive flow, the world-class clinical finishing of Gy\u00f6keres and Isak means Sweden can break a deadlock out of nothing, keeping confidence at a moderate level.\nREASONING: Tunisia's highly organized, physical low block is tactically equipped to neutralize Sweden's fluid but transition-reliant attack, resulting in a low-scoring defensive stalemate.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
