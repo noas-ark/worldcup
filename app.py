@@ -73,8 +73,6 @@ a:hover { text-decoration: underline; }
 .container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
 header { border-bottom: 1px solid #333; padding-bottom: 16px; margin-bottom: 24px; }
 header h1 { font-size: 20px; color: #fff; }
-.meta { display: flex; gap: 24px; margin-top: 8px; color: #888; font-size: 12px; }
-.meta span { color: #e0e0e0; }
 h2 { font-size: 13px; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 1px solid #222; padding-bottom: 6px; }
 .section { margin-bottom: 32px; }
 .match-card { background: #111; border: 1px solid #2a2a2a; border-radius: 6px; margin-bottom: 16px; overflow: hidden; }
@@ -85,6 +83,21 @@ h2 { font-size: 13px; color: #aaa; text-transform: uppercase; letter-spacing: 1p
 .badge.correct { background: #1a3a1a; color: #4caf50; border: 1px solid #4caf50; }
 .badge.incorrect { background: #3a1a1a; color: #f44336; border: 1px solid #f44336; }
 .badge.pending { background: #1a1a3a; color: #888; border: 1px solid #444; }
+.badge.awaiting-prediction { background: #1a1a2a; color: #9e9e9e; border: 1px solid #444; }
+.badge.predicted { background: #1a2a3a; color: #4dabf7; border: 1px solid #4dabf7; }
+.badge.live { background: #1a2a1a; color: #66bb6a; border: 1px solid #66bb6a; }
+.badge.awaiting-reflect { background: #2a2210; color: #f9a825; border: 1px solid #f9a825; }
+.badge.reflected-correct { background: #1a3a1a; color: #4caf50; border: 1px solid #4caf50; }
+.badge.reflected-incorrect { background: #3a1a1a; color: #f44336; border: 1px solid #f44336; }
+.pipeline { display: flex; align-items: stretch; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+.pipeline-step { flex: 1; min-width: 140px; background: #111; border: 1px solid #2a2a2a; border-radius: 6px; padding: 12px 14px; }
+.pipeline-step .count { display: block; font-size: 22px; font-weight: bold; color: #fff; line-height: 1.2; }
+.pipeline-step .label { font-size: 11px; color: #888; margin-top: 2px; }
+.pipeline-step.active { border-color: #4dabf7; background: #0f1a24; }
+.pipeline-arrow { color: #333; align-self: center; font-size: 18px; padding: 0 2px; }
+.section-desc { font-size: 12px; color: #555; margin: -8px 0 14px; line-height: 1.5; }
+.status-line { font-size: 11px; color: #666; margin-top: 3px; }
+.empty-section { color: #444; font-style: italic; font-size: 12px; padding: 8px 0 16px; }
 .match-body { padding: 12px 16px; }
 .pred-row { display: flex; gap: 24px; margin-bottom: 10px; flex-wrap: wrap; }
 .pred-item .label { font-size: 10px; color: #555; text-transform: uppercase; }
@@ -139,12 +152,6 @@ def _load(filename, default):
 def _load_text(filename):
     p = BASE / filename
     return p.read_text() if p.exists() else ""
-
-def _stats(results):
-    done = [r for r in results if r.get("correct") is not None]
-    w = sum(1 for r in done if r.get("correct"))
-    t = len(done)
-    return w, t - w, f"{w/t*100:.0f}%" if t else "—"
 
 _STAGE_ORDER = ["Group Stage", "Round Of 32", "Round Of 16", "Quarterfinals", "Semifinals", "Final"]
 
@@ -217,40 +224,189 @@ def _stage_indicator(schedule: list, results: list) -> str:
     return f'<div style="display:flex;align-items:stretch;gap:0;margin-bottom:14px;flex-wrap:wrap;gap:4px;">{pills}</div>'
 
 
+def _dedupe_results(results: list) -> list:
+    """Keep the best entry per fixture — prefer reflected over unreflected."""
+    latest: dict[tuple, dict] = {}
+    for r in results:
+        key = (r.get("home"), r.get("away"))
+        prev = latest.get(key)
+        if prev is None:
+            latest[key] = r
+        elif r.get("reflected") and not prev.get("reflected"):
+            latest[key] = r
+        elif prev.get("reflected") and not r.get("reflected"):
+            continue
+        else:
+            latest[key] = r
+    return list(latest.values())
+
+
+def _kickoff_dt(r_or_fixture) -> datetime | None:
+    k = r_or_fixture.get("kickoff") or r_or_fixture.get("kickoff_utc") or ""
+    try:
+        return datetime.fromisoformat(k.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
 def _upcoming(schedule, results):
     now = datetime.now(timezone.utc)
     predicted = {(r["home"], r["away"]) for r in results}
     out = []
     for f in schedule:
-        k = f.get("kickoff_utc", "")
-        try:
-            dt = datetime.fromisoformat(k.replace("Z", "+00:00"))
-        except Exception:
+        dt = _kickoff_dt(f)
+        if dt is None:
             continue
         if dt > now and (f["home"], f["away"]) not in predicted:
             out.append((dt, f))
     sorted_all = [f for _, f in sorted(out, key=lambda x: x[0])]
     return sorted_all[:8], len(sorted_all)
 
-def _badge(r):
-    if r.get("correct") is True:
-        return '<span class="badge correct">✓ CORRECT</span>'
-    if r.get("correct") is False:
-        return '<span class="badge incorrect">✗ INCORRECT</span>'
-    # Determine if match is in the past
-    kickoff_str = r.get("kickoff", "")
-    try:
-        from datetime import timedelta
-        kdt = datetime.fromisoformat(kickoff_str.replace("Z", "+00:00"))
-        now = datetime.now(timezone.utc)
+
+def _match_state(r: dict) -> dict:
+    """Classify a predicted match: reflected, or awaiting reflection (with sub-status)."""
+    if r.get("reflected"):
+        if r.get("correct") is True:
+            badge = '<span class="badge reflected-correct">✓ REFLECTED</span>'
+        else:
+            badge = '<span class="badge reflected-incorrect">✗ REFLECTED</span>'
+        return {
+            "bucket": "reflected",
+            "sublabel": "Final result scored · strategy updated",
+            "badge": badge,
+        }
+
+    kdt = _kickoff_dt(r)
+    now = datetime.now(timezone.utc)
+    if kdt is not None:
         secs_since = (now - kdt).total_seconds()
-        if secs_since > 7200:  # more than 2h after kickoff = finished
-            return '<span class="badge" style="background:#1a1a1a;color:#666;border:1px solid #333;">AWAITING REFLECT</span>'
-        if secs_since > 0:  # kicked off, less than 2h = live
-            return '<span class="badge" style="background:#1a2a1a;color:#66bb6a;border:1px solid #66bb6a;">● LIVE</span>'
-    except Exception:
-        pass
-    return '<span class="badge pending">UPCOMING</span>'
+        if secs_since > 7200:
+            return {
+                "bucket": "awaiting_reflection",
+                "sublabel": "Match finished · reflection pending (~2.5h after kickoff)",
+                "badge": '<span class="badge awaiting-reflect">AWAITING REFLECTION</span>',
+            }
+        if secs_since > 0:
+            return {
+                "bucket": "awaiting_reflection",
+                "sublabel": "Match in progress · reflection after final whistle",
+                "badge": '<span class="badge live">● LIVE</span>',
+            }
+        rel, _ = _time_rel(r.get("kickoff", ""))
+        return {
+            "bucket": "awaiting_reflection",
+            "sublabel": f"Pick locked in · kicks off in {rel}",
+            "badge": '<span class="badge predicted">PREDICTED</span>',
+        }
+
+    return {
+        "bucket": "awaiting_reflection",
+        "sublabel": "Pick locked in · awaiting kickoff",
+        "badge": '<span class="badge predicted">PREDICTED</span>',
+    }
+
+
+def _badge(r):
+    return _match_state(r)["badge"]
+
+
+def _awaiting_reflect_sort_key(r: dict) -> tuple:
+    kdt = _kickoff_dt(r)
+    now = datetime.now(timezone.utc)
+    if kdt is None:
+        return (9, 0)
+    secs_since = (now - kdt).total_seconds()
+    if secs_since > 7200:
+        priority = 0
+    elif secs_since > 0:
+        priority = 1
+    else:
+        priority = 2
+    return (priority, -kdt.timestamp())
+
+
+def _render_match_card(r: dict) -> str:
+    pred = r.get("prediction", {})
+    res = r.get("result")
+    used = r.get("services_used", [])
+    planned = r.get("services_planned", [])
+    state = _match_state(r)
+
+    x402_html = ""
+    if used:
+        rows = "".join(
+            f'<tr><td class="url">{_esc(s["source"])}</td><td class="cost">${s["cost"]:.4f}</td>'
+            f'<td>{_esc(s.get("reason", ""))}</td></tr>'
+            for s in used
+        )
+        x402_html = f'<div class="x402-label">x402 data purchased</div><table class="x402"><tr><th>Endpoint</th><th>Cost</th><th>Reason</th></tr>{rows}</table>'
+    elif planned:
+        x402_html = f'<div class="no-data">{len(planned)} endpoint(s) considered, none purchased.</div>'
+    else:
+        x402_html = '<div class="no-data">No x402 data for this match.</div>'
+
+    result_html = ""
+    if res and r.get("reflected"):
+        cls = "correct" if r.get("correct") else "incorrect"
+        eval_snippet = _esc((r.get("evaluation") or "")[:180])
+        result_html = f'''<div class="result-bar {cls}">
+          Result: <span class="result-score">{_team(r['home'])} {res['home_score']}–{res['away_score']} {_team(r['away'])}</span>
+          {f'<div class="eval-text">{eval_snippet}{"…" if len(r.get("evaluation", "")) > 180 else ""}</div>' if eval_snippet else ""}
+        </div>'''
+    elif res and not r.get("reflected"):
+        result_html = f'''<div class="result-bar" style="background:#1a1810;border-left:3px solid #f9a825;">
+          Provisional score: <span class="result-score">{_team(r['home'])} {res['home_score']}–{res['away_score']} {_team(r['away'])}</span>
+          <div class="eval-text">Official reflection not run yet — win/loss not scored.</div>
+        </div>'''
+
+    rel, rel_color = _time_rel(r.get("kickoff", ""))
+    kickoff_note = f'<span style="color:{rel_color}">{rel}</span>' if rel else ""
+
+    return f"""<div class="match-card">
+      <details>
+      <summary style="list-style:none;cursor:pointer;">
+      <div class="match-header">
+        <div>
+          <div class="match-title">{_team(r['home'])} vs {_team(r['away'])}</div>
+          <div class="match-time">{kickoff_note}{' &nbsp;·&nbsp; ' if kickoff_note else ''}Pick: <b>{_team(_pick_display(pred.get('pick', '?'), r['home'], r['away']))}</b> &nbsp;·&nbsp; conf {pred.get("confidence", "?")}/10</div>
+          <div class="status-line">{_esc(state['sublabel'])}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">{state['badge']}<span style="color:#444;font-size:16px;">⌄</span></div>
+      </div>
+      </summary>
+      <div class="match-body">
+        <div class="pred-row">
+          <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick', '?'), r['home'], r['away']))}</div></div>
+          <div class="pred-item"><div class="label">Confidence</div><div class="value"><span class="tooltip-wrap">{pred.get("confidence", "?")}/10<span class="tooltip-box">{_esc(pred.get("confidence_reason", "Hover reason not available for this prediction."))}</span></span></div></div>
+          <div class="pred-item"><div class="label">Research cost</div><div class="value" style="color:#f9a825;">${r.get("research_cost", 0):.4f}</div></div>
+        </div>
+        <div class="reasoning">"{_esc(pred.get("reasoning", ""))}"</div>
+        {x402_html}
+        {result_html}
+        <a href="/match/{_esc(r['home'])}_{_esc(r['away'])}" class="detail-link">Full reasoning & reflection →</a>
+      </div>
+      </details>
+    </div>"""
+
+
+def _pipeline_html(awaiting_pred: int, awaiting_reflect: int, reflected: int, wins: int, losses: int) -> str:
+    record = f"{wins}W–{losses}L" if reflected else "—"
+    return f"""<div class="pipeline">
+  <div class="pipeline-step{' active' if awaiting_pred else ''}">
+    <span class="count">{awaiting_pred}</span>
+    <span class="label">Awaiting prediction</span>
+  </div>
+  <div class="pipeline-arrow">→</div>
+  <div class="pipeline-step{' active' if awaiting_reflect else ''}">
+    <span class="count">{awaiting_reflect}</span>
+    <span class="label">Predicted · awaiting reflection</span>
+  </div>
+  <div class="pipeline-arrow">→</div>
+  <div class="pipeline-step{' active' if reflected else ''}">
+    <span class="count">{reflected}</span>
+    <span class="label">Reflected ({record})</span>
+  </div>
+</div>"""
 
 def _time_rel(kickoff_str: str) -> tuple[str, str]:
     """Return (label, color) for a kickoff time relative to now."""
@@ -290,19 +446,10 @@ def _md(text: str, extra_class: str = "") -> str:
     return f'<div class="{cls}">{_render_md(text)}</div>'
 
 def _page(body, title="⚽ World Cup Prediction Agent"):
-    results = _load("results.json", [])
-    w, l, pct = _stats(results)
-    reflected = w + l
-    pending = len(results) - reflected
-    record_tip = f"Win/loss counted only after post-match reflection. {reflected} of {len(results)} prediction{'s' if len(results) != 1 else ''} reflected; {pending} awaiting result."
     nav = '<div class="nav"><a href="/">Dashboard</a> · <a href="/learnings">Learnings</a> · <a href="/strategy">Strategy</a></div>'
-    header = f"""
+    header = """
 <header>
   <h1>⚽ World Cup Prediction Agent</h1>
-  <div class="meta">
-    <div>Record: <span class="tooltip-wrap">{w}W–{l}L ({pct})<span class="tooltip-box">{_esc(record_tip)}</span></span></div>
-    <div>Matches predicted: <span>{len(results)}</span></div>
-  </div>
 </header>"""
     return HTMLResponse(f"<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>{title}</title>{CSS}</head><body><div class='container'>{header}{nav}{body}</div></body></html>")
 
@@ -310,82 +457,74 @@ def _page(body, title="⚽ World Cup Prediction Agent"):
 @app.get("/", response_class=HTMLResponse)
 async def dashboard():
     results_raw = _load("results.json", [])
-    results = list(reversed(results_raw))
+    all_results = _dedupe_results(results_raw)
     schedule = _load("schedule.json", [])
     strategy = _load_text("strategy.md")
     upcoming, upcoming_total = _upcoming(schedule, results_raw)
 
-    html = ""
+    reflected = [r for r in all_results if r.get("reflected")]
+    awaiting_reflect = sorted(
+        [r for r in all_results if not r.get("reflected")],
+        key=_awaiting_reflect_sort_key,
+    )
+    wins = sum(1 for r in reflected if r.get("correct"))
+    losses = len(reflected) - wins
 
-    # Upcoming
-    all_schedule = schedule
+    html = _pipeline_html(upcoming_total, len(awaiting_reflect), len(reflected), wins, losses)
+
+    # ── 1. Awaiting prediction ──────────────────────────────────────────────
+    stage_bar = _stage_indicator(schedule, results_raw) if schedule else ""
     if upcoming:
-        stage_bar = _stage_indicator(all_schedule, results_raw)
         items = ""
         for f in upcoming:
+            rel, rel_color = _time_rel(f["kickoff_utc"])
             items += f"""<div class="upcoming-item">
-              <div><b>{_team(f['home'])} vs {_team(f['away'])}</b> <span style="color:#555;font-size:11px;margin-left:8px;">{_esc(f.get('stage',''))}</span></div>
-              <div style="color:{_time_rel(f['kickoff_utc'])[1]};font-size:12px;">{_time_rel(f['kickoff_utc'])[0]} &nbsp;<span style="color:#444;">({f['kickoff_utc'][:16].replace('T',' ')} UTC)</span></div>
+              <div>
+                <div><b>{_team(f['home'])} vs {_team(f['away'])}</b> <span style="color:#555;font-size:11px;margin-left:8px;">{_esc(f.get('stage', ''))}</span></div>
+                <div class="status-line">Agent runs ~30 min before kickoff</div>
+              </div>
+              <div style="text-align:right;">
+                <span class="badge awaiting-prediction">AWAITING PREDICTION</span>
+                <div style="color:{rel_color};font-size:12px;margin-top:4px;">{rel} &nbsp;<span style="color:#444;">({f['kickoff_utc'][:16].replace('T', ' ')} UTC)</span></div>
+              </div>
             </div>"""
         footer = ""
         if upcoming_total > len(upcoming):
-            footer = f'<div style="font-size:11px;color:#444;margin-top:8px;text-align:right;">Showing next {len(upcoming)} of {upcoming_total} remaining matches</div>'
-        html += f'<div class="section"><h2>Upcoming</h2>{stage_bar}{items}{footer}</div>'
-
-    # Past matches
-    if results:
-        cards = ""
-        for r in results:
-            pred = r.get("prediction", {})
-            res = r.get("result")
-            used = r.get("services_used", [])
-            planned = r.get("services_planned", [])
-
-            x402_html = ""
-            if used:
-                rows = "".join(f'<tr><td class="url">{_esc(s["source"])}</td><td class="cost">${s["cost"]:.4f}</td><td>{_esc(s.get("reason",""))}</td></tr>' for s in used)
-                x402_html = f'<div class="x402-label">x402 data purchased</div><table class="x402"><tr><th>Endpoint</th><th>Cost</th><th>Reason</th></tr>{rows}</table>'
-            elif planned:
-                x402_html = f'<div class="no-data">{len(planned)} endpoint(s) considered, none purchased.</div>'
-            else:
-                x402_html = '<div class="no-data">No x402 data for this match.</div>'
-
-            result_html = ""
-            if res:
-                cls = "correct" if r.get("correct") else "incorrect"
-                eval_snippet = _esc((r.get("evaluation") or "")[:180])
-                result_html = f'''<div class="result-bar {cls}">
-                  Result: <span class="result-score">{_team(r['home'])} {res['home_score']}–{res['away_score']} {_team(r['away'])}</span>
-                  {f'<div class="eval-text">{eval_snippet}{"…" if len(r.get("evaluation",""))>180 else ""}</div>' if eval_snippet else ""}
-                </div>'''
-
-            cards += f"""<div class="match-card">
-              <details>
-              <summary style="list-style:none;cursor:pointer;">
-              <div class="match-header">
-                <div>
-                  <div class="match-title">{_team(r['home'])} vs {_team(r['away'])}</div>
-                  <div class="match-time">{(lambda t,c: f'<span style="color:{c}">{t}</span> &nbsp;·&nbsp; ')(*_time_rel(r.get("kickoff","")))}Pick: <b>{_team(_pick_display(pred.get('pick','?'), r['home'], r['away']))}</b> &nbsp;·&nbsp; conf {pred.get("confidence","?")}/10</div>
-                </div>
-                <div style="display:flex;align-items:center;gap:8px;">{_badge(r)}<span style="color:#444;font-size:16px;">⌄</span></div>
-              </div>
-              </summary>
-              <div class="match-body">
-                <div class="pred-row">
-                  <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick','?'), r['home'], r['away']))}</div></div>
-                  <div class="pred-item"><div class="label">Confidence</div><div class="value"><span class="tooltip-wrap">{pred.get("confidence","?")}/10<span class="tooltip-box">{_esc(pred.get("confidence_reason","Hover reason not available for this prediction."))}</span></span></div></div>
-                  <div class="pred-item"><div class="label">Research cost</div><div class="value" style="color:#f9a825;">${r.get("research_cost",0):.4f}</div></div>
-                </div>
-                <div class="reasoning">"{_esc(pred.get("reasoning",""))}"</div>
-                {x402_html}
-                {result_html}
-                <a href="/match/{_esc(r['home'])}_{_esc(r['away'])}" class="detail-link">Full reasoning & reflection →</a>
-              </div>
-              </details>
-            </div>"""
-        html += f'<div class="section"><h2>Predictions</h2>{cards}</div>'
+            footer = f'<div style="font-size:11px;color:#444;margin-top:8px;text-align:right;">Showing next {len(upcoming)} of {upcoming_total} fixtures without a prediction</div>'
+        html += f"""<div class="section">
+  <h2>Awaiting Prediction</h2>
+  <div class="section-desc">Fixtures on the schedule with no pick yet. <code>predict.py</code> runs automatically ~30 minutes before kickoff.</div>
+  {stage_bar}{items}{footer}
+</div>"""
     else:
-        html += '<div style="color:#444;font-style:italic;padding:32px 0;">No predictions yet.</div>'
+        html += """<div class="section">
+  <h2>Awaiting Prediction</h2>
+  <div class="section-desc">Fixtures on the schedule with no pick yet. <code>predict.py</code> runs automatically ~30 minutes before kickoff.</div>
+  <div class="empty-section">No unpredicted fixtures coming up — every scheduled match has a pick, or the group stage is complete.</div>
+</div>"""
+
+    # ── 2. Predicted — awaiting reflection ────────────────────────────────
+    html += '<div class="section"><h2>Predicted — Awaiting Reflection</h2>'
+    html += '<div class="section-desc">Pick is locked in. After the final whistle, <code>reflect.py</code> fetches the result, scores the prediction, and updates strategy (~2.5h after kickoff).</div>'
+    if awaiting_reflect:
+        cards = "".join(_render_match_card(r) for r in awaiting_reflect)
+        html += cards + "</div>"
+    else:
+        html += '<div class="empty-section">Nothing here — all predicted matches have been reflected.</div></div>'
+
+    # ── 3. Reflected ────────────────────────────────────────────────────────
+    html += '<div class="section"><h2>Reflected</h2>'
+    html += '<div class="section-desc">Match complete. Prediction scored against the final result and learnings applied to strategy.</div>'
+    if reflected:
+        reflected_sorted = sorted(
+            reflected,
+            key=lambda r: r.get("reflected_at") or "",
+            reverse=True,
+        )
+        cards = "".join(_render_match_card(r) for r in reflected_sorted)
+        html += cards + "</div>"
+    else:
+        html += '<div class="empty-section">No reflections yet — they appear here after the first match finishes and <code>reflect.py</code> runs.</div></div>'
 
     # Strategy snippet
     if strategy:
@@ -401,7 +540,11 @@ async def match_detail(match_key: str):
     home, _, away = match_key.partition("_")
     home, away = home.upper(), away.upper()
     results = _load("results.json", [])
-    entry = next((r for r in reversed(results) if r.get("home") == home and r.get("away") == away), None)
+    entry = next(
+        (r for r in reversed(_dedupe_results(results))
+        if r.get("home") == home and r.get("away") == away),
+        None,
+    )
     if not entry:
         raise HTTPException(status_code=404, detail=f"No prediction found for {home} vs {away}")
 
@@ -410,10 +553,18 @@ async def match_detail(match_key: str):
     used = entry.get("services_used", [])
     planned = entry.get("services_planned", [])
 
+    state = _match_state(entry)
     result_html = ""
-    if res:
+    if res and entry.get("reflected"):
         cls = "correct" if entry.get("correct") else "incorrect"
-        result_html = f'<div class="result-bar {cls}" style="margin-bottom:16px;"><span class="result-score">{_team(home)} {res['home_score']}–{res['away_score']} {_team(away)}</span> &nbsp;{_badge(entry)}</div>'
+        result_html = f'<div class="result-bar {cls}" style="margin-bottom:16px;"><span class="result-score">{_team(home)} {res["home_score"]}–{res["away_score"]} {_team(away)}</span> &nbsp;{state["badge"]}</div>'
+    elif res:
+        result_html = f'''<div class="result-bar" style="margin-bottom:16px;background:#1a1810;border-left:3px solid #f9a825;">
+          <span class="result-score">{_team(home)} {res["home_score"]}–{res["away_score"]} {_team(away)}</span> &nbsp;{state["badge"]}
+          <div class="eval-text">Provisional score — win/loss not scored until reflection runs.</div>
+        </div>'''
+    else:
+        result_html = f'<div style="margin-bottom:16px;">{state["badge"]}<div class="status-line" style="margin-top:6px;">{_esc(state["sublabel"])}</div></div>'
 
     used_urls = {s["source"] for s in used}
 
@@ -519,8 +670,56 @@ async def strategy_page():
     return _page(body, "Strategy — World Cup Predictions")
 
 
-def _strategy_history() -> list[dict]:
-    """Return list of {match, date, sha, content, prev_content} from git log."""
+def _strategy_history_from_results(results: list) -> list[dict]:
+    """Build strategy evolution from reflected entries in results.json."""
+    by_match: dict[str, dict] = {}
+    for r in results:
+        if not r.get("reflected"):
+            continue
+        match = r.get("match") or ""
+        if not match:
+            continue
+        prev = by_match.get(match)
+        if prev is None or (r.get("reflected_at") or "") >= (prev.get("reflected_at") or ""):
+            by_match[match] = r
+
+    entries = sorted(by_match.values(), key=lambda r: r.get("reflected_at") or "")
+    if not entries:
+        return []
+
+    current = _load_text("strategy.md")
+    history = []
+    for i, r in enumerate(entries):
+        match = r["match"]
+        try:
+            dt = datetime.fromisoformat((r.get("reflected_at") or "").replace("Z", "+00:00"))
+        except Exception:
+            dt = None
+
+        prev_content = r.get("strategy_snapshot") or ""
+        if not prev_content.strip() and i > 0:
+            prev_content = history[i - 1]["content"]
+
+        content = r.get("strategy_after") or ""
+        if not content.strip():
+            if i == len(entries) - 1:
+                content = current
+            else:
+                nxt = entries[i + 1].get("strategy_snapshot") or entries[i + 1].get("strategy_after") or ""
+                content = nxt
+
+        history.append({
+            "match": match,
+            "date": dt,
+            "subject": f"reflect: {match}",
+            "content": content,
+            "prev_content": prev_content,
+        })
+    return history
+
+
+def _strategy_history_from_git() -> list[dict]:
+    """Return strategy evolution from git log (local dev fallback)."""
     try:
         log = subprocess.run(
             ["git", "log", "--pretty=format:%H|%ai|%s", "--", "strategy.md"],
@@ -536,7 +735,6 @@ def _strategy_history() -> list[dict]:
         if len(parts) != 3:
             continue
         sha, date_str, subject = parts
-        # subject looks like "reflect: NED vs JPN" or "init: ..."
         match_name = subject.replace("reflect: ", "").replace("init: ", "").strip()
         try:
             dt = datetime.fromisoformat(date_str.strip())
@@ -551,10 +749,8 @@ def _strategy_history() -> list[dict]:
             content = ""
         entries.append({"match": match_name, "date": dt, "sha": sha, "subject": subject, "content": content})
 
-    # Chronological order (oldest first)
     entries.reverse()
 
-    # Deduplicate reflects: for each match name keep only the latest (highest index = most recent)
     latest_reflect_idx: dict[str, int] = {}
     for i, e in enumerate(entries):
         if e["subject"].startswith("reflect:"):
@@ -567,6 +763,27 @@ def _strategy_history() -> list[dict]:
     for i, e in enumerate(entries):
         e["prev_content"] = entries[i - 1]["content"] if i > 0 else ""
     return entries
+
+
+def _strategy_history() -> list[dict]:
+    """Strategy evolution for the Learnings page — results.json first, git as fallback."""
+    results = _load("results.json", [])
+    history = _strategy_history_from_results(results)
+    if history:
+        git_by_match = {
+            e["match"]: e for e in _strategy_history_from_git()
+            if e["subject"].startswith("reflect:")
+        }
+        for e in history:
+            g = git_by_match.get(e["match"])
+            if not g:
+                continue
+            if not (e.get("content") or "").strip():
+                e["content"] = g["content"]
+            if not (e.get("prev_content") or "").strip():
+                e["prev_content"] = g["prev_content"]
+        return history
+    return _strategy_history_from_git()
 
 
 def _text_diff_html(old: str, new: str) -> str:
@@ -613,15 +830,10 @@ async def learnings_page():
 
     body = DIFF_CSS
 
-    if not history:
-        body += '<div style="color:#444;font-style:italic;padding:32px 0;">No strategy history yet — predictions are still being reflected.</div>'
-        return _page(body, "Learnings — World Cup Predictions")
-
-    # Show newest first, skip the init commit if it has no match in results
     reflect_entries = [e for e in reversed(history) if e["subject"].startswith("reflect:")]
 
     if not reflect_entries:
-        body += '<div style="color:#444;font-style:italic;padding:32px 0;">No reflections recorded yet.</div>'
+        body += '<div style="color:#444;font-style:italic;padding:32px 0;">No reflections recorded yet — learnings appear after each match is reflected.</div>'
         return _page(body, "Learnings — World Cup Predictions")
 
     cards = ""
