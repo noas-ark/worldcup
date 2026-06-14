@@ -17,6 +17,8 @@ import gemini
 import requests
 from dotenv import load_dotenv
 
+import discord_notify
+
 # ── Setup ──────────────────────────────────────────────────────────────────
 
 load_dotenv()
@@ -208,17 +210,28 @@ log("Updated strategy.md")
 
 # ── Step 5: Update results.json and push to GitHub ─────────────────────────
 
-results[entry_idx].update({
-    "result": result_data,
-    "correct": correct,
-    "evaluation": evaluation,
-    "reflected": True,
-    "reflected_at": datetime.now(timezone.utc).isoformat(),
-})
-
-tmp = results_path.with_suffix(".tmp")
-tmp.write_text(json.dumps(results, indent=2))
-tmp.replace(results_path)
+import fcntl
+lock_path = WORK_DIR / "results.lock"
+with open(lock_path, "w") as lock_file:
+    fcntl.flock(lock_file, fcntl.LOCK_EX)
+    # Re-read inside lock to pick up concurrent writes
+    results = json.loads(results_path.read_text()) if results_path.exists() else []
+    # Re-find our entry after re-read
+    for i in range(len(results) - 1, -1, -1):
+        if results[i].get("home") == HOME and results[i].get("away") == AWAY and not results[i].get("reflected"):
+            entry_idx = i
+            break
+    results[entry_idx].update({
+        "result": result_data,
+        "correct": correct,
+        "evaluation": evaluation,
+        "reflected": True,
+        "reflected_at": datetime.now(timezone.utc).isoformat(),
+    })
+    tmp = results_path.with_suffix(f".tmp.{HOME}_{AWAY}")
+    tmp.write_text(json.dumps(results, indent=2))
+    tmp.replace(results_path)
+    fcntl.flock(lock_file, fcntl.LOCK_UN)
 log("Updated results.json")
 
 try:
@@ -236,6 +249,14 @@ try:
     log("Pushed to HF Space — dashboard updating")
 except Exception as e:
     err("Git push failed (files saved locally): %s", e)
+
+discord_notify.notify_outcome(
+    match=MATCH, home=HOME, away=AWAY,
+    home_score=result_data["home_score"], away_score=result_data["away_score"],
+    pick=pick, correct=correct,
+    research_cost=entry.get("research_cost", 0),
+    evaluation=evaluation, new_strategy_snippet=new_strategy,
+)
 
 outcome_str = "✓ CORRECT" if correct else "✗ INCORRECT"
 print(f"\n{'='*50}")
