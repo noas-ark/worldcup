@@ -8,6 +8,7 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
+import markdown
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 
@@ -106,7 +107,15 @@ table.x402 td.cost { color: #f9a825; white-space: nowrap; }
 .upcoming-item { background: #161616; border: 1px solid #2a2a2a; border-radius: 4px; padding: 8px 12px; display: flex; justify-content: space-between; margin-bottom: 6px; }
 .strategy-box { background: #111; border: 1px solid #2a2a2a; border-radius: 6px; padding: 16px; }
 pre { white-space: pre-wrap; word-wrap: break-word; color: #bbb; font-size: 13px; }
+.strategy-md { color: #bbb; font-size: 13px; line-height: 1.7; }
+.strategy-md p { margin: 6px 0; }
+.strategy-md h1, .strategy-md h2, .strategy-md h3 { color: #e0e0e0; margin: 12px 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #2a2a2a; padding-bottom: 4px; }
+.strategy-md strong { color: #fff; }
+.strategy-md ul, .strategy-md ol { padding-left: 20px; margin: 4px 0; }
+.strategy-md li { margin: 2px 0; }
+.strategy-md a { color: #4dabf7; }
 .full-text { font-size: 12px; color: #aaa; white-space: pre-wrap; background: #0a0a0a; border: 1px solid #1e1e1e; border-radius: 4px; padding: 12px; max-height: 400px; overflow-y: auto; }
+.full-text.strategy-md { white-space: normal; }
 .nav { margin-bottom: 20px; font-size: 13px; }
 details summary::-webkit-details-marker { display: none; }
 details summary { outline: none; }
@@ -137,6 +146,77 @@ def _stats(results):
     t = len(done)
     return w, t - w, f"{w/t*100:.0f}%" if t else "—"
 
+_STAGE_ORDER = ["Group Stage", "Round Of 32", "Round Of 16", "Quarterfinals", "Semifinals", "Final"]
+
+def _stage_indicator(schedule: list, results: list) -> str:
+    """Return HTML for a tournament stage progress indicator."""
+    now = datetime.now(timezone.utc)
+    predicted = {(r["home"], r["away"]) for r in results}
+
+    # Count past/future per stage; find current stage (earliest with future unpredicted games)
+    stage_stats: dict[str, dict] = {}
+    for f in schedule:
+        k = f.get("kickoff_utc", "")
+        try:
+            dt = datetime.fromisoformat(k.replace("Z", "+00:00"))
+        except Exception:
+            continue
+        st = f.get("stage", "")
+        if not st:
+            continue
+        s = stage_stats.setdefault(st, {"total": 0, "past": 0, "future_unpredicted": 0})
+        s["total"] += 1
+        if dt <= now:
+            s["past"] += 1
+        elif (f["home"], f["away"]) not in predicted:
+            s["future_unpredicted"] += 1
+
+    # Determine which stages exist in this schedule (in order)
+    present_stages = [s for s in _STAGE_ORDER if s in stage_stats]
+    if not present_stages:
+        return ""
+
+    # Current stage = first one that still has future unpredicted matches
+    current_stage = next(
+        (s for s in present_stages if stage_stats[s]["future_unpredicted"] > 0),
+        present_stages[-1],
+    )
+
+    # Build pipeline HTML
+    pills = ""
+    for i, st in enumerate(present_stages):
+        stats = stage_stats[st]
+        is_current = st == current_stage
+        is_done = present_stages.index(st) < present_stages.index(current_stage)
+
+        if is_current:
+            played = stats["past"]
+            total = stats["total"]
+            pct = int(played / total * 100) if total else 0
+            bg = "#1a2a3a"
+            border = "#4dabf7"
+            color = "#4dabf7"
+            label = f'<span style="font-weight:bold;color:#4dabf7;">{st}</span> <span style="color:#555;font-size:10px;">{played}/{total} played</span>'
+            progress = f'<div style="height:2px;background:#0a1a2a;border-radius:1px;margin-top:4px;"><div style="width:{pct}%;height:2px;background:#4dabf7;border-radius:1px;"></div></div>'
+        elif is_done:
+            bg = "#0d1a0d"
+            border = "#2a3a2a"
+            color = "#4caf50"
+            label = f'<span style="color:#4caf50;">✓ {st}</span>'
+            progress = ""
+        else:
+            bg = "#111"
+            border = "#222"
+            color = "#444"
+            label = f'<span style="color:#444;">{st}</span>'
+            progress = ""
+
+        connector = '<div style="color:#333;align-self:center;padding:0 4px;font-size:12px;">›</div>' if i < len(present_stages) - 1 else ""
+        pills += f'<div style="background:{bg};border:1px solid {border};border-radius:4px;padding:6px 10px;min-width:100px;flex:1;"><div style="font-size:11px;">{label}</div>{progress}</div>{connector}'
+
+    return f'<div style="display:flex;align-items:stretch;gap:0;margin-bottom:14px;flex-wrap:wrap;gap:4px;">{pills}</div>'
+
+
 def _upcoming(schedule, results):
     now = datetime.now(timezone.utc)
     predicted = {(r["home"], r["away"]) for r in results}
@@ -149,7 +229,8 @@ def _upcoming(schedule, results):
             continue
         if dt > now and (f["home"], f["away"]) not in predicted:
             out.append((dt, f))
-    return [f for _, f in sorted(out, key=lambda x: x[0])[:8]]
+    sorted_all = [f for _, f in sorted(out, key=lambda x: x[0])]
+    return sorted_all[:8], len(sorted_all)
 
 def _badge(r):
     if r.get("correct") is True:
@@ -199,15 +280,27 @@ def _time_rel(kickoff_str: str) -> tuple[str, str]:
 def _esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
+def _render_md(text: str) -> str:
+    if not text or not text.strip():
+        return ""
+    return markdown.markdown(text, extensions=["sane_lists", "nl2br"])
+
+def _md(text: str, extra_class: str = "") -> str:
+    cls = f"strategy-md {extra_class}".strip()
+    return f'<div class="{cls}">{_render_md(text)}</div>'
+
 def _page(body, title="⚽ World Cup Prediction Agent"):
     results = _load("results.json", [])
     w, l, pct = _stats(results)
+    reflected = w + l
+    pending = len(results) - reflected
+    record_tip = f"Win/loss counted only after post-match reflection. {reflected} of {len(results)} prediction{'s' if len(results) != 1 else ''} reflected; {pending} awaiting result."
     nav = '<div class="nav"><a href="/">Dashboard</a> · <a href="/learnings">Learnings</a> · <a href="/strategy">Strategy</a></div>'
     header = f"""
 <header>
   <h1>⚽ World Cup Prediction Agent</h1>
   <div class="meta">
-    <div>Record: <span>{w}W–{l}L ({pct})</span></div>
+    <div>Record: <span class="tooltip-wrap">{w}W–{l}L ({pct})<span class="tooltip-box">{_esc(record_tip)}</span></span></div>
     <div>Matches predicted: <span>{len(results)}</span></div>
   </div>
 </header>"""
@@ -216,22 +309,28 @@ def _page(body, title="⚽ World Cup Prediction Agent"):
 
 @app.get("/", response_class=HTMLResponse)
 async def dashboard():
-    results = list(reversed(_load("results.json", [])))
+    results_raw = _load("results.json", [])
+    results = list(reversed(results_raw))
     schedule = _load("schedule.json", [])
     strategy = _load_text("strategy.md")
-    upcoming = _upcoming(schedule, _load("results.json", []))
+    upcoming, upcoming_total = _upcoming(schedule, results_raw)
 
     html = ""
 
     # Upcoming
+    all_schedule = schedule
     if upcoming:
+        stage_bar = _stage_indicator(all_schedule, results_raw)
         items = ""
         for f in upcoming:
             items += f"""<div class="upcoming-item">
               <div><b>{_team(f['home'])} vs {_team(f['away'])}</b> <span style="color:#555;font-size:11px;margin-left:8px;">{_esc(f.get('stage',''))}</span></div>
               <div style="color:{_time_rel(f['kickoff_utc'])[1]};font-size:12px;">{_time_rel(f['kickoff_utc'])[0]} &nbsp;<span style="color:#444;">({f['kickoff_utc'][:16].replace('T',' ')} UTC)</span></div>
             </div>"""
-        html += f'<div class="section"><h2>Upcoming</h2>{items}</div>'
+        footer = ""
+        if upcoming_total > len(upcoming):
+            footer = f'<div style="font-size:11px;color:#444;margin-top:8px;text-align:right;">Showing next {len(upcoming)} of {upcoming_total} remaining matches</div>'
+        html += f'<div class="section"><h2>Upcoming</h2>{stage_bar}{items}{footer}</div>'
 
     # Past matches
     if results:
@@ -290,9 +389,9 @@ async def dashboard():
 
     # Strategy snippet
     if strategy:
-        snippet = _esc(strategy[:500])
-        more = ' <a href="/strategy">… read more</a>' if len(strategy) > 500 else ""
-        html += f'<div class="section"><h2>Current Strategy <a href="/strategy" style="font-size:11px;color:#555;font-weight:normal;margin-left:8px;">full history →</a></h2><div class="strategy-box"><pre>{snippet}{more}</pre></div></div>'
+        snippet = _md(strategy[:500])
+        more = '<div style="margin-top:8px;"><a href="/strategy">… read more</a></div>' if len(strategy) > 500 else ""
+        html += f'<div class="section"><h2>Current Strategy <a href="/strategy" style="font-size:11px;color:#555;font-weight:normal;margin-left:8px;">full history →</a></h2><div class="strategy-box">{snippet}{more}</div></div>'
 
     return _page(html)
 
@@ -358,7 +457,7 @@ async def match_detail(match_key: str):
 </div>"""
 
     eval_html = f'<div class="section"><h2>Reflection & Evaluation</h2><div class="full-text">{_esc(entry.get("evaluation","(not yet reflected)"))}</div></div>' if entry.get("evaluation") else ""
-    snapshot_html = f'<div class="section"><h2>Strategy at Prediction Time</h2><div class="full-text">{_esc(entry.get("strategy_snapshot","(empty)"))}</div></div>' if entry.get("strategy_snapshot") is not None else ""
+    snapshot_html = f'<div class="section"><h2>Strategy at Prediction Time</h2><div class="full-text strategy-md">{_render_md(entry.get("strategy_snapshot","")) or "(empty)"}</div></div>' if entry.get("strategy_snapshot") is not None else ""
 
     # Information needs (Stage 1 analyst output)
     needs_html = ""
@@ -405,14 +504,15 @@ async def strategy_page():
     results = _load("results.json", [])
     history = [(r.get("match"), r.get("kickoff","")[:10], r.get("strategy_snapshot","")) for r in results if r.get("strategy_snapshot") is not None]
 
-    current = f'<div class="strategy-box"><pre>{_esc(strategy) if strategy else "(no strategy yet)"}</pre></div>'
+    current = f'<div class="strategy-box">{_md(strategy)}</div>' if strategy else '<div class="strategy-box"><div style="color:#444;font-style:italic;">No strategy yet — will be written after the first match reflection.</div></div>'
 
     hist_html = ""
     if history:
         items = ""
         for match, date, snap in reversed(history):
-            snippet = _esc((snap or "")[:300])
-            items += f'<div style="border-bottom:1px solid #1a1a1a;padding:10px 0;"><div style="font-size:12px;color:#888;margin-bottom:4px;">After {_esc(match)} ({date})</div><div style="font-size:11px;color:#555;">{snippet}{"…" if len(snap or "")>300 else ""}</div></div>'
+            snap_text = (snap or "")[:300]
+            suffix = "…" if len(snap or "") > 300 else ""
+            items += f'<div style="border-bottom:1px solid #1a1a1a;padding:10px 0;"><div style="font-size:12px;color:#888;margin-bottom:4px;">After {_esc(match)} ({date})</div>{_md(snap_text + suffix)}</div>'
         hist_html = f'<div class="section"><h2>Strategy Evolution</h2>{items}</div>'
 
     body = f'<div class="section"><h2>Current Strategy</h2>{current}</div>{hist_html}'
@@ -451,8 +551,19 @@ def _strategy_history() -> list[dict]:
             content = ""
         entries.append({"match": match_name, "date": dt, "sha": sha, "subject": subject, "content": content})
 
-    # Chronological order (oldest first), attach previous content for diff
+    # Chronological order (oldest first)
     entries.reverse()
+
+    # Deduplicate reflects: for each match name keep only the latest (highest index = most recent)
+    latest_reflect_idx: dict[str, int] = {}
+    for i, e in enumerate(entries):
+        if e["subject"].startswith("reflect:"):
+            latest_reflect_idx[e["match"]] = i
+    entries = [
+        e for i, e in enumerate(entries)
+        if not e["subject"].startswith("reflect:") or latest_reflect_idx.get(e["match"]) == i
+    ]
+
     for i, e in enumerate(entries):
         e["prev_content"] = entries[i - 1]["content"] if i > 0 else ""
     return entries
