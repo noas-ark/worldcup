@@ -13,6 +13,55 @@ from fastapi.responses import HTMLResponse
 BASE = Path(__file__).parent
 app = FastAPI(title="World Cup Prediction Agent")
 
+# FIFA 3-letter → ISO 2-letter → flag emoji
+_FIFA_TO_ISO2 = {
+    "NED": "NL", "JPN": "JP", "CIV": "CI", "ECU": "EC", "SWE": "SE",
+    "TUN": "TN", "ESP": "ES", "CPV": "CV", "BEL": "BE", "EGY": "EG",
+    "KSA": "SA", "URU": "UY", "IRN": "IR", "NZL": "NZ", "FRA": "FR",
+    "SEN": "SN", "IRQ": "IQ", "NOR": "NO", "ARG": "AR", "ALG": "DZ",
+    "AUT": "AT", "JOR": "JO", "POR": "PT", "COD": "CD", "ENG": "GB",
+    "GHA": "GH", "PAN": "PA", "UZB": "UZ", "COL": "CO", "CZE": "CZ",
+    "RSA": "ZA", "SUI": "CH", "BIH": "BA", "CAN": "CA", "QAT": "QA",
+    "MEX": "MX", "KOR": "KR", "USA": "US", "AUS": "AU", "SCO": "GB",
+    "MAR": "MA", "BRA": "BR", "HAI": "HT", "TUR": "TR", "PAR": "PY",
+    "GER": "DE", "CUW": "CW", "CRO": "HR", "CRC": "CR", "IRE": "IE",
+    "WLS": "GB", "DEN": "DK", "SRB": "RS", "POL": "PL", "SLO": "SI",
+    "ROM": "RO", "HUN": "HU", "SVK": "SK", "GRE": "GR", "BUL": "BG",
+    "CHL": "CL", "PER": "PE", "BOL": "BO", "VEN": "VE", "HON": "HN",
+    "CUB": "CU", "JAM": "JM", "TRI": "TT", "CMR": "CM", "NGA": "NG",
+    "MLI": "ML", "BFA": "BF", "GUI": "GN", "COG": "CG", "BEN": "BJ",
+    "ZIM": "ZW", "ZAM": "ZM", "MOZ": "MZ", "ANG": "AO", "ETH": "ET",
+    "TAN": "TZ", "UGA": "UG", "RWA": "RW", "CTA": "CF", "GAB": "GA",
+    "IRQ": "IQ", "UAE": "AE", "KUW": "KW", "BHR": "BH", "OMA": "OM",
+    "YEM": "YE", "SYR": "SY", "LIB": "LB", "PAL": "PS", "AFG": "AF",
+    "IND": "IN", "BAN": "BD", "PAK": "PK", "SRI": "LK", "NEP": "NP",
+    "THA": "TH", "VIE": "VN", "IDN": "ID", "MAS": "MY", "PHI": "PH",
+    "CHN": "CN", "TPE": "TW", "HKG": "HK", "MAC": "MO", "MGL": "MN",
+    "RUS": "RU", "UKR": "UA", "BLR": "BY", "KAZ": "KZ", "GEO": "GE",
+    "ARM": "AM", "AZE": "AZ", "MDA": "MD", "LTU": "LT", "LAT": "LV",
+    "EST": "EE", "FIN": "FI", "ISL": "IS", "IRL": "IE", "NIG": "NE",
+}
+
+def _flag(code: str) -> str:
+    """Return flag emoji for a FIFA team code, or empty string."""
+    iso2 = _FIFA_TO_ISO2.get(code.upper(), "")
+    if not iso2 or len(iso2) != 2:
+        return ""
+    return "".join(chr(0x1F1E6 + ord(c) - ord("A")) for c in iso2.upper())
+
+def _pick_display(pick: str, home: str, away: str) -> str:
+    """Translate home/away/draw to team code."""
+    if pick == "home":
+        return home
+    if pick == "away":
+        return away
+    return "DRAW"
+
+def _team(code: str) -> str:
+    """Team code with flag emoji."""
+    flag = _flag(code)
+    return f"{flag} {code}" if flag else code
+
 CSS = """
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -133,7 +182,7 @@ async def dashboard():
         items = ""
         for f in upcoming:
             items += f"""<div class="upcoming-item">
-              <div><b>{_esc(f['home'])} vs {_esc(f['away'])}</b> <span style="color:#555;font-size:11px;margin-left:8px;">{_esc(f.get('stage',''))}</span></div>
+              <div><b>{_team(f['home'])} vs {_team(f['away'])}</b> <span style="color:#555;font-size:11px;margin-left:8px;">{_esc(f.get('stage',''))}</span></div>
               <div style="color:#666;font-size:12px;">{f['kickoff_utc'][:16].replace('T',' ')} UTC</div>
             </div>"""
         html += f'<div class="section"><h2>Upcoming</h2>{items}</div>'
@@ -161,21 +210,21 @@ async def dashboard():
                 cls = "correct" if r.get("correct") else "incorrect"
                 eval_snippet = _esc((r.get("evaluation") or "")[:180])
                 result_html = f'''<div class="result-bar {cls}">
-                  Result: <span class="result-score">{_esc(r["home"])} {res["home_score"]}–{res["away_score"]} {_esc(r["away"])}</span>
+                  Result: <span class="result-score">{_team(r['home'])} {res['home_score']}–{res['away_score']} {_team(r['away'])}</span>
                   {f'<div class="eval-text">{eval_snippet}{"…" if len(r.get("evaluation",""))>180 else ""}</div>' if eval_snippet else ""}
                 </div>'''
 
             cards += f"""<div class="match-card">
               <div class="match-header">
                 <div>
-                  <div class="match-title">{_esc(r["match"])}</div>
+                  <div class="match-title">{_team(r['home'])} vs {_team(r['away'])}</div>
                   <div class="match-time">{r.get("kickoff","")[:16].replace("T"," ")} UTC</div>
                 </div>
                 {_badge(r)}
               </div>
               <div class="match-body">
                 <div class="pred-row">
-                  <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_esc(pred.get("pick","?")).upper()}</div></div>
+                  <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick','?'), r['home'], r['away']))}</div></div>
                   <div class="pred-item"><div class="label">Confidence</div><div class="value">{pred.get("confidence","?")}/10</div></div>
                   <div class="pred-item"><div class="label">Bet</div><div class="value">${pred.get("bet","?")}</div></div>
                   <div class="pred-item"><div class="label">Research cost</div><div class="value" style="color:#f9a825;">${r.get("research_cost",0):.4f}</div></div>
@@ -216,7 +265,7 @@ async def match_detail(match_key: str):
     result_html = ""
     if res:
         cls = "correct" if entry.get("correct") else "incorrect"
-        result_html = f'<div class="result-bar {cls}" style="margin-bottom:16px;"><span class="result-score">{_esc(home)} {res["home_score"]}–{res["away_score"]} {_esc(away)}</span> &nbsp;{_badge(entry)}</div>'
+        result_html = f'<div class="result-bar {cls}" style="margin-bottom:16px;"><span class="result-score">{_team(home)} {res['home_score']}–{res['away_score']} {_team(away)}</span> &nbsp;{_badge(entry)}</div>'
 
     used_urls = {s["source"] for s in used}
 
@@ -286,7 +335,7 @@ async def match_detail(match_key: str):
 {result_html}
 <div class="section"><h2>Prediction</h2>
   <div class="pred-row">
-    <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_esc(pred.get("pick","?")).upper()}</div></div>
+    <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick','?'), home, away))}</div></div>
     <div class="pred-item"><div class="label">Confidence</div><div class="value">{pred.get("confidence","?")}/10</div></div>
     <div class="pred-item"><div class="label">Bet</div><div class="value">${pred.get("bet","?")}</div></div>
   </div>
