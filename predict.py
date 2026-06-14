@@ -25,13 +25,17 @@ import wallet
 
 load_dotenv()
 
-if len(sys.argv) != 3:
-    print("Usage: python predict.py HOME AWAY")
+if len(sys.argv) < 3:
+    print("Usage: python predict.py HOME AWAY [KICKOFF_UTC]")
+    print("Example: python predict.py NED JPN 2026-06-14T20:00Z")
     sys.exit(1)
 
 HOME = sys.argv[1].upper()
 AWAY = sys.argv[2].upper()
 MATCH = f"{HOME} vs {AWAY}"
+
+# Optional kickoff override — used for retroactive predictions
+KICKOFF_OVERRIDE = sys.argv[3] if len(sys.argv) > 3 else None
 WORK_DIR = Path(__file__).parent
 
 os.makedirs(WORK_DIR / "logs", exist_ok=True)
@@ -69,12 +73,20 @@ if balance < 0.10:
     err("Balance $%.4f too low (min $0.10). Top up and retry.", balance)
     sys.exit(1)
 
-# Resolve kickoff from schedule
+# Resolve kickoff from schedule or override
 kickoff = datetime.now(timezone.utc).isoformat()
 for fixture in schedule:
     if fixture.get("home") == HOME and fixture.get("away") == AWAY:
         kickoff = fixture.get("kickoff_utc", kickoff)
         break
+if KICKOFF_OVERRIDE:
+    kickoff = KICKOFF_OVERRIDE
+
+# Detect retroactive run — if kickoff is in the past, research must be blinded
+kickoff_dt = datetime.fromisoformat(kickoff.replace("Z", "+00:00"))
+RETROACTIVE = kickoff_dt < datetime.now(timezone.utc)
+if RETROACTIVE:
+    log("RETROACTIVE MODE — kickoff was %s, constraining research to pre-match sources only", kickoff)
 
 # ── Step 2: Fetch service directory ────────────────────────────────────────
 
@@ -133,8 +145,16 @@ REQUIRED_CATEGORIES = ["FORM", "PLAYERS", "TACTICS", "H2H", "CONTEXT", "MARKET",
 
 # ── Stage 1: Analyst — what do we need to know? (no services shown yet) ───
 
-stage1_prompt = f"""You are a professional football analyst preparing to predict {home_name} vs {away_name}.
+retroactive_note = f"""
+IMPORTANT — RETROACTIVE PREDICTION: This match kicked off at {kickoff} and has already finished.
+You are simulating the analysis as if it were BEFORE the match. Focus on pre-match factors only:
+squad form, historical H2H, tactical tendencies, group context, known injury news from before kickoff.
+Do NOT ask questions about the actual result or post-match events.
+""" if RETROACTIVE else ""
 
+stage1_prompt = f"""You are a professional football analyst preparing to predict {home_name} vs {away_name}.
+Kickoff: {kickoff}
+{retroactive_note}
 Before looking at any data sources, list every specific question you need answered
 to make a high-quality prediction. Be granular and specific, not generic.
 
@@ -180,6 +200,18 @@ research_plan = []
 research_gaps = []  # needs with no matching service
 
 if services:
+    retroactive_research_note = f"""
+CRITICAL — RETROACTIVE BLINDING: This match kicked off at {kickoff}.
+You must ONLY fetch sources that contain PRE-MATCH information:
+  ✓ ALLOWED: Historical stats pages (FBref, Transfermarkt), Wikipedia team pages,
+              pre-tournament squad lists, H2H history pages, pre-match previews
+              published BEFORE {kickoff[:10]}, GDELT queries about team form/history
+  ✗ FORBIDDEN: Anything that might show the score or result — avoid live scoreboards,
+               match reports, post-match analysis, or news searches likely to return results.
+               Do NOT use queries containing words like "result", "score", "winner", "final".
+               For GDELT: add "preview OR form OR squad" to queries to bias toward pre-match content.
+""" if RETROACTIVE else ""
+
     stage2_prompt = f"""You identified these information needs for {home_name} vs {away_name}:
 
 {information_needs}
@@ -189,13 +221,13 @@ Here is the complete x402 service directory with real endpoints:
 
 Your research budget: ${BUDGET:.2f} USDC
 Your strategy so far: {strategy if strategy else "(none yet)"}
-
+{retroactive_research_note}
 Map each information need to the best available service.
 
 KEY RULES:
 1. ONLY use endpoint URLs that appear in the "endpoints" lists above — exact URLs only
 2. For Skim (/api/v2/read or /api/v2/read/js): params must be {{"url": "https://real-page.com"}}
-   - Good Skim targets: BBC Sport, ESPN, FBref, Transfermarkt, FlashScore, WhoScored, Sky Sports
+   - Good Skim targets: FBref team stats, Transfermarkt squad pages, Wikipedia, pre-match previews
    - Use /api/v2/read/js for pages that require JavaScript rendering
 3. For GDELT (/news/recent, /news/sentiment): params must be {{"query": "search terms"}}
 4. Prioritize: PLAYERS/injuries > FORM > TACTICS > H2H > MARKET/odds > CONTEXT > NEWS > VENUE
@@ -335,7 +367,6 @@ Recent match history and outcomes:
 Analyze the match thoroughly, then end your response with EXACTLY these 4 lines:
 PICK: [home|away|draw]
 CONFIDENCE: [1-10]
-BET: $[amount]
 REASONING: [one sentence max]"""
 
 log("Asking Gemini for prediction...")
@@ -355,14 +386,10 @@ pick_raw = _parse(r"PICK:\s*(\w+)", full_reasoning, "home").lower()
 pick = pick_raw if pick_raw in ("home", "away", "draw") else "home"
 confidence_raw = _parse(r"CONFIDENCE:\s*(\d+)", full_reasoning, "5")
 confidence = max(1, min(10, int(confidence_raw)))
-bet_raw = _parse(r"BET:\s*\$?([\d.]+)", full_reasoning, "0.10")
 try:
-    bet = round(float(bet_raw), 2)
-except ValueError:
-    bet = 0.10
 reasoning = _parse(r"REASONING:\s*(.+)", full_reasoning, "Insufficient data for strong prediction")
 
-log("Prediction: PICK=%s CONFIDENCE=%d BET=$%.2f", pick, confidence, bet)
+log("Prediction: PICK=%s CONFIDENCE=%d", pick, confidence)
 log("Reasoning: %s", reasoning)
 
 # ── Step 6: Save state and push to GitHub ─────────────────────────────────
@@ -383,20 +410,27 @@ entry = {
     "prediction": {
         "pick": pick,
         "confidence": confidence,
-        "bet": bet,
         "reasoning": reasoning,
     },
     "full_reasoning": full_reasoning,
+    "retroactive": RETROACTIVE,
     "result": None,
     "correct": None,
     "evaluation": None,
     "reflected": False,
 }
 
-results.append(entry)
-tmp = results_path.with_suffix(".tmp")
-tmp.write_text(json.dumps(results, indent=2))
-tmp.replace(results_path)
+import fcntl
+lock_path = WORK_DIR / "results.lock"
+with open(lock_path, "w") as lock_file:
+    fcntl.flock(lock_file, fcntl.LOCK_EX)
+    # Re-read inside lock to pick up any concurrent writes
+    results = json.loads(results_path.read_text()) if results_path.exists() else []
+    results.append(entry)
+    tmp = results_path.with_suffix(f".tmp.{HOME}_{AWAY}")
+    tmp.write_text(json.dumps(results, indent=2))
+    tmp.replace(results_path)
+    fcntl.flock(lock_file, fcntl.LOCK_UN)
 log("Saved prediction to results.json")
 
 try:

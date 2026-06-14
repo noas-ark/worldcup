@@ -271,7 +271,6 @@ async def dashboard():
                 <div class="pred-row">
                   <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick','?'), r['home'], r['away']))}</div></div>
                   <div class="pred-item"><div class="label">Confidence</div><div class="value">{pred.get("confidence","?")}/10</div></div>
-                  <div class="pred-item"><div class="label">Bet</div><div class="value">${pred.get("bet","?")}</div></div>
                   <div class="pred-item"><div class="label">Research cost</div><div class="value" style="color:#f9a825;">${r.get("research_cost",0):.4f}</div></div>
                 </div>
                 <div class="reasoning">"{_esc(pred.get("reasoning",""))}"</div>
@@ -383,7 +382,6 @@ async def match_detail(match_key: str):
   <div class="pred-row">
     <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick','?'), home, away))}</div></div>
     <div class="pred-item"><div class="label">Confidence</div><div class="value">{pred.get("confidence","?")}/10</div></div>
-    <div class="pred-item"><div class="label">Bet</div><div class="value">${pred.get("bet","?")}</div></div>
   </div>
   <div class="reasoning">"{_esc(pred.get("reasoning",""))}"</div>
 </div>
