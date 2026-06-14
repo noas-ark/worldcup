@@ -907,10 +907,16 @@
     },
     "full_reasoning": "To better evaluate the matchup between Germany and Cura\u00e7ao, we need to inspect Cura\u00e7ao's team profile, including their qualification pathway, head coach, key players, and recent results, while also analyzing Germany's squad under Julian Nagelsmann.\n\nLet's retrieve details on the Cura\u00e7ao national football team.\n\n```json\n{\n  \"url\": \"https://skim402.com/api/v2/read\",\n  \"params\": {\n    \"url\": \"https://en.wikipedia.org/wiki/Cura%C3%A7ao_national_football_team\"\n  }\n}\n```",
     "retroactive": true,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 7,
+      "away_score": 1,
+      "winner": "home"
+    },
+    "correct": true,
+    "evaluation": "Mistake: Set confidence to 5/10 by treating a massive class gulf as a high-risk fixture due to a lack of direct head-to-head data.\n\nDATA:\n- useful: https://skim402.com/api/v2/read \u2014 proved Germany's strong warm-up form under Nagelsmann, justifying a high-confidence home win.\n- useless: https://skim402.com/api/v2/read \u2014 detailed defensive metrics against elite UEFA teams, which was irrelevant against a tier-three CONCACAF opponent.",
+    "reflected": true,
+    "reflected_at": "2026-06-14T23:57:39.202828+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize collective defensive organization over individual attacking talent.\n- AUS vs TUR: Prioritize low-block discipline and transition efficiency over possession metrics.\n- NED vs JPN: Prioritize collective defensive resilience over high-volume chance creation.\n- QAT vs SUI: Prioritize compact defensive organization over midfield reputation.\n- GER vs CUW: Prioritize tier disparities and warm-up form over head-to-head history to assess confidence.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 analyze defensive structure (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 identify wing defense schemes (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 identify low-block transitions (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 evaluate organization against top teams (NED vs JPN)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 evaluate compact setups neutralizing possession (QAT vs SUI)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 evaluate warm-up form and tier gaps (GER vs CUW)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 collective tactics dictate outcomes (BRA vs MAR)\n- skip: Pitch mapping data (https://skim402.com/api/v2/read) \u2014 surface details lack predictive value (AUS vs TUR)\n- skip: Qualification math (https://news-x402.com/news/recent) \u2014 scenario math does not translate to performance (AUS vs TUR)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 fitness does not fix tactical vulnerability (NED vs JPN)\n- skip: Betting market data (https://news-x402.com/news/recent) \u2014 odds reflect sentiment, not tactical reality (NED vs JPN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 historical friendlies do not impact current dynamics (QAT vs SUI)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 elite opponent metrics do not apply to lower-tier teams (GER vs CUW)"
   },
   {
     "match": "NED vs JPN",
