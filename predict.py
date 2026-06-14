@@ -126,9 +126,12 @@ for s in services:
         "endpoints": endpoints,
     })
 
-plan_prompt = f"""You are a World Cup betting research agent planning data purchases before a match.
+home_name = next((f.get("home_name", HOME) for f in schedule if f.get("home") == HOME and f.get("away") == AWAY), HOME)
+away_name = next((f.get("away_name", AWAY) for f in schedule if f.get("home") == HOME and f.get("away") == AWAY), AWAY)
 
-Match: {MATCH} (Home: {HOME}, Away: {AWAY})
+plan_prompt = f"""You are a deep research agent preparing a comprehensive intelligence brief before a World Cup match.
+
+Match: {home_name} ({HOME}) vs {away_name} ({AWAY})
 Kickoff: {kickoff}
 Wallet balance: ${balance:.4f} USDC
 Research budget cap: ${BUDGET:.2f} USDC
@@ -136,23 +139,41 @@ Research budget cap: ${BUDGET:.2f} USDC
 Current strategy:
 {strategy if strategy else "(no strategy yet — first match)"}
 
-Recent match history:
+Recent prediction history:
 {json.dumps(recent_results, indent=2) if recent_results else "(no history yet)"}
 
 AVAILABLE x402 SERVICES WITH REAL ENDPOINTS:
 {json.dumps(service_summary, indent=2) if service_summary else "(no services available)"}
 
-RULES — you MUST follow these exactly:
-1. You may ONLY use exact endpoint URLs listed above in the "endpoints" array of each service
-2. Do NOT invent or modify any URLs
-3. Total cost must not exceed ${BUDGET:.2f} USDC
-4. If none of the endpoints are useful for football prediction, return []
-5. For Skim (/api/v2/read): use it to read a relevant sports news page — set params {{"url": "https://www.bbc.com/sport/football"}}
-6. For GDELT (/news/recent or /news/sentiment): use it to search for news about the teams — set params {{"query": "{HOME} OR {AWAY} football"}}
+YOUR TASK: Plan a comprehensive research campaign. Think like an analyst who needs to know everything about this match. You want to read:
+- FIFA official team/player pages for both teams
+- Recent match results and form for both teams
+- Injury and squad news for both teams
+- Head-to-head history between these teams
+- Tournament group standings and context
+- Expert match previews and analysis
+- Odds and betting markets if available
+
+Use Skim (url: https://skim402.com/api/v2/read) to read ANY useful web page by passing its URL as a param.
+Use GDELT (url: https://news-x402.com/news/recent) for news queries.
+
+GOOD URLs TO SKIM for this match:
+- https://www.fifa.com/fifaplus/en/match-centre (tournament overview)
+- https://fbref.com/en/squads/ (team stats)
+- https://www.bbc.com/sport/football/world-cup (latest WC news)
+- https://www.espn.com/soccer/match/_/gameId/ (match preview)
+- Search Google News for "{home_name} World Cup 2026" or "{away_name} World Cup 2026"
+
+RULES:
+1. ONLY use endpoint URLs that appear in the "endpoints" lists above — exact URLs, no modifications
+2. For Skim params: {{"url": "https://any-real-website.com/page"}} — the target URL can be any website
+3. For GDELT params: {{"query": "search terms"}}
+4. Total cost must not exceed ${BUDGET:.2f} USDC
+5. Be aggressive — use up to 10 calls if they fit in budget and are genuinely useful
 
 Return ONLY a valid JSON array, no markdown, no explanation:
 [
-  {{"url": "exact_url_from_endpoints_list", "params": {{"key": "value"}}, "cost": 0.01, "reason": "one sentence"}}
+  {{"url": "exact_endpoint_url", "params": {{"key": "value"}}, "cost": 0.01, "reason": "what intelligence this gives us"}}
 ]"""
 
 research_plan = []
