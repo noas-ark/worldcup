@@ -1234,170 +1234,6 @@
     "reflected": false
   },
   {
-    "match": "ESP vs CPV",
-    "home": "ESP",
-    "away": "CPV",
-    "kickoff": "2026-06-15T16:00Z",
-    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Late-breaking Team News:* Vital for assessing the fitness of key central playmakers or defenders, but must be purchased sparingly to avoid information overload.\n* **Not Useful / Wasteful:**\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Betting Odds & Macro-Tournament Rules:* Abstract factors like 48-team progression structures provide no actionable value for head-to-head matchups (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate, hyper-specific fitness queries leads to high costs and information overload. Consolidate search queries to 1-2 comprehensive tactical previews to keep research costs under $0.0300 per match.",
-    "information_needs": "FORM\n- How many goals did Cape Verde concede per game in their final CAF qualifiers and pre-tournament warm-ups, and did Spain struggle to break down deep defensive low-blocks in their June friendlies?\n\nPLAYERS\n- Are Spain's key progressive passers (like Pedri) and dynamic wingers (like Lamine Yamal) carrying any lingering knocks or muscle fatigue from the end of the European club season?\n- Does Cape Verde have a fit, high-pace transition outlet striker capable of exploiting the high defensive line Spain's center-backs typically employ?\n\nTACTICS\n- Will Spain deploy a traditional focal-point striker to contest aerial duels inside the box, or will they use a fluid front three to drag Cape Verde's center-backs out of position?\n- Does Cape Verde utilize a low-block 5-4-1 or a mid-block 4-3-3 when facing elite UEFA opposition, and what is their statistical PPDA (Passes Per Defensive Action) in those defensive phases?\n\nH2H\n- What is Spain\u2019s historical record, goal differential, and tactical vulnerability in World Cup group stages against CAF opponents, particularly since their 2022 match against Morocco?\n\nCONTEXT\n- Given that this 2026 World Cup features 48 teams where the best third-place teams qualify, does Cape Verde\u2019s manager view a narrow 1-0 or 2-0 defeat as a \"safe\" goal-difference result, or must they risk playing for a draw?\n\nMARKET\n- What are the current Asian Handicap and Over/Under lines, and does the market implied probability suggest a comfortable multi-goal margin (e.g., Spain -2.25) or a low-scoring, tight affair?\n\nNEWS\n- Are there any reported logistical delays, climate adaptation struggles, or internal federation disputes regarding bonuses within the Cape Verde camp since their arrival at their North American base?\n\nVENUE\n- Which North American host stadium is staging this match, and does the venue feature an artificial turf pitch or a temporary grass surface that could slow down Spain's rapid, horizontal ball circulation?",
-    "research_gaps": [
-      {
-        "need": "Given that this 2026 World Cup features 48 teams where the best third-place teams qualify, does Cape Verde\u2019s manager view a narrow 1-0 or 2-0 defeat as a 'safe' goal-difference result, or must they risk playing for a draw?",
-        "category": "CONTEXT",
-        "ideal_service": "An exclusive sports journalism or coaching interview database featuring translated, direct quotes regarding tournament math and tactical risk tolerance from managers."
-      },
-      {
-        "need": "What are the current Asian Handicap and Over/Under lines, and does the market implied probability suggest a comfortable multi-goal margin (e.g., Spain -2.25) or a low-scoring, tight affair?",
-        "category": "MARKET",
-        "ideal_service": "A real-time sports betting odds API returning Asian Handicap lines, Over/Under parameters, and bookmaker implied probabilities."
-      },
-      {
-        "need": "Which North American host stadium is staging this match, and does the venue feature an artificial turf pitch or a temporary grass surface that could slow down Spain's rapid, horizontal ball circulation?",
-        "category": "VENUE",
-        "ideal_service": "A stadium specifications API with detailed pitch composition logs, turf dampness configurations, and operational history."
-      }
-    ],
-    "services_planned": [
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://www.transfermarkt.com/kap-verde/startseite/verein/4207"
-        },
-        "cost": 0.002,
-        "reason": "Extracts squad listings and player profiles for Cape Verde to identify high-pace transitional forwards currently in the team.",
-        "need": "Does Cape Verde have a fit, high-pace transition outlet striker capable of exploiting the high defensive line Spain's center-backs typically employ?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://fbref.com/en/squads/9fa08b9b/Cape-Verde-Men-Stats"
-        },
-        "cost": 0.002,
-        "reason": "Provides exact recent defensive performance metrics, clean sheets, and goals conceded per game for Cape Verde.",
-        "need": "How many goals did Cape Verde concede per game in their final CAF qualifiers and pre-tournament warm-ups, and did Spain struggle to break down deep defensive low-blocks in their June friendlies?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://www.coachesvoice.com/cv/luis-de-la-fuente-spain-tactics/"
-        },
-        "cost": 0.002,
-        "reason": "Provides a deep tactical breakdown of Luis de la Fuente's build-up structures, central attacking preferences, and defensive transition vulnerabilities.",
-        "need": "Will Spain deploy a traditional focal-point striker to contest aerial duels inside the box, or will they use a fluid front three to drag Cape Verde's center-backs out of position?",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://theanalyst.com/eu/2024/01/cape-verde-africa-cup-of-nations-tactics/"
-        },
-        "cost": 0.002,
-        "reason": "Extracts detailed defensive phase structures, block heights, and pressing metrics (PPDA) for Cape Verde.",
-        "need": "Does Cape Verde utilize a low-block 5-4-1 or a mid-block 4-3-3 when facing elite UEFA opposition, and what is their statistical PPDA (Passes Per Defensive Action) in those defensive phases?",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://en.wikipedia.org/wiki/Spain_at_the_FIFA_World_Cup"
-        },
-        "cost": 0.002,
-        "reason": "Aggregates historical group stage performance and tactical patterns of Spain when facing African opposition.",
-        "need": "What is Spain\u2019s historical record, goal differential, and tactical vulnerability in World Cup group stages against CAF opponents, particularly since their 2022 match against Morocco?",
-        "category": "H2H"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "params": {
-          "topic": "Spain national team Pedri Lamine Yamal injury fitness",
-          "query": "Spain national team Pedri Lamine Yamal injury fitness"
-        },
-        "cost": 0.01,
-        "reason": "Provides real-time news and injury reports on Spain's key attacking players, addressing the highest-priority player fitness need.",
-        "need": "Are Spain's key progressive passers (like Pedri) and dynamic wingers (like Lamine Yamal) carrying any lingering knocks or muscle fatigue from the end of the European club season?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "params": {
-          "topic": "Cape Verde national team bonus dispute logistics",
-          "query": "Cape Verde national team bonus dispute logistics"
-        },
-        "cost": 0.01,
-        "reason": "Screens for potential internal squad disruption, federation disputes, or physical adaptation issues affecting team harmony.",
-        "need": "Are there any reported logistical delays, climate adaptation struggles, or internal federation disputes regarding bonuses within the Cape Verde camp since their arrival at their North American base?",
-        "category": "NEWS"
-      }
-    ],
-    "services_used": [
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Aggregates historical group stage performance and tactical patterns of Spain when facing African opposition.",
-        "data": "{\"url\":\"https://en.wikipedia.org/wiki/Spain_at_the_FIFA_World_Cup\",\"finalUrl\":\"https://en.wikipedia.org/wiki/Spain_at_the_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"From Wikipedia, the free encyclopedia\\n\\n[Spain](https://en.wikipedia.org/wiki/Spain_national_football_team \\\"Spain national football team\\\") is one of only eight countries ever to have won the [FIFA World Cup](https://en.wikipedia.org/wiki/FIFA_World_Cup \\\"FIFA World Cup\\\"), doing so in South Africa in [2010](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup \\\"2010 FIFA World Cup\\\"), the first time the team had reached the final.[\\\\[1\\\\]](#cite_note-1)\\n\\n[![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/FIFA_World_Cup_2010_Spain_with_cup.jpg/330px-FIFA_World_Cup_2010_Spain_with_cup.jpg)](https://en.wikipedia.org/wiki/File:FIFA_World_Cup_2010_Spain_with_cup.jpg)\\n\\nSpain celebrating victory in the [2010 FIFA World Cup](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup \\\"2010 FIFA World Cup\\\") in South Africa.\\n\\nThe team is [one of the most present at the World Cup](https://en.wikipedia.org/wiki/National_team_appearances_in_the_FIFA_World_Cup \\\"National team appearances in the FIFA World Cup\\\"), with 16 appearances out of the 22 tournaments. Prior to their win in 2010, Spain's best World Cup result was a fourth-place finish in [1950](https://en.wikipedia.org/wiki/1950_FIFA_World_Cup \\\"1950 FIFA World Cup\\\").[\\\\[2\\\\]](#cite_note-2)\\n\\nSpain have reached the semi-finals twice and the quarter-finals six times, but have not reached the last 8 since their triumph in 2010.\\n\\n## FIFA World Cup record\\n\\n\\\\[[edit](https://en.wikipedia.org/w/index.php?title=Spain_at_the_FIFA_World_Cup&action=edit&section=1 \\\"Edit section: FIFA World Cup record\\\")\\\\]\\n\\n[FIFA World Cup](https://en.wikipedia.org/wiki/FIFA_World_Cup \\\"FIFA World Cup\\\") record\\n\\n[FIFA World Cup qualification](https://en.wikipedia.org/wiki/FIFA_World_Cup_qualification \\\"FIFA World Cup qualification\\\") record\\n\\nYear\\n\\nRound\\n\\nPositio"
-      },
-      {
-        "source": "https://news-x402.com/news/recent",
-        "cost": 0.01,
-        "reason": "Provides real-time news and injury reports on Spain's key attacking players, addressing the highest-priority player fitness need.",
-        "data": "{\"topic\":\"Spain national team Pedri Lamine Yamal injury fitness\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
-      },
-      {
-        "source": "https://news-x402.com/news/recent",
-        "cost": 0.01,
-        "reason": "Screens for potential internal squad disruption, federation disputes, or physical adaptation issues affecting team harmony.",
-        "data": "{\"topic\":\"Cape Verde national team bonus dispute logistics\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read/js",
-        "cost": 0.002,
-        "reason": "Bypasses previous simple reading failures by using Skim's JS-rendered engine on Transfermarkt's squad list, which dynamically lists active forwards, market values, and player profiles.",
-        "data": "{\"url\":\"https://www.transfermarkt.us/kap-verde/kader/verein/14163\",\"finalUrl\":\"https://www.transfermarkt.us/kap-verde/kader/verein/14163\",\"mode\":\"js\",\"markdown\":\"[DISCOVER](https://www.transfermarkt.us/) [World Cup 2026](https://www.transfermarkt.us/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.us/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.us/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.us/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.us/navigation/statistiken) [FORUM](https://www.transfermarkt.us/navigation/community) [GAMING](https://www.transfermarkt.us/navigation/gaming)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/mvu-mls-desktop-june-2026.jpg)](https://www.transfermarkt.us/major-league-soccer-market-values-heung-min-son-drops-sebastian-berhalter-up-by-euro-3m/view/news/480074)\\n\\nThis page displays a detailed overview of the club's current squad. It shows all personal information about the players, including age, nationality, contract duration and market value. It also contains a table with average age, cumulative market value and average market value for each player position and overall.\\n\\n[#](https://www.transfermarkt.us/kap-verde/kader/verein/14163/sort/trikotNumber.desc)\\n\\n[Player](https://www.transfermarkt.us/kap-verde/kader/verein/14163/sort/name)\\n\\n[Age](https://www.transfermarkt.us/kap-verde/kader/verein/14163/sort/age)\\n\\nClub\\n\\n[Market value](https://www.transfermarkt.us/kap-verde/kader/verein/14163/sort/marketValueRaw)\\n\\n\\\\-\\n\\n![Djibrilla Kassali](https://img.a.transfermarkt.technology/portrait/medium/1021787-1755261462.jpg?lm=1 \\\"Djibrilla Kassali\\\")\\n\\n[Djibrilla Kassali](https://www.transfermarkt.us/djibrilla-kassali/profil/spieler/1021787)\\n\\nGoalkeeper\\n\\n29\\n\\n[![Simba SC](https://tmssl.akamaized.net//images/wappen/verysmall/14191.png?lm=1770203476 \\\"Simba SC\\\")](https://www.transfermarkt.us/simba-s"
-      },
-      {
-        "source": "https://news-x402.com/news/recent",
-        "cost": 0.01,
-        "reason": "Avoids static page blocks by pulling recent global news intelligence and tactical analysis articles discussing De la Fuente's offensive shape and striker selections.",
-        "data": "{\"topic\":\"Spain national football team tactics Alvaro Morata\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Queries Soccerway's match archive instead of Wikipedia, providing clean, raw tabular data of Cape Verde's recent international results and scorelines.",
-        "data": "{\"url\":\"https://int.soccerway.com/teams/cape-verde-islands/cape-verde-islands/2103/matches/\",\"finalUrl\":\"https://www.soccerway.com/team/gramenet/xCObZ3wD/fixtures/\",\"mode\":\"basic\",\"markdown\":\"AD\\n\\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\\n\\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\\n\\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\\n\\n](https://www.joueurs-info-service.fr/)\\n\\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\\n\\n18+. Verantwortungsbewusst wetten.\\n\\n18+ Jogue com responsabilidade\\n\\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\\n\\n## [Spain](https://www.soccerway.com/spain/)\\n\\n![Gramenet](https://static.flashscore.com/res/image/data/bLSHRfZA-pEtKo6C5.png)\\n\\nGramenet\\n\\n[Summary](https://www.soccerway.com/team/gramenet/xCObZ3wD/ \\\"Summary\\\")[Odds](https://www.soccerway.com/team/gramenet/xCObZ3wD/odds/ \\\"Odds\\\")[Results](https://www.soccerway.com/team/gramenet/xCObZ3wD/results/ \\\"Results\\\")[Fixtures](https://www.soccerway.com/team/gramenet/xCObZ3wD/fixtures/ \\\"Fixtures\\\")[Standings](https://www.soccerway.com/team/gramenet/xCObZ3wD/standings/ \\\"Standings\\\")[Transfers](https://www.soccerway.com/team/gramenet/xCObZ3wD/transfers/ \\\"Transfers\\\")\",\"text\":\"AD\\n        Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\\n        Retrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\\n        18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter buwei.de\\n        18+. Verantwortungsbewusst wetten.\\n        18+ Jogue com responsabilidade\\n        21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434"
-      },
-      {
-        "source": "https://news-x402.com/news/recent",
-        "cost": 0.01,
-        "reason": "Leverages GDELT news intelligence to search tactical previews and match reports covering Bubista's defensive system against high-tier football nations.",
-        "data": "{\"topic\":\"Cape Verde national football team defensive block tactics\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
-      },
-      {
-        "source": "https://news-x402.com/news/recent",
-        "cost": 0.01,
-        "reason": "Extracts specialized post-match analyses from global football press regarding Spain's structural issues against ultra-defensive setups in their warm-up games.",
-        "data": "{\"topic\":\"Spain friendly match low block struggle\",\"timespan_hours\":24,\"total_found\":0,\"articles\":[]}"
-      }
-    ],
-    "research_cost": 0.056,
-    "wallet_before": 4.697,
-    "wallet_after": 4.641,
-    "prediction": {
-      "pick": "home",
-      "confidence": 9,
-      "confidence_reason": "Spain's world-class tactical cohesion, elite playmaking depth, and clean bill of health raise confidence to near-maximum, with only the typical low-block frustration of tournament football preventing a perfect ten.",
-      "reasoning": "Spain's superior positional play, elite central playmaking, and dynamic wingers will comfortably dismantle Cape Verde's defensive structure."
-    },
-    "full_reasoning": "Spain\u2019s encounter with Cape Verde presents a significant mismatch in technical quality, tactical organization, and squad depth. Unlike other dominant sides that rely purely on isolated individual talent on the flanks, Spain under Luis de la Fuente boasts a highly cohesive and structured possession game. Their midfield, anchored by elite progressive playmakers, is masterfully designed to break down defensive blocks through quick vertical combinations and superior positional play, meaning they are unlikely to fall into the typical \"individual talent trap\" against lower-ranked opponents.\n\nCape Verde has shown defensive resilience in regional competitions, but the sheer speed, pressing intensity, and technical execution of Spain's counter-press will likely starve them of transition opportunities. Spain's ability to stretch the pitch with elite wingers like Lamine Yamal and Nico Williams, combined with their central playmaking depth, provides too many avenues of attack for Cape Verde's defensive unit to contain over 90 minutes.\n\nPICK: home\nCONFIDENCE: 9\nCONFIDENCE_REASON: Spain's world-class tactical cohesion, elite playmaking depth, and clean bill of health raise confidence to near-maximum, with only the typical low-block frustration of tournament football preventing a perfect ten.\nREASONING: Spain's superior positional play, elite central playmaking, and dynamic wingers will comfortably dismantle Cape Verde's defensive structure.",
-    "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
-  },
-  {
     "match": "CIV vs ECU",
     "home": "CIV",
     "away": "ECU",
@@ -2899,6 +2735,283 @@
       "reasoning": "Tunisia\u2019s elite, compact defensive unit is perfectly designed to neutralize Sweden's star strike partnership of Gyokeres and Isak, leading to a frustrating, low-scoring stalemate for both sides."
     },
     "full_reasoning": "An analysis of the Group F opening match between Sweden and Tunisia highlights a classic clash of styles that directly triggers our core prediction rules. \n\n### Sweden: Elite Individual Firepower, Unstable System\nSweden enters the 2026 World Cup under the guidance of Graham Potter, having qualified via a dramatic playoff run. On paper, their primary strength is an enviable, world-class attacking duo featuring Sporting CP's Viktor Gyokeres and Newcastle United's Alexander Isak. However, behind this glittering frontline lies a highly fragile team. Sweden is still adjusting to a new tactical identity under Potter following a chaotic previous regime, and defensive previews explicitly label their backline as \"way too leaky\" to make noise in the tournament. \n\n### Tunisia: Historic Defensive Block\nTunisia\u2019s qualification campaign was nothing short of historic. The Eagles of Carthage became the first nation in World Cup qualifying history to complete an entire cycle (10 matches) without conceding a single goal, collecting 28 of 30 available points. Managed by Sabri Lamouchi, Tunisia relies on a highly disciplined, physical, and compact low-block defensive screen that is specifically designed to choke space for elite isolated attackers. \n\n### Strategic Alignment (Rule 1 & Rule 2)\nAccording to our **World Cup Prediction Strategy**, backing a favorite like Sweden solely on the individual talent of their star strikers when facing a disciplined low block is a primary trap. Tunisia's defensive floor is exceptionally high, and their compact structure is built to deny space to players like Isak and Gyokeres. Furthermore, in a 48-team tournament where some third-place teams advance, both managers will prioritize avoiding an opening-day defeat. Sweden\u2019s leaky defense will limit their willingness to overcommit, while Tunisia will be highly motivated to play for a secure point. \n\nWith Tunisia's historic defensive resilience neutralizing Sweden's attacking ceiling, a hard-fought draw is the most likely outcome.\n\nPICK: draw\nCONFIDENCE: 8\nCONFIDENCE_REASON: Our confidence is set at 8 because Tunisia\u2019s historically perfect defensive record of ten clean sheets in qualifying directly aligns with our strategic rule to favor disciplined low blocks over individual attacking talent.\nREASONING: Tunisia\u2019s elite, compact defensive unit is perfectly designed to neutralize Sweden's star strike partnership of Gyokeres and Isak, leading to a frustrating, low-scoring stalemate for both sides.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
+  },
+  {
+    "match": "ESP vs CPV",
+    "home": "ESP",
+    "away": "CPV",
+    "kickoff": "2026-06-15T16:00Z",
+    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n3. **NED vs JPN: Avoid \"Narrative Bias\" Overlooking Systemic Discipline**\nDo not assume physical size and individual quality will automatically overcome an elite, energetic, and tactically disciplined system. If the favorite has midfield fitness concerns (a compromised metronome) and the underdog has a highly fit defensive screen and a proven record of limiting top-tier nations, avoid a straight win prediction and favor a draw or handicap.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Defensive Records Against Highly Ranked Opponents:* Vital warning sign to identify underdogs capable of frustrating elite teams (informed by NED vs JPN).\n  * *Key Midfield Workload & Fitness Status:* Essential for determining if a favorite's central controller is compromised or an underdog's anchor is fully fit (informed by NED vs JPN).\n* **Not Useful / Wasteful:**\n  * *Bookmaker Odds & Asian Handicap:* Abstract lines often reinforce narrative bias instead of providing objective analytical value (informed by NED vs JPN).\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate fitness queries leads to high costs. Consolidate searches to 1-2 comprehensive previews to keep costs under $0.0300 per match (informed by AUS vs TUR).",
+    "information_needs": "FORM\n- How did Spain and Cape Verde perform in their final pre-World Cup warm-up friendlies in late May and early June 2026, specifically regarding Spain\u2019s shot-conversion efficiency against low blocks and Cape Verde's defensive organization under sustained pressure?\n- What is Cape Verde's recent defensive record in competitive fixtures (such as Africa Cup of Nations matches or World Cup Qualifiers) leading up to June 2026, particularly their clean-sheet ratio against top-50 FIFA-ranked opponents?\n\nPLAYERS\n- Are Spain's high-intensity wingers (e.g., Lamine Yamal and Nico Williams) fully fit and recovered from fatigue following a congested 2025/26 European club season?\n- Which goalkeeper is projected to start for Cape Verde, and what is their recent penalty-saving and post-shot expected goals (PSxG) record in high-stakes matches?\n\nTACTICS\n- Does Cape Verde\u2019s defensive setup transition into a 5-4-1 deep block when out of possession, and how effectively do their central defenders defend the half-spaces where Spain's interior midfielders typically operate?\n- What is Spain's projected Passes Per Defensive Action (PPDA) target for this game, and can they effectively counter-press to prevent Cape Verde's direct transition passes to their fast outlet wingers?\n\nH2H\n- How has Spain historically performed in competitive tournament matches against African opposition featuring a similar compact, physical profile (such as Morocco in 2018 and 2022), and what tactical adjustments did they make?\n\nCONTEXT\n- Since this is the 48-team 2026 World Cup group stage, does the potential for the best third-place teams to qualify influence Cape Verde to prioritize goal-differential damage limitation over chasing an equalizer if they fall behind?\n\nMARKET\n- What is the current Asian Handicap line (e.g., Spain -2 or -2.5), and has there been significant sharp money moving the total match goals line toward the Under?\n\nNEWS\n- Have there been any training-ground injuries, squad illnesses, or disciplinary issues reported in either camp since arriving at their official 2026 World Cup base camps?\n\nVENUE\n- Which North American stadium is hosting this 16:00Z kickoff, what is the pitch type (natural grass vs. temporary grass laid over turf), and will the local temperature and altitude impact Spain\u2019s high-pressing energy over 90 minutes?",
+    "research_gaps": [
+      {
+        "need": "What is the current Asian Handicap line (e.g., Spain -2 or -2.5), and has there been significant sharp money moving the total match goals line toward the Under?",
+        "category": "MARKET",
+        "ideal_service": "A real-time sports betting oddsmaker or Asian Handicap aggregator API that monitors sharp money flow."
+      },
+      {
+        "need": "Which North American stadium is hosting this 16:00Z kickoff, what is the pitch type (natural grass vs. temporary grass laid over turf), and will the local temperature and altitude impact Spain\u2019s high-pressing energy over 90 minutes?",
+        "category": "VENUE",
+        "ideal_service": "A stadium database and meteorological integration API providing pitch substrate and localized microclimate/altitude forecasts."
+      },
+      {
+        "need": "Since this is the 48-team 2026 World Cup group stage, does the potential for the best third-place teams to qualify influence Cape Verde to prioritize goal-differential damage limitation over chasing an equalizer if they fall behind?",
+        "category": "CONTEXT",
+        "ideal_service": "A sports analytics simulation API evaluating tournament game theory and goal-difference margins under the 48-team progression rules."
+      },
+      {
+        "need": "How has Spain historically performed in competitive tournament matches against African opposition featuring a similar compact, physical profile (such as Morocco in 2018 and 2022), and what tactical adjustments did they make?",
+        "category": "H2H",
+        "ideal_service": "A deep-archive historical match metrics and head-to-head tactical analysis database API."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Spain vs Cape Verde World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Spain vs Cape Verde World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Spain World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Spain recent form and results",
+        "need": "How has Spain performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Cape Verde World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Cape Verde recent form and results",
+        "need": "How has Cape Verde performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Spain vs Cape Verde head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Spain vs Cape Verde World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.transfermarkt.com/spanien/spielplandatum/verein/3375/plus/0/saison_id/2025"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Provides structured background data on Spain's preparation matches and selection trends across the 2025/26 campaign.",
+        "need": "Spain's historical match schedules, player rosters, and previous competitive results leading up to the tournament season.",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.transfermarkt.com/kap-verde/spielplandatum/verein/8225/plus/0/saison_id/2025"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Verifies Cape Verde's defensive continuity and regular lineups during their qualification process.",
+        "need": "Cape Verde's historical competitive schedules and squad stability metrics heading into the 2026 tournament cycle.",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Spain Cape Verde friendly matches results June 2026 World Cup warm up",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Assesses recent friendly form and tactical fluidity right before entering the tournament.",
+        "need": "How did Spain and Cape Verde perform in their final pre-World Cup warm-up friendlies in late May and early June 2026, specifically regarding Spain\u2019s shot-conversion efficiency against low blocks?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Cape Verde tactical profile World Cup 2026 defensive system 5-4-1",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Determines the structural resilience of Cape Verde's block and their potential to successfully frustrate Spain's interior playmakers.",
+        "need": "Does Cape Verde\u2019s defensive setup transition into a 5-4-1 deep block when out of possession, and how effectively do their central defenders defend the half-spaces?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Spain World Cup 2026 Lamine Yamal Nico Williams injury fitness fatigue news",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Establishes if Spain has its primary dynamic offensive outlets fully fit to break down Cape Verde's expected low block.",
+        "need": "Are Spain's high-intensity wingers (e.g., Lamine Yamal and Nico Williams) fully fit and recovered from fatigue following a congested 2025/26 European club season?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Spain vs Cape Verde World Cup 2026 team news injury training camp updates",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Uncovers sudden late-breaking camp disruptions, squad illness, or training injuries that could alter the starting lineups.",
+        "need": "Have there been any training-ground injuries, squad illnesses, or disciplinary issues reported in either camp since arriving at their official 2026 World Cup base camps?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Spain vs Cape Verde Preview: Predicted Lineups, Team News & Tactical Analysis | 2026 World Cup Group H\n  https://www.rotowire.com/soccer/article/spain-vs-cape-verde-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-h-118092\n  Get the latest Spain vs Cape Verde prediction, predicted lineups, team news and match preview for the 2026 FIFA World Cup Group H clash on\n\n\u2022 Spain vs Cape Verde World Cup 2026 Predictions and Best Bets\n  https://www.juvefc.com/spain-v-cape-verde-predictions/\n  Spain open their World Cup 2026 campaign against debutants Cape Verde in Atlanta. Spain to win and over 3.5 goals is the standout bet for\n\n\u2022 Spain vs Cape Verde FIFA World Cup 2026 Preview: Everything you need to know\n  https://www.goal.com/en-gb/news/spain-cape-verde-world-cup-preview/blt1cba94a69b707822\n  How to watch the World Cup match between Spain and Cape Verde, as well as kick-off time and team news. crest. World Cup - Grp. H.\n\n\u2022 Cape Verde World Cup 2026: Fixtures, manager, squad depth and tactical analysis\n  https://www.squawka.com/en/news/world-cup/cape-verde-world-cup-2026-fixtures-squad-analysis/\n  Cape Verde face the toughest two teams in their group in their opening matches. The Blue Sharks open against Spain on 15th June,\n\n\u2022 Spain vs Cape Verde Betting Preview: 2026 World Cup Sign-Up Offers & Free Bets\n  https://www.sportinglife.com/free-bets/news/spain-vs-cape-verde-world-cup-2026/709\n  Spain vs Cape Verde betting preview for the 2026 FIFA World Cup. Odds, predictions, team news and the best sign-up offers and free bets for"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Cabo Verde - FOX Sports\n  https://amp.foxsports.com/stories/soccer/lamine-yamal-nico-williams-return-to-full-training-with-spain-in-major-boost-ahead-of-world-cup-opener-vs-cabo-verde\n  # Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Cabo Verde\n\nUpdated Jun. 12, 2026 2:00 a.m. ET\n\nSpain have received a significant fitness boost ahead of the 2026 World Cup with Lamine Yamal and Nico Williams returning to full training.\n\nThe dynamic duo had been major doubts for the tournament opener, but their presence at the team's base camp suggests they are ready for the big stage.\n\n## Red Fury duo back in action\n\nYamal and Williams returned to full training with Spain at the team's base camp in Chattanooga, Tennessee, on Thursday. The news comes as an enormous r\n\n\u2022 Spain vs. Cape Verde - Live Score - June 15, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-spain-vs-cape-verde-jun-15-2026-game-boxscore-647628\n  Spain have received a significant fitness boost ahead of the 2026 World Cup with Lamine Yamal and Nico Williams returning to full training. \n\n1 DAY AGO \u2022 FOX SPORTS\n\nPOWERED BY\n\nAtlanta, GA\n\n81\u00b0\n\nWind 1 mph E\n\n85\u00b0 SAT\n\n93\u00b0 SUN\n\n87\u00b0 MON\n\nESP\n\nFollow a team and personalize your FOX Sports experience\n\nCPV\n\nTop Leagues\n\n NFL College Football INDYCAR MLB College Basketball NASCAR\n\nTop Shows\n\n The Herd with Colin Cowherd First Things First The Joel Klatt Show Kevin Harvick's Happy Hour Bear Bets\n\nAffiliated Apps\n\n FOX Sports FOX One\n\nQuick Links\n\n FIFA World Cup 2026\u2122 Best Betting Apps & Sites Best \n\n\u2022 Spain next World Cup match: Fixture schedule, start time, draw bracket as La Roja face Cape Verde - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/spain-next-world-cup-match-fixture-schedule-time-draw-bracket/c008fbfddf6709d078742aa0\n  While there are concerns around the fitness of star winger Lamine Yamal, head coach Luis de la Fuente has plenty of options at his disposal as he looks to navigate a group that, on paper, will pose little difficulty until Spain's third and final match against Uruguay.\n\nHere is everything you need to know about Spain's appearance at the World Cup, including the latest results from the tournament.\n\n## When is Spain's next match at World Cup 2026?\n\nSpain first match of their 2026 World Cup campaign sees them take on Cape Verde.\n\nThe match will take place at Mercedes-Benz Stadium in Atlanta.\n\nSpai\n\n\u2022 Spain superstar Lamine Yamal declared fit to make his World Cup debut against Cape Verde - San Francisco Chronicle\n  https://www.sfchronicle.com/sports/article/spain-superstar-lamine-yamal-declared-fit-to-make-22305007.php\n  \u201cLamine Yamal is ready to play a few minutes and our medical team agree on that decision. Otherwise he wouldn\u2019t be even on the bench,\u201d de la Fuente said.\n\nSpain's one World Cup title came in 2010, when, like now, it entered the tournament as European champion.\n\nIt is the co-favorite with France to win the title.\n\nAdvertisement\n\nArticle continues below this ad\n\n\u201cThis is just recognition for everything we have done to come this far,\u201d said de la Fuente. \u201cWe are humble. We know how difficult it is to win any match and to win the World Cup.\u201d\n\nCape Verde is playing in its first World Cup and is not \n\n\u2022 Spain superstar Lamine Yamal declared fit to make his World Cup debut against Cape Verde - Greenwich Time\n  https://www.greenwichtime.com/sports/article/spain-superstar-lamine-yamal-declared-fit-to-make-22305007.php\n  Subscribe\n\nSports\n\n# Spain superstar Lamine Yamal declared fit to make his World Cup debut against Cape Verde\n\nBy JAMES ROBSON, AP Soccer Writer\n\nATLANTA (AP) \u2014 Lamine Yamal is in \u201cideal condition\u201d to play in Spain's World Cup opener against Cape Verde on Monday, coach Luis de la Fuente said.\n\nYamal is not expected to start the game in Atlanta, but has been cleared to play in his return from a hamstring injury that forced the teenaged superstar to mis"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Spain recent form and results",
+        "data": "\u2022 Reuters Spain at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/spain/\n  Latest Spain World Cup 2026 news, fixtures, results and squad updates \u00b7 ago \u00b7 Spain face tiny Cape Verde in collision of swagger and wonder \u00b7\n\n\u2022 Spain national football team World Cup Qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/spain/table/2026/world-cup-qualification/\n  This page shows the Spain national football team World Cup Qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Spain national football team World Cup Qualification 2026 standings changes during the competition.\n\n\u2022 Spain | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/spain/team-news\n  Spain | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Spain squad at FIFA World Cup 2026\u2122.\n\n\u2022 Spain cruise past Peru in final World Cup 2026 warm-up match | World Cup 2026 | Al Jazeera\n  https://www.aljazeera.com/sports/2026/6/9/spain-cruise-past-peru-in-final-world-cup-2026-warm-up-match\n  Spain wrapped up their World Cup warm-up matches with a comfortable <strong>3-1 victory over Peru</strong> in Puebla, Mexico. Mikel Oyarzabal opened the scoring on Monday after just two minutes with a fierce strike from the edge of the area, setting the tone ...\n\n\u2022 Fifa World Cup 2026: What you need to know about Spain - BBC Sport\n  https://www.bbc.com/sport/football/articles/cg5p9g6p7z8o\n  <strong>They were unsuccessful with all three spot-kicks when they crashed out against Morocco in 2022</strong>, just the second time a team has failed to score in a shootout at a World Cup. ... Spain were simply brilliant as they won an unprecedented fourth ...\n\n\u2022 [Discussion] What will the Spanish start 11 look like at the wc?\n  https://www.reddit.com/r/spanishfootball/comments/1u2blva/what_will_the_spanish_start_11_look_like_at_the_wc/\n  Simon (or possibly Raya but should be Garcia) Llorente/Porro, Cubarsi, Laporte, Cucurella Pedri, Rodri, Fabian Yamal, Oyarzabal/Ferran, Williams\n\n\u2022 [Discussion] All Players born in Spain and Portugal participating in the World Cup 2026\n  https://www.reddit.com/r/MapPorn/comments/1tzemq3/all_players_born_in_spain_and_portugal/\n  Most of the portuguese players are so far from where their birthplaces are actually located"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Cape Verde recent form and results",
+        "data": "\u2022 Cape Verde World Cup 2026: Fixtures, manager, squad depth and tactical analysis | Squawka | EN\n  https://www.squawka.com/en/news/world-cup/cape-verde-world-cup-2026-fixtures-squad-analysis/\n  ... <strong>Cape Verde have generally stuck with a 4-3-3 in recent matches, evolving occasionally into from a 4-2-3-1 which has been favoured previously.</strong> It will be interesting to see if Cape Verde stick with their guns for the World Cup, or if they\u2019ll ...\n\n\u2022 World Cup 2026 Ultimate Guide: Cape Verde | Goal.com US\n  https://www.goal.com/en-us/world-cup-teams/group-h/world-cup-2026-guide-cape-verde/O~blt38429a01b868c2c5\n  Though they managed just 16 goals in 10 matches, Cape Verde\u2019s strong defensive record ensured they were able to record <strong>seven victories, and only succumbed to one defeat</strong> on their way to securing a spot at the finals for the first time.\n\n\u2022 Cape Verde at the FIFA World Cup - Wikipedia\n  https://en.wikipedia.org/wiki/Cape_Verde_at_the_FIFA_World_Cup\n  By the time of their qualification, ... of Cura\u00e7ao a month later meant that Cape Verde would now become the second-smallest country by land area and the third least-populated. First match(es) will be played: June 15, 2026....\n\n\u2022 Cape Verde at World Cup 2026: What to know | World Cup 2026 News | Al Jazeera\n  https://www.aljazeera.com/sports/2026/5/24/what-to-know-about-cape-verde-at-world-cup-2026\n  Fans celebrate after <strong>Cape Verde defeated Eswatini</strong> in qualifying to clinch their World Cup place [File: Cristiano Barbosa/AP] You can follow the action on Al Jazeera\u2019s dedicated FIFA World Cup 2026 page with all the latest news, match build-up ...\n\n\u2022 Cabo Verde | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/cabo-verde/team-news\n  Cabo Verde | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Cabo Verde squad at FIFA World Cup 2026\u2122."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Spain vs Cape Verde - live score, predicted lineups and H2H stats\n  https://www.fotmob.com/matches/cape-verde-vs-spain/1bbtuo\n  Spain are heading to the World Cup in search of their second title, and Luis de la Fuente is confident in his side&#x27;s ability to do so. Spain faces Cape Verde at Atlanta Stadium on Mon, Jun 15, 2026, 16:00 UTC. This match is part of the World Cup Grp. H. You can check the recent head-to-head encounters, as well as full H2H record on this page to see how Spain and Cape Verde have fared against each other in the past.\n\n\u2022 Spain vs Cape Verde Lineups, Team News & Preview | RotoWire\n  https://www.rotowire.com/soccer/article/spain-vs-cape-verde-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-h-118092\n  <strong>There is no head-to-head record</strong>. The teams have never met, which is no surprise given this is Cape Verde&#x27;s first appearance at a major tournament. For a country playing its debut World Cup match against the tournament favorites, simply being ...\n\n\u2022 Spain vs Cape Verde \u2013 World Cup 2026 Tickets, Preview & Guide\n  https://www.livefootballtickets.com/us/fixtures/match-14-group-h-spain-vs-cabo-verde-tickets-world-cup.html\n  Meanwhile, Cape Verde arrive with ... shown in recent tournaments that they can frustrate bigger sides for long stretches. <strong>There is no meaningful head-to-head history between the nations</strong>, which adds unpredictability to the fixture, but the difference in styles is cle...\n\n\u2022 Spain - Cape Verde: stats and timeline of head-to-head matches - Tribuna.com\n  https://tribuna.com/en/match/cape-verde-vs-spain/stat/\n  The head-to-head section contains the full history of meetings between Spain and Cape Verde.\n\n\u2022 Spain vs Cape Verde Prediction: World Cup 2026 Match Preview\n  https://theanalyst.com/articles/spain-vs-cape-verde-prediction-world-cup-2026-match-preview\n  However, Spain\u2019s record is far from infallible at recent World Cups, and they\u2019ve only won one of their last six matches at the tournament inside 90 minutes \u2013 a 7-0 victory against Costa Rica in the 2022 group stage. ... That victory may set the benchmark for Spain, who face a Cape Verde side playing their first ever match at the World Cup, after beating traditional African giants Cameroon to top spot in their CAF qualifying group."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 World Cup 2026 Group H guide - fixtures, schedule, standings and odds for Spain, Cape Verde, Saudi Arabia and Uruguay | Football News | Sky Sports\n  https://www.skysports.com/football/news/12098/13543099/world-cup-2026-group-h-guide-fixtures-schedule-standings-and-odds-for-spain-cape-verde-saudi-arabia-and-uruguay\n  World Cup <strong>Group H</strong> includes Spain, Cape Verde, Saudi Arabia and Uruguay; matches to take place in Zapopan, Mexico and USA cities Atalanta, Miami and Houston\n\n\u2022 2026 FIFA World Cup match schedule: Fixtures, results, features - ESPN\n  https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket\n  France (Foxborough, Mass.), 3 p.m. ET Group I: Senegal vs. Iraq (Toronto), 3 p.m. ET <strong>Group H</strong>: Cape Verde vs. Saudi Arabia (Houston), 7 p.m. local / 8 p.m. ET <strong>Group H</strong>: Uruguay vs. Spain (Zapopan, Mexico), 6 p.m. local / 8 p.m.\n\n\u2022 2026 FIFA World Cup Group H - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H\n  <strong>Group H</strong> of the 2026 FIFA World Cup will take place from June 15 to 26, 2026. The group consists of Spain, Cape Verde, Saudi Arabia, and Uruguay. The top two teams, possibly along with the third-placed team, will advance to the round of 32. ... First match(es) will be played: June 15, 2026.\n\n\u2022 World Cup Group H standings 2026: Updated results, table and fixtures for Spain, Uruguay, Saudi Arabia, Cape Verde | Sporting News\n  https://www.sportingnews.com/in/football/news/world-cup-group-h-standings-results-table-2026/d90922c761921d99f9204088\n  <strong>Group H</strong>, which includes one of the world&#x27;s current top two team, houses many such talents. Here&#x27;s a look at the cluster that includes top-dog Spain as well as Cape Verde, Saudi Arabia and Uruguay.\n\n\u2022 Spain vs Cape Verde: Where to watch, TV channel, live stream & kick-off time | 2026 World Cup | Goal.com\n  https://www.goal.com/en/news/spain-cape-verde-world-cup-preview/blt1cba94a69b707822\n  In <strong>Group H, Cape Verde sit top of the table ahead of Spain, who are currently third</strong>, though both sides are yet to play a match at the 2026 World Cup."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides structured background data on Spain's preparation matches and selection trends across the 2025/26 campaign.",
+        "data": "URL: https://www.transfermarkt.com/spanien/spielplandatum/verein/3375/plus/0/saison_id/2025\nTitle: Spain - Fixtures by date\nThis is an overview of all fixtures of the club in chronological order.\n\nYear:\n\nCompetition:\n\nWeekday:\n\nVenue:\n\nResult:\n\nPeriod:\n\n\\-\n\nMatchday\n\nDate\n\nTime\n\nVenue\n\nRanking\n\nOpponent\n\nSystem of play\n\nAttendance\n\nResult\n\n![Freundschaftsspiele](https://tmssl.akamaized.net//images/logo/tiny/fs.png?lm=1713854091 \"Freundschaftsspiele\")\u00a0\u00a0[International Friendlies](https://www.transfermarkt.com/freundschaftsspiele/startseite/wettbewerb/FS \"International Friendlies\")\n\n[11](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/11)\n\nFri 27/03/26\n\n9:00 PM\n\nH\n\n[![Serbia](https://tmssl.akamaized.net//images/flagge/tiny/215.png?lm=1520611569 \"Serbia\")](https://www.transfermarkt.com/serbien/spielplan/verein/3438/saison_id/2025 \"Serbia\")\n\n[Serbia](https://www.transfermarkt.com/serbien/spielplan/verein/3438/saison_id/2025 \"Serbia\")\n\n4-2-3-1\n\n20.482\n\n[3:0](https://www.transfermarkt.com/spielbericht/index/spielbericht/4844808 \"Match report\")\n\n![Artemio Franchi Trophy](https://tmssl.akamaized.net//images/logo/tiny/aft.png?lm=1766082673 \"Artemio Franchi Trophy\")\u00a0\u00a0[CONMEBOL-UEFA Cup of Champions](https://www.transfermarkt.com/artemio-franchi-trophy/startseite/pokalwettbewerb/AFT \"CONMEBOL-UEFA Cup of Champions\")\n\nFinal\n\nFri 27/03/26\n\n7:00 PM\n\nA\n\n[![Argentina](https://tmssl.akamaized.net//images/flagge/tiny/9.png?lm=1520611569 \"Argentina\")](https://www.transfermarkt.com/argentinien/spielplan/verein/3437/saison_id/2025 \"Argentina\")\n\n[Argentina](https://www.transfermarkt.com/argentinien/spielplan/verein/3437/saison_id/2025 \"Argentina\")\n\n[ppd.](https://www.transfermarkt.com/spielbericht/index/spielbericht/4785707 \"ppd.\")\n\n![Freundschaftsspiele](https://tmssl.akamaized.net//images/logo/tiny/fs.png?lm=1713854091 \"Freundschaftsspiele\")\u00a0\u00a0[International Friendlies](https://www.transfermarkt.com/freundschaftsspiele/startseite/wettbewerb/FS \"International Friendlies\")\n\n[13](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/13)\n\nTue 31/03/26\n\n9:00 PM\n\nH\n\n[![Egypt](https://tmssl.akamaized.net//images/flagge/tiny/2.png?lm=1520611569 \"Egypt\")](https://www.transfermarkt.com/agypten/spielplan/verein/3672/saison_id/2025 \"Egypt\")\n\n[Egypt](https://www.transfermarkt.com/agypten/spielplan/verein/3672/saison_id/2025 \"Egypt\")\n\n4-2-3-1\n\n35.895\n\n[0:0](https://www.transfermarkt.com/spielbericht/index/spielbericht/4844959 \"Match report\")\n\n[13](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/13)\n\nThu 04/06/26\n\n9:00 PM\n\nH\n\n[![Iraq](https://tmssl.akamaized.net//images/flagge/tiny/70.png?lm=1520611569 \"Iraq\")](https://www.transfermarkt.com/irak/spielplan/verein/3560/saison_id/2025 \"Iraq\")\n\n[Iraq](https://www.transfermarkt.com/irak/spielplan/verein/3560/saison_id/2025 \"Iraq\")\n\n4-2-3-1\n\n30.423\n\n[1:1](https://www.transfermarkt.com/spielbericht/in"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Assesses recent friendly form and tactical fluidity right before entering the tournament.",
+        "data": "\u2022 World Cup 2026: Every warm-up friendly fixture, result and how to watch on TV...\n  https://www.football365.com/news/world-cup-2026-warm-up-friendly-fixtures-results-kick-off-times-what-tv-channel\n  Ecuador 2-1 Saudi Arabia South Korea 5-0 Trinidad and Tobago Mexico 1-0 Australia Japan 1-0 Iceland Switzerland 4-1 Jordan Czechia 2-1 Kosovo <strong>Cape Verde 3-0 Serbia</strong> Poland 0-2 Ukraine Germany 4-0 Finland United States 3-2 Senegal Brazil 6-2 Panama\n\n\u2022 Spain vs. Cape Verde (Jun 15, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760428/cape-verde-spain\n  Live coverage of the Spain vs. Cape Verde Fifa World Cup game on ESPN, including live score, highlights and updated stats.\n\n\u2022 Every nation's pre-FIFA World Cup 2026 warm-up matches\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/pre-tournament-warm-up-results-fixtures-scorers\n  See a full list of every pre-FIFA World Cup 2026 warm-up match, including scorers, key events and more.\n\n\u2022 Spain vs Cape Verde World Cup 2026 Predictions and Best Bets | Juvefc.com\n  https://www.juvefc.com/spain-v-cape-verde-predictions/\n  Their warm-up schedule was deliberately designed to expose them to higher-quality opponents, but the results suggest they will struggle to impose themselves against a Spain side operating at a considerably higher level. The draws with Egypt and Iran show defensive solidity, yet those results came in neutral, low-intensity friendlies rather than genuine competitive pressure.\n\n\u2022 Reuters Cape Verde at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/cabo-verde/\n  Follow Cape Verde&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Determines the structural resilience of Cape Verde's block and their potential to successfully frustrate Spain's interior playmakers.",
+        "data": "\u2022 Cape Verde World Cup 2026: Fixtures, manager, squad depth and tactical analysis | Squawka | EN\n  https://www.squawka.com/en/news/world-cup/cape-verde-world-cup-2026-fixtures-squad-analysis/\n  Cape Verde have generally stuck with a 4-3-3 in recent matches, evolving occasionally into from a 4-2-3-1 which has been favoured previously. It will be interesting to see if Cape Verde stick with their guns for the World Cup, or if they\u2019ll go more defensive \u2014 with some experience in a back three.\n\n\u2022 World Cup 2026: Cape Verde \u2013 Team profile and history\n  https://africasoccer.com/world-cup-2026-cape-verde-team-profile/\n  Scoring goals consistently against ... may also become a factor during high-pressure moments. ... <strong>Cape Verde are expected to line up in a disciplined 4-3-3 formation</strong>....\n\n\u2022 Cape Verde \u2014 World Cup 2026 Squad, Tactics & History | RotoBot AI\n  https://rotobot.ai/world-cup/team/CPV\n  ... <strong>Cape Verde usually line up in a **4-3-3 or 4-2-3-1**, shifting to a 4-4-2 mid-block without the ball, with a strong emphasis on compactness between the lines</strong>. In AFCON 2023 and 2026 qualifying, they typically posted **46\u201350% possession** ...\n\n\u2022 Cape Verde's Road to the 2026 World Cup: Awaiting a Miracle from the Tiny Island Nation\n  https://www.vietnam.vn/en/duong-den-world-cup-2026-cua-cape-verde-cho-ky-tich-tu-dao-quoc-nho-be\n  Understanding the limitations of ... as the underdog, this system immediately switches to a 4-5-1 or 4-1-4-1 with a <strong>low and dense defensive block</strong>....\n\n\u2022 Cape Verde 2026 World Cup Team Profile | Footlab Data Analysis\n  https://footlab-data.com/world-cup/equipe/cape-verde-islands\n  Defensive Phase: <strong>Mid-to-low block aimed at reducing gaps and triggering interceptions (12-16 per match).</strong> Identity: &quot;Intelligent&quot; football prioritizing collective structure over raw individual talent."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Establishes if Spain has its primary dynamic offensive outlets fully fit to break down Cape Verde's expected low block.",
+        "data": "\u2022 Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Cabo Verde - FOX Sports\n  https://amp.foxsports.com/stories/soccer/lamine-yamal-nico-williams-return-to-full-training-with-spain-in-major-boost-ahead-of-world-cup-opener-vs-cabo-verde\n  # Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Spain have received a significant fitness boost ahead of the 2026 World Cup with Lamine Yamal and Nico Williams returning to full training. The dynamic duo had been major doubts for the tournament opener, but their presence at the team's base camp suggests they are ready for the big stage. Yamal and Williams returned to full training with Spain at the team's base camp in Chattanooga, Tennessee, on Thursday. While the rest of the squad travelled for that fixture, the trio remained at the team's training base to undergo \n\n\u2022 Spain vs. Cape Verde - Live Score - June 15, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-spain-vs-cape-verde-jun-15-2026-game-boxscore-647628\n  ## Spain vs Cape Verde. Spain takes step in their march to the cup against Cape Verde. # Spain vs. Cape Verde: Jun 15, 2026. ## MATCHUP## ODDS## STANDINGS. ### Group H Preview: Spain, Cape Verde, Saudi Arabia, Uruguay. | 6/8 | PER (H) | W3-1 |. | 6/4 | IRQ (H) | D1-1 |. | 6/6 | BER (H) | W3-0 |. | 11/17 | EGY (H) | L1-1 |. A bet of $1,190 would win $1,290 total if Spain wins and a bet of $100 would win $2,375 total if Cape Verde wins. The combined final score of both teams is set at 3.5. ### Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Spain have received a signifi\n\n\u2022 Yamal, Williams return to training in World Cup boost for Spain - ESPN\n  https://www.espn.com/soccer/story/_/id/49031484/spain-world-cup-2026-lamine-yamal-nico-williams-injury\n  Yamal, Williams back in training in boost for Spain. Morocco replace Aguerd, Ezzalzouli for World Cup. World Cup Rank: The 50 best players in the 2026 tournament. Live updates: Mexico host South Africa as 2026 World Cup kicks off. World Cup Daily LIVE: Lamine Yamal at Walmart, Mexico-South Africa pregame, more. Final predictions for the World Cup: Champions, Golden Ball, breakout stars and more. The World Cup of more: There's never been a tournament like this one. 2026 World Cup betting preview: One bet to make on every team. # Yamal, Williams return to training in World Cup boost for Spain. L\n\n\u2022 FC Barcelona News: 12 June 2026 - Yahoo Sports\n  https://sports.yahoo.com/articles/fc-barcelona-news-12-june-090000932.html\n  Yamal, Williams return to training in World Cup boost for Spain \u2013 ESPNLamine Yamal and Nico Williams returned to full training with Spain at the team\u2019s base camp in Chattanooga, Tennessee, on Thursday. Spain coach Luis de la Fuente said last week he expects Yamal to be \u201cready to play\u201d in Spain\u2019s opening World Cup game, although he admitted that the Barcelona winger\u2019s involvement could be limited to \u201cjust a few minutes.\u201d. Confirmed: Wembley is the only rival to Camp Nou, and UEFA will decide in three months \u2013 Mundo DeportivoEuropean football\u2019s governing body closed the deadline for submitting b\n\n\u2022 Spain back at full strength ahead of its World Cup opener against Cape Verde - Greenwich Time\n  https://www.greenwichtime.com/sports/article/spain-back-at-full-strength-ahead-of-its-world-22303381.php\n  # Spain back at full strength ahead of its World Cup opener against Cape Verde. GUADALAJARA, Mexico (AP) \u2014 Spain will have a full squad available for its World Cup opener against Cape Verde on Monday with forward V\u00edctor Mu\u00f1oz returning to training a day after Lamine Yamal and Nico Williams also were back. Spain was hit by injuries late last season and had to adjust its preparations in the run-up to soccer\u2019s biggest tournament. Williams hurt his hamstring while playing for Athletic Bilbao in a league match in May. Both Williams and Yamal were out for the season with their clubs as they focused "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Uncovers sudden late-breaking camp disruptions, squad illness, or training injuries that could alter the starting lineups.",
+        "data": "\u2022 Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Cabo Verde - FOX Sports\n  https://amp.foxsports.com/stories/soccer/lamine-yamal-nico-williams-return-to-full-training-with-spain-in-major-boost-ahead-of-world-cup-opener-vs-cabo-verde\n  # Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Spain have received a significant fitness boost ahead of the 2026 World Cup with Lamine Yamal and Nico Williams returning to full training. The dynamic duo had been major doubts for the tournament opener, but their presence at the team's base camp suggests they are ready for the big stage. Yamal and Williams returned to full training with Spain at the team's base camp in Chattanooga, Tennessee, on Thursday. While the rest of the squad travelled for that fixture, the trio remained at the team's training base to undergo \n\n\u2022 Spain vs. Cape Verde - Live Score - June 15, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-spain-vs-cape-verde-jun-15-2026-game-boxscore-647628\n  ## Spain vs Cape Verde. Spain takes step in their march to the cup against Cape Verde. # Spain vs. Cape Verde: Jun 15, 2026. ## MATCHUP## ODDS## STANDINGS. ### Group H Preview: Spain, Cape Verde, Saudi Arabia, Uruguay. | 6/8 | PER (H) | W3-1 |. | 6/4 | IRQ (H) | D1-1 |. | 6/6 | BER (H) | W3-0 |. | 11/17 | EGY (H) | L1-1 |. A bet of $1,190 would win $1,290 total if Spain wins and a bet of $100 would win $2,375 total if Cape Verde wins. The combined final score of both teams is set at 3.5. ### Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Spain have received a signifi\n\n\u2022 Spain back at full strength ahead of its World Cup opener against Cape Verde - Greenwich Time\n  https://www.greenwichtime.com/sports/article/spain-back-at-full-strength-ahead-of-its-world-22303381.php\n  # Spain back at full strength ahead of its World Cup opener against Cape Verde. GUADALAJARA, Mexico (AP) \u2014 Spain will have a full squad available for its World Cup opener against Cape Verde on Monday with forward V\u00edctor Mu\u00f1oz returning to training a day after Lamine Yamal and Nico Williams also were back. Spain was hit by injuries late last season and had to adjust its preparations in the run-up to soccer\u2019s biggest tournament. Williams hurt his hamstring while playing for Athletic Bilbao in a league match in May. Both Williams and Yamal were out for the season with their clubs as they focused \n\n\u2022 Yamal, Williams return to training in World Cup boost for Spain - ESPN\n  https://www.espn.com/soccer/story/_/id/49031484/spain-world-cup-2026-lamine-yamal-nico-williams-injury\n  Yamal, Williams back in training in boost for Spain. Morocco replace Aguerd, Ezzalzouli for World Cup. World Cup Rank: The 50 best players in the 2026 tournament. Live updates: Mexico host South Africa as 2026 World Cup kicks off. World Cup Daily LIVE: Lamine Yamal at Walmart, Mexico-South Africa pregame, more. Final predictions for the World Cup: Champions, Golden Ball, breakout stars and more. The World Cup of more: There's never been a tournament like this one. 2026 World Cup betting preview: One bet to make on every team. # Yamal, Williams return to training in World Cup boost for Spain. L\n\n\u2022 Spain next World Cup match: Fixture schedule, start time, draw bracket as La Roja face Cape Verde - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/spain-next-world-cup-match-fixture-schedule-time-draw-bracket/c008fbfddf6709d078742aa0\n  # Spain next World Cup match: Fixture schedule, start time, draw bracket as La Roja face Cape Verde. Spain enter the 2026 World Cup as the second-highest-ranked team and one of the heavy favorites for the title in North America. STREAM: Every Spain World Cup 2026 match LIVE on fubo (free trial). While there are concerns around the fitness of star winger Lamine Yamal, head coach Luis de la Fuente has plenty of options at his disposal as he looks to navigate a group that, on paper, will pose little difficulty unti"
+      }
+    ],
+    "research_cost": 0.098,
+    "wallet_before": 4.132,
+    "wallet_after": 4.034,
+    "prediction": {
+      "pick": "home",
+      "confidence": 9,
+      "confidence_reason": "Spain has a fully fit squad with Yamal and Williams cleared to play, supported by the world's most cohesive central midfield of Rodri, Pedri, and Fabian Ruiz, which neutralizes the low-block threat.",
+      "reasoning": "Spain\u2019s elite tactical structure and superior central playmaking will comfortably dismantle Cape Verde's low block in the debutants' first-ever World Cup match."
+    },
+    "full_reasoning": "An analysis of the Group H opening match between Spain and Cape Verde reveals a significant gulf in quality, experience, and tactical preparation, heavily favoring the European champions.\n\n### Spain's Elite Tactical Cohesion\nWhile our prediction strategy warns against backing favorites solely on individual attacking talent against low blocks, Spain is the exception to this rule. Unlike teams that rely on isolated wingers, Spain possesses the most cohesive and structured central midfield in world football. Led by Rodri, Pedri, and Fabi\u00e1n Ruiz, their positional play and central playmaking are designed specifically to manipulate and pierce compact defensive structures. Furthermore, Spain received a massive pre-tournament boost with superstar wingers Lamine Yamal and Nico Williams returning to full training and being declared fit, ensuring *La Roja* is at absolute full strength.\n\n### Cape Verde's Monolithic Challenge\nCape Verde is making its historic World Cup debut. While the *Blue Sharks* qualified with an admirable defensive record in Africa, facing the co-tournament favorites in their opening match is a monumental task. They are expected to deploy a dense 4-5-1 low block to frustrate Spain, but they lack the elite defensive transition speed and high-level experience necessary to keep Spain's master pass-controllers chasing for 90 minutes. \n\nSpain's complete midfield fitness, combined with the return of their dynamic wingers, gives them all the strategic tools required to systematically break down Cape Verde's defense and secure a dominant opening-day victory.\n\nPICK: home\nCONFIDENCE: 9\nCONFIDENCE_REASON: Spain has a fully fit squad with Yamal and Williams cleared to play, supported by the world's most cohesive central midfield of Rodri, Pedri, and Fabian Ruiz, which neutralizes the low-block threat.\nREASONING: Spain\u2019s elite tactical structure and superior central playmaking will comfortably dismantle Cape Verde's low block in the debutants' first-ever World Cup match.",
     "retroactive": false,
     "result": null,
     "correct": null,
