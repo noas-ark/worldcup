@@ -1106,9 +1106,12 @@ import fcntl
 lock_path = WORK_DIR / "results.lock"
 with open(lock_path, "w") as lock_file:
     fcntl.flock(lock_file, fcntl.LOCK_EX)
-    # Re-read inside lock; replace prior prediction for same fixture (supports re-runs)
+    # Re-read inside lock; replace prior unreflected prediction (keep reflected entries)
     results = json.loads(results_path.read_text()) if results_path.exists() else []
-    results = [r for r in results if not (r.get("home") == HOME and r.get("away") == AWAY)]
+    results = [
+        r for r in results
+        if not (r.get("home") == HOME and r.get("away") == AWAY and not r.get("reflected", False))
+    ]
     results.append(entry)
     tmp = results_path.with_suffix(f".tmp.{HOME}_{AWAY}")
     tmp.write_text(json.dumps(results, indent=2))

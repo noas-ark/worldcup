@@ -310,6 +310,21 @@ def _badge(r):
     return _match_state(r)["badge"]
 
 
+def _kickoff_passed(r: dict) -> bool:
+    kdt = _kickoff_dt(r)
+    if kdt is None:
+        return False
+    return (datetime.now(timezone.utc) - kdt).total_seconds() > 0
+
+
+def _awaiting_reflection(r: dict) -> bool:
+    return not r.get("reflected") and _kickoff_passed(r)
+
+
+def _upcoming_predicted(r: dict) -> bool:
+    return not r.get("reflected") and not _kickoff_passed(r)
+
+
 def _awaiting_reflect_sort_key(r: dict) -> tuple:
     kdt = _kickoff_dt(r)
     now = datetime.now(timezone.utc)
@@ -323,6 +338,11 @@ def _awaiting_reflect_sort_key(r: dict) -> tuple:
     else:
         priority = 2
     return (priority, -kdt.timestamp())
+
+
+def _kickoff_sort_key(r: dict) -> float:
+    kdt = _kickoff_dt(r)
+    return kdt.timestamp() if kdt else 0.0
 
 
 def _render_match_card(r: dict) -> str:
@@ -464,8 +484,12 @@ async def dashboard():
 
     reflected = [r for r in all_results if r.get("reflected")]
     awaiting_reflect = sorted(
-        [r for r in all_results if not r.get("reflected")],
+        [r for r in all_results if _awaiting_reflection(r)],
         key=_awaiting_reflect_sort_key,
+    )
+    upcoming_predicted = sorted(
+        [r for r in all_results if _upcoming_predicted(r)],
+        key=_kickoff_sort_key,
     )
     wins = sum(1 for r in reflected if r.get("correct"))
     losses = len(reflected) - wins
@@ -503,16 +527,25 @@ async def dashboard():
   <div class="empty-section">No unpredicted fixtures coming up — every scheduled match has a pick, or the group stage is complete.</div>
 </div>"""
 
-    # ── 2. Predicted — awaiting reflection ────────────────────────────────
+    # ── 2. Predicted — upcoming ───────────────────────────────────────────
+    if upcoming_predicted:
+        cards = "".join(_render_match_card(r) for r in upcoming_predicted)
+        html += f"""<div class="section">
+  <h2>Predicted — Upcoming</h2>
+  <div class="section-desc">Pick is locked in before kickoff. Reflection runs automatically ~2.5h after the final whistle.</div>
+  {cards}
+</div>"""
+
+    # ── 3. Predicted — awaiting reflection ────────────────────────────────
     html += '<div class="section"><h2>Predicted — Awaiting Reflection</h2>'
-    html += '<div class="section-desc">Pick is locked in. After the final whistle, <code>reflect.py</code> fetches the result, scores the prediction, and updates strategy (~2.5h after kickoff).</div>'
+    html += '<div class="section-desc">Match has kicked off. <code>reflect.py</code> fetches the result, scores the prediction, and updates strategy (~2.5h after kickoff).</div>'
     if awaiting_reflect:
         cards = "".join(_render_match_card(r) for r in awaiting_reflect)
         html += cards + "</div>"
     else:
-        html += '<div class="empty-section">Nothing here — all predicted matches have been reflected.</div></div>'
+        html += '<div class="empty-section">Nothing here — no played matches waiting on reflection.</div></div>'
 
-    # ── 3. Reflected ────────────────────────────────────────────────────────
+    # ── 4. Reflected ────────────────────────────────────────────────────────
     html += '<div class="section"><h2>Reflected</h2>'
     html += '<div class="section-desc">Match complete. Prediction scored against the final result and learnings applied to strategy.</div>'
     if reflected:
