@@ -85,7 +85,8 @@ try:
     resp.raise_for_status()
     payload = resp.json()
     all_services = payload if isinstance(payload, list) else payload.get("data", [])
-    services = [s for s in all_services if network in s.get("networks", [])]
+    network_code = "BSE" if network == "base-mainnet" else "BSE-SEPOLIA"
+    services = [s for s in all_services if network_code in s.get("networks", []) and s.get("status") == "online"]
     log("Service directory: %d services available for %s", len(services), network)
 except Exception as e:
     err("Service directory fetch failed: %s — proceeding without paid data", e)
@@ -94,9 +95,40 @@ except Exception as e:
 
 recent_results = results[-3:] if results else []
 
-plan_prompt = f"""You are a World Cup betting research agent planning data purchases.
+# Enrich services with actual endpoint paths from their OpenAPI specs
+def _get_endpoints(base_url):
+    try:
+        spec = requests.get(f"{base_url}/openapi.json", timeout=5).json()
+        out = []
+        for path, methods in spec.get("paths", {}).items():
+            for method, detail in methods.items():
+                if method.upper() == "GET":
+                    price = detail.get("x-price-usd") or detail.get("x-x402-price")
+                    out.append({
+                        "url": base_url.rstrip("/") + path,
+                        "summary": detail.get("summary", ""),
+                        "price_usd": float(price) if price else None,
+                        "params": [p["name"] for p in detail.get("parameters", []) if p.get("in") == "query"],
+                    })
+        return out
+    except Exception:
+        return []
 
-Match: {MATCH}
+service_summary = []
+for s in services:
+    endpoints = _get_endpoints(s["base_url"])
+    service_summary.append({
+        "name": s["name"],
+        "base_url": s["base_url"],
+        "description": s["description"][:200],
+        "category": s.get("category", ""),
+        "min_price_usd": s.get("min_price_usd", "unknown"),
+        "endpoints": endpoints,
+    })
+
+plan_prompt = f"""You are a World Cup betting research agent planning data purchases before a match.
+
+Match: {MATCH} (Home: {HOME}, Away: {AWAY})
 Kickoff: {kickoff}
 Wallet balance: ${balance:.4f} USDC
 Research budget cap: ${BUDGET:.2f} USDC
@@ -107,18 +139,20 @@ Current strategy:
 Recent match history:
 {json.dumps(recent_results, indent=2) if recent_results else "(no history yet)"}
 
-Available x402 data services:
-{json.dumps(services, indent=2) if services else "(no services available)"}
+AVAILABLE x402 SERVICES WITH REAL ENDPOINTS:
+{json.dumps(service_summary, indent=2) if service_summary else "(no services available)"}
 
-Decide which data endpoints to purchase. Return ONLY a valid JSON array (no markdown, no explanation).
-Each item must have: url (string), params (object), cost (number in USDC), reason (one sentence).
-Only include endpoints from the service list above.
-Total cost must not exceed ${BUDGET:.2f} USDC.
-If no services are available or none are useful, return an empty array: []
+RULES — you MUST follow these exactly:
+1. You may ONLY use exact endpoint URLs listed above in the "endpoints" array of each service
+2. Do NOT invent or modify any URLs
+3. Total cost must not exceed ${BUDGET:.2f} USDC
+4. If none of the endpoints are useful for football prediction, return []
+5. For Skim (/api/v2/read): use it to read a relevant sports news page — set params {{"url": "https://www.bbc.com/sport/football"}}
+6. For GDELT (/news/recent or /news/sentiment): use it to search for news about the teams — set params {{"query": "{HOME} OR {AWAY} football"}}
 
-Example format:
+Return ONLY a valid JSON array, no markdown, no explanation:
 [
-  {{"url": "https://api.example.com/stats", "params": {{"team": "{HOME}"}}, "cost": 0.05, "reason": "Recent form data for {HOME}"}}
+  {{"url": "exact_url_from_endpoints_list", "params": {{"key": "value"}}, "cost": 0.01, "reason": "one sentence"}}
 ]"""
 
 research_plan = []
@@ -127,7 +161,6 @@ if services:
         log("Asking Gemini to plan research purchases...")
         research_plan_text = gemini.generate(plan_prompt)
         raw = research_plan_text.strip()
-        # Strip markdown code fences if present
         raw = re.sub(r"^```[a-z]*\n?", "", raw)
         raw = re.sub(r"\n?```$", "", raw)
         research_plan = json.loads(raw)
@@ -136,13 +169,14 @@ if services:
         err("Failed to parse Gemini research plan: %s — skipping paid data", e)
         research_plan = []
 
-# Validate: remove URLs not in service directory, enforce budget
-valid_urls = {
-    endpoint["url"]
-    for svc in services
-    for endpoint in svc.get("endpoints", [])
-}
-research_plan = [p for p in research_plan if p.get("url") in valid_urls]
+# Validate: URL must start with a known service base_url
+valid_base_urls = {s["base_url"].rstrip("/") for s in services}
+def _url_is_valid(url):
+    return any(url.startswith(base) for base in valid_base_urls)
+
+research_plan = [p for p in research_plan if _url_is_valid(p.get("url", ""))]
+if len(research_plan) < len([p for p in research_plan]):
+    log("Removed hallucinated URLs not matching any known service base_url")
 
 # Trim to budget (remove most expensive first)
 research_plan.sort(key=lambda x: x.get("cost", 0))
