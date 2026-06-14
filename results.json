@@ -2222,5 +2222,173 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "FRA vs SEN",
+    "home": "FRA",
+    "away": "SEN",
+    "kickoff": "2026-06-16T19:00Z",
+    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n3. **NED vs JPN: Avoid \"Narrative Bias\" Overlooking Systemic Discipline**\nDo not assume physical size and individual quality will automatically overcome an elite, energetic, and tactically disciplined system. If the favorite has midfield fitness concerns (a compromised metronome) and the underdog has a highly fit defensive screen and a proven record of limiting top-tier nations, avoid a straight win prediction and favor a draw or handicap.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Defensive Records Against Highly Ranked Opponents:* Vital warning sign to identify underdogs capable of frustrating elite teams (informed by NED vs JPN).\n  * *Key Midfield Workload & Fitness Status:* Essential for determining if a favorite's central controller is compromised or an underdog's anchor is fully fit (informed by NED vs JPN).\n* **Not Useful / Wasteful:**\n  * *Bookmaker Odds & Asian Handicap:* Abstract lines often reinforce narrative bias instead of providing objective analytical value (informed by NED vs JPN).\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate fitness queries leads to high costs. Consolidate searches to 1-2 comprehensive previews to keep costs under $0.0300 per match (informed by AUS vs TUR).",
+    "information_needs": "FORM\n- How many clean sheets did France keep during their final three warm-up friendlies in May/June 2026, and did they show vulnerability when defending transitional counter-attacks?\n- Did Senegal's attack struggle to break down low-block opponents in their final CAF World Cup qualifying fixtures leading into this tournament, or did they rely heavily on set-piece goals?\n\nPLAYERS\n- Is Kylian Mbapp\u00e9 fully fit to start on the left wing for France, and does Senegal have a naturally defensive right-back (such as Formose Mendy) with the recovery pace to match him in 1v1 situations?\n- Who is projected to start in the defensive midfield anchor role for France (e.g., Aur\u00e9lien Tchouam\u00e9ni), and does Senegal possess a creative central midfielder (like Lamine Camara or Pape Matar Sarr) capable of exploiting the half-spaces behind them?\n\nTACTICS\n- Does Senegal's defensive setup against top-tier European opposition rely on a compact, narrow 5-4-1 low block, or will they attempt to contest possession in a mid-block 4-3-3?\n- Where are France's structural pressing triggers under Didier Deschamps, and does Senegal have the press-resistant center-backs required to build out from the back without turning over possession in their defensive third?\n\nH2H\n- Since the iconic 2002 World Cup opening match (Senegal 1-0 France), have these two nations played any competitive or friendly matches, and does that historical \"giant-killer\" narrative still dominate the media pressure surrounding the French squad?\n\nCONTEXT\n- Is this the opening match of the 2026 World Cup Group Stage for both teams, and does the tournament's 48-team bracket structure (where some best third-place teams advance) make a draw highly acceptable for Senegal's qualification strategy?\n\nMARKET\n- What is the current Asian Handicap line (e.g., France -1.25 or -1.5), and has there been significant sharp money moving the line toward Senegal since the market opened?\n\nNEWS\n- Have there been any reports of camp disharmony, illness, or late tactical leaks coming out of the French training base in the 48 hours leading up to kickoff?\n\nVENUE\n- Which North American host city is staging this match, and will the local summer kickoff temperature, stadium humidity, or altitude (e.g., if playing in a high-elevation Mexican or interior US venue) heavily tax the high-pressing physical output of both squads?",
+    "research_gaps": [
+      {
+        "need": "What is the current Asian Handicap line, and has there been significant sharp money moving the line toward Senegal since the market opened?",
+        "category": "MARKET",
+        "ideal_service": "A dedicated sports-betting bookmaker odds tracker API that screens Asian Handicap odds movements and volume spreads."
+      },
+      {
+        "need": "Which North American host city is staging this match, and will the local summer temperature, humidity, or altitude heavily tax the pressing physical output?",
+        "category": "VENUE",
+        "ideal_service": "A weather forecasting and stadium geodata service mapping specific local altitude, temperature trends, and stadium roof insulation details."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025"
+        },
+        "cost": 0.002,
+        "reason": "Extracts the exact defensive and midfield roster profiles of Senegal to evaluate physical and recovery-pace matchups against France's wingers.",
+        "need": "Does Senegal have a naturally defensive right-back (such as Formose Mendy) with the recovery pace to match Mbapp\u00e9, or creative midfielders like Camara/Sarr?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.transfermarkt.com/frankreich/kader/verein/3377/saison_id/2025"
+        },
+        "cost": 0.002,
+        "reason": "Verifies France's defensive midfield roster depth, primary choices, and recent starting selections under Didier Deschamps.",
+        "need": "Who is projected to start in the defensive midfield anchor role for France (e.g., Tchouam\u00e9ni) to block the creative half-spaces?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.transfermarkt.com/frankreich/spielplandatum/verein/3377/plus/0/saison_id/2025"
+        },
+        "cost": 0.002,
+        "reason": "Evaluates defensive trends, goal conceding rates, and clean sheet metrics for France in the immediate lead-up friendlies.",
+        "need": "How many clean sheets did France keep during their warm-up friendlies in May/June 2026, and did they show transition vulnerabilities?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.transfermarkt.com/senegal/spielplandatum/verein/3480/plus/0/saison_id/2025"
+        },
+        "cost": 0.002,
+        "reason": "Provides exact game-by-game results and goalscoring distributions for Senegal in recent competitive fixtures.",
+        "need": "Did Senegal's attack struggle to break down low blocks in World Cup qualifiers or rely heavily on set-pieces?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.transfermarkt.com/frankreich/leistungsdaten/verein/3377/reldata/WM26/saison/2025"
+        },
+        "cost": 0.002,
+        "reason": "Provides tactical performance details, key player contributions, and defensive metrics under tournament-specific conditions.",
+        "need": "Where are France's structural pressing triggers, and how do they match up against Senegal's build-up?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://www.transfermarkt.com/senegal/leistungsdaten/verein/3480/reldata/WM26/saison/2025"
+        },
+        "cost": 0.002,
+        "reason": "Provides Senegal's performance metrics and structural setup trends in elite-level competitive contexts.",
+        "need": "Does Senegal's defensive setup rely on a compact, narrow low block (5-4-1) or a mid-block 4-3-3?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "cost": 0.002,
+        "reason": "Retrieves the exact Group Stage bracket layout, fixtures calendar, and rules regarding the advancement of third-place teams.",
+        "need": "Is this the opening match of the 2026 World Cup Group Stage, and does a draw favor Senegal's third-place qualification math?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "France squad news Mbapp\u00e9 fitness tactical leaks",
+          "hours": 48
+        },
+        "cost": 0.01,
+        "reason": "Provides immediate real-time news reporting on Mbapp\u00e9's actual training status, injuries, and any camp updates in the critical 48 hours prior to kickoff.",
+        "need": "Is Kylian Mbapp\u00e9 fully fit to start on the left wing for France, and is there any camp disharmony or late tactical leaks in the French training base?",
+        "category": "PLAYERS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Extracts the exact defensive and midfield roster profiles of Senegal to evaluate physical and recovery-pace matchups against France's wingers.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025\",\"finalUrl\":\"https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025\",\"mode\":\"basic\",\"markdown\":\"[DISCOVER](https://www.transfermarkt.com/) [World Cup 2026](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.com/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.com/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.com/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.com/navigation/statistiken) [FORUM](https://www.transfermarkt.com/navigation/community) [GAMING](https://www.transfermarkt.com/navigation/gaming)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/top-100-world-cup-mvps-desktop-banner.jpg)](https://www.transfermarkt.com/bellingham-9th-guler-20th-amp-leao-82nd-the-top-100-most-valuable-players-at-the-world-cup/view/news/480791)\\n\\nThis page displays a detailed overview of the club's current squad. It shows all personal information about the players, including age, nationality, contract duration and market value. It also contains a table with average age, cumulative market value and average market value for each player position and overall.\\n\\n[#](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/trikotNumber.desc)\\n\\n[Player](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/name)\\n\\n[Age](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/age)\\n\\nNat.\\n\\n[Contract](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/contractEndTimestamp)\\n\\n[Market value](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/marketValueRaw)\\n\\n\\\\-\\n\\n![Michael McKinven](https://img.a.transfermarkt.technology/portrait/medium/default.jpg?lm=1 \\\"Michael McKinven\\\")\\n\\n[Michael McKinven](https://www.transfermarkt.com/mi"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Verifies France's defensive midfield roster depth, primary choices, and recent starting selections under Didier Deschamps.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/frankreich/kader/verein/3377/saison_id/2025\",\"finalUrl\":\"https://www.transfermarkt.com/frankreich/kader/verein/3377/saison_id/2025\",\"mode\":\"basic\",\"markdown\":\"[DISCOVER](https://www.transfermarkt.com/) [World Cup 2026](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.com/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.com/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.com/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.com/navigation/statistiken) [FORUM](https://www.transfermarkt.com/navigation/community) [GAMING](https://www.transfermarkt.com/navigation/gaming)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/EnglishwhoamIdesktop.jpg)](https://www.transfermarkt.com/whoami?start-mode=worldcup)\\n\\nThis page displays a detailed overview of the club's current squad. It shows all personal information about the players, including age, nationality, contract duration and market value. It also contains a table with average age, cumulative market value and average market value for each player position and overall.\\n\\n[#](https://www.transfermarkt.com/frankreich/kader/verein/3377/saison_id/2025/sort/trikotNumber.desc)\\n\\n[Player](https://www.transfermarkt.com/frankreich/kader/verein/3377/saison_id/2025/sort/name)\\n\\n[Age](https://www.transfermarkt.com/frankreich/kader/verein/3377/saison_id/2025/sort/age)\\n\\nClub\\n\\n[Market value](https://www.transfermarkt.com/frankreich/kader/verein/3377/saison_id/2025/sort/marketValueRaw)\\n\\n16\\n\\n![Mike Maignan](https://img.a.transfermarkt.technology/portrait/medium/182906-1681459155.jpg?lm=1 \\\"Mike Maignan\\\")\\n\\n[Mike Maignan](https://www.transfermarkt.com/mike-maignan/profil/spieler/182906)\\n\\nGoalkeeper\\n\\n29\\n\\n[![AC Milan](https://tmssl.akamaized.net//images/wappen/verysmall/5.png?lm=1605166627 \\\"AC Milan\\\")](https://www.transfermarkt.com/ac-mail"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Evaluates defensive trends, goal conceding rates, and clean sheet metrics for France in the immediate lead-up friendlies.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/frankreich/spielplandatum/verein/3377/plus/0/saison_id/2025\",\"finalUrl\":\"https://www.transfermarkt.com/frankreich/spielplandatum/verein/3377/plus/0/saison_id/2025\",\"mode\":\"basic\",\"markdown\":\"[DISCOVER](https://www.transfermarkt.com/) [World Cup 2026](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC) [TRANSFERS & RUMOURS](https://www.transfermarkt.com/navigation/transfersundgeruechte) [MARKET VALUES](https://www.transfermarkt.com/navigation/marktwerte) [COMPETITIONS](https://www.transfermarkt.com/navigation/wettbewerbe) [STATISTICS](https://www.transfermarkt.com/navigation/statistiken) [FORUM](https://www.transfermarkt.com/navigation/community) [GAMING](https://www.transfermarkt.com/navigation/gaming)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/ENwhats-my-value-banner-desktop-ru.jpg)](https://www.transfermarkt.com/whatsMyValue?cp=FIWC)\\n\\nThis is an overview of all fixtures of the club in chronological order.\\n\\nYear:\\n\\nCompetition:\\n\\nWeekday:\\n\\nVenue:\\n\\nResult:\\n\\nPeriod:\\n\\n\\\\-\\n\\nMatchday\\n\\nDate\\n\\nTime\\n\\nVenue\\n\\nRanking\\n\\nOpponent\\n\\nSystem of play\\n\\nAttendance\\n\\nResult\\n\\n![Freundschaftsspiele](https://tmssl.akamaized.net//images/logo/tiny/fs.png?lm=1713854091 \\\"Freundschaftsspiele\\\")\u00a0\u00a0[International Friendlies](https://www.transfermarkt.com/freundschaftsspiele/startseite/wettbewerb/FS \\\"International Friendlies\\\")\\n\\n[7](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/7)\\n\\nThu 26/03/26\\n\\n9:00 PM\\n\\nA\\n\\n[![Brazil](https://tmssl.akamaized.net//images/flagge/tiny/26.png?lm=1520611569 \\\"Brazil\\\")](https://www.transfermarkt.com/brasilien/spielplan/verein/3439/saison_id/2025 \\\"Brazil\\\")\\n\\n[Brazil](https://www.transfermarkt.com/brasilien/spielplan/verein/3439/saison_id/2025 \\\"Brazil\\\")\\n\\n4-2-3-1\\n\\n66.215\\n\\n[1:2](https://www.transfermarkt.com/spielbericht/index/spielbericht/4845674 \\\"Match report\\\")\\n\\n[7](https://ww"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides exact game-by-game results and goalscoring distributions for Senegal in recent competitive fixtures.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/senegal/spielplandatum/verein/3480/plus/0/saison_id/2025\",\"finalUrl\":\"https://www.transfermarkt.com/senegal/spielplandatum/verein/3480/plus/0/saison_id/2025\",\"mode\":\"basic\",\"markdown\":\"![Arthurlie FC](https://tmssl.akamaized.net//images/wappen/head/3480.png?lm=1646259992 \\\"Arthurlie FC\\\")\\n\\n-   Squad size: 42\\n-   Average age: 33.8\\n-   Foreigners: [0](https://www.transfermarkt.com/arthurlie-fc/legionaere/verein/3480)\u00a0\u00a0 %\\n\\n-   National team players: [0](https://www.transfermarkt.com/arthurlie-fc/nationalspieler/verein/3480)\\n-   Stadium: [Dunterlie Park](https://www.transfermarkt.com/arthurlie-fc/stadion/verein/3480 \\\"Arthurlie FC\\\")\u00a0\u00a03.000 Seats\\n-   Current transfer record: [+-0](https://www.transfermarkt.com/arthurlie-fc/transfers/verein/3480/saison_id/2025)\\n\\n[![deadline-day banner](https://dzjovqk3zamsg.cloudfront.net/top-100-world-cup-mvps-desktop-banner.jpg)](https://www.transfermarkt.com/bellingham-9th-guler-20th-amp-leao-82nd-the-top-100-most-valuable-players-at-the-world-cup/view/news/480791)\\n\\n## Fixtures by date\\n\\nThis is an overview of all fixtures of the club in chronological order.\\n\\nSeason:\\n\\nCompetition:\\n\\nWeekday:\\n\\nVenue:\\n\\nResult:\\n\\nPeriod:\\n\\n\\\\-\\n\\n## Last games\\n\\nW\\n\\nH [![Woodvale FC (-1889)](https://tmssl.akamaized.net//images/wappen/profil/default.png?lm=1457423031 \\\"Woodvale FC (-1889)\\\")](https://www.transfermarkt.com/spielbericht/index/spielbericht/4780675)\\n\\nH [![Hurlford FC (-1924)](https://tmssl.akamaized.net//images/wappen/profil/default.png?lm=1457423031 \\\"Hurlford FC (-1924)\\\")](https://www.transfermarkt.com/spielbericht/index/spielbericht/4780715)\\n\\nA [![Queen of the South Wanderers (-1889)](https://tmssl.akamaized.net//images/wappen/profil/default.png?lm=1457423031 \\\"Queen of the South Wanderers (-1889)\\\")](https://www.transfermarkt.com/spielbericht/index/spielbericht/4780727)\\n\\nA [![Kilbarchan FC (-1906)](https://tmssl.akamaized.net//images/wappen/profil/default.png?lm=145742"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides tactical performance details, key player contributions, and defensive metrics under tournament-specific conditions.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/frankreich/leistungsdaten/verein/3377/reldata/WM26/saison/2025\",\"finalUrl\":\"https://www.transfermarkt.com/frankreich/leistungsdaten/verein/3377/reldata/WM26/saison/2025\",\"mode\":\"basic\",\"markdown\":\"23\\n\\n21![France](https://tmssl.akamaized.net//images/flagge/verysmall/50.png?lm=1520611569 \\\"France\\\")\\\\-Not in squad during this season--\\n\\n16\\n\\n30![France](https://tmssl.akamaized.net//images/flagge/verysmall/50.png?lm=1520611569 \\\"France\\\")  \\n![French Guiana](https://tmssl.akamaized.net//images/flagge/verysmall/252.png?lm=1520611569 \\\"French Guiana\\\")\\\\-Not in squad during this season--\\n\\n1\\n\\n32![France](https://tmssl.akamaized.net//images/flagge/verysmall/50.png?lm=1520611569 \\\"France\\\")  \\n![Congo](https://tmssl.akamaized.net//images/flagge/verysmall/85.png?lm=1520611569 \\\"Congo\\\")\\\\-Not in squad during this season--\\n\\n17\\n\\n25![France](https://tmssl.akamaized.net//images/flagge/verysmall/50.png?lm=1520611569 \\\"France\\\")  \\n![Cameroon](https://tmssl.akamaized.net//images/flagge/verysmall/31.png?lm=1520611569 \\\"Cameroon\\\")\\\\-Not in squad during this season--\\n\\n4\\n\\n27![France](https://tmssl.akamaized.net//images/flagge/verysmall/50.png?lm=1520611569 \\\"France\\\")  \\n![Guinea-Bissau](https://tmssl.akamaized.net//images/flagge/verysmall/60.png?lm=1520611569 \\\"Guinea-Bissau\\\")\\\\-Not in squad during this season--\\n\\n5\\n\\n27![France](https://tmssl.akamaized.net//images/flagge/verysmall/50.png?lm=1520611569 \\\"France\\\")  \\n![Benin](https://tmssl.akamaized.net//images/flagge/verysmall/21.png?lm=1520611569 \\\"Benin\\\")\\\\-Not in squad during this season--\\n\\n26\\n\\n26![France](https://tmssl.akamaized.net//images/flagge/verysmall/50.png?lm=1520611569 \\\"France\\\")  \\n![Guadeloupe](https://tmssl.akamaized.net//images/flagge/verysmall/251.png?lm=1520611569 \\\"Guadeloupe\\\")\\\\-Not in squad during this season--\\n\\n15\\n\\n27![France](https://tmssl.akamaized.net//images/flagge/verysmall/50.png?lm=1520611569 \\\"France\\\")  \\n![Mali](https://tmssl.akamai"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides Senegal's performance metrics and structural setup trends in elite-level competitive contexts.",
+        "data": "{\"url\":\"https://www.transfermarkt.com/senegal/leistungsdaten/verein/3480/reldata/WM26/saison/2025\",\"finalUrl\":\"https://www.transfermarkt.com/senegal/leistungsdaten/verein/3480/reldata/WM26/saison/2025\",\"mode\":\"basic\",\"markdown\":\"\\\\-\\n\\n33![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n42![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n35![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n\\\\-![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n30![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n30![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n37![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n35![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n35![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n44![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n45![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during this season--\\n\\n\\\\-\\n\\n41![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \\\"Scotland\\\")\\\\-Not in squad during"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Retrieves the exact Group Stage bracket layout, fixtures calendar, and rules regarding the advancement of third-place teams.",
+        "data": "{\"url\":\"https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/\",\"finalUrl\":\"https://www.soccerway.com/\",\"mode\":\"basic\",\"markdown\":\"[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\\n\\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\\n\\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\\n\\n](https://www.joueurs-info-service.fr/)\\n\\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\\n\\n18+. Verantwortungsbewusst wetten.\\n\\n18+ Jogue com responsabilidade\\n\\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\\n\\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\\n\\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\\n\\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\\n\\n**You can also explore**\\n\\n-   Full fixtures and results for all leagues\\n-   In-depth team pages with performance data\\n-   Player profiles including career stats and achievements\\n-   Comprehensive league tables updated in real-time\\n\\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\\n\\n**Football W"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Provides immediate real-time news reporting on Mbapp\u00e9's actual training status, injuries, and any camp updates in the critical 48 hours prior to kickoff.",
+        "data": "{\"topic\":\"France squad news Mbapp\u00e9 fitness tactical leaks\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      }
+    ],
+    "research_cost": 0.024,
+    "wallet_before": 4.354,
+    "wallet_after": 4.33,
+    "prediction": {
+      "pick": "home",
+      "confidence": 5,
+      "confidence_reason": "",
+      "reasoning": "Insufficient data for strong prediction"
+    },
+    "full_reasoning": "",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
