@@ -230,8 +230,10 @@ try:
         ["git", "commit", "-m", f"reflect: {MATCH}"],
         cwd=WORK_DIR, check=True, capture_output=True,
     )
-    subprocess.run(["git", "push"], cwd=WORK_DIR, check=True, capture_output=True)
-    log("Pushed to GitHub — Render will redeploy")
+    subprocess.run(["git", "push", "origin", "master"], cwd=WORK_DIR, check=True, capture_output=True)
+    log("Pushed to GitHub")
+    subprocess.run(["git", "push", "hf", "master"], cwd=WORK_DIR, check=True, capture_output=True)
+    log("Pushed to HF Space — dashboard updating")
 except Exception as e:
     err("Git push failed (files saved locally): %s", e)
 
