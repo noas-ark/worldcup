@@ -1234,147 +1234,6 @@
     "reflected": false
   },
   {
-    "match": "SWE vs TUN",
-    "home": "SWE",
-    "away": "TUN",
-    "kickoff": "2026-06-15T02:00Z",
-    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Late-breaking Team News:* Vital for assessing the fitness of key central playmakers or defenders, but must be purchased sparingly to avoid information overload.\n* **Not Useful / Wasteful:**\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Betting Odds & Macro-Tournament Rules:* Abstract factors like 48-team progression structures provide no actionable value for head-to-head matchups (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate, hyper-specific fitness queries leads to high costs and information overload. Consolidate search queries to 1-2 comprehensive tactical previews to keep research costs under $0.0300 per match.",
-    "information_needs": "FORM\n- How has Sweden\u2019s attacking output (specifically non-penalty xG and big chances created) trended over their last five competitive matches leading into the tournament?\n- Did Tunisia rely primarily on low-scoring, defensive structures (e.g., under 1.0 expected goals against per game) to secure qualification, or have they shown a more expansive, high-scoring transition phase in recent friendly matches?\n\nPLAYERS\n- Are Sweden's primary central attacking threats\u2014specifically Viktor Gy\u00f6keres, Alexander Isak, and Dejan Kulusevski\u2014fully fit, and how has their club-level chemistry translated to the national team dynamic?\n- Who is slated to anchor Tunisia's midfield (e.g., Ellyes Skhiri or a younger progressive profile), and do they have the mobility to match Sweden's physical, high-tempo midfield runners?\n\nTACTICS\n- How does Sweden's progressive, high-pressing style under their current tactical setup plan to break down Tunisia\u2019s historically compact, disciplined low-mid block?\n- What are Tunisia's statistical triggers for counter-attacking, and can they exploit the space left behind Sweden's advanced full-backs?\n\nH2H\n- How did Tunisia fare in their most recent competitive encounters against structurally similar, physical European opponents (such as their 0-0 draw against Denmark in the 2022 World Cup)?\n\nCONTEXT\n- As this is a group stage match in the 2026 World Cup, what does the group draw look like? Does a draw serve Tunisia's tournament progression strategy, or are both teams forced to play for a win due to a powerhouse third opponent in the group?\n\nMARKET\n- What are the current Asian Handicap and Over/Under lines, and has there been any significant market movement suggesting sharp money backing a low-scoring Tunisia upset or a comfortable Sweden victory?\n\nNEWS\n- Have there been any recent training camp reports regarding squad disharmony, tactical friction, or late-stage illnesses/minor knocks for either team in the 48 hours leading up to media day?\n\nVENUE\n- Which North American host city and stadium is staging this match, is it played on natural grass or temporary turf, and will the local indoor climate-control or outdoor humidity at 02:00Z favor the high-intensity physical demands of Sweden's press?",
-    "research_gaps": [
-      {
-        "need": "What are the current Asian Handicap and Over/Under lines, and has there been any significant market movement suggesting sharp money backing a low-scoring Tunisia upset or a comfortable Sweden victory?",
-        "category": "MARKET",
-        "ideal_service": "A dedicated sports betting odds API that aggregates real-time Asian Handicap and Over/Under lines from major global sportsbooks, including line movement history and sharp money indicators."
-      },
-      {
-        "need": "Which North American host city and stadium is staging this match, is it played on natural grass or temporary turf, and will the local indoor climate-control or outdoor humidity at 02:00Z favor the high-intensity physical demands of Sweden's press?",
-        "category": "VENUE",
-        "ideal_service": "A sports venue conditions and localized microclimate API providing stadium roof status, turf materials, and hour-by-hour relative humidity/temperature projections for sporting fixtures."
-      }
-    ],
-    "services_planned": [
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://fbref.com/en/squads/9002237d/Sweden-Men-Stats"
-        },
-        "cost": 0.002,
-        "reason": "Provides match-by-match expected goals (xG), non-penalty xG, and shot-creating actions for Sweden's recent competitive matches.",
-        "need": "How has Sweden\u2019s attacking output (specifically non-penalty xG and big chances created) trended over their last five competitive matches leading into the tournament?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://fbref.com/en/squads/94639908/Tunisia-Men-Stats"
-        },
-        "cost": 0.002,
-        "reason": "Provides tactical metrics like xG against (xGA) and goals conceded for Tunisia to assess their defensive floor during qualification.",
-        "need": "Did Tunisia rely primarily on low-scoring, defensive structures (e.g., under 1.0 expected goals against per game) to secure qualification, or have they shown a more expansive, high-scoring transition phase in recent friendly matches?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Group_D"
-        },
-        "cost": 0.002,
-        "reason": "Pulls historical World Cup group performance and match stats for Tunisia against Denmark to understand their tactical baseline against physical European opposition.",
-        "need": "How did Tunisia fare in their most recent competitive encounters against structurally similar, physical European opponents (such as their 0-0 draw against Denmark in the 2022 World Cup)?",
-        "category": "H2H"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "params": {
-          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
-        },
-        "cost": 0.002,
-        "reason": "Retrieves group listings and progression scenarios to outline the tournament mathematical context for both nations.",
-        "need": "As this is a group stage match in the 2026 World Cup, what does the group draw look like? Does a draw serve Tunisia's tournament progression strategy, or are both teams forced to play for a win due to a powerhouse third opponent in the group?",
-        "category": "CONTEXT"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "params": {
-          "query": "Sweden Gyokeres Isak Kulusevski fitness chemistry"
-        },
-        "cost": 0.01,
-        "reason": "Provides recent news updates regarding the physical status and collective chemistry of Sweden's premier attacking trident.",
-        "need": "Are Sweden's primary central attacking threats\u2014specifically Viktor Gy\u00f6keres, Alexander Isak, and Dejan Kulusevski\u2014fully fit, and how has their club-level chemistry translated to the national team dynamic?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "params": {
-          "query": "Tunisia midfield Ellyes Skhiri mobility"
-        },
-        "cost": 0.01,
-        "reason": "Fetches recent tactical insights and news on Tunisia's projected midfield starting lineup and individual athletic profiles.",
-        "need": "Who is slated to anchor Tunisia's midfield (e.g., Ellyes Skhiri or a younger progressive profile), and do they have the mobility to match Sweden's physical, high-tempo midfield runners?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "params": {
-          "query": "Sweden progressive high press tactics Tunisia compact low block"
-        },
-        "cost": 0.01,
-        "reason": "Retrieves tactical match previews analyzing Sweden's pressing systems against a disciplined low-mid block.",
-        "need": "How does Sweden's progressive, high-pressing style under their current tactical setup plan to break down Tunisia\u2019s historically compact, disciplined low-mid block?",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "params": {
-          "query": "Tunisia counter attack tactics Sweden advanced full backs"
-        },
-        "cost": 0.01,
-        "reason": "Provides transition phase analysis highlighting how Tunisia's quick counter-attacks can exploit spaces vacated by Sweden's offensive full-backs.",
-        "need": "What are Tunisia's statistical triggers for counter-attacking, and can they exploit the space left behind Sweden's advanced full-backs?",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "params": {
-          "query": "Sweden Tunisia training camp squad disharmony tactical friction illness knock"
-        },
-        "cost": 0.01,
-        "reason": "Fetches breaking news from training camps regarding squad atmosphere, minor injuries, or last-minute illnesses.",
-        "need": "Have there been any recent training camp reports regarding squad disharmony, tactical friction, or late-stage illnesses/minor knocks for either team in the 48 hours leading up to media day?",
-        "category": "NEWS"
-      }
-    ],
-    "services_used": [
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Pulls historical World Cup group performance and match stats for Tunisia against Denmark to understand their tactical baseline against physical European opposition.",
-        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Group_D\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Group_D\",\"mode\":\"basic\",\"markdown\":\"From Wikipedia, the free encyclopedia\\n\\n[![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/2022_FIFA_World_Cup_France_4%E2%80%931_Australia_-_%2811%29.jpg/330px-2022_FIFA_World_Cup_France_4%E2%80%931_Australia_-_%2811%29.jpg)](https://en.wikipedia.org/wiki/File:2022_FIFA_World_Cup_France_4%E2%80%931_Australia_-_\\\\(11\\\\).jpg)\\n\\nFrance vs Australia\\n\\nGroup D of the [2022 FIFA World Cup](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\") took place from 22 to 30 November 2022. The group consisted of national assosiation football teams [France](https://en.wikipedia.org/wiki/France_national_football_team \\\"France national football team\\\"), [Australia](https://en.wikipedia.org/wiki/Australia_men%27s_national_soccer_team \\\"Australia men's national soccer team\\\"), [Denmark](https://en.wikipedia.org/wiki/Denmark_national_football_team \\\"Denmark national football team\\\") and [Tunisia](https://en.wikipedia.org/wiki/Tunisia_national_football_team \\\"Tunisia national football team\\\"). The top two teams, France and Australia advanced to the [round of 16](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_knockout_stage#Round_of_16 \\\"2022 FIFA World Cup knockout stage\\\").[\\\\[1\\\\]](#cite_note-regulations-1) France won the group by goal difference, defeating Australia and Denmark before losing to Tunisia on the final matchday. Australia finished second and made to the first knockout stage since [2006](https://en.wikipedia.org/wiki/2006_FIFA_World_Cup \\\"2006 FIFA World Cup\\\"). France, Denmark and Australia had also played in [Group C](https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_Group_C \\\"2018 FIFA World Cup Group C\\\") at the [previous FIFA World Cup](https://en.wikipedia.org/wiki/2018_FIFA_World_Cup \\\"2018 FIFA World Cup\\\").\\n\\nThe teams were decided by the [World Cup draw](https"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Retrieves group listings and progression scenarios to outline the tournament mathematical context for both nations.",
-        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"2026 FIFA World Cup\\n\\nFIFA World Cup 26  \\nFIFA World Cup 2026  \\n_Copa Mundial de la FIFA 2026_\u00a0([Spanish](https://en.wikipedia.org/wiki/Spanish_language \\\"Spanish language\\\"))  \\n_Coupe du Monde de la FIFA 2026_\u00a0([French](https://en.wikipedia.org/wiki/French_language \\\"French language\\\"))\\n\\n[![Emblem of the 2026 FIFA World Cup, showing numbers \\\"2\\\" (top) and \\\"6\\\" (bottom) placed behind the World Cup trophy](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/250px-2026_FIFA_World_Cup_emblem.svg.png)](https://en.wikipedia.org/wiki/File:2026_FIFA_World_Cup_emblem.svg)\\n\\nTournament details\\n\\nHost countries\\n\\nCanada  \\nMexico  \\nUnited States\\n\\nDates\\n\\nJune 11 \u2013 July 19\\n\\nTeams\\n\\n48\u00a0(from 6 confederations)\\n\\nVenue\\n\\n16\u00a0(in 16 host cities)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n9\\n\\nGoals scored\\n\\n27\u00a0(3 per match)\\n\\nAttendance\\n\\n572,596\u00a0(63,622 per match)\\n\\nTop scorers\\n\\n-   [![Germany national football team](https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)](https://en.wikipedia.org/wiki/Germany_national_football_team \\\"Germany national football team\\\") [Kai Havertz](https://en.wikipedia.org/wiki/Kai_Havertz \\\"Kai Havertz\\\")\\n-   [![United States men's national soccer team](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)](https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team \\\"United States men's national soccer team\\\") [Folarin Balogun](https://en.wikipedia.org/wiki/Folarin_Balogun \\\"Folarin Balogun\\\")\\n-   (2 goals each)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\")\\n\\n_[2030](https://en.wikipedia.org/wiki/2030_FIFA_World_Cup \\\"2030 FIFA World Cup\\\")_ \u2192\\n\\nAll statistics correct "
-      }
-    ],
-    "research_cost": 0.004,
-    "wallet_before": 4.705,
-    "wallet_after": 4.701,
-    "prediction": {
-      "pick": "draw",
-      "confidence": 5,
-      "confidence_reason": "While Tunisia's disciplined low block is structurally designed to frustrate Sweden's offensive flow, the world-class clinical finishing of Gy\u00f6keres and Isak means Sweden can break a deadlock out of nothing, keeping confidence at a moderate level.",
-      "reasoning": "Tunisia's highly organized, physical low block is tactically equipped to neutralize Sweden's fluid but transition-reliant attack, resulting in a low-scoring defensive stalemate."
-    },
-    "full_reasoning": "An analysis of the Group Stage match between Sweden (SWE) and Tunisia (TUN) reveals a classic clash between a high-octane, individual-talent-heavy attack and a highly disciplined, defensively organized low block.\n\n### Sweden: Elite Attacking Firepower vs. Tactical Vulnerability\nUnder the stewardship of Jon Dahl Tomasson, Sweden plays an incredibly aggressive, fluid, and offensive brand of football. Armed with some of the most in-form forward players in world football\u2014including Alexander Isak, Dejan Kulusevski, and the prolific Viktor Gy\u00f6keres\u2014Sweden possesses immense individual attacking quality. \n\nHowever, Sweden\u2019s high-pressing system has a tendency to leave their defensive line exposed to quick transitions. Furthermore, when forced to play against deep, compact defensive units that deny space in behind, Sweden can struggle to find central playmaking solutions, often relying on isolated wing play or individual brilliance.\n\n### Tunisia: Low-Block Discipline and Defensive Resilience\nTunisia has consistently proven to be one of the most stubborn and defensively organized units in international football. Their campaign in the 2022 FIFA World Cup demonstrated this defensive floor, where they kept clean sheets against Denmark (0-0) and France (1-0), conceding only a single goal in the entire group stage. \n\nTunisia excels at maintaining physical and defensive discipline, crowding the box, and playing for low-scoring results, particularly in group-stage openers where securing a point is highly valuable. They are comfortable without the ball and will deliberately look to frustrate Sweden\u2019s creative players.\n\n### Tactical Matchup and Strategic Application\nApplying the core prediction rules:\n1. **The Individual Talent Trap (Rule 1):** Sweden is the clear favorite on paper due to their world-class attackers. However, backing them solely on individual offensive flair against an elite low block is a trap. Tunisia\u2019s compact shape will starve Gy\u00f6keres and Isak of space, forcing Sweden into low-percentage crosses and long-range efforts.\n2. **Defensive Floor over Technical Ceiling (Rule 2):** Tunisia\u2019s physical robustness and disciplined defensive unit are well-suited to withstand Sweden\u2019s pressure. Sweden's open system also leaves them vulnerable to Tunisian counter-attacks, which will force Sweden to play with more caution as the match progresses.\n\nGiven these dynamics, Tunisia is highly likely to successfully frustrate Sweden, leading to a hard-fought, low-scoring stalemate.\n\nPICK: draw\nCONFIDENCE: 5\nCONFIDENCE_REASON: While Tunisia's disciplined low block is structurally designed to frustrate Sweden's offensive flow, the world-class clinical finishing of Gy\u00f6keres and Isak means Sweden can break a deadlock out of nothing, keeping confidence at a moderate level.\nREASONING: Tunisia's highly organized, physical low block is tactically equipped to neutralize Sweden's fluid but transition-reliant attack, resulting in a low-scoring defensive stalemate.",
-    "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
-  },
-  {
     "match": "ESP vs CPV",
     "home": "ESP",
     "away": "CPV",
@@ -2766,6 +2625,281 @@
     },
     "full_reasoning": "An analysis of the Matchday 1 fixture between the Netherlands (NED) and Japan (JPN) in Group F of the 2026 World Cup reveals a matchup heavily influenced by pre-tournament squad developments.\n\n### Tactical & Personnel Analysis\n\nAccording to our core prediction strategy, matchups involving elite, energetic, and tactically disciplined underdogs like Japan require caution. Normally, assuming that Dutch physical size and individual quality will easily dismantle Japan's low block is a trap. However, the pre-tournament fitness and squad updates show a significant shift in the competitive balance:\n\n1. **The Japanese Defensive Screen & Transition Threat is Compromised:**\n   Japan's giant-killing identity relies on two crucial tactical pillars: a tireless, highly disciplined midfield anchor to disrupt top-tier opponents, and elite, direct transition outlets to punish them on the counter. The latest team news reveals devastating blows to both areas. Japan's captain and midfield metronome, Wataru Endo, is ruled out of the finals. Furthermore, Brighton's explosive winger Kaoru Mitoma is sidelined with a hamstring injury. Without Endo shielding the backline and Mitoma driving the transition, Japan\u2019s tactical floor and counter-attacking ceiling are severely lowered.\n\n2. **The Dutch Midfield Metronome is Fit:**\n   While Ronald Koeman delayed the squad announcement to give injured players time to prove their fitness, the final 26-man roster includes Barcelona\u2019s Frenkie de Jong alongside Premier League stars like Virgil van Dijk and Cody Gakpo. With De Jong fully fit to dictate the tempo and control the half-spaces, the Netherlands possess the elite playmaking metronome necessary to break down structured defenses\u2014especially one missing its primary anchor in Endo.\n\n### Conclusion\n\nWhile Japan's systemic organization remains respectable, the absences of their two most influential tactical players (Endo and Mitoma) leave them vulnerable. The Netherlands' superior individual quality, combined with midfield control through a fit Frenkie de Jong, should allow them to pierce a depleted Japanese block and secure a vital opening-match victory.\n\nPICK: home\nCONFIDENCE: 7\nCONFIDENCE_REASON: While Japan is a highly disciplined side, the tournament-defining injuries to key midfielder Wataru Endo and winger Kaoru Mitoma severely compromise their defensive screen and transition threat.\nREASONING: The Netherlands will exploit a weakened Japanese spine lacking its primary defensive anchor to secure a decisive victory in their opening group-stage match.",
     "retroactive": true,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
+  },
+  {
+    "match": "SWE vs TUN",
+    "home": "SWE",
+    "away": "TUN",
+    "kickoff": "2026-06-15T02:00Z",
+    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n3. **NED vs JPN: Avoid \"Narrative Bias\" Overlooking Systemic Discipline**\nDo not assume physical size and individual quality will automatically overcome an elite, energetic, and tactically disciplined system. If the favorite has midfield fitness concerns (a compromised metronome) and the underdog has a highly fit defensive screen and a proven record of limiting top-tier nations, avoid a straight win prediction and favor a draw or handicap.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Defensive Records Against Highly Ranked Opponents:* Vital warning sign to identify underdogs capable of frustrating elite teams (informed by NED vs JPN).\n  * *Key Midfield Workload & Fitness Status:* Essential for determining if a favorite's central controller is compromised or an underdog's anchor is fully fit (informed by NED vs JPN).\n* **Not Useful / Wasteful:**\n  * *Bookmaker Odds & Asian Handicap:* Abstract lines often reinforce narrative bias instead of providing objective analytical value (informed by NED vs JPN).\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate fitness queries leads to high costs. Consolidate searches to 1-2 comprehensive previews to keep costs under $0.0300 per match (informed by AUS vs TUR).",
+    "information_needs": "FORM\n- How did Sweden perform in their final three pre-tournament friendly matches, specifically regarding their defensive transition and clean sheet record under Jon Dahl Tomasson?\n- What is Tunisia's recent form in competitive CAF qualifiers and warm-up matches, particularly their goal-scoring efficiency against non-African opposition?\n\nPLAYERS\n- Is Sweden's striking duo of Alexander Isak and Viktor Gy\u00f6keres both fully fit to start together, or will Tomasson have to compromise his attacking shape due to late fitness tests?\n- Who is starting in goal for Tunisia, and does their defensive line-up contain enough physical profile to match Sweden's height advantage on set pieces?\n\nTACTICS\n- How will Sweden's high-pressing, possession-heavy 4-2-3-1 system handle Tunisia\u2019s low-block, counter-attacking transitions?\n- Will Tunisia deploy a compact 5-4-1 mid-block to deny space between the lines for Swedish playmakers like Dejan Kulusevski?\n\nH2H\n- What tactical patterns emerged from the most recent historical matchups between these two nations, and how many players from those squads are still active in the projected starting XI today?\n\nCONTEXT\n- As this is the opening match of the 2026 World Cup Group Stage, how does the new 48-team format (where the best third-place teams advance) alter each manager's risk tolerance in the final 20 minutes if the game is tied?\n\nMARKET\n- What are the current 3-way moneyline odds and Asian Handicap lines, and has there been any significant line movement towards Sweden since the rosters were officially finalized?\n\nNEWS\n- Have there been any sudden camp illnesses, disciplinary actions, or late-night travel delays reported from either the Swedish base camp or the Tunisian delegation in the last 48 hours?\n\nVENUE\n- Which North American host stadium is staging this match, is it played on artificial turf or natural grass, and what are the expected humidity levels at kickoff time (02:00Z)?",
+    "research_gaps": [
+      {
+        "need": "Real-time sports betting odds, 3-way moneylines, and Asian handicap market movements following roster finalization.",
+        "category": "MARKET",
+        "ideal_service": "A dedicated sports odds feed API aggregated from professional betting markets to detect sharp money inflow."
+      },
+      {
+        "need": "Historical head-to-head match details containing specific player-to-player retention metrics between these squads.",
+        "category": "H2H",
+        "ideal_service": "An optical-tracking historical database mapping specific starting XI player retention to strategic matchups from prior cycles."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Sweden vs Tunisia World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Sweden vs Tunisia World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Sweden World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Sweden recent form and results",
+        "need": "How has Sweden performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Tunisia World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Tunisia recent form and results",
+        "need": "How has Tunisia performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Sweden vs Tunisia head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Sweden vs Tunisia World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Tunisia World Cup 2026 starting defense height physical profile goalkeeper",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Exposes potential aerial mismatches on set-pieces, which represents Sweden's high-probability route to breaking down a low block.",
+        "need": "Who is starting in goal for Tunisia, and does their defensive line-up contain enough physical profile to match Sweden's height advantage on set pieces?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Sweden vs Tunisia World Cup 2026 stadium venue grass turf weather humidity",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies if artificial turf or high humidity will slow down Swedish possession movement or drain the high-pressing side faster.",
+        "need": "Which North American host stadium is staging this match, is it played on artificial turf or natural grass, and what are the expected weather and humidity levels at kickoff?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "World Cup 2026 48 team format best third place group stage strategy risk tolerance",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Translates tournament structure into late-game behavior (e.g., whether a draw is actively preserved by both managers instead of taking offensive risks).",
+        "need": "As this is the opening match of the 2026 World Cup Group Stage, how does the new 48-team format (best third-place teams advance) alter each manager's risk tolerance in the final 20 minutes if tied?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Sweden Tunisia World Cup 2026 camp illness delay",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Captures any last-minute camp disruptions or logistical issues that could alter team morale or fatigue levels right before kickoff.",
+        "need": "Have there been any sudden camp illnesses, disciplinary actions, or late-night travel delays reported from either the Swedish base camp or the Tunisian delegation in the last 48 hours?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Sweden World Cup 2026 squad injury news Isak Gyokeres",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Determines if Sweden's elite striking partnership is fully available, which directly dictates Tomasson's offensive output and tactical shape.",
+        "need": "Are Alexander Isak and Viktor Gy\u00f6keres fit to start together for Sweden, or will Tomasson have to compromise his attacking shape?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Sweden friendly matches results Jon Dahl Tomasson defensive transitions clean sheets",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Uncovers whether Sweden's defensive floor under Tomasson is stable enough to prevent transition goals against counter-attacking opponents.",
+        "need": "How did Sweden perform in their final three pre-tournament friendly matches, specifically regarding their defensive transition and clean sheet record under Jon Dahl Tomasson?",
+        "category": "FORM"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Sweden vs. Tunisia Prediction, Odds, Picks For World Cup Match - FOX Sports\n  https://www.foxsports.com/stories/soccer/2026-world-cup-sweden-tunisia-odds-prediction-picks\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Sweden vs. Tunisia Prediction, Odds, Picks For World Cup Match\n\nPublished Jun. 14, 2026 2:49 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nSweden and Tunisia are set to face off in their opening match of Group F at the 2026 FIFA World Cup at Monterrey Stadium in Guadalupe, Mexico on FS1.\n\nThis marks Sweden's return to the World Cup stage for the first time since 2018. After missing out on the 2022 tournament, Sweden qualified dramat\n\n\u2022 Sweden vs Tunisia: TV Channel, Live Stream, Kick-Off Time & How to Watch the 2026 World Cup Match - Telecom Asia Sport\n  https://www.telecomasia.net/blog/sweden-vs-tunisia-tv-channel-live-stream-kick-off-time-and-how-to-watch-the-2026-world-cup-match/\n  ## Sweden vs Tunisia Team News\n\nSweden heads into the match with a fully fit squad and no reported injury concerns, giving the coaching staff a full selection to choose from.\n\nFor Tunisia, there is some concern over the fitness of midfielder Hannibal Mejbri. The former Manchester United youngster picked up an injury during Tunisia's pre-World Cup friendly against Austria, and the Eagles of Carthage will be hoping the issue is not serious ahead of their tournament campaign.\n\n## Sweden vs Tunisia Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Sweden to Win | Draw | Japan  to Win |\n| 1xBet \n\n\u2022 Tunisia aiming for winning start in World Cup clash with Sweden - Reuters\n  https://www.reuters.com/sports/soccer/tunisia-aiming-winning-start-world-cup-clash-with-sweden-2026-06-13/\n  Advertisement \u00b7 Scroll to continue\n\n\"Who wouldn't want to start with a win tomorrow? \u200bI think that the Swedish coach and the Swedish players also are keen to start \u200bwith a victory,\" he told a press conference on Saturday.\n\n\"The Tunisian fans are here \u2060and they would like to see their national team perform very well, and this is what we \u200bare trying to do. We will endeavour to help our team win against a very difficult team, \u200ba very strong team, and we will get off to a good start in this competition.\"\n\nLamouchi said his players knew the Swedish squad well, especially the front two of Viktor Gyo\n\n\u2022 Sweden vs. Tunisia: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-sweden-vs-tunisia-tv-channel-live-stream-2026-fifa-world-cup-group-f\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Sweden vs. Tunisia: How to Watch, TV Channel, Live Stream\n\nPublished Jun. 13, 2026 10:01 p.m. ET\n\nshare\n\nfacebookxredditlink\n\nSweden and Tunisia meet in their 2026 FIFA World Cup opener on Sunday, June 14, 2026 at 10:00 p.m. ET from Monterrey Stadium.\n\nSweden, ranked 38th by FIFA, are appearing at their 13th World Cup, with their best finish a runner-up result in 1958. Tunisia enter Group F ranked 45th by FIFA, appearing at\n\n\u2022 Where to watch Sweden vs. Tunisia live stream, TV channel, start time for World Cup Group F match - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/watch-sweden-tunisia-live-stream-channel-start-time-world-cup/46575b1084ce259056459577\n  # Where to watch Sweden vs. Tunisia live stream, TV channel, start time for World Cup Group F match\n\nDavid Suggs\n\n\u2022\n\n Add The Sporting News on Google \n\nOne of Europe's upstarts will take on one of North Africa's finest sides as the group stage of the 2026 World Cup kicks off for Group F.\n\nSweden will take on Tunisia at the Estadio Azteca in their 13th World Cup Finals appearance. Anchored by star strikers Alexander Isak and Viktor Gyokeres, Blagult has hopes to secure a knockout stage appearance after failing to qu"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Sweden vs Tunisia: TV Channel, Live Stream, Kick-Off Time & How to Watch the 2026 World Cup Match - Telecom Asia Sport\n  https://www.telecomasia.net/blog/sweden-vs-tunisia-tv-channel-live-stream-kick-off-time-and-how-to-watch-the-2026-world-cup-match/\n  ## Sweden vs Tunisia Team News\n\nSweden heads into the match with a fully fit squad and no reported injury concerns, giving the coaching staff a full selection to choose from.\n\nFor Tunisia, there is some concern over the fitness of midfielder Hannibal Mejbri. The former Manchester United youngster picked up an injury during Tunisia's pre-World Cup friendly against Austria, and the Eagles of Carthage will be hoping the issue is not serious ahead of their tournament campaign.\n\n## Sweden vs Tunisia Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Sweden to Win | Draw | Japan  to Win |\n| 1xBet \n\n\u2022 Tunisia aiming for winning start in World Cup clash with Sweden - Reuters\n  https://www.reuters.com/sports/soccer/tunisia-aiming-winning-start-world-cup-clash-with-sweden-2026-06-13/\n  Advertisement \u00b7 Scroll to continue\n\n\"Who wouldn't want to start with a win tomorrow? \u200bI think that the Swedish coach and the Swedish players also are keen to start \u200bwith a victory,\" he told a press conference on Saturday.\n\n\"The Tunisian fans are here \u2060and they would like to see their national team perform very well, and this is what we \u200bare trying to do. We will endeavour to help our team win against a very difficult team, \u200ba very strong team, and we will get off to a good start in this competition.\"\n\nLamouchi said his players knew the Swedish squad well, especially the front two of Viktor Gyo\n\n\u2022 Sweden vs. Tunisia Prediction, Odds, Picks For World Cup Match - FOX Sports\n  https://www.foxsports.com/stories/soccer/2026-world-cup-sweden-tunisia-odds-prediction-picks\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Sweden vs. Tunisia Prediction, Odds, Picks For World Cup Match\n\nPublished Jun. 14, 2026 2:49 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nSweden and Tunisia are set to face off in their opening match of Group F at the 2026 FIFA World Cup at Monterrey Stadium in Guadalupe, Mexico on FS1.\n\nThis marks Sweden's return to the World Cup stage for the first time since 2018. After missing out on the 2022 tournament, Sweden qualified dramat\n\n\u2022 Sweden vs. Tunisia: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-sweden-vs-tunisia-tv-channel-live-stream-2026-fifa-world-cup-group-f\n  ## How to Watch Sweden vs. Tunisia\n\n When: Sunday, June 14, 2026 at 10:00 p.m. ET\n Where: Monterrey Stadium, Monterrey, Mexico\n TV: FS1\n Stream: Watch 3 days free on FOX One, FOX Sports, FOX Sports App\n\n### Group F Preview: Netherlands, Japan, Sweden, Tunisia\n\nAlexi Lalas and David Mosse keep on rolling with their group preview series, this time breaking down Netherlands, Japan, Sweden, Tunisia and Group F! Are the guys worried about Japan\u2019s injuries? Tune in daily for a new group as we speed toward the 2026 FIFA World Cup kicking off June 11th on FOX! Presented by @Zillow #Zillow\n\n## Sweden v\n\n\u2022 Where to watch Sweden vs. Tunisia live stream, TV channel, start time for World Cup Group F match - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/watch-sweden-tunisia-live-stream-channel-start-time-world-cup/46575b1084ce259056459577\n  # Where to watch Sweden vs. Tunisia live stream, TV channel, start time for World Cup Group F match\n\nDavid Suggs\n\n\u2022\n\n Add The Sporting News on Google \n\nOne of Europe's upstarts will take on one of North Africa's finest sides as the group stage of the 2026 World Cup kicks off for Group F.\n\nSweden will take on Tunisia at the Estadio Azteca in their 13th World Cup Finals appearance. Anchored by star strikers Alexander Isak and Viktor Gyokeres, Blagult has hopes to secure a knockout stage appearance after failing to qu"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Sweden recent form and results",
+        "data": "\u2022 Sweden at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d159618c27-fd6d64ccd5f6-1000--sweden-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  The majority of Sweden\u2019s most impressive performances came in the earliest editions of the World Cup, as they reached at least the final four in three of the first six tournaments. Progression to the quarter-finals in 2018 has been their best recent showing, and this is just the second time they have qualified for the finals in 20 years after missing out in 2010, 2014 and 2022.\n\n\u2022 Reuters Sweden at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/sweden/\n  Latest Sweden World Cup 2026 news, fixtures, results and squad updates \u00b7 ago \u00b7 Sweden strike force faces tough Tunisia test in World Cup opener \u00b7 Sweden boast a formidable strike partnership in Alexander Isak and Viktor Gyokeres, \u200cbut the two will have their work cut out in their opening World Cup Group F game on Sunday when they take on a Tunisia side that didn&#x27;t concede a goal in qualifying.\n\n\u2022 r/soccer on Reddit: [World Cup 2026 Preview] Sweden: Fortune, Firepower, and Potter's Playoff Miracle (24/48)\n  https://www.reddit.com/r/soccer/comments/1u5hjex/world_cup_2026_preview_sweden_fortune_firepower/\n  60 votes, 18 comments. Last one for the day, we finally covered 24th team in series, Sweden*, who are featuring against Tunisia in hopefully another\u2026\n\n\u2022 Sweden World Cup 2026 team guide | Sweden | The Guardian\n  https://www.theguardian.com/football/2026/jun/03/sweden-world-cup-2026-team-guide\n  So <strong>Sweden made it to the World Cup despite collecting two points from six games in their qualifying group</strong>. They now face Tunisia, Netherlands and Japan with hope of getting into the knockout stages \u2013 that\u2019s the Potter effect for you.\n\n\u2022 Sweden | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/sweden\n  Sweden | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Sweden squad at FIFA World Cup 2026\u2122.\n\n\u2022 [Discussion] [World Cup 2026 Preview] Sweden: Fortune, Firepower, and Potter's Playoff Miracle (24/48)\n  https://www.reddit.com/r/soccer/comments/1u5hjex/world_cup_2026_preview_sweden_fortune_firepower/\n  I don't expect much from us. Last time the WC was played in the US we took a historical bronze, but those days are looong gone. Potter has barely had any time to really establish a stable team after the catastrophic mess that Tomasson left, but i think after a couple of years of work from him, we will see a stronger Sweden with a new identity. We have a decent amount of talented footballers, especially offensively, but defensively at this very moment we are way too leaky to be able to make noise in this tournament. Basically, we are thrilled if we can make it to the Ro32. At most we can take 4 points in the GS, but i can easily only see 1 point aswell. Hopefully let's start with 3 points against Tunisia, which is our best chance to win a game, and let's try to squeak out results against the two others. We are much bigger than Japan on physique, so maybe play a physical game there and beat them up, but they are a much more cohesive team and i don't expect a win."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Tunisia recent form and results",
+        "data": "\u2022 Tunisia | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/tunisia/team-news\n  Tunisia | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the __ squad at FIFA World Cup 2026\u2122.\n\n\u2022 Tunisia World Cup 2026: Fixtures, manager, squad depth and tactical analysis | Squawka | EN\n  https://www.squawka.com/en/news/world-cup/tunisia-world-cup-2026-fixtures-squad-analysis/\n  Tunisia sealed qualification for ... CAF Group H. <strong>They amassed 28 points from a possible 30, winning nine of their 10 matches and drawing the other, while scoring 22 goals and recording a perfect ten clean sheets</strong>....\n\n\u2022 World Cup 2026 Ultimate Guide: Tunisia | Goal.com\n  https://www.goal.com/en/world-cup-teams/group-f/world-cup-2026-guide-tunisia/O~blt87633de0bfece3b8\n  Tunisia have never progressed beyond the group stage at a World Cup, and though they memorably beat France in 2022, they are still waiting to break through their own glass ceiling. Drawn alongside Sweden, Japan and the Netherlands this time around, making the knockouts will not be an easy task for the North Africans, but they have the quality to compete for second or third place. ... Tunisia have experienced significant instability on the sidelines in recent times, moving from Faouzi Benzarti to Trabelsi and now to Sabri Lamouchi in little more than two years.\n\n\u2022 Tunisia at the FIFA World Cup 2026: Squad, fixtures and results\n  https://www.reuters.com/graphics/SOCCER-WORLDCUP/mopaoglqkpa/teams/tunisia/\n  Squad, line-ups and fixture schedule for the Tunisia team in USA \u00b7 Canada \u00b7 Mexico\n\n\u2022 Tunisia qualify | FIFA World Cup 26\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-qualify\n  Thanks to their <strong>1-0 victory over Equatorial Guinea</strong>, the Carthage Eagles have qualified for the FIFA World Cup 26\u2122. Tunisia have secured their place in the first-ever 48-team FIFA World Cup\n\n\u2022 [Discussion] Hater's Guide to the 2026 FIFA World Cup (for us Filthy Americans)\n  https://www.reddit.com/r/UrinatingTree/comments/1u1cck8/haters_guide_to_the_2026_fifa_world_cup_for_us/\n  > For the smallest Spanish-speaking South American country Well\u2026 second smallest Spanish speaking country in South America. That honor goes to Uruguay btw"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Sweden vs. Tunisia: Head-to-head record and past meetings ahead of 2026 World Cup showdown - Sports Mole\n  https://www.sportsmole.co.uk/football/spain/world-cup-2026/head-to-head/sweden-vs-tunisia-head-to-head-record-and-past-meetings_599097.html\n  Sweden and Tunisia have locked horns on four previous occasions, and it is the former that leads the head-to-head record <strong>two victories to one, while there has also been one draw</strong>. History will be made on Sunday, as the two teams prepare to meet ...\n\n\u2022 Sweden vs Tunisia Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-sweden-vs-tunisia\n  Last 5 , <strong>Sweden Win 2 , Draw 2 , Lose 1 , Score Win Prob: 40.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 80.0%</strong> ... Last 5 , Tunisia Win 1 , Draw 2 , Lose 2 , Score Win Prob: 20.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 40.0%\n\n\u2022 Sweden vs. Tunisia Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/sweden_vs_tunisia.php\n  In the history of World Cups, Sweden National Team faced Tunisia in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 Sweden vs Tunisia - live score, predicted lineups and H2H stats\n  https://www.fotmob.com/matches/tunisia-vs-sweden/1x5290\n  Sweden faces Tunisia at Monterrey Stadium on Mon, Jun 15, 2026, 02:00 UTC. This match is part of the World Cup Grp. F. You can check the recent head-to-head encounters, as well as full H2H record on this page to see how Sweden and Tunisia have fared against each other in the past.\n\n\u2022 Sweden vs Tunisia: All-time head-to-head record ahead of FIFA World Cup 2026 clash\n  https://khelnow.com/football/world-football-sweden-vs-tunisia-head-to-head-fifa-world-cup-202606\n  <strong>Sweden take on Tunisia in their FIFA World Cup 2026 Group F opener with the Scandinavian side holding the historical edge in the head-to-head record</strong>."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Sweden vs Tunisia | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021474\n  The official site of the international governing body of football with news, national associations, competitions, results, fixtures, development, organisation, world rankings, statistics, the International Football Association Board, history, laws of the game, futsal, publications, downloads, and contact details.\n\n\u2022 Sweden vs Tunisia FIFA World Cup 2026 Preview: Everything you need to know | Goal.com US\n  https://www.goal.com/en-us/news/sweden-tunisia-world-cup-preview/blt584be5c94454e77c\n  In Group F, <strong>Sweden currently sit third and Tunisia fourth in the early standings table ahead of the opening round of fixtures</strong>.\n\n\u2022 2026 FIFA World Cup Group F - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_F\n  <strong>Group F</strong> of the 2026 FIFA World Cup will take place from June 14 to 25, 2026. The group consists of the Netherlands, Japan, Sweden, and Tunisia. The top two teams, possibly along with the third-placed team, will advance to the round of 32. ... ^ a b As the identity of the UEFA second round Path ...\n\n\u2022 Sweden vs Tunisia expert predictions, picks for World Cup 2026\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/14/sweden-tunisia-world-cup-prediction-analysis-odds/90546420007/\n  <strong>The top two teams in each group advance to the Round of 32 along with the eight best third-place squads</strong>. Tiebreakers in the group standings will be resolved using the following criteria: Greatest number of points obtained in the group matches ...\n\n\u2022 2026 FIFA World Cup match schedule: Fixtures, results, features - ESPN\n  https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket\n  Germany (East Rutherford, N.J.), 4 p.m. ET Group E: Curacao vs. Ivory Coast (Philadelphia), 4 p.m. ET <strong>Group F</strong>: Japan vs. Sweden (Arlington, Texas), 6 p.m. local / 7 p.m. ET <strong>Group F</strong>: Tunisia vs."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Exposes potential aerial mismatches on set-pieces, which represents Sweden's high-probability route to breaking down a low block.",
+        "data": "\u2022 Tunisia squad 2026: players and coach on Tribuna.com\n  https://tribuna.com/en/team/tunisia/squad/stat/2026/world-cup-qualification-africa/\n  Tunisia squad 2026, coach, starting and full squad, goalkeepers, defenders, midfielders and forwards, their numbers, age, weight and height on Tribuna.com\n\n\u2022 Tunisia World Cup 2026 Players \u2014 Full Squad, Stats & Profiles \u00b7 SportBusy\n  https://www.sportbusy.com/world-cup-2026/teams/tunisia/players/\n  Each player profile shows: position, age, nationality, appearances (App), sub appearances (Sub), goals (G), assists (A), shots (Sh), shots on target (SoT), yellow cards (YC), red cards (RC), and goalkeeper stats (SV, GA, ST) where available. Who is Tunisia&#x27;s best player at the 2026 World Cup?+\n\n\u2022 Tunisia at FIFA World Cup 2026: All players, full squad list, key stats and schedule\n  https://www.olympics.com/en/news/fifa-world-cup-2026-tunisia-players-full-squad-list-key-stats-schedule\n  Find out what you need to know about Tunisia at the 2026 FIFA World Cup. FIFA World Cup: All teams, squads and players - complete list \u00b7 Who are the big stars missing from the FIFA World Cup? ... Goalkeepers: Sabri \u200bBen Hessen (Etoile Sahel), Abdelmouhib Chamakh (Club Africain), Aymen Dahman (CS Sfaxien)\n\n\u2022 Tunisia 2026 Squad - ESPN\n  https://www.espn.com/soccer/team/squad/_/id/659/tunisia\n  Explore the 2026 Tunisia roster on ESPN. Includes full details on appearances, minutes played, goals and assists.\n\n\u2022 Tunisia 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/tunisia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  Tunisia arrives at the 2026 tournament aiming to break a long-standing barrier. The North African nation has competed in six previous global tournaments but has never advanced past the group stage. Heading to North America, the Eagles of Carthage bring an elite defensive record from their qualification campaign.\n\n\u2022 [Discussion] Hater's Guide to the 2026 FIFA World Cup (for us Filthy Americans)\n  https://www.reddit.com/r/UrinatingTree/comments/1u1cck8/haters_guide_to_the_2026_fifa_world_cup_for_us/\n  > For the smallest Spanish-speaking South American country Well\u2026 second smallest Spanish speaking country in South America. That honor goes to Uruguay btw"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies if artificial turf or high humidity will slow down Swedish possession movement or drain the high-pressing side faster.",
+        "data": "\u2022 World Cup 2026 weather updates: Forecasts for key matches, stadium conditions and fan impacts\n  https://www.accuweather.com/en/sports/live-news/world-cup-2026-weather-updates-forecasts-for-key-matches-stadium-conditions-and-fan-impacts/1898671\n  <strong>Rain during the match could briefly lower temperatures, but it may also make the air feel even more humid</strong>. ... Jun. 12, 2026 10:29 AM EDT\n\n\u2022 Sweden vs Tunisia | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021474\n  The official site of the international governing body of football with news, national associations, competitions, results, fixtures, development, organisation, world rankings, statistics, the International Football Association Board, history, laws of the game, futsal, publications, downloads, and contact details.\n\n\u2022 Sweden vs Tunisia: Where to Watch, Live Stream, TV Channel & Kick-Off Time | World Cup 2026 | Goal.com US\n  https://www.goal.com/en-us/news/live-stream-online-tv-where-to-watch-sweden-v-tunisia/blt0a5896bc1171bf4d\n  <strong>Estagio BBVA</strong> is one of the most atmospheric venues in the tournament, with a capacity of over 50,000 and a mountain backdrop that makes it one of the most visually striking grounds in world football.\n\n\u2022 See which World Cup matches are most threatened by hot weather : NPR\n  https://www.npr.org/2026/06/04/nx-s1-5742519/world-cup-fifa-hot-weather-risk-climate-miami\n  See which World Cup matches are most threatened by hot weather Dangerously hot, <strong>humid weather is likely at many of the 2026 World Cup soccer venues</strong>.\n\n\u2022 FIFA World Cup 2026: The science behind perfect football pitches\n  https://www.reuters.com/graphics/SOCCER-WORLDCUP/GRASS/lbvgyqdnxvq/\n  At the 2026 tournament, each venue will use one of those approaches according to its climate and stadium design. David Graham, a senior pitch manager for FIFA, said warm-season grasses were suitable for some venues, including New York/New Jersey, while Mexico City would use cool-season grass because of its elevation. The grasses are selected because of their local climate, he said. Researchers testing World Cup turf at Michigan State University found that roofed stadiums with limited sunlight performed better with ryegrass-bluegrass blends, while hotter open-air venues were better suited to bermudagrass."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Translates tournament structure into late-game behavior (e.g., whether a draw is actively preserved by both managers instead of taking offensive risks).",
+        "data": "\u2022 2026 FIFA World Cup - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\n  The top two teams from each group, along with the eight best third-placed teams, will advance to a newly introduced Round of 32 single-elimination knockout stage. Critics of this format argued that <strong>the use of three-team groups with two teams progressing significantly increased the risk of collusion</strong> ...\n\n\u2022 The 48-Team World Cup: How the New Group Stage Works - UCFB\n  https://www.ucfb.ac.uk/news/the-48-team-world-cup-how-the-new-group-stage-works/\n  This significantly alters the competitive dynamics of the group stage, reducing the risk of early elimination for stronger teams while giving emerging nations a realistic chance to progress. The increase of 40 matches (a 68% rise) highlights how the competition is evolving into a longer, more commercially valuable global event . Allowing third-placed teams to progress is not entirely new.\n\n\u2022 FIFA World Cup 2026: How the new 48-team format changes group-stage qualification and knockouts | Football News\n  https://www.hindustantimes.com/sports/football/fifa-world-cup-2026-how-the-new-48-team-format-changes-group-stage-qualification-and-knockouts-101781093224639.html\n  The price of that decision is the third-place qualification route. <strong>Sending 32 teams into the knockouts, rather than 16,</strong> is what allows the tournament to absorb the jump from 32 entrants to 48 while keeping the group stage recognisable.\n\n\u2022 World Cup 2026 Format Explained | 48 Teams, 12 Groups & Knockout Stage\n  https://mundialanalytics.com/tournament-format\n  Instead of eight groups, the tournament now has 12 groups of four teams. <strong>The top two teams in each group qualify automatically, and the eight best third-place teams also advance</strong>. That creates a new Round of 32 before the traditional Round of 16, quarter-finals, semi-finals and final.\n\n\u2022 2026 FIFA World Cup: Group Stage Tiebreakers And How Third-Place Teams Advance | FOX Sports\n  https://www.foxsports.com/stories/soccer/fifa-world-cup-group-stage-third-place-tiebreakers\n  1. Points 2. Goal difference 3. Goals scored 4. Highest team conduct score in all group matches (taking into account yellow cards and red cards) 5. FIFA World Ranking \u00b7 2026 World Cup Schedule: All Games, Dates, Matchups and How To Watch\n\n\u2022 [Discussion] I crunched the numbers on the 'Best 3rd Placed Sides' combinations in the 2026 World Cup knockout bracket so you don't have to.\n  https://www.reddit.com/r/soccer/comments/1u00jth/i_crunched_the_numbers_on_the_best_3rd_placed/\n  Hate this third place nonsense. Almost every competition has this now, almost completely removes any jeopardy from the group stages. 3rd vs 4th in the group becomes the decider. We\u2019ll never have that 10 minutes where both Costa Rica and Japan were going through at the expense of Spain and Germany ever again.\n\n\u2022 [Discussion] The weirdest part of the FIFA World Cup might be the 3rd-place teams\n  https://www.reddit.com/r/worldcup/comments/1tmkhb7/the_weirdest_part_of_the_fifa_world_cup_might_be/\n  72 matches to get rid of 16 teams is ridiculous."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Captures any last-minute camp disruptions or logistical issues that could alter team morale or fatigue levels right before kickoff.",
+        "data": "{\"topic\":\"Sweden Tunisia World Cup 2026 camp illness delay\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Determines if Sweden's elite striking partnership is fully available, which directly dictates Tomasson's offensive output and tactical shape.",
+        "data": "\u2022 Tunisia was untouchable in World Cup qualifying. Now can Eagles stop Sweden stars? - USA Today\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/14/tunisia-vs-sweden-preview-world-cup-2026/90546869007/\n  # Tunisia was untouchable in World Cup qualifying. MONTERREY, Mexico - Tunisia made history in its journey to qualify for the 2026 World Cup. The Eagles of Carthage became the first nation in history to complete a full qualification cycle for the World Cup without conceding a goal during. With a well-balanced squad and plenty of international experience, Tunisia collected 28 of 30 points, blanking all its opponents along the way. Despite making history, Tunisia manager Sabri Lamouchi is quick to temper expectations for the upcoming tournament, acknowledging the level of the opponents Tunisia w\n\n\u2022 Graham Potter interview: Finding joy with Sweden after Chelsea, West Ham woe, and unlocking Viktor Gyokeres and Alexander Isak at World Cup - Sky Sports\n  https://www.skysports.com/football/news/13957/13550178/graham-potter-interview-finding-joy-with-sweden-after-chelsea-west-ham-woe-and-unlocking-viktor-gyokeres-and-alexander-isak-at-world-cup\n  # Graham Potter interview: Finding joy with Sweden after Chelsea, West Ham woe, and unlocking Viktor Gyokeres and Alexander Isak at World Cup. In an in-depth interview, Graham Potter explains how the \"best night of his career\" propelled his Sweden side to the World Cup; former Brighton, Chelsea and West Ham boss also discusses overcoming dark times and working with Viktor Gyokeres and Alexander Isak. It is more than two months since Viktor Gyokeres's 89th-minute goal sealed Sweden's extraordinary World Cup play-off victory over Poland at a delirious Strawberry Arena in Stockholm, but Graham Po\n\n\u2022 Free 2026 World Cup anytime goalscorer picks, odds, best bets: Havertz, Gyokeres among best bets for Sunday - CBS Sports\n  https://www.cbssports.com/soccer/news/free-2026-world-cup-anytime-goalscorer-picks-odds-best-bets-havertz-gyokeres-among-best-bets-for-sunday/\n  site: media | arena: soccer | pageType: stories | section: | slug: free-2026-world-cup-anytime-goalscorer-picks-odds-best-bets-havertz-gyokeres-among-best-bets-for-sunday | sport: soccer | route: article\\_single.us | 6-keys: media/spln/soccer/worldcup/free/stories. # Free 2026 World Cup anytime goalscorer picks, odds, best bets: Havertz, Gyokeres among best bets for Sunday. ## We've selected four World Cup anytime goalscorer prop picks for Sunday, June 14. Another quartet of World Cup games is on tap for Sunday, June 14, with major stars set to take the field. On the schedule is Germany vs. Cu\n\n\u2022 BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener - Telecom Asia Sport\n  https://www.telecomasia.net/blog/breaking-abdessamad-ezzalzouli-set-for-3-4-weeks-out-after-suspected-mcl-injury-ahead-of-world-cup-opener/\n  # BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener. The Real Betis attacker picked up the injury in the first half of the match, prompting the medical team to take immediate precautionary action by substituting him at the start of the second half to avoid worsening the issue. Image 5: World Cup 2026: Switzerland Relocate Base Camp After Venomous Snake Scare in San Diego. Image 6: 2026 World Cup: Brazil Call Up Ederson to Replace Injured Wesley Ahead of Morocco Opener. Image 7: Germany at the FIFA World Cup 2026: Die Mannschaft Favoured \n\n\u2022 Sweden vs. Tunisia: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-sweden-vs-tunisia-tv-channel-live-stream-2026-fifa-world-cup-group-f\n  FIFA Men's World Cup. FIFA Men's World Cup. 3. ### 2026 World Cup Odds: USA, Morocco Surge After Openers### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cu"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Uncovers whether Sweden's defensive floor under Tomasson is stable enough to prevent transition goals against counter-attacking opponents.",
+        "data": "\u2022 BACK TO GLASGOW - Yahoo Sports\n  https://sports.yahoo.com/articles/back-glasgow-150000240.html\n  **AC Milan will face Celtic in an international friendly** as part of the Men's First Team's preparations for the 2026/27 season. The match, scheduled before the squad departs for its pre-season tour of Australia and Indonesia, will take place on Saturday 25 July at Celtic Park in Glasgow against Celtic. One notable summer encounter between Rangers and AC Milan took place in July 2002 and ended in a 2-2 draw. The match was played at the historic Ibrox Stadium in Glasgow in front of 40,411 spectators and featured the **Rangers debut of a young Spanish midfielder, Mikel Arteta, now manager of Ar\n\n\u2022 Sweden vs Tunisia Free Live Stream: How to Watch the 2026 World Cup From Anywhere - Gizmodo\n  https://gizmodo.com/how-to-watch-sweden-vs-tunisia-livestream-for-free-2000771589\n  # How to Watch Sweden vs. Here is how to stream the match free, wherever you are watching. * Free in the UK: BBC iPlayer or ITVX, both carrying all 104 matches in the clear. * Paid in the US: FS1 on cable and FOX One for streaming, with Spanish coverage on Universo and Peacock. * Outside a free-broadcast country: a VPN places you on a UK server so the free stream opens. ## How to Watch Sweden vs Tunisia Free Live Stream. Here is the clean way to catch the Group F opener live and for free, on a TV channel or its computer and mobile equivalent. 1. In the UK, open BBC iPlayer or ITVX and press pl\n\n\u2022 Tunisia aiming for winning start in World Cup clash with Sweden - Reuters\n  https://www.reuters.com/sports/soccer/tunisia-aiming-winning-start-world-cup-clash-with-sweden-2026-06-13/\n  # Tunisia aiming for winning start in World Cup clash with Sweden | Reuters. ## Browse World. # Tunisia aiming for winning start in World Cup clash with Sweden. Item 1 of 2 Soccer Football - International Friendly - Austria v Tunisia - Ernst Happel Stadion, Vienna, Austria - June 1, 2026 General view of Tunisia players during the warm up before the match REUTERS/Lisa Leutner. **[1/2]**Soccer Football - International Friendly - Austria v Tunisia - Ernst Happel Stadion, Vienna, Austria - June 1, 2026 General view of Tunisia players during the warm up before the match REUTERS/Lisa Leutner Purchas\n\n\u2022 Lyngby BK vs. SonderjyskE - Boxscore - Live Score - September 13, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/danish-superliga-lyngby-bk-vs-sonderjyske-sep-13-2026-game-boxscore-867858?tab=boxscore\n  Access and manage your favorites here. ## Lyngby BK vs SonderjyskE. Sep 13 at 2:00 PM. # Lyngby BK vs. SonderjyskE - Boxscore: Sep 13, 2026. ## MATCHUP## ODDS## STANDINGS. | 5/9 | HVI (A) | W2-0 |. | 5/3 | HIL (H) | L2-1 |. | 5/3 | AGF (A) | L2-1 |. | 4/26 | BRY (H) | W3-0 |. Follow a team and personalize your FOX Sports experience. NFL College Football INDYCAR MLB College Basketball NASCAR. The Herd with Colin Cowherd First Things First The Joel Klatt Show Kevin Harvick's Happy Hour Bear Bets. FIFA World Cup 2026\u2122 Best Betting Apps & Sites Best Sportsbook Promos Watch USA vs Paraguay. FOX SPO\n\n\u2022 Graham Potter interview: Finding joy with Sweden after Chelsea, West Ham woe, and unlocking Viktor Gyokeres and Alexander Isak at World Cup - Sky Sports\n  https://www.skysports.com/football/news/13957/13550178/graham-potter-interview-finding-joy-with-sweden-after-chelsea-west-ham-woe-and-unlocking-viktor-gyokeres-and-alexander-isak-at-world-cup\n  # Graham Potter interview: Finding joy with Sweden after Chelsea, West Ham woe, and unlocking Viktor Gyokeres and Alexander Isak at World Cup. In an in-depth interview, Graham Potter explains how the \"best night of his career\" propelled his Sweden side to the World Cup; former Brighton, Chelsea and West Ham boss also discusses overcoming dark times and working with Viktor Gyokeres and Alexander Isak. It is more than two months since Viktor Gyokeres's 89th-minute goal sealed Sweden's extraordinary World Cup play-off victory over Poland at a delirious Strawber"
+      }
+    ],
+    "research_cost": 0.114,
+    "wallet_before": 4.246,
+    "wallet_after": 4.132,
+    "prediction": {
+      "pick": "draw",
+      "confidence": 8,
+      "confidence_reason": "Our confidence is set at 8 because Tunisia\u2019s historically perfect defensive record of ten clean sheets in qualifying directly aligns with our strategic rule to favor disciplined low blocks over individual attacking talent.",
+      "reasoning": "Tunisia\u2019s elite, compact defensive unit is perfectly designed to neutralize Sweden's star strike partnership of Gyokeres and Isak, leading to a frustrating, low-scoring stalemate for both sides."
+    },
+    "full_reasoning": "An analysis of the Group F opening match between Sweden and Tunisia highlights a classic clash of styles that directly triggers our core prediction rules. \n\n### Sweden: Elite Individual Firepower, Unstable System\nSweden enters the 2026 World Cup under the guidance of Graham Potter, having qualified via a dramatic playoff run. On paper, their primary strength is an enviable, world-class attacking duo featuring Sporting CP's Viktor Gyokeres and Newcastle United's Alexander Isak. However, behind this glittering frontline lies a highly fragile team. Sweden is still adjusting to a new tactical identity under Potter following a chaotic previous regime, and defensive previews explicitly label their backline as \"way too leaky\" to make noise in the tournament. \n\n### Tunisia: Historic Defensive Block\nTunisia\u2019s qualification campaign was nothing short of historic. The Eagles of Carthage became the first nation in World Cup qualifying history to complete an entire cycle (10 matches) without conceding a single goal, collecting 28 of 30 available points. Managed by Sabri Lamouchi, Tunisia relies on a highly disciplined, physical, and compact low-block defensive screen that is specifically designed to choke space for elite isolated attackers. \n\n### Strategic Alignment (Rule 1 & Rule 2)\nAccording to our **World Cup Prediction Strategy**, backing a favorite like Sweden solely on the individual talent of their star strikers when facing a disciplined low block is a primary trap. Tunisia's defensive floor is exceptionally high, and their compact structure is built to deny space to players like Isak and Gyokeres. Furthermore, in a 48-team tournament where some third-place teams advance, both managers will prioritize avoiding an opening-day defeat. Sweden\u2019s leaky defense will limit their willingness to overcommit, while Tunisia will be highly motivated to play for a secure point. \n\nWith Tunisia's historic defensive resilience neutralizing Sweden's attacking ceiling, a hard-fought draw is the most likely outcome.\n\nPICK: draw\nCONFIDENCE: 8\nCONFIDENCE_REASON: Our confidence is set at 8 because Tunisia\u2019s historically perfect defensive record of ten clean sheets in qualifying directly aligns with our strategic rule to favor disciplined low blocks over individual attacking talent.\nREASONING: Tunisia\u2019s elite, compact defensive unit is perfectly designed to neutralize Sweden's star strike partnership of Gyokeres and Isak, leading to a frustrating, low-scoring stalemate for both sides.",
+    "retroactive": false,
     "result": null,
     "correct": null,
     "evaluation": null,
