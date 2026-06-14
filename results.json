@@ -5,29 +5,6 @@
     "away": "JPN",
     "kickoff": "2026-06-14T20:00Z",
     "strategy_snapshot": "",
-    "services_planned": [],
-    "services_used": [],
-    "research_cost": 0.0,
-    "wallet_before": 20.0,
-    "wallet_after": 20.0,
-    "prediction": {
-      "pick": "home",
-      "confidence": 6,
-      "bet": 1.0,
-      "reasoning": "Netherlands possesses superior individual talent and tournament experience to edge out a highly disciplined Japanese side."
-    },
-    "full_reasoning": "The Netherlands (NED) face Japan (JPN) in an intriguing World Cup matchup. The Dutch squad enters the tournament with a strong blend of elite defensive stability, anchored by world-class center-backs, and creative midfield options playing at the highest levels in Europe. Japan, known for their exceptional tactical discipline, high-pressing intensity, and dangerous counter-attacks led by technically gifted wingers, will pose a significant threat. While Japan has a history of upsetting European giants in recent tournaments, the Netherlands' superior physical presence, squad depth, and clinical finishing edge give them the advantage in this opening clash.\n\nPICK: home\nCONFIDENCE: 6\nBET: $1.00\nREASONING: Netherlands possesses superior individual talent and tournament experience to edge out a highly disciplined Japanese side.",
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
-  },
-  {
-    "match": "NED vs JPN",
-    "home": "NED",
-    "away": "JPN",
-    "kickoff": "2026-06-14T20:00Z",
-    "strategy_snapshot": "",
     "information_needs": "FORM\n- How many Expected Goals (xG) have the Netherlands generated per match over their last five international fixtures, and has their actual conversion rate deviated significantly from this underlying metric?\n- Has Japan\u2019s defense kept clean sheets in their recent competitive matches against top-40 FIFA-ranked opponents, or have they shown vulnerability to conceding transition goals?\n\nPLAYERS\n- Is the Netherlands' midfield metronome (e.g., Frenkie de Jong or Tijjani Reijnders) fully fit to start, or will they be forced to deploy a more physical, less press-resistant double-pivot?\n- How is Japan managing the minutes and fatigue of key European-based stars like Wataru Endo and Kaoru Mitoma, given their intensive club schedules and long-haul travel?\n\nTACTICS\n- Will Ronald Koeman deploy a back-three/five system or a traditional Dutch 4-3-3, and how will Japan\u2019s asymmetric out-of-possession block adapt to restrict space for the Dutch wingbacks?\n- How effectively does Japan's mid-block trigger their counter-press against possession-heavy sides, and can the Dutch center-backs (e.g., Virgil van Dijk) bypass this press with direct diagonal long balls?\n\nH2H\n- In past encounters, did Japan struggle specifically with the Netherlands' physical superiority in aerial duels and set-pieces, and has Japan's current defensive line improved its aerial win percentage to mitigate this?\n\nCONTEXT\n- What are the tournament or group stage qualification scenarios for both teams, and would a draw mathematically satisfy both sides, potentially leading to a low-risk, passive final 20 minutes?\n\nMARKET\n- What is the current Asian Handicap line (e.g., Netherlands -0.75 or -1), and has the money line shifted significantly toward Japan since the opening odds, indicating sharp market support for an underdog result?\n\nNEWS\n- Are there any late-breaking reports of camp illness, suspension, or tactical discord in either camp during the 48 hours leading up to kickoff?\n\nVENUE\n- Is the match being played in a high-humidity/high-temperature environment or a neutral venue, and how will the climate affect the high-intensity sprint volume required for Japan's pressing style?",
     "research_gaps": [
       {
