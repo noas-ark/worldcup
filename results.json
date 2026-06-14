@@ -770,5 +770,163 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "HAI vs SCO",
+    "home": "HAI",
+    "away": "SCO",
+    "kickoff": "2026-06-14T01:00Z",
+    "strategy_snapshot": "",
+    "information_needs": "FORM\n- How did Haiti perform in their final CONCACAF qualification rounds and their late May/early June warm-up friendlies leading up to this tournament?\n- What is Scotland's competitive form heading into June 2026, particularly their defensive record in recent UEFA Nations League or European qualifiers?\n\nPLAYERS\n- Is Haiti's primary goal threat, Frantzdy Pierrot, fully fit and expected to lead the line, or are there injury concerns in their attacking unit?\n- How is the physical condition of Scotland\u2019s key midfield engine room (specifically Scott McTominay, John McGinn, and Billy Gilmour) following a demanding European club season?\n\nTACTICS\n- Will Haiti\u2019s manager employ a compact mid-to-low block to nullify Scotland's physical presence, or will they try to play an expansive game utilizing the pace of their wingers?\n- How does Steve Clarke's Scotland plan to break down a deeply set, athletic defense, and will they utilize a back-three or transition to a back-four to dominate midfield possession?\n\nH2H\n- Have Haiti and Scotland ever faced each other in a senior international fixture or under-23 tournament, and if so, what tactical trends emerged?\n\nCONTEXT\n- Since this match falls during the opening week of the 2026 FIFA World Cup, is this the crucial Matchday 1 for Group Stage survival, and what does the group's composition (the other two teams) dictate about the risk tolerance for both managers?\n\nMARKET\n- What are the current 1X2, Asian Handicap, and Goal Total odds for this match, and which way has the line moved since opening?\n\nNEWS\n- Are there any last-minute camp disruptions, illness outbreaks, or suspension carry-overs reported by either squad's camp in the 48 hours leading up to kickoff?\n\nVENUE\n- Which North American host city and stadium is staging this match, and will the local temperature and high humidity levels at 01:00Z favor the CONCACAF-based players of Haiti over Scotland's squad?",
+    "research_gaps": [
+      {
+        "need": "What are the current 1X2, Asian Handicap, and Goal Total odds for this match, and which way has the line moved since opening?",
+        "category": "MARKET",
+        "ideal_service": "A sports betting market intelligence API that delivers live odds, historical line movements, and sportsbooks consensus data."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Haiti_national_football_team"
+        },
+        "cost": 0.002,
+        "reason": "Provides historical match history, recent fixtures, and qualification records for the Haiti national team leading up to June 2026.",
+        "need": "How did Haiti perform in their final CONCACAF qualification rounds and their late May/early June warm-up friendlies leading up to this tournament?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Scotland_national_football_team"
+        },
+        "cost": 0.002,
+        "reason": "Provides recent competitive fixtures, squad information, and defensive record for Scotland heading into the tournament.",
+        "need": "What is Scotland's competitive form heading into June 2026, particularly their defensive record in recent UEFA Nations League or European qualifiers?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Scotland_national_football_team_head-to-head_record"
+        },
+        "cost": 0.002,
+        "reason": "Allows us to scan Scotland's official head-to-head records with all nations, including Haiti, to identify any historical matchups.",
+        "need": "Have Haiti and Scotland ever faced each other in a senior international fixture or under-23 tournament, and if so, what tactical trends emerged?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Provides the overall tournament structure, group composition, and context of Matchday 1 for Group survival.",
+        "need": "Since this match falls during the opening week of the 2026 FIFA World Cup, is this the crucial Matchday 1 for Group Stage survival, and what does the group's composition (the other two teams) dictate about the risk tolerance for both managers?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup#Venues"
+        },
+        "cost": 0.002,
+        "reason": "Identifies the exact stadium and city details to assess climatic conditions like expected humidity and temperature.",
+        "need": "Which North American host city and stadium is staging this match, and will the local temperature and high humidity levels at 01:00Z favor the CONCACAF-based players of Haiti over Scotland's squad?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Frantzdy Pierrot Haiti injury fitness preview"
+        },
+        "cost": 0.01,
+        "reason": "Fetches recent global news reports regarding Frantzdy Pierrot's health, fitness, and injury status leading up to the match.",
+        "need": "Is Haiti's primary goal threat, Frantzdy Pierrot, fully fit and expected to lead the line, or are there injury concerns in their attacking unit?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Scotland midfield McTominay McGinn Gilmour injury fitness preview"
+        },
+        "cost": 0.01,
+        "reason": "Retrieves recent news about the physical condition, fatigue levels, and injury updates of Scotland's core midfielders.",
+        "need": "How is the physical condition of Scotland\u2019s key midfield engine room (specifically Scott McTominay, John McGinn, and Billy Gilmour) following a demanding European club season?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Haiti football tactical preview manager style"
+        },
+        "cost": 0.01,
+        "reason": "Analyzes pre-match tactical previews detailing Haiti's defensive setup and tactical approach against physical European opposition.",
+        "need": "Will Haiti\u2019s manager employ a compact mid-to-low block to nullify Scotland's physical presence, or will they try to play an expansive game utilizing the pace of their wingers?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Steve Clarke Scotland tactics back-three back-four preview"
+        },
+        "cost": 0.01,
+        "reason": "Searches for tactical analysis and manager interviews explaining Steve Clarke's plans to break down defensive blocks and midfield setups.",
+        "need": "How does Steve Clarke's Scotland plan to break down a deeply set, athletic defense, and will they utilize a back-three or transition to a back-four to dominate midfield possession?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "query": "Scotland Haiti team news suspension disruption illness"
+        },
+        "cost": 0.01,
+        "reason": "Scans the latest global news reports in the direct lead-up to kickoff for any sudden team news, sickness, or squad issues.",
+        "need": "Are there any last-minute camp disruptions, illness outbreaks, or suspension carry-overs reported by either squad's camp in the 48 hours leading up to kickoff?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides historical match history, recent fixtures, and qualification records for the Haiti national team leading up to June 2026.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/Haiti_national_football_team\",\"finalUrl\":\"https://en.wikipedia.org/wiki/Haiti_national_football_team\",\"mode\":\"basic\",\"markdown\":\"From Wikipedia, the free encyclopedia\\n\\nHaiti\\n\\n[![Shirt badge/Association crest](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/250px-Flag_of_Haiti.svg.png)](https://en.wikipedia.org/wiki/File:Flag_of_Haiti.svg \\\"Shirt badge/Association crest\\\")\\n\\n[Nickname(s)](https://en.wikipedia.org/wiki/List_of_national_association_football_teams_by_nickname \\\"List of national association football teams by nickname\\\")\\n\\n_Les Grenadiers_[\\\\[1\\\\]](#cite_note-1)  \\n(The Grenadiers)  \\n_Le Rouge et Bleu_[\\\\[2\\\\]](#cite_note-2)  \\n(The Red and Blue)  \\n_Les Bicolores_[\\\\[3\\\\]](#cite_note-3)  \\n(The Bicolor)  \\n_La S\u00e9lection Nationale_[\\\\[4\\\\]](#cite_note-4) (The National Selection)\\n\\nAssociation\\n\\n[F\u00e9d\u00e9ration Ha\u00eftienne de Football](https://en.wikipedia.org/wiki/Haitian_Football_Federation \\\"Haitian Football Federation\\\") (FHF)\\n\\nConfederation\\n\\n[CONCACAF](https://en.wikipedia.org/wiki/CONCACAF \\\"CONCACAF\\\") (North America)\\n\\nSub-confederation\\n\\n[CFU](https://en.wikipedia.org/wiki/Caribbean_Football_Union \\\"Caribbean Football Union\\\") (Caribbean)\\n\\nHead coach\\n\\n[S\u00e9bastien Mign\u00e9](https://en.wikipedia.org/wiki/S%C3%A9bastien_Mign%C3%A9 \\\"S\u00e9bastien Mign\u00e9\\\")\\n\\n[Captain](https://en.wikipedia.org/wiki/Captain_\\\\(association_football\\\\) \\\"Captain (association football)\\\")\\n\\n[Johny Placide](https://en.wikipedia.org/wiki/Johny_Placide \\\"Johny Placide\\\")\\n\\nMost [caps](https://en.wikipedia.org/wiki/Cap_\\\\(sport\\\\)#Association_football \\\"Cap (sport)\\\")\\n\\n[Pierre Richard Bruny](https://en.wikipedia.org/wiki/Pierre_Richard_Bruny \\\"Pierre Richard Bruny\\\") (95)\\n\\nTop scorer\\n\\n[Duckens Nazon](https://en.wikipedia.org/wiki/Duckens_Nazon \\\"Duckens Nazon\\\") (44)\\n\\nHome stadium\\n\\n[Stade Sylvio Cator](https://en.wikipedia.org/wiki/Stade_Sylvio_Cator \\\"Stade Sylvio Cator\\\")\\n\\n[FIFA code](https"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides recent competitive fixtures, squad information, and defensive record for Scotland heading into the tournament.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/Scotland_national_football_team\",\"finalUrl\":\"https://en.wikipedia.org/wiki/Scotland_national_football_team\",\"mode\":\"basic\",\"markdown\":\"Scotland\\n\\n[![Shirt badge/Association crest](https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Scotland_national_football_team_logo_2014.svg/250px-Scotland_national_football_team_logo_2014.svg.png)](https://en.wikipedia.org/wiki/File:Scotland_national_football_team_logo_2014.svg \\\"Shirt badge/Association crest\\\")\\n\\n[Nickname](https://en.wikipedia.org/wiki/List_of_national_association_football_teams_by_nickname \\\"List of national association football teams by nickname\\\")\\n\\n[The Tartan Army](https://en.wikipedia.org/wiki/Tartan_Army \\\"Tartan Army\\\") (supporters)\\n\\nAssociation\\n\\n[Scottish Football Association](https://en.wikipedia.org/wiki/Scottish_Football_Association \\\"Scottish Football Association\\\") (SFA)\\n\\nConfederation\\n\\n[UEFA](https://en.wikipedia.org/wiki/UEFA \\\"UEFA\\\") (Europe)\\n\\nHead coach\\n\\n[Steve Clarke](https://en.wikipedia.org/wiki/Steve_Clarke \\\"Steve Clarke\\\")\\n\\n[Captain](https://en.wikipedia.org/wiki/Captain_\\\\(association_football\\\\) \\\"Captain (association football)\\\")\\n\\n[Andy Robertson](https://en.wikipedia.org/wiki/Andy_Robertson \\\"Andy Robertson\\\")\\n\\nMost [caps](https://en.wikipedia.org/wiki/Cap_\\\\(sport\\\\)#Association_football \\\"Cap (sport)\\\")\\n\\n[Kenny Dalglish](https://en.wikipedia.org/wiki/Kenny_Dalglish \\\"Kenny Dalglish\\\") (102)\\n\\nTop scorer\\n\\n[Kenny Dalglish](https://en.wikipedia.org/wiki/Kenny_Dalglish \\\"Kenny Dalglish\\\")  \\n[Denis Law](https://en.wikipedia.org/wiki/Denis_Law \\\"Denis Law\\\") (30)\\n\\nHome stadium\\n\\n[Hampden Park](https://en.wikipedia.org/wiki/Hampden_Park \\\"Hampden Park\\\")\\n\\n[FIFA code](https://en.wikipedia.org/wiki/List_of_FIFA_country_codes \\\"List of FIFA country codes\\\")\\n\\nSCO\\n\\n![](https://upload.wikimedia.org/wikipedia/commons/c/cb/Kit_left_arm_sco26h.png)\\n\\n![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Kit_left_ar"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides the overall tournament structure, group composition, and context of Matchday 1 for Group survival.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"2026 FIFA World Cup\\n\\nFIFA World Cup 26  \\nFIFA World Cup 2026  \\n_Copa Mundial de la FIFA 2026_\u00a0([Spanish](https://en.wikipedia.org/wiki/Spanish_language \\\"Spanish language\\\"))  \\n_Coupe du Monde de la FIFA 2026_\u00a0([French](https://en.wikipedia.org/wiki/French_language \\\"French language\\\"))\\n\\n[![Emblem of the 2026 FIFA World Cup, showing numbers \\\"2\\\" (top) and \\\"6\\\" (bottom) placed behind the World Cup trophy](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/250px-2026_FIFA_World_Cup_emblem.svg.png)](https://en.wikipedia.org/wiki/File:2026_FIFA_World_Cup_emblem.svg)\\n\\nTournament details\\n\\nHost countries\\n\\nCanada  \\nMexico  \\nUnited States\\n\\nDates\\n\\nJune 11 \u2013 July 19\\n\\nTeams\\n\\n48\u00a0(from 6 confederations)\\n\\nVenue\\n\\n16\u00a0(in 16 host cities)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n9\\n\\nGoals scored\\n\\n27\u00a0(3 per match)\\n\\nAttendance\\n\\n572,596\u00a0(63,622 per match)\\n\\nTop scorers\\n\\n-   [![Germany national football team](https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)](https://en.wikipedia.org/wiki/Germany_national_football_team \\\"Germany national football team\\\") [Kai Havertz](https://en.wikipedia.org/wiki/Kai_Havertz \\\"Kai Havertz\\\")\\n-   [![United States men's national soccer team](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)](https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team \\\"United States men's national soccer team\\\") [Folarin Balogun](https://en.wikipedia.org/wiki/Folarin_Balogun \\\"Folarin Balogun\\\")\\n-   (2 goals each)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\")\\n\\n_[2030](https://en.wikipedia.org/wiki/2030_FIFA_World_Cup \\\"2030 FIFA World Cup\\\")_ \u2192\\n\\nAll statistics correct "
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Identifies the exact stadium and city details to assess climatic conditions like expected humidity and temperature.",
+        "data": "{\"url\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup#Venues\",\"finalUrl\":\"https://en.wikipedia.org/wiki/2026_FIFA_World_Cup\",\"mode\":\"basic\",\"markdown\":\"2026 FIFA World Cup\\n\\nFIFA World Cup 26  \\nFIFA World Cup 2026  \\n_Copa Mundial de la FIFA 2026_\u00a0([Spanish](https://en.wikipedia.org/wiki/Spanish_language \\\"Spanish language\\\"))  \\n_Coupe du Monde de la FIFA 2026_\u00a0([French](https://en.wikipedia.org/wiki/French_language \\\"French language\\\"))\\n\\n[![Emblem of the 2026 FIFA World Cup, showing numbers \\\"2\\\" (top) and \\\"6\\\" (bottom) placed behind the World Cup trophy](https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/250px-2026_FIFA_World_Cup_emblem.svg.png)](https://en.wikipedia.org/wiki/File:2026_FIFA_World_Cup_emblem.svg)\\n\\nTournament details\\n\\nHost countries\\n\\nCanada  \\nMexico  \\nUnited States\\n\\nDates\\n\\nJune 11 \u2013 July 19\\n\\nTeams\\n\\n48\u00a0(from 6 confederations)\\n\\nVenue\\n\\n16\u00a0(in 16 host cities)\\n\\nTournament statistics\\n\\nMatches\u00a0played\\n\\n9\\n\\nGoals scored\\n\\n27\u00a0(3 per match)\\n\\nAttendance\\n\\n572,596\u00a0(63,622 per match)\\n\\nTop scorers\\n\\n-   [![Germany national football team](https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)](https://en.wikipedia.org/wiki/Germany_national_football_team \\\"Germany national football team\\\") [Kai Havertz](https://en.wikipedia.org/wiki/Kai_Havertz \\\"Kai Havertz\\\")\\n-   [![United States men's national soccer team](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)](https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team \\\"United States men's national soccer team\\\") [Folarin Balogun](https://en.wikipedia.org/wiki/Folarin_Balogun \\\"Folarin Balogun\\\")\\n-   (2 goals each)\\n\\n\u2190 [2022](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup \\\"2022 FIFA World Cup\\\")\\n\\n_[2030](https://en.wikipedia.org/wiki/2030_FIFA_World_Cup \\\"2030 FIFA World Cup\\\")_ \u2192\\n\\nAll statistics c"
+      }
+    ],
+    "research_cost": 0.008,
+    "wallet_before": 4.969,
+    "wallet_after": 4.961,
+    "prediction": {
+      "pick": "away",
+      "confidence": 7,
+      "bet": 2.0,
+      "reasoning": "Scotland's superior tactical discipline, midfield quality, and elite European experience will be too much for Haiti to overcome."
+    },
+    "full_reasoning": "The match between Haiti and Scotland in the 2026 FIFA World Cup represents a significant disparity in squad depth, individual quality, and tactical organization. \n\nScotland, under the guidance of Steve Clarke, has established themselves as a highly organized and hard-working side. Their squad features prominent Premier League and European-based players such as captain Andy Robertson, Scott McTominay, John McGinn, and Billy Gilmour. This strong core gives Scotland a massive advantage in possession retention, tempo control, and midfield dominance. Furthermore, Scotland's proficiency in set-pieces and crossing situations will test Haiti's defensive discipline and aerial organization.\n\nHaiti, representing CONCACAF, relies on an athletic, direct, and transition-based style of play. While they possess capable attacking options such as Duckens Nazon and Frantzdy Pierrot, who can be highly physical and dangerous on the counter, the majority of their squad plays in lower-tier European leagues or MLS. Haiti's defensive organization has historically struggled when facing structured, patient possession sides, and they will likely find it difficult to disrupt Scotland's established midfield structure.\n\nGiven Scotland's tactical cohesion, physical advantage, and superior technical quality across the pitch, they are well-positioned to control the game and secure all three points.\n\nPICK: away\nCONFIDENCE: 7\nBET: $2.00\nREASONING: Scotland's superior tactical discipline, midfield quality, and elite European experience will be too much for Haiti to overcome.",
+    "retroactive": true,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
