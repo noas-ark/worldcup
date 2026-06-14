@@ -601,5 +601,174 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "HAI vs SCO",
+    "home": "HAI",
+    "away": "SCO",
+    "kickoff": "2026-06-14T01:00Z",
+    "strategy_snapshot": "",
+    "information_needs": "FORM\n- How did Scotland perform in their final warm-up friendlies in late May and early June 2026, particularly in terms of defensive solidity?\n- What was Haiti\u2019s path through the final rounds of CONCACAF qualification, and did they show consistent form against higher-ranked opposition?\n\nPLAYERS\n- Is Scotland\u2019s key midfielder Scott McTominay fully fit and sharp after his demanding European club season?\n- Who is expected to lead the line for Haiti\u2014is Maccabi Haifa\u2019s Frantzdy Pierrot fit and in form to test the Scottish center-backs physically?\n\nTACTICS\n- Will Steve Clarke set Scotland up in his preferred back-three (3-4-2-1) to control possession, or will they adopt a more cautious low block to prevent Haitian counter-attacks?\n- How does Haiti transition from defense to attack, and do they have the technical quality in midfield to bypass Scotland's high press?\n\nH2H\n- Have these two nations ever met in an international friendly or competitive fixture in recent cycles, and did Scotland struggle with Haiti\u2019s athletic profile?\n\nCONTEXT\n- Since this is the 2026 World Cup group stage, is this the opening match for both teams, and how does the 48-team format (where some 3rd-place teams advance) impact their risk tolerance?\n\nMARKET\n- What are the current 1X2 and Asian Handicap odds, and does the market implied probability undervalue Haiti's chances of securing a draw?\n\nNEWS\n- Are there any late-breaking camp updates, suspension carry-overs, or illness outbreaks reported in either the Scottish or Haitian base camps in the 48 hours before kickoff?\n\nVENUE\n- Which North American host city is staging this match, and will the local climate (high summer humidity/heat) or stadium surface (turf vs. grass) give the Caribbean side a physical advantage over Scotland?",
+    "research_gaps": [
+      {
+        "need": "What are the current 1X2 and Asian Handicap odds, and does the market implied probability undervalue Haiti's chances of securing a draw?",
+        "category": "MARKET",
+        "ideal_service": "A real-time sports betting odds API that compiles market spreads, historical betting moves, 1X2, and Asian handicap lines for international tournaments under a pay-per-call model."
+      },
+      {
+        "need": "How does Haiti transition from defense to attack, and do they have the technical quality in midfield to bypass Scotland's high press?",
+        "category": "TACTICS",
+        "ideal_service": "An advanced sports analytics API (like Opta or Wyscout) offering detailed tactical metrics, pass maps, and high-press efficiency ratings for non-UEFA nations."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+        },
+        "cost": 0.002,
+        "reason": "Extracts the exact matches, scores, lineups, and defensive clean sheets for Scotland's warm-up campaign leading directly into June 2026.",
+        "need": "How did Scotland perform in their final warm-up friendlies in late May and early June 2026, particularly in terms of defensive solidity?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONCACAF)"
+        },
+        "cost": 0.002,
+        "reason": "Provides structured historical details on Haiti's matches, points table progress, and records in the 2026 World Cup qualification cycle.",
+        "need": "What was Haiti\u2019s path through the final rounds of CONCACAF qualification, and did they show consistent form against higher-ranked opposition?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/Scotland_national_football_team_head-to-head_record"
+        },
+        "cost": 0.002,
+        "reason": "Enables comprehensive checking of historic, official head-to-head records between Scotland and Haiti.",
+        "need": "Have these two nations ever met in an international friendly or competitive fixture in recent cycles, and did Scotland struggle with Haiti\u2019s athletic profile?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "params": {
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        },
+        "cost": 0.002,
+        "reason": "Details the exact structure of the group stages, third-place ranking advancement matrices, and match schedules.",
+        "need": "Since this is the 2026 World Cup group stage, is this the opening match for both teams, and how does the 48-team format (where some 3rd-place teams advance) impact their risk tolerance?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Scott McTominay Scotland fitness squad preview",
+          "language": "en",
+          "hours": 72
+        },
+        "cost": 0.01,
+        "reason": "Retrieves recent news articles about McTominay's physical status, injury updates, or manager comments prior to the opening matches.",
+        "need": "Is Scotland\u2019s key midfielder Scott McTominay fully fit and sharp after his demanding European club season?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Frantzdy Pierrot Haiti squad form preview",
+          "language": "en",
+          "hours": 72
+        },
+        "cost": 0.01,
+        "reason": "Obtains the latest team camp news concerning Frantzdy Pierrot's selection, fitness levels, and preparation.",
+        "need": "Who is expected to lead the line for Haiti\u2014is Maccabi Haifa\u2019s Frantzdy Pierrot fit and in form to test the Scottish center-backs physically?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Scotland vs Haiti tactical lineup preview formation",
+          "language": "en",
+          "hours": 168
+        },
+        "cost": 0.01,
+        "reason": "Scrapes pre-match tactical analyses, predicted formations, and manager strategy interviews.",
+        "need": "Will Steve Clarke set Scotland up in his preferred back-three (3-4-2-1) to control possession, or will they adopt a more cautious low block to prevent Haitian counter-attacks?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Scotland Haiti match stadium venue weather turf grass preview",
+          "language": "en",
+          "hours": 168
+        },
+        "cost": 0.01,
+        "reason": "Fetches pre-tournament reports discussing the designated venue, host city climate forecasts, and turf profiles for this specific group match.",
+        "need": "Which North American host city is staging this match, and will the local climate (high summer humidity/heat) or stadium surface (turf vs. grass) give the Caribbean side a physical advantage over Scotland?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "params": {
+          "topic": "Scotland Haiti camp update suspension illness preview",
+          "language": "en",
+          "hours": 48
+        },
+        "cost": 0.01,
+        "reason": "Monitors active breaking press releases and training camp whispers in the final 48 hours before match kickoff.",
+        "need": "Are there any late-breaking camp updates, suspension carry-overs, or illness outbreaks reported in either the Scottish or Haitian base camps in the 48 hours before kickoff?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Retrieves recent news articles about McTominay's physical status, injury updates, or manager comments prior to the opening matches.",
+        "data": "{\"topic\":\"Scott McTominay Scotland fitness squad preview\",\"timespan_hours\":72,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Obtains the latest team camp news concerning Frantzdy Pierrot's selection, fitness levels, and preparation.",
+        "data": "{\"topic\":\"Frantzdy Pierrot Haiti squad form preview\",\"timespan_hours\":72,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Scrapes pre-match tactical analyses, predicted formations, and manager strategy interviews.",
+        "data": "{\"topic\":\"Scotland vs Haiti tactical lineup preview formation\",\"timespan_hours\":72,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Fetches pre-tournament reports discussing the designated venue, host city climate forecasts, and turf profiles for this specific group match.",
+        "data": "{\"topic\":\"Scotland Haiti match stadium venue weather turf grass preview\",\"timespan_hours\":72,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Monitors active breaking press releases and training camp whispers in the final 48 hours before match kickoff.",
+        "data": "{\"topic\":\"Scotland Haiti camp update suspension illness preview\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      }
+    ],
+    "research_cost": 0.05,
+    "wallet_before": 4.969,
+    "wallet_after": 4.919,
+    "prediction": {
+      "pick": "away",
+      "confidence": 7,
+      "bet": 2.0,
+      "reasoning": "Scotland's tactical discipline and superior Premier League-level quality will ultimately overwhelm Haiti's defense."
+    },
+    "full_reasoning": "The match between Haiti and Scotland presents a stark contrast in squad depth, elite tactical structure, and tournament experience. \n\n### Team Analysis: Scotland (Away)\nUnder Steve Clarke, Scotland has developed into a robust, defensively resilient, and highly organized unit. Their midfield is anchored by Premier League and Serie A talent such as John McGinn, Scott McTominay, and Billy Gilmour, which should allow them to dominate the tempo and control possession against Haiti's midfield. Furthermore, Scotland's prowess from set-pieces\u2014facilitated by Andrew Robertson\u2019s world-class deliveries and physical targets like McTominay\u2014presents a major threat to a Haitian defense that historically struggles against disciplined aerial setups.\n\n### Team Analysis: Haiti (Home)\nHaiti possesses athletic, direct attacking threats in Frantzdy Pierrot and Duckens Nazon, who can be highly dangerous in transitional moments. However, the drop-off in quality across their starting lineup and bench compared to a European nation is significant. While they may adopt a compact low-block to stifle Scotland early on, maintaining that level of concentration and defensive discipline for 90 minutes against a patient, high-pressing European side will be an uphill battle on neutral territory.\n\n### Conclusion\nScotland's superior technical quality in the midfield, combined with their defensive organization and set-piece advantages, should prove too much for Haiti to handle over the course of the match.\n\nPICK: away\nCONFIDENCE: 7\nBET: $2.00\nREASONING: Scotland's tactical discipline and superior Premier League-level quality will ultimately overwhelm Haiti's defense.",
+    "retroactive": true,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
