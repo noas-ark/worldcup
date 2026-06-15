@@ -170,6 +170,34 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #bbb; font-size: 13px
 .full-text { font-size: 12px; color: #aaa; white-space: pre-wrap; background: #0a0a0a; border: 1px solid #1e1e1e; border-radius: 4px; padding: 12px; max-height: 400px; overflow-y: auto; }
 .full-text.strategy-md { white-space: normal; }
 .nav { margin-bottom: 20px; font-size: 13px; }
+.layout { display: flex; gap: 0; min-height: calc(100vh - 48px); }
+.sidebar { width: 200px; flex-shrink: 0; border-right: 1px solid #222; padding: 20px 0 24px 16px; position: sticky; top: 0; align-self: flex-start; max-height: 100vh; overflow-y: auto; }
+.sidebar-group { margin-bottom: 20px; }
+.sidebar-label { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; padding-right: 12px; }
+.sidebar-link { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 12px 6px 10px; margin-right: 8px; border-radius: 4px; font-size: 12px; color: #888; text-decoration: none; border-left: 2px solid transparent; }
+.sidebar-link:hover { color: #e0e0e0; background: #161616; text-decoration: none; }
+.sidebar-link.active { color: #4dabf7; border-left-color: #4dabf7; background: #0f1a24; }
+.sidebar-link.live-link { color: #66bb6a; }
+.sidebar-link.live-link:hover { color: #81c784; background: #0f1a0f; }
+.sidebar-link.live-link.active { color: #66bb6a; border-left-color: #66bb6a; background: #0f1a0f; }
+.sidebar-count { font-size: 10px; color: #555; background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 1px 7px; min-width: 20px; text-align: center; }
+.sidebar-link.active .sidebar-count { color: #4dabf7; border-color: #2a3a4a; }
+.sidebar-link.live-link .sidebar-count { color: #66bb6a; border-color: #2a3a2a; }
+.main { flex: 1; min-width: 0; padding: 24px 16px 24px 24px; max-width: 900px; }
+.container.layout-wrap { max-width: none; padding: 0; margin: 0; }
+.container.layout-wrap > header { padding: 24px 16px 16px 24px; margin-bottom: 0; border-bottom: 1px solid #333; }
+.section { scroll-margin-top: 16px; }
+@media (max-width: 768px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; position: sticky; top: 0; z-index: 20; background: #0d0d0d; border-right: none; border-bottom: 1px solid #222; padding: 12px 12px 10px; max-height: none; overflow-x: auto; overflow-y: hidden; display: flex; gap: 16px; }
+  .sidebar-group { display: flex; align-items: center; gap: 6px; margin-bottom: 0; flex-shrink: 0; }
+  .sidebar-label { display: none; }
+  .sidebar-link { white-space: nowrap; margin-right: 0; padding: 6px 10px; border-left: none; border-bottom: 2px solid transparent; }
+  .sidebar-link.active { border-left-color: transparent; border-bottom-color: #4dabf7; }
+  .sidebar-link.live-link.active { border-bottom-color: #66bb6a; }
+  .main { padding: 16px; max-width: none; }
+  .container.layout-wrap > header { padding: 16px; }
+}
 details summary::-webkit-details-marker { display: none; }
 details summary { outline: none; }
 details[open] .match-header { border-bottom: 1px solid #222; }
@@ -361,6 +389,22 @@ def _awaiting_reflection(r: dict) -> bool:
     return not r.get("reflected") and _kickoff_passed(r)
 
 
+def _is_live(r: dict) -> bool:
+    """Match kicked off recently — likely still in progress (~first 2h)."""
+    if r.get("reflected") or not _kickoff_passed(r):
+        return False
+    kdt = _kickoff_dt(r)
+    if kdt is None:
+        return False
+    secs = (datetime.now(timezone.utc) - kdt).total_seconds()
+    return 0 < secs <= 7200
+
+
+def _pending_reflection(r: dict) -> bool:
+    """Kickoff passed, not reflected, and not still in the live window."""
+    return _awaiting_reflection(r) and not _is_live(r)
+
+
 def _upcoming_predicted(r: dict) -> bool:
     return not r.get("reflected") and not _kickoff_passed(r)
 
@@ -456,7 +500,7 @@ def _render_match_card(r: dict, names: dict[str, str] | None = None) -> str:
 
 def _pipeline_html(awaiting_pred: int, awaiting_reflect: int, reflected: int, wins: int, losses: int) -> str:
     record = f"{wins}W–{losses}L" if reflected else "—"
-    return f"""<div class="pipeline">
+    return f"""<div class="pipeline" id="overview">
   <div class="pipeline-step{' active' if awaiting_pred else ''}">
     <span class="count">{awaiting_pred}</span>
     <span class="label">Awaiting prediction</span>
@@ -472,6 +516,44 @@ def _pipeline_html(awaiting_pred: int, awaiting_reflect: int, reflected: int, wi
     <span class="label">Reflected ({record})</span>
   </div>
 </div>"""
+
+
+def _sidebar_html(active_page: str, sections: list[dict] | None = None) -> str:
+    pages = [
+        ("dashboard", "/", "Dashboard"),
+        ("learnings", "/learnings", "Learnings"),
+        ("strategy", "/strategy", "Strategy"),
+    ]
+    page_links = ""
+    for key, href, label in pages:
+        cls = "sidebar-link active" if active_page == key else "sidebar-link"
+        page_links += f'<a class="{cls}" href="{href}">{label}</a>'
+
+    section_links = ""
+    if sections:
+        for sec in sections:
+            sid = sec["id"]
+            label = sec["label"]
+            count = sec.get("count")
+            extra = " live-link" if sid == "live" else ""
+            active = " active" if sec.get("active") else ""
+            badge = f'<span class="sidebar-count">{count}</span>' if count is not None else ""
+            section_links += f'<a class="sidebar-link{extra}{active}" href="#{sid}"><span>{label}</span>{badge}</a>'
+
+    sections_block = ""
+    if section_links:
+        sections_block = f"""<div class="sidebar-group">
+  <div class="sidebar-label">Sections</div>
+  {section_links}
+</div>"""
+
+    return f"""<aside class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-label">Pages</div>
+    {page_links}
+  </div>
+  {sections_block}
+</aside>"""
 
 def _time_rel(kickoff_str: str) -> tuple[str, str]:
     """Return (label, color) for a kickoff time relative to now."""
@@ -510,13 +592,20 @@ def _md(text: str, extra_class: str = "") -> str:
     cls = f"strategy-md {extra_class}".strip()
     return f'<div class="{cls}">{_render_md(text)}</div>'
 
-def _page(body, title="⚽ World Cup Prediction Agent"):
-    nav = '<div class="nav"><a href="/">Dashboard</a> · <a href="/learnings">Learnings</a> · <a href="/strategy">Strategy</a></div>'
+def _page(body, title="⚽ World Cup Prediction Agent", active_page="dashboard", sections=None):
     header = """
 <header>
   <h1>⚽ World Cup Prediction Agent</h1>
 </header>"""
-    return HTMLResponse(f"<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>{title}</title>{CSS}</head><body><div class='container'>{header}{nav}{body}</div></body></html>")
+    sidebar = _sidebar_html(active_page, sections)
+    return HTMLResponse(
+        f"<!DOCTYPE html><html><head><meta charset='UTF-8'>"
+        f"<meta name='viewport' content='width=device-width,initial-scale=1'>"
+        f"<title>{title}</title>{CSS}</head><body>"
+        f"<div class='container layout-wrap'>{header}"
+        f"<div class='layout'>{sidebar}<main class='main'>{body}</main></div>"
+        f"</div></body></html>"
+    )
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -532,12 +621,25 @@ async def dashboard():
         [r for r in all_results if _awaiting_reflection(r)],
         key=_awaiting_reflect_sort_key,
     )
+    live_matches = [r for r in awaiting_reflect if _is_live(r)]
+    pending_reflect = [r for r in awaiting_reflect if _pending_reflection(r)]
     upcoming_predicted = sorted(
         [r for r in all_results if _upcoming_predicted(r)],
         key=_kickoff_sort_key,
     )
     wins = sum(1 for r in reflected if r.get("correct"))
     losses = len(reflected) - wins
+
+    sections = [
+        {"id": "overview", "label": "Overview"},
+        {"id": "awaiting-prediction", "label": "Awaiting prediction", "count": upcoming_total},
+        {"id": "predicted-upcoming", "label": "Upcoming picks", "count": len(upcoming_predicted)},
+        {"id": "live", "label": "● Live", "count": len(live_matches)},
+        {"id": "awaiting-reflection", "label": "Awaiting reflection", "count": len(pending_reflect)},
+        {"id": "reflected", "label": "Reflected", "count": len(reflected)},
+    ]
+    if strategy:
+        sections.append({"id": "strategy", "label": "Strategy"})
 
     html = _pipeline_html(upcoming_total, len(awaiting_reflect), len(reflected), wins, losses)
     team_names = _team_names()
@@ -561,13 +663,13 @@ async def dashboard():
         footer = ""
         if upcoming_total > len(upcoming):
             footer = f'<div style="font-size:11px;color:#444;margin-top:8px;text-align:right;">Showing next {len(upcoming)} of {upcoming_total} fixtures without a prediction</div>'
-        html += f"""<div class="section">
+        html += f"""<div class="section" id="awaiting-prediction">
   <h2>Awaiting Prediction</h2>
   <div class="section-desc">Fixtures on the schedule with no pick yet. <code>predict.py</code> runs automatically ~30 minutes before kickoff.</div>
   {stage_bar}{items}{footer}
 </div>"""
     else:
-        html += """<div class="section">
+        html += """<div class="section" id="awaiting-prediction">
   <h2>Awaiting Prediction</h2>
   <div class="section-desc">Fixtures on the schedule with no pick yet. <code>predict.py</code> runs automatically ~30 minutes before kickoff.</div>
   <div class="empty-section">No unpredicted fixtures coming up — every scheduled match has a pick, or the group stage is complete.</div>
@@ -576,23 +678,32 @@ async def dashboard():
     # ── 2. Predicted — upcoming ───────────────────────────────────────────
     if upcoming_predicted:
         cards = "".join(_render_match_card(r, team_names) for r in upcoming_predicted)
-        html += f"""<div class="section">
+        html += f"""<div class="section" id="predicted-upcoming">
   <h2>Predicted — Upcoming</h2>
   <div class="section-desc">Pick is locked in before kickoff. Reflection runs automatically ~2.5h after the final whistle.</div>
   {cards}
 </div>"""
 
-    # ── 3. Predicted — awaiting reflection ────────────────────────────────
-    html += '<div class="section"><h2>Predicted — Awaiting Reflection</h2>'
-    html += '<div class="section-desc">Match has kicked off. <code>reflect.py</code> fetches the result, scores the prediction, and updates strategy (~2.5h after kickoff).</div>'
-    if awaiting_reflect:
-        cards = "".join(_render_match_card(r, team_names) for r in awaiting_reflect)
+    # ── 3. Live ─────────────────────────────────────────────────────────────
+    html += '<div class="section" id="live"><h2>● Live</h2>'
+    html += '<div class="section-desc">Matches in progress — kickoff passed, final whistle not yet reflected.</div>'
+    if live_matches:
+        cards = "".join(_render_match_card(r, team_names) for r in live_matches)
         html += cards + "</div>"
     else:
-        html += '<div class="empty-section">Nothing here — no played matches waiting on reflection.</div></div>'
+        html += '<div class="empty-section">No live matches right now.</div></div>'
 
-    # ── 4. Reflected ────────────────────────────────────────────────────────
-    html += '<div class="section"><h2>Reflected</h2>'
+    # ── 4. Predicted — awaiting reflection ────────────────────────────────
+    html += '<div class="section" id="awaiting-reflection"><h2>Predicted — Awaiting Reflection</h2>'
+    html += '<div class="section-desc">Match finished. <code>reflect.py</code> fetches the result, scores the prediction, and updates strategy (~2.5h after kickoff).</div>'
+    if pending_reflect:
+        cards = "".join(_render_match_card(r, team_names) for r in pending_reflect)
+        html += cards + "</div>"
+    else:
+        html += '<div class="empty-section">Nothing here — no finished matches waiting on reflection.</div></div>'
+
+    # ── 5. Reflected ────────────────────────────────────────────────────────
+    html += '<div class="section" id="reflected"><h2>Reflected</h2>'
     html += '<div class="section-desc">Match complete. Prediction scored against the final result and learnings applied to strategy.</div>'
     if reflected:
         reflected_sorted = sorted(
@@ -609,9 +720,9 @@ async def dashboard():
     if strategy:
         snippet = _md(strategy[:500])
         more = '<div style="margin-top:8px;"><a href="/strategy">… read more</a></div>' if len(strategy) > 500 else ""
-        html += f'<div class="section"><h2>Current Strategy <a href="/strategy" style="font-size:11px;color:#555;font-weight:normal;margin-left:8px;">full history →</a></h2><div class="strategy-box">{snippet}{more}</div></div>'
+        html += f'<div class="section" id="strategy"><h2>Current Strategy <a href="/strategy" style="font-size:11px;color:#555;font-weight:normal;margin-left:8px;">full history →</a></h2><div class="strategy-box">{snippet}{more}</div></div>'
 
-    return _page(html)
+    return _page(html, sections=sections)
 
 
 @app.get("/match/{match_key}", response_class=HTMLResponse)
@@ -726,7 +837,7 @@ async def match_detail(match_key: str):
 {eval_html}
 {snapshot_html}"""
 
-    return _page(body, f"{home} vs {away} — World Cup Predictions")
+    return _page(body, f"{home} vs {away} — World Cup Predictions", active_page="dashboard")
 
 
 @app.get("/strategy", response_class=HTMLResponse)
@@ -747,7 +858,7 @@ async def strategy_page():
         hist_html = f'<div class="section"><h2>Strategy Evolution</h2>{items}</div>'
 
     body = f'<div class="section"><h2>Current Strategy</h2>{current}</div>{hist_html}'
-    return _page(body, "Strategy — World Cup Predictions")
+    return _page(body, "Strategy — World Cup Predictions", active_page="strategy")
 
 
 def _strategy_history_from_results(results: list) -> list[dict]:
@@ -914,7 +1025,7 @@ async def learnings_page():
 
     if not reflect_entries:
         body += '<div style="color:#444;font-style:italic;padding:32px 0;">No reflections recorded yet — learnings appear after each match is reflected.</div>'
-        return _page(body, "Learnings — World Cup Predictions")
+        return _page(body, "Learnings — World Cup Predictions", active_page="learnings")
 
     cards = ""
     for e in reflect_entries:
@@ -964,7 +1075,7 @@ async def learnings_page():
 </div>"""
 
     body += f'<div class="section"><h2>Strategy Evolution — {len(reflect_entries)} reflection{"s" if len(reflect_entries) != 1 else ""}</h2>{cards}</div>'
-    return _page(body, "Learnings — World Cup Predictions")
+    return _page(body, "Learnings — World Cup Predictions", active_page="learnings")
 
 
 @app.get("/api/results")
