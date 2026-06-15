@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>⚽ World Cup Prediction Agent</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: #0d0d0d; color: #e0e0e0; font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 14px; line-height: 1.6; }
@@ -72,6 +73,7 @@
   .strategy-box { background: #111; border: 1px solid #2a2a2a; border-radius: 6px; padding: 16px; }
   pre { white-space: pre-wrap; word-wrap: break-word; color: #bbb; font-size: 13px; }
   .strategy-empty { color: #444; font-style: italic; }
+  .strategy-md { color: #bbb; font-size: 13px; line-height: 1.7; }
 
   .history-item { border-bottom: 1px solid #1a1a1a; padding: 10px 0; }
   .history-match { font-size: 12px; color: #888; margin-bottom: 6px; }
@@ -81,6 +83,13 @@
   .detail-section { margin-bottom: 24px; }
   .detail-section h3 { font-size: 12px; color: #555; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
   .full-text { font-size: 12px; color: #aaa; white-space: pre-wrap; background: #0a0a0a; border: 1px solid #1e1e1e; border-radius: 4px; padding: 12px; max-height: 400px; overflow-y: auto; }
+  .render-md { white-space: normal; }
+  .render-md p { margin: 6px 0; }
+  .render-md h1, .render-md h2, .render-md h3 { color: #e0e0e0; margin: 12px 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #2a2a2a; padding-bottom: 4px; }
+  .render-md strong { color: #fff; }
+  .render-md ul, .render-md ol { padding-left: 20px; margin: 4px 0; }
+  .render-md li { margin: 2px 0; }
+  .render-md a { color: #4dabf7; }
 </style>
 </head>
 <body>
@@ -89,10 +98,6 @@
 <header>
   <h1>⚽ World Cup Prediction Agent</h1>
   <div class="meta">
-    {% if stats %}
-    <div>Record: <span>{{ stats.wins }}W–{{ stats.losses }}L ({{ stats.pct }})</span></div>
-    <div>Matches predicted: <span>{{ stats.total }}</span></div>
-    {% endif %}
     <div><a href="/">Dashboard</a> · <a href="/strategy">Strategy</a></div>
   </div>
 </header>
@@ -132,7 +137,7 @@
     <div class="pred-item"><div class="pred-label">Bet Size</div><div class="pred-value">${{ pred.bet }}</div></div>
     <div class="pred-item"><div class="pred-label">Kickoff</div><div class="pred-value" style="font-size:12px;">{{ r.kickoff }}</div></div>
   </div>
-  <div class="reasoning">{{ pred.reasoning }}</div>
+  <div class="reasoning render-md">{{ pred.reasoning }}</div>
 </div>
 
 <div class="detail-section">
@@ -164,20 +169,20 @@
 
 <div class="detail-section">
   <h3>Full Gemini Reasoning</h3>
-  <div class="full-text">{{ r.full_reasoning }}</div>
+  <div class="full-text render-md">{{ r.full_reasoning }}</div>
 </div>
 
 {% if r.evaluation %}
 <div class="detail-section">
   <h3>Post-Match Evaluation</h3>
-  <div class="full-text">{{ r.evaluation }}</div>
+  <div class="full-text render-md">{{ r.evaluation }}</div>
 </div>
 {% endif %}
 
 {% if r.strategy_snapshot %}
 <div class="detail-section">
   <h3>Strategy at Time of Prediction</h3>
-  <div class="full-text">{{ r.strategy_snapshot if r.strategy_snapshot else "(no strategy yet at time of prediction)" }}</div>
+  <div class="full-text render-md">{{ r.strategy_snapshot if r.strategy_snapshot else "(no strategy yet at time of prediction)" }}</div>
 </div>
 {% endif %}
 
@@ -187,7 +192,7 @@
   <h2>Current Strategy</h2>
   <div class="strategy-box">
     {% if strategy %}
-      <pre>{{ strategy }}</pre>
+      <div class="render-md strategy-md">{{ strategy }}</div>
     {% else %}
       <div class="strategy-empty">No strategy yet — will be written after the first match reflection.</div>
     {% endif %}
@@ -200,30 +205,13 @@
   {% for item in strategy_history | reverse %}
   <div class="history-item">
     <div class="history-match">After {{ item.match }} ({{ item.kickoff[:10] if item.kickoff else '?' }})</div>
-    <div class="history-snapshot">{{ item.snapshot[:300] if item.snapshot else "(empty at this point)" }}{% if item.snapshot and item.snapshot | length > 300 %}…{% endif %}</div>
+    <div class="history-snapshot render-md">{{ item.snapshot[:300] if item.snapshot else "(empty at this point)" }}{% if item.snapshot and item.snapshot | length > 300 %}…{% endif %}</div>
   </div>
   {% endfor %}
 {% endif %}
 
 {% else %}
 <!-- ─── Dashboard ─── -->
-
-{% if upcoming %}
-<div class="section">
-  <h2>Upcoming Matches</h2>
-  <div class="upcoming-grid">
-    {% for f in upcoming %}
-    <div class="upcoming-item">
-      <div>
-        <span class="teams">{{ f.home }} vs {{ f.away }}</span>
-        <span class="stage" style="margin-left:8px;">{{ f.stage }}</span>
-      </div>
-      <div class="kick">{{ f.kickoff_utc[:16].replace("T", " ") }} UTC</div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-{% endif %}
 
 {% if results %}
 <div class="section">
@@ -256,7 +244,7 @@
         <div class="pred-item"><div class="pred-label">Bet</div><div class="pred-value">${{ pred.bet }}</div></div>
         <div class="pred-item"><div class="pred-label">Research cost</div><div class="pred-value" style="color:#f9a825;">${{ "%.4f" | format(r.research_cost) }}</div></div>
       </div>
-      <div class="reasoning">"{{ pred.reasoning }}"</div>
+      <div class="reasoning render-md">{{ pred.reasoning }}</div>
 
       <!-- x402 purchase log -->
       {% if r.services_used %}
@@ -268,7 +256,7 @@
           <tr>
             <td>{{ svc.source }}</td>
             <td class="cost">${{ "%.4f" | format(svc.cost) }}</td>
-            <td>{{ svc.get('reason', '') }}</td>
+            <td>{{ svc.reason if svc.reason is defined else '' }}</td>
           </tr>
           {% endfor %}
         </table>
@@ -283,7 +271,7 @@
       <div class="result-bar {{ 'correct' if r.correct else 'incorrect' }}" style="margin-top:10px;">
         Result: <span class="result-score">{{ r.home }} {{ res.home_score }}–{{ res.away_score }} {{ r.away }}</span>
         {% if r.evaluation %}
-        <div class="evaluation">{{ r.evaluation[:200] }}{% if r.evaluation | length > 200 %}…{% endif %}</div>
+        <div class="evaluation render-md">{{ r.evaluation[:200] }}{% if r.evaluation | length > 200 %}…{% endif %}</div>
         {% endif %}
       </div>
       {% endif %}
@@ -300,13 +288,30 @@
 </div>
 {% endif %}
 
+{% if upcoming %}
+<div class="section">
+  <h2>Upcoming Matches</h2>
+  <div class="upcoming-grid">
+    {% for f in upcoming %}
+    <div class="upcoming-item">
+      <div>
+        <span class="teams">{{ f.home }} vs {{ f.away }}</span>
+        <span class="stage" style="margin-left:8px;">{{ f.stage }}</span>
+      </div>
+      <div class="kick">{{ f.kickoff_utc[:16].replace("T", " ") }} UTC</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
 {% if strategy %}
 <div class="section">
   <h2>Current Strategy <a href="/strategy" style="font-size:11px;color:#555;font-weight:normal;margin-left:8px;">full history →</a></h2>
   <div class="strategy-box">
-    <pre>{{ strategy[:600] }}{% if strategy | length > 600 %}
+    <div class="render-md strategy-md">{{ strategy[:600] }}{% if strategy | length > 600 %}
 
-<a href="/strategy">… read more</a>{% endif %}</pre>
+[… read more](/strategy){% endif %}</div>
   </div>
 </div>
 {% endif %}
@@ -314,5 +319,10 @@
 {% endif %}
 
 </div>
+<script>
+  document.querySelectorAll('.render-md').forEach(function(el) {
+    el.innerHTML = marked.parse(el.textContent);
+  });
+</script>
 </body>
 </html>

@@ -10,16 +10,28 @@ log = logging.getLogger(__name__)
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent"
 
 
-def generate(prompt: str, retries: int = 2) -> str:
+def generate(
+    prompt: str,
+    retries: int = 2,
+    temperature: float = 0.7,
+    json_mode: bool = False,
+) -> str:
     """Call Gemini and return the text response, retrying on empty replies."""
     key = os.getenv("GEMINI_API_KEY", "")
     last_err = None
+    generation_config: dict = {"temperature": temperature}
+    if json_mode:
+        generation_config["responseMimeType"] = "application/json"
+
     for attempt in range(retries + 1):
         try:
             resp = requests.post(
                 GEMINI_URL,
                 headers={"Content-Type": "application/json", "X-goog-api-key": key},
-                json={"contents": [{"parts": [{"text": prompt}]}]},
+                json={
+                    "contents": [{"parts": [{"text": prompt}]}],
+                    "generationConfig": generation_config,
+                },
                 timeout=90,
             )
             resp.raise_for_status()

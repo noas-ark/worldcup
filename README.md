@@ -24,22 +24,31 @@ Each match goes through two automated phases:
 
 ### 1. Predict (`predict.py`) — runs 30 minutes before kickoff
 
-```
+```bash
 python predict.py HOME AWAY [KICKOFF_UTC]
-# e.g. python predict.py NED JPN 2026-06-14T20:00Z
+# e.g. python predict.py NED JPN
+# optional kickoff override: python predict.py NED JPN 2026-06-14T20:00Z
 ```
 
-**Stage 1 — Analyst:** Gemini reads the current strategy document and the service directory of available x402 data endpoints, then produces a structured list of *information needs* (what it wants to know about the match) and a *research plan* (which endpoints to call and why, given the $0.50 per-match budget).
+Kickoff is read from `schedule.json` by default; pass `KICKOFF_UTC` only for retroactive re-runs.
 
-**Stage 2 — Shopper:** A second Gemini call takes the research plan and the actual OpenAPI specs of the available services, maps needs to real endpoints with their prices, and produces the final purchase list.
+**Stage 1 — Analyst:** Gemini lists 8–12 specific questions grouped by category (FORM, PLAYERS, TACTICS, H2H, CONTEXT, MARKET, NEWS, VENUE). No data services are shown yet — this is pure information-needs planning.
 
-**Data fetch:** The agent calls each planned endpoint through an x402-aware `requests` session. When a server responds with HTTP 402, the client automatically signs and submits an on-chain USDC micropayment on Base, then retries — no manual payment step. Each response (up to 2,000 chars) is collected as context.
+**Stage 2 — Shopper:** A second Gemini call receives those needs, the current strategy, and the full x402 service directory. It maps each need to concrete endpoints and prices, and flags any *research gaps* (needs with no available service).
+
+**Baseline searches (always run):** Six mandatory Tavily/Brave search calls cover match preview, squad news, both teams' form, head-to-head, and group context. They cost **$0.056** (2× Tavily @ $0.012 + 4× Brave @ $0.008) and are always included in the plan first; the shopper stages additional calls against whatever remains of the per-match budget.
+
+**Data fetch:** The agent calls each planned endpoint through an x402-aware `requests` session. When a server responds with HTTP 402, the client automatically signs and submits an on-chain USDC micropayment on Base, then retries. Responses are cleaned before being passed to the predictor — skim402 nav junk is stripped, and Tavily/Brave/Swerver JSON is condensed to readable snippets.
+
+**Fallback research:** If most calls fail, return low-quality data, or no search results were obtained, a third Gemini call plans up to five alternative endpoints (preferring Tavily/Brave) within the remaining budget.
 
 **Prediction:** A final Gemini call reasons over the purchased data, the strategy, and recent match history, then outputs:
 - `PICK`: home / away / draw
-- `CONFIDENCE`: 1–10
-- `BET`: suggested stake in USD
-- `REASONING`: one-sentence justification
+- `CONFIDENCE`: 1–10 (calibrated — not defaulted to 5)
+- `CONFIDENCE_REASON`: one sentence explaining the confidence level
+- `REASONING`: one-sentence justification for the pick
+
+There is **no bet sizing** — the agent predicts outcomes only, not stake amounts. The dashboard shows pick, confidence (with hover tooltip for the reason), and research cost. Older entries in `results.json` may still have a legacy `bet` field from earlier runs.
 
 Results are saved to `results.json`, a Discord notification is sent, and the commit is pushed to GitHub and the HF Space.
 
@@ -47,7 +56,7 @@ Results are saved to `results.json`, a Discord notification is sent, and the com
 
 ### 2. Reflect (`reflect.py`) — runs 2.5 hours after kickoff
 
-```
+```bash
 python reflect.py HOME AWAY
 # e.g. python reflect.py NED JPN
 ```
@@ -62,11 +71,51 @@ python reflect.py HOME AWAY
 
 ---
 
+## Research pipeline detail
+
+### x402 data sources
+
+The agent pulls from two layers:
+
+1. **Service directory** — fetched live from [x402-list.com](https://x402-list.com/api/v1/services), filtered to online services on the configured network (Base mainnet or Sepolia). OpenAPI specs are fetched per service to discover real endpoint paths and prices.
+
+2. **Supplemental services** — verified working endpoints not yet in the directory:
+
+| Service | Endpoint | Cost | Use |
+|---------|----------|------|-----|
+| SignalFuse Tavily | `POST /v1/gateway/search/tavily` | $0.012 | AI-ranked news/previews, injury reports |
+| SignalFuse Brave | `GET /v1/gateway/search/brave` | $0.008 | Structured web search |
+| Swerver Search | `POST /search` | $0.010 | Fast headless browser search |
+| Swerver Scrape | `POST /scrape` | $0.010 | Scrape any URL when skim402 fails |
+| Skim402 | `GET /api/v2/read?url=...` | ~$0.002 | Read verified team/tournament pages |
+| GDELT | `GET /news/recent?topic=...` | varies | Recent news by topic |
+
+### Verified team URLs
+
+For skim402 page reads, `predict.py` maintains a lookup table (`TEAM_DATA`) of empirically verified URLs per team — Transfermarkt squad/results pages, national-football-teams.com, Soccerway, and Guardian team pages. Sites known to fail (Wikipedia, FBref, ESPN, etc.) are excluded.
+
+### Budget allocation
+
+`MATCH_RESEARCH_BUDGET` defaults to **$0.50** per match (set in `.env`). All spending — baseline, agent-planned, and fallback — must stay within that cap.
+
+```
+MATCH_RESEARCH_BUDGET ($0.50 default)
+├── Baseline searches ($0.056 — always merged first)
+├── Agent-chosen calls (Skim402, GDELT, extra Tavily/Brave, etc.)
+│   └── Shopper plans against ~$0.44 remaining after baseline
+└── Fallback calls (if data quality is poor)
+    └── Uses whatever is left: BUDGET − total_spent so far
+```
+
+**Wallet checks:** `predict.py` aborts if on-chain USDC balance is below **$0.10**. Recommended starting balance is **$2.00** (~4 matches at default budget). Actual spend per match varies — baseline alone is $0.056; with agent and fallback calls, recent matches typically land around **$0.08–$0.12**.
+
+---
+
 ## Self-improving strategy
 
 `strategy.md` is the agent's accumulated knowledge — a short document (≤500 words) of rules and learnings. It grows one rule at a time, each tagged with the match that informed it. The predictor reads the full strategy before every match; the reflector updates it after every result.
 
-The strategy also tracks which x402 data services have been useful across past matches, so the agent learns to allocate its $0.50 budget more efficiently over time.
+The strategy also tracks which x402 data services have been useful across past matches, so the agent learns to allocate its budget more efficiently over time.
 
 ---
 
@@ -81,21 +130,22 @@ The agent pays for data using USDC on Base (mainnet or testnet). Key pieces:
 
 **Balance check:** At startup, `predict.py` reads the on-chain USDC balance by calling `balanceOf` on the USDC contract. If it's below $0.10, the run aborts.
 
-**x402 session:** `wallet.get_x402_client()` returns a `requests.Session` wired with `ExactEvmScheme` for the configured chain. Any `GET` that returns `402 Payment Required` is handled automatically: the client signs a payment transaction with the wallet's private key, submits it on-chain, and retries the request — all transparent to the calling code.
+**x402 session:** `wallet.get_x402_client()` returns a `requests.Session` wired with `ExactEvmScheme` for the configured chain. Any request that returns `402 Payment Required` is handled automatically: the client signs a payment transaction with the wallet's private key, submits it on-chain, and retries — all transparent to the calling code. Both GET and POST endpoints are supported.
 
-**Cost tracking:** `total_spent` accumulates per-match. `balance_after = balance - total_spent` is an estimate (the on-chain balance is not re-fetched mid-run). Both figures are saved to `results.json` for analysis.
+**Cost tracking:** `research_cost`, `wallet_before`, and `wallet_after` are saved per match in `results.json`. `wallet_after` is an estimate (`balance − total_spent`); the on-chain balance is not re-fetched mid-run.
 
 ---
 
 ## Web dashboard (`app.py`)
 
-FastAPI app deployed on HF Spaces. Three routes:
+FastAPI app deployed on HF Spaces. Routes:
 
 | Route | Content |
 |-------|---------|
-| `/` | Live dashboard: upcoming fixtures, all predictions with badges, x402 spend table, strategy snippet |
+| `/` | Live dashboard: upcoming fixtures, predictions (pick + confidence + research cost — no bet sizing), x402 spend table, strategy snippet |
 | `/match/HOME_AWAY` | Full detail: analyst needs, purchased endpoints with raw data, research gaps, Gemini reasoning, evaluation, strategy at prediction time |
-| `/strategy` | Current strategy + full evolution history across all matches |
+| `/strategy` | Current strategy + snapshot history across all matches |
+| `/learnings` | Git-tracked strategy evolution with line diffs and post-match evaluations |
 | `/api/results` | Raw `results.json` as JSON |
 | `/api/schedule` | Raw `schedule.json` as JSON |
 
@@ -153,25 +203,29 @@ python setup_wallet.py
 
 ## Scheduling
 
-Matches are scheduled automatically with cron via `schedule_match.py`:
+Matches are scheduled automatically with cron.
 
 ```bash
-# Schedule a single match (adds two cron entries: predict + reflect)
-python schedule_match.py NED JPN 2026-06-14T20:00:00Z
-
-# Or use setup_schedule.py to load from schedule.json in bulk
+# Fetch all WC 2026 fixtures from ESPN and schedule upcoming matches
 python setup_schedule.py
+
+# Preview without writing cron entries
+python setup_schedule.py --dry-run
+
+# Schedule a single match manually
+python schedule_match.py NED JPN 2026-06-14T20:00:00Z
 ```
 
-Predict runs 30 minutes before kickoff; reflect runs 2 hours 30 minutes after kickoff. Logs go to `logs/HOME_AWAY.log`.
+`setup_schedule.py` fetches fixtures from the ESPN public API, writes `schedule.json`, adds cron entries for all upcoming matches, and pushes the schedule to GitHub. Predict runs 30 minutes before kickoff; reflect runs 2 hours 30 minutes after kickoff. Logs go to `logs/HOME_AWAY.log`.
 
 ---
 
 ## Manual run
 
 ```bash
-# Predict (can be run after kickoff with a past timestamp for retroactive mode)
-python predict.py NED JPN 2026-06-14T20:00Z
+# Predict (kickoff read from schedule.json; pass timestamp for retroactive mode)
+python predict.py NED JPN
+python predict.py NED JPN 2026-06-14T20:00Z   # retroactive override
 
 # Reflect (after the match is complete)
 python reflect.py NED JPN
@@ -180,14 +234,14 @@ python reflect.py NED JPN
 uvicorn app:app --reload --port 7860
 ```
 
-Retroactive mode is automatically detected when the kickoff timestamp is in the past, and constrains research to pre-match sources only.
+Retroactive mode is automatically detected when the kickoff timestamp is in the past, and constrains research to pre-match sources only (no live scoreboards or post-match reports).
 
 ---
 
 ## File structure
 
 ```
-predict.py          # Pre-match: research + prediction
+predict.py          # Pre-match: analyst → shopper → baseline search → fetch → fallback → predict
 reflect.py          # Post-match: result + evaluation + strategy update
 app.py              # FastAPI web dashboard
 wallet.py           # USDC balance check + x402 payment session
@@ -195,18 +249,21 @@ gemini.py           # Gemini REST API wrapper
 discord_notify.py   # Discord bot notifications
 setup_wallet.py     # One-time wallet keypair generation
 schedule_match.py   # Add cron entries for a single match
-setup_schedule.py   # Bulk-load schedule.json into cron
-results.json        # All predictions and outcomes (append-only)
+setup_schedule.py   # Fetch ESPN fixtures + bulk-load cron + push schedule.json
+make_thumbnail.py   # Generate HF Space thumbnail (1280×720)
+results.json        # All predictions and outcomes
 strategy.md         # Agent's accumulated strategy (rewritten each match)
-schedule.json       # Fixture list with kickoff times
+schedule.json       # Fixture list with kickoff times (from ESPN)
+logs/               # Per-match cron output
 ```
 
 ---
 
 ## Dependencies
 
-- **Gemini Flash** — two-stage reasoning (analyst → shopper → predictor; separate evaluator + reflector)
-- **x402** — HTTP 402 micropayment protocol for real-time sports data
+- **Gemini Flash** — multi-stage reasoning (analyst → shopper → predictor; separate evaluator + reflector)
+- **x402** — HTTP 402 micropayment protocol for real-time sports data and search APIs
 - **Web3 / eth-account** — Base chain interaction for balance checks and payment signing
 - **FastAPI / uvicorn** — web dashboard
-- **ESPN public API** — free post-match result fetching
+- **ESPN public API** — free fixture list and post-match result fetching
+- **Pillow** — HF Space thumbnail generation

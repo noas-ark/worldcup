@@ -19,6 +19,7 @@ import requests
 from dotenv import load_dotenv
 
 import discord_notify
+import prediction_intel
 import wallet
 
 # ── Setup ──────────────────────────────────────────────────────────────────
@@ -414,7 +415,7 @@ except Exception as e:
 
 # ── Step 3: Agent plans research ───────────────────────────────────────────
 
-recent_results = results[-3:] if results else []
+recent_results = results[-3:] if results else []  # unused — kept for log compatibility
 
 # Enrich services with actual endpoint paths from their OpenAPI specs
 def _get_endpoints(base_url):
@@ -993,7 +994,7 @@ log("Research complete. Spent $%.4f. Estimated balance: $%.4f", total_spent, bal
 
 useful_count = sum(1 for s in services_used if not _is_low_quality_data(s.get("data", "")))
 
-# ── Step 5: Make prediction ────────────────────────────────────────────────
+# ── Step 5: Intelligent prediction pipeline ────────────────────────────────
 
 context_text = ""
 if context:
@@ -1002,75 +1003,91 @@ if context:
 else:
     context_text = "(no paid research data purchased)"
 
-predict_prompt = f"""You are a World Cup match predictor. Analyze the following and make a prediction.
+learning_context = prediction_intel.build_learning_context(results)
+fixture_context = prediction_intel.build_fixture_context(
+    HOME, AWAY, home_name, away_name, schedule, results, kickoff,
+)
+espn_form = prediction_intel.fetch_espn_tournament_form(HOME, AWAY, kickoff)
+log("Fixture context loaded; ESPN form: %d chars", len(espn_form))
 
-Match: {MATCH}
-Home team: {home_name} ({HOME})
-Away team: {away_name} ({AWAY})
-Kickoff: {kickoff}
-Research spent: ${total_spent:.4f} USDC on {len(services_used)} data source(s)
-Useful sources: {useful_count} of {len(services_used)}
+synthesis = {}
+stress_test = {}
+try:
+    log("Stage 3: Synthesizing evidence...")
+    synthesis = prediction_intel.synthesize_evidence(
+        MATCH, home_name, away_name, kickoff, strategy, context_text,
+        learning_context, fixture_context, espn_form,
+        useful_count, len(services_used), RETROACTIVE,
+    )
+    log("Stage 3 complete — data_quality=%s", synthesis.get("data_quality"))
+except Exception as e:
+    err("Stage 3 synthesis failed: %s", e)
+    synthesis = {"data_quality": "low", "contradictions": [str(e)]}
 
-Current strategy (your accumulated learnings):
-{strategy if strategy else "(no strategy yet — first match)"}
+try:
+    log("Stage 4: Stress-testing evidence...")
+    stress_test = prediction_intel.stress_test_evidence(
+        MATCH, home_name, away_name, synthesis, strategy,
+    )
+    log(
+        "Stage 4 complete — favorite=%s cap=%s draw_risk=%s",
+        stress_test.get("favorite"),
+        stress_test.get("confidence_cap"),
+        stress_test.get("draw_risk"),
+    )
+except Exception as e:
+    err("Stage 4 stress test failed: %s", e)
+    stress_test = {"confidence_cap": 6, "draw_risk": "medium"}
 
-Research data purchased:
-{context_text}
+stress_cap = stress_test.get("confidence_cap")
+if isinstance(stress_cap, str) and stress_cap.isdigit():
+    stress_cap = int(stress_cap)
+elif not isinstance(stress_cap, int):
+    stress_cap = None
 
-Recent match history and outcomes:
-{json.dumps(recent_results, indent=2) if recent_results else "(no history yet)"}
-
-INSTRUCTIONS:
-- Base your prediction on the research data above. Search results (Tavily/Brave) contain the most current news.
-- Weigh: form, injuries/squad news, tactics, H2H, group context. Ignore venue/weather unless clearly decisive.
-- You MUST always output the required format lines below — never ask for more data or return tool calls.
-
-CONFIDENCE CALIBRATION (use the full 1-10 range — do NOT default to 5):
-- 9-10: Clear favorite with 3+ corroborating signals (form, squad fitness, tactics, H2H) and no major unknowns
-- 7-8: Solid edge for one side backed by multiple research sources; only minor gaps remain
-- 5-6: Genuinely balanced matchup OR directly conflicting signals — use only when research shows a true toss-up
-- 1-4: Near-total data failure only (rare with search data available)
-You purchased {len(services_used)} sources ({useful_count} high-quality). With this research depth, confidence below 7 requires explicit justification in CONFIDENCE_REASON. When signals align, use 8-10.
-
-Analyze the match thoroughly, then end your response with EXACTLY these 4 lines:
-PICK: [home|away|draw]
-CONFIDENCE: [1-10]
-CONFIDENCE_REASON: [one sentence explaining why confidence is that specific number — what raises or lowers it]
-REASONING: [one sentence summarizing the key factor driving the pick]"""
-
-log("Asking Gemini for prediction...")
+log("Stage 5: Final calibrated prediction...")
 full_reasoning = ""
+parsed = None
 for attempt in range(3):
     try:
         suffix = ""
         if attempt > 0:
             suffix = (
-                "\n\nCRITICAL: Your previous response was invalid. "
-                "Do NOT request more data. Analyze what you have and end with EXACTLY:\n"
-                "PICK: [home|away|draw]\nCONFIDENCE: [1-10]\n"
-                "CONFIDENCE_REASON: [sentence]\nREASONING: [sentence]"
+                "\n\nCRITICAL: End with HOME_PCT, DRAW_PCT, AWAY_PCT (sum 100), "
+                "then PICK, CONFIDENCE, CONFIDENCE_REASON, REASONING."
             )
-        pred_resp_text = gemini.generate(predict_prompt + suffix)
+        pred_resp_text = prediction_intel.make_final_prediction(
+            MATCH, HOME, AWAY, home_name, away_name, kickoff,
+            strategy, synthesis, stress_test, useful_count, len(services_used),
+        ) + suffix
         if pred_resp_text.strip() and re.search(r"PICK:\s*(home|away|draw)", pred_resp_text, re.I):
+            parsed = prediction_intel.parse_prediction_response(pred_resp_text, stress_cap)
             full_reasoning = pred_resp_text
             break
         err("Prediction attempt %d: missing PICK line", attempt + 1)
     except Exception as e:
-        err("Gemini prediction call failed (attempt %d): %s", attempt + 1, e)
+        err("Prediction attempt %d failed: %s", attempt + 1, e)
 
-# Parse structured fields
-def _parse(pattern, text, default):
-    m = re.search(pattern, text, re.IGNORECASE)
-    return m.group(1).strip() if m else default
+if parsed is None:
+    parsed = {
+        "pick": "home",
+        "confidence": 4,
+        "confidence_reason": "Pipeline failed — low-confidence fallback",
+        "reasoning": "Could not complete prediction pipeline",
+        "probabilities": {"home": 40, "draw": 30, "away": 30},
+        "full_reasoning": full_reasoning or "",
+    }
 
-pick_raw = _parse(r"PICK:\s*(\w+)", full_reasoning, "home").lower()
-pick = pick_raw if pick_raw in ("home", "away", "draw") else "home"
-confidence_raw = _parse(r"CONFIDENCE:\s*(\d+)", full_reasoning, "5")
-confidence = max(1, min(10, int(confidence_raw)))
-confidence_reason = _parse(r"CONFIDENCE_REASON:\s*(.+)", full_reasoning, "")
-reasoning = _parse(r"REASONING:\s*(.+)", full_reasoning, "Insufficient data for strong prediction")
+pick = parsed["pick"]
+confidence = parsed["confidence"]
+confidence_reason = parsed["confidence_reason"]
+reasoning = parsed["reasoning"]
+probabilities = parsed["probabilities"]
 
-log("Prediction: PICK=%s CONFIDENCE=%d", pick, confidence)
+log(
+    "Prediction: PICK=%s CONFIDENCE=%d probs=%s",
+    pick, confidence, probabilities,
+)
 log("Reasoning: %s", reasoning)
 
 # ── Step 6: Save state and push to GitHub ─────────────────────────────────
@@ -1091,9 +1108,12 @@ entry = {
     "prediction": {
         "pick": pick,
         "confidence": confidence,
-            "confidence_reason": confidence_reason,
+        "confidence_reason": confidence_reason,
         "reasoning": reasoning,
+        "probabilities": probabilities,
     },
+    "evidence_synthesis": synthesis,
+    "stress_test": stress_test,
     "full_reasoning": full_reasoning,
     "retroactive": RETROACTIVE,
     "result": None,

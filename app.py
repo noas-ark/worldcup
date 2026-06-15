@@ -64,6 +64,46 @@ def _team(code: str) -> str:
     flag = _flag(code)
     return f"{flag} {code}" if flag else code
 
+
+def _team_names() -> dict[str, str]:
+    """FIFA code → full country name from schedule.json."""
+    names: dict[str, str] = {}
+    for f in _load("schedule.json", []):
+        if f.get("home") and f.get("home_name"):
+            names[f["home"]] = f["home_name"]
+        if f.get("away") and f.get("away_name"):
+            names[f["away"]] = f["away_name"]
+    return names
+
+
+def _team_full(code: str, names: dict[str, str] | None = None) -> str:
+    """Team with flag emoji and full country name."""
+    flag = _flag(code)
+    name = (names or {}).get(code.upper(), "")
+    if name:
+        return f"{flag} {name}" if flag else name
+    return _team(code)
+
+
+def _pick_display_full(pick: str, home: str, away: str, names: dict[str, str]) -> str:
+    """Translate home/away/draw to full team label."""
+    if pick == "home":
+        return _team_full(home, names)
+    if pick == "away":
+        return _team_full(away, names)
+    return "DRAW"
+
+
+def _prob_summary(pred: dict, home: str, away: str) -> str:
+    """Win probability line when model outputs HOME/DRAW/AWAY percentages."""
+    probs = pred.get("probabilities") or {}
+    if not probs:
+        return ""
+    h = probs.get("home", "?")
+    d = probs.get("draw", "?")
+    a = probs.get("away", "?")
+    return f"model {h}%/{d}%/{a}% ({home}/{d}/{away})"
+
 CSS = """
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -345,12 +385,14 @@ def _kickoff_sort_key(r: dict) -> float:
     return kdt.timestamp() if kdt else 0.0
 
 
-def _render_match_card(r: dict) -> str:
+def _render_match_card(r: dict, names: dict[str, str] | None = None) -> str:
     pred = r.get("prediction", {})
     res = r.get("result")
     used = r.get("services_used", [])
     planned = r.get("services_planned", [])
     state = _match_state(r)
+    if names is None:
+        names = _team_names()
 
     x402_html = ""
     if used:
@@ -370,17 +412,20 @@ def _render_match_card(r: dict) -> str:
         cls = "correct" if r.get("correct") else "incorrect"
         eval_snippet = _esc((r.get("evaluation") or "")[:180])
         result_html = f'''<div class="result-bar {cls}">
-          Result: <span class="result-score">{_team(r['home'])} {res['home_score']}–{res['away_score']} {_team(r['away'])}</span>
+          Result: <span class="result-score">{_team_full(r['home'], names)} {res['home_score']}–{res['away_score']} {_team_full(r['away'], names)}</span>
           {f'<div class="eval-text">{eval_snippet}{"…" if len(r.get("evaluation", "")) > 180 else ""}</div>' if eval_snippet else ""}
         </div>'''
     elif res and not r.get("reflected"):
         result_html = f'''<div class="result-bar" style="background:#1a1810;border-left:3px solid #f9a825;">
-          Provisional score: <span class="result-score">{_team(r['home'])} {res['home_score']}–{res['away_score']} {_team(r['away'])}</span>
+          Provisional score: <span class="result-score">{_team_full(r['home'], names)} {res['home_score']}–{res['away_score']} {_team_full(r['away'], names)}</span>
           <div class="eval-text">Official reflection not run yet — win/loss not scored.</div>
         </div>'''
 
     rel, rel_color = _time_rel(r.get("kickoff", ""))
     kickoff_note = f'<span style="color:{rel_color}">{rel}</span>' if rel else ""
+
+    prob_note = _prob_summary(pred, r["home"], r["away"])
+    prob_html = f' &nbsp;·&nbsp; {prob_note}' if prob_note else ""
 
     return f"""<div class="match-card">
       <details>
@@ -388,7 +433,7 @@ def _render_match_card(r: dict) -> str:
       <div class="match-header">
         <div>
           <div class="match-title">{_team(r['home'])} vs {_team(r['away'])}</div>
-          <div class="match-time">{kickoff_note}{' &nbsp;·&nbsp; ' if kickoff_note else ''}Pick: <b>{_team(_pick_display(pred.get('pick', '?'), r['home'], r['away']))}</b> &nbsp;·&nbsp; conf {pred.get("confidence", "?")}/10</div>
+          <div class="match-time">{kickoff_note}{' &nbsp;·&nbsp; ' if kickoff_note else ''}Pick: <b>{_team(_pick_display(pred.get('pick', '?'), r['home'], r['away']))}</b> &nbsp;·&nbsp; conf {pred.get("confidence", "?")}/10{prob_html}</div>
           <div class="status-line">{_esc(state['sublabel'])}</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px;">{state['badge']}<span style="color:#444;font-size:16px;">⌄</span></div>
@@ -396,7 +441,7 @@ def _render_match_card(r: dict) -> str:
       </summary>
       <div class="match-body">
         <div class="pred-row">
-          <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick', '?'), r['home'], r['away']))}</div></div>
+          <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_pick_display_full(pred.get('pick', '?'), r['home'], r['away'], names)}</div></div>
           <div class="pred-item"><div class="label">Confidence</div><div class="value"><span class="tooltip-wrap">{pred.get("confidence", "?")}/10<span class="tooltip-box">{_esc(pred.get("confidence_reason", "Hover reason not available for this prediction."))}</span></span></div></div>
           <div class="pred-item"><div class="label">Research cost</div><div class="value" style="color:#f9a825;">${r.get("research_cost", 0):.4f}</div></div>
         </div>
@@ -495,6 +540,7 @@ async def dashboard():
     losses = len(reflected) - wins
 
     html = _pipeline_html(upcoming_total, len(awaiting_reflect), len(reflected), wins, losses)
+    team_names = _team_names()
 
     # ── 1. Awaiting prediction ──────────────────────────────────────────────
     stage_bar = _stage_indicator(schedule, results_raw) if schedule else ""
@@ -529,7 +575,7 @@ async def dashboard():
 
     # ── 2. Predicted — upcoming ───────────────────────────────────────────
     if upcoming_predicted:
-        cards = "".join(_render_match_card(r) for r in upcoming_predicted)
+        cards = "".join(_render_match_card(r, team_names) for r in upcoming_predicted)
         html += f"""<div class="section">
   <h2>Predicted — Upcoming</h2>
   <div class="section-desc">Pick is locked in before kickoff. Reflection runs automatically ~2.5h after the final whistle.</div>
@@ -540,7 +586,7 @@ async def dashboard():
     html += '<div class="section"><h2>Predicted — Awaiting Reflection</h2>'
     html += '<div class="section-desc">Match has kicked off. <code>reflect.py</code> fetches the result, scores the prediction, and updates strategy (~2.5h after kickoff).</div>'
     if awaiting_reflect:
-        cards = "".join(_render_match_card(r) for r in awaiting_reflect)
+        cards = "".join(_render_match_card(r, team_names) for r in awaiting_reflect)
         html += cards + "</div>"
     else:
         html += '<div class="empty-section">Nothing here — no played matches waiting on reflection.</div></div>'
@@ -554,7 +600,7 @@ async def dashboard():
             key=lambda r: r.get("reflected_at") or "",
             reverse=True,
         )
-        cards = "".join(_render_match_card(r) for r in reflected_sorted)
+        cards = "".join(_render_match_card(r, team_names) for r in reflected_sorted)
         html += cards + "</div>"
     else:
         html += '<div class="empty-section">No reflections yet — they appear here after the first match finishes and <code>reflect.py</code> runs.</div></div>'
@@ -670,6 +716,7 @@ async def match_detail(match_key: str):
     <div class="pred-item"><div class="label">Pick</div><div class="value pick">{_team(_pick_display(pred.get('pick','?'), home, away))}</div></div>
     <div class="pred-item"><div class="label">Confidence</div><div class="value"><span class="tooltip-wrap">{pred.get("confidence","?")}/10<span class="tooltip-box">{_esc(pred.get("confidence_reason","Hover reason not available for this prediction."))}</span></span></div></div>
   </div>
+  {f'<div style="font-size:12px;color:#666;margin-top:8px;">Win model: {_esc(_prob_summary(pred, home, away))}</div>' if _prob_summary(pred, home, away) else ""}
   <div class="reasoning">"{_esc(pred.get("reasoning",""))}"</div>
 </div>
 {needs_html}
