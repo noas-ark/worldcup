@@ -1639,334 +1639,6 @@
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize collective defensive organization and low-block tactics over individual attacking talent.\n- AUS vs TUR: Prioritize disciplined low-block setups and transition efficiency over aesthetic possession metrics and technical quality.\n- NED vs JPN: Prioritize collective defensive resilience and opposition finishing inefficiency over individual talent and high-volume chance creation.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 to analyze defensive structure and team discipline (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 to identify defensive schemes engineered to neutralize wing attacks (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 to identify low-block and transition setups that neutralize possession-dominant teams (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 to evaluate defensive organization against highly ranked teams and historical squad conversion rates (NED vs JPN)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 because collective tactical setups dictate outcomes more than single-player availability (BRA vs MAR)\n- skip: Pitch mapping data (https://skim402.com/api/v2/read) \u2014 as stadium surface details offer zero predictive value for tactical outcomes (AUS vs TUR)\n- skip: Qualification math (https://news-x402.com/news/recent) \u2014 because group stage advancement scenarios do not translate to on-field performance (AUS vs TUR)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 as fitness metrics do not mitigate collective defensive vulnerability (NED vs JPN)\n- skip: Betting market data (https://news-x402.com/news/recent) \u2014 because odds tracking reflects public sentiment rather than tactical realities (NED vs JPN)"
   },
   {
-    "match": "IRN vs NZL",
-    "home": "IRN",
-    "away": "NZL",
-    "kickoff": "2026-06-16T01:00Z",
-    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n3. **NED vs JPN: Avoid \"Narrative Bias\" Overlooking Systemic Discipline**\nDo not assume physical size and individual quality will automatically overcome an elite, energetic, and tactically disciplined system. If the favorite has midfield fitness concerns (a compromised metronome) and the underdog has a highly fit defensive screen and a proven record of limiting top-tier nations, avoid a straight win prediction and favor a draw or handicap.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Defensive Records Against Highly Ranked Opponents:* Vital warning sign to identify underdogs capable of frustrating elite teams (informed by NED vs JPN).\n  * *Key Midfield Workload & Fitness Status:* Essential for determining if a favorite's central controller is compromised or an underdog's anchor is fully fit (informed by NED vs JPN).\n* **Not Useful / Wasteful:**\n  * *Bookmaker Odds & Asian Handicap:* Abstract lines often reinforce narrative bias instead of providing objective analytical value (informed by NED vs JPN).\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate fitness queries leads to high costs. Consolidate searches to 1-2 comprehensive previews to keep costs under $0.0300 per match (informed by AUS vs TUR).",
-    "information_needs": "FORM\n- How did Iran perform in the final rounds of AFC qualifying, specifically regarding their defensive record against physical, direct-playing opponents?\n- What were the tactical takeaways from New Zealand's pre-tournament friendlies against top-50 FIFA ranked opposition, and did they manage to secure any results outside of Oceania?\n\nPLAYERS\n- Are Iran's veteran attacking duo, Mehdi Taremi and Sardar Azmoun, fully fit and still occupying the starting roles, or has coach Amir Ghalenoei transitioned to younger profiles?\n- Is Chris Wood still the undisputed focal point of the All Whites' attack, and who is starting alongside Liberato Cacace to provide service from the flanks?\n\nTACTICS\n- How does New Zealand's preferred low-block defensive system plan to handle Iran's high-tempo transitional play and half-space overloads?\n- If Iran is forced to dominate 60%+ possession (a state they historically struggle with), do they have the central midfield creativity to break down New Zealand's physical back-five?\n\nH2H\n- What did the physical and aerial duel data show from their last head-to-head meeting or similar fixtures where Iran faced Oceania/OFC-style physicality?\n\nCONTEXT\n- Since this is a June 2026 World Cup group stage match, what are the exact permutations of the group standings, and is a draw acceptable for New Zealand to remain in contention for the Round of 32?\n\nMARKET\n- What are the current Asian Handicap lines, and does the market imply that Iran's squad depth warrants them being clear favorites (-1.0 or higher)?\n\nNEWS\n- Are there any internal camp disruptions or travel fatigue issues for New Zealand's European-based players arriving at the North American host venue?\n\nVENUE\n- Which North American host stadium is staging this 01:00Z kickoff, and will the local summer humidity or artificial turf play a factor in the physical conditioning of both squads?",
-    "research_gaps": [
-      {
-        "need": "Detailed tracking of physical and aerial duel win percentages for individual defenders and forwards of Iran and New Zealand.",
-        "category": "H2H",
-        "ideal_service": "Opta or Wyscout raw performance statistical API with x402 integration for real-time player duel metrics."
-      }
-    ],
-    "services_planned": [
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "Iran vs New Zealand World Cup 2026 match preview tactics formation",
-          "search_depth": "advanced",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Baseline: match preview, tactics, predicted lineups",
-        "need": "Comprehensive pre-match preview and tactical outlook",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "Iran vs New Zealand World Cup 2026 squad injuries fitness team news",
-          "search_depth": "advanced",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Baseline: squad news, injuries, fitness updates",
-        "need": "Player availability and camp news for both teams",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iran World Cup 2026 recent form results",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: Iran recent form and results",
-        "need": "How has Iran performed in recent internationals?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "New Zealand World Cup 2026 recent form results",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: New Zealand recent form and results",
-        "need": "How has New Zealand performed in recent internationals?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iran vs New Zealand head to head history World Cup",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: head-to-head history and prior meetings",
-        "need": "Historical H2H record and patterns between the teams",
-        "category": "H2H"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iran vs New Zealand World Cup 2026 group standings context",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: group context and tournament stakes",
-        "need": "Group standings and what each team needs from this match",
-        "category": "CONTEXT"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "method": "get",
-        "params": {
-          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
-        },
-        "body": {},
-        "cost": 0.002,
-        "reason": "Defines the motivation level for New Zealand; if a draw is sufficient, they will sit in an ultra-low block, reducing match tempo.",
-        "need": "What are the exact permutations of the group standings, and is a draw acceptable for New Zealand to remain in contention for the Round of 32?",
-        "category": "CONTEXT"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iran AFC qualifying defensive record physical direct teams World Cup 2026",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Reveals vulnerability trends in Iran's backline when pressured by route-one football, indicating how New Zealand's direct style might fare.",
-        "need": "How did Iran perform in the final rounds of AFC qualifying, specifically regarding their defensive record against physical, direct-playing opponents?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "New Zealand tactics low-block defensive system vs Iran transitional play half-space",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Assesses tactical matchup between Iran's offensive triggers and New Zealand's deep-defending structures.",
-        "need": "How does New Zealand's preferred low-block defensive system plan to handle Iran's high-tempo transitional play and half-space overloads?",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iran vs New Zealand head to head physical aerial duel data football",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Evaluates historical success rates of Iran's defense against highly physical, direct Oceania style teams.",
-        "need": "What did the physical and aerial duel data show from their last head-to-head meeting or similar fixtures where Iran faced Oceania/OFC-style physicality?",
-        "category": "H2H"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iran vs New Zealand World Cup 2026 betting odds Asian Handicap favorite",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Indicates market expectations, squad valuation, and handicap expectations for Iran.",
-        "need": "What are the current Asian Handicap lines, and does the market imply that Iran's squad depth warrants them being clear favorites (-1.0 or higher)?",
-        "category": "MARKET"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iran vs New Zealand June 2026 World Cup stadium venue kickoff time artificial turf humidity",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Evaluates environmental factors like heat/humidity and turf wear, which heavily impact physical low-blocks and direct play fatigue.",
-        "need": "Which North American host stadium is staging this 01:00Z kickoff, and will the local summer humidity or artificial turf play a factor in the physical conditioning of both squads?",
-        "category": "VENUE"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "Iran World Cup 2026 squad Mehdi Taremi Sardar Azmoun starting injuries",
-          "search_depth": "basic",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Determines the presence and health of Iran's primary offensive threats, crucial for evaluating their expected attacking output.",
-        "need": "Are Iran's veteran attacking duo, Mehdi Taremi and Sardar Azmoun, fully fit and still occupying starting roles, or has coach Amir Ghalenoei transitioned to younger profiles?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "New Zealand All Whites World Cup 2026 squad Chris Wood Liberato Cacace flanks",
-          "search_depth": "basic",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Provides tactical insight into New Zealand's target-man dependency and flank-service mechanics.",
-        "need": "Is Chris Wood still the undisputed focal point of the All Whites' attack, and who is starting alongside Liberato Cacace to provide service from the flanks?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "New Zealand All Whites World Cup camp disruptions travel fatigue injuries",
-          "search_depth": "basic",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Uncovers potential physical decline or squad disharmony that could compromise New Zealand's defensive organization.",
-        "need": "Are there internal camp disruptions or travel fatigue issues for New Zealand's European-based players arriving at the North American host venue?",
-        "category": "NEWS"
-      }
-    ],
-    "services_used": [
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Baseline: match preview, tactics, predicted lineups",
-        "data": "\u2022 World Cup 2026 Group G guide - fixtures, schedule, standings and odds for Belgium, Egypt, Iran and New Zealand - Sky Sports\n  https://www.skysports.com/football/news/12098/13543098/world-cup-2026-group-g-guide-fixtures-schedule-standings-and-odds-for-belgium-egypt-iran-and-new-zealand\n  Defenders: Danial Eiri (Malavan), Ehsan Hajsafi (Sepahan), Saleh Hardani (Esteghlal), Hossein Kanaani (Persepolis), Shoja Khalilzadeh (Tractor FC), Milad Mohammadi (Persepolis), Ali Nemati (Foolad FC), Ramin Rezaeian (Foolad FC).\n\nMidfielders: Rouzbeh Cheshmi (Esteghlal), Saeid Ezatolahi (Shabab Al Ahli), Mehdi Ghaedi (Al-Nasr), Saman Ghoddos (Kalba FC), Mohammad Ghorbani (Al-Wahda), Alireza Jahanbakhsh (FC Dender), Mohammad Mohebi (Rostov), Amir Mohammad Razzaghinia (Esteghlal), Mehdi Torabi (Tractor FC), Aria Yousefi (Sepahan).\n\nForwards: Ali Alipour (Persepolis), Dennis Dargahi (Standard Li\n\n\u2022 Iran face New Zealand in politically charged Los Angeles opener - Reuters\n  https://www.reuters.com/3fec1b0a85a0/sports/soccer/iran-face-new-zealand-politically-charged-los-angeles-opener-2026-06-13/\n  Iran coach Amir Ghalenoei, the first Iran-born manager to lead the national team at a World Cup since Jalal Talebi in 1998, guided his side through Asian qualifying after they secured their place with a 2-2 draw against Uzbekistan in Tehran on March 25, 2025.\n\nNew Zealand \u200bbooked their spot a day earlier \u200bwith a 3-0 victory over \u2060New Caledonia in the Oceania qualifying final. Darren Bazeley's side will hope to draw on memories of 2010, when they were eliminated in the group stage but left South Africa unbeaten after \u200bdraws with Slovakia, Italy and Paraguay.\n\nMonday's game will be the first Wor\n\n\u2022 \ud83c\udf0e 2026 World Cup, group G guide \ud83c\udde7\ud83c\uddea\ud83c\uddea\ud83c\uddec\ud83c\uddee\ud83c\uddf7\ud83c\uddf3\ud83c\uddff - Yahoo Sports\n  https://sports.yahoo.com/articles/2026-world-cup-group-g-095900689.html\n  Advertisement\n\nAdvertisement\n\nAdvertisement\n\nTRENDING\n\n Play 2026 Soccer Pick 'Em\n Spurs win Game 3 at MSG\n Caitlin Clark's game-winner\n WWE Raw results\n Sorsby granted injunction\n\nPowered by\n\n# \ud83c\udf0e 2026 World Cup, group G guide \ud83c\udde7\ud83c\uddea\ud83c\uddea\ud83c\uddec\ud83c\uddee\ud83c\uddf7\ud83c\uddf3\ud83c\uddff\n\nOneFootball\n\n\u00b7\n\n1 min read\n\nThe presentation of Group G of the 2026 World Cup!\n\n## The teams \u2694\ufe0f\n\nBelgium \ud83c\udde7\ud83c\uddea\n\nEgypt \ud83c\uddea\ud83c\uddec\n\nIran \ud83c\uddee\ud83c\uddf7\n\nNew Zealand \ud83c\uddf3\ud83c\uddff\n\n## The schedule \ud83d\udcdd\n\n15.06 - 21:00: Belgium vs Egypt\n\n16.06 - 03:00: Iran vs New Zealand\n\nAdvertisement\n\nAdvertisement\n\nAdvertisement\n\n21.06 - 21:00: Belgium vs Iran\n\n22.06 - 03:00: New Zealand vs Egypt\n\n27.06 - 05:00: Ne\n\n\u2022 How USA vs. Iran can happen in World Cup: Projecting the scenarios for 2026 FIFA knockout meeting - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/usa-vs-iran-world-cup-projection/6ac7684a4cf7f7b8d8342482\n  Kyle Bonn\n\n\u2022\n\n Add The Sporting News on Google \n\nThere has been much tension in the lead-up to the 2026 FIFA World Cup about Iran coming to the United States for this summer's competition.\n\nThanks to the U.S. military action on Iranian soil, which began in late February and early March, there has been growing tension between the two nations.\n\nSet to compete alongside Belgium, Egypt, and New Zealand in Group G, Iran will play all three of their group stage matches on U.S. soil.\n\nAt first, there were questions about whether Iran would even participate in the tournament, hosted jointly by the Uni\n\n\u2022 France vs Northern Ireland: How to Watch, Prediction, Odds, Friendly Preview - FOX Sports\n  https://www.foxsports.com/stories/soccer/france-vs-northern-ireland-how-watch-prediction-odds-friendly-preview\n  share\n\nrecommended\n\n1. ### 2026 World Cup Odds: Spain Narrowly Favored Over France### Arsenal, France Defender William Saliba's Injury Worsens, Surgery Fears Rise### Canada vs Uzbekistan: How to Watch, Prediction, Odds, Friendly Preview\n2. ### Norway vs Sweden: How to Watch, Prediction, Odds, Friendly Preview### Winners, Losers From Canada's World Cup Squad: Injuries Prevail, Left Side Loses### Spain World Cup 2026 Preview: Best Players, Roster, History\n\nItem 1 of 2\n\nGet more from the International Friendlies Follow your favor"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Baseline: squad news, injuries, fitness updates",
-        "data": "\u2022 World Cup 2026 Group G guide - fixtures, schedule, standings and odds for Belgium, Egypt, Iran and New Zealand - Sky Sports\n  https://www.skysports.com/football/news/12098/13543098/world-cup-2026-group-g-guide-fixtures-schedule-standings-and-odds-for-belgium-egypt-iran-and-new-zealand\n  Defenders: Danial Eiri (Malavan), Ehsan Hajsafi (Sepahan), Saleh Hardani (Esteghlal), Hossein Kanaani (Persepolis), Shoja Khalilzadeh (Tractor FC), Milad Mohammadi (Persepolis), Ali Nemati (Foolad FC), Ramin Rezaeian (Foolad FC).\n\nMidfielders: Rouzbeh Cheshmi (Esteghlal), Saeid Ezatolahi (Shabab Al Ahli), Mehdi Ghaedi (Al-Nasr), Saman Ghoddos (Kalba FC), Mohammad Ghorbani (Al-Wahda), Alireza Jahanbakhsh (FC Dender), Mohammad Mohebi (Rostov), Amir Mohammad Razzaghinia (Esteghlal), Mehdi Torabi (Tractor FC), Aria Yousefi (Sepahan).\n\nForwards: Ali Alipour (Persepolis), Dennis Dargahi (Standard Li\n\n\u2022 BBC: Four Members of Iran's 2026 World Cup Delegation Successfully Challenge US Visa Denials - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/bbc-four-members-of-iran-s-2026-world-cup-delegation-successfully-challenge-us-visa-denials/\n  The Iranian national team will play in Group G at the 2026 World Cup with Belgium, Egypt, and New Zealand. Iran has previously participated in six World Cups, failing to advance from their group stage each time.\n\nThe 2026 World Cup will be held from June 11 to July 19. It will be hosted by Canada, the United States, and Mexico. Argentina is the current world champion, having defeated then-World Cup holders France in the 2022 World Cup final (3-3, 4-2 on penalties).\n\nBrazil is the most decorated team in World Cup history with five trophies. Germany and Italy are tied for second place (four each\n\n\u2022 \ud83c\udf0e 2026 World Cup, group G guide \ud83c\udde7\ud83c\uddea\ud83c\uddea\ud83c\uddec\ud83c\uddee\ud83c\uddf7\ud83c\uddf3\ud83c\uddff - Yahoo Sports\n  https://sports.yahoo.com/articles/2026-world-cup-group-g-095900689.html\n  Advertisement\n\nAdvertisement\n\nAdvertisement\n\nTRENDING\n\n Play 2026 Soccer Pick 'Em\n Spurs win Game 3 at MSG\n Caitlin Clark's game-winner\n WWE Raw results\n Sorsby granted injunction\n\nPowered by\n\n# \ud83c\udf0e 2026 World Cup, group G guide \ud83c\udde7\ud83c\uddea\ud83c\uddea\ud83c\uddec\ud83c\uddee\ud83c\uddf7\ud83c\uddf3\ud83c\uddff\n\nOneFootball\n\n\u00b7\n\n1 min read\n\nThe presentation of Group G of the 2026 World Cup!\n\n## The teams \u2694\ufe0f\n\nBelgium \ud83c\udde7\ud83c\uddea\n\nEgypt \ud83c\uddea\ud83c\uddec\n\nIran \ud83c\uddee\ud83c\uddf7\n\nNew Zealand \ud83c\uddf3\ud83c\uddff\n\n## The schedule \ud83d\udcdd\n\n15.06 - 21:00: Belgium vs Egypt\n\n16.06 - 03:00: Iran vs New Zealand\n\nAdvertisement\n\nAdvertisement\n\nAdvertisement\n\n21.06 - 21:00: Belgium vs Iran\n\n22.06 - 03:00: New Zealand vs Egypt\n\n27.06 - 05:00: Ne\n\n\u2022 Iran face New Zealand in politically charged Los Angeles opener - Reuters\n  https://www.reuters.com/3fec1b0a85a0/sports/soccer/iran-face-new-zealand-politically-charged-los-angeles-opener-2026-06-13/\n  Iran coach Amir Ghalenoei, the first Iran-born manager to lead the national team at a World Cup since Jalal Talebi in 1998, guided his side through Asian qualifying after they secured their place with a 2-2 draw against Uzbekistan in Tehran on March 25, 2025.\n\nNew Zealand \u200bbooked their spot a day earlier \u200bwith a 3-0 victory over \u2060New Caledonia in the Oceania qualifying final. Darren Bazeley's side will hope to draw on memories of 2010, when they were eliminated in the group stage but left South Africa unbeaten after \u200bdraws with Slovakia, Italy and Paraguay.\n\nMonday's game will be the first Wor\n\n\u2022 BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener - Telecom Asia Sport\n  https://www.telecomasia.net/blog/breaking-abdessamad-ezzalzouli-set-for-3-4-weeks-out-after-suspected-mcl-injury-ahead-of-world-cup-opener/\n  No Deposit\n   Promotions\n   Cashback\n\nNews\n   Football\n   Boxing\n   Tennis\n   Hockey\n\nBlog\n   Athletes & Celebrities\n\nEvents\n\nBonus $100Sign in\n\nWorld Cup 2026\n\n1.   Home\n2.   Blogs\n\n# BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener\n\nImage 1: Oyebade Oluwafemi\n\nOyebade Oluwafemi\n\n08/06/2026\n\n11:42\n\nMorocco winger Abdessamad Ezzalzouli is facing a spell on the sidelines afte"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: Iran recent form and results",
-        "data": "\u2022 Reuters Iran at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/iran/\n  Follow Iran&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Iran national football team Asia: World Cup qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/iran/table/2026/world-cup-qualification-asia/\n  This page shows the Iran national football team Asia: World Cup qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Iran national football team Asia: World Cup qualification 2026 standings changes during the competition.\n\n\u2022 IR Iran | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/ir-iran/fixtures\n  IR Iran | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the IR Iran squad at FIFA World Cup 2026\u2122.\n\n\u2022 2026 FIFA World Cup Group G - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G\n  Group G of the 2026 FIFA World Cup will take place between June 15 and June 26, 2026. The group consists of Belgium, Egypt, Iran, and New Zealand. The top two teams, possibly along with the third-placed team, will advance to the round of 32.\n\n\u2022 World Cup 2026 Ultimate Guide: Iran | Goal.com UK\n  https://www.goal.com/en-gb/world-cup-teams/group-g/world-cup-2026-guide-iran/O~bltf0eed030f109368f\n  One such player is the face of modern Iranian football, Mehdi Taremi. The Olympiacos striker serves as both captain and the team&#x27;s undisputed attacking leader, while his importance was highlighted in recent friendlies, where he scored three goals across matches against Nigeria and Costa Rica, including a brace in the latter. Since moving to Greece, Taremi has rediscovered both consistency and form, reaching double figures for league goals in 2025-26 while adding two more in the Champions League.\n\n\u2022 [Discussion] After failing to pass the group stage multiple times, the Egyptian national team players got ahead of the mockery this time and made self-deprecating comedy sketches before the World Cup even started\n  https://www.reddit.com/r/worldcup/comments/1u27uwg/after_failing_to_pass_the_group_stage_multiple/\n  Lol this is hilarious \"You mean advancing onto the plane back home?\"\n\n\u2022 [Discussion] Iran Announces Squad for 2026 FIFA World Cup\n  https://www.reddit.com/r/worldcup/comments/1ttst0k/iran_announces_squad_for_2026_fifa_world_cup/\n  For our Iranian neighbours, I hope they represent not the regime but the good people of Iran. Also, I wonder how they'll protect Iranian players. Hopefully nothing violent occurs."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: New Zealand recent form and results",
-        "data": "\u2022 New Zealand | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/new-zealand/team-news\n  When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify ...\n\n\u2022 New Zealand World Cup 2026 team guide | New Zealand | The Guardian\n  https://www.theguardian.com/football/2026/jun/05/new-zealand-world-cup-2026-team-guide\n  A graphic showing New Zealand\u2019s performance at previous tournaments, Fifa ranking and record in qualifying \u00b7 Northampton-born Darren Bazeley has grown into the role and got the team playing better to such a degree they could be capable of the knockout phase. Bazeley will achieve a World Cup first in LA as the first man to have coached at Olympic Games, under-17, under-20 and senior World Cup level.\n\n\u2022 New Zealand FIFA World Cup 2026 Preview: Squad, Fixtures, Lineup and Prediction\n  https://www.chaseyoursport.com/football/new-zealand-fifa-world-cup-2026-squad-fixtures-prediction/12411\n  New Zealand return to the FIFA World Cup 2026 after 16 years. Check their squad, fixtures, qualification journey, strengths, weaknesses and tournament prediction.\n\n\u2022 FIFA WORLD CUP 26\u2122 Official Information For All Whites ...\n  https://www.nzfootball.co.nz/fifa-world-cup-26\n  <strong>New Zealand has drawn Belgium, Egypt, and IR Iran in Group G</strong>. Matches will be played at the following times. ... The World Cup can be watched on TVNZ.\n\n\u2022 Fifa World Cup 2026: What you need to know about New Zealand - BBC Sport\n  https://www.bbc.com/sport/football/articles/crkp3rmv6gjo\n  Here we take a closer look at New Zealand. ... <strong>The lowest-ranked team at the 2026 World Cup cruised through qualifying, beating New Caledonia (ranked 151st in the world) 3-0 in the Oceania final</strong>."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: head-to-head history and prior meetings",
-        "data": "\u2022 Iran vs. New Zealand: Head-to-head record and past meetings before World Cup 2026 clash - Sports Mole\n  https://www.sportsmole.co.uk/football/iran/world-cup-2026/head-to-head/iran-vs-new-zealand-head-to-head-record-and-past-meetings_599186.html\n  Here, Sports Mole takes an in-depth ... the two sides. ... <strong>Iran and New Zealand have rarely clashed throughout history, with just two prior meetings before their encounter in Group G at the World Cup 2026</strong>....\n\n\u2022 IR Iran vs New Zealand Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-iran-vs-new-zealand\n  Last 5 , <strong>IR Iran Win 3 , Draw 1 , Lose 1 , Score Win Prob: 60.00% ,Asian Handicap Win%: 0.0% Total Goals Over%: 50.0%</strong> ... Last 5 , New Zealand Win 1 , Draw 0 , Lose 4 , Score Win Prob: 20.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 40.0%\n\n\u2022 Iran vs. New Zealand Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/iran_vs_new_zealand.php\n  In the history of World Cups, Iran National Team faced New Zealand in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 Iran vs New Zealand at FIFA World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN\n  https://www.espn.com/soccer/story/_/id/49045598/iran-vs-new-zealand-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  Behemoths of the Asian game, <strong>Iran breezed through Asian qualification losing only of their 16 AFC preliminaries</strong> (and that was vs Qatar, after qualification was secured already). They&#x27;ve not been able to translate that continental domination ...\n\n\u2022 World Cup \u00bb Iran against New Zealand \u00bb Head-to-Head\n  https://www.worldfootball.net/match-report/co139/fifa-world-cup/ma10713854/iran_new-zealand/head-to-head/\n  Football - results, news, statistics and much more...\n\n\u2022 [Discussion] World Cup - NZ vs Iran\n  https://www.reddit.com/r/newzealand/comments/1tytzs1/world_cup_nz_vs_iran/\n  In my bed."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: group context and tournament stakes",
-        "data": "\u2022 2026 FIFA World Cup Group G - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G\n  Group G of the 2026 FIFA World Cup will take place between June 15 and June 26, 2026. The group consists of Belgium, Egypt, Iran, and New Zealand. <strong>The top two teams, possibly along with the third-placed team, will advance to the round of 32.</strong> All of the matches in Group G will be played at three ...\n\n\u2022 Iran vs New Zealand FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/iran-new-zealand-world-cup-preview/bltf4f1b599c87b9982\n  No head-to-head data is available ... becomes available. In Group G of the 2026 FIFA World Cup, <strong>Iran currently sit third and New Zealand fourth in the table</strong>....\n\n\u2022 World Cup Group G standings 2026: Updated results, table and fixtures for Belgium, Egypt, Iran, New Zealand | Sporting News\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-g-standings-results-table-2026/1718b02f21d1b076ccc56614\n  Iran only played at two World Cups before the turn of the century, but they have qualified for five of the past six editions. They secured their place at the 2026 finals by finishing <strong>top of Group A in the third round of the AFC qualifying section</strong>, ...\n\n\u2022 Iran vs New Zealand Prediction: World Cup 2026 Preview & Best Bets - Yahoo Sports\n  https://sports.yahoo.com/articles/iran-vs-zealand-prediction-world-121500817.html\n  Group G context: An early Group G encounter that could have significant bearing on qualification from one of the tournament\u2019s more open sections. ... Both Iran and New Zealand will be acutely aware that an opening Group G victory could prove decisive when qualification is resolved on Matchday 3.\n\n\u2022 IR Iran vs New Zealand | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021476\n  World Cup 2026 groups: How teams qualify and tie-breakersWorld Cup 2026 groups: How teams qualify and tie-breakers \u00b7 Eskandarian on Iran&#x27;s first World Cup and playing at CosmosEskandarian on Iran&#x27;s first World Cup and playing at Cosmos ... IR Iran v New Zealand: Live stream, team news, tickets and moreIR Iran v New Zealand: Live stream, team news, tickets and more"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Defines the motivation level for New Zealand; if a draw is sufficient, they will sit in an ultra-low block, reducing match tempo.",
-        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n15.06. [Sweden - Tunisia](https://www.soccerway.com/match/sweden-OQyqbHWB/tunisia-QqZVYk95/), [Spain - Cape Verde](https://www.soccerway.com/match/cape-verde-MocyWdm7/spain-bLyo6mco/), [Belgium - Egypt](https://www.soccerway.com/match/belgium-GbB957na/egypt-bejDn7NN/), 16.06. [Saudi Arabia - Uruguay](https://www.soccerway.com/match/saudi-arabia-biSY8ox4/uruguay-xMk44orG/), [Iran - New Zealand](https://www.soccerway.com/match/iran-xrRx85iA/new-zealand-rLctHkpU/), [France - Senegal](https://www.soccerway.com/match/france-QkGeVG1n/senegal-hOIsJLJr/), 17.06. [Iraq - Norway](https://www.soccerway.com/match/iraq-K8aAGt6r/norway-8rP6JO0H/), [Argentina - Algeria](https://www.soccerway.com/match/algeria-nc87N1BR/argentina-f9OppQjp/), [Austria - Jordan](https://www.soccerway.com/match/austria-naHiWdnt/jordan-vNcmJoU2/), [Portugal - D.R. Congo](https://www.soccerway.com/match/d-r-congo-phn9mm8H/portugal-WvJrjFVN/), [England - Croatia](http"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Reveals vulnerability trends in Iran's backline when pressured by route-one football, indicating how New Zealand's direct style might fare.",
-        "data": "\u2022 Iran World Cup 2026 Squad, Fixtures, Standings, and Kits | FWC LIVE\n  https://fwclive.com/teams/iran/\n  Iran enter the 2026 World Cup with their most technically sophisticated squad in tournament history, anchored by Taremi&#x27;s elite club-level quality and organized defensively by Ghalenoei&#x27;s disciplined system. Group G presents an achievable qualification path \u2014 Belgium is the clear group favorite, but Egypt and New Zealand are teams that Iran can match physically and tactically if their defensive structure holds and Taremi delivers at his best.\n\n\u2022 Iran national football team Asia: World Cup qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/iran/table/2026/world-cup-qualification-asia/\n  Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Iran national football team Asia: World Cup qualification 2026 standings changes during the competition.\n\n\u2022 World Cup 2026 Ultimate Guide: Iran | Goal.com UK\n  https://www.goal.com/en-gb/world-cup-teams/group-g/world-cup-2026-guide-iran/O~bltf0eed030f109368f\n  Iran ended the campaign with the most prolific attack in the group, scoring 19 goals, but their <strong>eight goals</strong> conceded suggested a lack of defensive solidity.\n\n\u2022 Iran National Football Team: World Cup 2026 Profile, ...\n  https://www.dawan.africa/dp/iran-national-football-team-world-cup-2026-profile-squad-history-and-more\n  Key results and statistics (select ... defensive structure and set-piece efficiency were recurring strengths helping convert results into points. Key moments: Late goals and comebacks (notably Taremi\u2019s contributions) turned tight matches into qualification-affirming results. What this meant (implications) World Cup slot: Iran took one of AFC\u2019s direct places for the 48-team 2026 tournament ...\n\n\u2022 Iran vs New Zealand FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/iran-new-zealand-world-cup-preview/bltf4f1b599c87b9982\n  Iran stamped their ticket to North America by staging a remarkably steady, dominant run through the multi-tiered AFC qualification cycles. Competing in the highly competitive environment of the expanded Third Round group phase, Team Melli consistently imposed their experienced, high-tempo tactical authority over regional opponents to suppress any chance of qualifying drama. The primary catalyst for their successful march across the continent was an exceptional balance between defensive resilience and clinical attacking output."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Assesses tactical matchup between Iran's offensive triggers and New Zealand's deep-defending structures.",
-        "data": "\u2022 Tactics Explained - Understanding Different Defensive Blocks\n  https://www.discountfootballkits.com/blog/tactics-explained-understanding-different-defensive-blocks/\n  ... With the low defensive block, <strong>teams drop back into their own defensive third and minimise the space in front of their own goal</strong>. Usually, all outfield players will drop into their own half in order to create an incredibly compact low block, ...\n\n\u2022 Low Block Vs Standard Block Vs High Block - Analysis\n  https://totalfootballanalysis.com/article/tactical-theory-the-low-standard-and-high-block-tactical-analysis-tactics\n  On the defensive side of the ball, it is likely that in a standard block, the CAM will be tasked with putting pressure on the defensive midfielder who gains possession inside the defending team\u2019s half, preventing key passes from being played from deep. It is incredibly important for these players to be extremely strong in tackles and positional awareness while playing defensive midfield. If they get caught out the advantage of the 4-2-3-1 becomes null. These pivot players will need to be effective ball carriers and possess a wide passing range when the ball is turned over during an attacking transition.\n\n\u2022 IR Iran vs New Zealand Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-iran-vs-new-zealand\n  IR Iran vs New Zealand H2H Statistics updated on 2026/06/15 at 02:02. ... AiScore Football LiveScore provides you with unparalleled football live scores and football results from over 2600+ football leagues, cups and tournaments. Get live scores, halftime and full time soccer results, goal scorers and assistants, cards, substitutions, match statistics and live stream from Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie, Russian Premier League, Brasileir\u00e3o, MLS, Super Lig and Championship on AiScore.com.\n\n\u2022 World Cup Group G tactical guide: De Bruyne, Salah, Taremi and Wood face off in battle of the veterans - The Athletic\n  https://www.nytimes.com/athletic/7324088/2026/06/05/2026-world-cup-tactical-guides-group-g/\n  The goal is evidence that <strong>Iran can play incisive short passes if afforded space and time</strong>, which could make them a tricky opponent for group favourites Belgium and New Zealand.\n\n\u2022 Tactical theory: Block\n  https://totalfootballanalysis.com/tactical-theory-block-tactical-analysis-tactics\n  The most important thing about a team\u2019s defensive block is how high it is positioned, which can then tell us a lot about their tactics in general. A low block is the best weapon when you want to achieve compactness just ahead of your penalty area. Teams who defend in a low block usually resort to counterattacking tactics and transitions to hurt their opposition and will mostly frustrate them to submission with their defence."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Evaluates historical success rates of Iran's defense against highly physical, direct Oceania style teams.",
-        "data": "\u2022 IR Iran vs New Zealand Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-iran-vs-new-zealand\n  IR Iran vs New Zealand Head to Head results record history. H2H stats and prediction, goals, past matches.\n\n\u2022 Iran vs New Zealand Preview: Predicted Lineups, Team News & Tactical Analysis | 2026 World Cup Group G\n  https://www.rotowire.com/soccer/article/iran-vs-new-zealand-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-g-118098\n  Wood against Khalilzadeh and Nemati is a battle of physicality, and it is realistically New Zealand&#x27;s clearest path to a goal. <strong>If Iran&#x27;s defenders win the aerial duels and deny Wood service, New Zealand&#x27;s attack runs dry</strong>.\n\n\u2022 Iran vs New Zealand FIFA World Cup 2026 Preview: Everything you need to know | Goal.com US\n  https://www.goal.com/en-us/news/iran-new-zealand-world-cup-preview/bltf4f1b599c87b9982\n  His primary objective in this high-stakes opener will be disrupting Iran\u2019s physical mid-block, maintaining structural balance during defensive transitions, and utilising the elite aerial presence of his talismanic forwards to exploit any vulnerability in the opposition&#x27;s box.\n\n\u2022 Iran national football team: record v New Zealand\n  https://www.11v11.com/teams/iran/tab/opposingTeams/opposition/New%20Zealand/\n  Iran national football team record against New Zealand including all match details.\n\n\u2022 Iran vs New Zealand Stats, Match Statistics, xG & Player Data | FWC Times\n  https://fwctimes.com/iran-vs-new-zealand-stats/\n  The public player data lists him with <strong>11 goals, seven assists, and 15 appearances</strong> in the tracked source set. New Zealand need to limit his touches between the centre-backs and holding midfield."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Indicates market expectations, squad valuation, and handicap expectations for Iran.",
-        "data": "\u2022 Iran vs New Zealand World Cup prediction, team news, odds, betting tips and Bet Builder | Racing Post\n  https://www.racingpost.com/sport/football-tips/world-cup-2026/iran-vs-new-zealand-world-cup-prediction-team-news-odds-betting-tips-and-bet-builder-aAP7j4z779qD/\n  Iran came through some tough fixtures in Asian qualifying to secure their place at the World Cup and they open their Group G campaign against New Zealand in Los Angeles on Tuesday morning. The All Whites, managed by Englishman Darren Bazeley, came through a straightforward Oceania qualifying process and will hope they do not find the step up in class difficult to negotiate. ... New Customer offer. Place a min \u00a310 bet on Football on odds of min 1.5 (1/2), get \u00a350 in Free Bet Builders after the qualifying bet has been settled.\n\n\u2022 Iran vs New Zealand Prediction: World Cup 2026 Preview & Best Bets - Yahoo Sports\n  https://sports.yahoo.com/articles/iran-vs-zealand-prediction-world-121500817.html\n  Iran\u2019s greater tournament experience and the quality of their attacking options make them the more credible side, but New Zealand\u2019s fitness and organisation should ensure this is not a comfortable afternoon for the Asian side. ... Iran\u2019s recent run is a study in contrasts. The 5-0 demolition of Costa Rica in March 2026 was eye-catching, but the back-to-back goalless draws against Uzbekistan and Cape Verde in November, along with a defeat to Nigeria, suggest Ghalenoei\u2019s side can be blunt when faced with organised resistance.\n\n\u2022 Iran vs New Zealand Betting Odds | Oddschecker\n  https://www.oddschecker.com/football/world-cup/iran-v-new-zealand/winner\n  Compare odds across 24 UK bookmakers for Iran vs New Zealand. Increase your potential winnings by using Oddschecker for a single bet or part of an acca.\n\n\u2022 Iran to Win World Cup Odds: 2026 Predictions & Bets\n  https://totalfootballanalysis.com/competitions/fifa-world-cup-2026/iran-world-cup-odds-predictions\n  Outright Winner (700/1): <strong>Iran to win the 2026 World Cup</strong>. A remote possibility given historical performance and squad profile. To Win Group G (7/1): Iran to finish top of their group ahead of Belgium, Egypt and New Zealand.\n\n\u2022 Iran vs New Zealand Predictions, Picks & Odds \u2014 Monday, June 15 World Cup Match\n  https://www.covers.com/world-cup/iran-vs-new-zealand-prediction-picks-odds-monday-6-15-2026\n  The Iranians arrive in encouraging form \u2013 they lost just once in 16 Asian qualification games and thumped Costa Rica 5-0 earlier this year \u2013 and they\u2019re <strong>clear favorites</strong> on Monday."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Evaluates environmental factors like heat/humidity and turf wear, which heavily impact physical low-blocks and direct play fatigue.",
-        "data": "\u2022 World Cup 2026 weather updates: Forecasts for key matches, stadium conditions and fan impacts\n  https://www.accuweather.com/en/sports/live-news/world-cup-2026-weather-updates-forecasts-for-key-matches-stadium-conditions-and-fan-impacts/1898671\n  Pink lights illuminate newly laid grass on the pitch inside AT&amp;T Stadium, which will be called &quot;Dallas Stadium&quot; during the duration of the tournament, in Arlington, Texas, on May 18, 2026. (Photo by Mark Felix / AFP via Getty Images) Several venues have been transformed ahead of the upcoming matches, including fields where artificial turf had to be swapped out for live grass.\n\n\u2022 SoFi Stadium World Cup 2026 \u2014 Matches, Capacity, Guide\n  https://nzsoccerwc.com/sofi-stadium/\n  Iran&#x27;s compact, counter-attacking style is well-suited to the stadium&#x27;s dimensions, but New Zealand&#x27;s transition-based approach benefits equally from the fast surface and the crowd energy that a significant Kiwi presence will generate. The kickoff time \u2014 <strong>9 PM local, 1 PM NZT</strong> \u2014 means the ...\n\n\u2022 2026 World Cup Stadiums \u2014 All 16 Venues Reviewed\n  https://nzwcfootball.com/world-cup-stadiums-guide/\n  Where do the All Whites play their 2026 World Cup matches? New Zealand play their opening match against Iran at SoFi Stadium in Inglewood (Los Angeles), California on 16 June at <strong>13:00 NZST</strong>.\n\n\u2022 World Cup 2026: Full match schedule, groups, teams and start times | World Cup 2026 News | Al Jazeera\n  https://www.aljazeera.com/sports/2026/6/11/world-cup-2026-full-match-schedule-groups-teams-and-start-times\n  \u26bd Group A: Mexico, South Africa, ... Group L: England, Croatia, Ghana, Panama ... The tournament will open on June 11 at <strong>1pm CST (19:00 GMT)</strong> at the Mexico City Stadium in Mexico....\n\n\u2022 World Cup 2026 Stadium Guide\n  https://www.bbc.co.uk/sport/extra/zwengdni1f/world-cup-2026-stadium-guide\n  Home to the Houston Texans, this venue became the first NFL stadium with a retractable roof when it opened in 2002. Built at a cost of $352m, it also features climate control \u2013 ideal given the hot and humid outdoor conditions expected in June and July. It initially had a grass pitch but this was replaced with artificial turf in 2015, so a temporary natural playing surface will be installed for the World Cup."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Determines the presence and health of Iran's primary offensive threats, crucial for evaluating their expected attacking output.",
-        "data": "\u2022 Iranian World Cup players will be able to enter US the day before matches, DHS says - Reuters\n  https://www.reuters.com/sports/soccer/iranian-world-cup-players-will-be-able-enter-us-day-before-matches-dhs-says-2026-06-09/\n  # Iranian World Cup players will be able to enter US the day before matches, DHS says | Reuters. ## Browse World. Image 1: FIFA World Cup 2026 - Team Iran arrives at Tijuana for World Cup. Item 1 of 2 FIFA World Cup 2026 - Team Iran arrives at Tijuana for World Cup - Tijuana International Airport, Tijuana, Mexico - June 7, 2026 Iran's Mehdi Taremi and Alireza Jahanbakhsh arrive with the team ahead of the World Cup REUTERS/Victor Medina. **[1/2]**FIFA World Cup 2026 - Team Iran arrives at Tijuana for World Cup - Tijuana International Airport, Tijuana, Mexico - June 7, 2026 Iran's Mehdi Taremi a\n\n\u2022 Iran squad get cheerful Tijuana send off ahead of World Cup opener in Los Angeles - Reuters\n  https://www.reuters.com/sports/soccer/iran-squad-get-cheerful-tijuana-send-off-ahead-world-cup-opener-los-angeles-2026-06-14/\n  # Iran squad get cheerful Tijuana send off ahead of World Cup opener in Los Angeles. Item 1 of 5 Soccer Football - FIFA World Cup 2026 - Iran leave Tijuana hotel ahead of first World Cup match - Tijuana, Mexico - June 14, 2026 A fan with a signed photo of the Iran squad outside the hotel before the match REUTERS/Victor Medina. **[1/5]**Soccer Football - FIFA World Cup 2026 - Iran leave Tijuana hotel ahead of first World Cup match - Tijuana, Mexico - June 14, 2026 A fan with a signed photo of the Iran squad outside the hotel before the match REUTERS/Victor Medina Purchase Licensing Rights, open\n\n\u2022 BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener - Telecom Asia Sport\n  https://www.telecomasia.net/blog/breaking-abdessamad-ezzalzouli-set-for-3-4-weeks-out-after-suspected-mcl-injury-ahead-of-world-cup-opener/\n  # BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener. The Real Betis attacker picked up the injury in the first half of the match, prompting the medical team to take immediate precautionary action by substituting him at the start of the second half to avoid worsening the issue. Image 5: World Cup 2026: Switzerland Relocate Base Camp After Venomous Snake Scare in San Diego. Image 6: 2026 World Cup: Brazil Call Up Ederson to Replace Injured Wesley Ahead of Morocco Opener. Image 7: Germany at the FIFA World Cup 2026: Die Mannschaft Favoured \n\n\u2022 World Cup 2026: Iran fan ticket allocation revoked, says FFIRI - BBC\n  https://www.bbc.com/sport/football/articles/c9q2vrdx0ewo\n  # World Cup 2026: Iran fan ticket allocation revoked, says FFIRI - BBC Sport. **Iran's allocation of fan tickets for the group stage of the World Cup has been revoked just days before the start of the tournament, says the country's football federation.**. Iran's governing body says Fifa regulations state each federation involved in the World Cup receives 8% of the tickets for each of their matches, to distribute to supporters. The flag Iranians are not allowed to wave at the World Cup. Iran's involvement in the World Cup has been plagued with uncertainty, linked to the ongoing war in the Middl\n\n\u2022 Iran at the World Cup: War, Visa Issues, Ticket Problems and a Pride Match - Newsweek\n  https://www.newsweek.com/iran-at-the-world-cup-war-visa-issues-ticket-problems-and-a-pride-match-12050409\n  # Iran at the World Cup: War, Visa Issues, Ticket Problems and a Pride Match. The players stepped off the plane wearing gold lapel pins reading \"168,\" a reference to the people killed, most of them children, in a February 28 missile strike on a girls' school in southern Iran on the first day of the war with the United States and Israel. Days before the tournament's June 11 opening, Iran is the only team arriving from a country effectively at war with one of the three hosts\u2014the U.S., Mexico and Canada. Its participation has triggered"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Provides tactical insight into New Zealand's target-man dependency and flank-service mechanics.",
-        "data": "\u2022 New Zealand adds Will Young to test squad after Kane Williamson retires from international duty - The Washington Post\n  https://www.washingtonpost.com/sports/2026/06/13/will-young-kane-williamson-new-zealand/a2cd8766-671a-11f1-bdd4-805ebb99a693_story.html\n  # New Zealand adds Will Young to test squad after Kane Williamson retires from international duty. New Zealand has called in Will Young to its test squad to replace Kane Williamson, who retired from all international cricket Friday in mid-series in England. FILE - New Zealand\u2019s Will Young plays a shot during the first one day international cricket match between Bangladesh and New Zealand in Mirpur, Bangladesh, Friday, April 17, 2026. (AP Photo/Mosaraf Hossain, file). LONDON \u2014 New Zealand has called in Will Young to its test squad to replace Kane Williamson, who retired from all international c\n\n\u2022 Cheat Sheet at the World Cup: Tuchel not happy with performance!? Scotland land in Charlotte! - Sky Sports\n  https://www.skysports.com/football/video/30998/13551868/cheat-sheet-at-the-world-cup-tuchel-not-happy-with-performance-scotland-land-in-charlotte\n  # Cheat Sheet at the World Cup: Tuchel not happy with performance!? Hayley McQueen with your daily breakdown of the biggest stories at the 2026 World Cup. Rob Dorsett reflects on England's warm-up win over New Zealand, Luke Shanley reports from Scotland's team hotel, and Kaveh Solhekol on the pricey tickets. ### World Cup headlines: Bellingham dilemma, Scotland arrive and ticket latest. Bothroyd challenged in a game on World Cup ticket prices. ### Korda reveals relief after dramatic US Women's Open triumph. ### Korda triumphs at US Women's Open after thrilling final round. ### Spend the day in\n\n\u2022 Inside Bosnia and Herzegovina's World Cup roster 2026: Edin Dzeko brings experience to Sergej Barbarez's squad - sportingnews.com\n  https://www.sportingnews.com/uk/football/news/bosnia-herzegovina-world-cup-roster-2026-squad-players/107a2dc59a0b6ed8fe20e963\n  # Inside Bosnia and Herzegovina's World Cup roster 2026: Edin Dzeko brings experience to Sergej Barbarez's squad. The 2026 World Cup marks just the second time that Bosnia and Herzegovina will appear on global soccer's biggest stage. The European side defeated Italy on penalties in a playoff in March to secure one of the final six places at the tournament being staged across the United States, Canada and Mexico. After exiting at the group stage back in 2014, the\u00a0Golden Lilies will attempt to reach the knockout phase this year with a roster comprising promising young talent and a healthy dose o\n\n\u2022 Iran squad get cheerful Tijuana send off ahead of World Cup opener in Los Angeles - Reuters\n  https://www.reuters.com/sports/soccer/iran-squad-get-cheerful-tijuana-send-off-ahead-world-cup-opener-los-angeles-2026-06-14/\n  # Iran squad get cheerful Tijuana send off ahead of World Cup opener in Los Angeles. Item 1 of 5 Soccer Football - FIFA World Cup 2026 - Iran leave Tijuana hotel ahead of first World Cup match - Tijuana, Mexico - June 14, 2026 A fan with a signed photo of the Iran squad outside the hotel before the match REUTERS/Victor Medina. **[1/5]**Soccer Football - FIFA World Cup 2026 - Iran leave Tijuana hotel ahead of first World Cup match - Tijuana, Mexico - June 14, 2026 A fan with a signed photo of the Iran squad outside the hotel before the match REUTERS/Victor Medina Purchase Licensing Rights, open\n\n\u2022 Meet USA's World Cup soccer team: Inside the USMNT roster for 2026, from Christian Pulisic to Gio Reyna - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/usa-world-cup-soccer-usmnt-roster-2026-christian-pulisic-gio-reyna/a50e7e2f3009907eb963a434\n  # Meet USA's World Cup soccer team: Inside the USMNT roster for 2026, from Christian Pulisic to Gio Reyna. The 2026 World Cup is finally here, and that means the U.S. will have another shot at redeeming past misfortunes at the tournament. With stars Christian Pulisic, Weston McKennie, and Sergino Dest all aged 27 heading"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Uncovers potential physical decline or squad disharmony that could compromise New Zealand's defensive organization.",
-        "data": "\u2022 Body found outside Tijuana stadium where Iran team is training for World Cup - CBS News\n  https://www.cbsnews.com/news/body-outside-tijuana-stadium-iran-team-training-world-cup/\n  # Body found outside Tijuana stadium where Iran team is training for World Cup. Add CBS News on Google. Mexican authorities are investigating how a corpse ended up outside a stadium in the border city of Tijuana, where Iran's national team has been training for its upcoming World Cup match against New Zealand. Iran's national squad is using Tijuana as its base during the World Cup due to visa delays, as well as travel restrictions imposed on the team's administrative staff and coaches. The team will travel to Los Angeles next week for its first group stage match June 15 against New Zealand's A\n\n\u2022 Is Bukayo Saka World Cup-Ready For England? Thomas Tuchel Provides Update - FOX Sports\n  https://amp.foxsports.com/stories/soccer/is-bukayo-saka-world-cup-ready-for-england-thomas-tuchel-delivers-take-care-update-on-arsenal-wingers-fitness\n  # Is Bukayo Saka World Cup-Ready For England? England head coach Thomas Tuchel has provided a crucial fitness update on Bukayo Saka ahead of the final World Cup warm-up clash against Costa Rica. The winger missed the recent victory over New Zealand following a grueling, title-winning campaign with Arsenal, prompting the national team staff to carefully manage his minutes to ensure he is fully prepared. Speaking during a pre-match press conference, Tuchel confirmed that England are closely monitoring Saka ahead of Wednesday night\u2019s friendly against Costa Rica. The forward was absent from the 1-\n\n\u2022 Vie 6/12 - Ahora o Nunca - ESPN\n  https://www.espn.com/watch/player?id=4522078\n  ## World Cup 2026 today: Live updates, latest news as USMNT make dream start - June 13. It's day three of the World Cup, and you can follow all the latest news and updates, right here, with ESPN. * World Cup 2026 today: Live updates and news -- as it happened on June 12. ## ENGLAND PREPARE FOR THE WORLD STAGE. ## Key issues for England at 2026 World Cup: Fatigue, fitness and do Gordon, Stones start? ## Tuchel: England can't be World Cup favourites. * England's route to the 2026 World Cup final: Potential Brazil, Argentina knockout fixtures and why topping Group L is crucial. * England at the 2\n\n\u2022 Viii Sports 2024 National Championship - ESPN\n  https://www.espn.com/watch/player/_/id/4521837\n  ## World Cup 2026 today: Live updates, latest news as USMNT make dream start - June 13. It's day three of the World Cup, and you can follow all the latest news and updates, right here, with ESPN. * World Cup 2026 today: Live updates and news -- as it happened on June 12. ## ENGLAND PREPARE FOR THE WORLD STAGE. ## Key issues for England at 2026 World Cup: Fatigue, fitness and do Gordon, Stones start? ## Tuchel: England can't be World Cup favourites. * England's route to the 2026 World Cup final: Potential Brazil, Argentina knockout fixtures and why topping Group L is crucial. * England at the 2\n\n\u2022 Mike Brown sounds off on the officiating in Game 3 - ESPN\n  https://www.espn.com/watch/player/_/id/49006023/redirected/coming\n  ## World Cup 2026 today: Live updates, latest news as USMNT make dream start - June 13. It's day three of the World Cup, and you can follow all the latest news and updates, right here, with ESPN. * World Cup 2026 today: Live updates and news -- as it happened on June 12. ## ENGLAND PREPARE FOR THE WORLD STAGE. ## Key issues for England at 2026 World Cup: Fatigue, fitness and do Gordon, Stones start? ## Tuchel: England can't be World Cup favourites. * England's route to the 2026 World Cup final: Potential Brazil, Argentina knockout fixtures and why topping Group L is crucial. * England at the 2"
-      }
-    ],
-    "research_cost": 0.134,
-    "wallet_before": 3.818,
-    "wallet_after": 3.684,
-    "prediction": {
-      "pick": "home",
-      "confidence": 8,
-      "confidence_reason": "While Iran's tight travel logistics from their Tijuana base camp due to US visa restrictions introduce minor preparation friction, their superior technical depth and ability to neutralize Chris Wood leave New Zealand with few avenues to an upset.",
-      "reasoning": "Iran's physical defensive unit is perfectly built to nullify New Zealand's direct aerial threat, while Mehdi Taremi's elite attacking quality will easily breach the lowest-ranked team in the tournament."
-    },
-    "full_reasoning": "An analysis of the Group G opening match between Iran and New Zealand points to a significant difference in pedigree, squad depth, and tactical stability, strongly favoring the Asian giants.\n\n### Iran's Tactical Maturity and Firepower\nIran (\"Team Melli\") enters the 2026 World Cup as one of the most seasoned teams from the AFC, having breezed through qualification with only one loss in 16 matches. Under Amir Ghalenoei, Iran employs a highly structured, physical mid-block and transitions with rapid, vertical play. They are spearheaded by Olympiacos forward Mehdi Taremi, who is in exceptional form (11 goals and 7 assists in recent competitive outings) and provides elite European-caliber quality in the final third. Behind him, experienced operators like Alireza Jahanbakhsh and Saman Ghoddos provide the playmaking depth needed to dismantle lower-tier defensive blocks.\n\n### New Zealand's Structural Limitations\nNew Zealand enters the tournament as its lowest-ranked participant, qualifying through a relatively straightforward Oceania path. Managed by Darren Bazeley, the \"All Whites\" are highly reliant on Nottingham Forest's physical striker Chris Wood. Tactically, New Zealand\u2019s primary path to goal is direct service to Wood. However, Iran's central defensive partnership of Shoja Khalilzadeh and Ali Nemati is highly physical, aerially dominant, and well-equipped to neutralize Wood in the box. If Wood is starved of service, New Zealand lacks the secondary playmaking outlets to trouble a disciplined Iranian defense.\n\nWhile Iran's preparation has faced minor logistical hurdles\u2014including training in Tijuana and only being allowed to cross into the United States the day before the match due to visa restrictions\u2014their immense gap in tournament experience, squad depth, and tactical cohesion makes them clear favorites to start their campaign with three points.\n\nPICK: home\nCONFIDENCE: 8\nCONFIDENCE_REASON: While Iran's tight travel logistics from their Tijuana base camp due to US visa restrictions introduce minor preparation friction, their superior technical depth and ability to neutralize Chris Wood leave New Zealand with few avenues to an upset.\nREASONING: Iran's physical defensive unit is perfectly built to nullify New Zealand's direct aerial threat, while Mehdi Taremi's elite attacking quality will easily breach the lowest-ranked team in the tournament.",
-    "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
-  },
-  {
     "match": "FRA vs SEN",
     "home": "FRA",
     "away": "SEN",
@@ -3990,5 +3662,379 @@
     "reflected": true,
     "reflected_at": "2026-06-16T00:30:32.271822+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defensive organization over individual attack.\n- AUS vs TUR: Prioritize low-block discipline over possession metrics.\n- NED vs JPN: Prioritize defensive resilience over chance volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize tier gaps and form over history.\n- CIV vs ECU: Prioritize home advantage and fitness over risk aversion.\n- SWE vs TUN: Prioritize scoring efficiency over low-block setups.\n- ESP vs CPV: Prioritize physical low-block organization over possession dominance.\n- BEL vs EGY: Prioritize low-block defensive discipline over favorite status.\n- KSA vs URU: Prioritize environmental heat and squad news over historical matchups.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue search (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)"
+  },
+  {
+    "match": "IRN vs NZL",
+    "home": "IRN",
+    "away": "NZL",
+    "kickoff": "2026-06-16T01:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defensive organization over individual attack.\n- AUS vs TUR: Prioritize low-block discipline over possession metrics.\n- NED vs JPN: Prioritize defensive resilience over chance volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize tier gaps and form over history.\n- CIV vs ECU: Prioritize home advantage and fitness over risk aversion.\n- SWE vs TUN: Prioritize scoring efficiency over low-block setups.\n- ESP vs CPV: Prioritize physical low-block organization over possession dominance.\n- BEL vs EGY: Prioritize low-block defensive discipline over favorite status.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue search (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)",
+    "information_needs": "FORM\n- How did Iran's defensive record in the final round of AFC qualifying compare to their historical averages, particularly in matches played away from home?\n- What was New Zealand's goal-scoring efficiency in their pre-tournament warm-up friendlies against top-50 FIFA-ranked opposition, and did they show progress in breaking down low blocks?\n\nPLAYERS\n- Is Mehdi Taremi fully fit and starting as a focal point, or is Iran deploying a dual-striker system featuring both Taremi and Sardar Azmoun?\n- How has New Zealand managed Chris Wood's physical workload leading into this match, and who is their designated tactical alternative if he is isolated or subbed off?\n\nTACTICS\n- How does New Zealand's preferred back-three/five defensive shape plan to neutralize Iran's high-volume crossing and half-space entries?\n- Will Iran employ their traditional compact mid-block to transition quickly, or will they seek to dominate possession against a lower-ranked New Zealand side?\n\nH2H\n- Have these two teams met in any FIFA-sanctioned fixtures since their AFC-OFC Challenge Cup clash in 2003, and are there any relevant tactical carryovers from those encounters?\n\nCONTEXT\n- Is this the opening match of the 2026 World Cup group stage for both teams, and does the tournament's 48-team format (where some third-place teams may advance) alter their risk tolerance for a draw?\n\nMARKET\n- What do the current Asian Handicap lines suggest about the expected goal margin, and has there been significant market movement toward Iran since the opening lines were released?\n\nNEWS\n- Are there any reports of camp disharmony or late coaching staff changes within the Iranian national team setup, which has historically suffered from pre-tournament administrative friction?\n\nVENUE\n- Which North American host city is staging this match, and will the local climate conditions\u2014specifically high humidity in the US South or high altitude in Mexico\u2014disproportionately fatigue New Zealand's European-based squad?",
+    "research_gaps": [
+      {
+        "need": "What do the current Asian Handicap lines suggest about the expected goal margin, and has there been significant market movement toward Iran since the opening lines were released?",
+        "category": "MARKET",
+        "ideal_service": "A sports betting market intelligence API providing real-time and historical Asian Handicap lines, opening/closing odds, and market volume movement for international football matches."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iran vs New Zealand World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iran vs New Zealand World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iran World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Iran recent form and results",
+        "need": "How has Iran performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "New Zealand World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: New Zealand recent form and results",
+        "need": "How has New Zealand performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iran vs New Zealand head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iran vs New Zealand World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.national-football-teams.com/country/96/Iran.html"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Scrapes Iran's historical international match results to verify head-to-head records against New Zealand.",
+        "need": "Have these two teams met in any FIFA-sanctioned fixtures since their AFC-OFC Challenge Cup clash in 2003, and are there any relevant tactical carryovers from those encounters?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Verifies group standings, fixture order, and rules regarding third-place progression dynamics.",
+        "need": "Is this the opening match of the 2026 World Cup group stage for both teams, and does the tournament's 48-team format alter their risk tolerance for a draw?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iran AFC qualifying defensive record away matches goals conceded 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Extracts concrete qualifying statistics and defensive performance metrics for Iran.",
+        "need": "How did Iran's defensive record in the final round of AFC qualifying compare to their historical averages, particularly in matches played away from home?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "New Zealand friendly matches goals scored top 50 opposition low block",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Analyzes New Zealand's offensive production and tactical progress against elite defensive setups.",
+        "need": "What was New Zealand's goal-scoring efficiency in their pre-tournament warm-up friendlies against top-50 FIFA-ranked opposition, and did they show progress in breaking down low blocks?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iran vs New Zealand tactical preview defensive shape compact mid-block 2026",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Retrieves tactical match previews analyzing defensive shapes and pressing systems for both teams.",
+        "need": "How does New Zealand's preferred back-three/five defensive shape plan to neutralize Iran's high-volume crossing and half-space entries, and will Iran employ their traditional compact mid-block?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Iran national team camp disharmony coaching staff 2026",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Queries recent global news streams for signs of administrative friction or internal squad issues in the Iranian camp.",
+        "need": "Are there any reports of camp disharmony or late coaching staff changes within the Iranian national team setup?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iran vs New Zealand World Cup 2026 host city venue climate altitude",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Finds the exact match location and climate factors (humidity, altitude) that could impact player fatigue.",
+        "need": "Which North American host city is staging this match, and will the local climate conditions disproportionately fatigue New Zealand's European-based squad?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iran World Cup 2026 tactical lineup Mehdi Taremi Sardar Azmoun dual striker",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides direct news on Iran's tactical setup and whether Taremi and Azmoun are paired together.",
+        "need": "Is Mehdi Taremi fully fit and starting as a focal point, or is Iran deploying a dual-striker system featuring both Taremi and Sardar Azmoun?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "New Zealand World Cup 2026 Chris Wood fitness workload tactical alternative",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Identifies injury/workload management updates for New Zealand's star striker Chris Wood.",
+        "need": "How has New Zealand managed Chris Wood's physical workload leading into this match, and who is their designated tactical alternative if he is isolated or subbed off?",
+        "category": "PLAYERS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 From The Sports Desk: One day after peace agreement, Iran takes field for World Cup - NBC News\n  https://www.nbcnews.com/sports/soccer/sports-newsletter-one-day-peace-agreement-iran-takes-field-world-cup-rcna350119\n  ## World Cup Preview\n\nAfter a highly fraught buildup, Iran starts its tournament tonight against New Zealand. Iran\u2019s training camp was relocated from the U.S. after the war began and some members of their entourage have reportedly been denied visas.\n\nPlaying 85th-ranked New Zealand in Inglewood this evening, Iran will at least be buoyed by a fanatical local support base. New Zealand enters the tournament having lost friendlies against England, Chile and Haiti, 4-0. New Zealand will be relying on striker Chris Wood, who plays for Nottingham Forest in the Premier League, for goals. [...] IE 11 i\n\n\u2022 Iran vs. New Zealand - Live Score - June 15, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-iran-vs-new-zealand-jun-15-2026-game-boxscore-647631\n  NZL\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $130 would win $230 total if Iran wins and a bet of $100 would win $489 total if New Zealand wins\n\n-130\n\nIRN\n\n+389\n\nNZL\n\nOVER/UNDER 1.5 GOALS\n\nThe combined final score of both teams is set at 1.5\n\n-222\n\nOVER 1.5\n\n+180\n\nUNDER 1.5\n\n### Preview\n\n### Iran vs. New Zealand: How to Watch , TV Channel, Live Stream\n\nLearn which TV channel or how to live stream the Iran and New Zealand FIFA World Cup Group G match. \n\n14 HOURS AGO \u2022 FOX SPORTS\n\n### World Cup Match Day 5: Spain, Uruguay, Belgium, Egypt Ready For Spotlight\n\nWorld Cup co-favorite Spain begi\n\n\u2022 Iran vs. New Zealand live stream: How to watch FIFA World Cup, odds, prediction, pick, lineups, channel - CBS Sports\n  https://www.cbssports.com/soccer/news/iran-vs-new-zealand-live-stream-how-to-watch-fifa-world-cup-odds-prediction-pick-lineups-channel/\n  ## Iran vs. New Zealand predicted starting lineups\n\nIran: Alireza Beiranvand, Milad Mohammadi, Ali Nemati. Shoja Khalilzadeh, Saleh Hardani, Arya Yousefi, Saeid Ezatikahi, Saman Ghoddos, Mehdi Ghayedi, Mehdi Taremi, Ali Alipour\n\nNew Zealand: Max Crocombe, Liberato Cacace, Michael Boxtall, Finn Surman, Tim Payne, Marko Stamenic, Joe Bell, Elijah Just, Sarpreet Singh, Matthew Garbett, Chris Wood\n\n## Iran vs. New Zealand pick, prediction\n\nDespite the road to get to the World Cup, this is still an organized Iran side who are a strong contender to get out of the group thanks to Mehdi Taremi leading\n\n\u2022 Iran face New Zealand in politically charged Los Angeles opener - Reuters\n  https://www.reuters.com/3fec1b0a85a0/sports/soccer/iran-face-new-zealand-politically-charged-los-angeles-opener-2026-06-13/\n  Iran coach Amir Ghalenoei, the first Iran-born manager to lead the national team at a World Cup since Jalal Talebi in 1998, guided his side through Asian qualifying after they secured their place with a 2-2 draw against Uzbekistan in Tehran on March 25, 2025.\n\nNew Zealand \u200bbooked their spot a day earlier \u200bwith a 3-0 victory over \u2060New Caledonia in the Oceania qualifying final. Darren Bazeley's side will hope to draw on memories of 2010, when they were eliminated in the group stage but left South Africa unbeaten after \u200bdraws with Slovakia, Italy and Paraguay.\n\nMonday's game will be the first Wor\n\n\u2022 Where to Watch Iran vs New Zealand: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-iran-vs-new-zealand-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  # Where to Watch Iran vs New Zealand: 2026 FIFA World Cup TV Channel, Live Stream and Match Details\n\nOyebade Oluwafemi\n\nIran and New Zealand will begin their World Cup 2026 campaign in the Group G opener at the Los Angeles Stadium. The kick is scheduled for 9:00 p.m. ET from Los Angeles Stadium. Here's everything you need to know about how to watch the match, including TV channels, live streaming options, kick-off time, team news, and other key details ahead of the World Cup s"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Inside Iran\u2019s soccer team: A complete roster and more about 2026 World Cup squad - sportingnews.com\n  https://www.sportingnews.com/in/football/news/inside-iran-soccer-team-complete-roster-more-2026-world-cup-squad/ddc74bd3307937fc7b47f5e5\n  ### Defenders\n\n|  |  |  |  |  |\n ---  --- \n| Player | Team | Age | Foot | Caps |\n| Saleh Hardani | Esteghlal FC | 27 | R | 18 |\n| Ehsan Hajsafi | Sepahan SC | 36 | L | 143 |\n| Shoja Khalilzadeh | Tractor FC | 37 | R | 57 |\n| Milad Mohammadi | Persepolis FC | 32 | L | 75 |\n| Hossein Kanani | Persepolis FC | 32 | R | 64 |\n| Arya Yousefi | Sepahan FC | 24 | R | 12 |\n| Ali Nemati | Foolad FC | 30 | L | 18 |\n| Ramin Rezaeian | Foolad FC | 36 | R | 75 |\n| Danial Iri | Malavan Bandar Anzali | 22 | R | 0 |\n\n### Midfielders [...] ### Midfielders\n\n|  |  |  |  |  |\n ---  --- \n| Player | Team | Age | Foot\n\n\u2022 Where to Watch Iran vs New Zealand: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-iran-vs-new-zealand-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Iran and New Zealand Team News\n\nNo injury or suspension concerns have been confirmed for both nations.\n\n## Iran and New Zealand Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Iran to Win | Draw | New Zealand to Win |\n| 1xBet | 1.84 | 3.58 | 5.20 |\n| Betway | 1.80 | 3.55 | 4.90 |\n\nClaim Exclusive World Cup Bonuses on 1xBet\n\n2026 World Cup Referee Accused of Making Racist Gesture During MatchFury Names Kabayel as Backup Option If Joshua Fight Falls Through\u201cI Truly Understood the Power of a Good Corner\u201d: Malykhin on Working with Petr Yan\u2019s Coach\n\n89\n\n100 \u20ac\n\nClaim Bonus!Bet now!\n\nFollow T\n\n\u2022 Mehdi Taremi says Team Melli playing for 'every Iranian' at WC - ESPN\n  https://www.espn.com/soccer/story/_/id/49066875/mehdi-taremi-says-team-melli-playing-every-iranian-wc\n  Multiple Authors\n\nJun 14, 2026, 10:17 PM ET\n\n Email\n Print\n\nLOS ANGELES -- Iran coach Amir Ghalenoei and forward Mehdi Taremi said that they will be playing for all Iranians at the FIFA World Cup, as the prospect of protests looms ahead of their opening fixture against New Zealand.\n\nIran's squad touched down in Los Angeles on Sunday for the first of three Group G fixtures that are to be staged in the United States, Monday's meeting with the Kiwis set to be followed by an encounter with Belgium in Los Angeles on June 21 and then a clash with Egypt in Seattle on June 26. [...] Their meeting with\n\n\u2022 Iran vs. New Zealand - Live Score - June 15, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-iran-vs-new-zealand-jun-15-2026-game-boxscore-647631\n  15 HOURS AGO \u2022 YOUTUBE\n\n### Team Feature: New Zealand | Chris Wood On His FIFA World Cup Debut\n\n18 HOURS AGO \u2022 YOUTUBE\n\n### New Zealand Train Before IR Iran\n\n20 HOURS AGO \u2022 YOUTUBE\n\nSHOW MORE VIDEOS\n\nPREVIOUS GAMES\n\nIRN\n\n|  |  |  |\n --- \n| 6/4 | MLI (H) | W2-0 |\n| 5/29 | GAM (H) | W3-1 |\n| 3/31 | CRC (H) | W5-0 |\n| 3/27 | NGA (H) | L2-1 |\n| 11/18 | UZB (A) | L0-0 |\n\nNZL\n\n|  |  |  |\n --- \n| 6/6 | ENG (A) | L1-0 |\n| 6/2 | HAI (A) | L4-0 |\n| 3/27 | FIN (H) | L2-0 |\n| 11/18 | ECU (A) | L2-0 |\n| 11/15 | COL (A) | L2-1 |\n\n### TEAM STATS\n\nIRN\n\n- Goals per Game -\n\n- Expected Goals (xG) per Game -\n\n- G\n\n\u2022 Iran vs. New Zealand live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/15/sports/iran-vs-new-zealand-live-updates-world-cup-2026-score-news-and-highlights/\n  Email\n\nNew York Post\n\nSwitch between CA and NY editions here.\n\nEdition\n\n Sports\n Sports Plus\n Sports Betting\n Columnists\n NFL\n MLB\n NBA\n NHL\n NCAAB\n WNBA\n NWSL\n PWHL\n NCAAF\n Sports Entertainment\n Golf\n Tennis\n Wrestling\n MMA\n Soccer\n Olympics\n\n Soccer\n Scores\n Stats\n Standings\n Teams\n Players\n\n#### Recommended\n\nSoccer \n\nlive\n\n# Iran vs. New Zealand live updates: World Cup 2026 score, news and highlights\n\nBy\n\nPost Sports Desk\n\nUpdated  June 15, 2026, 8:00 p.m. ET\n\nSee more of our coverage in your search results.\n\n Add The New "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Iran recent form and results",
+        "data": "\u2022 Reuters Iran at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/iran/\n  Follow Iran&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 IR Iran | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/ir-iran\n  IR Iran | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the IR Iran squad at FIFA World Cup 2026\u2122.\n\n\u2022 Iran national football team Asia: World Cup qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/iran/table/2026/world-cup-qualification-asia/\n  This page shows the Iran national football team Asia: World Cup qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Iran national football team Asia: World Cup qualification 2026 standings changes during the competition.\n\n\u2022 Iran vs New Zealand Head-to-Head & Form Stats | Tips.GG\n  https://tips.gg/article/iran-vs-new-zealand-head-to-head-wc2026/\n  In attack, Iran\u2019s 1.83 goals per match comfortably outpaces New Zealand\u2019s 0.83, while the All Whites\u2019 failure to score in four of their last six fixtures raises further questions about their ability to threaten a well-organised backline. Iran\u2019s superior ranking and recent form both point to a team that enters this World Cup 2026 fixture with considerably more momentum than their opponents.\n\n\u2022 Iran vs New Zealand Results Today: FIFA World Cup 2026 Live Score, Updates, Stats\n  https://heavy.com/sports/soccer/world-cup/iran-vs-new-zealand-results-today-fifa-world-cup-2026-live-score-updates-stats/\n  The Iran national football team ... at the 2026 FIFA World Cup, with Iran vs New Zealand carrying major significance after Belgium and Egypt played out a <strong>1\u20131 draw</strong> earlier in the day.\n\n\u2022 [Discussion] After failing to pass the group stage multiple times, the Egyptian national team players got ahead of the mockery this time and made self-deprecating comedy sketches before the World Cup even started\n  https://www.reddit.com/r/worldcup/comments/1u27uwg/after_failing_to_pass_the_group_stage_multiple/\n  Lol this is hilarious \"You mean advancing onto the plane back home?\""
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: New Zealand recent form and results",
+        "data": "\u2022 World Cup 2026: What is New Zealand's current FIFA world ranking, the lowest in the tournament? - World Soccer Talk\n  https://worldsoccertalk.com/amp/world-cup/world-cup-2026-what-is-new-zealands-current-fifa-world-ranking-the-lowest-in-the-tournament/\n  Drawn into a brutal Group G, New Zealand faces a daunting task just to survive the opening stage. The next lowest-ranked team in the cluster is Mohamed Salah\u2019s Egypt, loitering at No. 29 with 1,562.36 points, while Iran sits at No. 20 with 1,619.58 points. Sitting comfortably at the top of the group is European powerhouse Belgium, leading the four-team pack at No. 9 in the world with 1,742.23 points. When examining their recent form since punching their ticket to North America, the All Whites have struggled to find a winning rhythm.\n\n\u2022 Reuters New Zealand at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/new-zealand/\n  Follow New Zealand&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 New Zealand | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/new-zealand/team-news\n  New Zealand | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the New Zealand squad at FIFA World Cup 2026\u2122.\n\n\u2022 FIFA WORLD CUP 26\u2122 Official Information For All Whites ...\n  https://www.nzfootball.co.nz/fifa-world-cup-26\n  <strong>New Zealand has drawn Belgium, Egypt, and IR Iran in Group G</strong>. Matches will be played at the following times. ... The World Cup can be watched on TVNZ.\n\n\u2022 New Zealand World Cup 2026 team guide | New Zealand | The Guardian\n  https://www.theguardian.com/football/2026/jun/05/new-zealand-world-cup-2026-team-guide\n  A graphic showing New Zealand\u2019s performance at previous tournaments, Fifa ranking and record in qualifying \u00b7 Northampton-born Darren Bazeley has grown into the role and got the team playing better to such a degree they could be capable of the knockout phase. Bazeley will achieve a World Cup first in LA as the first man to have coached at Olympic Games, under-17, under-20 and senior World Cup level."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Iran vs. New Zealand: Head-to-head record and past meetings before World Cup 2026 clash - Sports Mole\n  https://www.sportsmole.co.uk/football/iran/world-cup-2026/head-to-head/iran-vs-new-zealand-head-to-head-record-and-past-meetings_599186.html\n  Here, Sports Mole takes an in-depth ... the two sides. ... <strong>Iran and New Zealand have rarely clashed throughout history, with just two prior meetings before their encounter in Group G at the World Cup 2026</strong>....\n\n\u2022 Iran vs New Zealand Head to Head, H2H Record, Goals & Meetings | FWC Times\n  https://fwctimes.com/iran-vs-new-zealand-head-to-head/\n  Iran vs New Zealand head to head record: 2 meetings, <strong>Iran lead 1-1-0, with 3 goals</strong> and World Cup 2026 Group G match details.\n\n\u2022 Iran vs. New Zealand Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/iran_vs_new_zealand.php\n  In the history of World Cups, Iran National Team faced New Zealand in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 World Cup \u00bb Iran against New Zealand \u00bb Head-to-Head\n  https://www.worldfootball.net/match-report/co139/fifa-world-cup/ma10713854/iran_new-zealand/head-to-head/\n  Football - results, news, statistics and much more...\n\n\u2022 Iran Vs New Zealand: Likely 11s, H2H Record And Live Streaming Details For FIFA World Cup 2026 Match | Football News - News18\n  https://www.news18.com/sports/football/iran-vs-new-zealand-likely-11s-head-to-head-record-and-live-streaming-details-for-fifa-world-cup-2026-match-2-ws-l-10150908.html\n  Iran and New Zealand open their 2026 FIFA World Cup Group G campaigns at SoFi Stadium on <strong>June 15, 2026</strong>, with Iran favorites and New Zealand chasing a first knockout berth.\n\n\u2022 [Discussion] World Cup - NZ vs Iran\n  https://www.reddit.com/r/newzealand/comments/1tytzs1/world_cup_nz_vs_iran/\n  In my bed."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 IR Iran vs New Zealand | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021476\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group G</strong> \u2022 Match 15 \u00b7 IR Iran \u00b7 01:00 \u00b7 New Zealand \u00b7 Kick-off in: 0 days \u00b7 0 hrs \u00b7 29 min \u00b7 4 sec \u00b7 IR Iran \u00b7 01:00 \u00b7 New Zealand \u00b7 16 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Los Angeles \u25cfLos Angeles Stadium ...\n\n\u2022 2026 FIFA World Cup Group G - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G\n  Group G of the 2026 FIFA World Cup will take place between June 15 and June 26, 2026. The group consists of Belgium, Egypt, Iran, and New Zealand. <strong>The top two teams, possibly along with the third-placed team, will advance to the round of 32.</strong> All of the matches in Group G will be played at three ...\n\n\u2022 Iran vs New Zealand Results Today: FIFA World Cup 2026 Live Score, Updates, Stats\n  https://heavy.com/sports/soccer/world-cup/iran-vs-new-zealand-results-today-fifa-world-cup-2026-live-score-updates-stats/\n  New Zealand, meanwhile, looked to Wood\u2019s experience to challenge one of Asia\u2019s strongest teams. With <strong>Group G</strong> wide open, this Iran vs New Zealand clash offered either nation a chance to take early control of the standings.\n\n\u2022 Iran v New Zealand: World Cup 2026 \u2013 live | World Cup 2026 | The Guardian\n  https://www.theguardian.com/football/live/2026/jun/16/fifa-world-cup-2026-live-iran-v-new-zealand-updates-irn-vs-nzl-group-f-match-score-latest\n  New Zealand, at No 85 the event\u2019s lowest-ranked qualifiers, are up against Belgium, who are ninth, Egypt, 29th, and Iran, 21st, in <strong>Group G</strong>. The renowned commentator Paul Ifill says the current squad is \u201cmiles better\u201d than the one that ...\n\n\u2022 Iran vs New Zealand live updates: World Cup 2026 game latest line-ups, predictions - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/iran-vs-new-zealand-live-updates-world-cup-2026-score-result/RHCEosMUwyft/\n  He was the youngest player back in 2010 when New Zealand last qualified. ... Iran have a good record of qualifying for World Cup tournaments and after being handed a tricky group including England, Wales and the USA in their last appearance, will be targeting the knockout stage."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Scrapes Iran's historical international match results to verify head-to-head records against New Zealand.",
+        "data": "URL: https://www.national-football-teams.com/country/96/2026/Kazakhstan.html\nTitle: Kazakhstan (2026)\n## General Information for **Kazakhstan**\n\n##### Qazaqstanin Futbol Federatsiyasi\n\n**Founded**\n\n1914\n\n**FIFA entry**\n\n1994\n\n**Average height in 2026**\n\n1.8m\n\n**Average age in 2026**\n\n26.2\n\n**Confederation**\n\nUEFA\n\n**Infos provided by**\n\n##### Emblem\n\n![](https://www.national-football-teams.com/uploads/country_images/fifa/logo_kaz.gif)\n\n##### Jersey in 2026\n\n![No jersey in 2026](https://www.national-football-teams.com/bundles/nftportofrontend/img/icons/jersey-none.png)\n\n### Coaches in 2026\n\n#### Baysufinov, Tal\u011fat (Coach)\n\n**Day of Birth**\n\n1968-09-04\n\n**Height**\n\n1.84m\n\n**Matches**\n\n2 (0 / 2)\n\n## Players of **Kazakhstan** in 2026\n\nFIFA\n\nNon FIFA\n\n[Name](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html?sort=player.surname&direction=asc&page=1)\n\n[Day of Birth](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html?sort=player.yearOfBirth&direction=asc&page=1)\n\n[Position](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html?sort=p.root&direction=asc&page=1)\n\nCurrent Club\n\n[M](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html?sort=score.matches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html?sort=score.substitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html?sort=score.goals&direction=asc&page=1)\n\n[M](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html?sort=score.nonFifaMatches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html?sort=score.nonFifaGoals&direction=asc&page=1)\n\n[Anarbekov, Temirlan](https://www.national-football-teams.com/player/100842/Temirlan_Anarbekov.html)\n\n2003-10-14\n\nGoalkeeper\n\n[![Kazakhstan](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Kazakhstan_96-58935dcc69639.png)](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html)\n\n[Qayrat Almaty](https://www.national-football-teams.com/club/1426/2026/Qayrat_Almaty.html)\n\n2\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Seysen, Mukhammedzhan](https://www.national-football-teams.com/player/82785/Mukhammedzhan_Seysen.html)\n\n1999-02-14\n\nGoalkeeper\n\n[![Kazakhstan](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Kazakhstan_96-58935dcc69639.png)](https://www.national-football-teams.com/country/96/2026/Kazakhstan.html)\n\n[Astana FK](https://www.national-football-teams.com/club/5722/2026/Astana_Fk.html)\n\n0\n\n1\n\n0\n\n0\n\n0\n\n0\n\n[Shayzada, Bekkhan](https://www.national-football-teams.com/player/96900/Bekkhan_Shayzada.html)\n\n1998-02-28\n\nGoalkeeper\n\n[![Kazakhstan](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Verifies group standings, fixture order, and rules regarding third-place progression dynamics.",
+        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n16.06. [Iran - New Zealand](https://www.soccerway.com/match/iran-xrRx85iA/new-zealand-rLctHkpU/), [France - Senegal](https://www.soccerway.com/match/france-QkGeVG1n/senegal-hOIsJLJr/), 17.06. [Iraq - Norway](https://www.soccerway.com/match/iraq-K8aAGt6r/norway-8rP6JO0H/), [Argentina - Algeria](https://www.soccerway.com/match/algeria-nc87N1BR/argentina-f9OppQjp/), [Austria - Jordan](https://www.soccerway.com/match/austria-naHiWdnt/jordan-vNcmJoU2/), [Portugal - D.R. Congo](https://www.soccerway.com/match/d-r-congo-phn9mm8H/portugal-WvJrjFVN/), [England - Croatia](https://www.soccerway.com/match/croatia-K8aznggo/england-j9N9ZNFA/), 18.06. [Ghana - Panama](https://www.soccerway.com/match/ghana-nNBjHale/panama-OWKqbCfi/), [Uzbekistan - Colombia](https://www.soccerway.com/match/colombia-G02s4PCS/uzbekistan-EZYKKRMc/), [Czech Republic - South Africa](https://www.soccerway.com/match/czech-republic-6LHwBDGU/south-africa-W2ijYvlr/), [Swi"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Extracts concrete qualifying statistics and defensive performance metrics for Iran.",
+        "data": "\u2022 Iran national football team Asia: World Cup qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/iran/table/2026/world-cup-qualification-asia/\n  Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Iran national football team Asia: World Cup qualification 2026 standings changes during the competition.\n\n\u2022 IR Iran Men Stats, WCQ \u2014 AFC (M) | FBref.com\n  https://fbref.com/en/squads/6a08f71e/IR-Iran-Men-Stats\n  Check out WCQ \u2014 AFC (M)&#x27;s latest scores, goals, shooting, passing, defense, possession stats and more for the 2026 IR Iran.\n\n\u2022 Iran World Cup 2026: Schedule & Fixtures | WC Schedule\n  https://wcschedule.net/iran-world-cup\n  They have scored <strong>13 goals</strong> and conceded 31 in their World Cup group matches across those six prior campaigns, numbers that tell a story of competitive spirit weighed against structural limitations.\n\n\u2022 Iran World Cup Squad 2026: Full 26-Player Roster (Taremi leads, Azmoun axed)\n  https://worldcuppass.com/iran-world-cup-squad-2026/\n  Across the full qualifying run Iran played 16 matches, winning 11, drawing four and losing one, with 35 goals scored and just <strong>12 conceded</strong>. That record underlines why Ghalenoei\u2019s side arrive as Group G\u2019s second seeds.\n\n\u2022 Iran National Football Team: World Cup 2026 Profile, ...\n  https://www.dawan.africa/dp/iran-national-football-team-world-cup-2026-profile-squad-history-and-more\n  Key moments: Late goals and comebacks (notably Taremi\u2019s contributions) turned tight matches into qualification-affirming results. What this meant (implications) World Cup slot: Iran took one of AFC\u2019s direct places for the 48-team 2026 tournament in the United States, Canada and Mexico."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Analyzes New Zealand's offensive production and tactical progress against elite defensive setups.",
+        "data": "\u2022 England 1-0 New Zealand: World Cup 2026 warm-up \u2013 as it happened | Friendlies | The Guardian\n  https://www.theguardian.com/football/live/2026/jun/06/england-v-new-zealand-world-cup-2026-warm-up-live\n  <strong>Harry Kane</strong>, on 67 goals for the season now, speaks to ITV. \u201cA good win \u2026 it\u2019s not easy \u2026 we are prepared for the heat \u2026 the pitch wasn\u2019t great \u2026 we couldn\u2019t play the way we wanted to play \u2026 against a team with a low block \u2026 ...\n\n\u2022 New Zealand men's national football team records and statistics - Wikipedia\n  https://en.wikipedia.org/wiki/New_Zealand_men's_national_football_team_records_and_statistics\n  This page details New Zealand men&#x27;s national football team records and statistics; the most capped players, the players with the most goals and New Zealand&#x27;s match record by opponent. ... <strong>Ceri Evans</strong> (17 years and ninety-five days) vs. Kuwait, 16 October 1980 ...\n\n\u2022 England's Harry Kane scores goal to take lead at half against New Zealand | FOX Sports\n  https://www.foxsports.com/watch/fmc-scq28l32d6lxdbh7\n  England&#x27;s <strong>Harry Kane</strong> scored a goal to take a 1-0 lead at the half against New Zealand.\n\n\u2022 England vs New Zealand Match Results Today: International Friendly Live Score, Updates, Stats\n  https://heavy.com/sports/soccer/england-vs-new-zealand-match-results-today-international-friendly-live-score-updates-stats/\n  England vs New Zealand live score, updates, stats, lineups, and key moments from today&#x27;s international friendly match.\n\n\u2022 How a Harry Kane goal led England past New Zealand in their 2026 World Cup warm-up friendly - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/england-vs-new-zealand-live-updates-world-cup-2026-friendly-score-result/lRIglAp05D37/\n  What would Thomas Tuchel do without <strong>Harry Kane</strong>? ... In their penultimate friendly before the World Cup begins, England beat New Zealand by a single goal scored by captain <strong>Harry Kane</strong> in first-half stoppage time."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Retrieves tactical match previews analyzing defensive shapes and pressing systems for both teams.",
+        "data": "\u2022 Iran vs. New Zealand odds, prediction, time: 2026 World Cup picks ...\n  https://www.cbssports.com/soccer/news/iran-new-zealand-odds-prediction-time-2026-world-cup-picks-best-bets/\n  SportsLine's Jon Eimer has revealed his Iran vs. New Zealand best bets for the 2026 World Cup match on Monday.\n\n\u2022 Iran vs New Zealand Prediction Can New Zealand Pull Off a Shock?\n  https://www.youtube.com/watch?v=tOWGHyHTJZ4\n  Iran and New Zealand face off in an exciting FIFA World Cup 2026 clash! \u26bd In this video, we analyze both teams, discuss key players, ...\n\n\u2022 Iran vs New Zealand Prediction: World Cup 2026 Match Preview\n  https://theanalyst.com/articles/iran-vs-new-zealand-prediction-world-cup-2026-match-preview\n  New Zealand's chances of claiming that first ever World Cup win are rated at 21.9%, with a draw at 26.7%. What will encourage the All Whites, ...\n\n\u2022 Iran vs New Zealand \u2013 Match preview and team news - Yahoo Sports\n  https://ca.sports.yahoo.com/news/iran-vs-zealand-match-preview-074000294.html\n  Iran and New Zealand go against each other in their first Group G encounter of the FIFA World Cup 2026 on Tuesday at the Los Angeles Stadium.\n\n\u2022 IRAN VS NEW ZEALAND - FIFA World Cup 2026 | Full Match All Goals\n  https://www.youtube.com/watch?v=Q9MhM3pgDl4\n  FIFA World Cup 2026 USA FIFA World Cup 2026 MEXICO FIFA World Cup 2026 CANADA FIFA World Cup 2026 ASIA FIFA World Cup 2026 EUROPA FIFA World ..."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Queries recent global news streams for signs of administrative friction or internal squad issues in the Iranian camp.",
+        "data": "{\"topic\":\"Iran national team camp disharmony coaching staff 2026\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Finds the exact match location and climate factors (humidity, altitude) that could impact player fatigue.",
+        "data": "\u2022 World Cup 2026: a visual guide to the stadiums across the trio of ...\n  https://www.theguardian.com/football/2026/jun/01/world-cup-2026-stadium-guide\n  The environment when Mexico plays here is legendarily tough \u2013 partially due to El Tri's passionate fans but also due to the elevation (7,200ft ...\n\n\u2022 Iran vs New Zealand performance-impairing heat | World Cup 2026 ...\n  https://www.climatecentral.org/world-cup-2026/matches/15\n  Iran vs New Zealand at Los Angeles Stadium on June 15, 2026. 32% likelihood of performance-impairing heat with climate change.\n\n\u2022 World Cup 2026 Stadiums: A Complete List of all 16 Host Venues\n  https://www.keithprowsetravel.com/blog/world-cup-2026-stadiums/\n  A complete list to all FIFA World Cup 2026 stadiums, including host cities guides and the 2026 World Cup final stadium revealed.\n\n\u2022 When the World Cup draw was made, most people focused on the ...\n  https://www.instagram.com/reel/DZb01WqDiuX/\n  ... climate, altitude, and head to head data. Spain comes out as the ... Final will take place on July 19, 2026, at MetLife Stadium, New Jersey\n\n\u2022 IR Iran vs New Zealand | First Stage | FIFA World Cup 2026\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021476?gender=2&date=2026-06-16\n  IR Iran vs. New Zealand ; Competition. FIFA World Cup\u2122 ; Kick Off. 16 June 2026, 01:00 ; Location. Los Angeles Stadium ; City. Los Angeles ; Referee."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides direct news on Iran's tactical setup and whether Taremi and Azmoun are paired together.",
+        "data": "\u2022 Iran's World Cup experience is less joyful amid war with host US, team captain says before debut - AP News\n  https://apnews.com/article/iran-world-cup-challenges-ebddd27c7508e07f3291f8994105924e\n  Test Your News I.Q. 2026 Elections Election Results Election calendar White House Congress Supreme Court The latest AP-NORC polls Ground Game. + Trump celebrates his 80th birthday with an Iran deal ahead of a UFC cage fight at the White House. + LIVE\u00a0Trump celebrates his 80th birthday with an Iran deal and a UFC cage fight at the White House. Iran\u2019s Mehdi Taremi speaks during a press conference ahead of his FIFA World Cup match against New Zealand in Inglewood, Calif., near Los Angeles, Sunday, June 14, 2026. Iran head coach Amir Ghalehnoy, right, and player Mehdi Taremi listens to a question \n\n\u2022 Inside Iran\u2019s soccer team: A complete roster and more about 2026 World Cup squad - sportingnews.com\n  https://www.sportingnews.com/in/football/news/inside-iran-soccer-team-complete-roster-more-2026-world-cup-squad/ddc74bd3307937fc7b47f5e5\n  # Inside Iran\u2019s soccer team: A complete roster and more about 2026 World Cup squad. The Middle Eastern squad will be managed by Amir Ghalenoei and is playing in its fourth straight World Cup. Team Melli, which translates to \"National Team\" in Persian,\u00a0has made seven World Cups in their team history, but it has yet to qualify for the knockout stages. The Iranian national team has garnered a lot of attention due to world conflicts and commentary about the country. Here's the rundown on the Iranian squad, who are in Group G at this summer's World Cup. **2026 WORLD CUP HQ:**\u00a0Latest World Cup news\u00a0\n\n\u2022 Iran's World Cup experience is less joyful amid war with host US, team captain says before debut - The Sun Chronicle\n  https://www.thesunchronicle.com/sports/irans-world-cup-experience-is-less-joyful-amid-war-with-host-us-team-captain-says/article_2e155cd5-6bef-5842-bf24-c5daf9067d87.html\n  Iran head coach Amir Ghalehnoy, right, and player Mehdi Taremi listens to a question during a press conference ahead of their FIFA World Cup match against New Zealand in Inglewood, Calif., near Los Angeles, Sunday, June 14, 2026. ## Iran captain Mehdi Taremi says his team is having a challenging World Cup experience amid the multifold disruptions caused by the tensions created by their nation\u2019s war with the co-host U.S. The Iranians arrived in the Los Angeles area on Sunday from their training base in Tijuana, Mexico. (AP) \u2014 Iran captain Mehdi Taremi says his team is having a challenging World\n\n\u2022 Iranian World Cup players will be able to enter US the day before matches, DHS says - Reuters\n  https://www.reuters.com/sports/soccer/iranian-world-cup-players-will-be-able-enter-us-day-before-matches-dhs-says-2026-06-09/\n  # Iranian World Cup players will be able to enter US the day before matches, DHS says | Reuters. ## Browse World. Image 1: FIFA World Cup 2026 - Team Iran arrives at Tijuana for World Cup. Item 1 of 2 FIFA World Cup 2026 - Team Iran arrives at Tijuana for World Cup - Tijuana International Airport, Tijuana, Mexico - June 7, 2026 Iran's Mehdi Taremi and Alireza Jahanbakhsh arrive with the team ahead of the World Cup REUTERS/Victor Medina. **[1/2]**FIFA World Cup 2026 - Team Iran arrives at Tijuana for World Cup - Tijuana International Airport, Tijuana, Mexico - June 7, 2026 Iran's Mehdi Taremi a\n\n\u2022 Iran\u2019s footballers arrive in US amid peace deal but admit tension \u2018undermines joy\u2019 - The Guardian\n  https://www.theguardian.com/football/2026/jun/15/iran-world-cup-mehdi-taremi-amir-ghalenoei-fifa-tension-peace-deal\n  The Iran striker Mehdi Taremi has said the controversy and disruption surrounding their involvement at the World Cup undermines Fifa\u2019s message of peace and conceded he felt the tension before arriving in Los Angeles on the eve of their opener, hours before a peace deal was announced. \u201cThis kind of tension undermines that joy and it undermines the message of Fifa and our people, which is about football and b"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Identifies injury/workload management updates for New Zealand's star striker Chris Wood.",
+        "data": "\u2022 Iran vs. New Zealand - Live Score - June 15, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-iran-vs-new-zealand-jun-15-2026-game-boxscore-647631\n  ## Iran vs New Zealand. Tomorrow at 1:00 AM on. Iran and New Zealand clash in their first Group G match. # Iran vs. New Zealand: Jun 16, 2026. ## MATCHUP## NEWS## ODDS## STANDINGS. ### New Zealand On Playing IR Iran | Darren Bazeley & Chris Wood Take Questions. ### IR Iran On Playing New Zealand | Amir Ghalenoei & Mehdi Taremi Take Questions. ### Team Feature: New Zealand | Chris Wood On His FIFA World Cup Debut. ### New Zealand Train Before IR Iran. | 6/4 | MLI (H) | W2-0 |. | 3/27 | NGA (H) | L2-1 |. | 11/18 | ECU (A) | L2-0 |. ### ODDS. The combined final score of both teams is set at 1.5. \n\n\u2022 Brazil Prepared to Keep Neymar Sidelined for Group Matches to Prevent Re-Injury - FOX Sports\n  https://www.foxsports.com/stories/soccer/brazil-prepared-keep-neymar-sidelined-group-matches-prevent-re-injury\n  FIFA Men's World Cup. FIFA Men's World Cup. 3. ### 2026 World Cup: France Alone Atop Oddsboard After Spain's Shocking Draw### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. Brazil are facing the prospect of navigating the entire World Cup group stage without Neymar as the medical staff prioritizes his long-term fitness. The Selecao talisman is battling to recover from a significant muscle injury, with co\n\n\u2022 Why the USMNT will go as far as Tyler Adams' fitness will allow; In defense of Canada striker, Jonathan David - CBS Sports\n  https://www.cbssports.com/soccer/news/usmnt-tyler-adams-fitness-canada-striker-jonathan-david/\n  # Why the USMNT will go as far as Tyler Adams' fitness will allow; In defense of Canada striker, Jonathan David. ## It's the second day of the World Cup and the USMNT and Canada each are looking to get off on the right foot. Day two of the 2026 World Cup brings the other two hosts to the forefront when\u00a0both Canada and the United States begin their tournaments with what threaten to be tricky games. Jesse Marsch's side is up first and will be conscious of slipping behind the eight ball in what profiles as a battle for second place against Bosnia and Herzegovina. It is with the game in Los Angele\n\n\u2022 Is Bukayo Saka's fitness a concern for England ahead of World Cup? - Sky Sports\n  https://www.skysports.com/football/video/30998/13552565/is-bukayo-sakas-fitness-a-concern-for-england-ahead-of-world-cup\n  + Sky Sports with no contract. + British South Asians in Football. # Is Bukayo Saka's fitness a concern for England ahead of World Cup? Wednesday 10 June 2026 07:34, UK. Please use Chrome browser for a more accessible video player. Sky Sports' David Reed analyses Bukayo Saka's fitness numbers after England boss Thomas Tuchel admitted he was 'unlikely' to start and finish a full match. Haaland as you've never seen him before in Chinese herbal drink ad! ### AMAZING knockouts you NEVER saw! ### Wiegman & Russo react to missing out on automatic World Cup qualification. ### 'They pulled his seat up\n\n\u2022 Iran vs. New Zealand Live Updates, Score: Top Moments From The Group G Showdown - FOX Sports\n  https://www.foxsports.com/live-blog/soccer/iran-vs-new-zealand-live-updates-score-top-moments-from-group-g-showdown\n  3. ### 2026 World Cup: France Alone Atop Oddsboard After Spain's Shocking Draw### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. FIFA Men's World Cup. FIFA Men's World Cup. Iran and New Zealand are both hoping to advance out of the men's FIFA World Cup group stage for the first time ever. Here are the top plays from Iran vs. 1. ### 2026 World Cup Round of 16 Odds: Wh"
+      }
+    ],
+    "research_cost": 0.13,
+    "wallet_before": 2.948,
+    "wallet_after": 2.818,
+    "prediction": {
+      "pick": "home",
+      "confidence": 4,
+      "confidence_reason": "Iran's significant tier-gap advantage is heavily compromised by extreme travel fatigue and chaotic preparation, capping confidence in a decisive victory.",
+      "reasoning": "While Iran possesses far superior individual quality, their last-minute arrival in the United States and severe travel fatigue will likely allow a resilient New Zealand low-block to keep the scoreline close.",
+      "probabilities": {
+        "home": 46,
+        "draw": 36,
+        "away": 18
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Iran enters the tournament in strong form, qualifying with 11 wins and only one loss in 16 matches, alongside recent friendly wins over Mali (2-0) and Gambia (3-1).",
+      "away_form": "New Zealand has struggled significantly, losing their last five matches including a 4-0 defeat to Haiti and a narrow 1-0 loss to England, failing to score in four of their last six games.",
+      "key_injuries": [
+        "No major injury or suspension concerns have been confirmed for either side."
+      ],
+      "tactical_matchup": "Iran's superior attacking quality led by Mehdi Taremi gives them the structural edge against New Zealand's defensive low-block, which recently frustrated England but struggles to generate any counter-attacking threat.",
+      "group_stakes": "Following Belgium's 1-1 draw with Egypt, a victory for either side would put them in sole possession of first place in Group G.",
+      "home_win_signals": [
+        "Iran holds a massive tier gap advantage as the 20th-ranked team in the world facing the tournament's lowest-ranked team (85th).",
+        "Iran possesses superior scoring efficiency, averaging 1.83 goals per match compared to New Zealand's 0.83.",
+        "Iran will be buoyed by a fanatical local support base in Los Angeles."
+      ],
+      "away_win_signals": [
+        "Chris Wood provides a proven Premier League goal-scoring threat if New Zealand can exploit transition moments.",
+        "Severe off-field political tensions, visa denials, and a relocated training camp in Tijuana could mentally and physically fatigue the Iranian squad."
+      ],
+      "draw_signals": [
+        "New Zealand demonstrated strong low-block resilience in their recent 1-0 friendly loss to England, showing they can frustrate superior opposition.",
+        "Iran's preparation was heavily disrupted, with players only permitted to enter the US from Mexico the day before the match, potentially impacting physical readiness and cohesion."
+      ],
+      "contradictions": [
+        "Iran's superior quality and form suggest a comfortable win, but their highly chaotic and politically charged preparation could level the playing field."
+      ],
+      "strategy_applied": [
+        "Prioritized tier gaps and form over historical head-to-head records",
+        "Evaluated the impact of off-field travel/visa disruptions against tactical advantages"
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting Iran's nominal home advantage in Los Angeles despite their severe travel disruptions and relocated training camp in Tijuana.",
+        "Overestimating Iran's offensive cohesion and scoring efficiency when the squad only entered the country the day before the match."
+      ],
+      "underweighted_factors": [
+        "The severe physical and mental fatigue on the Iranian players due to visa denials and last-minute travel from Mexico.",
+        "New Zealand's demonstrated low-block resilience against top-tier opposition like England, which is highly effective against a fatigued and disrupted favorite."
+      ],
+      "draw_risk": "high \u2014 Iran's extreme travel fatigue and lack of preparation time will likely prevent them from breaking down a stubborn New Zealand low-block.",
+      "favorite": "home",
+      "confidence_cap": 5,
+      "verdict": "Although Iran holds a massive tier-gap advantage, their chaotic preparation and day-before arrival make them highly vulnerable to being frustrated by a resilient New Zealand defense."
+    },
+    "full_reasoning": "HOME_PCT: 46\nDRAW_PCT: 36\nAWAY_PCT: 18\nPICK: home\nCONFIDENCE: 4\nCONFIDENCE_REASON: Iran's significant tier-gap advantage is heavily compromised by extreme travel fatigue and chaotic preparation, capping confidence in a decisive victory.\nREASONING: While Iran possesses far superior individual quality, their last-minute arrival in the United States and severe travel fatigue will likely allow a resilient New Zealand low-block to keep the scoreline close.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
