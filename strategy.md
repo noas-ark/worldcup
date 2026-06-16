@@ -12,6 +12,7 @@
 - BEL vs EGY: Prioritize low-block defensive discipline over favorite status.
 - KSA vs URU: Prioritize environmental heat and squad news over historical matchups.
 - IRN vs NZL: Prioritize travel fatigue and low-block resistance over squad quality.
+- FRA vs SEN: Prioritize squad fitness over venue conditions and league familiarity.
 
 ## Data sources
 - use: Tournament metrics (https://skim402.com/api/v2/read) — defense (BRA vs MAR)
@@ -28,6 +29,7 @@
 - use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) — environment (KSA vs URU)
 - use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) — squad (KSA vs URU)
 - use: Venue search (https://websearch--gw.swerver.net/search) — travel (IRN vs NZL)
+- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) — fitness (FRA vs SEN)
 - skip: Tactical previews (https://news-x402.com/news/recent) — outcomes (BRA vs MAR)
 - skip: Tournament metrics (https://skim402.com/api/v2/read) — mapping (AUS vs TUR)
 - skip: Tactical previews (https://news-x402.com/news/recent) — math (AUS vs TUR)
@@ -44,3 +46,5 @@
 - skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) — history (KSA vs URU)
 - skip: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) — market (KSA vs URU)
 - skip: Tournament metrics (https://skim402.com/api/v2/read) — history (IRN vs NZL)
+- skip: Venue search (https://websearch--gw.swerver.net/search) — venue (FRA vs SEN)
+- skip: Tournament metrics (https://skim402.com/api/v2/read) — familiarity (FRA vs SEN)
