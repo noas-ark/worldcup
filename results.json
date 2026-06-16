@@ -1639,312 +1639,6 @@
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize collective defensive organization and low-block tactics over individual attacking talent.\n- AUS vs TUR: Prioritize disciplined low-block setups and transition efficiency over aesthetic possession metrics and technical quality.\n- NED vs JPN: Prioritize collective defensive resilience and opposition finishing inefficiency over individual talent and high-volume chance creation.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 to analyze defensive structure and team discipline (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 to identify defensive schemes engineered to neutralize wing attacks (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 to identify low-block and transition setups that neutralize possession-dominant teams (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 to evaluate defensive organization against highly ranked teams and historical squad conversion rates (NED vs JPN)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 because collective tactical setups dictate outcomes more than single-player availability (BRA vs MAR)\n- skip: Pitch mapping data (https://skim402.com/api/v2/read) \u2014 as stadium surface details offer zero predictive value for tactical outcomes (AUS vs TUR)\n- skip: Qualification math (https://news-x402.com/news/recent) \u2014 because group stage advancement scenarios do not translate to on-field performance (AUS vs TUR)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 as fitness metrics do not mitigate collective defensive vulnerability (NED vs JPN)\n- skip: Betting market data (https://news-x402.com/news/recent) \u2014 because odds tracking reflects public sentiment rather than tactical realities (NED vs JPN)"
   },
   {
-    "match": "IRQ vs NOR",
-    "home": "IRQ",
-    "away": "NOR",
-    "kickoff": "2026-06-16T22:00Z",
-    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize collective defensive organization and low-block tactics over individual attacking talent.\n- AUS vs TUR: Prioritize disciplined low-block setups and transition efficiency over aesthetic possession metrics and technical quality.\n- NED vs JPN: Prioritize collective defensive resilience and opposition finishing inefficiency over individual talent and high-volume chance creation.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 to analyze defensive structure and team discipline (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 to identify defensive schemes engineered to neutralize wing attacks (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 to identify low-block and transition setups that neutralize possession-dominant teams (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 to evaluate defensive organization against highly ranked teams and historical squad conversion rates (NED vs JPN)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 because collective tactical setups dictate outcomes more than single-player availability (BRA vs MAR)\n- skip: Pitch mapping data (https://skim402.com/api/v2/read) \u2014 as stadium surface details offer zero predictive value for tactical outcomes (AUS vs TUR)\n- skip: Qualification math (https://news-x402.com/news/recent) \u2014 because group stage advancement scenarios do not translate to on-field performance (AUS vs TUR)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 as fitness metrics do not mitigate collective defensive vulnerability (NED vs JPN)\n- skip: Betting market data (https://news-x402.com/news/recent) \u2014 because odds tracking reflects public sentiment rather than tactical realities (NED vs JPN)\n",
-    "information_needs": "FORM\n- How did Iraq fare in their final AFC qualifying matches against physically dominant or direct-playing opponents (such as Australia or Iran) leading up to June 2026?\n- Did Norway qualify for the tournament directly via the UEFA groups or did they survive the playoff path, and what was their clean-sheet rate in those competitive fixtures?\n\nPLAYERS\n- Are Norway's primary creative engines, specifically Martin \u00d8degaard and Antonio Nusa, fully fit and recovered from their grueling European club seasons?\n- Is Iraq\u2019s talismanic striker Aymen Hussein fully fit, and is manager Jes\u00fas Casas opting for Jalal Hassan or a younger goalkeeper to handle Norway's anticipated aerial barrage?\n\nTACTICS\n- How does Iraq\u2019s defensive transition structure plan to neutralize Erling Haaland\u2019s elite off-the-shoulder movements, and will they deploy a back-five to deny him space?\n- Does Norway's tactical setup under St\u00e5le Solbakken struggle to break down compact, deep low-blocks, or have they developed a reliable plan B utilizing overloads on the wings?\n\nH2H\n- Have Iraq and Norway played any historical head-to-head fixtures, and how has Norway fared historically in competitive matches against AFC opposition?\n\nCONTEXT\n- As a 2026 World Cup group stage match, is this the opening fixture for both nations, and how does the 48-team format (where the best third-place teams advance) impact each manager's willingness to play for a draw?\n\nMARKET\n- What are the current Asian Handicap and Over/Under lines, and does the market movement suggest a highly-backed Norwegian blowout or a low-scoring, tight affair?\n\nNEWS\n- Have there been any recent training ground injuries, illness outbreaks, or tactical disagreements leaked from either the Iraqi or Norwegian camp since arriving at their North American base?\n\nVENUE\n- In which North American host city is this match being played, and will local summer heat, humidity, or stadium altitude (e.g., if played in Mexico City or Denver) disproportionately fatigue Norway\u2019s high-pressing players?",
-    "research_gaps": [
-      {
-        "need": "Real-time sports betting volume, sharp money action, and bookmaker liability changes for Norway vs Iraq.",
-        "category": "MARKET",
-        "ideal_service": "A dedicated sports-betting market API displaying live betting splits, public percentage vs. handle percentage, and line histories."
-      }
-    ],
-    "services_planned": [
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "Iraq vs Norway World Cup 2026 match preview tactics formation",
-          "search_depth": "advanced",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Baseline: match preview, tactics, predicted lineups",
-        "need": "Comprehensive pre-match preview and tactical outlook",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "Iraq vs Norway World Cup 2026 squad injuries fitness team news",
-          "search_depth": "advanced",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Baseline: squad news, injuries, fitness updates",
-        "need": "Player availability and camp news for both teams",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iraq World Cup 2026 recent form results",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: Iraq recent form and results",
-        "need": "How has Iraq performed in recent internationals?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Norway World Cup 2026 recent form results",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: Norway recent form and results",
-        "need": "How has Norway performed in recent internationals?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iraq vs Norway head to head history World Cup",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: head-to-head history and prior meetings",
-        "need": "Historical H2H record and patterns between the teams",
-        "category": "H2H"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iraq vs Norway World Cup 2026 group standings context",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: group context and tournament stakes",
-        "need": "Group standings and what each team needs from this match",
-        "category": "CONTEXT"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "method": "get",
-        "params": {
-          "url": "https://www.national-football-teams.com/country/153/Norway.html"
-        },
-        "body": {},
-        "cost": 0.002,
-        "reason": "Provides historical match data and results database for Norway against all international opponents, including AFC nations.",
-        "need": "Have Iraq and Norway played any historical head-to-head fixtures, and how has Norway fared historically against AFC opposition?",
-        "category": "H2H"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "method": "get",
-        "params": {
-          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
-        },
-        "body": {},
-        "cost": 0.002,
-        "reason": "Gives direct access to tournament rules, group dynamics, and progression paths to model strategic draw-tolerance.",
-        "need": "How does the World Cup 2026 group stage structure and 48-team format impact each manager's willingness to play for a draw?",
-        "category": "CONTEXT"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Norway World Cup 2026 qualification pathway results clean sheets form",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Finds specific qualification statistics and campaign recaps to assess defensive stability and competitive form.",
-        "need": "Did Norway qualify for the tournament directly via the UEFA groups or play-offs, and what was their clean-sheet rate?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Iraq Norway World Cup 2026 camp news training base injuries friction",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Scans local and international sports journalism for leaks, training notes, and camp atmosphere indicators.",
-        "need": "Have there been any recent training ground injuries, illness outbreaks, or leaks from either camp since arriving at their North American base?",
-        "category": "NEWS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Norway vs Iraq World Cup 2026 betting odds asian handicap over under predictions",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Gathers public betting lines and professional consensus projections to establish the market's expected game script.",
-        "need": "What are the current Asian Handicap and Over/Under lines, and does the market suggest a blowout or a tight affair?",
-        "category": "MARKET"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "method": "get",
-        "params": {
-          "topic": "Norway Iraq World Cup 2026 venue city altitude temperature weather",
-          "hours": 48
-        },
-        "body": {},
-        "cost": 0.01,
-        "reason": "Uncovers news reports mentioning the official venue selection and associated environmental variables that could fatigue European or Middle Eastern players.",
-        "need": "In which North American host city is this match being played, and will local summer heat, humidity, or altitude fatigue the players?",
-        "category": "VENUE"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "Norway vs Iraq World Cup 2026 squad injuries Martin Odegaard Antonio Nusa Aymen Hussein fitness",
-          "search_depth": "basic",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Provides up-to-date injury reports, player fitness news, and starting lineup expectations directly from sports news outlets.",
-        "need": "Are Norway's primary creative engines, specifically Martin \u00d8degaard and Antonio Nusa, fully fit, and is Iraq's striker Aymen Hussein fit?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "Iraq defensive tactics low block vs Norway Erling Haaland World Cup 2026 preview",
-          "search_depth": "basic",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Extracts detailed tactical analyses and coaching decisions regarding defensive containment of elite strikers and attacking philosophies.",
-        "need": "How does Iraq\u2019s defensive transition structure plan to neutralize Erling Haaland, and how does Norway's tactical setup break down compact low-blocks?",
-        "category": "TACTICS"
-      }
-    ],
-    "services_used": [
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Baseline: match preview, tactics, predicted lineups",
-        "data": "\u2022 World Cup 2026 Group I guide - fixtures, schedule, standings and odds for France, Senegal, Iraq and Norway - Sky Sports\n  https://www.skysports.com/football/news/12098/13543102/world-cup-2026-group-i-guide-fixtures-schedule-standings-and-odds-for-france-senegal-iraq-and-norway\n  Defenders: Hussein Ali (Pogon Szczecin), Manaf Younis, Mustafa Saadoon (Al Shorta), Ahmed Hassan Makenzie (Al Karma), Zaid Tahseen (Pakhtakor), Rebin Sulaka (Port), Akam Hashim (Al Zawraa), Merchas Doski (Viktoria Plzen), Zaid Ismail (Al Talaba), Frans Putros (Persib).\n\nMidfielders: Amir Al-Ammari (Cracovia), Kevin Yakob (Aarhus GF), Zidane Iqbal (Utrecht), Aimar Sher (Sarpsborg), Ibrahim Bayesh (Al Dhafra), Ahmed Qasem (Nashville SC), Youssef Amyn (AEK Larnaca), Marko Farji (Venezia).\n\nForwards: Ali Jassim (Al Najma), Ali Al-Hamadi (Ipswich), Ali Yousef (Al Talaba), Aymen Hussein (Al Karma), \n\n\u2022 Erling Haaland next World Cup match: Fixture schedule, start time, draw bracket as Norway face Iraq - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/erling-haaland-next-world-cup-match-fixture-schedule-time-draw-bracket/149a2a535ea6793426ee52df\n  The match will take place at Gillette Stadium in Foxborough, where Norway will also conclude their group campaign against France.\n\nIraq vs. Norway's kickoff is scheduled for 1 p.m. ET.\n\n## Norway match schedule, results from World Cup 2026\n\n|  |  |  |  |\n ---  --- |\n| Date | Time (ET) | Match / Result | Location |\n| Tue, Jun. 16 | 6 p.m. | Group stage: Iraq vs. Norway | Gillette Stadium, Foxborough |\n| Mon, Jun. 22 | 8 p.m. | Group stage: Norway vs. Senegal | MetLife Stadium, East Rutherford |\n| Fri, Jun. 26 | 3 p.m. | Group stage: Norway vs. France | Gillette Stadium, Foxborough |\n\nBUY NOW: N\n\n\u2022 World Cup Group I standings 2026: Updated results, table and fixtures for France, Senegal, Norway, Iraq - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-i-standings-results-table-2026/e0c681e074cb3b3bc2f8f958\n  |  |  |  |  |\n ---  --- |\n| Date | Time (ET) | Match | Location |\n| Sat, Jul. 4 | 1 p.m. | M2: Winner, R32 M1 vs. Winner, R32 M3 | NRG Stadium (Houston, TX) |\n| Sat, Jul. 4 | 5 p.m. | M1: Winner, R32 M2 vs. Winner, R32 M5 | Lincoln Financial Field (Philadelphia, PA) |\n| Sun, Jul. 5 | 4 p.m. | M3: Winner, R32 M4 vs. Winner, R32 M6 | MetLife Stadium (East Rutherford, NJ) |\n| Sun, Jul. 5 | 8 p.m. | M4: Winner, R32 M7 vs. Winner, R32 M8 | Estadio Azteca (Mexico City, MEX) |\n| Mon, Jul. 6 | 3 p.m. | M5: Winner, R32 M11 vs. Winner, R32 M12 | AT&T Stadium (Arlington, TX) |\n| Mon, Jul. 6 | 8 p.m. | M6\n\n\u2022 VG: Norway Team to Bring 300 Kilograms of Fish and Famous Chefs to 2026 World Cup - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/vg-norway-team-to-bring-300-kilograms-of-fish-and-famous-chefs-to-2026-world-cup/\n  # VG: Norway Team to Bring 300 Kilograms of Fish and Famous Chefs to 2026 World Cup\n\nMarina Magomedova\n\nThe Norwegian national team will bring 300 kilograms of fish and renowned chefs to the 2026 World Cup, who will be part of the delegation. This was reported by the Norwegian publication VG.\n\nThis is intended to allow players to eat familiar foods, which is important for maintaining concentration and performance during intense training, according to the source.\n\nAt the 2026 World Cup, Norway will play in Group I with France, Senegal, and Iraq. The team's best World Cup result is reaching the \n\n\u2022 Norway checks out that other Cup ahead of World Cup opener - USA Today\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/11/norway-world-cup-apperance-carolina-hurricanes-game-trip/90518547007/\n  Sports newsletter Readers' Choice \ud83d\udc10 World Cup mania \u26bd\ufe0f \ud83c\udfc6 Best online casinos \ud83c\udfb0 \ud83c\udfb2\n\nWORLD CUP\n\nMen's World Cup\n\n# Norway checks out that other Cup ahead of World Cup opener\n\nNancy Armour\n\nUSA TODAY\n\nJune 11, 2026, 11:55 p.m. ET\n\nNorway continues to win the World Cup.\n\nErling Haaland and his Norwegian teammates were at Game 5 of the Stanley Cup Final on Th"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Baseline: squad news, injuries, fitness updates",
-        "data": "\u2022 World Cup 2026 Group I guide - fixtures, schedule, standings and odds for France, Senegal, Iraq and Norway - Sky Sports\n  https://www.skysports.com/football/news/12098/13543102/world-cup-2026-group-i-guide-fixtures-schedule-standings-and-odds-for-france-senegal-iraq-and-norway\n  Defenders: Hussein Ali (Pogon Szczecin), Manaf Younis, Mustafa Saadoon (Al Shorta), Ahmed Hassan Makenzie (Al Karma), Zaid Tahseen (Pakhtakor), Rebin Sulaka (Port), Akam Hashim (Al Zawraa), Merchas Doski (Viktoria Plzen), Zaid Ismail (Al Talaba), Frans Putros (Persib).\n\nMidfielders: Amir Al-Ammari (Cracovia), Kevin Yakob (Aarhus GF), Zidane Iqbal (Utrecht), Aimar Sher (Sarpsborg), Ibrahim Bayesh (Al Dhafra), Ahmed Qasem (Nashville SC), Youssef Amyn (AEK Larnaca), Marko Farji (Venezia).\n\nForwards: Ali Jassim (Al Najma), Ali Al-Hamadi (Ipswich), Ali Yousef (Al Talaba), Aymen Hussein (Al Karma), \n\n\u2022 BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener - Telecom Asia Sport\n  https://www.telecomasia.net/blog/breaking-abdessamad-ezzalzouli-set-for-3-4-weeks-out-after-suspected-mcl-injury-ahead-of-world-cup-opener/\n  No Deposit\n   Promotions\n   Cashback\n\nNews\n   Football\n   Boxing\n   Tennis\n   Hockey\n\nBlog\n   Athletes & Celebrities\n\nEvents\n\nBonus $100Sign in\n\nWorld Cup 2026\n\n1.   Home\n2.   Blogs\n\n# BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener\n\nImage 1: Oyebade Oluwafemi\n\nOyebade Oluwafemi\n\n08/06/2026\n\n11:42\n\nMorocco winger Abdessamad Ezzalzouli is facing a spell on the sidelines after suffering a suspected MCL knee sprain during an international friendly against Norway.\n\nClaim World Cup 2026 Exclsuive Bonuses on BC Game\n\nImage 2: Abdessamad Ezza\n\n\u2022 Erling Haaland next World Cup match: Fixture schedule, start time, draw bracket as Norway face Iraq - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/erling-haaland-next-world-cup-match-fixture-schedule-time-draw-bracket/149a2a535ea6793426ee52df\n  # Erling Haaland next World Cup match: Fixture schedule, start time, draw bracket as Norway face Iraq\n\nDom Farrell\n\n\u2022\n\n Add The Sporting News on Google \n\nNorway return to the World Cup for the first time in 28 years this summer, meaning a debut on international football's biggest stage for Erling Haaland\n\nHaaland's father, Alf-Inge, played for the Scandinavian nation when they featured at the 1994 World Cup in the USA, but he was absent four years later when they claimed a famous group-stage win over eventual winners Brazil.\n\nThe current generation, under Stale Solbakken and captained by Arsen\n\n\u2022 VG: Norway Team to Bring 300 Kilograms of Fish and Famous Chefs to 2026 World Cup - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/vg-norway-team-to-bring-300-kilograms-of-fish-and-famous-chefs-to-2026-world-cup/\n  # VG: Norway Team to Bring 300 Kilograms of Fish and Famous Chefs to 2026 World Cup\n\nMarina Magomedova\n\nThe Norwegian national team will bring 300 kilograms of fish and renowned chefs to the 2026 World Cup, who will be part of the delegation. This was reported by the Norwegian publication VG.\n\nThis is intended to allow players to eat familiar foods, which is important for maintaining concentration and performance during intense training, according to the source.\n\nAt the 2026 World Cup, Norway will play in Group I with France, Senegal, and Iraq. The team's best World Cup result is reaching the \n\n\u2022 Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Cabo Verde - FOX Sports\n  https://amp.foxsports.com/stories/soccer/lamine-yamal-nico-williams-return-to-full-training-with-spain-in-major-boost-ahead-of-world-cup-opener-vs-cabo-verde\n  # Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Cabo Verde\n\nUpdated Jun. 12, 2026 2:00 a.m. ET\n\nSpain have received a significant fitness boost ahead of the 2026 World Cup with Lamine Yamal and Nico Williams returning to full training.\n\nThe dynamic"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: Iraq recent form and results",
-        "data": "\u2022 Reuters Iraq at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/iraq/\n  Follow Iraq&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Iraq national football team Asia: World Cup qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/iraq/table/2026/world-cup-qualification-asia/\n  This page shows the Iraq national football team Asia: World Cup qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Iraq national football team Asia: World Cup qualification 2026 standings changes during the competition.\n\n\u2022 Iraq World Cup 2026: Fixtures, key players and tactical analysis | Squawka | EN\n  https://www.squawka.com/en/news/world-cup/iraq-world-cup-2026-fixtures-squad-analysis/\n  STAND-OUT STAT: Iraq played more games than any other team in order to qualify for the 2026 World Cup, with the interconfederation playoff match vs Bolivia being the 21st of their campaign.\n\n\u2022 Iraq at the 2026 World Cup: roster, list, players, group and schedule - AS USA\n  https://en.as.com/soccer/world-cup/iraq-at-the-2026-world-cup-roster-list-players-group-and-schedule-f202606-n/\n  After making its only World Cup appearance in 1986, Iraq is back in the spotlight with a monumental challenge ahead. The team, coached by Spaniard Jes\u00fas Casas, must find a way to compete with some of the sport\u2019s biggest stars, including those representing powerhouse nations such as France and Norway. ... Iraq appears to have drawn one of the most difficult groups at the 2026 World Cup.\n\n\u2022 Iraq | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/iraq/team-news\n  Iraq | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Iraq squad at FIFA World Cup 2026\u2122."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: Norway recent form and results",
-        "data": "\u2022 Norway national football team World Cup Qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/norway/table/2026/world-cup-qualification/\n  This page shows the Norway national football team World Cup Qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Norway national football team World Cup Qualification 2026 standings changes during the competition.\n\n\u2022 Fifa World Cup 2026: What you need to know about Norway - BBC Sport\n  https://www.bbc.com/sport/football/articles/cd6p9neje91o\n  Solbakken&#x27;s side scored 37 times, eight more than any other team, with their average of 4.63 goals per game the highest ever by a European nation in a World Cup qualifying campaign featuring more than four matches. The driving force behind their unprecedented scoring was Erling Haaland, who netted 16 times, the most by any player from any continent in 2026 qualifying. He averaged a goal every 44 minutes, scored with 39% of his shots and over-performed his expected goals total by more than six. None of his strikes were penalties \u2013 in fact, he missed his only spot-kick. ... This is Norway&#x27;s fourth World Cup appearance and their first since 1998.\n\n\u2022 Norway at the FIFA World Cup 2026: Squad, fixtures and results\n  https://www.reuters.com/graphics/SOCCER-WORLDCUP/mopaoglqkpa/teams/norway/\n  Squad, line-ups and fixture schedule for the Norway team in USA \u00b7 Canada \u00b7 Mexico\n\n\u2022 Why Norway might be the team nobody wants to face at FIFA WC 2026 | FIFA World Cup 2026 - Business Standard\n  https://www.business-standard.com/amp/sports/fifa-world-cup/why-norway-might-be-the-team-nobody-wants-to-face-at-fifa-wc-2026-126061201151_1.html\n  The Norwegian side secured FIFA World Cup 2026 qualification with a perfect <strong>eight wins from eight matches</strong>, becoming one of only two UEFA nations to complete a flawless campaign\n\n\u2022 World Cup 2026 Ultimate Guide: Norway | Goal.com English Saudi Arabia\n  https://www.goal.com/en-sa/world-cup-teams/group-i/world-cup-2026-guide-norway/O~bltc3092e8066696cc2\n  His performances and statistics speak for themselves: during the eight qualifying matches, he scored 16 goals, matching Robert Lewandowski\u2019s all-time record for goals in a single World Cup qualifying campaign, set ahead of the 2018 tournament. Norway\u2019s entire attacking system is built around Haaland, and the 25-year-old has no intention of disappointing.\n\n\u2022 [Discussion] Norway's squad for the 2026 World Cup\n  https://www.reddit.com/r/soccer/comments/1tjtimg/norways_squad_for_the_2026_world_cup/\n  Thelonious Aasgaard is the best name I've ever heard"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: head-to-head history and prior meetings",
-        "data": "\u2022 Iraq vs. Norway Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/iraq_vs_norway.php\n  In the history of World Cups, Iraq National Team faced Norway in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 Form and head to head stats Iraq vs Norway\n  https://www.skysports.com/football/iraq-vs-norway/549783\n  FIFA World Cup match Iraq vs Norway 16.06.2026. Preview and stats followed by live commentary, video highlights and match report.\n\n\u2022 Iraq vs Norway - live score, predicted lineups and H2H stats\n  https://www.fotmob.com/matches/iraq-vs-norway/1oz68o\n  Iraq faces Norway at Boston Stadium on Tue, Jun 16, 2026, 22:00 UTC. This match is part of the World Cup Grp. I. You can check the recent head-to-head encounters, as well as full H2H record on this page to see how Iraq and Norway have fared against each other in the past.\n\n\u2022 Iraq vs Norway Key Stats: FIFA World Cup 2026 - The Stats Zone\n  https://www.thestatszone.com/iraq-vs-norway-key-stats-fifa-world-cup-2026-197590\n  Norway are gracing the FIFA World ... the 2026 finals, finishing six points clear of Italy after emphatic victories \u2013 <strong>3-0 at home and 4-1 away</strong>....\n\n\u2022 Iraq vs Norway Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-iraq-vs-norway\n  Last 5 , <strong>Iraq Win 2 , Draw 1 , Lose 2 , Score Win Prob: 40.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 20.0%</strong> ... Last 5 , Norway Win 2 , Draw 2 , Lose 1 , Score Win Prob: 40.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 60.0%"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: group context and tournament stakes",
-        "data": "\u2022 World Cup Group I standings 2026: Updated results, table and fixtures for France, Senegal, Norway, Iraq | Sporting News\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-i-standings-results-table-2026/e0c681e074cb3b3bc2f8f958\n  This win came despite the turbulence in the Middle East caused by the United States and Israel&#x27;s conflict with Iran, which had led to concerns that Iraq would be unable to travel to Mexico for that decisive fixture. They have only previously played at the World Cup once: that was back in 1986 in Mexico, when they lost three out of three games to the host nation, Paraguay, and Belgium. ... How qualified: Intercontinental playoff Path 2 winners (W 2-1 vs. Bolivia) ... After a nearly three-decade absence from the World Cup, Norway are back with arguably the most gifted generation of talent the Scandinavian nation has ever had.\n\n\u2022 World Cup 2026 Group I guide - fixtures, schedule, standings and odds for France, Senegal, Iraq and Norway | Football News | Sky Sports\n  https://www.skysports.com/football/news/12098/13543102/world-cup-2026-group-i-guide-fixtures-schedule-standings-and-odds-for-france-senegal-iraq-and-norway\n  World Cup <strong>Group I</strong> includes 2022 runners-up France, Senegal, Iraq and Erling Haalands Norway; matches to be played in US cities New Jersey, Philadelphia and Massachusetts, plus Canadas Toronto\n\n\u2022 2026 FIFA World Cup Group I - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I\n  Group I of the 2026 FIFA World Cup will take place from June 16 to 26, 2026. The group consists of France, Senegal, Iraq, and Norway. <strong>The top two teams, possibly along with the third-placed team, will advance to the round of 32.</strong> ... ^ a b As the identity of the inter-confederation playoff Path ...\n\n\u2022 Iraq vs Norway FIFA World Cup 2026 Preview: Everything you need to know | Goal.com US\n  https://www.goal.com/en-us/news/iraq-norway-world-cup-preview/blt35615d31b35c17b2\n  Navigating a potentially tricky UEFA <strong>Group I</strong> that featured European heavyweights Italy, the Nordic side built an unstoppable, high-octane machine that left group rivals completely demoralised.\n\n\u2022 Iraq vs Norway | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021488\n  Al Ammari: We will show Iraq\u2019s ability to always rise againAl Ammari: We will show Iraq\u2019s ability to always rise again \u00b7 Curiosities from the World Cup group stageCuriosities from the World Cup group stage \u00b7 World Cup 2026 groups: How teams qualify and tie-breakersWorld Cup 2026 groups: ..."
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Provides historical match data and results database for Norway against all international opponents, including AFC nations.",
-        "data": "URL: https://www.national-football-teams.com/country/153/2026/Rwanda.html\nTitle: Rwanda (2026)\nYou are using an old browser which is not compatible with our new design. Please update your browser or use our [old website](https://www.national-football-teams.com/old/).\n\n## General Information for **Rwanda**\n\n##### unkown\n\n**Founded**\n\n1972\n\n**FIFA entry**\n\n1978\n\n**Average height in 2026**\n\n1.81m\n\n**Average age in 2026**\n\n27.3\n\n**Confederation**\n\nCAF\n\n**Infos provided by**\n\n##### Emblem\n\n![](https://www.national-football-teams.com/uploads/country_images/fifa/Rwanda_153-5f7a0be51bbee.gif)\n\n##### Jersey in 2026\n\n![Jersey in 2026](https://www.national-football-teams.com/uploads/country_images/jersey/Rwanda_153-5afccfabbe5c8.jpeg)\n\n### Coaches in 2026\n\n## Players of **Rwanda** in 2026\n\nFIFA\n\nNon FIFA\n\n[Name](https://www.national-football-teams.com/country/153/2026/Rwanda.html?sort=player.surname&direction=asc&page=1)\n\n[Day of Birth](https://www.national-football-teams.com/country/153/2026/Rwanda.html?sort=player.yearOfBirth&direction=asc&page=1)\n\n[Position](https://www.national-football-teams.com/country/153/2026/Rwanda.html?sort=p.root&direction=asc&page=1)\n\nCurrent Club\n\n[M](https://www.national-football-teams.com/country/153/2026/Rwanda.html?sort=score.matches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/153/2026/Rwanda.html?sort=score.substitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/153/2026/Rwanda.html?sort=score.goals&direction=asc&page=1)\n\n[M](https://www.national-football-teams.com/country/153/2026/Rwanda.html?sort=score.nonFifaMatches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/153/2026/Rwanda.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/153/2026/Rwanda.html?sort=score.nonFifaGoals&direction=asc&page=1)\n\n[Kwizera, Olivier](https://www.national-football-teams.com/player/47743/Olivier_Kwizera.html)\n\n1995-07-30\n\nGoalkeeper\n\n[![Saudi Arabia](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Saudi_Arabia_161-589da83651eda.png)](https://www.national-football-teams.com/country/161/2026/Saudi_Arabia.html)\n\n[Al-Kawkab al-Kharj](https://www.national-football-teams.com/club/14430/2026/Al_Kawkab_Al_Kharj.html)\n\n2\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Byiringiro, Gilbert](https://www.national-football-teams.com/player/96748/Gilbert_Byiringiro.html)\n\n2000-07-01\n\nCentre Back\n\n[![Rwanda](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Rwanda_153-58a61df195088.png)](https://www.national-football-teams.com/country/153/2026/Rwanda.html)\n\n[APR Kigali](https://www.national-football-teams.com/club/2086/2026/Apr_Kigali.html)\n\n2\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Kavita, Phanuel](https://www.national-football-teams.com/player/99796/Phanuel_Kavita.html)\n\n1993-03-09\n\nCentre Back\n\n[![USA](https://www.national-football-teams.com/media/cache/flag_mini/uploads/countr"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Gives direct access to tournament rules, group dynamics, and progression paths to model strategic draw-tolerance.",
-        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n15.06. [Sweden - Tunisia](https://www.soccerway.com/match/sweden-OQyqbHWB/tunisia-QqZVYk95/), [Spain - Cape Verde](https://www.soccerway.com/match/cape-verde-MocyWdm7/spain-bLyo6mco/), [Belgium - Egypt](https://www.soccerway.com/match/belgium-GbB957na/egypt-bejDn7NN/), 16.06. [Saudi Arabia - Uruguay](https://www.soccerway.com/match/saudi-arabia-biSY8ox4/uruguay-xMk44orG/), [Iran - New Zealand](https://www.soccerway.com/match/iran-xrRx85iA/new-zealand-rLctHkpU/), [France - Senegal](https://www.soccerway.com/match/france-QkGeVG1n/senegal-hOIsJLJr/), 17.06. [Iraq - Norway](https://www.soccerway.com/match/iraq-K8aAGt6r/norway-8rP6JO0H/), [Argentina - Algeria](https://www.soccerway.com/match/algeria-nc87N1BR/argentina-f9OppQjp/), [Austria - Jordan](https://www.soccerway.com/match/austria-naHiWdnt/jordan-vNcmJoU2/), [Portugal - D.R. Congo](https://www.soccerway.com/match/d-r-congo-phn9mm8H/portugal-WvJrjFVN/), [England - Croatia](http"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Finds specific qualification statistics and campaign recaps to assess defensive stability and competitive form.",
-        "data": "\u2022 Norway national football team World Cup Qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/norway/table/2026/world-cup-qualification/\n  Norway national football team standings in World Cup Qualification 2026, the team\u2019s position, group, number of matches, wins, draws and losses on Tribuna.com\n\n\u2022 Norway statistics, fixtures and results - World Cup Qualifiers - Europe 2025/2026 - Sportstats365.com\n  https://sportstats365.com/football/world-cup-q-europe/2025-2026/teams/norway\n  Among the interesting team statistics, ... indicators, which can be helpful for predicting match outcomes. <strong>We present the number of goals scored and conceded by the team, including matches ending with a clean sheet</strong>....\n\n\u2022 Norway qualify for World Cup 26\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-qualify-2026\n  The FIFA World Cup 2026\u2122 will be the 23rd edition of the tournament but the first to feature 48 teams and three host countries: Canada, Mexico and the United States.\n\n\u2022 Fifa World Cup 2026: What you need to know about Norway - BBC Sport\n  https://www.bbc.com/sport/football/articles/cd6p9neje91o\n  They are only the sixth European side to finish with a 100% winning record in a World Cup qualifying campaign involving six matches or more. ... All of Norway&#x27;s matches will also be covered live on the BBC Sport website and app with updates, analysis, and fan reaction. Come and be part of it! ... Six teams that made it to the 2026 World Cup - Ecuador, Paraguay, Scotland, Sweden, Switzerland and South Africa - scored fewer goals in qualifying than Norway&#x27;s Erling Haaland, who netted 16.\n\n\u2022 Norway World Cup history, records and 2026 fixtures | FIFA\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-team-profile-history\n  <strong>Norway were one of just four teams across all of qualifying to manage a perfect record</strong>, as Solbakken&#x27;s charges went eight from eight in Group I of the European zone."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Scans local and international sports journalism for leaks, training notes, and camp atmosphere indicators.",
-        "data": "\u2022 Where Are the 48 FIFA World Cup 2026 Team Base Camp Training Sites?\n  https://www.ussoccer.com/stories/2026/06/usmnt/where-are-fifa-world-cup-2026-team-base-camp-training-sites\n  With the FIFA World Cup 2026\u2122 just days away, the Team Base Camp (TBC) Training Sites for all 48 qualified teams have been confirmed.\n\n\u2022 World Cup 2026: Norway label Scotland \u2018unprofessional\u2019, Somali referee denied entry to US: football news \u2013 as it happened | World Cup 2026 | The Guardian\n  https://www.theguardian.com/football/live/2026/jun/08/world-cup-2026-countdown-news-england-iran-usa-mexico-canada-football-live\n  The teams are both based in North ... ground in Charlotte on Monday. But <strong>the Norwegian Football Federation announced on Sunday it had been called off because of injuries in the Scotland camp</strong>....\n\n\u2022 Iraq vs Norway FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/iraq-norway-world-cup-preview/blt35615d31b35c17b2\n  GOAL brings you everything you need to know about Iraq vs Norway at the 2026 FIFA World Cup.\n\n\u2022 2026 World Cup base camps: Where will each team be based? Training sites confirmed - NBC Sports\n  https://www.nbcsports.com/soccer/news/2026-world-cup-base-camps-where-will-each-team-be-based-during-the-tournament\n  Below are the confirmed training bases for each 2026 World Cup team.\n\n\u2022 World Cup 2026: Norway boss brands Scotland's Clarke 'unprofessional' - BBC Sport\n  https://www.bbc.com/sport/football/articles/c17ylw8vz05o\n  With both squads based in North Carolina, the game was planned for Monday, but <strong>the Norwegian Football Federation announced on Sunday it had been called off because of injuries in the Scotland camp.</strong>"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Gathers public betting lines and professional consensus projections to establish the market's expected game script.",
-        "data": "\u2022 Iraq vs Norway World Cup 2026 Predictions and Best Bets\n  https://thesportsrush.com/iraq-v-norway-predictions/\n  <strong>Norway -1.5</strong> (Asian Handicap) is the optional fourth pick for bettors who want Norway exposure with improved value over the moneyline. Given the scale of Norway\u2019s qualifying dominance and Iraq\u2019s modest offensive output, a multi-goal Norway ...\n\n\u2022 Iraq vs Norway Picks, Predictions & Betting Odds: World Cup 2026 Preview - Yahoo Sports\n  https://sports.yahoo.com/articles/iraq-vs-norway-picks-predictions-142115269.html\n  <strong>Norway -1.5</strong> (Asian Handicap) is the optional fourth pick for bettors who want Norway exposure with improved value over the moneyline. Given the scale of Norway\u2019s qualifying dominance and Iraq\u2019s modest offensive output, a multi-goal Norway ...\n\n\u2022 AI Picks Iraq vs Norway Winner \u2013 World Cup 2026 Odds\n  https://www.nysportsday.com/2026/06/10/ai-picks-iraq-vs-norway-winner-world-cup-2026-odds/\n  Here is what each model produced. ... The ChatGPT Iraq vs Norway analysis lands on <strong>Norway -1.5 Handicap (-165).</strong> The structural argument is direct: Norway win these games, and they win them by multiple goals against Asian confederation opposition.\n\n\u2022 Iraq vs Norway: World Cup 2026 Prediction | Squawka\n  https://www.squawka.com/us/news/world-cup/match-preview-iraq-vs-norway-06-16-26-world-cup-2026/\n  Market consensus: Kalshi traders price <strong>Iraq at 7%, the draw at 13%, and Norway at 82%</strong>. Full breakdown below. We lean firmly toward Norway, and the goal markets point to control rather than a shootout.\n\n\u2022 Iraq vs Norway Predictions, Betting Tips and Match Previews\n  https://www.freesupertips.com/predictions/iraq-vs-norway-predictions-betting-tips-match-previews/\n  There are options on the handicap, to win to nil and double result, but <strong>an over 3.5 goals punt would cover a wide-margin Norway success</strong>, while a fortunate Iraq strike is actually a boost to backers, rather than a hindrance, unlike many other markets."
-      },
-      {
-        "source": "https://news-x402.com/news/recent",
-        "cost": 0.01,
-        "reason": "Uncovers news reports mentioning the official venue selection and associated environmental variables that could fatigue European or Middle Eastern players.",
-        "data": "{\"topic\":\"Norway Iraq World Cup 2026 venue city altitude temperature weather\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Provides up-to-date injury reports, player fitness news, and starting lineup expectations directly from sports news outlets.",
-        "data": "\u2022 Erling Haaland next World Cup match: Fixture schedule, start time, draw bracket as Norway face Iraq - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/erling-haaland-next-world-cup-match-fixture-schedule-time-draw-bracket/149a2a535ea6793426ee52df\n  # Erling Haaland next World Cup match: Fixture schedule, start time, draw bracket as Norway face Iraq. Norway return to the World Cup for the first time in 28 years this summer, meaning a debut on international football's biggest stage for Erling Haaland. Haaland's father, Alf-Inge, played for the Scandinavian nation when they featured at the 1994 World Cup in the USA, but he was absent four years later when they claimed a famous group-stage win over eventual winners Brazil. STREAM: Every Norway World Cup 2026 match LIVE on fubo (free trial). ## When is Erling Haaland's next match\u00a0at World Cup\n\n\u2022 Iraq World Cup star Aymen Hussein questioned for \u2018seven hours\u2019 by U.S. immigration officials - The Athletic - The New York Times\n  https://www.nytimes.com/athletic/7340164/2026/06/07/aymen-hussein-iraq-questioned-usa/\n  # Iraq World Cup star Aymen Hussein questioned for \u2018seven hours\u2019 by U.S. immigration officials. A member of Iraq\u2019s World Cup squad was held for questioning by U.S. immigration officials when he arrived in the country for the tournament on Friday. According to Reuters, striker Aymen Hussein, the Iraq vice-captain and one of the country\u2019s key players, was held at Chicago\u2019s O\u2019Hare airport for almost seven hours after arriving with his international team-mates and staff members. Reuters,an%20Iraqi%20sporting%20official%20said.), citing a source working for the Iraqi Olympic Committee with close li\n\n\u2022 Catch Up with Highlights - FOX Sports\n  https://www.foxsports.com/watch/fmc-bzhbbisvtcyncs4e\n  Access and manage your favorites here. ## International Friendlies - Netherlands vs Uzbekistan. JUST IN\u30fbInternational Friendlies\u30fb1:31. Uzbekistan - 06/08/2026  Uzbekistan  Netherlands  International Friendlies. ### Alexi Lalas on USMNT\u2019s \u2018good vibes\u2019 entering FIFA World Cup, Pulisic | FULL INTERVIEW | The Herd. ### Alexi Lalas\u2019 Top 10 teams at 2026 FIFA World Cup\u2122. ### Group J Preview: Argentina, Algeria, Austria, Jordan. ### A Defeat So Deafening\u2026 They Changed Their Colors \ud83d\udc94\ud83c\udde7\ud83c\uddf7 No. 3 in Best FIFA World Cup\u2122 Moments. ### Group I Preview: France, Senegal, Iraq, Norway. \ud83d\ude33\ud83c\uddeb\ud83c\uddf7 No. 4 in Best FIFA Wor\n\n\u2022 BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener - Telecom Asia Sport\n  https://www.telecomasia.net/blog/breaking-abdessamad-ezzalzouli-set-for-3-4-weeks-out-after-suspected-mcl-injury-ahead-of-world-cup-opener/\n  # BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener. The Real Betis attacker picked up the injury in the first half of the match, prompting the medical team to take immediate precautionary action by substituting him at the start of the second half to avoid worsening the issue. Image 5: World Cup 2026: Switzerland Relocate Base Camp After Venomous Snake Scare in San Diego. Image 6: 2026 World Cup: Brazil Call Up Ederson to Replace Injured Wesley Ahead of Morocco Opener. Image 7: Germany at the FIFA World Cup 2026: Die Mannschaft Favoured \n\n\u2022 World Cup Group I standings 2026: Updated results, table and fixtures for France, Senegal, Norway, Iraq - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-i-standings-results-table-2026/e0c681e074cb3b3bc2f8f958\n  # World Cup Group I standings 2026: Updated results, table and fixtures for France, Senegal, Norway, Iraq. * Group I fixtures and match schedule. * Who is in World Cup Group I? * Odds to win Group I. * How to watch Group I games. * Group I in the World Cup knockout bracket. The 2026 FIFA World Cup is finally here, with fans across North America and the globe ready for the biggest World Cup in history. Six of those matches will take place inside Group I, which comprises\u00a0 France, Senega"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Extracts detailed tactical analyses and coaching decisions regarding defensive containment of elite strikers and attacking philosophies.",
-        "data": "\u2022 Erling Haaland next World Cup match: Fixture schedule, start time, draw bracket as Norway face Iraq - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/erling-haaland-next-world-cup-match-fixture-schedule-time-draw-bracket/149a2a535ea6793426ee52df\n  # Erling Haaland next World Cup match: Fixture schedule, start time, draw bracket as Norway face Iraq. Norway return to the World Cup for the first time in 28 years this summer, meaning a debut on international football's biggest stage for Erling Haaland. Haaland's father, Alf-Inge, played for the Scandinavian nation when they featured at the 1994 World Cup in the USA, but he was absent four years later when they claimed a famous group-stage win over eventual winners Brazil. STREAM: Every Norway World Cup 2026 match LIVE on fubo (free trial). ## When is Erling Haaland's next match\u00a0at World Cup\n\n\u2022 World Cup Group of Death 2026 Odds, Predictions and Stars to Watch - Bleacher Report\n  https://bleacherreport.com/articles/25435509-world-cup-group-death-2026-odds-predictions-and-stars-watch\n  # World Cup Group of Death 2026 Odds, Predictions and Stars to Watch. The dreaded Group of Death is more difficult to find at the 2026 FIFA World Cup because of the expanded field. The closest thing to a Group of Death is Group I, which features France, Norway, Senegal and Iraq. France is the favorite to win Group I, but it will face challenges from African Cup of Nations finalist Senegal, the Erling Haaland-led Norway and one of the tougher Asian sides in Iraq. Group I possesses three of the best goal-scorers in the world in Haaland, Kylian Mbappe and Sadio Mane. He is in line to be one of th\n\n\u2022 Norway checks out that other Cup ahead of World Cup opener - USA Today\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/11/norway-world-cup-apperance-carolina-hurricanes-game-trip/90518547007/\n  # Norway checks out that other Cup ahead of World Cup opener. Norway continues to win the World Cup. Erling Haaland and his Norwegian teammates were at Game 5 of the Stanley Cup Final on Thursday, June 11. Man City's star forward even found a Carolina Hurricanes jersey during the game, ditching the polo he wore to the game for it. The Hurricanes play in Raleigh, less than 90 minutes from where Norway is training in Greensboro, North Carolina. The Hurricanes beat the Vegas Golden Knights to take a 3-2 lead in the best-of-seven series. Norway is making its first appearance at the World Cup in al\n\n\u2022 Erling Haaland Shares Photos from NHL Stanley Cup Final After Trending Videos at Game 5 - Bleacher Report\n  https://bleacherreport.com/articles/25440004-erling-haaland-shares-photos-nhl-stanley-cup-final-after-trending-videos-game-5\n  HomeScoresFIFA World Cup 2026Transfer RumorsUSMNTUSWNTB/R 99: Ranking Best Players EverPremier LeagueChampions LeagueLa LigaSerie ABundesligaMLS. THE WORLD CUP IS HERE \ud83d\ude0d. # Erling Haaland Shares Photos from NHL Stanley Cup Final After Trending Videos at Game 5. Manchester City and Norwegian national team striker Erling Haaland shared photos from his time attending the Carolina Hurricanes' 4-2 home win over the Vegas Golden Knights in Game 5 of the Stanley Cup Final on Thursday evening. Norway's home base for the World Cup in Greensboro, North Carolina, about 75 miles or so from where the Hurri\n\n\u2022 World Cup 2026 Group I guide - fixtures, schedule, standings and odds for France, Senegal, Iraq and Norway - Sky Sports\n  https://www.skysports.com/football/news/12098/13543102/world-cup-2026-group-i-guide-fixtures-schedule-standings-and-odds-for-france-senegal-iraq-and-norway\n  # World Cup 2026 Group I guide - fixtures, schedule, standings and odds for France, Senegal, Iraq and Norway. World Cup Group I includes 2022 runners-up France, Senegal, Iraq and Erling Haaland's Norway; matches to be played in US cities New Jersey, Philadelphia and Massachusetts, plus Canada's Toronto. Sky Sports' William Bitibiri gives a quick rundown of World Cup Group I. World Cup Group I feat"
-      }
-    ],
-    "research_cost": 0.118,
-    "wallet_before": 3.576,
-    "wallet_after": 3.458,
-    "prediction": {
-      "pick": "away",
-      "confidence": 9,
-      "confidence_reason": "Norway's flawless qualifying campaign, physical superiority, and fully fit world-class duo of Erling Haaland and Martin \u00d8degaard present an overwhelming class mismatch against an Iraqi side that struggled through a 21-match qualification route.",
-      "reasoning": "Norway's historic attacking efficiency and physical dominance will easily break down Iraq's defensive setup."
-    },
-    "full_reasoning": "An analysis of the Group I opening match between Iraq and Norway reveals a clear class and physical mismatch in favor of the Scandinavian side.\n\n### Norway's Flawless Qualifications and Systemic Dominance\nNorway returns to the World Cup for the first time in 28 years on the back of a truly historic qualifying campaign. Under St\u00e5le Solbakken, they achieved a perfect record of eight wins from eight matches in a group featuring European heavyweights Italy, whom they defeated 3-0 at home and 4-1 away. Norway was an absolute offensive juggernaut, scoring 37 goals (averaging 4.63 goals per game). \n\nWhile they possess individual superstars, Norway's success is rooted in systemic efficiency. Arsenal's Martin \u00d8degaard captains the side and orchestrates a highly functional midfield, while Erling Haaland spearheads the attack. Haaland was the most prolific scorer in global qualifying with 16 goals, averaging a goal every 44 minutes and converting 39% of his shots. Supported by a fully fit squad that has enjoyed a stable, distraction-free preparation camp in North Carolina, Norway has both the chemistry and tactical maturity to dominate from kickoff.\n\n### Iraq's Grueling Path and Defensive Limitations\nIraq, coached by Spaniard Jes\u00fas Casas, qualified via the intercontinental playoffs, defeating Bolivia 2-1 in what was the 21st match of an incredibly long and exhausting campaign. While Casas has instilled a disciplined work ethic and will likely deploy a compact, defensive low block, Iraq lacks the high-level experience to neutralize elite European opposition. \n\nIraq's defense, primarily consisting of domestic-based players and lower-tier European league profiles, faces an overwhelming physical mismatch against Haaland and Norway's robust aerial presence on set pieces. Additionally, Iraq's key striker, Aymen Hussein, faced travel disruptions after being held for seven hours by U.S. immigration upon arrival, adding friction to their final preparations. While Iraq will play with immense pride and attempt to clog the central channels, they do not possess the elite defensive floor required to resist Norway's relentless attacking output.\n\nPICK: away\nCONFIDENCE: 9\nCONFIDENCE_REASON: Norway's flawless qualifying campaign, physical superiority, and fully fit world-class duo of Erling Haaland and Martin \u00d8degaard present an overwhelming class mismatch against an Iraqi side that struggled through a 21-match qualification route.\nREASONING: Norway's historic attacking efficiency and physical dominance will easily break down Iraq's defensive setup.",
-    "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
-  },
-  {
     "match": "SWE vs TUN",
     "home": "SWE",
     "away": "TUN",
@@ -4144,5 +3838,329 @@
     "reflected": true,
     "reflected_at": "2026-06-16T21:30:26.066086+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defensive organization over individual attack.\n- AUS vs TUR: Prioritize low-block discipline over possession metrics.\n- NED vs JPN: Prioritize defensive resilience over chance volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize tier gaps and form over history.\n- CIV vs ECU: Prioritize home advantage and fitness over risk aversion.\n- SWE vs TUN: Prioritize scoring efficiency over low-block setups.\n- ESP vs CPV: Prioritize physical low-block organization over possession dominance.\n- BEL vs EGY: Prioritize low-block defensive discipline over favorite status.\n- KSA vs URU: Prioritize environmental heat and squad news over historical matchups.\n- IRN vs NZL: Prioritize travel fatigue and low-block resistance over squad quality.\n- FRA vs SEN: Prioritize squad fitness over venue conditions and league familiarity.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue search (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue search (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)"
+  },
+  {
+    "match": "IRQ vs NOR",
+    "home": "IRQ",
+    "away": "NOR",
+    "kickoff": "2026-06-16T22:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defensive organization over individual attack.\n- AUS vs TUR: Prioritize low-block discipline over possession metrics.\n- NED vs JPN: Prioritize defensive resilience over chance volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize tier gaps and form over history.\n- CIV vs ECU: Prioritize home advantage and fitness over risk aversion.\n- SWE vs TUN: Prioritize scoring efficiency over low-block setups.\n- ESP vs CPV: Prioritize physical low-block organization over possession dominance.\n- BEL vs EGY: Prioritize low-block defensive discipline over favorite status.\n- KSA vs URU: Prioritize environmental heat and squad news over historical matchups.\n- IRN vs NZL: Prioritize travel fatigue and low-block resistance over squad quality.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue search (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)",
+    "information_needs": "FORM\n- What was Iraq's defensive record in the final round of AFC World Cup qualifying, and how did they fare in their warm-up friendlies against European opposition leading up to June 2026?\n- How consistent has Norway\u2019s goal-scoring form been in their recent UEFA matches, particularly in games where Erling Haaland was heavily marked or isolated?\n\nPLAYERS\n- Is Iraq's star striker Aymen Hussein fully fit, and is playmaker Zidane Iqbal match-sharp enough to start in central midfield?\n- How has Norway's central defensive pairing (likely Leo \u00d8stig\u00e5rd and his partner) recently performed against physical, direct target-men similar to Iraq's attacking profile?\n\nTACTICS\n- Will Iraq's manager Jesus Casas deploy a defensive low-block 5-4-1 to deny Erling Haaland space to run into, or will they attempt a mid-press to transition quickly through the wings?\n- How does Norway's midfield, led by Martin \u00d8degaard, plan to break down a highly compact, narrow defensive block if Iraq concedes possession?\n\nH2H\n- Do these two nations have any modern head-to-head history, or how has Iraq historically performed against physical, direct Northern European/Scandinavian styles of play?\n\nCONTEXT\n- Is this the opening match of the 2026 World Cup group stage for both teams, and how does the 48-team tournament structure (where the best third-place teams advance) influence each manager's willingness to play for a draw?\n\nMARKET\n- What are the current Asian Handicap and Over/Under lines, and does the market implied probability heavily favor a multi-goal victory for Norway?\n\nNEWS\n- Are there any late-breaking injuries, suspension carryovers from qualifying, or illness reports coming out of either team's base camp in the 48 hours before kickoff?\n\nVENUE\n- Which North American city and stadium is hosting this match, and will the local climate (e.g., high humidity in Miami/Houston vs. altitude in Mexico City) physically disadvantage Norway's high-intensity pressing game?",
+    "research_gaps": [
+      {
+        "need": "What are the current Asian Handicap and Over/Under lines, and does the market implied probability heavily favor a multi-goal victory for Norway?",
+        "category": "MARKET",
+        "ideal_service": "A real-time sports betting odds aggregator API (such as an OddsPortal or Betfair API wrapper) that provides live Asian Handicap, 1X2, and Over/Under lines for international football fixtures."
+      },
+      {
+        "need": "Do these two nations have any modern head-to-head history, or how has Iraq historically performed against physical, direct Northern European/Scandinavian styles of play?",
+        "category": "H2H",
+        "ideal_service": "A historical sports statistics API (like Sofascore or 11v11) with deep historical head-to-head records and regional match-up data that bypasses standard bot-detection blocks."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iraq vs Norway World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iraq vs Norway World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iraq World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Iraq recent form and results",
+        "need": "How has Iraq performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Norway World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Norway recent form and results",
+        "need": "How has Norway performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iraq vs Norway head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iraq vs Norway World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Norway football team recent matches goal scoring form Erling Haaland isolated",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Analyzes Norway's offensive dependency on Haaland and their alternative scoring routes when he is neutralized.",
+        "need": "How consistent has Norway\u2019s goal-scoring form been in their recent UEFA matches, particularly in games where Erling Haaland was heavily marked or isolated?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iraq tactical preview Jesus Casas low block 5-4-1 World Cup 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies tactical setups, defensive shapes, and transition strategies planned by Jesus Casas to counter Norway's attack.",
+        "need": "Will Iraq's manager Jesus Casas deploy a defensive low-block 5-4-1 to deny Erling Haaland space to run into, or will they attempt a mid-press to transition quickly through the wings?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "2026 World Cup format best third place teams group stage rules",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Evaluates the tournament math and strategic implications of the 48-team structure on group-stage risk tolerance.",
+        "need": "Is this the opening match of the 2026 World Cup group stage for both teams, and how does the 48-team tournament structure (where the best third-place teams advance) influence each manager's willingness to play for a draw?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iraq vs Norway World Cup 2026 match venue stadium location climate altitude",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Determines the venue's climatic conditions and whether humidity or altitude will impact Norway's physical pressing style.",
+        "need": "Which North American city and stadium is hosting this match, and will the local climate (e.g., high humidity in Miami/Houston vs. altitude in Mexico City) physically disadvantage Norway's high-intensity pressing game?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iraq World Cup 2026 squad Aymen Hussein Zidane Iqbal injury fitness",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Retrieves the latest injury updates and fitness reports specifically for Iraq's key attackers ahead of the match.",
+        "need": "Is Iraq's star striker Aymen Hussein fully fit, and is playmaker Zidane Iqbal match-sharp enough to start in central midfield?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iraq vs Norway World Cup 2026 late injuries suspensions team news",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Monitors late-breaking squad news, sudden illnesses, or suspension carryovers immediately before kickoff.",
+        "need": "Are there any late-breaking injuries, suspension carryovers from qualifying, or illness reports coming out of either team's base camp in the 48 hours before kickoff?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Iraq vs Norway Prediction: Can the Iraqis stop Haaland? - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/iraq-vs-norway-match-prediction-16-june-2026/\n  # Iraq vs Norway Prediction: Can the Iraqis stop Haaland?\n\n16/06/2026 23:00\n\nDay\n\nHours\n\nMinutes\n\nSeconds\n\nFIFA World Cup 2026, Group I\n\nIraq vs Norway\n\nStadium: Boston, USA\n\nReferee: Pierre Atcho\n\nMarco Silva\n\nStatistics of the month:\n\n3\n\n6\n\n0\n\n33.33%\n\nROI:  -40%\n\nStatistics\n\nOdds\n\nBet Type\n\nBookmaker\n\nClaim Bonus!\n\nOdds1,60\n\nBet TypeTU 2.5\n\nBookmaker\n\nBonus100 \u20ac\n\nBet now!\n\n## Iraq vs Norway: Prediction for the match on June 16, 2026\n\nIraq and Norway will meet in Boston for their first match of the tournament. Both teams are in Group I along with France and Senegal.\n\nReceive Your Welcome Bonu\n\n\u2022 Erling Haaland odds vs. Iraq: Player props for Norway star including anytime goalscorer, shots and more - sportingnews.com\n  https://www.sportingnews.com/us/betting/news/erling-haaland-odds-player-props-norway-iraq-anytime-goalscorer/26fad2ba2f20552809f3d2ca\n  ### To record 3+ shots on target (+110 on BetMGM)\n\nThree shots feels like a low number for Haaland, who will be the main feature on a Norway team that should overpower Iraq. Even if all his shots don't find the net, tallying three or more feels very feasible.\n\nNorway's attack is centered by No. 9, and though it is new to the World Cup stage, don't expect Haaland to take his foot off the gas when it comes to goalscoring. He can very well record this total in the first half.\n\nMORE: Complete World Cup betting strategy guide\n\n### To score a header (+475 on DraftKings)\n\nOne area where Haaland will \n\n\u2022 Where to Watch Iraq vs Norway: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-iraq-vs-norway-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  # Where to Watch Iraq vs Norway: 2026 FIFA World Cup TV Channel, Live Stream and Match Details\n\nOyebade Oluwafemi\n\nIraq and Norway will begin their 2026 FIFA World Cup campaign on Tuesday evening in the Group I opening encounter at Gillette Stadium, Foxborough, Massachusetts. U.S. Here's everything you need to know about how to watch the match, including TV channels, live streaming options, kick-off time, team news, and other key details ahead of the World Cup showdown.\n\nClaim Exclusive World Cup Bonuses on BC Game\n\nIraq vs Norway\n\n## Iraq vs Norway Match Details\n\n Date: Tuesday, June 16, 2026\n\n\u2022 Iraq vs. Norway live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/16/sports/iraq-vs-norway-live-updates-world-cup-2026-score-news-and-highlights/\n  Follow The Post\u2019s live updates for the latest Iraq vs. Norway score, news and highlights from the World Cup 2026.\n\nEditor\u2019s Note: This live blog is updated with the assistance of AI, with oversight from the Post\u2019s editorial team.\n\n1 minute ago\n\n## How Iraq got here\n\n By  Grace McCarron \n\nIraq is making their second-ever World Cup appearance and their first in 40 years. They clinched the final spot in this year's 48-team field with an intercontinental playoff win over Bolivia in March.\n\n2 minutes ago\n\n## Norway's form entering World Cup\n\n By  Grace McCarron \n\nNorway is making only their fourth-\n\n\u2022 Iraq vs. Norway prediction: World Cup odds, best bets, sportsbook promos and expert picks - sportingnews.com\n  https://www.sportingnews.com/us/betting/news/norway-vs-iraq-prediction-world-cup-odds-best-bets-picks-promos/0a92f480e47b0ec40cea83c6\n  ### Norway to win (-525 at DraftKings)\n\nStarting with our first obvious pick given the prediction, we're tipping to Norway to win its first World Cup game in 28 years and Iraq to lose its first in 40 years.\n\nThe Nordic country has only qualified for three previous World Cups, as well as one European Championships in 2000. Their fourth appearance is its second in the States on top of a further two in France \u2014 the only times the to"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Where to Watch Iraq vs Norway: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-iraq-vs-norway-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Iraq vs Norway Team News\n\nNo injury or suspension concerns have been confirmed for both nations.\n\n## Iraq vs Norway Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Iraq to Win | Draw | Norway to Win |\n| 1xBet | 16.00 | 7.02 | 1.23 |\n| Betway | 13.25 | 6.80 | 1.24 |\n\nClaim Exclusive World Cup Bonuses on 1xBet\n\n89\n\n100 \u20ac\n\nClaim Bonus!Bet now!\n\nFollow Telecom Asia Sport!\n\nTags:\n\nFIFA World Cup 2026IraqNorway1xBetBc.Game\n\nRating: 5\n\nComments\n\nNo Comments Yet! Be the first to share what you think!\n\n## Recent Articles\n\nWhere to Watch France vs. Senegal: 2026 FIFA World Cup TV Channel, Live S\n\n\u2022 Iraq vs. Norway: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-iraq-vs-norway-tv-channel-live-stream-2026-fifa-world-cup-group-i\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Iraq vs. Norway: How to Watch, TV Channel, Live Stream\n\nPublished Jun. 16, 2026 6:17 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nIraq and Norway meet in their 2026 FIFA World Cup opener on Tuesday, June 16, 2026 at 6:00 p.m. ET from Boston Stadium.\n\nIraq, ranked 57th by FIFA, are returning to the World Cup for the first time since 1986, when they were eliminated in the group stage. Norway enter Group I ranked 31st by FIFA, appeari\n\n\u2022 Iraq vs. Norway live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/16/sports/iraq-vs-norway-live-updates-world-cup-2026-score-news-and-highlights/\n  Follow The Post\u2019s live updates for the latest Iraq vs. Norway score, news and highlights from the World Cup 2026.\n\nEditor\u2019s Note: This live blog is updated with the assistance of AI, with oversight from the Post\u2019s editorial team.\n\n1 minute ago\n\n## How Iraq got here\n\n By  Grace McCarron \n\nIraq is making their second-ever World Cup appearance and their first in 40 years. They clinched the final spot in this year's 48-team field with an intercontinental playoff win over Bolivia in March.\n\n2 minutes ago\n\n## Norway's form entering World Cup\n\n By  Grace McCarron \n\nNorway is making only their fourth-\n\n\u2022 Iraq vs Norway Prediction: Can the Iraqis stop Haaland? - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/iraq-vs-norway-match-prediction-16-june-2026/\n  # Iraq vs Norway Prediction: Can the Iraqis stop Haaland?\n\n16/06/2026 23:00\n\nDay\n\nHours\n\nMinutes\n\nSeconds\n\nFIFA World Cup 2026, Group I\n\nIraq vs Norway\n\nStadium: Boston, USA\n\nReferee: Pierre Atcho\n\nMarco Silva\n\nStatistics of the month:\n\n3\n\n6\n\n0\n\n33.33%\n\nROI:  -40%\n\nStatistics\n\nOdds\n\nBet Type\n\nBookmaker\n\nClaim Bonus!\n\nOdds1,60\n\nBet TypeTU 2.5\n\nBookmaker\n\nBonus100 \u20ac\n\nBet now!\n\n## Iraq vs Norway: Prediction for the match on June 16, 2026\n\nIraq and Norway will meet in Boston for their first match of the tournament. Both teams are in Group I along with France and Senegal.\n\nReceive Your Welcome Bonu\n\n\u2022 Where to watch Iraq vs. Norway live stream, TV channel, start time for World Cup Group I match - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/watch-iraq-vs-norway-live-stream-channel-time-world-cup/44ffdf2314474f031a4ba02c\n  ### How many teams are in the 2026 World Cup?\n\nThe 2026 FIFA World Cup will feature 48 teams, expanding from the 32-team format used in previous tournaments. The larger field also means more matches, more knockout-round games and more countries involved than ever before.\n\nThe 48 teams are Algeria, Argentina, Australia, Austria, Belgium, Bosnia and Herzegovina, Brazil, Cape Verde, Canada, Colombia, Croatia, Cura\u00e7ao, Czechia, DR Congo, Ecuador, Egypt, England, France, Germany, Ghana, Haiti, Iran, Iraq, "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Iraq recent form and results",
+        "data": "\u2022 Reuters Iraq at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/iraq/\n  Follow Iraq&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Iraq national football team Asia: World Cup qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/iraq/table/2026/world-cup-qualification-asia/\n  This page shows the Iraq national football team Asia: World Cup qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Iraq national football team Asia: World Cup qualification 2026 standings changes during the competition.\n\n\u2022 World Cup 2026: What is Iraq's current FIFA world ranking? - World Soccer Talk\n  https://worldsoccertalk.com/amp/world-cup/world-cup-2026-what-is-iraqs-current-fifa-world-ranking/\n  Grouped with France, Senegal, and Norway, Iraq enters as the tournament\u2019s least-favored team in Group I, with the primary objective of earning their first World Cup points. Iraq opens against Norway on June 16, faces France on June 22, and closes group play against Senegal on June 26. ... Iraq and Norway kick off their 2026 World Cup campaigns in a high-stakes Matchday 1 clash in Group I.\n\n\u2022 Iraq vs Norway | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021488\n  World Cup 2026: Group I in focusWorld Cup 2026: Group I in focus \u00b7 Iraq at the FIFA World Cup: Team profile and historyIraq at the FIFA World Cup: Team profile and history\n\n\u2022 Iraq vs Norway live updates: World Cup 2026 game latest news as Erling Haaland makes tournament debut - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/iraq-vs-norway-live-updates-world-cup-2026-score-result/BSovmXbuNeWC/\n  <strong>Iraq drew 1-1 with Spain</strong> in a World Cup warm-up match. Getty Images \u00b7 There was an acceptance that the technical football favoured by Graham Arnold\u2019s predecessor, Spaniard Jesus Casas, was not playing to the strengths of Iraq \u2014 and the past ...\n\n\u2022 [Discussion] IRAQ has qualified for the FIFA World Cup 2026!\n  https://www.reddit.com/r/soccer/comments/1s9b35g/iraq_has_qualified_for_the_fifa_world_cup_2026/\n  People can downplay Bolivia all they want, but they definitely pushed as much as they could"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Norway recent form and results",
+        "data": "\u2022 Norway at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d1592b3f90-2ef16e2c5255-1000--norway-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  Below you will find everything you need to know about Norway at the 2026 World Cup: their fixtures, squad, qualifying record, key players, coach and tournament history.\n\n\u2022 Iraq v Norway: World Cup 2026 line-ups, stats and preview, TV channel, live online stream and prediction\n  https://www.101greatgoals.com/match-previews/world-cup-matches/iraq-v-norway-world-cup-2026-line-ups-stats-preview-tv-channel-live-online-stream-prediction/\n  Led by Erling Haaland and Martin Odegaard, Norway possess one of the most exciting attacking units at the tournament and will believe they have a genuine chance of reaching the knockout rounds. <strong>Their recent form has been mixed</strong>, but the quality ...\n\n\u2022 Norway World Cup Squad 2026: Full 26-Player Roster\n  https://worldcuppass.com/norway-world-cup-squad-2026/\n  Norway World Cup 2026 Squad. Solbakken&#x27;s full 26-player roster, schedule, key players, and Group I breakdown. Haaland&#x27;s first World Cup after 28-year wait!\n\n\u2022 Fifa World Cup 2026: What you need to know about Norway - BBC Sport\n  https://www.bbc.com/sport/football/articles/cd6p9neje91o\n  Solbakken&#x27;s side scored 37 times, eight more than any other team, with their average of 4.63 goals per game the highest ever by a European nation in a World Cup qualifying campaign featuring more than four matches. The driving force behind their unprecedented scoring was Erling Haaland, who netted 16 times, the most by any player from any continent in 2026 qualifying. He averaged a goal every 44 minutes, scored with 39% of his shots and over-performed his expected goals total by more than six. None of his strikes were penalties \u2013 in fact, he missed his only spot-kick. ... This is Norway&#x27;s fourth World Cup appearance and their first since 1998.\n\n\u2022 Norway national football team World Cup Qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/norway/table/2026/world-cup-qualification/\n  This page shows the Norway national football team World Cup Qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Norway national football team World Cup Qualification 2026 standings changes during the competition.\n\n\u2022 [Discussion] Norway's squad for the 2026 World Cup\n  https://www.reddit.com/r/soccer/comments/1tjtimg/norways_squad_for_the_2026_world_cup/\n  Thelonious Aasgaard is the best name I've ever heard"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Iraq vs. Norway Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/iraq_vs_norway.php\n  In the history of World Cups, Iraq National Team faced Norway in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 Form and head to head stats Iraq vs Norway\n  https://www.skysports.com/football/iraq-vs-norway/549783\n  FIFA World Cup match Iraq vs Norway 16.06.2026. Preview and stats followed by live commentary, video highlights and match report.\n\n\u2022 Iraq vs Norway | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021488\n  Iraq at the FIFA World Cup: Team profile and historyIraq at the FIFA World Cup: Team profile and history \u00b7 Hassan returns as Arnold names Iraq squadHassan returns as Arnold names Iraq squad \u00b7 The ten nations seeking a first finals winThe ten nations seeking a first finals win \u00b7 Next \u00b7 France and Argentina take top billingFrance and Argentina take top billing \u00b7 Iraq v Norway | Match previewIraq v Norway | Match preview \u00b7\n\n\u2022 Iraq vs Norway - live score, predicted lineups and H2H stats\n  https://www.fotmob.com/matches/iraq-vs-norway/1oz68o\n  Iraq faces Norway at Boston Stadium on Tue, Jun 16, 2026, 22:00 UTC. This match is part of the World Cup Grp. I. You can check the recent head-to-head encounters, as well as full H2H record on this page to see how Iraq and Norway have fared against each other in the past.\n\n\u2022 How to Watch Iraq vs Norway Live Today: World Cup Preview, Team News, Stats, Prediction\n  https://heavy.com/sports/soccer/world-cup/how-to-watch-iraq-vs-norway-live-today-world-cup-preview-team-news-stats-prediction/\n  <strong>The Iraq vs Norway head-to-head record contains no previous competitive meetings</strong>. This World Cup opener will be the first-ever senior competitive international match between the two countries."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Iraq vs Norway | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021488\n  Al Ammari: We will show Iraq\u2019s ability to always rise againAl Ammari: We will show Iraq\u2019s ability to always rise again \u00b7 Curiosities from the World Cup group stageCuriosities from the World Cup group stage \u00b7 World Cup 2026 groups: How teams qualify and tie-breakersWorld Cup 2026 groups: How teams qualify and tie-breakers\n\n\u2022 Iraq vs. Norway (Jun 16, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760430/norway-iraq\n  2026 FIFA World Cup, Group Stage \u00b7 IraqIraqIRQ \u00b7 LDWWW, 0 PTS \u00b7 NOR -1.5 \u00b7 FOX \u00b7 +2 \u00b7 NorwayNorwayNOR \u00b7 DWDLW, 0 PTS \u00b7 4-4-2 \u00b7 4-3-3 \u00b7 Al-Hamadi \u00b7 Hussein \u00b7 Jasim \u00b7 Bayesh \u00b7 Ismael \u00b7 Al-Ammari \u00b7 Doski \u00b7 Ali \u00b7 Hashim \u00b7 Tahseen \u00b7 Hassan \u00b7 Bench \u00b7\n\n\u2022 Iraq vs Norway FIFA World Cup 2026 Preview: Everything you need to know | Goal.com US\n  https://www.goal.com/en-us/news/iraq-norway-world-cup-preview/blt35615d31b35c17b2\n  Navigating a potentially tricky UEFA <strong>Group I</strong> that featured European heavyweights Italy, the Nordic side built an unstoppable, high-octane machine that left group rivals completely demoralised.\n\n\u2022 What happens if Norway win, tie or lose vs Iraq today in their 2026 World Cup debut? - Bolavip US\n  https://bolavip.com/en/world-cup/what-happens-if-norway-win-tie-or-lose-vs-iraq-today-in-their-2026-world-cup-debut\n  For the final group standings, <strong>the primary tiebreaker is overall goal differential, followed by total goals scored, and then head-to-head record</strong>, meaning a draw here pushes the pressure of goal accumulation onto the remaining group stage matches.\n\n\u2022 Iraq vs Norway preview: World Cup 2026 odds, lineups\n  https://www.sofascore.com/news/iraq-vs-norway-world-cup-2026-group-i-action-continues-at-gillette-stadium\n  It is Round 1, and both teams will want a clean start in a tough group setting. On paper, <strong>Norway come in higher in the FIFA ranking at 31, while Iraq sit 57,</strong> which sets a clear favorite."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Analyzes Norway's offensive dependency on Haaland and their alternative scoring routes when he is neutralized.",
+        "data": "\u2022 Norway's Haaland aiming to extend his goal-scoring rampage against Iraq | New Straits Times\n  https://www.nst.com.my/amp/sports/football/2026/06/1463307/norways-haaland-aiming-extend-his-goal-scoring-rampage-against-iraq\n  BOSTON: Human goal machine Erling Haaland will seek to get his World Cup account up and running immediately when Norway take on Iraq on Tuesday to end the country&#x27;s nearly three-decade absence from football&#x27;s elite tournament.\n\n\u2022 Can Erling Haaland lead Norway to success at the 2026 World Cup? - Yahoo Sports\n  https://sports.yahoo.com/soccer/article/can-erling-haaland-lead-norway-to-success-at-the-2026-world-cup-040023486.html\n  Norway&#x27;s first trip to the World Cup in 28 years could rest upon Haaland&#x27;s goal-scoring exploits.\n\n\u2022 Norway's Haaland aiming to extend his goal-scoring rampage against Iraq | The Straits Times\n  https://www.straitstimes.com/sport/football/norways-haaland-aiming-to-extend-his-goal-scoring-rampage-against-iraq\n  BOSTON, June 14 - Human goal machine Erling Haaland will seek to get his World Cup account up and running immediately when Norway take on Iraq on Tuesday to end the country&#x27;s nearly three-decade absence from football&#x27;s elite tournament. Read more at straitstimes.com. Read more at straitstimes.com.\n\n\u2022 Norway 4-1 Estonia (Nov 13, 2025) Game Analysis - ESPN\n  https://www.espn.com/soccer/report/_/gameId/724875\n  <strong>Erling Haaland scored again</strong> and Norway moved even closer to qualifying for the World Cup for the first time since 1998 by beating Estonia 4-1 in Oslo on Thursday. The win virtually secures a spot for the high-scoring Norwegians in next year&#x27;s ...\n\n\u2022 Will Norway\u2019s slick modern model succeed where the class of \u201994 failed? | Norway | The Guardian\n  https://www.theguardian.com/football/2026/jun/15/norway-world-cup-slick-modern-model-erling-haaland\n  Their failure came in attack; Olsen\u2019s side were eliminated because they only scored once, beating Mexico before ultimately running aground in a famously sweltering goalless draw against Jack Charlton\u2019s team at Giants Stadium. This year\u2019s Group I does not look much easier. But the dynamic of Norwegian football is different now; the not entirely inaccurate picture of burly Vikings replaced by elite, technically supreme talents in the moulds of Martin \u00d8degaard and Antonio Nusa. There is an Erling Haaland-shaped spearhead to convert chances that flow more frequently in St\u00e5le Solbakken\u2019s fast, flexible set-up."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies tactical setups, defensive shapes, and transition strategies planned by Jesus Casas to counter Norway's attack.",
+        "data": "\u2022 Iraq vs Norway FIFA World Cup 2026 Preview: Everything you need to know | Goal.com US\n  https://www.goal.com/en-us/news/iraq-norway-world-cup-preview/blt35615d31b35c17b2\n  Tactically, <strong>Arnold implements a pragmatic, defensively solid philosophy that prioritises collective compactness and immediate vertical transition</strong>. He favours a highly organised 4-2-3-1 or a functional 4-3-3 shape, relying on two deeply disciplined ...\n\n\u2022 Iraq 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/iraq-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  Full preview of Iraq for the 2026 World Cup, including squad breakdown, key players, and tactical analysis of their chances.\n\n\u2022 Iraq vs Norway Preview: Predicted Lineups, Team News & Tactical Analysis | 2026 World Cup Group I\n  https://www.rotowire.com/soccer/article/iraq-vs-norway-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-i-118221\n  This preview covers predicted lineups, injury news, head-to-head history, the tactical matchup and a score prediction for Tuesday&#x27;s Group I clash in Foxborough.\n\n\u2022 Iraq World Cup 2026: Fixtures, key players and tactical analysis | Squawka | EN\n  https://www.squawka.com/en/news/world-cup/iraq-world-cup-2026-fixtures-squad-analysis/\n  Everything you need to know about Iraq at World Cup 2026 including their fixtures, key players, manager and tactical analysis.\n\n\u2022 FIFA World Cup 2026 EXCLUSIVE: 'Iraq Have High Standards' \u2014 Former Coach Pablo Grandes Backs Lions of Mesopotamia To Become Asia's Best and Emulate Cape Verde-Like Miracle\n  https://sundayguardianlive.com/sports/fifa-world-cup-2026-exclusive-iraq-have-high-standards-former-coach-pablo-grandes-backs-lions-of-mesopotamia-to-become-asias-best-and-emulate-cape-verde-like-miracle-208282/\n  The local players might occasionally display tactical gaps or physical limitations in certain areas, but when they step onto the pitch\u2014especially in grueling, high-stakes matches\u2014their sheer competitive drive is unbelievable. That exact combination is the ultimate weapon for the Iraqi national team. \u200bQ8: You saw the foundational work built under Jes\u00fas Casas, and now the team is under the stewardship of Graham Arnold."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Evaluates the tournament math and strategic implications of the 48-team structure on group-stage risk tolerance.",
+        "data": "{\"topic\":\"2026 World Cup format best third place teams group stage rules\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Determines the venue's climatic conditions and whether humidity or altitude will impact Norway's physical pressing style.",
+        "data": "\u2022 Iraq vs. Norway (live updates): Boston Stadium hosts 2nd 2026 FIFA ...\n  https://sports.yahoo.com/articles/iraq-vs-norway-live-updates-115002371.html\n  Tuesday's match at Boston Stadium is expected to test rush hour traffic Iraq and Norway face off a Group I matchup at 6 p.m., near Boston ...\n\n\u2022 Iraq vs Norway performance-impairing heat | World Cup 2026 ...\n  https://www.climatecentral.org/world-cup-2026/matches/18\n  The June 16 match at Boston Stadium (Iraq vs. Norway) has a 16% chance of heat heat above 28\u00b0C (82.4\u00b0F)\n\n\u2022 Iraq Norway \ud83d\uddd3\ufe0f Tuesday, 16 June, 2026 GMT - 22:00 - Facebook\n  https://www.facebook.com/footmooddaily/posts/iraq-norway-%EF%B8%8F-tuesday-16-june-2026-gmt-2200-bst-2300-fifa-world-cup-round-1%EF%B8%8F-bos/1022840496749251/\n  Iraq \ud83c\udd9a Norway. Round 1 \ud83c\udfdf\ufe0f Boston Stadium, Foxborough, Massachusetts, United States \ud83d\udcfa Live Free Streaming\n\n\u2022 Iraq vs Norway at World Cup 2026: TV channel, how to watch, kick ...\n  https://www.espn.com/soccer/story/_/id/49047658/fifa-world-cup-2026-iraq-vs-norway-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  Venue: Gillette Stadium, Foxborough, Massachusetts, U.S. Referee: Pierre Atcho (Gabon)\n\n\u2022 Norway and Iraq are preparing for Boston Stadium's second match ...\n  https://www.facebook.com/wmur9/posts/norway-and-iraq-are-preparing-for-boston-stadiums-second-match-of-the-tournament/1050951810765866/\n  Norway and Iraq are preparing for Boston Stadium's second match of the tournament. Boston Stadium, Norway, Iraq. June 16 \u2013 vs Playoff 2 $325 ..."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Retrieves the latest injury updates and fitness reports specifically for Iraq's key attackers ahead of the match.",
+        "data": "\u2022 World Cup 2026 top players to watch from Lionel Messi to Christian Pulisic to Yan Diomande - New York Post\n  https://nypost.com/2026/06/11/sports/top-players-to-watch-at-world-cup-2026/\n  # World Cup 2026 top players to watch from Lionel Messi to Christian Pulisic to Yan Diomande. But it\u2019s also a global stage for the best soccer players to imprint themselves in memory \u2014 a la Pel\u00e9, Maradona, Zidane. Here\u2019s a look at the individuals \u2014 from the household names to the stars in waiting \u2014 who will own the spotlight at World Cup 2026:. He\u2019ll turn 39 during the tournament and his fitness for a series of up to eight matches is debatable. **Guillermo Ochoa, GK, Mexico:** \u201cMemo\u201d would become a third member of the six-World Cup club, along with Messi and Ronaldo, if he gets into a game. **\n\n\u2022 World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad - Sky Sports\n  https://www.skysports.com/football/news/32461/13554613/world-cup-2026-tino-livramento-suffers-hamstring-injury-and-replaced-by-trevoh-chalobah-in-england-squad\n  # World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad. England begin their World Cup Group L campaign against Croatia on Wednesday; Tino Livramento has been replaced by Trevoh Chalobah after suffering a hamstring injury; **Follow England vs Croatia on the Sky Sports app from 7pm**. England\u2019s World Cup campaign has suffered an early setback as Tino Livramento's tournament is over after suffering a hamstring injury, with Trevoh Chalobah to replace him. The 23-year-old Newcastle defender missed the final five weeks of the season with a thigh i\n\n\u2022 On the Eve of the World Cup, U.S. Immigration Policy Turns Some Away - The New York Times\n  https://www.nytimes.com/2026/06/10/world/americas/world-cup-immigration-problems.html\n  # On the Eve of the World Cup, U.S. Immigration Policy Turns Some Away - The New York Times. # On the Eve of the World Cup, U.S. Immigration Policy Turns Some Away. Some fans and participants hoping to enter the United States for the World Cup have complained that restrictive immigration rules have presented a roadblock. Iraqi soccer player Aymen Hussein, pictured in a mural near Baghdad wearing his No. 18 jersey, was temporarily detained by U.S. immigration officials before being allowed to enter the country for the World Cup. Credit...Ahmad Al-Rubaye/Agence France-Presse \u2014 Getty Images. Mr. \n\n\u2022 Iraq vs. Norway: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-iraq-vs-norway-tv-channel-live-stream-2026-fifa-world-cup-group-i\n  FIFA Men's World Cup. FIFA Men's World Cup. 3. ### 2026 World Cup: France Alone Atop Oddsboard After Spain's Shocking Draw### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. Iraq and Norway meet in their 2026 FIFA World Cup opener on Tuesday, June 16, 2026 at 6:00 p.m. ET from Boston Stadium. * June 16, 2026: Watch Iraq vs Norway - Boston Stadium (6:00 p.m. ET / 3:00 p.m. PT). * June 22, 2026: Watch Franc\n\n\u2022 Harry Maguire reveals 'awkward' Thomas Tuchel call explaining England World Cup snub - ESPN\n  https://www.espn.com/soccer/story/_/id/49080189/harry-maguire-reveals-awkward-thomas-tuchel-call-explaining-england-world-cup-snub\n  Can Argentina really win the World Cup again? Undefeated after six matches, the Asian nations have come to play at the World Cup. Runners-up in 2018, third place in 2022: Can Croatia shock the World Cup again? Key issues for England at 2026 World Cup: Fatigue, fitness and do Gordon, Stones start? Harry Maguire has revealed the \"awkward\" video call he had with Thomas Tuchel in which the England head coach told him he would not be part of his 26-man World Cup squad. The Manchester United defender said he was "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Monitors late-breaking squad news, sudden illnesses, or suspension carryovers immediately before kickoff.",
+        "data": "\u2022 Iraq vs. Norway live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/16/sports/iraq-vs-norway-live-updates-world-cup-2026-score-news-and-highlights/\n  Switch between CA and NY editions here. #### Breaking News. # Iraq vs. Norway live updates: World Cup 2026 score, news and highlights. Updated  June 16, 2026, 5:04 p.m. ET. Add The New York Post on Google. Norway is set to kick off at 6 p.m. ET from Boston Stadium. Follow The Post\u2019s live updates for the latest Iraq vs. Norway score, news and highlights from the World Cup 2026. *Editor\u2019s Note: This live blog is updated with the assistance of AI, with oversight from the Post\u2019s editorial team.*. Iraq is making their second-ever World Cup appearance and their first in 40 years. They clinched the f\n\n\u2022 Norway embraces Viking theme for World Cup return and provokes some debate - AP News\n  https://apnews.com/article/world-cup-norway-viking-photo-ffe65155eeb34d5e4f108494ab20a004\n  Test Your News I.Q. 2026 Elections Election Results Election calendar White House Congress Supreme Court The latest AP-NORC polls Ground Game. Your home base for in-depth reporting from the world of sports. Norway\u2019s Erling Haaland arrives during a training session ahead of the World Cup Group I soccer match between Iraq and Norway in Foxborough, Mass., near Boston, Monday, June 15, 2026. Norway head coach Stale Solbakken talks to the media during a press conference ahead of the World Cup Group I soccer match between Iraq and Norway in Foxborough, Mass., near Boston, Monday, June 15, 2026. Norw\n\n\u2022 Iraq vs. Norway: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-iraq-vs-norway-tv-channel-live-stream-2026-fifa-world-cup-group-i\n  FIFA Men's World Cup. FIFA Men's World Cup. 3. ### 2026 World Cup: France Alone Atop Oddsboard After Spain's Shocking Draw### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. Iraq and Norway meet in their 2026 FIFA World Cup opener on Tuesday, June 16, 2026 at 6:00 p.m. ET from Boston Stadium. * June 16, 2026: Watch Iraq vs Norway - Boston Stadium (6:00 p.m. ET / 3:00 p.m. PT). * June 22, 2026: Watch Franc\n\n\u2022 Iraq vs Norway Prediction: Can the Iraqis stop Haaland? - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/iraq-vs-norway-match-prediction-16-june-2026/\n  # Iraq vs Norway Prediction: Can the Iraqis stop Haaland? **FIFA World Cup 2026, Group I**. ## Iraq vs Norway: Prediction for the match on June 16, 2026. Iraq and Norway will meet in Boston for their first match of the tournament. ## Iraq: Form and statistics. This is only the second time Iraq has participated in a World Cup. The Iraqis\u2019 first appearance was at Mexico \u201986, 40 years ago. Iraq was in a group with Mexico, Paraguay, and Belgium and lost all three games. Group I is one of the strongest in the World Cup, making the Iraqis\u2019 task extremely difficult. Today, the team\u2019s star is clearly \n\n\u2022 Where to Watch Iraq vs Norway: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-iraq-vs-norway-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  # Where to Watch Iraq vs Norway: 2026 FIFA World Cup TV Channel, Live Stream and Match Details. Iraq and Norway will begin their 2026 FIFA World Cup campaign on Tuesday evening in the Group I opening encounter at Gillette Stadium, Foxborough, Massachusetts. U.S. Here's everything you need to know about how to watch the match, including TV channels, live streaming options, kick-off time, team news, and other key details ahead of the World Cup showdown. ## Iraq vs Norway Match Details. ## How to Watch Iraq vs Norway Match on TV. You can watch the opening match of th"
+      }
+    ],
+    "research_cost": 0.116,
+    "wallet_before": 2.69,
+    "wallet_after": 2.574,
+    "prediction": {
+      "pick": "away",
+      "confidence": 6,
+      "confidence_reason": "Norway's elite attacking duo of Erling Haaland and Martin \u00d8degaard provides a decisive edge against Iraq's low block, but the confidence is capped at 6 due to Iraq's defensive resilience.",
+      "reasoning": "Norway's superior individual quality and elite goalscoring threat should eventually break down Iraq's compact defensive structure.",
+      "probabilities": {
+        "home": 15,
+        "draw": 30,
+        "away": 55
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Iraq qualified for their first World Cup in 40 years via an intercontinental playoff win over Bolivia and recently earned a respectable 1-1 draw against Spain in a warm-up match.",
+      "away_form": "Norway returns to the World Cup after 28 years, coming off a highly prolific qualifying campaign where they scored 37 goals, led by Erling Haaland's 16 goals.",
+      "key_injuries": [
+        "No confirmed injury or suspension concerns for either squad."
+      ],
+      "tactical_matchup": "Iraq's pragmatic, defensively compact 4-2-3-1 or 4-3-3 shape under Graham Arnold will look to frustrate Norway, but Norway's elite attacking unit led by Erling Haaland and Martin \u00d8degaard possesses a clear structural edge.",
+      "group_stakes": "In a tough Group I alongside France and Senegal, both teams need a strong start to maximize their chances of progressing to the knockout rounds.",
+      "home_win_signals": [
+        "Iraq's defensive resilience under Graham Arnold, highlighted by their recent 1-1 draw against Spain.",
+        "The competitive drive and physical commitment of the Iraqi squad in high-stakes tournament matches."
+      ],
+      "away_win_signals": [
+        "Erling Haaland's elite goalscoring efficiency, averaging a goal every 44 minutes and converting 39% of his shots in qualifying.",
+        "Norway's superior technical quality and creative engine driven by Martin \u00d8degaard.",
+        "A significant class and ranking gap, with Norway ranked 31st by FIFA compared to Iraq's 57th."
+      ],
+      "draw_signals": [
+        "Iraq successfully executing a low-block to stifle Norway's attack, similar to their defensive performance against Spain.",
+        "A cagey, low-scoring opening match as both teams look to avoid an early defeat in the group stage."
+      ],
+      "contradictions": [
+        "Norway's high-scoring qualifying record (4.63 goals per game) contrasts with Iraq's highly defensive, pragmatic approach under Graham Arnold."
+      ],
+      "strategy_applied": [
+        "Prioritized defensive compactness and tactical setups over reputation, while evaluating the massive individual threat of Erling Haaland against Iraq's low-block organization."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting a single 1-1 warm-up draw against Spain as definitive proof of Iraq's tournament-level defensive resilience.",
+        "Failing to verify basic squad and staff details, as evidenced by erroneously attributing Australia's manager Graham Arnold to Iraq.",
+        "Assuming Norway's high-scoring qualifying metrics will easily translate against a compact tournament low-block without analyzing the quality of their qualifying opponents."
+      ],
+      "underweighted_factors": [
+        "The physical toll on Iraq's defense when trying to contain an elite, physically dominant striker like Erling Haaland for a full 90 minutes.",
+        "Iraq's lack of a proven counter-attacking threat to relieve sustained defensive pressure, which could lead to an inevitable late breakthrough for Norway."
+      ],
+      "draw_risk": "medium \u2014 while Iraq's defensive organization can frustrate opponents, Norway's elite individual quality makes keeping a clean sheet highly difficult.",
+      "favorite": "away",
+      "confidence_cap": 6,
+      "verdict": "The colleague's brief contains critical factual confusion regarding Iraq's management and overvalues a single friendly result, meaning Norway's superior attacking quality remains the safer bet."
+    },
+    "full_reasoning": "HOME_PCT: 15\nDRAW_PCT: 30\nAWAY_PCT: 55\nPICK: away\nCONFIDENCE: 6\nCONFIDENCE_REASON: Norway's elite attacking duo of Erling Haaland and Martin \u00d8degaard provides a decisive edge against Iraq's low block, but the confidence is capped at 6 due to Iraq's defensive resilience.\nREASONING: Norway's superior individual quality and elite goalscoring threat should eventually break down Iraq's compact defensive structure.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
