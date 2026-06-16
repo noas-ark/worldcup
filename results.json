@@ -1639,275 +1639,6 @@
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize collective defensive organization and low-block tactics over individual attacking talent.\n- AUS vs TUR: Prioritize disciplined low-block setups and transition efficiency over aesthetic possession metrics and technical quality.\n- NED vs JPN: Prioritize collective defensive resilience and opposition finishing inefficiency over individual talent and high-volume chance creation.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 to analyze defensive structure and team discipline (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 to identify defensive schemes engineered to neutralize wing attacks (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 to identify low-block and transition setups that neutralize possession-dominant teams (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 to evaluate defensive organization against highly ranked teams and historical squad conversion rates (NED vs JPN)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 because collective tactical setups dictate outcomes more than single-player availability (BRA vs MAR)\n- skip: Pitch mapping data (https://skim402.com/api/v2/read) \u2014 as stadium surface details offer zero predictive value for tactical outcomes (AUS vs TUR)\n- skip: Qualification math (https://news-x402.com/news/recent) \u2014 because group stage advancement scenarios do not translate to on-field performance (AUS vs TUR)\n- skip: Individual fitness news (https://news-x402.com/news/recent) \u2014 as fitness metrics do not mitigate collective defensive vulnerability (NED vs JPN)\n- skip: Betting market data (https://news-x402.com/news/recent) \u2014 because odds tracking reflects public sentiment rather than tactical realities (NED vs JPN)"
   },
   {
-    "match": "FRA vs SEN",
-    "home": "FRA",
-    "away": "SEN",
-    "kickoff": "2026-06-16T19:00Z",
-    "strategy_snapshot": "# World Cup Prediction Strategy Document\n\n### Core Prediction Rules\n1. **BRA vs MAR: Avoid the \"Individual Talent\" Trap Against Elite Low Blocks**\nDo not back a favorite solely on individual attacking talent (e.g., elite isolated wingers) when facing a highly disciplined, defensively organized low-block team, especially in group stages where the underdog is highly motivated to play for a draw. If the favorite lacks cohesive central playmaking or has key playmaker fitness issues, heavily discount their win probability and seriously consider the draw.\n\n2. **AUS vs TUR: Prioritize Defensive Floors and Physicality Over Technical Flair**\nDo not back a possession-heavy, technically expressive team solely on offensive flair when facing a physically robust, highly disciplined defensive unit. A compact defensive block combined with efficient transition, counter-attacking play, and physical superiority will often neutralize technical superiority. Weigh defensive organization and physical mismatches heavily over offensive ceiling.\n\n3. **NED vs JPN: Avoid \"Narrative Bias\" Overlooking Systemic Discipline**\nDo not assume physical size and individual quality will automatically overcome an elite, energetic, and tactically disciplined system. If the favorite has midfield fitness concerns (a compromised metronome) and the underdog has a highly fit defensive screen and a proven record of limiting top-tier nations, avoid a straight win prediction and favor a draw or handicap.\n\n### x402 Data Endpoint Evaluation\n* **Highly Useful:**\n  * *Tactical Previews, Defensive Records & Transition Strategies:* Crucial for identifying compact defensive setups, low-block capabilities, and counter-attacking efficiency (informed by AUS vs TUR).\n  * *Defensive Records Against Highly Ranked Opponents:* Vital warning sign to identify underdogs capable of frustrating elite teams (informed by NED vs JPN).\n  * *Key Midfield Workload & Fitness Status:* Essential for determining if a favorite's central controller is compromised or an underdog's anchor is fully fit (informed by NED vs JPN).\n* **Not Useful / Wasteful:**\n  * *Bookmaker Odds & Asian Handicap:* Abstract lines often reinforce narrative bias instead of providing objective analytical value (informed by NED vs JPN).\n  * *Venue, Weather & Stadium Mapping:* Had zero impact on outcomes; avoid surface composition or stadium layout queries (informed by AUS vs TUR).\n  * *Redundant News Articles:* Purchasing multiple separate fitness queries leads to high costs. Consolidate searches to 1-2 comprehensive previews to keep costs under $0.0300 per match (informed by AUS vs TUR).",
-    "information_needs": "FORM\n- How did Senegal\u2019s defense fare in their final warm-up matches against top-20 FIFA-ranked opponents, specifically regarding goals conceded from open play versus transition moments?\n- Did France struggle to break down low-block defensive units during their final UEFA qualifying matches and pre-tournament friendlies, or did they show high efficiency in zone 14?\n\nPLAYERS\n- Is Didier Deschamps deploying Kylian Mbapp\u00e9 centrally as a fluid number 9, or on the left wing, and who is Senegal\u2019s starting right-back tasked with containing his 1v1 isolation plays?\n- Are key Senegalese midfielders like Pape Matar Sarr and Lamine Camara fully fit and starting, or is Senegal forced to rely on a deeper, more defensive veteran double-pivot?\n\nTACTICS\n- Does Senegal's defensive structure rely on a mid-block 4-1-4-1 to deny space between the lines to Antoine Griezmann, or will they deploy a low-block back-five to restrict France\u2019s wingers?\n- Will France use a conservative double-pivot (e.g., Aur\u00e9lien Tchouam\u00e9ni and Eduardo Camavinga) to neutralize Senegal\u2019s counter-attacking speed, or will they opt for a single-pivot with more advanced interior midfielders?\n\nH2H\n- Aside from the historic 2002 World Cup match, have these senior national teams met in any recent friendlies, and what tactical patterns emerged regarding France's ability to break down Senegal's physical profile?\n\nCONTEXT\n- Given the 2026 World Cup group format, is this the opening Matchday 1 fixture where both teams might play conservatively, or is it Matchday 2/3 where a specific goal-difference scenario dictates their level of risk-taking?\n\nMARKET\n- What are the opening versus current Asian Handicap lines, and does the Over/Under 2.5 market pricing suggest the betting public expects a high-scoring transition game or a low-scoring, cagey affair?\n\nNEWS\n- Have there been any reports of camp illness, squad disharmony, or late-fitness test failures for France's starting center-backs (e.g., William Saliba or Ibrahima Konat\u00e9) in the 48 hours leading up to kickoff?\n\nVENUE\n- Which North American stadium is hosting this 19:00Z kickoff, is it a closed-roof climate-controlled dome, and are there any documented complaints about the quality or seams of the retrofitted temporary grass pitch?",
-    "research_gaps": [
-      {
-        "need": "What are the opening versus current Asian Handicap lines and Over/Under 2.5 betting market pricing for this matchup?",
-        "category": "MARKET",
-        "ideal_service": "An x402-compliant sports betting market aggregator or odds feed API (e.g., BookmakerOdds API) that tracks opening/closing Asian handicaps."
-      }
-    ],
-    "services_planned": [
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "France vs Senegal World Cup 2026 match preview tactics formation",
-          "search_depth": "advanced",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Baseline: match preview, tactics, predicted lineups",
-        "need": "Comprehensive pre-match preview and tactical outlook",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "France vs Senegal World Cup 2026 squad injuries fitness team news",
-          "search_depth": "advanced",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Baseline: squad news, injuries, fitness updates",
-        "need": "Player availability and camp news for both teams",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "France World Cup 2026 recent form results",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: France recent form and results",
-        "need": "How has France performed in recent internationals?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "Senegal World Cup 2026 recent form results",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: Senegal recent form and results",
-        "need": "How has Senegal performed in recent internationals?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "France vs Senegal head to head history World Cup",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: head-to-head history and prior meetings",
-        "need": "Historical H2H record and patterns between the teams",
-        "category": "H2H"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "France vs Senegal World Cup 2026 group standings context",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Baseline: group context and tournament stakes",
-        "need": "Group standings and what each team needs from this match",
-        "category": "CONTEXT"
-      },
-      {
-        "url": "https://skim402.com/api/v2/read",
-        "method": "get",
-        "params": {
-          "url": "https://www.national-football-teams.com/country/175/Senegal.html"
-        },
-        "body": {},
-        "cost": 0.002,
-        "reason": "Provides historical squad profiles, structural physical metrics, and past results against highly physical African sides.",
-        "need": "What historical tactical patterns emerged in past matches regarding France's ability to break down Senegal's physical profile?",
-        "category": "H2H"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "France vs Senegal World Cup 2026 warm up friendly match reports defensive transition form",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Uncovers the defensive floors and transition vulnerabilities of both teams heading into the tournament.",
-        "need": "Did France struggle against low-blocks in their final matches, and how did Senegal's defense fare against top-20 FIFA-ranked transition attacks?",
-        "category": "FORM"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "method": "get",
-        "params": {
-          "q": "France Senegal World Cup 2026 tactical analysis Griezmann space double pivot counter attack",
-          "count": 5
-        },
-        "body": {},
-        "cost": 0.008,
-        "reason": "Details the defensive shapes, line heights, and midfield structures likely to be utilized to control the tempo.",
-        "need": "Will Senegal deploy a 4-1-4-1 mid-block to restrict Griezmann, and will France opt for a conservative double-pivot to neutralize counter-attacks?",
-        "category": "TACTICS"
-      },
-      {
-        "url": "https://news-x402.com/news/recent",
-        "method": "get",
-        "params": {
-          "topic": "France Senegal World Cup camp illness squad disharmony",
-          "hours": 48
-        },
-        "body": {},
-        "cost": 0.01,
-        "reason": "Scans GDELT news intelligence for sudden negative sentiment or camp illness disruptions in the final pre-match window.",
-        "need": "Are there any late-breaking reports of camp illness or French squad disharmony in the 48 hours leading up to kickoff?",
-        "category": "NEWS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "France vs Senegal World Cup 2026 squad injuries Pape Matar Sarr Lamine Camara Saliba Konate illness news",
-          "search_depth": "basic",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Provides real-time, highly targeted injury and team news updates to determine if key tactical metronomes or central defenders are compromised.",
-        "need": "Are key Senegalese midfielders like Pape Matar Sarr and Lamine Camara fully fit, and is there any camp illness affecting French center-backs Saliba or Konate in the 48 hours before kickoff?",
-        "category": "PLAYERS"
-      },
-      {
-        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "method": "post",
-        "params": {},
-        "body": {
-          "query": "France vs Senegal World Cup 2026 tactical preview Mbappe starting position Senegal right back",
-          "search_depth": "basic",
-          "max_results": 5,
-          "topic": "news"
-        },
-        "cost": 0.012,
-        "reason": "Identifies tactical isolation matchups (Mbappe vs Senegal RB) and defensive tracking duties on the flank.",
-        "need": "Is Didier Deschamps deploying Kylian Mbapp\u00e9 centrally as a fluid 9 or on the left wing, and who is Senegal's starting right-back tasked with containing him?",
-        "category": "PLAYERS"
-      }
-    ],
-    "services_used": [
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Baseline: match preview, tactics, predicted lineups",
-        "data": "\u2022 France at the FIFA World Cup 2026: Mbappe-Led Favourites Eye Group I Top Spot - Telecom Asia Sport\n  https://www.telecomasia.net/blog/france-at-fifa-world-cup-2026/\n  France, Norway, Senegal, and Iraq \u2013 \u201cThe Group of Death\u201d: Group I at the 2026 World Cup\n\n## Schedule of matches of the French national team at the 2026 World Cup\n\n| Date and time, UTC | Match | Stadium, city, country | Round |\n ---  --- |\n| 16 June 2026, 19:00 UTC | France vs Senegal | MetLife Stadium, New York/New Jersey, USA | 1 |\n| 22 June 2026, 21:00 UTC | France vs Iraq | Lincoln Financial Field, Philadelphia, USA | 2 |\n| 26 June 2026, 19:00 UTC | Norway vs France | Gillette Stadium, Boston, USA | 3 |\n\n## France squad for the 2026 World Cup\n\nGoalkeepers: Brice Samba, Mike Maignan, Robin R\n\n\u2022 France vs. Senegal - kick-off time, team news, how to watch - ESPN\n  https://www.espn.com/espn/story/_/id/49048242/france-vs-senegal-kick-team-news-how-watch\n  New World TV holds primary broadcast rights in Senegal, with RTS also holding a package. M6 and beIN SPORTS are official broadcasters in France, with beIN SPORTS showing all matches and M6 airing select fixtures.\n\n## Team news\n\nDespite a minor back issue, William Saliba started for France in their 3-1 win over Northern Ireland, which they achieved courtesy of a Michael Olise hat-trick.\n\nPape Thiaw's Senegal head into the World Cup in the middle of a regeneration process, with a mixture of youngsters and experienced heads.\n\nExpected lineups\n\nFrance\n\nGK Mike Maignan\n\nLB Theo Hern\u00e1ndez | CB Dayot\n\n\u2022 Kylian Mbappe next World Cup match: Fixture schedule, start time, draw bracket as France face Senegal - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/kylian-mbappe-next-world-cup-match-fixture-schedule-time-draw-bracket/a6b0bd699e95e15530745f7d\n  ## France match schedule, results from World Cup 2026\n\n|  |  |  |  |\n ---  --- |\n| Date | Time (ET) | Match / Result | Location |\n| Tue, Jun. 16 | 3 p.m. | Group stage: France vs. Senegal | MetLife Stadium, East Rutherford |\n| Mon, Jun. 22 | 5 p.m. | Group stage: France vs. Iraq | Lincoln Financial Field, Philadelphia |\n| Fri, Jun. 26 | 3 p.m. | Group stage: Norway vs. France | Gillette Stadium, Foxborough |\n\nBUY NOW: France tickets for FIFA World Cup\n\n## World Cup Group I table\n\n| Pos | Team | PTS | GP | W | L | D | GF | GA | GD |\n ---  ---  ---  ---  --- |\n| 1. | France | 0 | 0 | 0 | 0 | 0 |\n\n\u2022 World Cup Group I standings 2026: Updated results, table and fixtures for France, Senegal, Norway, Iraq - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-i-standings-results-table-2026/e0c681e074cb3b3bc2f8f958\n  |  |  |  |  |\n ---  --- |\n| Date | Time (ET) | Match | Location |\n| Sat, Jul. 4 | 1 p.m. | M2: Winner, R32 M1 vs. Winner, R32 M3 | NRG Stadium (Houston, TX) |\n| Sat, Jul. 4 | 5 p.m. | M1: Winner, R32 M2 vs. Winner, R32 M5 | Lincoln Financial Field (Philadelphia, PA) |\n| Sun, Jul. 5 | 4 p.m. | M3: Winner, R32 M4 vs. Winner, R32 M6 | MetLife Stadium (East Rutherford, NJ) |\n| Sun, Jul. 5 | 8 p.m. | M4: Winner, R32 M7 vs. Winner, R32 M8 | Estadio Azteca (Mexico City, MEX) |\n| Mon, Jul. 6 | 3 p.m. | M5: Winner, R32 M11 vs. Winner, R32 M12 | AT&T Stadium (Arlington, TX) |\n| Mon, Jul. 6 | 8 p.m. | M6\n\n\u2022 World Cup Bracket Predictions 2026 for Full Knockout Stage - Bleacher Report\n  https://bleacherreport.com/articles/25437958-world-cup-bracket-predictions-2026-full-knockout-stage\n  If a Group of Death still exists under the expanded format, you're looking at it. That said, the order feels fairly straightforward\u2014France is clearly at the top and might be the tournament favorite\u2014although Senegal has enough goal scorers to make things interesting. Then again, Norway has Erling Haaland, so...yeah.\n\nGroup J Prediction: 1. Argentina, 2. Austria, 3. Algeria, 4. Jordan\n\nArgentina, the defending champs, is the clear class of this group. Lionel Messi remains an ageless wonder, and this roster is loaded around him. Algeria could push its way to secon"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Baseline: squad news, injuries, fitness updates",
-        "data": "\u2022 France vs. Senegal - kick-off time, team news, how to watch - ESPN\n  https://www.espn.com/espn/story/_/id/49048242/france-vs-senegal-kick-team-news-how-watch\n  New World TV holds primary broadcast rights in Senegal, with RTS also holding a package. M6 and beIN SPORTS are official broadcasters in France, with beIN SPORTS showing all matches and M6 airing select fixtures.\n\n## Team news\n\nDespite a minor back issue, William Saliba started for France in their 3-1 win over Northern Ireland, which they achieved courtesy of a Michael Olise hat-trick.\n\nPape Thiaw's Senegal head into the World Cup in the middle of a regeneration process, with a mixture of youngsters and experienced heads.\n\nExpected lineups\n\nFrance\n\nGK Mike Maignan\n\nLB Theo Hern\u00e1ndez | CB Dayot\n\n\u2022 France at the FIFA World Cup 2026: Mbappe-Led Favourites Eye Group I Top Spot - Telecom Asia Sport\n  https://www.telecomasia.net/blog/france-at-fifa-world-cup-2026/\n  France, Norway, Senegal, and Iraq \u2013 \u201cThe Group of Death\u201d: Group I at the 2026 World Cup\n\n## Schedule of matches of the French national team at the 2026 World Cup\n\n| Date and time, UTC | Match | Stadium, city, country | Round |\n ---  --- |\n| 16 June 2026, 19:00 UTC | France vs Senegal | MetLife Stadium, New York/New Jersey, USA | 1 |\n| 22 June 2026, 21:00 UTC | France vs Iraq | Lincoln Financial Field, Philadelphia, USA | 2 |\n| 26 June 2026, 19:00 UTC | Norway vs France | Gillette Stadium, Boston, USA | 3 |\n\n## France squad for the 2026 World Cup\n\nGoalkeepers: Brice Samba, Mike Maignan, Robin R\n\n\u2022 Kylian Mbappe next World Cup match: Fixture schedule, start time, draw bracket as France face Senegal - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/kylian-mbappe-next-world-cup-match-fixture-schedule-time-draw-bracket/a6b0bd699e95e15530745f7d\n  ## France match schedule, results from World Cup 2026\n\n|  |  |  |  |\n ---  --- |\n| Date | Time (ET) | Match / Result | Location |\n| Tue, Jun. 16 | 3 p.m. | Group stage: France vs. Senegal | MetLife Stadium, East Rutherford |\n| Mon, Jun. 22 | 5 p.m. | Group stage: France vs. Iraq | Lincoln Financial Field, Philadelphia |\n| Fri, Jun. 26 | 3 p.m. | Group stage: Norway vs. France | Gillette Stadium, Foxborough |\n\nBUY NOW: France tickets for FIFA World Cup\n\n## World Cup Group I table\n\n| Pos | Team | PTS | GP | W | L | D | GF | GA | GD |\n ---  ---  ---  ---  --- |\n| 1. | France | 0 | 0 | 0 | 0 | 0 |\n\n\u2022 Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Cabo Verde - FOX Sports\n  https://amp.foxsports.com/stories/soccer/lamine-yamal-nico-williams-return-to-full-training-with-spain-in-major-boost-ahead-of-world-cup-opener-vs-cabo-verde\n  # Lamine Yamal Returns To Training With Spain Ahead Of World Cup Opener vs. Cabo Verde\n\nUpdated Jun. 12, 2026 2:00 a.m. ET\n\nSpain have received a significant fitness boost ahead of the 2026 World Cup with Lamine Yamal and Nico Williams returning to full training.\n\nThe dynamic duo had been major doubts for the tournament opener, but their presence at the team's base camp suggests they are ready for the big stage.\n\n## Red Fury duo back in action\n\nYamal and Williams returned to full training with Spain at the team's base camp in Chattanooga, Tennessee, on Thursday. The news comes as an enormous r\n\n\u2022 BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener - Telecom Asia Sport\n  https://www.telecomasia.net/blog/breaking-abdessamad-ezzalzouli-set-for-3-4-weeks-out-after-suspected-mcl-injury-ahead-of-world-cup-opener/\n  No Deposit\n   Promotions\n   Cashback\n\nNews\n   Football\n   Boxing\n   Tennis\n   Hockey\n\nBlog\n   Athletes & Celebrities\n\nEvents\n\nBonus $100Sign in\n\nWorld Cup 2026\n\n1.   Home\n2.   Blogs\n\n# BREAKING: Abdessamad Ezzalzouli Set for 3\u20134 Weeks Out After Suspected MCL Injury Ahead of World Cup Opener\n\nImage 1: Oyebade Oluwafemi\n\nOyebade Oluwafemi\n\n08/06/2026\n\n11:42\n\nMorocco winger Abdessamad Ezzalzouli is facing a spell on the sidelines after suffering a suspected "
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: France recent form and results",
-        "data": "\u2022 France | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/france/fixtures\n  France | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the France squad at FIFA World Cup 2026\u2122.\n\n\u2022 France at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d159288012-ce02189d2504-1000--france-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  Coach: Didier Deschamps Captain: Kylian Mbapp\u00e9\ufeff World Cup appearances: 17 Best finish: Winners (1998, 2018) 16 June: France vs Senegal (New York, 21:00 CET) 22 June: France vs Iraq (Philadelphia, 23:00 CET) 26 June: Norway vs France (Boston, 21:00 CET) France\u2019s group fixtures are being played across three host cities, with the knockout rounds to follow for teams that progress from Group I. France are spoiled for choice, with their 26-man World Cup squad including exceptional talent in every line.\n\n\u2022 World Cup 2026 fixtures, results, full schedule and group standings | The Standard\n  https://www.standard.co.uk/sport/football/world-cup-2026-fixtures-results-schedule-group-standings-b1284370.html\n  The 2026 World Cup is off and running, with an eventful opening to the tournament in North America. These finals are the biggest ever, with 48 teams taking part for the first time and a round of 32 introduced. It\u2019s also the first time three nations have co-hosted, with Mexico the first country to stage football\u2019s biggest tournament three times. France, Spain and England look like the most likely teams to triumph, but as ever the key will be who manages to keep the most star players fit.\n\n\u2022 France World Cup 2026 Preview: Lineup, Best Players, Group, & Picks\n  https://www.prizepicks.com/playbook-article/france-world-cup-2026-preview-lineup-best-players-group-picks\n  <strong>France qualified for the 2026 World Cup by winning Group D in FIFA World Cup qualifying with a 5-1-0 record</strong>. Deschamps\u2019 side outscored their opponents 16-4 in the qualifying matches, and they were one of eight teams to go unbeaten in the FIFA ...\n\n\u2022 World Cup Group I standings 2026: Updated results, table and fixtures for France, Senegal, Norway, Iraq | Sporting News\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-i-standings-results-table-2026/e0c681e074cb3b3bc2f8f958\n  During qualification, France breezed to the top spot in their section with <strong>five wins out of six to finish six points clear of second-place Ukraine</strong>. Deschamps has announced he will not extend his contract when it expires after the 2026 World ...\n\n\u2022 [Discussion] [ Removed by moderator ]\n  https://www.reddit.com/r/worldcup/comments/1tx11q1/frances_squad_contains_players_to_play_for_the/\n  Pretty sure they also did that in 2018 or 19 Mendy - city Griezmann - barca Mbappe - psg Matuidi -juventus Pavard - bayern\n\n\u2022 [Discussion] Number of French-born players at the 2026 World Cup\n  https://www.reddit.com/r/soccer/comments/1twp6kq/number_of_frenchborn_players_at_the_2026_world_cup/\n  If anyone's wondering: Marcus Thuram was born in Italy Michael Olise was born in England Brice Samba was born in Congo (not DR Congo)\n\n\u2022 [Discussion] Is France entering the 2026 world cup with one of the greatest attacking lineups we have seen?\n  https://www.reddit.com/r/championsleague/comments/1twkxsy/is_france_entering_the_2026_world_cup_with_one_of/\n  Fellow fans, This is a friendly reminder to please follow the Rules and Reddiquette . Join us on Discord I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.\n\n\u2022 [Discussion] France\u2019s Potential 2026 World Cup Lineup Do you like this lineup? Which players would you change or put in the team? Why?\n  https://www.reddit.com/r/EquipeDeFrance/comments/1tw2nxk/frances_potential_2026_world_cup_lineup_do_you/\n  I\u2019d have Demeble as a striker, Dou\u00e9 on the lef"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: Senegal recent form and results",
-        "data": "\u2022 Senegal | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/senegal/fixtures\n  Senegal \u00b7 00:00 \u00b7 FIFA World Cup 2026\u2122 \u00b7 First Stage \u00b7 Group I \u00b7 Toronto Stadium06/26/2026 \u00b7 Senegal \u00b7 Iraq \u00b7 19:00 \u00b7 +(1) Round of 32Round of 16Quarter-finalSemi-finalFinal \u00b7 M74 \u00b7 06/29/2026 \u00b7 20:30 \u00b7 1E \u00b7 3ABCDF \u00b7 M77 \u00b7 06/30/2026 \u00b7 21:00 \u00b7 1I \u00b7\n\n\u2022 Reuters Senegal at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/senegal/\n  Follow Senegal&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 World Cup Group I standings 2026: Updated results, table and fixtures for France, Senegal, Norway, Iraq | Sporting News\n  https://www.sportingnews.com/uk/football/news/world-cup-group-i-standings-results-table-2026/e0c681e074cb3b3bc2f8f958\n  The 2026 FIFA World Cup is finally here, with fans across North America and the globe ready for the biggest World Cup in history. The tournament will quite literally be bigger than ever before, as the field has expanded from 32 teams in 2022 to 48 in 2026. The knockout stage is now made up of 32 teams, and the tournament as a whole features more than 100 matches. Six of those matches will take place inside Group I, which comprises France, Senegal, Norway and Iraq, who won the final playoff game.\n\n\u2022 Senegal World Cup 2026: Fixtures, manager, squad depth and tactical analysis | Squawka | EN\n  https://www.squawka.com/en/news/world-cup/senegal-world-cup-2026-fixtures-squad-analysis/\n  Having had their Afcon title cruelly stripped away, Senegal have scores to settle as they head to the 2026 World Cup in June.\n\n\u2022 Senegal\u2019s World Cup 2026 team preview: Players to watch, group, squad list | World Cup 2026 News | Al Jazeera\n  https://www.aljazeera.com/sports/2026/5/30/senegals-world-cup-2026-team-preview-players-to-watch-group-squad-list\n  Senegal were unbeaten in qualifying, and made a strong statement against England recently, becoming the first African side to <strong>beat the Three Lions winning 3-1</strong> at Wembley last June."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: head-to-head history and prior meetings",
-        "data": "\u2022 France vs. Senegal Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/france_vs_senegal.php\n  In the history of World Cups, France National Team faced Senegal in 1 opportunity, with <strong>0 wins, 0 draws and 1 losses</strong>.\n\n\u2022 France vs. Senegal: Head-to-head record and past meetings before World Cup 2026 clash - Sports Mole\n  https://www.sportsmole.co.uk/football/france/world-cup/head-to-head/france-vs-senegal-head-to-head-record-and-past-meetings_599162.html\n  ... Supporters may be surprised to learn that before France and Senegal&#x27;s showdown at the 2026 World Cup, <strong>the African side boast the head-to-head superiority over the 2018 global champions</strong>.\n\n\u2022 France 0-1 Senegal\n  https://www.fifa.com/en/tournaments/mens/worldcup/articles/world-cup-upsets-france-senegal\n  The FIFA World Cup 2026\u2122 will be the 23rd edition of the tournament but the first to feature 48 teams and three host countries: Canada, Mexico and the United States.\n\n\u2022 France vs Senegal Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-france-vs-senegal\n  Last 5 , <strong>France Win 4 , Draw 0 , Lose 1 , Score Win Prob: 80.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 100.0%</strong> ... Last 5 , Senegal Win 2 , Draw 1 , Lose 2 , Score Win Prob: 40.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 60.0%\n\n\u2022 Senegal vs. France Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/senegal_vs_france.php\n  In the history of World Cups, Senegal National Team faced France in 1 opportunity, with <strong>1 win, 0 draws and 0 lossess</strong>."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Baseline: group context and tournament stakes",
-        "data": "\u2022 2026 FIFA World Cup Group I - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I\n  Group I of the 2026 FIFA World Cup will take place from June 16 to 26, 2026. The group consists of France, Senegal, Iraq, and Norway. <strong>The top two teams, possibly along with the third-placed team, will advance to the round of 32.</strong> ... ^ a b As the identity of the inter-confederation playoff Path ...\n\n\u2022 World Cup Group I standings 2026: Updated results, table and fixtures for France, Senegal, Norway, Iraq | Sporting News\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-i-standings-results-table-2026/e0c681e074cb3b3bc2f8f958\n  During qualification, <strong>France breezed to the top spot in their section with five wins out of six to finish six points clear of second-place Ukraine</strong>. Deschamps has announced he will not extend his contract when it expires after the 2026 World ...\n\n\u2022 World Cup 2026 Group I guide - fixtures, schedule, standings and odds for France, Senegal, Iraq and Norway | Football News | Sky Sports\n  https://www.skysports.com/football/news/12098/13543102/world-cup-2026-group-i-guide-fixtures-schedule-standings-and-odds-for-france-senegal-iraq-and-norway\n  World Cup <strong>Group I</strong> includes 2022 runners-up France, Senegal, Iraq and Erling Haaland&#x27;s Norway; matches to be played in US cities New Jersey, Philadelphia and Massachusetts, plus Canada&#x27;s Toronto\n\n\u2022 France vs Senegal | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021490\n  The official site of the international governing body of football with news, national associations, competitions, results, fixtures, development, organisation, world rankings, statistics, the International Football Association Board, history, laws of the game, futsal, publications, downloads, and contact details.\n\n\u2022 France vs. Senegal (Jun 16, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760432/senegal-france\n  2026 FIFA World Cup, Group Stage \u00b7 FranceFranceFRA \u00b7 WWWWD, 0 PTS \u00b7 FOX \u00b7 +2 \u00b7 SenegalSenegalSEN \u00b7 WWWWW, 0 PTS \u00b7 2026-06-16T19:00ZOpenMLTotalSpread \u00b7 FranceFranceFRA \u00b7 (0-0-0) (0-0-0, 0 pts) -245 \u00b7 ML \u00b7 -255 \u00b7 o2.5 \u00b7 -130 \u00b7 -1.5 \u00b7 +110 \u00b7 SenegalSenegalSEN \u00b7"
-      },
-      {
-        "source": "https://skim402.com/api/v2/read",
-        "cost": 0.002,
-        "reason": "Provides historical squad profiles, structural physical metrics, and past results against highly physical African sides.",
-        "data": "URL: https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html\nTitle: Sri Lanka (2026)\n## General Information for **Sri Lanka**\n\n##### Football Federation of Sri Lanka\n\n**Founded**\n\n1939\n\n**FIFA entry**\n\n1952\n\n**Average height in 2026**\n\n1.8m\n\n**Average age in 2026**\n\n27.4\n\n**Confederation**\n\nAFC\n\n**Infos provided by**\n\n##### Emblem\n\n![](https://www.national-football-teams.com/uploads/country_images/fifa/Sri_Lanka_175-589daa7ac01b4.jpeg)\n\n##### Jersey in 2026\n\n![Jersey in 2026](https://www.national-football-teams.com/uploads/country_images/jersey/sri.gif)\n\n### Coaches in 2026\n\n#### Al-Mutairi, Abdullah (Coach)\n\n**Day of Birth**\n\n1981-12-18\n\n**Height**\n\n1.84m\n\n**Matches**\n\n1 (1 / 0)\n\n## Players of **Sri Lanka** in 2026\n\nFIFA\n\nNon FIFA\n\n[Name](https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html?sort=player.surname&direction=asc&page=1)\n\n[Day of Birth](https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html?sort=player.yearOfBirth&direction=asc&page=1)\n\n[Position](https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html?sort=p.root&direction=asc&page=1)\n\nCurrent Club\n\n[M](https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html?sort=score.matches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html?sort=score.substitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html?sort=score.goals&direction=asc&page=1)\n\n[M](https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html?sort=score.nonFifaMatches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/175/2026/Sri_Lanka.html?sort=score.nonFifaGoals&direction=asc&page=1)\n\n[Perera, Sujan](https://www.national-football-teams.com/player/45876/Sujan_Perera.html)\n\n1992-07-18\n\nGoalkeeper\n\n[![Bangladesh](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Bangladesh_17-589494fe92c46.png)](https://www.national-football-teams.com/country/17/2026/Bangladesh.html)\n\n[Fortis FC Badda](https://www.national-football-teams.com/club/31086/2026/Fortis_Fc_Badda.html)\n\n1\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Sacayaradjy, Steven](https://www.national-football-teams.com/player/94320/Steven_Sacayaradjy.html)\n\n1997-01-22\n\nCentre Back\n\n[![France](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/France_67-58934e2c3f5f0.png)](https://www.national-football-teams.com/country/67/2026/France.html)\n\n[Sud FC Sainte-Lucie](https://www.national-football-teams.com/club/32507/2026/Sud_Fc_Sainte_Lucie.html)\n\n1\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Suresh, Barath](https://www.national-football-teams.com/player/92503/Barath_Suresh.html)\n\n2003-06-11\n\nCentre Back\n\n[![Australia](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Austr"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Uncovers the defensive floors and transition vulnerabilities of both teams heading into the tournament.",
-        "data": "\u2022 France vs Senegal World Cup 2026 Predictions and Best Bets | Juvefc.com\n  https://www.juvefc.com/france-v-senegal-predictions/\n  The central contest of this fixture is Senegal\u2019s midfield block, anchored by Idrissa Gueye and Pape Matar Sarr, attempting to screen France\u2019s transition game. France\u2019s attacking output through qualifying was prolific, scoring 16 goals in six games with Mbappe contributing eight in the recent scoring charts, and Deschamps\u2019 side thrive when opponents are drawn open by their wide forwards before Mbappe exploits the space centrally. Senegal\u2019s response will depend on how disciplined Gueye and Sarr are in restricting the angles through the middle. If Senegal\u2019s defensive block holds its shape and forces France wide, they are capable of limiting chances; if Mbappe and Dembele find corridors behind the full-backs, France should win with room to spare.\n\n\u2022 France vs Senegal Prediction: World Cup 2026 Preview & Best Bets - Yahoo Sports\n  https://sports.yahoo.com/articles/france-vs-senegal-prediction-world-142000421.html\n  France\u2019s attacking depth across Mbappe, Ousmane Dembele, Bradley Barcola and Marcus Thuram gives them multiple routes to goal, and Senegal\u2019s recent defensive record in warm-ups suggests they are vulnerable to high-quality forward lines.\n\n\u2022 France vs Senegal Prediction: World Cup 2026 Preview & Best Bets | OneFootball\n  https://onefootball.com/en/news/france-vs-senegal-prediction-world-cup-2026-preview-best-bets-43004309\n  France\u2019s attacking depth across Mbappe, Ousmane Dembele, Bradley Barcola and Marcus Thuram gives them multiple routes to goal, and Senegal\u2019s recent defensive record in warm-ups suggests they are vulnerable to high-quality forward lines.\n\n\u2022 France vs Senegal World Cup 2026 Predictions and Picks\n  https://thecelticstar.com/france-v-senegal-predictions\n  France\u2019s attacking depth across Mbappe, Ousmane Dembele, Bradley Barcola and Marcus Thuram gives them multiple routes to goal, and Senegal\u2019s recent defensive record in warm-ups suggests they are vulnerable to high-quality forward lines.\n\n\u2022 World Cup 2026: France vs Senegal Tactical Preview\n  https://africasoccer.com/world-cup-2026-france-vs-senegal-tactical-preview/\n  Senegal, however, possess the ... for any opponent. <strong>The Lions of Teranga are likely to adopt a compact defensive structure while looking to exploit transitions whenever France commit numbers forward</strong>...."
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
-        "cost": 0.008,
-        "reason": "Details the defensive shapes, line heights, and midfield structures likely to be utilized to control the tempo.",
-        "data": "\u2022 World Cup 2026 Group I Preview: France, Senegal, Iraq & Norway | RotoWire\n  https://www.rotowire.com/soccer/article/2026-world-cup-group-i-preview-france-senegal-iraq-norway-tactics-lineups-set-pieces-odds-111129\n  The tactical identity under manager Thiaw is <strong>a 4-3-3 that presses high and uses Mane&#x27;s ability to drop into midfield and recycle possession as the pivot between defense and attack</strong>.\n\n\u2022 World Cup 2026: France vs Senegal Tactical Preview\n  https://africasoccer.com/world-cup-2026-france-vs-senegal-tactical-preview/\n  France will look to use their speed and technical quality to isolate Senegal\u2019s full-backs, while Senegal will seek opportunities to counterattack into the spaces left by France\u2019s advancing defenders. Sadio Mane remains a crucial figure in these situations, capable of turning defence into attack within seconds.\n\n\u2022 World Cup Group I tactical guide: How will France, Senegal, Norway and Iraq contest the group of death? - The Athletic\n  https://www.nytimes.com/athletic/7328304/2026/06/05/2026-world-cup-tactical-guides-group-i/\n  Mane, Koulibaly, goalkeeper Edouard Mendy and Gueye are all into their mid-30s, part of a national team which has made three of the past four AFCON finals. Their experience will be pivotal if Senegal are to come close to their 2002 debut run to the quarter-finals.\n\n\u2022 France World Cup 2026: Squad Analysis, Odds & Key Players\n  https://www.sportinglife.com/free-bets/news/france-world-cup-2026-squad-odds/660\n  <strong>His movement creates space for Bradley Barcola (left) and Ousmane Demb\u00e9l\u00e9 (right) to attack inside channels</strong>. This trio&#x27;s pace terrifies opponents \u2013 France&#x27;s counter-attacks remain lethal even when playing with more possession. All World Cup 2026 qualification has concluded.\n\n\u2022 World Cup 2026 Tactical Trends & Team Intelligence Profiles\n  https://mundialanalytics.com/tactical-trends\n  Formations, pressing, transition football, rest defense and tactical styles shaping World Cup 2026.\n\n\u2022 [Discussion] Is the French national team 2026 just \"Strong on paper\" or a real deal?\n  https://www.reddit.com/r/worldcup/comments/1u1qrue/is_the_french_national_team_2026_just_strong_on/\n  Locking the comments. Most of this has been respectful but multiple threads are engaging in racist discussion. Please remember that r/worldcup is a place where all players will be respected and all fans from around the world are welcome. Let\u2019s do our part to make this another outstanding World Cup.\n\n\u2022 [Discussion] Football World Cup 2026 Tactical analysis before watching game\n  https://www.reddit.com/r/football/comments/1u1u4h7/football_world_cup_2026_tactical_analysis_before/\n  Down with this ai slop"
-      },
-      {
-        "source": "https://news-x402.com/news/recent",
-        "cost": 0.01,
-        "reason": "Scans GDELT news intelligence for sudden negative sentiment or camp illness disruptions in the final pre-match window.",
-        "data": "{\"topic\":\"France Senegal World Cup camp illness squad disharmony\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Provides real-time, highly targeted injury and team news updates to determine if key tactical metronomes or central defenders are compromised.",
-        "data": "\u2022 France vs. Senegal - kick-off time, team news, how to watch - ESPN\n  https://www.espn.com/espn/story/_/id/49048242/france-vs-senegal-kick-team-news-how-watch\n  Senegal - kick-off time, team news, how to watch - ESPN. *   Men's World Cup World Cup. *   NBA Playoff Challenge NBA Playoff Challenge. *   Men's Basketball Men's Basketball. ## World Cup. SummaryReport FT * Image 2 Canada Canada CAN 1 * Image 3 Bosnia-Herzegovina Bosnia-Herz BIH 1 2026 FIFA World Cup. FT * Image 4 United States USA USA 4 * Image 5 Paraguay Paraguay PAR 1 2026 FIFA World Cup. GamecastTickets Sun 12:30 AM UTC ABC NY leads series 3-1 SA -5.5 * Image 6 New York Knicks Knicks NY 3-1 * Image 7 San Antonio Spurs Spurs SA 1-3 NBA Finals - Game 5 NY leads series 3-1. NBA Finals - Gam\n\n\u2022 FRANCE WIN THE FRIENDLY WITH MAIGNAN AND RABIOT ON THE FIELD - Yahoo Sports\n  https://sports.yahoo.com/articles/france-win-friendly-maignan-rabiot-120000523.html\n  * Play 2026 Soccer Pick 'Em. * Spurs win Game 3 at MSG. * Caitlin Clark's game-winner. # FRANCE WIN THE FRIENDLY WITH MAIGNAN AND RABIOT ON THE FIELD. A promising friendly for Didier Deschamps' France, who beat Northern Ireland 3-1 in Lille in their friendly before the start of the World Cup. For the Bleus, their first match will take place on **16 June against Senegal** at the MetLife Stadium in East Rutherford, New Jersey. The star performer against the Northern Irish side was Michael Olise, who scored a hat-trick. **Mike Maignan** and **Adrien Rabiot** started the match, with Kant\u00e9 coming o\n\n\u2022 Morocco forced into two injury changes ahead of World Cup opener - Reuters\n  https://www.reuters.com/sports/soccer/morocco-forced-into-two-injury-changes-ahead-world-cup-opener-2026-06-11/\n  Item 1 of 2 Soccer Football - CAF Africa Cup of Nations - Morocco 2025 - Final - Senegal v Morocco - Prince Moulay Abdellah Stadium, Rabat, Morocco - January 18, 2026 Morocco's Abde Ezzalzouli in action with Senegal's Idrissa Gueye REUTERS/Siphiwe Sibeko. Soccer Football - CAF Africa Cup of Nations - Morocco 2025 - Final - Senegal v Morocco - Prince Moulay Abdellah Stadium, Rabat, Morocco - January 18, 2026 Morocco's Abde Ezzalzouli in action with Senegal's Idrissa Gueye REUTERS/Siphiwe Sibeko Purchase Licensing Rights, opens new tab. June 11 (Reuters) - Morocco have been hit by the loss of tw\n\n\u2022 Manager provides new update on the fitness of Arsenal man - Yahoo Sports\n  https://sports.yahoo.com/articles/manager-provides-fitness-arsenal-man-080000157.html\n  William Saliba remains short of full fitness and has been managing a back injury since before the Champions League final, leading to reports that he could be withdrawn from the France squad for the World Cup. Despite speculation about his condition, the defender remains an integral part of Didier Deschamps\u2019 plans for the tournament. The defender is equally determined to play his part at the World Cup, although Arsenal supporters have understandable concerns regarding his fitness. The fact that Saliba continued to feature for Arsenal, including completing the Champions League final, indicates t\n\n\u2022 William Saliba plays in final friendly, on target for France's World Cup opener - Deadspin\n  https://deadspin.com/william-saliba-plays-in-final-friendly-on-target-for-frances-world-cup-opener/\n  + FIFA World Cup Betting Sites. + World Cup Golden Ball Betting. + World Cup Young Player Award Betting. + World Cup Golden Glove Betting. + Free Sports Betting for Real Money. + Play Free Online Slots for Real Money. + Crown Coins Casino Promo Code. + Real Prize Casino Promo Code. + The Boss Casino Promo Code. + High 5 Casino Promo Code. + Social Betting and Casino Promo Codes. # William Saliba plays in final friendly, on target for France's World Cup opener. William Saliba was deemed fit ahead of France's final friendly before the World Cup and would be set for full participation in the Grou"
-      },
-      {
-        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
-        "cost": 0.012,
-        "reason": "Identifies tactical isolation matchups (Mbappe vs Senegal RB) and defensive tracking duties on the flank.",
-        "data": "\u2022 Kylian Mbappe next World Cup match: Fixture schedule, start time, draw bracket as France face Senegal - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/kylian-mbappe-next-world-cup-match-fixture-schedule-time-draw-bracket/a6b0bd699e95e15530745f7d\n  # Kylian Mbappe next World Cup match: Fixture schedule, start time, draw bracket as France face Senegal. Kylian Mbappe returns to his favorite stage this summer, with France once again among the leading contenders for glory at the 2026 World Cup. Mbappe has scored an incredible 86 goals in 103 appearances across his first two seasons with Real Madrid. STREAM: Every France World Cup 2026 match LIVE on fubo (free trial). In North America, Mbappe will want to reassert his credentials as one of the best players on the planet and all of France's matches will be appointment viewing. ## When is Kylia\n\n\u2022 World Cup Group of Death 2026 Odds, Predictions and Stars to Watch - Bleacher Report\n  https://bleacherreport.com/articles/25435509-world-cup-group-death-2026-odds-predictions-and-stars-watch\n  # World Cup Group of Death 2026 Odds, Predictions and Stars to Watch. The dreaded Group of Death is more difficult to find at the 2026 FIFA World Cup because of the expanded field. The closest thing to a Group of Death is Group I, which features France, Norway, Senegal and Iraq. France is the favorite to win Group I, but it will face challenges from African Cup of Nations finalist Senegal, the Erling Haaland-led Norway and one of the tougher Asian sides in Iraq. Group I possesses three of the best goal-scorers in the world in Haaland, Kylian Mbappe and Sadio Mane. He is in line to be one of th\n\n\u2022 Mbapp\u00e9 Believes He Will Score the Most Goals at the 2026 World Cup - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/mbappe-believes-he-will-score-the-most-goals-at-the-2026-world-cup/\n  # Mbapp\u00e9 Believes He Will Score the Most Goals at the 2026 World Cup. **Real Madrid and France forward Kylian Mbapp\u00e9, speaking with The Touchline, named the player who will score the most goals at the 2026 World Cup.**. Mbapp\u00e9 has been playing for Real Madrid since the summer of 2024. In the 2025/26 season, he has 42 goals and seven assists in 44 games across all competitions. With Los Blancos, Kylian won the UEFA Super Cup in 2024. The French national team will play in Group I at the 2026 World Cup with Senegal, Iraq, and Norway. The 2026 World Cup will be held from June 11 to July 19. France\n\n\u2022 France at the FIFA World Cup 2026: Mbappe-Led Favourites Eye Group I Top Spot - Telecom Asia Sport\n  https://www.telecomasia.net/blog/france-at-fifa-world-cup-2026/\n  ## France at the 2026 World Cup: team card. ## France at World Cup 2026 Group I. France, Norway, Senegal, and Iraq \u2013 \u201cThe Group of Death\u201d: Group I at the 2026 World Cup. ## Schedule of matches of the French national team at the 2026 World Cup. ## France squad for the 2026 World Cup. ## What to expect from the French team at the 2026 World Cup. France is the main favourite of Group I. 1.France at the 2026 World Cup: team card2.How France team qualified for the 2026 World Cup3.France at World Cup 2026 Group I4.Schedule of matches of the French national team at the 2026 World Cup5.France squad fo\n\n\u2022 France vs Northern Ireland Highlights \ud83c\udf0e\ud83c\udfc6 International Friendly - FOX Sports\n  https://www.foxsports.com/watch/fmc-vkrlwb4jslkeqlvc\n  # France vs Northern Ireland Highlights \ud83c\udf0e\ud83c\udfc6 International Friendly. ## Check out the full match highlights from the international friendly between France and Ivory Coast. Northern Ireland - 06/08/2026  France  Kylian Mbappe  International Friendlies  Game Recaps  Patrick Kelly  Michael Olise. ### Alexi Lalas on USMNT\u2019s \u2018good vibes\u2019 entering FIFA World Cup, Pulisic | FULL INTERVIEW | The Herd. ### Alexi Lalas\u2019 Top 10 teams at 2026 FIFA World Cup\u2122. ### A Defeat So Deafening\u2026 They Changed Their Colors \ud83d\udc94\ud83c\udde7\ud83c\uddf7 No. 3 in Best FIFA World Cup\u2122 Moments. ### Group I Preview: France, Senegal, Iraq, Norway. \ud83d\ude33\ud83c\uddeb"
-      }
-    ],
-    "research_cost": 0.108,
-    "wallet_before": 3.684,
-    "wallet_after": 3.576,
-    "prediction": {
-      "pick": "home",
-      "confidence": 8,
-      "confidence_reason": "France's fully fit and cohesive squad, led by a red-hot Michael Olise and Kylian Mbapp\u00e9, is perfectly equipped to exploit a transitioning Senegal defense that struggles against elite transitional speed.",
-      "reasoning": "France's overwhelming attacking depth and world-class transitional play will easily bypass Senegal's high-pressing system and aging defensive line."
-    },
-    "full_reasoning": "The opening match of Group I at the 2026 World Cup brings a historic rematch of the famous 2002 opener where Senegal shocked reigning champions France 1-0. However, the tactical and personnel realities of 2026 point to a very different outcome at MetLife Stadium.\n\n### France's Cohesive Firepower and Squad Depth\nFrance enters the tournament as one of the clear favorites, boasting an exceptionally balanced and deep squad. Under Didier Deschamps, *Les Bleus* breezed through qualifying unbeaten (5-1-0) and concluded their warm-ups with a convincing 3-1 win over Northern Ireland, highlighted by a stunning hat-trick from Bayern Munich's Michael Olise. \n\nCrucially, France's squad is in peak physical condition. Key defender William Saliba has fully shaken off a lingering back injury to start in their final friendly, securing France's defensive floor alongside Dayot Upamecano. In attack, Kylian Mbapp\u00e9\u2014coming off a stellar 42-goal season with Real Madrid\u2014is fully fit and flanked by the elite transitional pace of Ousmane Demb\u00e9l\u00e9 and Bradley Barcola, offering multiple avenues to break down opponents.\n\n### Senegal's Vulnerability in Transition\nWhile Senegal remains a formidable African powerhouse, they are currently in a delicate \"regeneration process\" under manager Pape Thiaw. Key stalwarts like Sadio Man\u00e9, Kalidou Koulibaly, Idrissa Gueye, and goalkeeper \u00c9douard Mendy are now in their mid-30s. \n\nUnlike low-block defensive units that frustrate favorites, Thiaw\u2019s tactical identity relies on a high-pressing 4-3-3. This aggressive posture, combined with an aging defensive core, is highly vulnerable to elite, vertical transition teams. Recent pre-tournament warm-up matches highlighted that Senegal's defensive line struggles to cope with rapid, high-quality forward lines. If Senegal presses high against France, they risk leaving massive corridors behind their full-backs for Mbapp\u00e9 and Demb\u00e9l\u00e9 to exploit.\n\nAdditionally, while Pape Matar Sarr and Idrissa Gueye will attempt to clog the midfield, they face a highly disciplined French engine room featuring Adrien Rabiot and the tireless N'Golo Kant\u00e9, who are adept at neutralizing central progression and launching rapid counter-punches. \n\nUltimately, France's elite pace, red-hot attacking form, and defensive stability should prove far too much for a transitioning Senegalese side to contain over 90 minutes.\n\nPICK: home\nCONFIDENCE: 8\nCONFIDENCE_REASON: France's fully fit and cohesive squad, led by a red-hot Michael Olise and Kylian Mbapp\u00e9, is perfectly equipped to exploit a transitioning Senegal defense that struggles against elite transitional speed.\nREASONING: France's overwhelming attacking depth and world-class transitional play will easily bypass Senegal's high-pressing system and aging defensive line.",
-    "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
-  },
-  {
     "match": "IRQ vs NOR",
     "home": "IRQ",
     "away": "NOR",
@@ -4042,5 +3773,370 @@
     "reflected": true,
     "reflected_at": "2026-06-16T03:30:26.059626+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defensive organization over individual attack.\n- AUS vs TUR: Prioritize low-block discipline over possession metrics.\n- NED vs JPN: Prioritize defensive resilience over chance volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize tier gaps and form over history.\n- CIV vs ECU: Prioritize home advantage and fitness over risk aversion.\n- SWE vs TUN: Prioritize scoring efficiency over low-block setups.\n- ESP vs CPV: Prioritize physical low-block organization over possession dominance.\n- BEL vs EGY: Prioritize low-block defensive discipline over favorite status.\n- KSA vs URU: Prioritize environmental heat and squad news over historical matchups.\n- IRN vs NZL: Prioritize travel fatigue and low-block resistance over squad quality.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue search (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)"
+  },
+  {
+    "match": "FRA vs SEN",
+    "home": "FRA",
+    "away": "SEN",
+    "kickoff": "2026-06-16T19:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defensive organization over individual attack.\n- AUS vs TUR: Prioritize low-block discipline over possession metrics.\n- NED vs JPN: Prioritize defensive resilience over chance volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize tier gaps and form over history.\n- CIV vs ECU: Prioritize home advantage and fitness over risk aversion.\n- SWE vs TUN: Prioritize scoring efficiency over low-block setups.\n- ESP vs CPV: Prioritize physical low-block organization over possession dominance.\n- BEL vs EGY: Prioritize low-block defensive discipline over favorite status.\n- KSA vs URU: Prioritize environmental heat and squad news over historical matchups.\n- IRN vs NZL: Prioritize travel fatigue and low-block resistance over squad quality.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue search (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)",
+    "information_needs": "FORM\n- What were the tactical adjustments and performance metrics (specifically xG created and conceded) for both France and Senegal during their final pre-tournament friendly matches in late May and early June 2026?\n- Did Senegal's defense maintain their historic clean-sheet ratio during the final rounds of the CAF World Cup Qualifiers, or did they show vulnerability against transition-heavy sides?\n\nPLAYERS\n- Are veteran Senegalese leaders like Sadio Man\u00e9 and Kalidou Koulibaly (both 34/35 in 2026) still locks for the starting XI, or has coach Aliou Ciss\u00e9 transitioned to younger Ligue 1-based talents to match France's physical intensity?\n- What is the fitness status of France's primary defensive midfielder (e.g., Aur\u00e9lien Tchouam\u00e9ni or Eduardo Camavinga) coming off a grueling European club season, and are they capable of playing a full 90 minutes?\n\nTACTICS\n- Does Didier Deschamps plan to deploy a conservative double-pivot to stifle Senegal's counter-attacking wingers, or will he utilize an extra attacking midfielder to break down an expected Senegalese low block?\n- How does Senegal's build-up play adjust when facing a high-pressing European side that denies space to their deep-lying playmakers (e.g., Pape Matar Sarr or Lamine Camara)?\n\nH2H\n- How have Didier Deschamps' French sides historically fared against high-ranking CAF opposition in major tournaments (such as the matches against Tunisia and Morocco in 2022), and what tactical trends emerged from those fixtures?\n- How many players in the projected Senegalese matchday squad currently play in or were developed by French Ligue 1 clubs, and does this familiarity mitigate France's individual talent advantage?\n\nCONTEXT\n- As the opening match of the group stage in the expanded 48-team World Cup format, how does the group's composition affect each manager's risk tolerance? Does a draw represent a highly favorable result for Senegal?\n\nMARKET\n- What is the current Asian Handicap line for this match, and has public money moved significantly toward Senegal covering a +1.25 or +1.5 spread since the lines opened?\n\nNEWS\n- Are there any reports of camp disharmony, virus outbreaks, or severe jet lag in either the French base camp or Senegal's training facility in North America during the week leading up to kickoff?\n\nVENUE\n- Which North American host city is staging this match, is it being played on temporary grass laid over turf (e.g., in Atlanta, Dallas, or Seattle), and how will the local stadium climate/humidity at 19:00Z affect the physical pacing of the game?",
+    "research_gaps": [
+      {
+        "need": "What is the current Asian Handicap line for this match, and has public money moved significantly toward Senegal covering a +1.25 or +1.5 spread since the lines opened?",
+        "category": "MARKET",
+        "ideal_service": "A dedicated sports betting and odds API providing live Asian Handicap lines and public betting volume percentages."
+      },
+      {
+        "need": "Does Senegal's defense maintain their historic clean-sheet ratio during the final rounds of the CAF World Cup Qualifiers, or did they show vulnerability against transition-heavy sides?",
+        "category": "FORM",
+        "ideal_service": "A football statistics API (like Opta or FBref) that offers structured defensive transition metrics and historical clean sheet ratios for international qualifiers."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "France vs Senegal World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "France vs Senegal World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "France World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: France recent form and results",
+        "need": "How has France performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Senegal World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Senegal recent form and results",
+        "need": "How has Senegal performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "France vs Senegal head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "France vs Senegal World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Reads Senegal's squad page to identify Ligue 1-based players and assess individual talent familiarity.",
+        "need": "How many players in the projected Senegalese matchday squad currently play in or were developed by French Ligue 1 clubs, and does this familiarity mitigate France's individual talent advantage?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "France tactical preview World Cup 2026 Deschamps formation",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies Deschamps' tactical plan against low blocks or counter-attacking teams.",
+        "need": "Does Didier Deschamps plan to deploy a conservative double-pivot to stifle Senegal's counter-attacking wingers, or will he utilize an extra attacking midfielder to break down an expected Senegalese low block?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "France Senegal pre-tournament friendlies xG 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Obtains recent pre-tournament friendly performance and xG data for both teams.",
+        "need": "What were the tactical adjustments and performance metrics (specifically xG created and conceded) for both France and Senegal during their final pre-tournament friendly matches in late May and June 2026?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "France Senegal World Cup camp news illness injury",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Uses GDELT news intelligence to scan for last-minute camp issues or disruptions.",
+        "need": "Are there any reports of camp disharmony, virus outbreaks, or severe jet lag in either the French base camp or Senegal's training facility in North America during the week leading up to kickoff?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "France vs Senegal World Cup 2026 stadium venue grass climate",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Determines the venue, pitch type, and climate details to analyze physical pacing.",
+        "need": "Which North American host city is staging this match, is it being played on temporary grass laid over turf (e.g., in Atlanta, Dallas, or Seattle), and how will the local stadium climate/humidity at 19:00Z affect the physical pacing of the game?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "France vs Senegal World Cup 2026 Asian Handicap odds public money",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Obtains betting market lines and public sentiment on the handicap spread.",
+        "need": "What is the current Asian Handicap line for this match, and has public money moved significantly toward Senegal covering a +1.25 or +1.5 spread since the lines opened?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "France national team midfielder injuries Tchouameni Camavinga World Cup 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides real-time injury and fitness status of France's defensive midfielders right before the tournament.",
+        "need": "What is the fitness status of France's primary defensive midfielder (e.g., Aur\u00e9lien Tchouam\u00e9ni or Eduardo Camavinga) coming off a grueling European club season, and are they capable of playing a full 90 minutes?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Senegal World Cup 2026 squad Mane Koulibaly starting XI Aliou Cisse",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Analyzes Senegal's squad transition and whether the veteran leaders are still starting.",
+        "need": "Are veteran Senegalese leaders like Sadio Man\u00e9 and Kalidou Koulibaly (both 34/35 in 2026) still locks for the starting XI, or has coach Aliou Ciss\u00e9 transitioned to younger Ligue 1-based talents to match France's physical intensity?",
+        "category": "PLAYERS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 France vs Senegal: Prediction & Betting Tips for the Match on 16 June 2026 - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/france-vs-senegal-prediction-and-betting-tips-for-the-world-cup-match-16-july-2026/\n  ## Senegal\n\nSenegal were exceptional in their World Cup qualifiers, topping Group B unbeaten. They recorded seven wins and three draws during this period. They carried this momentum into the Africa Cup of Nations, where they recorded a controversial 1-0 win in extra time over hosts Morocco. The win was later awarded to Morocco by CAF. The Lions of Teranga weren\u2019t bad in their recent friendlies, beating Peru 2-0 and Gambia 3-1 in March. They suffered a 3-2 loss to the USA earlier and then played a goalless draw against Saudi Arabia.\n\n### Senegal: Lineup\n\nAssane Diao was not part of their recent\n\n\u2022 France vs. Senegal Prediction, Odds, Picks For World Cup Match - FOX Sports\n  https://www.foxsports.com/stories/soccer/2026-world-cup-france-senegal-odds-prediction-picks\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# France vs. Senegal Prediction, Odds, Picks For World Cup Match\n\nPublished Jun. 16, 2026 5:00 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nFrance and Senegal will face off in their 2026 FIFA World Cup Group I opener on June 16, 2026, at New York New Jersey Stadium on FOX.\n\nThis highly anticipated fixture carries major history, as Senegal stunned then-defending champions France 1-0 in the opening match of the 2002 World Cup.\n\nFrance has been\n\n\u2022 France v Senegal: World Cup 2026 \u2013 live - The Guardian\n  https://www.theguardian.com/football/live/2026/jun/16/france-v-senegal-world-cup-2026-live\n  And what a squad they\u2019re part of, Senegal solid at the back, but a lot more interesting further forward. Lamine Camara is a dynamic midfielder who blends old school new, able to do a bit of everything but at warp speed and is, presumably, soon to arrive at a Premier League team near you; alongside him, Pape Matar Sarr is already there, and there are various excellent candidates to complete the trio, as well as 18-year-old Bara Sapoko Ndiaye of Bayern Munich, likely to be kept in reserve but a very serious talent. Then, up front, Sadio Man\u00e9 and Isma\u00efla Sarr will presumably flank Nicolas Jackson\n\n\u2022 France at the FIFA World Cup 2026: Mbappe-Led Favourites Eye Group I Top Spot - Telecom Asia Sport\n  https://www.telecomasia.net/blog/france-at-fifa-world-cup-2026/\n  France, Norway, Senegal, and Iraq \u2013 \u201cThe Group of Death\u201d: Group I at the 2026 World Cup\n\n## Schedule of matches of the French national team at the 2026 World Cup\n\n| Date and time, UTC | Match | Stadium, city, country | Round |\n ---  --- |\n| 16 June 2026, 19:00 UTC | France vs Senegal | MetLife Stadium, New York/New Jersey, USA | 1 |\n| 22 June 2026, 21:00 UTC | France vs Iraq | Lincoln Financial Field, Philadelphia, USA | 2 |\n| 26 June 2026, 19:00 UTC | Norway vs France | Gillette Stadium, Boston, USA | 3 |\n\n## France squad for the 2026 World Cup\n\nGoalkeepers: Brice Samba, Mike Maignan, Robin R\n\n\u2022 France vs. Senegal - Live Score - June 16, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-france-vs-senegal-jun-16-2026-game-boxscore-647633\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nGROUP I\n\n## France vs Senegal\n\nTomorrow at 7:00 PM on\n\nMbappe presents tough test for Senegal in clash against France in New York New Jersey Stadium\n\nNew York New Jersey Stadium,  New York/New Jersey\n\nSOCCER  >  Scores  > \n\n# France vs. Senegal: Jun 16, 2026\n\n## MATCHUP## ODDS## STANDINGS\n\nMbappe presents tough test for Senegal in clash against France in New York New Jersey Stadium\n\n### James Corden Gives Kylian Mbapp\u00e9 Fashion Advice\n\n2 DAYS AGO \u2022 FOX SPORTS\n\n### Group I Previ"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 France vs Senegal: Prediction & Betting Tips for the Match on 16 June 2026 - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/france-vs-senegal-prediction-and-betting-tips-for-the-world-cup-match-16-july-2026/\n  ### France: Lineup\n\nFrance could be without William Saliba\u2019s services in this game due to a back injury. There is a question mark on his availability for the rest of the tournament. Jules Kounde is expected to be available for selection after a recent battle with a muscle injury. Reports from the training ground reveal that Mike Maignan missed training on Saturday. But the absence is due to precautionary measures.\n\nFrance Expected IX: Mike Maignan (GK), Jules Kound\u00e9, William Saliba, Dayot Upamecano, Theo Hern\u00e1ndez, Aur\u00e9lien Tchouam\u00e9ni, Adrien Rabiot, Michael Olise, Ousmane Demb\u00e9l\u00e9, D\u00e9sir\u00e9 Dou\u00e9\n\n\u2022 France v Senegal: World Cup 2026 \u2013 live - The Guardian\n  https://www.theguardian.com/football/live/2026/jun/16/france-v-senegal-world-cup-2026-live\n  And what a squad they\u2019re part of, Senegal solid at the back, but a lot more interesting further forward. Lamine Camara is a dynamic midfielder who blends old school new, able to do a bit of everything but at warp speed and is, presumably, soon to arrive at a Premier League team near you; alongside him, Pape Matar Sarr is already there, and there are various excellent candidates to complete the trio, as well as 18-year-old Bara Sapoko Ndiaye of Bayern Munich, likely to be kept in reserve but a very serious talent. Then, up front, Sadio Man\u00e9 and Isma\u00efla Sarr will presumably flank Nicolas Jackson\n\n\u2022 France World Cup schedule 2026: Dates, times, more to know for Les Bleus at FIFA men's soccer tournament - sportingnews.com\n  https://www.sportingnews.com/in/football/news/france-world-cup-2026-schedule-results-group-fifa/82eeb1cdab15107f68d2af00\n  ## France roster at the World Cup 2026\n\nKylian Mbappe is the face of France's roster, having already scored in two World Cup finals, including becoming only the second player to score a hat trick in a World Cup final in 2022 despite the losing effort vs. Argentina. Mbappe has scored 55 times in 94 appearances for his country in total, including 12 World Cup goals, good for a tie for sixth all time.\n\nIn World Cup qualifying, Mbappe unsurprisingly led the way with his five goals and three assists. However, Michael Olise (2) and Jean-Philippe Mateta (2) were behind him, while Aurelien Tchouameni \n\n\u2022 France vs. Senegal Prediction, Odds, Picks For World Cup Match - FOX Sports\n  https://www.foxsports.com/stories/soccer/2026-world-cup-france-senegal-odds-prediction-picks\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# France vs. Senegal Prediction, Odds, Picks For World Cup Match\n\nPublished Jun. 16, 2026 5:00 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nFrance and Senegal will face off in their 2026 FIFA World Cup Group I opener on June 16, 2026, at New York New Jersey Stadium on FOX.\n\nThis highly anticipated fixture carries major history, as Senegal stunned then-defending champions France 1-0 in the opening match of the 2002 World Cup.\n\nFrance has been\n\n\u2022 France vs. Senegal - Live Score - June 16, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-france-vs-senegal-jun-16-2026-game-boxscore-647633\n  31 MINS AGO \u2022 YOUTUBE\n\n### The Vikings Are Coming: Behind Norway's Viral World Cup Team Photo\n\n1 HOUR AGO \u2022 YOUTUBE\n\n### Team Feature: France | Malo Gusto On Being Part Of A Team Of Superstars\n\n4 HOURS AGO \u2022 YOUTUBE\n\nSHOW MORE VIDEOS\n\nPREVIOUS GAMES\n\nFRA\n\n|  |  |  |\n --- \n| 6/8 | NIR (H) | W3-1 |\n| 6/4 | CIV (H) | L2-1 |\n| 3/29 | COL (A) | W3-1 |\n| 3/26 | BRA (A) | W2-1 |\n| 11/16 | AZE (A) | W3-1 |\n\nSEN\n\n|  |  |  |\n --- \n| 6/9 | KSA (H) | D0-0 |\n| 5/31 | USA (A) | L3-2 |\n| 3/31 | GAM (H) | W3-1 |\n| 3/28 | PER (H) | W2-0 |\n| 1/18 | MAR | L3-0 |\n\n### TEAM STATS\n\nFRA\n\n- Goals per Game -\n\n- Expect"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: France recent form and results",
+        "data": "\u2022 France at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d159288012-ce02189d2504-1000--france-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  Coach: Didier Deschamps Captain: Kylian Mbapp\u00e9\ufeff World Cup appearances: 17 Best finish: Winners (1998, 2018) 16 June: France vs Senegal (New York, 21:00 CET) 22 June: France vs Iraq (Philadelphia, 23:00 CET) 26 June: Norway vs France (Boston, 21:00 CET) France\u2019s group fixtures are being played across three host cities, with the knockout rounds to follow for teams that progress from Group I. France are spoiled for choice, with their 26-man World Cup squad including exceptional talent in every line.\n\n\u2022 France | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/france/fixtures\n  France | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the France squad at FIFA World Cup 2026\u2122.\n\n\u2022 Reuters France at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/france/\n  Michael Olise offered another glimpse of the influence he could have at the World Cup, netting a hat-trick as <strong>France \u200bedged Northern Ireland 3-1</strong> in a warm-up game in Lille \u200ceight days before launching their campaign in the United States.\n\n\u2022 France World Cup Squad 2026: Full 26-Player Roster\n  https://worldcuppass.com/france-world-cup-squad-2026/\n  Didier Deschamps confirmed France\u2019s 26-man squad on May 14, 2026, naming Kylian Mbapp\u00e9 as captain for his third World Cup. The headline omission was Eduardo Camavinga, left out despite strong Champions League pedigree at Real Madrid. Hugo Ekitike also missed out after a long-term Achilles injury ruled him out. France enter the tournament ranked third in the world, with a squad averaging 26.6 years. Seven Premier League players and five PSG men form the core.\n\n\u2022 France World Cup schedule 2026: Dates, times, more to know for Les Bleus at FIFA men's soccer tournament | Sporting News\n  https://www.sportingnews.com/in/football/news/france-world-cup-2026-schedule-results-group-fifa/82eeb1cdab15107f68d2af00\n  Longtime head coach Didier Deschamps has guided Les Bleus to consecutive World Cup finals in Russia and Qatar, and will now look to do the same in North America. With global star Kylian Mbappe leading the way, France will be one of the most talented squads in the 2026 FIFA World Cup, having finished first in their qualification group for the tournament.\n\n\u2022 [Discussion] [ Removed by moderator ]\n  https://www.reddit.com/r/worldcup/comments/1tx11q1/frances_squad_contains_players_to_play_for_the/\n  Pretty sure they also did that in 2018 or 19 Mendy - city Griezmann - barca Mbappe - psg Matuidi -juventus Pavard - bayern\n\n\u2022 [Discussion] Number of French-born players at the 2026 World Cup\n  https://www.reddit.com/r/soccer/comments/1twp6kq/number_of_frenchborn_players_at_the_2026_world_cup/\n  If anyone's wondering: Marcus Thuram was born in Italy Michael Olise was born in England Brice Samba was born in Congo (not DR Congo)\n\n\u2022 [Discussion] Is France entering the 2026 world cup with one of the greatest attacking lineups we have seen?\n  https://www.reddit.com/r/championsleague/comments/1twkxsy/is_france_entering_the_2026_world_cup_with_one_of/\n  Fellow fans, This is a friendly reminder to please follow the Rules and Reddiquette . Join us on Discord I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.\n\n\u2022 [Discussion] France\u2019s Potential 2026 World Cup Lineup Do you like this lineup? Which players would you change or put in the team? Why?\n  https://www.reddit.com/r/EquipeDeFrance/comments/1tw2nxk/frances_potential_2026_world_cup_lineup_do_you/\n  I\u2019d have Demeble as a striker, Dou\u00e9 on the left wing, Olise on the right wing and Chekri as an attacking mid"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Senegal recent form and results",
+        "data": "\u2022 Senegal | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/senegal/fixtures\n  Senegal \u00b7 00:00 \u00b7 FIFA World Cup 2026\u2122 \u00b7 First Stage \u00b7 Group I \u00b7 Toronto Stadium06/26/2026 \u00b7 Senegal \u00b7 Iraq \u00b7 19:00 \u00b7 +(1) Round of 32Round of 16Quarter-finalSemi-finalFinal \u00b7 M74 \u00b7 06/29/2026 \u00b7 20:30 \u00b7 1E \u00b7 3ABCDF \u00b7 M77 \u00b7 06/30/2026 \u00b7 21:00 \u00b7 1I \u00b7\n\n\u2022 Senegal 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/amp/world-cup/senegal-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  Full preview of Senegal for the 2026 World Cup, including squad breakdown, key players, and tactical analysis of their chances.\n\n\u2022 France vs Senegal Match Results Today: FIFA World Cup 2026 Live Score, Updates, Stats\n  https://heavy.com/sports/soccer/world-cup/france-vs-senegal-match-results-today-fifa-world-cup-2026-live-score-updates-stats/\n  France vs Senegal live score, updates, stats, lineups, and key moments from the FIFA World Cup 2026 Group I opener.\n\n\u2022 Senegal 2026 Results - ESPN\n  https://www.espn.com/soccer/team/results/_/id/654/senegal\n  Get all the Senegal results for the 2026 season on ESPN. Includes all the Senegal results from all national and international games.\n\n\u2022 France vs Senegal live updates: World Cup 2026 game latest news and buildup - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/france-vs-senegal-live-updates-world-cup-2026-score-result/ysIXlHyhjyJr/\n  <strong>Pape Thiaw switches between either a 4-3-3 or 4-2-3-1 formation</strong>. Senegal have a fearsome front three of Sadio Mane, Iliman Ndiaye and Nicolas Jackson."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 France vs. Senegal Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/france_vs_senegal.php\n  In the history of World Cups, France National Team faced Senegal in 1 opportunity, with <strong>0 wins, 0 draws and 1 losses</strong>.\n\n\u2022 France vs Senegal: All-time Head-to-head record ahead of FIFA World Cup 2026\n  https://khelnow.com/football/world-football-france-vs-senegal-head-to-head-fifa-world-cup-202606\n  <strong>Senegal lead the head-to-head record with one win from one meeting</strong>, while France are yet to beat the African side. Their only previous meeting came at the 2002 FIFA World Cup, where Senegal stunned defending champions France with a historic ...\n\n\u2022 France vs. Senegal: Head-to-head record and past meetings before World Cup 2026 clash - Sports Mole\n  https://www.sportsmole.co.uk/football/france/world-cup/head-to-head/france-vs-senegal-head-to-head-record-and-past-meetings_599162.html\n  ... Supporters may be surprised to learn that before France and Senegal&#x27;s showdown at the 2026 World Cup, <strong>the African side boast the head-to-head superiority over the 2018 global champions</strong>.\n\n\u2022 France vs Senegal Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-france-vs-senegal\n  Last 5 , <strong>France Win 4 , Draw 0 , Lose 1 , Score Win Prob: 80.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 100.0%</strong> ... Last 5 , Senegal Win 2 , Draw 1 , Lose 2 , Score Win Prob: 40.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 60.0%\n\n\u2022 France vs Senegal, FIFA World Cup 2026: Predicted lineups, head-to-head record, form guide - Sportstar\n  https://sportstar.thehindu.com/football/fifa-world-cup/france-vs-senegal-head-to-head-record-form-guide-predicted-lineups-xi-fifa-world-cup-2026-stats-news/article71108828.ece\n  Senegal, playing its maiden World Cup, had upset Roger Lemerre\u2019s side which was the defending champion. They have faced each other twice in friendlies as well with both teams winning a game apiece. ... France (4-2-3-1): Maignan \u2014 Hernandez, Upemacano, Saliba, Kounde \u2014 Tchouameni, Rabiot \u2014 Doue, Dembele, Olise \u2014 Mbappe\n\n\u2022 [Discussion] France vs Senegal score prediction predict correctly for a chance to win a $50 gift card, with the most correct predictions winning World Cup tickets\n  https://www.reddit.com/r/HisenseFootballZone/comments/1u785aa/france_vs_senegal_score_prediction_predict/\n  Senegal are better than people think."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 2026 FIFA World Cup Group I - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I\n  Group I of the 2026 FIFA World Cup will take place from June 16 to 26, 2026. The group consists of France, Senegal, Iraq, and Norway. <strong>The top two teams, possibly along with the third-placed team, will advance to the round of 32.</strong> ... ^ a b As the identity of the inter-confederation playoff Path ...\n\n\u2022 World Cup Group I standings 2026: Updated results, table and fixtures for France, Senegal, Norway, Iraq | Sporting News\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-i-standings-results-table-2026/e0c681e074cb3b3bc2f8f958\n  During qualification, <strong>France breezed to the top spot in their section with five wins out of six to finish six points clear of second-place Ukraine</strong>. Deschamps has announced he will not extend his contract when it expires after the 2026 World ...\n\n\u2022 France vs Senegal | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021490\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group I</strong> \u2022 Match 17 \u00b7 France \u00b7 19:00 \u00b7 Senegal \u00b7 Kick-off in: 0 days \u00b7 0 hrs \u00b7 30 min \u00b7 32 sec \u00b7 France \u00b7 19:00 \u00b7 Senegal \u00b7 16 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 New Jersey \u25cfNew York/New Jersey Stadium ...\n\n\u2022 Senegal 1-0 France remains Africa's biggest World Cup moment, but a repeat wouldn't be a shock - ESPN\n  https://www.espn.com/espn/story/_/id/49078247/fifa-world-cup-2026-senegal-vs-france-remains-africa-biggest-moment-repeat-not-shock\n  However, <strong>Senegal&#x27;s win still edges it because of circumstances and context</strong>. Argentina were champions in 1990, but not the dominant force France were in 2002. Cameroon already had the experience that Senegal did not; they&#x27;d previously featured ...\n\n\u2022 World Cup 2026 Group I guide - fixtures, schedule, standings and odds for France, Senegal, Iraq and Norway | Football News | Sky Sports\n  https://www.skysports.com/football/news/12098/13543102/world-cup-2026-group-i-guide-fixtures-schedule-standings-and-odds-for-france-senegal-iraq-and-norway\n  World Cup <strong>Group I</strong> includes 2022 runners-up France, Senegal, Iraq and Erling Haaland&#x27;s Norway; matches to be played in US cities New Jersey, Philadelphia and Massachusetts, plus Canada&#x27;s Toronto"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Reads Senegal's squad page to identify Ligue 1-based players and assess individual talent familiarity.",
+        "data": "URL: https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025\nTitle: Arthurlie FC - Detailed squad 25/26\nThis page displays a detailed overview of the club's current squad. It shows all personal information about the players, including age, nationality, contract duration and market value. It also contains a table with average age, cumulative market value and average market value for each player position and overall.\n\n[#](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/trikotNumber.desc)\n\n[Player](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/name)\n\n[Age](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/age)\n\nNat.\n\n[Contract](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/contractEndTimestamp)\n\n[Market value](https://www.transfermarkt.com/senegal/kader/verein/3480/saison_id/2025/sort/marketValueRaw)\n\n\\-\n\n![Michael McKinven](https://img.a.transfermarkt.technology/portrait/medium/default.jpg?lm=1 \"Michael McKinven\")\n\n[Michael McKinven](https://www.transfermarkt.com/michael-mckinven/profil/spieler/186150)\n\nGoalkeeper\n\n33\n\n![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \"Scotland\")\n\n\\-\n\n\\-\n\n\\-\n\n![Anton Nugent](https://img.a.transfermarkt.technology/portrait/medium/default.jpg?lm=1 \"Anton Nugent\")\n\n[Anton Nugent](https://www.transfermarkt.com/anton-nugent/profil/spieler/63673)\n\nGoalkeeper\n\n42\n\n![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \"Scotland\")\n\n\\-\n\n\\-\n\n\\-\n\n![Kieran Cannon](https://img.a.transfermarkt.technology/portrait/medium/default.jpg?lm=1 \"Kieran Cannon\")\n\n[Kieran Cannon](https://www.transfermarkt.com/kieran-cannon/profil/spieler/98066)\n\nGoalkeeper\n\n35\n\n![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \"Scotland\")\n\n\\-\n\n\\-\n\n\\-\n\n![Keith Ross](https://img.a.transfermarkt.technology/portrait/medium/default.jpg?lm=1 \"Keith Ross\")\n\n[Keith Ross](https://www.transfermarkt.com/keith-ross/profil/spieler/170700)\n\nGoalkeeper\n\n\\-\n\n![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \"Scotland\")\n\n\\-\n\n\\-\n\n\\-\n\n![Marc Waters](https://img.a.transfermarkt.technology/portrait/medium/default.jpg?lm=1 \"Marc Waters\")\n\n[Marc Waters](https://www.transfermarkt.com/marc-waters/profil/spieler/276380)\n\nGoalkeeper\n\n30\n\n![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \"Scotland\")\n\n\\-\n\n\\-\n\n\\-\n\n![Calum McBain](https://img.a.transfermarkt.technology/portrait/medium/default.jpg?lm=1 \"Calum McBain\")\n\n[Calum McBain](https://www.transfermarkt.com/calum-mcbain/profil/spieler/476545)\n\nGoalkeeper\n\n30\n\n![Scotland](https://tmssl.akamaized.net//images/flagge/verysmall/190.png?lm=1520611569 \"Scotland\")\n\n\\-\n\n\\-\n\n\\-\n\n![Paul Young](https://img.a.transfermarkt.technology/portrait/medium/default.jpg?lm=1 \"Paul Young\")\n\n[Paul Young](https://www.transfermarkt.com/paul-young/profil"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies Deschamps' tactical plan against low blocks or counter-attacking teams.",
+        "data": "\u2022 France 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/amp/world-cup/france-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  This preview breaks down the tactical approach, key personnel, and qualification journey that will shape the French national team\u2019s chances at the upcoming showpiece. The preferred France formation typically sets up as a balanced <strong>4-2-3-1 or 4-3-3.</strong>\n\n\u2022 FIFA World Cup 2026: France Preview - How Can Deschamps Fit\n  https://technosports.co.in/fifa-world-cup-2026-france-preview-attack-fit/\n  He has remained loyal to the 4-2-3-1 that carried France through the previous two World Cups \u2014 and has leaned into it even more heavily since Euro 2024. <strong>The formation has provided structural consistency while the attacking talent has done the rest</strong>.\n\n\u2022 France 2026 World Cup preview: Squad, fixtures and prediction | Can Deschamps leave on a high by steering favourites to glory again? - Sports Mole\n  https://www.sportsmole.co.uk/football/france/world-cup/feature/france-2026-world-cup-preview-squad-fixtures-and-prediction_598918.html\n  As ever, competition for starting places will lead to intense interest and debate, and <strong>Deschamps must try to integrate both star man Mbappe and last year&#x27;s Ballon D&#x27;Or winner Ousmane Dembele</strong>. France: official 2026 World Cup squad Announced May 15\n\n\u2022 2002 redux? France vs Senegal World Cup preview: Tactical breakdown, key players & prediction | Mathrubhumi English\n  https://english.mathrubhumi.com/sports/football/france-vs-senegal-world-cup-preview-2026-nzn86ouh\n  Their attacking options are extraordinary\u2014<strong>Kylian Mbapp\u00e9 leads a group that includes Ousmane Demb\u00e9l\u00e9, Michael Olise, Bradley Barcola, D\u00e9sir\u00e9 Dou\u00e9, and Rayan Cherki</strong>, giving Deschamps unmatched rotational flexibility.\n\n\u2022 France World Cup 2026 Preview: Lineup, Best Players, Group, & Picks\n  https://www.prizepicks.com/playbook-article/france-world-cup-2026-preview-lineup-best-players-group-picks\n  Many countries would love to have just a fraction of France\u2019s attacking options, which is headlined by <strong>F Kylian Mbappe, F Michael Olise, F Ousmane Dembele, and F Desire Doue</strong>. F Bradley Barcola and F Rayan Cherki are also available for manager ...\n\n\u2022 [Discussion] Number of French-born players at the 2026 World Cup\n  https://www.reddit.com/r/soccer/comments/1twp6kq/number_of_frenchborn_players_at_the_2026_world_cup/\n  If anyone's wondering: Marcus Thuram was born in Italy Michael Olise was born in England Brice Samba was born in Congo (not DR Congo)\n\n\u2022 [Discussion] Is France entering the 2026 world cup with one of the greatest attacking lineups we have seen?\n  https://www.reddit.com/r/championsleague/comments/1twkxsy/is_france_entering_the_2026_world_cup_with_one_of/\n  Fellow fans, This is a friendly reminder to please follow the Rules and Reddiquette . Join us on Discord I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.\n\n\u2022 [Discussion] France\u2019s Potential 2026 World Cup Lineup Do you like this lineup? Which players would you change or put in the team? Why?\n  https://www.reddit.com/r/EquipeDeFrance/comments/1tw2nxk/frances_potential_2026_world_cup_lineup_do_you/\n  I\u2019d have Demeble as a striker, Dou\u00e9 on the left wing, Olise on the right wing and Chekri as an attacking midfielder. Olise prefers playing on the right, Demeble has shown with psg that he can play the 9 well, and Doue prefers the left wing over the right wing anyways. Chekri is also the best as an attacking midfielder among them all. I know I didn\u2019t include Mbappe in this attack start. Mbappe is the most talented attacking player in the world, but maybe having players that can track back and play more selflessly is the future of football. The team is still insanely stacked even without him (or anyone el"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Obtains recent pre-tournament friendly performance and xG data for both teams.",
+        "data": "\u2022 France vs Senegal Prediction: World Cup 2026 Match Preview | Opta Analyst\n  https://theanalyst.com/articles/france-vs-senegal-prediction-world-cup-2026-match-preview\n  <strong>France are one of the pre-tournament favourites and will look to get their 2026 World Cup off to a flier against a tough Group I opponent</strong>. Look ahead to Tuesday\u2019s contest at New York New Jersey Stadium with our France vs Senegal prediction ...\n\n\u2022 France vs Senegal: World Cup 2026 Prediction | Squawka\n  https://www.squawka.com/us/news/world-cup/match-preview-france-vs-senegal-06-16-26-world-cup-2026/\n  Our lean is a French win in an open game, so <strong>back France to win at -225 with bet365.</strong> For the wider market, our World Cup 2026 outright odds page tracks the title picture, and you can read our full bet365 review before you bet.\n\n\u2022 France vs. Senegal lineups, starting 11 for World Cup 2026 Group I game at MetLife Stadium | Sporting News\n  https://www.sportingnews.com/us/soccer/news/france-vs-senegal-lineup-starting-11-world-cup-2026/05832f534d6795b6b6997dcb\n  <strong>They have not impressed in their pre-tournament friendlies, being torn to shreds by the United States before a drab 0-0 draw against Saudi Arabia</strong> in which their opponents missed a number of big chances.\n\n\u2022 France vs Senegal Prediction, Odds & Match Preview | BetMGM\n  https://sports.betmgm.com/en/blog/world-cup/france-vs-senegal-prediction-odds-preview-world-cup-june-16-bm16/\n  World Cup co-favorites France begin its 2026 tournament against AFCON winners Senegal. <strong>Les Bleus saw a four-match winning streak end in the first of two pre-tournament friendlies</strong>.\n\n\u2022 France vs Senegal prediction and tips, World Cup 2026, June 16, 2026 | xGscore\n  https://xgscore.io/world-cup/france-senegal/preview\n  France vs Senegal mathematical prediction based on xG. Pre-match statistics, teams form, h2h stats, streaks and trends odds. World Cup 2026, <strong>June 16, 2026</strong>\n\n\u2022 [Discussion] This is how the Senegal National Football Team and the Uzbekistan National Football Team were treated upon their arrival in USA and just before a friendly match vs Netherlands respectively, for the FIFA World Cup 2026:\n  https://www.reddit.com/r/Fauxmoi/comments/1u1178t/this_is_how_the_senegal_national_football_team/\n  Proud and relieved my national team \ud83c\uddee\ud83c\uddf9 decided to actively boycott this world cup by feigning extreme incompetence and an embarassing lack of footballing ability for years, despite having four stars on their shirts."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Uses GDELT news intelligence to scan for last-minute camp issues or disruptions.",
+        "data": "{\"topic\":\"France Senegal World Cup camp news illness injury\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Determines the venue, pitch type, and climate details to analyze physical pacing.",
+        "data": "\u2022 France vs Senegal live updates: World Cup 2026 game ...\n  https://www.nytimes.com/athletic/live-blogs/france-vs-senegal-live-updates-world-cup-2026-score-result/ysIXlHyhjyJr/?eafs_enabled=false\n  ... venue will be officially called New York New Jersey Stadium throughout this World Cup. Max Mathews. June 16, 2026 at 10:08 AM EDT.\n\n\u2022 FIFA World Cup 2026 - France vs. Senegal\n  https://www.metlifestadium.com/events/detail/fifa-world-cup-2026-france-vs-senegal\n  France vs. Senegal ; Date. June 16, 2026 ; Event Starts. 3:00 PM ; Doors Open. 12:00 PM ; Parking Lots Open. 11:00 AM ; Availability. On Sale Now.\n\n\u2022 France vs Senegal performance-impairing heat\n  https://www.climatecentral.org/world-cup-2026/matches/17\n  France vs Senegal at New York New Jersey Stadium on June 16, 2026. 20% likelihood of performance-impairing heat with climate change.\n\n\u2022 France vs Senegal in 2026 FIFA World Cup\n  https://www.facebook.com/groups/458978894153456/posts/27737066469251330/\n  The game will be at Charlotte, North Carolina's Bank of America stadium, which seats up to 75,000 fans. It will be played on Sunday, May 31st.\n\n\u2022 From gridiron to pitch: How NFL stadiums have ...\n  https://www.espn.com/soccer/story/_/id/48939622/from-gridiron-pitch-how-nfl-stadiums-transformed-2026-fifa-world-cup\n  Bylaws also note that World Cup matches must be played on natural grass, presenting another alteration that NFL stadiums had to make ahead of ..."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Obtains betting market lines and public sentiment on the handicap spread.",
+        "data": "\u2022 France vs Senegal Prediction, Pick, Odds for World Cup 6/16\n  https://www.actionnetwork.com/soccer/france-vs-senegal-prediction-pick-odds-world-cup-tuesday-june-16\n  Our Senegal vs France best bet is for Senegal to cover the +1.0 Asian handicap. This wager offers protection, as a one-goal loss for Senegal ...\n\n\u2022 France vs Senegal Prediction, Odds & Best Bets\n  https://www.youtube.com/watch?v=Y4r1cerXhX4\n  France vs Senegal Prediction, Odds & Best Bets | World Cup 2026. 2.5K ... Austria vs Jordan World Cup Prediction: The Best Bet on the Board.\n\n\u2022 World Cup starts in the second round. If you like bet France ...\n  https://www.facebook.com/NwokeMiracle1010/posts/world-cup-starts-in-the-second-round-if-you-like-bet-france-to-win-senegal/1528962805287848/\n  France to win 2-0 England vs Senegal over 2.5 and gg Odds 4.5 #FIFAWorldCup2022 ... France vs Senegal: A Historic Rivalry Renewed at World ...\n\n\u2022 France vs. Senegal odds, prediction, time: 2026 World Cup ...\n  https://www.cbssports.com/soccer/news/france-senegal-odds-prediction-time-2026-world-cup-picks-best-bets/\n  France are the -220 favorites to win the group, with Senegal at +750. The Senegalese prevailed, 1-0, in these squads last meeting which came at ...\n\n\u2022 France vs Senegal Predictions, Picks & Odds - 16/06/2026\n  https://www.toffeeweb.com/france-vs-senegal-predictions-picks-odds-16-06-2026/\n  Best odds to bet on France vs Senegal ; Matchbook Matchbook, 1.52 \u00b7 4.40 ; Coral, 1.95 \u00b7 2.40 ; Ladbrokes, 1.95 \u00b7 2.40 ; Virgin Bet Virgin Bet, 1.76 ..."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides real-time injury and fitness status of France's defensive midfielders right before the tournament.",
+        "data": "\u2022 After 3 Years Away, A Surprise FIFA World Cup Comeback For Austrian Midfielder - FOX Sports\n  https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-austria\n  3. ### 2026 World Cup Odds: Spain Narrowly Favored Over France### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. FIFA Men's World Cup. FIFA Men's World Cup. Now a teammate's injury has given him a surprise comeback at the World Cup. Austria coach Ralf Rangnick called up Ljubicic late Wednesday to replace key midfielder Christoph Baumgartner, who injured his right thigh while warming up for a pre-World Cu\n\n\u2022 USA's Christian Pulisic Trains Alone But 'Will Be Ready' For Australia - FOX Sports\n  https://www.foxsports.com/stories/soccer/christian-pulisics-sore-calf-will-fine-usas-second-world-cup-match-vs-australia\n  FIFA Men's World Cup. FIFA Men's World Cup. 3. ### 2026 World Cup: France Alone Atop Oddsboard After Spain's Shocking Draw### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. **U.S. World Cup Team Training Base (IRVINE, Calif.) \u2014** Although U.S. men\u2019s national team forward Christian Pulisic participated in a \"modified training\" session on Monday after leaving last week's 2026 FIFA World Cup-opening win ove\n\n\u2022 Rooting for France at World Cup 2026? Here's a Guide to All Its Matches - CNET\n  https://www.cnet.com/tech/services-and-software/rooting-for-france-at-world-cup-2026-heres-a-guide-to-all-its-matches/\n  # Rooting for France at World Cup 2026? Here's a Guide to All Its Matches. Les Bleus are aiming to be crowned world champions for a third time. France coach Didier Deschamps will be hoping to become only the second coach to win two World Cups, as he takes charge of a star-packed French team for one last time in this summer's tournament. After a 14-year stint in charge, this summer's tournament is set to bring down the curtain on Didier Deschamps' tenure as France's head coach. The former Marseille and Juventus midfielder became only the third man to win the tournament as a player and a manager\n\n\u2022 France v Senegal: World Cup 2026 \u2013 live - The Guardian\n  https://www.theguardian.com/football/live/2026/jun/16/france-v-senegal-world-cup-2026-live\n  There are some fixtures that need only the names of the teams to get us going and France v Senegal is one such, a meld of nostalgia, history and righteous indignation. The teams, of course, met in the World Cup 2002 opener, a game which featured one of the great centre-forward displays from El-Hadji Diouf and one of the great celebrations following Papa Bouba Diop\u2019s goal, which secured one of the great shocks. Lamine Camara is a dynamic midfielder who blends old school new, able to do a bit of everything but at warp speed and is, presumably, soon to arrive at a Premier League team near you; al\n\n\u2022 France at the FIFA World Cup 2026: Mbappe-Led Favourites Eye Group I Top Spot - Telecom Asia Sport\n  https://www.telecomasia.net/blog/france-at-fifa-world-cup-2026/\n  ## France at the 2026 World Cup: team card. ## France at World Cup 2026 Group I. France, Norway, Senegal, and Iraq \u2013 \u201cThe Group of Death\u201d: Group I at the 2026 World Cup. ## Schedule of matches of the French national team at the 2026 World Cup. ## France squad for the 2026 World Cup. ## What to expect from the French team at the 2026 World Cup. France is the main favourite of Group I. 1.France at the 2026 World Cup: team card2.How France team qualified for the 2026 World Cup3.France at World Cup 2026 Group I4.Schedule of matches of the French national team at the 2026 World Cup5.France squad fo"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Analyzes Senegal's squad transition and whether the veteran leaders are still starting.",
+        "data": "\u2022 2026 World Cup guide: Full TV schedule, game previews, results and standings - Los Angeles Times\n  https://www.latimes.com/sports/soccer/story/2026-06-16/world-cup-guide-tv-schedule-results-standings-previews\n  The first five days of the 2026 FIFA World Cup are over, with the U.S. and Mexico each winning their group stage openers. Here\u2019s everything you need to know about matches being played on Tuesday, Wednesday and Thursday in the 48-team tournament across the U.S., Mexico and Canada (all times Pacific). **The buzz:** France, ranked third in the world by FIFA, played in the last two World Cup finals and is favored to make it back again this year. Senegal is led by former African player of the year Sadio Mane, the country\u2019s all-time leader in goals. Austria is playing in the World Cup for the first \n\n\u2022 2026 World Cup | What should France expect from Senegal? - Yahoo Sports\n  https://sports.yahoo.com/articles/2026-world-cup-france-expect-074500039.html\n  * World Cup: Day of draws. # 2026 World Cup | What should France expect from Senegal? However, Senegal\u2019s history at the World Cup is complex: despite being African champions heading into Qatar 2022, they could not better the record run to the quarter-finals of 2002. They left Morocco in January as African champions once more but have since had their title stripped by the Confederation of African Football after its appeal board decided that Senegal \u201cforfeited the final\u201d when some players left the pitch in protest at Morocco being awarded a late penalty. Recent tournaments, aside from the most r\n\n\u2022 Senegal at the World Cup: Semi-finals the target after AFCON title drama, says El Hadji Diouf - Sky Sports\n  https://www.skysports.com/football/news/11095/13546213/senegal-at-the-world-cup-semi-finals-the-target-after-afcon-title-drama-says-el-hadji-diouf\n  Senegal were stripped of the Africa Cup of Nations title in March after beating Morocco in dramatic circumstances two months before; Pape Thiaw's side are aiming for the World Cup semi-finals and are in Group I with France, Norway and Iraq; they begin their campaign on June 17. If you want to talk about dramatic build-ups to a World Cup, get in touch with Senegal. They won a dramatic Africa Cup of Nations final in January, in which the team were ordered off the pitch by boss Pape Thiaw after referee Jean-Jacques Ndala pointed to the spot in stoppage time following a VAR check for Malick Diouf'\n\n\u2022 France vs. Senegal - kick-off time, team news, how to watch - ESPN\n  https://www.espn.com/espn/story/_/id/49048242/france-vs-senegal-kick-team-news-how-watch\n  Senegal - kick-off time, team news, how to watch - ESPN. *   Men's World Cup World Cup. *   NBA Playoff Challenge NBA Playoff Challenge. *   Men's Basketball Men's Basketball. ## World Cup. SummaryReport FT * Image 2 Canada Canada CAN 1 * Image 3 Bosnia-Herzegovina Bosnia-Herz BIH 1 2026 FIFA World Cup. FT * Image 4 United States USA USA 4 * Image 5 Paraguay Paraguay PAR 1 2026 FIFA World Cup. GamecastTickets Sun 12:30 AM UTC ABC NY leads series 3-1 SA -5.5 * Image 6 New York Knicks Knicks NY 3-1 * Image 7 San Antonio Spurs Spurs SA 1-3 NBA Finals - Game 5 NY leads series 3-1. NBA Finals - Gam\n\n\u2022 2026 FIFA World Cup: Tunisia fire coach Sabri Lamouchi after Sweden hammering - Africa Top Sports\n  https://en.africatopsports.com/2026-fifa-world-cup-tunisia-fire-coach-sabri-lamouchi-after-sweden-hammering/\n  2026 FIFA World Cup: Tshisekedi in Houston for the Leopards | Real Madrid land rising star Clifford Nana | 2026 FIFA World Cup: Senegal prepared for France \u2013 Pape Thiaw | Liberia Kicks Off Referee Instructors and Assessors Training Course | 2026 FIFA World Cup : Iran blasts FIFA and USA |. # 2026 FIFA World Cup: Tunisia fire coach Sabri Lamouchi after Sweden hammering. Tunisia has officially fired head coach Sabri Lamouchi just ONE game into the tournament. The decision comes immediately after the Carthage Eagles\u2019 humiliating 5-1 defeat to Sweden in their Group F opener. Following "
+      }
+    ],
+    "research_cost": 0.128,
+    "wallet_before": 2.818,
+    "wallet_after": 2.69,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "confidence_reason": "A confidence of 6 reflects France's elite attacking depth balanced against defensive instability caused by William Saliba's injury and Senegal's potent transition threat.",
+      "reasoning": "While France's elite offensive rotation led by Mbapp\u00e9 should secure a victory, Senegal's physical counter-attack and France's defensive adjustments will keep the match highly competitive.",
+      "probabilities": {
+        "home": 56,
+        "draw": 26,
+        "away": 18
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "France won four of their last five matches, including a 3-1 warm-up win over Northern Ireland and a 2-1 friendly win over Brazil, though they suffered a 2-1 loss to C\u00f4te d'Ivoire.",
+      "away_form": "Senegal's recent form is mixed, featuring a 0-0 draw with Saudi Arabia and a 3-2 loss to the USA, following a controversial AFCON campaign where their title was stripped.",
+      "key_injuries": [
+        "France: William Saliba (back injury, highly doubtful)",
+        "France: Jules Kounde (muscle injury, but expected to be available)",
+        "France: Mike Maignan (missed training as precaution, expected to start)"
+      ],
+      "tactical_matchup": "France's elite 4-2-3-1 attack led by Mbapp\u00e9 and Olise faces Senegal's athletic 4-3-3/4-2-3-1 block, with France holding the structural edge in offensive rotation and depth.",
+      "group_stakes": "In a highly competitive Group I ('Group of Death' with Norway and Iraq), both teams need a positive result in this opener to secure a top-two path to the knockout rounds.",
+      "home_win_signals": [
+        "France boasts one of the world's best attacks with Mbapp\u00e9, Demb\u00e9l\u00e9, and Michael Olise, who recently scored a hat-trick against Northern Ireland.",
+        "Senegal's defense has looked vulnerable recently, conceding three goals to the USA and allowing multiple big chances in a 0-0 draw with Saudi Arabia.",
+        "France won five of six qualification matches to top their group comfortably."
+      ],
+      "away_win_signals": [
+        "Senegal possesses historical psychological edge from their famous 1-0 opening-day upset of France in the 2002 World Cup.",
+        "Senegal's front line of Sadio Man\u00e9, Isma\u00efla Sarr, and Nicolas Jackson can exploit a French defense missing key center-back William Saliba."
+      ],
+      "draw_signals": [
+        "France's recent 2-1 defeat to C\u00f4te d'Ivoire demonstrates vulnerability against physical and disciplined African opposition.",
+        "Senegal's ability to grind out defensive results, such as their recent 0-0 draw against Saudi Arabia, could frustrate France's build-up."
+      ],
+      "contradictions": [
+        "While France are heavy betting favorites, their defensive stability is questioned due to Saliba's injury and the recent loss to C\u00f4te d'Ivoire.",
+        "Senegal's squad is highly rated and solid on paper, but they have been distracted by off-field drama surrounding their stripped AFCON title."
+      ],
+      "strategy_applied": [
+        "Prioritized squad news (Saliba's injury) and recent friendly form over the historical 2002 matchup narrative."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting the historical 2002 World Cup matchup as a modern tactical factor.",
+        "Overreliance on friendly match results, such as the loss to C\u00f4te d'Ivoire, to project competitive tournament performance.",
+        "Assuming off-field AFCON controversies will automatically degrade Senegal's on-field focus and organization."
+      ],
+      "underweighted_factors": [
+        "The severe defensive disruption for France if William Saliba is ruled out, forcing an uncoordinated central defensive pairing.",
+        "Senegal's transition speed with Man\u00e9, Sarr, and Jackson exploiting a French side prone to conceding big chances.",
+        "The conservative nature of opening group stage matches in a 'Group of Death,' which typically suppresses high-scoring outcomes."
+      ],
+      "draw_risk": "medium \u2014 Senegal's proven ability to grind out defensive results and France's potential caution due to defensive injuries could lead to a low-scoring stalemate.",
+      "favorite": "home",
+      "confidence_cap": 7,
+      "verdict": "While France possesses superior offensive depth, their defensive vulnerabilities and Senegal's physical counter-attacking threat make a comfortable home win far from guaranteed."
+    },
+    "full_reasoning": "HOME_PCT: 56\nDRAW_PCT: 26\nAWAY_PCT: 18\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: A confidence of 6 reflects France's elite attacking depth balanced against defensive instability caused by William Saliba's injury and Senegal's potent transition threat.\nREASONING: While France's elite offensive rotation led by Mbapp\u00e9 should secure a victory, Senegal's physical counter-attack and France's defensive adjustments will keep the match highly competitive.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
