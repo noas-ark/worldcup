@@ -4913,5 +4913,335 @@
     "reflected": true,
     "reflected_at": "2026-06-17T06:30:31.055936+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)"
+  },
+  {
+    "match": "POR vs COD",
+    "home": "POR",
+    "away": "COD",
+    "kickoff": "2026-06-17T17:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)",
+    "information_needs": "FORM\n- How did Portugal perform in their final warm-up friendlies in early June 2026, and did they resolve the defensive transition vulnerabilities that exposed them during the latter stages of their UEFA qualifying campaign?\n- What is Congo DR's recent record and defensive clean-sheet ratio against non-African opposition (specifically European teams) over the last 24 months?\n\nPLAYERS\n- Is 41-year-old Cristiano Ronaldo still projected to start as Portugal's focal point up front, or has the manager transitioned to a more mobile attacking trio featuring players like Rafael Le\u00e3o and Gon\u00e7alo Ramos?\n- What is the fitness status of Congo DR\u2019s captain and defensive anchor, Chancel Mbemba, and who is slated to partner him at center-back to handle Portugal's creative runners?\n\nTACTICS\n- How does Congo DR\u2019s manager plan to bypass Portugal's counter-press, and will they deploy a low-block 4-1-4-1 or a back five to deny space to Bruno Fernandes and Bernardo Silva between the lines?\n- If Portugal utilizes inverted fullbacks (e.g., Jo\u00e3o Cancelo or Diogo Dalot) to overload the midfield, can Congo DR\u2019s direct wingers (like Yoane Wissa) exploit the vacant space on the flanks during transition?\n\nH2H\n- Have Portugal and Congo DR (or historically as Zaire) ever met in a competitive or friendly match, and are there any tactical or psychological precedents that can be drawn from those historical encounters?\n\nCONTEXT\n- Given this is the 2026 FIFA World Cup group stage, is this the opening matchday for Group H, and how does the 48-team format (where the best third-place teams advance) alter each manager's risk tolerance in the second half?\n\nMARKET\n- What are the current Asian Handicap and Over/Under lines for this match, and does the market movement suggest a comfortable multi-goal margin for Portugal or a low-scoring, tight affair?\n\nNEWS\n- Are there any camp distractions, travel fatigue reports, or internal federation disputes regarding player bonuses within the Congo DR squad leading up to their arrival in North America?\n\nVENUE\n- Which North American city is hosting this match, and will the local climate (e.g., summer heat/humidity in Houston/Miami vs. a closed-roof stadium in Atlanta) physicalize the game in a way that favors Congo DR\u2019s athletic profile over Portugal's technical tempo?",
+    "research_gaps": [
+      {
+        "need": "What are the current Asian Handicap and Over/Under lines for this match, and does the market movement suggest a comfortable multi-goal margin for Portugal or a low-scoring, tight affair?",
+        "category": "MARKET",
+        "ideal_service": "A sports betting odds API that provides real-time Asian Handicap and Over/Under lines along with historical market movement."
+      },
+      {
+        "need": "Have Portugal and Congo DR (or historically as Zaire) ever met in a competitive or friendly match, and are there any tactical or psychological precedents that can be drawn from those historical encounters?",
+        "category": "H2H",
+        "ideal_service": "A historical head-to-head football database API that aggregates match history across all competitive and friendly international fixtures."
+      },
+      {
+        "need": "Given this is the 2026 FIFA World Cup group stage, is this the opening matchday for Group H, and how does the 48-team format (where the best third-place teams advance) alter each manager's risk tolerance in the second half?",
+        "category": "CONTEXT",
+        "ideal_service": "A tournament schedule and format rules engine API providing structured group layout and qualification criteria details for active competitions."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Portugal vs Congo DR World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Portugal vs Congo DR World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Portugal World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Portugal recent form and results",
+        "need": "How has Portugal performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Congo DR World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Congo DR recent form and results",
+        "need": "How has Congo DR performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Portugal vs Congo DR head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Portugal vs Congo DR World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Congo DR Chancel Mbemba injury fitness World Cup 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Evaluates the defensive stability of Congo DR's key center-back.",
+        "need": "What is the fitness status of Congo DR\u2019s captain and defensive anchor, Chancel Mbemba, and who is slated to partner him at center-back?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Congo DR tactical preview World Cup 2026 low-block Portugal",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Analyzes Congo DR's tactical setup against high-pressing European opposition.",
+        "need": "How does Congo DR\u2019s manager plan to bypass Portugal's counter-press, and will they deploy a low-block 4-1-4-1 or a back five?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Portugal vs Congo DR World Cup 2026 stadium venue city climate",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Identifies stadium conditions and climate factors that could favor Congo DR's athletic style.",
+        "need": "Which North American city is hosting this match, and will the local climate physicalize the game?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Congo DR squad bonus dispute World Cup 2026",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Identifies external squad distractions or financial/administrative disputes.",
+        "need": "Are there any camp distractions, travel fatigue reports, or internal federation disputes regarding player bonuses within the Congo DR squad?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Portugal World Cup 2026 starting lineup Cristiano Ronaldo Goncalo Ramos Rafael Leao",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Resolves Portugal's attacking lineup and Ronaldo's role.",
+        "need": "Is 41-year-old Cristiano Ronaldo still projected to start as Portugal's focal point up front, or has the manager transitioned to a more mobile attacking trio featuring players like Rafael Le\u00e3o and Gon\u00e7alo Ramos?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Portugal friendly matches June 2026 results defensive vulnerabilities",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Analyzes Portugal's immediate form and defensive shape leading into the tournament.",
+        "need": "How did Portugal perform in their final warm-up friendlies in early June 2026, and did they resolve defensive vulnerabilities?",
+        "category": "FORM"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Portugal vs DR Congo Prediction: Portugal is looking to start with a win - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/portugal-vs-dr-congo-match-prediction-17-june-2026/\n  ### DR Congo: Lineup\n\nS\u00e9bastien Desabre is expected to tighten up his defense against Portugal and field a 5-3-2 formation, with Wissa and Bakambu up front.\n\n\ud83d\udd16DR Congo starting lineup (5-3-2)\n\nMpasi \u2013 Wan-Bissaka, Kapuadi, Tuanzebe, Mbemba, Masuaku \u2013 Moutoussamy, Sadiki, Mukau \u2013 Wissa, Bakambu\n\n\u274cOut: None.\n\n\ud83d\udc64Head Coach: S\u00e9bastien Desabre\n\n## Portugal vs DR Congo: Head-to-head statistics\n\nThis will be the first match between the two nations.\n\nMore predictions on footballSee all\n\nImage 4: \u0424\u0440\u0430\u043d\u0446\u0438\u044f\n\nO: 2,06\n\n16/06/2026\n\n20:00\n\nImage 5: \u0421\u0435\u043d\u0435\u0433\u0430\u043b\n\nFrance vs Senegal Prediction: A Tough Start for Both \n\n\u2022 Portugal vs. Congo DR - Live Score - June 17, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-portugal-vs-congo-dr-jun-17-2026-game-boxscore-647636\n  COD\n\n|  |  |  |\n --- \n| 6/9 | CHI (H) | L2-1 |\n| 6/3 | DEN (A) | D0-0 |\n| 3/31 | JAM (H) | W1-0 |\n| 1/6 | ALG | L1-0 |\n| 12/30 | BOT | W3-0 |\n\n### TEAM STATS\n\nPOR\n\n- Goals per Game -\n\n- Expected Goals (xG) per Game -\n\n- Goals Against per Game -\n\n- Shots per Game -\n\n- Average Possession (%) -\n\n- Chances Created per Game -\n\nCOD\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $357 would win $457 total if Portugal wins and a bet of $100 would win $1,100 total if Congo DR wins\n\n-357\n\nPOR\n\n+1000\n\nCOD\n\nOVER/UNDER 2.5 GOALS\n\nThe combined final score of both teams is set at 2.5\n\n-139\n\nOVER 2.5\n\n+113\n\nUN\n\n\u2022 Portugal vs. DR Congo Prediction, Odds, Picks For World Cup Match - FOX Sports\n  https://amp.foxsports.com/stories/soccer/2026-world-cup-portugal-dr-congo-odds-prediction-picks\n  # Portugal vs. DR Congo Prediction, Odds, Picks For World Cup Match\n\nUpdated Jun. 17, 2026 3:41 a.m. ET\n\nPortugal and DR Congo will open their 2026 FIFA World Cup tournament in a Group K clash on June 17, 2026, at Houston Stadium on FOX.\n\nThese two nations will meet on the global stage for the first time.\n\nOver the past two decades, Portugal has consistently been among Europe\u2019s top international teams, highlighted by its victory at the 2016 European Championship and UEFA Nations League titles in 2019 and 2025.\n\nThey have also advanced beyond the group stage in four of the last five World Cups,\n\n\u2022 Portugal vs. DR Congo projected lineups, starting 11 for World Cup 2026 Group K game in Houston - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/portugal-dr-congo-lineup-starting-11-world-cup-2026/e914f1fcc09c97367875a317\n  Back-to-back European champion Paris Saint-Germain are likely to be well-represented in the starting XI, with Vitinhaand Joao Neveshelming the midfield with Nuno Mendesat left-back.\n\nBernardo Silvaand Pedro Netowill likely flank Ronaldo in attack, although Rafael Leaois another option in attack.\n\nMORE:Who has the most international caps ever? Cristiano Ronaldo boasts another record in men's football\n\n## DR Congo projected starting 11\n\n(5-3-2, right to left):Mpasi (GK) \u2014 Wan-Bissaka, Kapuadi, Tuanzebe, Mbemba, Masuaku \u2014 Moutoussamy, Sadiki, Mukau \u2014 Wissa, Bakambu\n\n Injured: None\n Suspended: Non\n\n\u2022 Ronaldo, Portugal vs. Congo Odds, Live Stream Schedule, Group Scenarios for World Cup 2026 - Bleacher Report\n  https://bleacherreport.com/articles/25441178-ronaldo-portugal-vs-congo-odds-live-stream-schedule-group-scenarios-world-cup-2026\n  ## TOP NEWS\n\n### England vs. Croatia Preview \ud83d\udd2e\n\nBleacher Report6h### Previewing Messi's 1st Game \ud83c\udde6\ud83c\uddf7\n\nBleacher Report1d### World Cup LIVE Blog: Day 6 \u26a1\n\nBleacher Report1h\n\nDR Congo is looking to play spoiler in the Group K opener. The African side is likely fighting for third place in the group with Uzbekistan behind Portugal and Colombia.\n\nPortugal vs. DR Congo Info\n\nDate: Wednesday, June 17\n\nStart Time: 1 p.m. ET\n\nTV: Fox\n\nLive Stream: Fox One\n\nOdds (via FanDuel Sportsbook): Portugal (-360; bet $360 to win $100); DR Con"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Portugal vs. DR Congo projected lineups, starting 11 for World Cup 2026 Group K game in Houston - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/portugal-dr-congo-lineup-starting-11-world-cup-2026/e914f1fcc09c97367875a317\n  Injured: None\n Suspended: None\n\nMany of DR Congo's hopes at this tournament are pinned upon their high-quality front two of Cedric Bakambuand Yoane Wissa, even after the latter endured a disappointing maiden season at Newcastle United.\n\nThere will be plenty of familiar names to a Premier League audience in what is expected to be a Congolese back five.\n\nAaron Wan-Bissaka, Axel Tuanzebe, Chancel Mbemba and Arthur Masuakuare all in line to start, tasked with shackling Ronaldo and co.\n\nMORE:FIFA World Rankings 2026: Updated list of every World Cup nation, from Spain to New Zealand\n\n## Portugal vs.\n\n\u2022 Portugal vs. Congo DR - Live Score - June 17, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-portugal-vs-congo-dr-jun-17-2026-game-boxscore-647636\n  COD\n\n|  |  |  |\n --- \n| 6/9 | CHI (H) | L2-1 |\n| 6/3 | DEN (A) | D0-0 |\n| 3/31 | JAM (H) | W1-0 |\n| 1/6 | ALG | L1-0 |\n| 12/30 | BOT | W3-0 |\n\n### TEAM STATS\n\nPOR\n\n- Goals per Game -\n\n- Expected Goals (xG) per Game -\n\n- Goals Against per Game -\n\n- Shots per Game -\n\n- Average Possession (%) -\n\n- Chances Created per Game -\n\nCOD\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $357 would win $457 total if Portugal wins and a bet of $100 would win $1,100 total if Congo DR wins\n\n-357\n\nPOR\n\n+1000\n\nCOD\n\nOVER/UNDER 2.5 GOALS\n\nThe combined final score of both teams is set at 2.5\n\n-139\n\nOVER 2.5\n\n+113\n\nUN\n\n\u2022 Portugal vs DR Congo Prediction: Portugal is looking to start with a win - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/portugal-vs-dr-congo-match-prediction-17-june-2026/\n  ### Portugal: Lineup\n\nCenter back R\u00faben Dias has been training separately from his teammates and is doubtful for the match.\n\n\ud83d\udd16Portugal starting lineup (4-2-3-1)\n\nDiogo Costa \u2013 Jo\u00e3o Cancelo, R\u00faben Dias, Renato Veiga, Nuno Mendes \u2013 Vitinha, Jo\u00e3o Neves \u2013 Bernardo Silva, Bruno Fernandes, Pedro Neto \u2013 Cristiano Ronaldo\n\n\u274cOut: None.\n\n\ud83d\udc64Head Coach: Roberto Mart\u00ednez\n\n## DR Congo: Form and statistics [...] This is Congo's second appearance in the competition, 52 years after its World Cup debut in Germany, when the country was known as Zaire. The Leopards finished second in their African qualifying group\n\n\u2022 Portugal vs. DR Congo Prediction, Odds, Picks For World Cup Match - FOX Sports\n  https://amp.foxsports.com/stories/soccer/2026-world-cup-portugal-dr-congo-odds-prediction-picks\n  Heading into 2026, Portugal boasts one of the most well-rounded squads in the tournament, blending experienced leaders with a new wave of talent playing for elite clubs across Europe.\n\nWith that depth and pedigree, the expectations remain high as they look to make another serious push on the world stage.\n\nPortugal qualified for the World Cup by winning UEFA Group F. They clinched the top spot in emphatic fashion, capping off their qualifying campaign with a dominant 9-1 win over Armenia.\n\nThe Sele\u00e7\u00e3o come into the tournament off three consecutive friendly wins over the USA, Chile and Nigeria b\n\n\u2022 Ronaldo, Portugal vs. Congo Odds, Live Stream Schedule, Group Scenarios for World Cup 2026 - Bleacher Report\n  https://bleacherreport.com/articles/25441178-ronaldo-portugal-vs-congo-odds-live-stream-schedule-group-scenarios-world-cup-2026\n  The concern for Portugal is who, outside of Ronaldo, scores the goals. None of the strikers listed on the World Cup roster have more than 12 international tallies.\n\nGoncalo Ramos and Joao Felix are the most experienced options. Ramos has 10 goals in 25 appearances for Portugal, while Joao Felix has 12 goals in 54 games.\n\nWednesday's game and others could turn into the Ronaldo show. After all, he can still deliver at a high level at 41 years old. But the superstar can't handle all of the scoring, which is why it is impera"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Portugal recent form and results",
+        "data": "\u2022 Portugal | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/portugal/team-news\n  Portugal | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Portugal squad at FIFA World Cup 2026\u2122.\n\n\u2022 Reuters Portugal at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/portugal/\n  Multi-champions Brazil, Argentina and Germany all won their preparatory games for the 2026 FIFA World Cup on Saturday, although by small margins, with former champion England and hopeful <strong>Portugal also securing victories</strong>.\n\n\u2022 Portugal at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d15939ace8-5cc9254d0851-1000--portugal-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  Below you will find everything you need to know about Portugal at the 2026 World Cup: their fixtures, squad, qualifying record, key players, coach and tournament history.\n\n\u2022 Portugal - fixtures, team info and top players\n  https://www.fotmob.com/teams/8361/overview/portugal\n  Portugal have been in excellent form recently, <strong>winning 4 of their last 5 matches (80% win rate).</strong> They have scored 15 goals and conceded 3 during this period. Overall, their attack has been firing on all cylinders.\n\n\u2022 Will Portugal win their first World Cup? Anything is possible with Vitinha and Bruno Fernandes | World Cup 2026 | The Guardian\n  https://www.theguardian.com/football/2026/jun/16/bruno-fernandes-vitinha-portugal-win-world-cup-1966-squad\n  In World Cup qualifying, Portugal attempted 25 shots per match, the most of any European nation. They had 8.3 shots on target per match \u2013 a tally only bettered by Spain (9.6) and Croatia (8.5). Portugal scored the most goals following a high turnover per match (0.5) and only Belgium (2.5) had more shots resulting from a high turnover per match than them (2.3)."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Congo DR recent form and results",
+        "data": "\u2022 Reuters DR Congo at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/congo-dr/\n  The Democratic Republic of Congo warmed up for their first World Cup appearance in \u200bmore than half a century with a <strong>0-0 \u200cdraw against Denmark</strong> on Wednesday.\n\n\u2022 Congo DR | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/congo-dr/team-news\n  Congo DR | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Congo DR squad at FIFA World Cup 2026\u2122.\n\n\u2022 World Cup 2026: What is DR Congo's current FIFA world ranking? - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/world-cup-2026-what-is-dr-congos-current-fifa-world-ranking/\n  However, they have yet to match their highest-ever ranking, which was 28th in July-August of 2017. DR Congo have improved their FIFA ranking spots, but they remain the <strong>second-lowest ranked national team in their group</strong> at the 2026 World Cup.\n\n\u2022 Portugal vs DR Congo live updates: World Cup 2026 game latest as Ronaldo starts - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/portugal-vs-dr-congo-live-updates-world-cup-2026-score-result-ronaldo/eGDbBHTcwKZg/\n  It is telling that Desabre speaks more of collective endeavour and resilience than he does of any specific tactical plan. They are most likely to line up in a changeable <strong>4-2-3-1/4-4-2 formation</strong>, with the fit-again Yoane Wissa flitting between ...\n\n\u2022 Portugal vs DR Congo, FIFA WC 2026 LIVE: Ronaldo's World Cup dream ignites; Starting lineups out | Mint\n  https://www.livemint.com/sports/football-news/portugal-vs-dr-congo-live-updates-fifa-world-cup-2026-nrg-stadium-houston-ronaldo-bruno-fernandes-ruben-dias-nuno-mendes-11781708814813.html\n  His appointment gives Portugal vs DR Congo a referee with recent major tournament exposure for one of the highest-profile opening games of the 2026 World Cup. ... DR Congo&#x27;s recent form is patchier. <strong>Their last 5 results read LWWDL</strong>. Sebastien ...\n\n\u2022 [Discussion] DR Congo will not change World Cup preparations despite US warning\n  https://www.reddit.com/r/soccer/comments/1tlhhcz/dr_congo_will_not_change_world_cup_preparations/\n  Why would they? They are not training in Congo.\n\n\u2022 [Discussion] World Cup 2026: DR Congo squad told to isolate before entering US\n  https://www.reddit.com/r/sports/comments/1tlgpkb/world_cup_2026_dr_congo_squad_told_to_isolate/\n  In good hands surely. Even their country is a Doctor."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Portugal vs DR Congo, FIFA World Cup 2026: Predicted lineups, head-to-head record, form guide - Sportstar\n  https://sportstar.thehindu.com/football/fifa-world-cup/portugal-vs-dr-congo-head-to-head-record-form-guide-predicted-lineups-xi-fifa-world-cup-2026-stats-news/article71111883.ece\n  Live Blog 2026-06-17T14:22:37+05:30AUS-W vs BAN-W Highlights, Women\u2019s T20 World Cup 2026: Australia thrashes Bangladesh by nine wickets ... Portugal vs DR Congo \u2014 <strong>Cristiano Ronaldo</strong> and Co.\n\n\u2022 Portugal vs Congo DR Stats, H2H, xG | FootyStats\n  https://footystats.org/international/portugal-national-team-vs-congo-dr-national-team-h2h-stats\n  These two clubs have never met before domestically based on our database and have <strong>no previous head to head stats that we can show</strong>. However, in the current season Portugal is in average home form while Congo DR are performing average away from home.\n\n\u2022 Portugal vs D.R. Congo Head-to-Head & Form Stats | Tips.GG\n  https://tips.gg/article/portugal-vs-dr-congo-head-to-head-wc2026/\n  <strong>There are no recorded head-to-head meetings between Portugal and D.R. Congo in international football</strong>. This World Cup 2026 fixture will be the first time these two nations have faced each other, meaning there is no historical H2H data to draw upon.\n\n\u2022 Portugal vs DR Congo live updates: World Cup 2026 game latest as Ronaldo starts - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/portugal-vs-dr-congo-live-updates-world-cup-2026-score-result-ronaldo/eGDbBHTcwKZg/\n  ... Join the conversation here or by emailing live@theathletic.com. ... <strong>Axel Tuanzebe</strong> spent much of his time as a Manchester United player out on loan. But there would have been times towards the end of his spell at Old Trafford when he came ...\n\n\u2022 Portugal VS DR Congo: Live Scores, Lineups, H2H & Odds\n  https://www.365scores.com/football/match/fifa-world-cup-5930/dr-congo-portugal-5028-14650-5930\n  With 365Scores, you can track how many times Portugal and DR Congo have faced off this season in the FIFA World Cup. You can also dive into all the head-to-head results, see which team has won more often, who has racked up more away victories, and explore a range of other stats for Portugal vs."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 2026 FIFA World Cup Group K - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_K\n  <strong>Group K</strong> of the 2026 FIFA World Cup will take place from June 17 to 27, 2026. The group consists of Portugal, DR Congo, Uzbekistan, and Colombia. The top two teams, and possibly the third-place team, will advance to the round of 32.\n\n\u2022 Portugal vs Congo DR | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021502\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group K</strong> \u2022 Match 23 \u00b7 Portugal \u00b7 17:00 \u00b7 Congo DR \u00b7 Kick-off in: 0 days \u00b7 0 hrs \u00b7 29 min \u00b7 10 sec \u00b7 Portugal \u00b7 17:00 \u00b7 Congo DR \u00b7 17 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Houston \u25cfHouston Stadium \u00b7 Where ...\n\n\u2022 Portugal vs. Congo DR (Jun 17, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760435/congo-dr-portugal\n  It&#x27;s day seven at the World Cup, and after we witnessed a sensational night in which Lionel Messi, Kylian Mbapp\u00e9 and Erling Haaland lit up the tournament, you can follow live updates and catch up on the action with ESPN. ... Odds for all 48 teams to advance from their group through the knockout stage and to win the 2026 World Cup.\n\n\u2022 Portugal VS DR Congo: Live Scores, Lineups, H2H & Odds\n  https://www.365scores.com/football/match/fifa-world-cup-5930/dr-congo-portugal-5028-14650-5930\n  With 365Scores, you can track how many times Portugal and DR Congo have faced off this season in the FIFA World Cup. You can also dive into all the head-to-head results, see which team has won more often, who has racked up more away victories, and explore a range of other stats for Portugal vs. DR Congo. With 365Scores, you can track the standings of Portugal and DR Congo in the FIFA World Cup standings.\n\n\u2022 FIFA World Cup Standings 2026: Live Group Tables, Results & Qualification Scenarios\n  https://www.covers.com/world-cup/group-standings\n  Live World Cup 2026 group standings with updated tables, qualification rules, tiebreakers, and betting context for group-stage matches."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Evaluates the defensive stability of Congo DR's key center-back.",
+        "data": "\u2022 Congo DR squad announcement | FIFA World Cup 2026\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/congo-dr-squad-announcement-sebastien-desabre\n  A few days after the squad was announced, Hibernian FC defender Rocky Bushiri had to withdraw due to injury. He is replaced by Aaron Tshibola, who plays for fellow Scottish team Kilmarnock. ... Chancel Mbemba Aaron Wan-Bissaka Alex Tuanzebe Arthur Masuaku Joris Kayembe Steve Kapuadi Aaron Tshibola Dylan Batubinsika G\u00e9d\u00e9on Kalulu\n\n\u2022 DR Congo at the 2026 World Cup: roster, list, players and group stage schedule - AS USA\n  https://en.as.com/soccer/world-cup/dr-congo-at-the-2026-world-cup-roster-list-players-and-group-stage-schedule-f202606-n/\n  Mbemba Chancel (Lille OSC) Kalulu Gedeon (Aris Limassol FC) Masuaku Arthur (RC Lens) Mukau Ngalayel (Lille OSC) Mbuku Nathanael (Montpellier HSC) Moutoussamy Samuel (Atromitos FC) Bongonda Theo (FC Spartak Moscow) Sadiki Noah (Sunderland AFC) Tshibola Aaron (Kilmarnock FC) Pickel Charles (RCD Espanyol) Kayembe Edo (Watford FC) Cipenga Brian (CD Castell\u00f3n) Kakuta Gael (AEL FC) Elia Meschack (Alanyaspor) Bakambu Cedric (Real Betis) Mayele Fiston (Pyramids FC) Wissa Yoane (Newcastle United FC) Banza Simon (Al Jazira) Wednesday, June 17, 1pm ET: Portugal vs DR Congo \u00b7\n\n\u2022 DR Congo World Cup 2026 team guide | Democratic Republic of the Congo football team | The Guardian\n  https://www.theguardian.com/football/2026/jun/10/dr-congo-world-cup-2026-team-guide\n  The Leopards are also comfortable switching to a back three, used notably during qualifying against Togo and South Sudan. With ball-playing defenders such as Axel Tuanzebe and Chancel Mbemba, plus wing-backs such as Arthur Masuaku and Aaron Wan-Bissaka, the system allows the team to play more aggressively.\n\n\u2022 DR Congo World Cup Squad 2026: Full 26-Player Roster (Leopards return after 52 years)\n  https://worldcuppass.com/dr-congo-world-cup-squad-2026/\n  The DR Congo World Cup Squad 2026 is set. Head coach S\u00e9bastien Desabre named his final 26 on May 18, with captain Chancel Mbemba leading the Leopards back to the World Cup for the first time since 1974, when they played as Zaire.\n\n\u2022 Portugal v DR Congo: World Cup 2026 line-ups, stats and preview for Cristiano Ronaldo team, TV channel, live online stream and prediction\n  https://www.101greatgoals.com/match-previews/world-cup-matches/portugal-v-dr-congo-world-cup-2026-cristiano-ronaldo-line-ups-stats-tv-channel-live-online-stream/\n  DR Congo starting XI: Lionel Mpasi, Aaron Wan-Bissaka, Chancel Mbemba, Axel Tuanzebe, Arthur Masuaku, Meschack Elia, Samuel Moutoussamy, Noah Sadiki, Nathanael Mbuku, Cedric Bakambu, Yoane Wissa"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Analyzes Congo DR's tactical setup against high-pressing European opposition.",
+        "data": "\u2022 DR Congo 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/dr-congo-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  The DR Congo tactical analysis reveals <strong>a team built on defensive discipline and rapid counterattacks</strong>. Operating primarily in a DR Congo formation of 4-2-3-1 or 4-3-3, the squad prioritizes structure over possession.\n\n\u2022 Portugal vs DR Congo Preview: Predicted Lineups, Team News & Tactical Analysis | 2026 World Cup Group K\n  https://www.rotowire.com/soccer/article/portugal-vs-dr-congo-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-k-118360\n  DR Congo are organized enough to keep it respectable and could threaten on the counter through Wissa, but the result is not in doubt. <strong>Portugal should break through before halftime and manage the game from there</strong>. ... For the full Group K tactical ...\n\n\u2022 Portugal vs DR Congo: FIFA World Cup 2026 Group K Preview & Predictions | Mathrubhumi English\n  https://english.mathrubhumi.com/sports/football/portugal-vs-dr-congo-fifa-world-cup-2026-preview-ekp05aac\n  <strong>DR Congo are expected to drop into a mid\u2011to\u2011low block, keep the central corridor compact, and hit Portugal on the break with early balls to Wissa and Bakambu</strong>.\n\n\u2022 Portugal vs. DR Congo\u2014World Cup: Preview, Predictions and Lineups\n  https://www.si.com/soccer/portugal-vs-dr-congo-world-cup-preview-predictions-lineups-6-17-26\n  With such creative midfielders ... the line, it could put DR Congo to the sword. <strong>The African side will sit back, soak up pressure and look to hurt Portugal on the counter attack</strong>\u2014a tactic effectively employed by several minnows ...\n\n\u2022 FIFA World Cup 2026: Congo\u2019s team earns just 12 per cent of Ronaldo\u2019s yearly pay but are biggest threat to Portugal; Here\u2019s why\n  https://www.financialexpress.com/sports/fifa-world-cup-2026-portugal-dr-congo-ronaldo-salary-tactical-preview/4269840/\n  <strong>An elite technical and economic audit of World Cup 2026&#x27;s Group K opener, where DR Congo&#x27;s low-block engine confronts Cristiano Ronaldo&#x27;s Portugal</strong>."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Identifies stadium conditions and climate factors that could favor Congo DR's athletic style.",
+        "data": "\u2022 Portugal vs DR Congo at World Cup 2026: TV channel, how to ...\n  https://www.espn.com/soccer/story/_/id/49069166/fifa-world-cup-2026-portugal-vs-dr-congo-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups\n  Key Details: ; Venue: Houston Stadium, Texas, USA ; Referee: Abdulrahman Al-Jassim (Qatar) ...\n\n\u2022 Portugal vs DR Congo performance-impairing heat - Climate Central\n  https://www.climatecentral.org/world-cup-2026/matches/23\n  Portugal vs DR Congo at Houston Stadium on June 17, 2026. 96% likelihood of performance-impairing heat with climate change.\n\n\u2022 DR Congo Fans' Travel Guide - World Cup 2026\n  https://www.motel6.com/travel-guides/world-cup/congo-dr-fan-travel-guide\n  DR Congo supporters can use the featured host cities as match-week hubs, with hotels, stadium access, and fan-energy corridors all mapped into one themed ...\n\n\u2022 Portugal DR Congo \ud83d\uddd3\ufe0f Wednesday, 17 June, 2026 GMT - Facebook\n  https://www.facebook.com/footmooddaily/posts/portugal-dr-congo%EF%B8%8F-wednesday-17-june-2026-gmt-1700-bst-1800-fifa-world-cup-round/1023034313396536/\n  Portugal DR Congo \ud83d\uddd3\ufe0f Wednesday, 17 June, 2026 \u23f0 GMT - 17:00 | BST - 18:00 FIFA World Cup - Round 1 \ud83c\udfdf\ufe0f Houston Stadium, Houston, Texas, ...\n\n\u2022 Portugal vs. Congo DR - NRG Park\n  https://www.nrgpark.com/event/portugal-vs-congo-dr/\n  Event Details. FIFA World Cup 2026\u2122. Group K \u2013 Match 23. This event will be held in Houston Stadium. Heading to the stadium for soccer this summer?"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Identifies external squad distractions or financial/administrative disputes.",
+        "data": "{\"topic\":\"Congo DR squad bonus dispute World Cup 2026\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Resolves Portugal's attacking lineup and Ronaldo's role.",
+        "data": "\u2022 Portugal lineup confirmed: Is Cristiano Ronaldo starting World Cup vs. Congo? - Yahoo Sports\n  https://sports.yahoo.com/articles/portugal-lineup-confirmed-cristiano-ronaldo-154912249.html\n  # Portugal lineup confirmed: Is Cristiano Ronaldo starting World Cup game today? HOUSTON \u2014 Three hours before Portugal kicked off its 2026 World Cup campaign against Congo on Wednesday, June 17, hundreds of fans wearing CR7 jerseys lined up in the rain outside NRG Stadium to see their idol play. Cristiano Ronaldo, one of the most decorated and famous soccer players on the planet, began his sixth World Cup as part of Portugal's starting lineup against Congo. Ronaldo entered Wednesday's game with eight career World Cup goals across 22 appearances. ## Portugal starting lineup. US forward #20 Fola\n\n\u2022 Portugal vs. DR Congo projected lineups, starting 11 for World Cup 2026 Group K game in Houston - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/portugal-dr-congo-lineup-starting-11-world-cup-2026/e914f1fcc09c97367875a317\n  DR Congo projected lineups, starting 11 for World Cup 2026 Group K game in Houston. That's certainly the approach of Cristiano Ronaldo as the relentless all-time great embarks upon his sixth World Cup adventure with Portugal. In the opposition corner for this first battle in North America for the Selecao is DR Congo, the African nation returning to this stage for the first time since 1974, when they competed as Zaire. Ronaldo is a five-time Champions League and Ballon d'Or winner, and the all-time leading goalscorer in international soccer. ## Portugal projected starting 11. Back-to-back Europ\n\n\u2022 Cristiano Ronaldo set for historic last hurrah at 2026 World Cup - USA Today\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/17/cristiano-ronaldo-sixth-world-cup-portugal/89542331007/\n  # Cristiano Ronaldo set for historic last hurrah at 2026 World Cup. June 17, 2026, 1:00 a.m. ET. The 2026 World Cup will be historic for Cristiano Ronaldo, whether Portugal wins the tournament or not. Ronaldo \u2014 along with his longtime partner in soccer excellence Lionel Messi \u2014 is set to play in a record-setting sixth World Cup. For the 41-year-old Ronaldo, the 2026 World Cup figures to be last international hurrah for the five-time Ballon d'Or winner. With Messi finally delivering World Cup glory for Argentina in 2022, Ronaldo overtook the undesirable designation of the greatest-ever player t\n\n\u2022 How good is Cristiano Ronaldo now? What to know about Portugal soccer legend's skills at age 41 - sportingnews.com\n  https://www.sportingnews.com/in/football/news/how-good-cristiano-ronaldo-now-portugal-age-41/ec97acc8d3b703de23055619\n  # How good is Cristiano Ronaldo now? What to know about Portugal soccer legend's skills at age 41. Cristiano Ronaldo is making sixth World Cup appearance. After lackluster showings at the 2022 World Cup and 2024 European Championships, Ronaldo is hoping to leave his mark on the stage he coveted so desperately across his career. And what can audiences expect out of the aging wonder at the 2026 World Cup for Portugal? Ronaldo is 41 years old. ## Is Cristiano Ronaldo still good? All of that is to say, Ronaldo is still a top-tier goal scorer. He\u2019s a finisher \u2014 and a damned good one at that. ## Cri\n\n\u2022 World Cup 2026: Why Cristiano Ronaldo may need the tournament of his life to lift Portugal - Yahoo Sports\n  https://sports.yahoo.com/soccer/article/world-cup-2026-why-cristiano-ronaldo-may-need-the-tournament-of-his-life-to-lift-portugal-053004726.html\n  # World Cup 2026: Why Cristiano Ronaldo may need the tournament of his life to lift Portugal. Cristiano Ronaldo is a Portugal icon and one of the best soccer players ever. He may also be an anchor on the team's chances of winning the 2026 World Cup. As Portugal opens its World Cup campaign on Wednesday against DR Congo, Ronaldo is set to become just the second player to play in six different World Cups after Lionel Messi became the first on Tuesday night"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Analyzes Portugal's immediate form and defensive shape leading into the tournament.",
+        "data": "\u2022 Portugal's Francisco Concei\u00e7\u00e3o scores goal, taking lead over Nigeria - FOX Sports\n  https://www.foxsports.com/watch/fmc-q0z8o3fa4ke5r2f3\n  Access and manage your favorites here. # Portugal's Francisco Concei\u00e7\u00e3o scores goal, taking lead over Nigeria. ## Francisco Concei\u00e7\u00e3o scored a goal that gave Portugal a 2-1 lead over Nigeria. 22 MINS AGO\u30fbInternational Friendlies\u30fb1:15. Francisco Conceicao  FRIENDLY - Portugal vs. Nigeria - 06/10/2026  Portugal  International Friendlies  Top Plays. ### Portugal vs Nigeria Extended Highlights | International Friendly. ### Declan Rice scores in 10' to give England a lead over Costa Rica. ### Akor Adams scores in 37' to bring Nigeria level at 1-1 with Portugal. ### Pedro Neto scores beautiful goal \n\n\u2022 Francisco Concei\u00e7\u00e3o finds the gap and doesn't miss \ud83d\udd25 - FOX Sports\n  https://www.foxsports.com/watch-vertical/fmc-3oantmnv4vxmxzzt\n  Access and manage your favorites here. # Francisco Concei\u00e7\u00e3o finds the gap and doesn't miss \ud83d\udd25. Francisco Conceicao  FRIENDLY - Portugal vs. Nigeria - 06/10/2026  Portugal  Soccer  International Friendlies. ### Madueke couldn't help but smile after missing a WIDE-OPEN goal \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f. ### A look at the FIFA World Cup final hosts, New York New Jersey Stadium \ud83d\udccd. ### Patrick Sequeira is making it hard against England \ud83e\udde4. ### It was not Cristiano Ronaldo's night... ### A perfect start for England \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f. ### An unexpected equalizer from Nigeria against Portugal \ud83c\uddf3\ud83c\uddec. ### Talk about a perfect start in Po\n\n\u2022 Portugal vs. Congo DR - Live Score - June 17, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-portugal-vs-congo-dr-jun-17-2026-game-boxscore-647636\n  Access and manage your favorites here. ## Portugal vs Congo DR. Tomorrow at 5:00 PM on. Portugal, DR Congo start campaign in Houston Stadium. # Portugal vs. Congo DR: Jun 17, 2026. ## MATCHUP## ODDS## STANDINGS. ### Group K Preview: Portugal, Colombia, DR Congo, Uzbekistan. | 6/6 | CHI (H) | W2-1 |. | 3/31 | USA (A) | W2-0 |. | 6/3 | DEN (A) | D0-0 |. | 1/6 | ALG | L1-0 |. ### ODDS. A bet of $357 would win $457 total if Portugal wins and a bet of $100 would win $1,100 total if Congo DR wins. The combined final score of both teams is set at 2.5. Cristiano Ronaldo is confident he will perform fo\n\n\u2022 Patrick Sequeira is making it hard against England \ud83e\udde4 - FOX Sports\n  https://www.foxsports.com/watch-vertical/fmc-fnur2qeikgnxj8cb\n  Access and manage your favorites here. # Patrick Sequeira is making it hard against England \ud83e\udde4. Nigeria - 06/10/2026  Portugal  Soccer  International Friendlies. ### A look at the FIFA World Cup final hosts, New York New Jersey Stadium \ud83d\udccd. ### It was not Cristiano Ronaldo's night... ### A perfect start for England \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f. ### An unexpected equalizer from Nigeria against Portugal \ud83c\uddf3\ud83c\uddec. ### Talk about a perfect start in Portugal's send-off match \ud83c\uddf5\ud83c\uddf9. ### Pedro Neto scores beautiful goal to give Portugal 1-0 lead over Nigeria. ### Neymar is the centerpiece for local artists in Novo Hamburgo, Rio Gran\n\n\u2022 Portugal vs Nigeria Extended Highlights | International Friendly - FOX Sports\n  https://www.foxsports.com/watch/fmc-pujuag8jg109mi57\n  Access and manage your favorites here. # Portugal vs Nigeria Extended Highlights | International Friendly. ## Check out the full match highlights from the international friendly between Portugal and Nigeria. Francisco Conceicao  FRIENDLY - Portugal vs. Nigeria - 06/10/2026  Cristiano Ronaldo  Portugal  Nigeria  Akor Adams  International Friendlies  Game Recaps  Pedro Neto. ### Catch Up with Highlights. ### Portugal's Francisco Concei\u00e7\u00e3o scores goal, taking lead over Nigeria. ### Declan Rice scores in 10' to give England a lead over Costa Rica. ### Akor Adams scores in 37' to bring Nigeria leve"
+      }
+    ],
+    "research_cost": 0.116,
+    "wallet_before": 2.324,
+    "wallet_after": 2.208,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "confidence_reason": "Confidence is capped at 6 due to extreme Houston heat that will sap Portugal's high-intensity press and the potential absence of key defender R\u00faben Dias.",
+      "reasoning": "While Portugal's elite attacking depth makes them the favorites, the extreme Houston heat and DR Congo's physical low-block will likely slow the tempo and limit the margin of victory.",
+      "probabilities": {
+        "home": 58,
+        "draw": 27,
+        "away": 15
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Portugal enters the tournament in excellent form, winning four of their last five matches, including recent friendly victories over Nigeria (2-1), Chile (2-1), and the USA (2-0).",
+      "away_form": "DR Congo has shown mixed recent form with two wins, one draw, and two losses in their last five matches, but they demonstrated defensive resilience with a 0-0 draw against Denmark in their final warm-up.",
+      "key_injuries": [
+        "Portugal: Key center-back R\u00faben Dias is doubtful and has been training separately from the main squad.",
+        "DR Congo: Defender Rocky Bushiri withdrew from the squad due to injury and was replaced by Aaron Tshibola."
+      ],
+      "tactical_matchup": "DR Congo will deploy a compact, physical low-block (likely a 5-3-2 or defensive 4-2-3-1) to stifle space and hit on the counter, while Portugal will dominate possession and rely on creative central overloads to break them down.",
+      "group_stakes": "In Group K, favorite Portugal aims for a strong opening win to secure the top spot, while DR Congo seeks to play spoiler to gain a crucial edge over Colombia and Uzbekistan for qualification.",
+      "home_win_signals": [
+        "Portugal's elite squad depth and attacking quality, spearheaded by Cristiano Ronaldo, Bruno Fernandes, and Bernardo Silva.",
+        "Portugal's highly efficient high-press, leading Europe in shots per match (25) and goals from high turnovers (0.5 per match) during qualifiers.",
+        "Strong momentum from consecutive friendly wins against USA, Chile, and Nigeria."
+      ],
+      "away_win_signals": [
+        "Dynamic counter-attacking threat from the front duo of Yoane Wissa and Cedric Bakambu.",
+        "A physically robust defense featuring Premier League-experienced players like Aaron Wan-Bissaka, Axel Tuanzebe, and Chancel Mbemba."
+      ],
+      "draw_signals": [
+        "DR Congo's proven ability to frustrate European sides, as seen in their recent 0-0 draw against Denmark.",
+        "A 96% likelihood of performance-impairing heat in Houston, which could sap Portugal's high-intensity press and favor a slow, defensive game.",
+        "Potential defensive instability for Portugal if key center-back R\u00faben Dias is unable to start."
+      ],
+      "contradictions": [
+        "Portugal's overwhelming attacking statistics conflict with DR Congo's highly organized defensive structure, which successfully shut out Denmark."
+      ],
+      "strategy_applied": [
+        "None directly specified for POR vs COD, but principles from ESP vs CPV (prioritizing physical low-block over possession) and KSA vs URU (prioritizing heat/squad news over history) were applied."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting Portugal's qualifying high-press statistics and friendly wins, which are highly unlikely to replicate under extreme tournament conditions.",
+        "Assuming individual attacking talent will easily bypass a compact defensive structure without accounting for how extreme heat slows down offensive transitions."
+      ],
+      "underweighted_factors": [
+        "The 96% likelihood of performance-impairing heat in Houston, which directly neutralizes Portugal's high-intensity press and favors DR Congo's low-block, low-tempo style.",
+        "The severe defensive vulnerability for Portugal if key center-back R\u00faben Dias is sidelined, leaving them exposed to DR Congo's direct counter-attack."
+      ],
+      "draw_risk": "high \u2014 Extreme Houston heat will sap Portugal's pressing energy, playing directly into DR Congo's proven ability to frustrate European sides in a low-tempo, physical block.",
+      "favorite": "home",
+      "confidence_cap": 6,
+      "verdict": "While Portugal is the paper favorite, the combination of extreme climate conditions, defensive injury doubts, and DR Congo's physical resilience makes a comfortable home win highly suspect."
+    },
+    "full_reasoning": "HOME_PCT: 58\nDRAW_PCT: 27\nAWAY_PCT: 15\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: Confidence is capped at 6 due to extreme Houston heat that will sap Portugal's high-intensity press and the potential absence of key defender R\u00faben Dias.\nREASONING: While Portugal's elite attacking depth makes them the favorites, the extreme Houston heat and DR Congo's physical low-block will likely slow the tempo and limit the margin of victory.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
