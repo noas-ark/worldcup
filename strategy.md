@@ -16,6 +16,7 @@
 - IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.
 - ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.
 - AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.
+- POR vs COD: Prioritize extreme weather and physical low-block over attacking tempo.
 
 ## Data sources
 - use: Metrics (https://skim402.com/api/v2/read) — defense (BRA vs MAR)
@@ -38,6 +39,8 @@
 - use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — fitness (ARG vs ALG)
 - use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — tactics (AUT vs JOR)
 - use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — injuries (AUT vs JOR)
+- use: Venue (https://websearch--gw.swerver.net/search) — heat (POR vs COD)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — low-block (POR vs COD)
 - skip: Previews (https://news-x402.com/news/recent) — outcomes (BRA vs MAR)
 - skip: Metrics (https://skim402.com/api/v2/read) — mapping (AUS vs TUR)
 - skip: Previews (https://news-x402.com/news/recent) — math (AUS vs TUR)
@@ -62,3 +65,4 @@
 - skip: Venue (https://websearch--gw.swerver.net/search) — market (ARG vs ALG)
 - skip: Venue (https://websearch--gw.swerver.net/search) — weather (AUT vs JOR)
 - skip: Metrics (https://skim402.com/api/v2/read) — history (AUT vs JOR)
+- skip: Previews (https://news-x402.com/news/recent) — administration (POR vs COD)
