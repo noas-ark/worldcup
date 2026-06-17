@@ -14,6 +14,7 @@
 - IRN vs NZL: Prioritize fatigue/resistance over quality.
 - FRA vs SEN: Prioritize fitness over venue/familiarity.
 - IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.
+- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.
 
 ## Data sources
 - use: Metrics (https://skim402.com/api/v2/read) — defense (BRA vs MAR)
@@ -32,6 +33,8 @@
 - use: Venue (https://websearch--gw.swerver.net/search) — travel (IRN vs NZL)
 - use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — fitness (FRA vs SEN)
 - use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — attacks (IRQ vs NOR)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — defense (ARG vs ALG)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — fitness (ARG vs ALG)
 - skip: Previews (https://news-x402.com/news/recent) — outcomes (BRA vs MAR)
 - skip: Metrics (https://skim402.com/api/v2/read) — mapping (AUS vs TUR)
 - skip: Previews (https://news-x402.com/news/recent) — math (AUS vs TUR)
@@ -52,3 +55,5 @@
 - skip: Metrics (https://skim402.com/api/v2/read) — familiarity (FRA vs SEN)
 - skip: Venue (https://websearch--gw.swerver.net/search) — climate (IRQ vs NOR)
 - skip: Previews (https://news-x402.com/news/recent) — format (IRQ vs NOR)
+- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) — climate (ARG vs ALG)
+- skip: Venue (https://websearch--gw.swerver.net/search) — market (ARG vs ALG)
