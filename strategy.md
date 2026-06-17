@@ -17,6 +17,7 @@
 - ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.
 - AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.
 - POR vs COD: Prioritize extreme weather and physical low-block over attacking tempo.
+- ENG vs CRO: Prioritize transition pace and defensive flaws over microclimate and history.
 
 ## Data sources
 - use: Metrics (https://skim402.com/api/v2/read) — defense (BRA vs MAR)
@@ -41,6 +42,8 @@
 - use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — injuries (AUT vs JOR)
 - use: Venue (https://websearch--gw.swerver.net/search) — heat (POR vs COD)
 - use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — low-block (POR vs COD)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — transitions (ENG vs CRO)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — flaws (ENG vs CRO)
 - skip: Previews (https://news-x402.com/news/recent) — outcomes (BRA vs MAR)
 - skip: Metrics (https://skim402.com/api/v2/read) — mapping (AUS vs TUR)
 - skip: Previews (https://news-x402.com/news/recent) — math (AUS vs TUR)
@@ -66,3 +69,5 @@
 - skip: Venue (https://websearch--gw.swerver.net/search) — weather (AUT vs JOR)
 - skip: Metrics (https://skim402.com/api/v2/read) — history (AUT vs JOR)
 - skip: Previews (https://news-x402.com/news/recent) — administration (POR vs COD)
+- skip: Venue (https://websearch--gw.swerver.net/search) — microclimate (ENG vs CRO)
+- skip: Previews (https://news-x402.com/news/recent) — history (ENG vs CRO)
