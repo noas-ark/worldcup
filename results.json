@@ -4168,5 +4168,381 @@
     "reflected": true,
     "reflected_at": "2026-06-17T00:30:33.557146+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)"
+  },
+  {
+    "match": "ARG vs ALG",
+    "home": "ARG",
+    "away": "ALG",
+    "kickoff": "2026-06-17T01:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defensive organization over individual attack.\n- AUS vs TUR: Prioritize low-block discipline over possession metrics.\n- NED vs JPN: Prioritize defensive resilience over chance volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize tier gaps and form over history.\n- CIV vs ECU: Prioritize home advantage and fitness over risk aversion.\n- SWE vs TUN: Prioritize scoring efficiency over low-block setups.\n- ESP vs CPV: Prioritize physical low-block organization over possession dominance.\n- BEL vs EGY: Prioritize low-block defensive discipline over favorite status.\n- KSA vs URU: Prioritize environmental heat and squad news over historical matchups.\n- IRN vs NZL: Prioritize travel fatigue and low-block resistance over squad quality.\n- FRA vs SEN: Prioritize squad fitness over venue conditions and league familiarity.\n\n## Data sources\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Tournament metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue search (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue search (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Tactical previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue search (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Tournament metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)",
+    "information_needs": "FORM\n- What were the tactical and physical outputs of both teams in their respective Matchday 1 fixtures of this tournament, and did Algeria show defensive vulnerability under sustained high-volume crossing?\n- What is Argentina's goal-scoring efficiency and clean-sheet ratio over their last five competitive matches leading into June 2026?\n\nPLAYERS\n- Is Lionel Messi fit and projected to start in his playmaker role, or is Argentina utilizing a younger, high-pressing frontline of Juli\u00e1n \u00c1lvarez and Lautaro Mart\u00ednez?\n- Which of Algeria's key progressors (e.g., Rayan A\u00eft-Nouri or Isma\u00ebl Bennacer) are carrying yellow cards or minor knocks that could limit their defensive intensity in midfield?\n\nTACTICS\n- How does Algeria's defensive block (typically a 4-1-4-1 or 5-4-1) handle zone-14 central entries, and do they have the lateral quickness to match Argentina's narrow box-midfield rotations?\n- Will Argentina employ a high, aggressive counter-press, and how effective is Algeria's outlet passing to transition threats like Mohamed Amoura when under immediate pressure?\n\nH2H\n- How has Algeria historically fared against CONMEBOL opponents in competitive tournaments, and are there structural trends from those matches that match Argentina's current build-up style?\n\nCONTEXT\n- Given the Matchday 1 results of this group, what specific mathematical outcomes (e.g., goal difference, head-to-head tiebreakers) do both teams require from this match to secure round-of-32 qualification?\n\nMARKET\n- What is the current Asian Handicap line, and has there been significant sharp money backing the Under on total goals since the opening tournament matches?\n\nNEWS\n- Have there been any reports of camp disharmony, illness, or travel-related fatigue within the Algerian delegation since arriving at their base camp?\n\nVENUE\n- Which North American host stadium is staging this match, what is the local temperature/humidity at kickoff (01:00Z), and is the pitch a temporary grass-over-turf installation that could slow down Argentina's passing tempo?",
+    "research_gaps": [
+      {
+        "need": "What is the precise distribution of 'sharp money' (as opposed to public money) backing the Under on total goals since the opening tournament matches?",
+        "category": "MARKET",
+        "ideal_service": "An API providing direct sportsbook liability tracking, sharp action indicators, and betting volume percentages (tickets vs. money) for major tournaments."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Argentina vs Algeria World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Argentina vs Algeria World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Argentina World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Argentina recent form and results",
+        "need": "How has Argentina performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Algeria World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Algeria recent form and results",
+        "need": "How has Algeria performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Argentina vs Algeria head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Argentina vs Algeria World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Verify official group standings and Matchday 1 results to establish precise mathematical qualification scenarios.",
+        "need": "Given the Matchday 1 results of this group, what specific mathematical outcomes (e.g., goal difference, head-to-head tiebreakers) do both teams require from this match to secure round-of-32 qualification?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.transfermarkt.com/argentinien/spielplandatum/verein/3437/plus/0/saison_id/2025"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Gather precise statistical data on Argentina's competitive results, goal outputs, and defensive shutouts in their lead-up matches.",
+        "need": "What is Argentina's goal-scoring efficiency and clean-sheet ratio over their last five competitive matches leading into June 2026?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Argentina vs Algeria World Cup 2026 tactical preview formation lineup rotations",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Analyze tactical previews highlighting Algeria's defensive block setup and their capability to handle narrow central rotations.",
+        "need": "How does Algeria's defensive block (typically a 4-1-4-1 or 5-4-1) handle zone-14 central entries, and do they have the lateral quickness to match Argentina's narrow box-midfield rotations?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Argentina vs Algeria World Cup 2026 stadium venue pitch turf grass weather temperature",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Retrieve match venue specifications, turf installation details, and local weather forecasts to assess pitch speed and player fatigue.",
+        "need": "Which North American host stadium is staging this match, what is the local temperature/humidity at kickoff (01:00Z), and is the pitch a temporary grass-over-turf installation that could slow down Argentina's passing tempo?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Algeria vs CONMEBOL head to head record competitive matches",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Analyze historical match patterns, defensive vulnerabilities, and tactical trends for Algeria when facing South American opposition.",
+        "need": "How has Algeria historically fared against CONMEBOL opponents in competitive tournaments, and are there structural trends from those matches that match Argentina's current build-up style?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Algeria World Cup team news camp illness fatigue",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Check for recent non-tactical squad disruptions, illnesses, or travel fatigue in the Algerian delegation using global news intelligence.",
+        "need": "Have there been any reports of camp disharmony, illness, or travel-related fatigue within the Algerian delegation since arriving at their base camp?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Argentina vs Algeria World Cup 2026 betting odds Asian Handicap total goals",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Search for current market lines, handicap payouts, and public betting consensus trends.",
+        "need": "What is the current Asian Handicap line, and has there been significant sharp money backing the Under on total goals since the opening tournament matches?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Argentina World Cup 2026 Lionel Messi injury fitness Julian Alvarez Lautaro Martinez",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Determine Lionel Messi's physical readiness and the projected starting frontline configuration for Argentina.",
+        "need": "Is Lionel Messi fit and projected to start in his playmaker role, or is Argentina utilizing a younger, high-pressing frontline of Juli\u00e1n \u00c1lvarez and Lautaro Mart\u00ednez?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Algeria World Cup 2026 Rayan Ait-Nouri Ismael Bennacer injury suspension",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Identify suspensions, card accumulations, or physical limitations among Algeria's critical progression and midfield players.",
+        "need": "Which of Algeria's key progressors (e.g., Rayan A\u00eft-Nouri or Isma\u00ebl Bennacer) are carrying yellow cards or minor knocks that could limit their defensive intensity in midfield?",
+        "category": "PLAYERS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Argentina vs. Algeria - Live Score - June 16, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-argentina-vs-algeria-jun-16-2026-game-boxscore-647635\n  ALG\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $243 would win $343 total if Argentina wins and a bet of $100 would win $788 total if Algeria wins\n\n-243\n\nARG\n\n+688\n\nALG\n\nOVER/UNDER 2.5 GOALS\n\nThe combined final score of both teams is set at 2.5\n\n-105\n\nOVER 2.5\n\n-117\n\nUNDER 2.5\n\n### Preview\n\n### World Cup Match Day 6: Messi, Mbapp\u00e9, Haaland Headline Star-Studded Slate\n\nTuesday is one of the most star-studded days in the group stage of the 2026 FIFA World Cup. \n\n8 HOURS AGO \u2022 FOX SPORTS\n\nPOWERED BY\n\nKansas City, MO\n\n69\u00b0\n\nWind 10 mph SW\n\n81\u00b0 12:00\n\n79\u00b0 1:00\n\n76\u00b0 2:00\n\n75\u00b0 3:00\n\nARG\n\nFollow a t\n\n\u2022 Argentina v Algeria: World Cup 2026 \u2013 live - The Guardian\n  https://www.theguardian.com/football/live/2026/jun/17/fifa-world-cup-2026-live-argentina-v-algeria-updates-arg-vs-alg-group-j-match-score-latest\n  01.14 BST\n\n## Algeria XI\n\nVladimir Petkovic has opted for a 5-2-3 formation in a bid to stiffen his side\u2019s defence. Star man Riyad Mahrez starts on the bench.\n\n23 Zidane; 17 Belghali, 2 Mandi, 21 Bensebaini, 5 Belaid 15 Ait-Nouri; 19 Bentaleb, 14 Boudaoui; 22 Maza, 11 Hadj Moussa, 9 Gouiri.\n\n01.13 BST\n\n## Argentina XI\n\nLionel Scaloni has left in-demand Julian Alvarez on the bench for Argentina\u2019s opening match. Cristian Romero is fit to start after fleeing Tottenham\u2019s relegation battle.\n\n23 E Martinez; 4 Montiel, 13 Romero, 6 Li Martinez, 25 Medina; 7 De Paul, 24 Fernandez, 20 Mac Allister; 10 \n\n\u2022 Argentina vs Algeria at FIFA World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN\n  https://www.espn.com/soccer/story/_/id/49059251/argentina-vs-algeria-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  1dSam Borden\n\nFour goals and an electric display: USMNT's World Cup opener was nearly perfect\n\n1dJeff Carlisle\n\nInside England's World Cup prep: Tuchel's squad survive storms, heat in Florida\n\n2dJames Olley\n\nFrom gridiron to pitch: How NFL stadiums have transformed for the World Cup\n\n2dCesar Hernandez\n\nThe World Cup of more: There's never been a tournament like this one\n\n3dSam Borden\n\nSix complaints about 2026 World Cup, and why it might be better than we think\n\n3dGabriele Marcotti\n\n2026 World Cup betting preview: One bet to make on every team\n\n5dVictoria Matiash and Liz Loza\n\n# Argentina vs A\n\n\u2022 Argentina Starts Martinez as Goalkeeper for Opening Game Against Algeria - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/argentina-starts-martinez-as-goalkeeper-for-opening-game-against-algeria/\n  > Dibu Mart\u00ednez got tested and the results were good. He had the cast removed. He's going to keep the finger protected but he can put on the gloves. He's going to start demanding it. Everything's proceeding according to what they planned. He's going to play goalkeeper against Algeria.\"\n> \n> \n> Gaston Edul\n\nIn the first match of the 2026 World Cup, Argentina will play Algeria. This match will take place on June 17. The Latin American team will also face Austria and Jordan in Group J.\n\nThe 2026 World Cup will take place from June 11 to July 19 in Canada, the United States, and Mexico. Argentina \n\n\u2022 2026 World Cup parlay, best bets: Top picks for matches on Tuesday include Argentina, France-Senegal - CBS Sports\n  https://www.cbssports.com/soccer/news/2026-world-cup-parlay-best-bets-top-picks-for-matches-on-tuesday-include-argentina-france-senegal/\n  ## Argentina money line vs. Algeria\n\nIt's possible Lionel Messi, who picked up an injury in MLS, sits this opener out. Argentina have experience and talent across the board, so even Messi's absence won't derail them as they attempt to win their fourth international trophy in succession. Algeria have been a tough out in World Cups but they have only made the Round of 16 once in their competitive history. Eimer believes Argentina \"win thi"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Where to Watch Argentina vs Algeria: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-argentina-vs-algeria-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Argentina vs Algeria Team News\n\nArgentina will be without Nicolas Tagliafico after the left-back suffered a calf injury in a warm-up match against Honduras. However, Leandro Paredes and Nico Gonz\u00e1lez are both close to full fitness after recovering from muscular issues.\n\nFor Algeria, Ramy Bensebaini is the only injury concern as he continues to recover from an ankle problem.\n\n## Argentina vs Algeria Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Argentina to Win | Draw | Algeria to Win |\n| 1xBet | 1.47 | 4.65 | 8.45 |\n| Betway | 1.46 | 4.40 | 7.80 |\n\nClaim Exclusive World Cup Bonuses o\n\n\u2022 Argentina at the FIFA World Cup 2026: Defending Champions Favoured to Top Group J - Telecom Asia Sport\n  https://www.telecomasia.net/in/blog/argentina-at-fifa-world-cup-2026/\n  ## Weaknesses\n\nVulnerability of aging veterans: The intense physical demands of the tournament could strain the team's senior players, potentially increasing the risk of soft tissue injuries and muscular issues..\n\nDefensive vulnerability on the flanks: The roster is currently short on top-tier depth at the fullback positions. This shortage makes Argentina potentially exploitable by elite wingers who can dominate the wide areas.\n\nMessi has hit top gear before the World Cup: Leo has 4+4 in his last three MLS matches\n\n## Best World Cup results\n\nThe Argentine squad has six accomplishments in the W\n\n\u2022 Argentina v Algeria: World Cup 2026 \u2013 live - The Guardian\n  https://www.theguardian.com/football/live/2026/jun/17/fifa-world-cup-2026-live-argentina-v-algeria-updates-arg-vs-alg-group-j-match-score-latest\n  I\u2019ll be back shortly with team news and a round-up of all the matchday action so far. In the meantime you can keep an eye on Iraq v Norway and email any thoughts about the tournament so far to jonathan.howcroft.freelance@theguardian.com.\n\nExplore more on these topics\n\n World Cup 2026\n World Cup\n Argentina\n Algeria football team\n Australia sport\n US sports\n\nShare\n\nReuse this content\n\n## Most viewed\n\n## Most viewed [...] > The holders arrive at the World Cup with a squad that knows each other almost by heart but perhaps not with its players in peak physical condition \u2013 several had injury set-bac\n\n\u2022 Algeria vs. Argentina - June 16, 2026 - Bleacher Report\n  https://bleacherreport.com/game/argentina-vs-algeria-national-football-2026-6-16-18-00\n  # Algeria vs. Argentina - June 16, 2026 | Live Scores, Updates, Odds, Injury News and Recaps | Bleacher Report\n\n\n\nSoccer\n\nHomeScoresTeamsFIFA World Cup 2026Transfer RumorsUSMNTUSWNTB/R 99: Ranking Best Players EverPremier LeagueChampions LeagueLa LigaSerie ABundesligaMLS\n\n\u2022 When Does Argentina Play at the 2026 FIFA World Cup? Full Fixtures, Dates & Kick-Off Times - Yahoo Sports\n  https://sports.yahoo.com/articles/does-argentina-play-2026-fifa-182000470.html\n  # When Does Argentina Play at the 2026 FIFA World Cup? Full Fixtures, Dates & Kick-Off Times - Yahoo Sports\n\n | Kick-off Time (EDT) |\n --- \n| Argentina vs Algeria | June 16, 2026 | 9:00 PM EDT |\n| Argentina vs Austria | June 22, 2026 | 1:00 PM EDT |\n| Argentina vs Jordan | June 27, 2026 | 10:00 PM EDT |\n\n## Argentina 2026 FIFA World Cup Squad\n\nArgentina head into the 2026 FIFA World Cup with a squad that blends experienced veterans with emerging talent.\n\nAdvertisement\n\nAdvertisement\n\nAdvertisement\n\nImage 44: Nicolas Otamendi of Aregntina holds up the World Cup trophy as he and his teammates ce"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Argentina recent form and results",
+        "data": "\u2022 Reuters Argentina at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/argentina/\n  Follow Argentina&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Argentina vs Algeria Head-to-Head & Form Stats | Tips.GG\n  https://tips.gg/article/argentina-vs-algeria-head-to-head-wc2026/\n  Recent highlights include a 6-0 ... (3-0) in the days immediately before this World Cup fixture. 10 Jun 2026 \u2014 <strong>Argentina vs Iceland: 3-0 (W)</strong> \u2014 Home...\n\n\u2022 Argentina World Cup Squad 2026: Full 26-Player Roster (Messi's 6th)\n  https://worldcuppass.com/argentina-world-cup-squad-2026/\n  Their recent form has been strong, including <strong>warm-up wins over Honduras and Iceland</strong> just before the tournament. Lionel Scaloni, 48, has managed Argentina since 2018 and oversaw the most successful period in the nation\u2019s modern history.\n\n\u2022 Argentina | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/argentina\n  Argentina | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Argentina squad at FIFA World Cup 2026\u2122.\n\n\u2022 Argentina 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/argentina-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  Full preview of Argentina for the 2026 World Cup, including squad breakdown, key players, and tactical analysis of their chances.\n\n\u2022 [Discussion] ARGENTINA 2026 WORLD CUP SQUAD. Can Argentina defend their Title?\n  https://www.reddit.com/r/football/comments/1tqkitk/argentina_2026_world_cup_squad_can_argentina/\n  They\u2019re bringing De Paul? Bro runs like others do in a legends charity match 10 years after retiring"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Algeria recent form and results",
+        "data": "\u2022 Reuters Algeria at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/algeria/\n  Austria coach Ralf Rangnick is ... Anis Hadj Moussa scored on his home ground to give Algeria a surprise <strong>1-0 away win over \u200bthe Netherlands</strong> in their World Cup warm-up on Wednesday....\n\n\u2022 Algeria | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/algeria/team-news\n  Algeria | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Algeria squad at FIFA World Cup 2026\u2122.\n\n\u2022 Argentina vs Algeria Head-to-Head & Form Stats | Tips.GG\n  https://tips.gg/article/argentina-vs-algeria-head-to-head-wc2026/\n  10 Jun 2026 \u2014 Argentina vs Iceland: ... head into the tournament with a mixed but not unconvincing recent record: <strong>3 wins, 2 draws and 1 defeat</strong> from their last six matches, giving a points-per-game figure of 1.83....\n\n\u2022 Algeria World Cup 2026 team guide | Algeria football team | The Guardian\n  https://www.theguardian.com/football/2026/jun/08/algeria-world-cup-2026-team-guide\n  On paper, this team has an impressive recent record: <strong>a friendly victory over the Netherlands made it 21 wins, four draws and three defeats</strong> from 28 matches under Vladimir Petkovic, with 67 goals scored.\n\n\u2022 Algeria: 2026 FIFA World Cup Schedule, Results, Roster, Stats - NBC Sports\n  https://www.nbcsports.com/soccer/world-cup/algeria\n  Full Algeria schedule, results, roster, stats, news, highlights and more from the 2026 FIFA World Cup"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Argentina vs. Algeria: Head-to-head record and past meetings ahead of 2026 World Cup clash - Sports Mole\n  https://www.sportsmole.co.uk/football/argentina/world-cup-2026/head-to-head/argentina-vs-algeria-head-to-head-record-and-past-meetings_599270.html\n  ... History will be made on Tuesday night, as <strong>Argentina and Algeria go head-to-head for the first time in a competitive match, with their only previous meeting being a friendly almost 20 years ago</strong>.\n\n\u2022 Argentina vs. Algeria Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/argentina_vs_algeria.php\n  In the history of World Cups, Argentina National Team faced Algeria in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 Argentina vs Algeria Head-to-Head & Form Stats | Tips.GG\n  https://tips.gg/article/argentina-vs-algeria-head-to-head-wc2026/\n  The direct head-to-head history between Argentina and Algeria is extremely limited: <strong>the two nations have met just once in recorded international competition</strong>. That solitary encounter, played on 5 June 2007, produced a high-scoring 4-3 victory ...\n\n\u2022 Argentina vs Algeria: Check Head-to-Head Statistics, Teams Stats Up, Results, Date, Time, Watch Live, Lineups, LIVE Streaming Details, All You Need To Know FIFA World Cup 2026\n  https://sundayguardianlive.com/sports/argentina-vs-algeria-check-head-to-head-statistics-teams-stats-up-results-date-time-watch-live-lineups-live-streaming-details-all-you-need-to-know-fifa-world-cup-2026-208374/\n  Argentina vs Algeria, FIFA World Cup 2026 All You Need To Know: Holders Argentina begin their hotly-anticipated FIFA World Cup 2026 title defence with an exciting opening Group J encounter against Algeria at Kansas City Stadium. Scaloni\u2019s side go into the tournament as firm favourites after ...\n\n\u2022 Argentina vs Algeria: All-time Head-to-head record ahead of FIFA World Cup 2026\n  https://khelnow.com/football/world-football-argentina-vs-algeria-head-to-head-fifa-world-cup-202606\n  The only previous meeting ended in a thrilling 4-3 victory for Argentina in an international friendly played in 2007. <strong>Argentina lead the head-to-head record with one win from one meeting</strong>, while Algeria are yet to register a victory.\n\n\u2022 [Discussion] Pre-Match Thread: Algeria vs Argentina - World Cup 2026\n  https://www.reddit.com/r/AlgerianFootball/comments/1u6u6eo/prematch_thread_algeria_vs_argentina_world_cup/\n  locked in 12 months on NewdyTV.COM before the world cup and i have not regretted a single day the 4k on match days is on a completely different level than anything i had before\n\n\u2022 [Discussion] Your thoughts about algeria vs Argentina\n  https://www.reddit.com/r/Algeria_213/comments/1u5rsq5/your_thoughts_about_algeria_vs_argentina/\n  Good luck Algeria full support from Morocco\n\n\u2022 [Discussion] Algeria vs Argentina World Cup Match\n  https://www.reddit.com/r/algeria/comments/1u5aeht/algeria_vs_argentina_world_cup_match/\n  I'm sure nobody would mind you wearing Moroccan jersey , however its just a rival team footbalisticly speaking ,portugal aint a rival of argentina ,so I'd go for this one if you're supporting Algeria\n\n\u2022 [Discussion] My humble and neutral opinion on who will win the 2026 World Cup.\n  https://www.reddit.com/r/algeria/comments/1u0lhdm/my_humble_and_neutral_opinion_on_who_will_win_the/\n  Very realistic indeed"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Argentina vs Algeria | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021496\n  The official site of the international governing body of football with news, national associations, competitions, results, fixtures, development, organisation, world rankings, statistics, the International Football Association Board, history, laws of the game, futsal, publications, downloads, and contact details.\n\n\u2022 2026 FIFA World Cup Group J - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_J\n  <strong>The winner of Group J will advance to play the runner-up of Group H</strong>. The runner-up of Group J will advance to play the winner of Group H. The third-placed team of Group J might advance to play the winner of Group B, Group D, Group G, Group K, or Group L (if one of the eight best third-placed ...\n\n\u2022 World Cup Group J standings 2026: Updated results, table and fixtures for Argentina, Austria, Algeria, Jordan | Sporting News\n  https://www.sportingnews.com/in/football/news/world-cup-group-j-standings-results-table-2026-argentina/bea592e93bc3474fb580a30f\n  <strong>Argentina certainly have the quality and experience to become the third</strong>. ... Key player(s): Lionel Messi (Inter Miami), Julian Alvarez (Atletico Madrid), Alexis Mac Allister (Liverpool) Algeria have climbed back into football&#x27;s top tier, ending ...\n\n\u2022 Messi, Argentina begin World Cup title defence against Algeria: All to know | World Cup 2026 News | Al Jazeera\n  https://www.aljazeera.com/sports/2026/6/16/messi-argentina-begin-world-cup-title-defence-against-algeria-all-to-know\n  Algeria were given a 13.2 percent chance of causing an upset while a draw was the outcome in 18.6 percent of the projections. You can follow the action on Al Jazeera\u2019s dedicated FIFA World Cup 2026 page with all the latest news, match build-up and live text commentary and keep up to date with group standings, real-time match results and schedules.\n\n\u2022 Argentina vs. Algeria (Jun 16, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760433/algeria-argentina\n  World Cup group-stage days rarely get better than this. Lionel Messi, Kylian Mbapp\u00e9 and Erling Haaland are all in action.\n\n\u2022 [Discussion] Lawrence, Kansas showing up for Algeria's open training\n  https://www.reddit.com/r/worldcup/comments/1u42eki/lawrence_kansas_showing_up_for_algerias_open/\n  So cool. World Cup spirit is here"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Verify official group standings and Matchday 1 results to establish precise mathematical qualification scenarios.",
+        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n17.06. [Argentina - Algeria](https://www.soccerway.com/match/algeria-nc87N1BR/argentina-f9OppQjp/), [Austria - Jordan](https://www.soccerway.com/match/austria-naHiWdnt/jordan-vNcmJoU2/), [Portugal - D.R. Congo](https://www.soccerway.com/match/d-r-congo-phn9mm8H/portugal-WvJrjFVN/), [England - Croatia](https://www.soccerway.com/match/croatia-K8aznggo/england-j9N9ZNFA/), 18.06. [Ghana - Panama](https://www.soccerway.com/match/ghana-nNBjHale/panama-OWKqbCfi/), [Uzbekistan - Colombia](https://www.soccerway.com/match/colombia-G02s4PCS/uzbekistan-EZYKKRMc/), [Czech Republic - South Africa](https://www.soccerway.com/match/czech-republic-6LHwBDGU/south-africa-W2ijYvlr/), [Switzerland - Bosnia & Herzegovina](https://www.soccerway.com/match/bosnia-herzegovina-fqe7WYTr/switzerland-rHJ2vy1B/), 19.06. [Canada - Qatar](https://www.soccerway.com/match/canada-x4toKORL/qatar-zqzHL77i/), [Mexico - South Korea](https://www.soccerway.com/match/mexi"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Gather precise statistical data on Argentina's competitive results, goal outputs, and defensive shutouts in their lead-up matches.",
+        "data": "URL: https://www.transfermarkt.com/argentinien/spielplandatum/verein/3437/plus/0/saison_id/2025\nTitle: Argentina - Fixtures by date\nThis is an overview of all fixtures of the club in chronological order.\n\nYear:\n\nCompetition:\n\nWeekday:\n\nVenue:\n\nResult:\n\nPeriod:\n\n\\-\n\nMatchday\n\nDate\n\nTime\n\nVenue\n\nRanking\n\nOpponent\n\nSystem of play\n\nAttendance\n\nResult\n\n![Freundschaftsspiele](https://tmssl.akamaized.net//images/logo/tiny/fs.png?lm=1713854091 \"Freundschaftsspiele\")\u00a0\u00a0[International Friendlies](https://www.transfermarkt.com/freundschaftsspiele/startseite/wettbewerb/FS \"International Friendlies\")\n\n[1](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/1)\n\nSat 11/10/25\n\n2:00 AM\n\nH\n\n[![Venezuela](https://tmssl.akamaized.net//images/flagge/tiny/182.png?lm=1520611569 \"Venezuela\")](https://www.transfermarkt.com/venezuela/spielplan/verein/3504/saison_id/2025 \"Venezuela\")\n\n[Venezuela](https://www.transfermarkt.com/venezuela/spielplan/verein/3504/saison_id/2025 \"Venezuela\")\n\n4-4-2\n\n[1:0](https://www.transfermarkt.com/spielbericht/index/spielbericht/4739916 \"Match report\")\n\n[4](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/4)\n\nWed 15/10/25\n\n2:00 AM\n\nA\n\n[![Puerto Rico](https://tmssl.akamaized.net//images/flagge/tiny/228.png?lm=1520611569 \"Puerto Rico\")](https://www.transfermarkt.com/puerto-rico/spielplan/verein/17759/saison_id/2025 \"Puerto Rico\")\n\n[Puerto Rico](https://www.transfermarkt.com/puerto-rico/spielplan/verein/17759/saison_id/2025 \"Puerto Rico\")\n\n4-4-2\n\n[0:6](https://www.transfermarkt.com/spielbericht/index/spielbericht/4740805 \"Match report\")\n\n[5](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/5)\n\nFri 14/11/25\n\n5:00 PM\n\nA\n\n[![Angola](https://tmssl.akamaized.net//images/flagge/tiny/6.png?lm=1520611569 \"Angola\")](https://www.transfermarkt.com/angola/spielplan/verein/3585/saison_id/2025 \"Angola\")\n\n[Angola](https://www.transfermarkt.com/angola/spielplan/verein/3585/saison_id/2025 \"Angola\")\n\n3-4-2-1\n\n43.000\n\n[0:2](https://www.transfermarkt.com/spielbericht/index/spielbericht/4763190 \"Match report\")\n\n![Artemio Franchi Trophy](https://tmssl.akamaized.net//images/logo/tiny/aft.png?lm=1766082673 \"Artemio Franchi Trophy\")\u00a0\u00a0[CONMEBOL-UEFA Cup of Champions](https://www.transfermarkt.com/artemio-franchi-trophy/startseite/pokalwettbewerb/AFT \"CONMEBOL-UEFA Cup of Champions\")\n\nFinal\n\nFri 27/03/26\n\n7:00 PM\n\nH\n\n[![Spain](https://tmssl.akamaized.net//images/flagge/tiny/157.png?lm=1520611569 \"Spain\")](https://www.transfermarkt.com/spanien/spielplan/verein/3375/saison_id/2025 \"Spain\")\n\n[Spain](https://www.transfermarkt.com/spanien/spielplan/verein/3375/saison_id/2025 \"Spain\")\n\n[ppd.](https://www.transfermarkt.com/spielbericht/index/spielbericht/4785707 \"ppd.\")\n\n![Freundschaftsspiele](https://tmssl.akamaized.net//images/logo/tiny/fs.png?lm=1713854091 \"Freundschaftsspiele\")\u00a0\u00a0[International Friendlies](https://www.transfermarkt.com/fr"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Analyze tactical previews highlighting Algeria's defensive block setup and their capability to handle narrow central rotations.",
+        "data": "\u2022 Argentina vs Algeria Lineups, Team News & Preview | RotoWire\n  https://www.rotowire.com/soccer/article/argentina-vs-algeria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-j-118222\n  Algeria are a dangerous first opponent. They have pace and flair through Riyad Mahrez and Mohammed Amoura, and they are exactly the kind of team that can punish a sluggish start. Argentina are clear favorites and should have too much, but this is a more awkward opener than the champions would have wanted, especially with a few of their own carrying knocks. This preview covers predicted lineups, injury news, head-to-head history, the tactical matchup and a score prediction for Tuesday night&#x27;s Group J opener.\n\n\u2022 Argentina vs. Algeria projected lineups, starting 11 for Lionel Messi's opening World Cup 2026 Group I game | Sporting News\n  https://www.sportingnews.com/us/soccer/news/argentina-vs-algeria-lineup-starting-11-world-cup-2026/4979d8f9d6d5aebf691f4ce7\n  Leonardo Balerdi was also forced to withdraw from the World Cup roster in the lead-up to the tournament after sustaining a calf problem in training. Franco Mastantuono was left off the roster after a tough season at Real Madrid, as was Alejandro Garnacho, who was involved in 2022 but did not make the squad this time around after Chelsea struggled in the Premier League this past campaign. LIVE: Follow Argentina vs. Algeria updates from 2026 World Cup\n\n\u2022 Argentina 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/argentina-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  Lionel Scaloni is beginning to shape Argentina&#x27;s lineup for their 2026 FIFA World Cup opener against Algeria, with <strong>Lionel Messi expected to be part of the starting XI</strong>.\n\n\u2022 2026 World Cup Group J Preview: Argentina, Algeria, Austria & Jordan | RotoWire\n  https://www.rotowire.com/soccer/article/2026-world-cup-group-j-preview-argentina-algeria-austria-jordan-tactics-lineups-set-pieces-odds-109964\n  This is the full tactical guide to Group J, including playing style, attacking and defensive structure, key adjustments, projected starting lineups, set-piece takers and the latest odds for Argentina, Algeria, Austria and Jordan.\n\n\u2022 Argentina's Possible Lineup to Face Algeria at the FIFA World Cup 2026 | beIN SPORTS\n  https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/argentina-s-possible-lineup-to-face-algeria-at-the-fifa-world-cup-2026-2026-06-16\n  Everything points to Scaloni relying on a formation very similar to the one that brought success during the previous World Cup cycle. ... Although the core of the lineup appears settled, there are still a few decisions to be made in defense. On the right side, Nahuel Molina and Gonzalo Montiel continue to compete for a starting role. Meanwhile, the left-back position remains one of the key tactical decisions Scaloni must finalize before kickoff.\n\n\u2022 [Discussion] Lawrence, Kansas showing up for Algeria's open training\n  https://www.reddit.com/r/worldcup/comments/1u42eki/lawrence_kansas_showing_up_for_algerias_open/\n  So cool. World Cup spirit is here"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Retrieve match venue specifications, turf installation details, and local weather forecasts to assess pitch speed and player fatigue.",
+        "data": "\u2022 In which city and stadium are Argentina vs Algeria playing today? Attendance, weather for WC game - Bolavip US\n  https://bolavip.com/en/world-cup/in-which-city-and-stadium-are-argentina-vs-algeria-playing-today-attendance-weather-for-wc-game\n  Kickoff for the match, scheduled for 9 p.m. ET, is expected to take place in warm and humid conditions, with temperatures ranging <strong>between 26\u00b0C and 27\u00b0C</strong>. As the minutes go by, the weather could become a key factor in the development of the game.\n\n\u2022 Argentina vs. Algeria World Cup Weather: Forecast for Arrowhead Stadium\n  https://heavy.com/sports/argentina-algeria-weather-forecast-arrowhead-stadium/\n  By 7 p.m. local time, an hour before kickoff, the reading hovers <strong>around 80</strong> with clear conditions overhead. Sunset arrives at 8:46 p.m. CDT, which could throw some glare across the pitch in the opening minutes, though nothing that should bend ...\n\n\u2022 Is this the diaspora World Cup? Is the final in the wrong stadium? Day 4 Recap - The Athletic\n  https://www.nytimes.com/athletic/7361399/2026/06/15/world-cup-goals-stadium-day-four-recap/\n  The latter presented a unique challenge for FIFA due to the artificial surface and the locally-grown turf being ditched after a harsh winter, while 1,470 seats had to be removed to accommodate a wider surface that complied with the World Cup organiser\u2019s regulations. Brazil winger Vinicius Junior was critical of it, saying after Brazil\u2019s 1-1 draw with Morocco on Saturday: \u201cBecause of the heat, the grass dries up very quickly and the game gets stuck.\n\n\u2022 Argentina vs Algeria | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021496\n  The official site of the international governing body of football with news, national associations, competitions, results, fixtures, development, organisation, world rankings, statistics, the International Football Association Board, history, laws of the game, futsal, publications, downloads, and contact details.\n\n\u2022 World Cup 2026 Stadium Guide\n  https://www.bbc.co.uk/sport/extra/zwengdni1f/world-cup-2026-stadium-guide\n  Work to install a grass pitch began after the stadium hosted Houston&#x27;s annual livestock and rodeo show in March. The three-week event was attended by approximately 2.6m people this year and is the largest of its kind in the world. ... This state-of-the-art stadium, which is equipped with air conditioning to negate Texas&#x27; intense summer heat, will host more games than any other venue at the 2026 World Cup."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Analyze historical match patterns, defensive vulnerabilities, and tactical trends for Algeria when facing South American opposition.",
+        "data": "\u2022 Conmebol dominates Concacaf in World Cup head - Facebook\n  https://www.facebook.com/groups/Epremierleaguefans/posts/27611544675167075/\n  Every WC played in North America has been won by a South American team Mexico 1970 \u2013 Brazil vs Italy Mexico 1986 \u2013 Argentina vs Germany USA 1994 ...\n\n\u2022 Algeria vs Uruguay Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-algeria-vs-uruguay\n  This page lists the head-to-head record of Algeria vs Uruguay including biggest victories and defeats between the two sides, and H2H stats in all competitions.\n\n\u2022 Nigeria vs Algeria AFCON head-to-head record - This may well be ...\n  https://africa.espn.com/espn/story/_/id/47559178/nigeria-vs-algeria-afcon-head-head-record-clash-quarterfinals\n  Nigeria have three wins, Algeria have four, the other two ended in draws, and those contests did not lack in any way. The games had everything ...\n\n\u2022 Algeria national football team all-time record - Wikipedia\n  https://en.wikipedia.org/wiki/Algeria_national_football_team_all-time_record\n  The team they have played the most is Tunisia, with a total of 41 games played. Their biggest win has been by 15 goals against South Yemen in 1973.\n\n\u2022 Colombia vs. Algeria Historical Head-to-Head - FBref.com\n  https://fbref.com/en/stathead/matchup/teams/ab73cfe5/1e2dba57/Colombia-vs-Algeria-History\n  Head-to-Head Matches. Head-to-Head Matches Table. Comp, Round, Day, Date, Time, Home, Score, Away, Attendance, Venue, Referee, Match Report, Notes. Friendlies ( ..."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Check for recent non-tactical squad disruptions, illnesses, or travel fatigue in the Algerian delegation using global news intelligence.",
+        "data": "{\"topic\":\"Algeria World Cup team news camp illness fatigue\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Search for current market lines, handicap payouts, and public betting consensus trends.",
+        "data": "\u2022 World Cup Odds for Argentina vs. Algeria: Betting Analysis and ...\n  https://www.busr.ag/news/soccer/world-cup-odds-argentina-algeria\n  Get the latest World Cup odds for Argentina vs Algeria! Read our expert tactical breakdown, claim your $3000 Welcome bonus today!\n\n\u2022 Argentina vs Algeria Prediction, Betting Odds & Best Bets - YouTube\n  https://www.youtube.com/watch?v=SJU_7BQSCTg\n  Argentina vs Algeria Prediction, Betting Odds & Best Bets | FIFA World Cup 2026 Group J Preview \u26bd . 2 views \u00b7 21 minutes ago.\n\n\u2022 Argentina vs Algeria Prediction, Betting Tips, Lineups & Odds\n  https://www.sportsgambler.com/betting-tips/football/argentina-vs-algeria-prediction-lineups-odds-2026-06-16/\n  We're expecting Argentina to prove too strong for Algeria, which makes the -1.25 Asian Handicap an appealing option at -122. A two-goal victory ...\n\n\u2022 Argentina vs. Algeria (Jun 16, 2026) Odds and Spread - ESPN\n  https://www.espn.com/soccer/odds/_/gameId/760433\n  Find the latest odds, spread and score prediction for the Argentina vs. Algeria Fifa World Cup game on ESPN to be played on June 16, 2026 on ...\n\n\u2022 Argentina vs Algeria Predictions, Picks & Odds - 17/06/2026\n  https://www.toffeeweb.com/argentina-vs-algeria-predictions-picks-odds-17-06-2026/\n  The over 2.5 goals market at 1.91 carries appeal given Scaloni's attacking philosophy and the overloads his side creates in the final third."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Determine Lionel Messi's physical readiness and the projected starting frontline configuration for Argentina.",
+        "data": "\u2022 Messi scores on a penalty as Argentina beats Iceland 3-0 in its final World Cup tune-up - ABC News - Breaking News, Latest News and Videos\n  https://abcnews.com/Sports/wireStory/messi-scores-penalty-argentina-beats-iceland-3-0-133736070\n  # Messi scores on a penalty as Argentina beats Iceland 3-0 in its final World Cup tune-up. (AP) \u2014 Lionel Messi is ready for his sixth World Cup. After recovering from a muscle injury, the captain of the reigning world champions played 20 minutes and scored a penalty in Argentina\u2019s 3-0 victory over Iceland on Tuesday in its final tune-up match before the World Cup. Messi, recovered from muscle fatigue and a slight strain in his left hamstring that he suffered in his last appearance with Inter Miami on May 24, started the game from the bench. Lionel Messi is ready for his sixth World Cup. June 1\n\n\u2022 Argentina at the FIFA World Cup 2026: Defending Champions Favoured to Top Group J - Telecom Asia Sport\n  https://www.telecomasia.net/in/blog/argentina-at-fifa-world-cup-2026/\n  # Argentina at the FIFA World Cup 2026: Defending Champions Favoured to Top Group J. * Key Players: Lionel Messi, Emiliano Martinez, Julian Alvarez, Alexis Mac Allister. ## How Argentina national team qualified for the FIFA World Cup 2026. By finishing at the top of the CONMEBOL round-robin table, Argentina clinched their qualification for the 2026 FIFA World Cup. A scoreless 0-0 draw between Uruguay and Bolivia mathematically ensured their top-six placement with four games remaining in the schedule. ## Argentina's FIFA World Cup 2026 group. Last World Cup for Messi: Group J at the 2026 World \n\n\u2022 Scaloni: 'The whole planet' awaits Messi's 200th cap as Argentina opens World Cup against Algeria - AP News\n  https://apnews.com/article/world-cup-argentina-lionel-messi-3144322aefb0b8b7c9bd012474a8e441\n  Argentina\u2019s Lionel Messi practices for the FIFA World Cup soccer tournament Thursday, June 11, 2026, in Kansas City, Kan. Argentina forward Lionel Messi, sitting, takes a break with teammates during practice for the FIFA World Cup soccer Wednesday, June 3, 2026, in Kansas City, Kan. Argentina forward Lionel Messi (10) gets control of the ball as Iceland midfielder Kristian Hlynsson (20) defends during the second half of an international friendly match soccer match Tuesday, June 9, 2026, in Auburn, Ala. Women walk past a mural of Argentinian soccer player Lionel Messi made by Mooz Graffiti in M\n\n\u2022 Argentina begin World Cup defence against confident Algeria - Reuters\n  https://www.reuters.com/sports/soccer/argentina-begin-world-cup-defence-against-confident-algeria-2026-06-14/\n  Item 1 of 3 Soccer Football - FIFA World Cup 2026 - Argentina Training - Sporting KC Training Centre, Kansas City, Kansas, U.S. - June 12, 2026 Argentina's Lionel Messi during training IMAGN IMAGES via Reuters/Kylie Graham. **[1/3]**Soccer Football - FIFA World Cup 2026 - Argentina Training - Sporting KC Training Centre, Kansas City, Kansas, U.S. - June 12, 2026 Argentina's Lionel Messi during training IMAGN IMAGES via Reuters/Kylie Graham Purchase Licensing Rights, opens new tab. June 14 (Reuters) - Argentina start their bid for back-to-back World Cups on Tuesday with a side full \u200cof familiar\n\n\u2022 Messi scores on a penalty as Argentina beats Iceland 3-0 in its final World Cup tune-up - Houston Chronicle\n  https://www.houstonchronicle.com/sports/article/messi-scores-on-a-penalty-as-argentina-beats-22298773.php\n  # Messi scores on a penalty as Argentina beats Iceland 3-0 in its final World Cup tune-up. (AP) \u2014 Lionel Messi is ready for his sixth World Cup. After recovering from a muscle injury, the captain of the reigning world champions played 20 minutes and scored a penalty in Argentina\u2019s 3-0 victory over Iceland on Tuesday in its final tune-up match before the World Cup. Messi, recovered from muscle fatigue and a slight strain in his left hamstring that he suffered in his last appearance with Inter Miami on May 24, started the game from the bench. Just days be"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Identify suspensions, card accumulations, or physical limitations among Algeria's critical progression and midfield players.",
+        "data": "\u2022 Algeria vs. Argentina - June 16, 2026 - Bleacher Report\n  https://bleacherreport.com/game/argentina-vs-algeria-national-football-2026-6-16-18-00\n  # Algeria vs. Argentina - June 16, 2026 | Live Scores, Updates, Odds, Injury News and Recaps | Bleacher Report. HomeScoresTeamsFIFA World Cup 2026Transfer RumorsUSMNTUSWNTB/R 99: Ranking Best Players EverPremier LeagueChampions LeagueLa LigaSerie ABundesligaMLS. Image 1: Argentina logo ARG. 09:00pm on FOX US. Image 2: Algeria logo DZA. Bets offered byImage 3: Bets offered by. See **Fanduel.com** for details. Do Not Sell or Share My Personal Information. B/R Sports on HBO Max. Copyright \u00a9 2026 Bleacher Report, Inc. A Warner Bros. Legal Terms and Privacy By clicking \u201cAgree,\u201d you agree to the Ter\n\n\u2022 Argentina v Algeria: World Cup 2026 \u2013 live - The Guardian\n  https://www.theguardian.com/football/live/2026/jun/17/fifa-world-cup-2026-live-argentina-v-algeria-updates-arg-vs-alg-group-j-match-score-latest\n  **22 players will walk out into the Kansas City evening with an equal chance of influencing this contest but the eyes of the world will be trained squarely on the oldest and shortest of them.**. Your eyes are not deceiving you, that is a Zidane in goal for the Fennecs, Luca Zidane, son of the French World Cup legend. Vladimir Petkovic has opted for a 5-2-3 formation in a bid to stiffen his side\u2019s defence. Lionel Scaloni has left in-demand Julian Alvarez on the bench for Argentina\u2019s opening match. > The holders arrive at the World Cup with a squad that knows each other almost by heart but perha\n\n\u2022 Argentina vs. Algeria tickets: Prices, seats, date for 2026 FIFA World Cup group match - sportingnews.com\n  https://www.sportingnews.com/us/tickets/news/argentina-algeria-tickets-prices-seats-2026-fifa-world-cup/b820f4a0fcfd8affc34fcc20\n  Algeria tickets: Prices, seats, date for 2026 FIFA World Cup group match. The world champions will attempt to defend their title in Kansas City. The World Cup continues its opening week with Argentina taking on Algeria. **BUY NOW**: Get tickets to the FIFA World Cup on StubHub. Algeria won't be an easy opponent. It's back in the World Cup after a 12 year hiatus, and its last run was its best yet as Algeria advanced to the Round of 16. Here's how to watch Argentina and Algeria kick off their World Cup run in Kansas City with tickets to the match. Algeria FIFA World Cup tickets. Tickets to the 2\n\n\u2022 Bob Bradley, Brad Guzan and Kaylyn Kyle break down what Alphonso Davies' injury means for Canada | FIFA World Cup NOW - FOX Sports\n  https://www.foxsports.com/watch/fmc-cdqd2ii208zzpnxk\n  # Bob Bradley, Brad Guzan and Kaylyn Kyle break down what Alphonso Davies' injury means for Canada | FIFA World Cup NOW. ## Bob Bradley, Brad Guzan and Kaylyn Kyle break down what Alphonso Davies' injury means for Canada. FIFA Men's World Cup  Ismael Kone  Alphonso Davies  Canada  WC - Canada vs. Bosnia and Herzegovina - 06/12/2026  FIFA World Cup NOW. ### FIFA World Cup Now crew breaks down Mexico\u2019s dominant win and previews USA vs Paraguay \u26bd\ufe0f. ### Peter Crouch, Kasper Schmeichel, Mo Edu and Alex Scott reveal their FIFA World Cup dark horse and early exit predictions. ### Mo Edu's message to \n\n\u2022 Morocco forced into two injury changes ahead of World Cup opener - Reuters\n  https://www.reuters.com/sports/soccer/morocco-forced-into-two-injury-changes-ahead-world-cup-opener-2026-06-11/\n  Item 1 of 2 Soccer Football - CAF Africa Cup of Nations - Morocco 2025 - Final - Senegal v Morocco - Prince Moulay Abdellah Stadium, Rabat, Morocco - January 18, 2026 Morocco's Abde Ezzalzouli in action with Senegal's Idrissa Gueye REUTERS/Siphiwe Sibeko. Soccer Football - CAF Africa Cup of Nations - Morocco 2025 - Final - Senegal v Morocco - Prince Moulay Abdellah Stadium, Rabat, Morocco - January 18, 2026 Morocco's Abde Ezzalzouli in action with Senegal's Idrissa Gueye REUTERS/Siphiwe Sibeko Purchase Licensing Rights, opens new tab. June 11 (Reuters) - Morocco have been hit by the loss of tw"
+      }
+    ],
+    "research_cost": 0.13,
+    "wallet_before": 2.574,
+    "wallet_after": 2.444,
+    "prediction": {
+      "pick": "home",
+      "confidence": 7,
+      "confidence_reason": "Argentina's settled world-class core and a fit Lionel Messi warrant a high confidence rating, though Algeria's defensive resilience caps it at 7.",
+      "reasoning": "While Algeria's 5-2-3 low-block and the humid Kansas City conditions will make it a tight affair, Argentina's superior quality and settled system should ultimately break through a Mahrez-less Algerian side.",
+      "probabilities": {
+        "home": 62,
+        "draw": 24,
+        "away": 14
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Argentina enters the tournament in strong form, having won their final warm-up matches against Honduras and Iceland (3-0), with Lionel Messi returning to fitness.",
+      "away_form": "Algeria has been highly competitive under Vladimir Petkovic, recently securing a surprise 1-0 warm-up win against the Netherlands and boasting 21 wins in 28 matches under his tenure.",
+      "key_injuries": [
+        "Argentina: Nicolas Tagliafico is out with a calf injury, forcing Facundo Medina to start at left-back.",
+        "Argentina: Leonardo Balerdi withdrew from the squad prior to the tournament due to a calf issue.",
+        "Argentina: Emiliano Martinez is fit to start with a protected finger after having a cast removed.",
+        "Algeria: Riyad Mahrez is fit but starts on the bench as part of a defensive tactical adjustment."
+      ],
+      "tactical_matchup": "Algeria's defensive 5-2-3 low-block aims to stifle Argentina's central progression, forcing the holders to rely on wide areas where they lack natural fullback depth due to Tagliafico's absence.",
+      "group_stakes": "As the Group J opener, both teams seek a positive result to establish an early advantage over group rivals Austria and Jordan.",
+      "home_win_signals": [
+        "Argentina possesses superior squad quality and tournament experience as defending champions.",
+        "Lionel Messi has recovered from a hamstring strain, scoring in his final tune-up match against Iceland.",
+        "Argentina has a settled core under Lionel Scaloni and a history of strong tournament starts."
+      ],
+      "away_win_signals": [
+        "Algeria's 5-2-3 system is designed to frustrate elite opposition, as demonstrated in their recent 1-0 win over the Netherlands.",
+        "Pacy attackers like Amoura and Gouiri can exploit Argentina's high line and depleted fullback positions on the counter-attack."
+      ],
+      "draw_signals": [
+        "Warm and humid conditions (26\u00b0C-27\u00b0C) in Kansas City could slow down the tempo, favoring a defensive low-block.",
+        "Algeria's extra defensive reinforcement (5-2-3) and Mahrez on the bench suggest a highly conservative approach aimed at securing a point."
+      ],
+      "contradictions": [
+        "While some previews suggested Lionel Messi might sit out the opener due to MLS injury management, official team news confirms he is fit to start."
+      ],
+      "strategy_applied": [
+        "Prioritized squad fitness and defensive low-block organization over reputation, drawing from lessons in FRA vs SEN and IRN vs NZL."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting the defensive impact of Tagliafico's absence, as Facundo Medina is a highly capable defensive deputy who can secure the left flank.",
+        "Overreliance on Algeria's friendly win against the Netherlands as a direct indicator of their ability to contain a highly settled Argentina side."
+      ],
+      "underweighted_factors": [
+        "The offensive cost of benching Riyad Mahrez, which could severely limit Algeria's transition threat and leave their counter-attacks isolated.",
+        "The physical toll of maintaining a high-intensity 5-2-3 low-block in warm, humid Kansas City conditions against a possession-heavy opponent."
+      ],
+      "draw_risk": "medium \u2014 Algeria's conservative 5-2-3 setup and the humid conditions could slow the game down, but Argentina's superior quality makes a complete stalemate less likely.",
+      "favorite": "home",
+      "confidence_cap": 7,
+      "verdict": "While Algeria's defensive low-block and Argentina's minor fullback adjustments suggest a tight, low-scoring affair, Argentina's settled core and Messi's presence make them the clear favorites."
+    },
+    "full_reasoning": "HOME_PCT: 62\nDRAW_PCT: 24\nAWAY_PCT: 14\nPICK: home\nCONFIDENCE: 7\nCONFIDENCE_REASON: Argentina's settled world-class core and a fit Lionel Messi warrant a high confidence rating, though Algeria's defensive resilience caps it at 7.\nREASONING: While Algeria's 5-2-3 low-block and the humid Kansas City conditions will make it a tight affair, Argentina's superior quality and settled system should ultimately break through a Mahrez-less Algerian side.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
