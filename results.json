@@ -5249,5 +5249,323 @@
     "reflected": true,
     "reflected_at": "2026-06-17T19:30:32.316029+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n- POR vs COD: Prioritize extreme weather and physical low-block over attacking tempo.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 low-block (POR vs COD)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 administration (POR vs COD)"
+  },
+  {
+    "match": "ENG vs CRO",
+    "home": "ENG",
+    "away": "CRO",
+    "kickoff": "2026-06-17T20:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)",
+    "information_needs": "FORM\n- How did England's build-up play from the back look in their opening group match, and did Croatia's defensive line show vulnerability to transition speed during their Matchday 1 fixture?\n\nPLAYERS\n- Is Harry Kane showing signs of physical fatigue or carrying a knock after a grueling club season, and is Croatia's midfield anchor (whether Mateo Kova\u010di\u0107 or a veteran Luka Modri\u0107) physically prepared to match Declan Rice's ground coverage?\n- Who is starting as Croatia's primary center-forward, and does England's center-back pairing have a track record of struggling against that specific profile of striker (e.g., a physical target man vs. a mobile space-invader)?\n\nTACTICS\n- How will England's left-back situation (especially if playing a defender out of position) handle Croatia's tactical overloads down that flank?\n- Will Croatia deploy a compact mid-block to nullify Jude Bellingham's late runs into the box, or will they attempt to contest possession in the middle third?\n\nH2H\n- How have the tactical adjustments made in their post-2022 encounters influenced the head-to-head dynamic, particularly regarding Croatia's ability to retain possession under intense English pressing?\n\nCONTEXT\n- Under the 48-team World Cup group stage format, what does the current group table look like, and does a draw in this match virtually guarantee progression for both teams or force one to chase a win?\n\nMARKET\n- What does the Asian Handicap line reveal about the market's expectation of a tight, one-goal margin versus a comfortable England victory, and has there been significant sharp money moving the line?\n\nNEWS\n- Are there any confirmed training ground injuries, illness outbreaks, or tactical leaks from either camp in the 48 hours leading up to kickoff?\n\nVENUE\n- Is this match being played in a high-altitude Mexican venue, a humid southern US stadium, or a climate-controlled indoor arena, and how will that specific microclimate impact the physical drop-off of both squads in the final 20 minutes?",
+    "research_gaps": [
+      {
+        "need": "What does the Asian Handicap line reveal about the market's expectation of a tight, one-goal margin versus a comfortable England victory, and has there been significant sharp money moving the line?",
+        "category": "MARKET",
+        "ideal_service": "A dedicated sports betting market intelligence API providing real-time Asian Handicap odds, line movement history, and sharp money indicators."
+      },
+      {
+        "need": "Under the 48-team World Cup group stage format, what does the current group table look like, and does a draw in this match virtually guarantee progression for both teams or force one to chase a win?",
+        "category": "CONTEXT",
+        "ideal_service": "A live sports tournament database API that calculates real-time group stage permutations, qualification probabilities, and tiebreakers under the 48-team format."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "England vs Croatia World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "England vs Croatia World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "England World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: England recent form and results",
+        "need": "How has England performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Croatia World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Croatia recent form and results",
+        "need": "How has Croatia performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "England vs Croatia head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "England vs Croatia World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "England build up play from back Croatia defense transition speed Matchday 1 World Cup 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Extracts structured match reviews and tactical breakdowns of both teams' Matchday 1 performances to assess build-up and transition vulnerabilities.",
+        "need": "How did England's build-up play from the back look in their opening group match, and did Croatia's defensive line show vulnerability to transition speed during their Matchday 1 fixture?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "England left back tactics Croatia overloads flank Jude Bellingham mid block World Cup 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Analyzes tactical previews focusing on England's left-back vulnerability and Croatia's flank overload strategies.",
+        "need": "How will England's left-back situation (especially if playing a defender out of position) handle Croatia's tactical overloads down that flank?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "England vs Croatia World Cup 2026 match venue stadium climate altitude humidity impact",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Identifies the specific stadium and microclimate conditions (altitude, humidity, temperature) to evaluate late-game physical fatigue.",
+        "need": "Is this match being played in a high-altitude Mexican venue, a humid southern US stadium, or a climate-controlled indoor arena, and how will that specific microclimate impact the physical drop-off of both squads in the final 20 minutes?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "England vs Croatia tactical head to head possession pressing adjustments",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Retrieves recent news intelligence analyzing the historical tactical evolution and pressing dynamics between England and Croatia.",
+        "need": "How have the tactical adjustments made in their post-2022 encounters influenced the head-to-head dynamic, particularly regarding Croatia's ability to retain possession under intense English pressing?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "England vs Croatia World Cup 2026 Harry Kane injury fitness Luka Modric Mateo Kovacic Declan Rice",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides real-time injury updates, squad fitness reports, and tactical midfield physical matching analysis from current news sources.",
+        "need": "Is Harry Kane showing signs of physical fatigue or carrying a knock after a grueling club season, and is Croatia's midfield anchor (Mateo Kovacic or Luka Modric) physically prepared to match Declan Rice's ground coverage?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "England vs Croatia World Cup 2026 training ground injuries illness tactical leaks lineup news",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Fetches the latest 48-hour news regarding training camp developments, sudden illnesses, or leaked starting lineups.",
+        "need": "Are there any confirmed training ground injuries, illness outbreaks, or tactical leaks from either camp in the 48 hours leading up to kickoff?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 England vs. Croatia odds, picks, prediction, betting preview, start time for 2026 World Cup match on Wednesday - CBS Sports\n  https://www.cbssports.com/soccer/news/england-vs-croatia-odds-picks-prediction-betting-preview-start-time-for-2026-world-cup-match-on-wednesday/\n  ### England-Croatia Under 2.5 goals\n\n \n\nI don't expect either team to make major attempts at the opponent's goal early on this contest, as there will be a period where they feel each other out a bit. Croatia might not have the same squad in peak physical condition but Modric's experience and ability to make those around him better is still important. England have had trouble scoring goals against stiffer competition, and I expect this to be more of a defensive slugfest than a shootout. Back Under 2.5 goals.\n\nAdd CBS Sports on Google\n\n ### 2026 World Cup: England vs. Croatia odds, picks, bettin\n\n\u2022 England vs Croatia: Sky Sports writers pick their Three Lions starting XIs for 2026 World Cup opener in Texas - Sky Sports\n  https://www.skysports.com/football/news/11095/13552970/england-vs-croatia-sky-sports-writers-pick-their-three-lions-starting-xis-for-2026-world-cup-opener-in-texas\n  After all the experimentation from Tuchel during his tenure so far, he arrives at his first World Cup game with only two real selection dilemmas: his centre-back pairing and whether he deems Saka fit enough to start against Croatia.\n\nGordon locked in his left-wing role ahead of Rashford with a cracking, confidence-fuelled performance against Costa Rica, while all the indications from that game point towards Bellingham beating Rogers to the No 10 spot.\n\nThe full-backs looked assured, Elliot Anderson and Rice are the clear midfield picks and the team sheet may as well come with the names of Kane\n\n\u2022 The Athletic: England Team Advised to Take Shelter Due to Tornado Threat - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/the-athletic-england-team-advised-to-take-shelter-due-to-tornado-threat/\n  The England team will begin their journey to the 2026 World Cup in Group L with Croatia, Ghana, and Panama. Their first World Cup match will take place on June 17 at 23:00 GMT+3, when England will play Croatia.\n\nEngland won the 1966 World Cup. At the 2022 World Cup, the team, then managed by Gareth Southgate, reached the quarterfinals, where they lost 2-1 to France.\n\nThe 2026 World Cup will run from June 11 to July 19. It will be hosted by Canada, the United States, and Mexico. Argentina, the current world champion, defeated then-World Cup holders France in the 2022 World Cup final (3-3, 4-2 o\n\n\u2022 England vs. Croatia: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-england-vs-croatia-tv-channel-live-stream-2026-fifa-world-cup-group-l\n  Below, we'll give you all the details you need to know about how to watch this game.\n\n## How to Watch England vs. Croatia\n\n When: Wednesday, June 17, 2026 at 4:00 p.m. ET\n Where: Dallas Stadium, Dallas, TX\n TV: FOX\n Stream: Watch 3 days free on FOX One, FOX Sports, FOX Sports App\n\n### England vs. Croatia Preview | 2026 FIFA World Cup\n\nLandon Donovan, Brad Guzan and Cobi Jones sat down to discuss England vs. Croatia in the 2026 FIFA Men's World Cup.\n\n## England vs. Croatia Odds\n\n## England World Cup Schedule\n\n June 17, 2026: Watch England vs Croatia - Dallas Stadium (4:00 p.m. ET / 1:00 p.m. PT\n\n\u2022 Where to Watch England vs Croatia: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-england-vs-croatia-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## England vs Croatia Team News\n\nEngland will be without Trevoh Chalobah for the match after he replaced the injured Tino Livramento, but he is expected to be available for their next game. The rest of the squad is fully fit.\n\nCroatia, meanwhile, head into their opening fixture with a clean bill of health, as manager Zlatko Dali\u0107 has all 26 players ava"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 England v Croatia LIVE: Thomas Tuchel faces Bukayo Saka decision for World Cup opener - The Independent\n  https://www.independent.co.uk/sport/football/england-croatia-live-score-world-cup-2026-result-b2997634.html\n  Alan Smith17 June 2026 16:10\n\n## Early team news\n\nBukayo Saka is touch and go to prove his fitness to start, with Noni Madueke ready to deputise on the right. Trevoh Chalobah will not be involved after replacing the injured Tino Livramento but will be available for their next outing. All other squad members are fit - will Tuchel pick Bellingham or Morgan Rodgers in the No 10 and who out of Guehi, Stones and Konsa starts at centre back?\n\nAs it stands, Croatia boss Zlatko Dalic has a full bill of health, with all 26 players available for their opening game, including Manchester City duo Josko Gv\n\n\u2022 England suffer injury setback as Tino Livramento ruled out of World Cup, Trevoh Chalobah called up - Telecom Asia Sport\n  https://www.telecomasia.net/blog/england-suffer-injury-setback-as-tino-livramento-ruled-out-of-world-cup-trevoh-chalobah-called-up/\n  # England suffer injury setback as Tino Livramento ruled out of World Cup, Trevoh Chalobah called up\n\nOyebade Oluwafemi\n\nEngland have been dealt a major injury blow on the eve of their 2026 FIFA World Cup opener against Croatia, with Newcastle United defender Tino Livramento ruled out of the tournament. Chelsea\u2019s Trevoh Chalobah has been named as his replacement in the squad.\n\nClaim Exclusive World Cup Bonuses on BC Game\n\nTino Livramento\n\nLivramento\u2019s withdrawal comes just a day before England\u2019s first Group L fixture in Dallas on Wednesday, marking an early setback for Thomas Tuchel\u2019s preparat\n\n\u2022 England vs Croatia: Sky Sports writers pick their Three Lions starting XIs for 2026 World Cup opener in Texas - Sky Sports\n  https://www.skysports.com/football/news/11095/13552970/england-vs-croatia-sky-sports-writers-pick-their-three-lions-starting-xis-for-2026-world-cup-opener-in-texas\n  But Madueke's erratic performance on the right against Costa Rica could tempt Tuchel to put his trust in Saka's fitness and he will have to decide on the best combination of Konsa, Stones and Guehi in defence. I suspect it will be Saka who gets the nod in attack, with Stones and Guehi paired at the back.  \nPeter Smith\n\n### Madueke deserves start over unfit Saka\n\nEngland cannot afford to have any passengers in their crucial first match - it's not a fixture for Saka to be playing through the pain of an Achilles injury.\n\nThe winger needs more rest after struggling through the final months of the \n\n\u2022 World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad - Sky Sports\n  https://www.skysports.com/football/news/32461/13554613/world-cup-2026-tino-livramento-suffers-hamstring-injury-and-replaced-by-trevoh-chalobah-in-england-squad\n  Skip to content\n\nSky Sports Homepage\n\n Menu\n\n Home\n\n Watch\n Sky Bet\n + Podcasts\n  + Upcoming on Sky\n  + Get Sky Sports\n  + Sky Sports App\n  + Sky Sports with no contract\n  + Kick It Out\n  + British South Asians in Football\n\nWatch Sky Sports\n\nFootball\n\nBreaking\n\n# World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad\n\nEngland begin their World Cup Group L campaign against Croatia on Wednesday; Tino Livramento has been replaced by Trevoh Chalobah after suffering a hamstring injury; Follow England vs Croatia on the Sky Sports app from 7pm\n\nRob D\n\n\u2022 England's 2026 World Cup Replacement for Injured Livramento Revealed - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/england-s-2026-world-cup-replacement-for-injured-livramento-revealed/\n  # England's 2026 World Cup Replacement for Injured Livramento Revealed\n\nMarina Magomedova\n\nThe England national team's press service announced on social media that defender Valentino Livramento will be unable to compete at the 2026 World Cup due to a calf injury.\n\nEngland head coach Thomas Tuchel has called up Chelsea defender T"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: England recent form and results",
+        "data": "\u2022 England at FIFA World Cup 2026: The Three Lions' results, scores and standings - full list\n  https://www.olympics.com/en/news/england-fifa-world-cup-2026-three-lions-results-scores-standings-full-list\n  England will be looking to end their major football title drought at the 2026 FIFA World Cup, the last of which came in the 1966 edition of this competition. In the intervening years, they have twice reached the semi-finals, in 1990 and 2018. But their victory on home soil 60 years ago remains their sole triumph. England have also had a number of recent near misses in the European Championship, losing the final of both Euro 2020 and Euro 2024.\n\n\u2022 Reuters England at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/england/\n  Follow England&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 England at the 2026 World Cup: Schedule, results, how to watch, news, analysis, injuries, more - ESPN\n  https://www.espn.com/soccer/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries\n  ESPN rounds up everything you need to know ahead of England&#x27;s World Cup campaign. - 2026 World Cup: Format, groups, full match schedule, more - Meet England&#x27;s squad: All 26 players picked by Thomas Tuchel and why - After turbulent week, Thomas Tuchel&#x27;s England turn focus to Croatia, old demons ...\n\n\u2022 World Cup 2026 results: Mbappe shatters record as England calls up Chalobah | The Independent\n  https://www.independent.co.uk/bulletin/sport/football-results-world-cup-2026-b2997156.html\n  Lionel Messi netted a hat-trick for Argentina against Algeria, equalling Miroslav Klose&#x27;s record for most World Cup goals. Ghana&#x27;s Thomas Partey will miss their match against Panama after a Canadian court dismissed his appeal against being denied entry to the country. Trevoh Chalobah has been called up to England&#x27;s World Cup squad to replace the injured Tino Livramento ahead of their opening match.\n\n\u2022 England World Cup 2026: Fixtures, manager, squad depth and tactical analysis | Squawka | EN\n  https://www.squawka.com/en/news/world-cup/england-world-cup-2026-fixtures-squad-analysis/\n  England secured their place at the World Cup with games to spare and they did it in style. <strong>The Three Lions won all eight of their matches in Group K without conceding a single goal, while they netted 22 of their own.</strong>\n\n\u2022 [Discussion] The England National Teams\n  https://www.reddit.com/r/ThreeLions/new/\n  Welcome to r/ThreeLions! A subreddit dedicated to discussion, news and results surrounding the English National Team."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Croatia recent form and results",
+        "data": "\u2022 Kroatien | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/croatia/team-news\n  Kroatien | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Kroatien squad at FIFA World Cup 2026\u2122.\n\n\u2022 Croatia at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d159312e19-b662016c6c47-1000--croatia-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  Below you will find everything you need to know about Croatia at the 2026 World Cup: their fixtures, squad, qualifying record, key players, coach and tournament history.\n\n\u2022 World Cup 2026 Ultimate Guide: Croatia | Goal.com US\n  https://www.goal.com/en-us/world-cup-teams/group-l/world-cup-2026-guide-croatia/O~blt8c43811a22ee6729\n  After finishing runners-up to France in 2018 and claiming third place in Qatar four years later, Croatia arrive at this World Cup no longer as dark horses, but as a team with genuine ambitions and expectations. Recent results reinforce the belief that Croatia can once again play a leading role on football\u2019s biggest stage.\n\n\u2022 Croatia World Cup 2026 Squad, Roster, Standings, Fixtures, and Kits - FWC Times\n  https://fwctimes.com/croatia/\n  Complete Croatia 2026, squad, fixtures and key dates, standings outlook, stadium updates in Zagreb, and the latest kit details.\n\n\u2022 Croatia World Cup Squad 2026: Full 26-Player Roster (Modri\u0107 Captains)\n  https://worldcuppass.com/croatia-world-cup-squad-2026/\n  This is your full Croatia squad list, schedule, and key player breakdown for the 2026 tournament. ... Here are the key numbers in Zlatko Dali\u0107\u2019s final 26. Captain: Luka Modri\u0107 (40 years old, 196 caps, record holder) Players with 100+ caps: 4 (Modri\u0107, Peri\u0161i\u0107, Kramari\u0107, Kova\u010di\u0107) ... Luka Modri\u0107 (AC Milan). Captain and the heartbeat of Croatia for nearly two decades. The 2018 Ballon d\u2019Or winner is playing his fifth World Cup and sits on 196 caps, meaning he can pass the 200 mark during the tournament."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 England vs Croatia \u2013 Head to head record and past meetings - Yahoo Sports\n  https://sports.yahoo.com/articles/england-vs-croatia-head-head-112000808.html\n  There have been some memorable ... and a massive World Cup semi-final in 2018. Despite those defeats, <strong>England have edged the overall head-to-head record</strong>....\n\n\u2022 England vs Croatia Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-croatia-vs-england\n  Last 5 , <strong>England Win 3 , Draw 1 , Lose 1 , Score Win Prob: 60.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 0.0%</strong> ... Last 5 , Croatia Win 3 , Draw 0 , Lose 2 , Score Win Prob: 60.00% ,Asian Handicap Win%: 20.0% Total Goals Over%: 80.0%\n\n\u2022 England national football team: record v croatia\n  https://www.11v11.com/teams/england/tab/opposingTeams/opposition/croatia/\n  England national football team record against croatia including all match details.\n\n\u2022 England vs Croatia - live score, predicted lineups and H2H stats\n  https://www.fotmob.com/en-GB/matches/england-vs-croatia/2viayw\n  England faces Croatia at Dallas Stadium on Wed, Jun 17, 2026, 20:00 UTC. This match is part of the World Cup Grp. L. You can check the recent head-to-head encounters, as well as full H2H record on this page to see how England and Croatia have fared against each other in the past.\n\n\u2022 England vs. Croatia: Head-to-head record and past meetings | World Cup 2026 - Sports Mole\n  https://www.sportsmole.co.uk/football/england/world-cup-2026/head-to-head/england-vs-croatia-head-to-head-record-and-past-meetings_599261.html\n  Frank Lampard netted twice that day and is the leading scorer in this particular battle with five goals, one of which also came in England&#x27;s 4-2 Euro 2004 success over the Chequered Ones. Jun 13, 2021: <strong>England 1-0 Croatia</strong> (European Championship)"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 England vs Croatia FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/england-croatia-world-cup-preview/bltde3becdc05790db0\n  The five meetings have produced 14 goals in total, with England accounting for nine of them, including a 5-1 qualifying win in September 2009. In <strong>Group L, Croatia currently sit top of the standings ahead of England, who are placed second</strong>.\n\n\u2022 2026 FIFA World Cup Group L - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_L\n  <strong>Group L</strong> of the 2026 FIFA World Cup will take place from June 17 to 27, 2026. The group consists of England, Croatia, Ghana, and Panama. The top two teams, possibly along with the third-placed team, will advance to the round of 32. ... First match(es) will be played: June 17, 2026.\n\n\u2022 England vs Croatia LIVE: FIFA World Cup 2026 Group L - score, lineups, commentary, updates & stats - BBC Sport\n  https://www.bbc.com/sport/football/live/cp36z3qpzrxt\n  The Three Lions gave the nation hope of reaching a first World Cup final since 1966 when Kieran Trippier&#x27;s 20-yard free-kick after only five minutes found the net. But Ivan Perisic&#x27;s 68th-minute equaliser sent the match into extra time and Mario Mandzukic scored the winning goal in the 109th minute. Croatia went on to lose to France in the final.\n\n\u2022 England vs. Croatia live score, result, stats, highlights from 2026 World Cup Group L match | Sporting News\n  https://www.sportingnews.com/us/soccer/news/england-croatia-world-cup-live-score-result-highlights/a6e306c1bbaa571192bd48e4\n  Croatia. It&#x27;s a rematch of the 2018 World Cup semifinal that <strong>Croatia won 2-1 after extra time</strong>. England are unbeaten in three matches between the two countries since, including a win in their opening group game at Euro 2020.\n\n\u2022 World Cup Group L standings 2026: Updated results, table and fixtures for England, Croatia, Ghana, Panama | Sporting News\n  https://www.sportingnews.com/in/football/news/world-cup-group-l-standings-results-table-2026-england/2d0682fb99015804fecfe1ad\n  Jude Bellingham is one of several enviable attacking options, although England look a touch light in defence. ... Just missing out on a <strong>Pot 1 spot</strong>, Croatia will be pushing as far as they can at the 2026 World Cup as they look to give a famous ...\n\n\u2022 [Discussion] Match Thread: England vs Croatia Live Score | World Cup 2026 | Jun 17, 2026\n  https://www.reddit.com/r/CasualUK/comments/1u8b1gv/match_thread_england_vs_croatia_live_score_world/\n  Put one right in their goal hole England"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Extracts structured match reviews and tactical breakdowns of both teams' Matchday 1 performances to assess build-up and transition vulnerabilities.",
+        "data": "\u2022 England vs Croatia Line-Up: World Cup 2026 Starting XI | Paddy Power\n  https://www.sportinglife.com/free-bets/news/england-croatia-confirmed-lineup-world-cup-2026/793\n  Width from the full-backs stretches Croatia horizontally, creating space in central areas for England&#x27;s attackers to receive and turn. The speed of ball circulation will be important in moving Croatia&#x27;s defensive block and creating gaps to exploit. England&#x27;s attacking strategy combines patient build-up with the ability to strike quickly in transition.\n\n\u2022 How will England line up against Croatia in their 2026 World Cup opener? | The Independent\n  https://www.independent.co.uk/sport/football/england-croatia-lineup-team-world-cup-2026-b2996662.html\n  The full-backs will play an important role not just defensively but in the way England build up from the back.\n\n\u2022 England vs Croatia FIFA World Cup 2026: Squads, predicted XI, timings, strengths | Mathrubhumi English\n  https://english.mathrubhumi.com/sports/football/england-vs-croatia-fifa-world-cup-2026-match-preview-gyi5izet\n  <strong>England are expected to dominate possession, press aggressively when out of the ball and use their attacking talent to create chances through quick transitions and wide areas</strong>. Tuchel&#x27;s side combine defensive stability with a fluid attacking ...\n\n\u2022 2026 World Cup Odds: Back England Defense To Dominate Croatia | FOX Sports\n  https://www.foxsports.com/stories/soccer/2026-world-cup-odds-back-england-defense-dominate-croatia\n  One thing that could break England down is a counterattack, but <strong>Croatia doesn&#x27;t really have the transitional speed to punish Three Lions</strong>.\n\n\u2022 England vs Croatia World Cup 2026 Predictions and Best Bets\n  https://shekicks.net/england-v-croatia-predictions/\n  Luka Modric, heading into his fifth World Cup at 40, remains the orchestrator of everything Croatia do, and a midfield trio built around him and Mateo Kovacic is capable of controlling tempo for long stretches. The concern is that age and a lack of elite depth in attack could expose Croatia when England\u2019s pressing and transitional speed kicks in during the second half."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Analyzes tactical previews focusing on England's left-back vulnerability and Croatia's flank overload strategies.",
+        "data": "\u2022 England\u2019s World Cup 2026 Starting XI: Opta Analyst Writers Pick Their Team to Face Croatia | Opta Analyst\n  https://theanalyst.com/articles/england-world-cup-2026-starting-xi-croatia-selections\n  Our writers have chosen their preferred XIs and explained their decisions below. England don\u2019t have tonnes of options to play on the left flank, but <strong>Anthony Gordon should get the nod ahead of Marcus Rashford</strong>.\n\n\u2022 World Cup match preview: England vs Croatia\n  https://www.toobit.com/en-US/blog/world-cup-match-preview-england-vs-croatia\n  England\u2019s right side could become the main attacking zone. Reece James and Saka or Madueke can create overloads around Croatia\u2019s left-back, while <strong>Bellingham moves into the inside channel</strong>.\n\n\u2022 Tuchel sees \u2018free role\u2019 for Bellingham at the World Cup \u2013 what does his versatility offer England? - The Athletic\n  https://www.nytimes.com/athletic/7351144/2026/06/11/bellingham-tuchel-england-world-cup-tactics/\n  He preferred to <strong>drift around the left flank</strong>, continuing to help create overloads like the one below, though it meant no England player was occupying Costa Rica\u2019s centre-backs. Bellingham\u2019s performance would not have gotten many off their ...\n\n\u2022 England vs Croatia FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/england-croatia-world-cup-preview/bltde3becdc05790db0\n  He will be hunting for any fraction of space to exploit on the flank the moment play transitions forward. However, he is going up against a world-class, intensely robust defender in Jo\u0161ko Gvardiol. Can Saka&#x27;s electric pace and individual trickery find a way to bypass an elite, physically dominant Croatian defensive anchor who excels at locking down elite wingers and stepping up to break up plays? Jude Bellingham vs Mateo Kova\u010di\u0107: The ultimate tactical battleground in the engine room.\n\n\u2022 England vs Croatia live updates: World Cup 2026 game confirmed team news as Bellingham starts - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/england-vs-croatia-live-updates-world-cup-2026-score-result/o0vWB2XjHoKm/\n  Jude Bellingham will start as England\u2019s No 10 today, with Anthony Gordon and Noni Madueke flanking him on the wings.\n\n\u2022 [Discussion] World Cup 2026: Jude Bellingham highlights importance of feeling loved playing for England\n  https://www.reddit.com/r/soccer/comments/1u3r82l/world_cup_2026_jude_bellingham_highlights/\n  All accounts about him and the dad sound terribly narcissistic."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Identifies the specific stadium and microclimate conditions (altitude, humidity, temperature) to evaluate late-game physical fatigue.",
+        "data": "\u2022 Extreme heat, high humidity, and high-altitude venues could ...\n  https://www.instagram.com/reel/DZbvhTkuiz6/\n  \u26bd Concerns are growing over heat risks at the 2026 FIFA World Cup as players, health experts, and climate researchers push for stronger ...\n\n\u2022 World Cup 2026: How will extreme heat impact this ... - Sky Sports\n  https://www.skysports.com/football/news/12098/13549718/world-cup-2026-how-will-extreme-heat-impact-this-summers-tournament-in-the-usa-canada-and-mexico\n  Researchers have warned that 14 of the 16 venues throughout the tournament will reach dangerous temperatures, one of which will be England's ...\n\n\u2022 2026 World Cup Stadiums: Extreme Heat Rising - Climate Central\n  https://www.climatecentral.org/climate-matters/world-cup-stadiums\n  Recent analysis by World Weather Attribution shows that climate change is boosting the odds of these humid heat conditions during certain 2026 World Cup matches ...\n\n\u2022 \ufe0f   Extreme heat, high humidity, and high-altitude venues could ...\n  https://www.facebook.com/Aspetar/videos/%EF%B8%8F-extreme-heat-high-humidity-and-high-altitude-venues-could-become-some-of-the-t/1319097800407562/\n  Extreme heat, high humidity, and high-altitude venues could become some of the toughest opponents at the FIFA World Cup 2026. With matches ...\n\n\u2022 How will the weather affect the opening games of the World Cup?\n  https://www.bbc.com/weather/articles/cn4rzgz24jxo\n  While the Dallas stadium hosting England v Croatia has air conditioning with a roof, it will be a hot day and build up for fans."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Retrieves recent news intelligence analyzing the historical tactical evolution and pressing dynamics between England and Croatia.",
+        "data": "{\"topic\":\"England vs Croatia tactical head to head possession pressing adjustments\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides real-time injury updates, squad fitness reports, and tactical midfield physical matching analysis from current news sources.",
+        "data": "\u2022 England v Croatia LIVE: Thomas Tuchel faces Bukayo Saka decision for World Cup opener - The Independent\n  https://www.independent.co.uk/sport/football/england-croatia-live-score-world-cup-2026-result-b2997634.html\n  Arsenal star Saka\u2019s fitness needs to be managed, leaving Tuchel with a tough call for a tricky Group L opener against Croatia in Dallas. The time has finally arrived for England to get their World Cup 2026 campaign underway, with Thomas Tuchel\u2019s side ready to meet Croatia in a Group L opener that is a repeat of their semi-final eight years ago. Tuchel will have 25 of his 26 players to pick from in Dallas \u2013 late injury replacement Trevoh Chalobah is not yet available \u2013 with captain Harry Kane set to lead the line in a tournament where the big names have wasted no time in making their impact. Wh\n\n\u2022 England predicted line-up for World Cup opener against Croatia - ESPN\n  https://www.espn.com/soccer/story/_/id/49060512/england-predicted-line-world-cup-opener-croatia\n  On the World Cup's day of stars, Messi towers over Haaland and Mbappe. Scaloni 'at a loss for words' on Messi's brilliance. Norway win as Haaland nets 2 in debut at WC. Iran's Torabi cleared to re-enter U.S. for WCup. Which players have scored a hat trick in the World Cup? Haaland on World Cup debut for Norway? What if Reyna's World Cup wonder goal is only the beginning for USMNT? Key issues for England at 2026 World Cup: Fatigue, fitness and do Gordon, Stones start? England's quest to end a painful 60-year wait for World Cup glory begins against a Croatia side that helped prolong that dream b\n\n\u2022 Noni Madueke, Jude Bellingham start for England vs. Croatia, Bukayo Saka on bench - ESPN\n  https://www.espn.com/soccer/story/_/id/49098203/england-croatia-lineups-world-cup-2026-noni-madueke-jude-bellingham-start-bukayo-saka-marc-guehi-bench\n  Madueke, Jude start for England; Saka on bench. World Cup Daily: Ronaldo, Portugal take on Congo DR. What if Reyna's World Cup wonder goal is only the beginning for USMNT? On the World Cup's day of stars, Messi towers over Haaland and Mbappe. Key issues for England at 2026 World Cup: Fatigue, fitness and do Gordon, Stones start? Haaland on World Cup debut for Norway? # Noni Madueke, Jude Bellingham start for England vs. Croatia, Bukayo Saka on bench. Noni Madueke, Jude Bellingham and Anthony Gordon will operate behind Harry Kane in England's World Cup opener against Croatia, with Thomas Tuchel\n\n\u2022 England vs Croatia: Sky Sports writers pick their Three Lions starting XIs for 2026 World Cup opener in Texas - Sky Sports\n  https://www.skysports.com/football/news/11095/13552970/england-vs-croatia-sky-sports-writers-pick-their-three-lions-starting-xis-for-2026-world-cup-opener-in-texas\n  # England vs Croatia: Sky Sports writers pick their Three Lions starting XIs for 2026 World Cup opener in Texas. England begin 2026 World Cup campaign against Croatia at AT&T Stadium in Dallas on Wednesday June 17 at 9pm; Thomas Tuchel's side warmed up for opener with a 3-0 win against Costa Rica; Three Lions have slight injury doubt over forward Bukayo Saka with an Achilles issue. England finally kick off their 2026 World Cup campaign against Croatia at the AT&T Stadium in Dallas on Wednesday and the Sky Sports writers have been busy selecting their starting line-ups for that opening Group L \n\n\u2022 England vs. Croatia: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-england-vs-croatia-tv-channel-live-stream-2026-fifa-world-cup-group-l\n  Croatia in the 2026 FIFA Men's World Cup. FIFA Men's World Cup. FIFA Men's World Cup. Harry Kane and England square off against Luka Modri\u0107 and Croatia in their 2026 FIFA World Cup Group L opener on Wednesday, June 17, 2026 at 4:00 p.m. ET from Dallas Stadium, Dallas, TX. ## How to Watch England vs. * June 17, 2026: Watch England vs Croatia - Dallas Stadium (4:00 p.m. ET / 1:00 p.m. PT). * June 23, 2026: Watch England vs Ghana - Boston Stadium (4:00 p.m. ET"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Fetches the latest 48-hour news regarding training camp developments, sudden illnesses, or leaked starting lineups.",
+        "data": "\u2022 World Cup 2026: Tino Livramento suffers calf injury and replaced by Trevoh Chalobah in England squad - Sky Sports\n  https://www.skysports.com/football/news/12016/13554613/world-cup-2026-tino-livramento-suffers-hamstring-injury-and-replaced-by-trevoh-chalobah-in-england-squad\n  # World Cup 2026: Tino Livramento suffers calf injury and replaced by Trevoh Chalobah in England squad. England begin their World Cup Group L campaign against Croatia on Wednesday; Tino Livramento has been replaced by Trevoh Chalobah after suffering a calf injury; **Follow England vs Croatia on the Sky Sports app from 7pm**. Rob Dorsett brings the latest as Trevoh Chalobah replaces Tino Livramento in the England squad. England\u2019s World Cup campaign has suffered an early setback as Tino Livramento's tournament is over after suffering a calf injury, with Trevoh Chalobah replacing him. However, th\n\n\u2022 World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad - Sky Sports\n  https://www.skysports.com/football/news/32461/13554613/world-cup-2026-tino-livramento-suffers-hamstring-injury-and-replaced-by-trevoh-chalobah-in-england-squad\n  # World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad. England begin their World Cup Group L campaign against Croatia on Wednesday; Tino Livramento has been replaced by Trevoh Chalobah after suffering a hamstring injury; **Follow England vs Croatia on the Sky Sports app from 7pm**. England\u2019s World Cup campaign has suffered an early setback as Tino Livramento's tournament is over after suffering a hamstring injury, with Trevoh Chalobah to replace him. The 23-year-old Newcastle defender missed the final five weeks of the season with a thigh i\n\n\u2022 England vs Croatia: Sky Sports writers pick their Three Lions starting XIs for 2026 World Cup opener in Texas - Sky Sports\n  https://www.skysports.com/football/news/11095/13552970/england-vs-croatia-sky-sports-writers-pick-their-three-lions-starting-xis-for-2026-world-cup-opener-in-texas\n  # England vs Croatia: Sky Sports writers pick their Three Lions starting XIs for 2026 World Cup opener in Texas. England begin 2026 World Cup campaign against Croatia at AT&T Stadium in Dallas on Wednesday June 17 at 9pm; Thomas Tuchel's side warmed up for opener with a 3-0 win against Costa Rica; Three Lions have slight injury doubt over forward Bukayo Saka with an Achilles issue. England finally kick off their 2026 World Cup campaign against Croatia at the AT&T Stadium in Dallas on Wednesday and the Sky Sports writers have been busy selecting their starting line-ups for that opening Group L \n\n\u2022 England suffer injury setback as Tino Livramento ruled out of World Cup, Trevoh Chalobah called up - Telecom Asia Sport\n  https://www.telecomasia.net/blog/england-suffer-injury-setback-as-tino-livramento-ruled-out-of-world-cup-trevoh-chalobah-called-up/\n  # England suffer injury setback as Tino Livramento ruled out of World Cup, Trevoh Chalobah called up. England have been dealt a major injury blow on the eve of their 2026 FIFA World Cup opener against Croatia, with Newcastle United defender Tino Livramento ruled out of the tournament. Chelsea\u2019s Trevoh Chalobah has been named as his replacement in the squad. Livramento\u2019s withdrawal comes just a day before England\u2019s first Group L fixture in Dallas on Wednesday, marking an early setback for Thomas Tuchel\u2019s preparations ahead of the competition. > \u201cTrevoh Chalobah has been called into England\u2019s 26\n\n\u2022 England v Croatia LIVE: Thomas Tuchel faces Bukayo Saka decision for World Cup opener - The Independent\n  https://www.independent.co.uk/sport/football/england-croatia-live-score-world-cup-2026-result-b2997634.html\n  Arsenal star Saka\u2019s fitness needs to be managed, leaving Tuchel with a tough call for a tricky Group L opener against Croatia in Dallas. The time has finally arrived for England to get their World Cup 2026 campaign underway, with Thomas Tuchel\u2019s side ready t"
+      }
+    ],
+    "research_cost": 0.116,
+    "wallet_before": 2.208,
+    "wallet_after": 2.092,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "confidence_reason": "England's exceptional defensive form and attacking depth justify a moderate confidence level, though Croatia's tournament pedigree and fully fit squad cap the certainty.",
+      "reasoning": "England's elite defensive record in qualifying and superior transitional speed should give them the edge over an aging but highly experienced Croatian side.",
+      "probabilities": {
+        "home": 45,
+        "draw": 30,
+        "away": 25
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "England enters the tournament in stellar form, having won all eight of their qualifying matches without conceding a single goal (scoring 22) and warming up with a 3-0 victory over Costa Rica.",
+      "away_form": "Croatia enters the tournament with high expectations after finishing as runners-up in 2018 and third in 2022, backed by a highly experienced core.",
+      "key_injuries": [
+        "England: Tino Livramento is ruled out of the tournament with a calf/hamstring injury and replaced by Trevoh Chalobah (who is unavailable for this match).",
+        "England: Bukayo Saka is managing an Achilles injury and starts on the bench.",
+        "Croatia: Fully fit 26-man squad with no reported injuries."
+      ],
+      "tactical_matchup": "England will look to dominate possession and exploit Croatia with transitional speed and high pressing, while Croatia's world-class, experienced midfield trio led by Luka Modric will attempt to control the tempo and frustrate England's build-up.",
+      "group_stakes": "As the two heavyweights of Group L, both England and Croatia will prioritize avoiding an opening-day defeat to secure a strong position before facing Ghana and Panama.",
+      "home_win_signals": [
+        "England's incredible defensive record in qualifying (zero goals conceded in eight matches).",
+        "England's superior transitional speed and athletic pressing, which could expose Croatia's aging squad in the second half.",
+        "Dynamic attacking lineup with Jude Bellingham in a free No. 10 role flanked by Anthony Gordon and Noni Madueke."
+      ],
+      "away_win_signals": [
+        "Croatia has a completely healthy squad, giving Zlatko Dalic full tactical flexibility.",
+        "The presence of Jo\u0161ko Gvardiol to neutralize England's wing threats.",
+        "Croatia's elite midfield experience (Modric, Kovacic) capable of playing through England's press."
+      ],
+      "draw_signals": [
+        "Opening-match caution, with both teams expected to feel each other out early on.",
+        "England's historical difficulty in breaking down elite, organized defensive blocks in major tournaments.",
+        "Expert predictions pointing towards a low-scoring, defensive slugfest (Under 2.5 goals)."
+      ],
+      "contradictions": [
+        "Reports conflict on the exact nature of Tino Livramento's injury, with some citing a calf issue and others a hamstring injury.",
+        "Early previews debated whether Bukayo Saka would start, but final team news confirmed he is on the bench with Noni Madueke starting."
+      ],
+      "strategy_applied": [
+        "No specific strategy rule applies to the ENG vs CRO fixture."
+      ]
+    },
+    "stress_test": {
+      "confidence_cap": 6,
+      "draw_risk": "medium"
+    },
+    "full_reasoning": "HOME_PCT: 45\nDRAW_PCT: 30\nAWAY_PCT: 25\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: England's exceptional defensive form and attacking depth justify a moderate confidence level, though Croatia's tournament pedigree and fully fit squad cap the certainty.\nREASONING: England's elite defensive record in qualifying and superior transitional speed should give them the edge over an aging but highly experienced Croatian side.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
