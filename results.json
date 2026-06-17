@@ -4550,5 +4550,362 @@
     "reflected": true,
     "reflected_at": "2026-06-17T03:30:48.508569+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)"
+  },
+  {
+    "match": "AUT vs JOR",
+    "home": "AUT",
+    "away": "JOR",
+    "kickoff": "2026-06-17T04:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)",
+    "information_needs": "FORM\n- Did Austria's high-intensity pressing system show signs of physical drop-off or late-game defensive vulnerability in their warm-up friendlies in early June 2026?\n- How many goals did Jordan concede in their final five AFC World Cup qualifiers and warm-up matches against top-50 FIFA-ranked opponents?\n\nPLAYERS\n- Is Jordan's talisman Mousa Al-Tamari fully fit to play 90 minutes, and who is projected to play left-back for Austria to contain his specific 1v1 cutting-inside threat?\n- Are Austria's primary midfield progressors (such as Konrad Laimer or Marcel Sabitzer) carrying any lingering knocks from the grueling end of their European club seasons?\n\nTACTICS\n- How does Jordan's defensive transition unit plan to bypass Austria\u2019s immediate counter-press\u2014will they rely on direct vertical long balls to Yazan Al-Naimat or try to build through the half-spaces?\n- Will Austria deploy their trademark aggressive high-line defensive block, or will they drop their line of engagement to mitigate the threat of Jordan's rapid counter-attacks?\n\nH2H\n- How has Austria historically performed against low-block AFC opposition in competitive tournaments, and have these two nations ever met in a senior international fixture?\n\nCONTEXT\n- Given this is the 2026 World Cup group stage, is this Matchday 1 (where a draw is acceptable for Jordan) or Matchday 2/3 where one team is forced to play high-risk football to survive?\n\nMARKET\n- What do the current Asian Handicap lines (e.g., Austria -1.25 or -1.5) and the Over/Under goal lines imply about Jordan's expected defensive resilience?\n\nNEWS\n- Are there any reports of camp illness, training ground injuries, or tactical leaks from either squad's base camp in the 48 hours leading up to kickoff?\n\nVENUE\n- Which North American host city is staging this match, and will the local humidity and temperature at kickoff require Austria to pace their pressing, or is the match being played in a climate-controlled indoor stadium?",
+    "research_gaps": [
+      {
+        "need": "Live tracking of real-time market line movements and sharp money indicators on Asian Handicap splits.",
+        "category": "MARKET",
+        "ideal_service": "A dedicated sports-betting market API that exposes historical line movements and liability distributions."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Austria vs Jordan World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Austria vs Jordan World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Austria World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Austria recent form and results",
+        "need": "How has Austria performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Jordan World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Jordan recent form and results",
+        "need": "How has Jordan performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Austria vs Jordan head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Austria vs Jordan World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.national-football-teams.com/country/17/Austria.html"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Uses verified national team database to check historical encounters and performance trends against AFC teams.",
+        "need": "How has Austria historically performed against low-block AFC opposition, and have these nations ever met?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Reads the live tournament group stage schedule to establish the exact matchday context.",
+        "need": "Is this World Cup group stage Matchday 1, 2, or 3, determining if one team must play high-risk football?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Austria June 2026 warm up friendlies defensive vulnerability Jordan goals conceded top 50",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Brave Search retrieves recent June 2026 friendly results and Asian qualifier statistics to evaluate defensive form.",
+        "need": "Did Austria's high-intensity press show late-game drop-off in early June 2026 friendlies, and how many goals did Jordan concede in final qualifiers?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Austria vs Jordan World Cup 2026 betting odds Asian Handicap over under",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Analyzes market consensus on the goal spread and totals to gauge implied defensive resilience of Jordan.",
+        "need": "What do current Asian Handicap lines and Over/Under goal lines imply about Jordan's expected defensive resilience?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Austria vs Jordan World Cup 2026 camp illness injury leak",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Uses GDELT news intelligence to query real-time translingual reporting on last-minute team camp developments.",
+        "need": "Are there any reports of camp illness, training ground injuries, or tactical leaks in the 48 hours leading to kickoff?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Austria vs Jordan World Cup 2026 stadium host city kickoff weather climate control",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Swerver's headless browser search quickly extracts the stadium location, weather forecast, or indoor status.",
+        "need": "Which North American host city is staging the match, and will climate/humidity require Austria to pace their press?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Austria vs Jordan World Cup 2026 Mousa Al-Tamari fitness left back Konrad Laimer Marcel Sabitzer injuries",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides up-to-date injury and fitness status of key players right before kickoff using Tavily's AI-ranked news search.",
+        "need": "Is Jordan's talisman Mousa Al-Tamari fully fit to play 90 minutes, and are Austria's Konrad Laimer or Marcel Sabitzer carrying any knocks?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Austria vs Jordan World Cup 2026 tactics counter press high line Yazan Al-Naimat",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "general"
+        },
+        "cost": 0.012,
+        "reason": "Extracts tactical analysis of both teams' formations, high line vulnerability, and transition strategies.",
+        "need": "How does Jordan's transition unit plan to bypass Austria's counter-press, and will Austria deploy their high line block?",
+        "category": "TACTICS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Austria vs Jordan Prediction: Austria Looks To Confirm Early Group Dominance - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/austria-vs-jordan-prediction-for-the-match-on-june-17th-2026/\n  Tactically, their main advantage against Austria lies in a combination of a disciplined deep defensive block and lethal transition play. By absorbing pressure and rapidly launching key attackers into open territory, they seek to capitalize on the gaps created when Austria's high-intensity press commits bodies forward.\n\n## Jordan: Lineup\n\nFor their landmark World Cup opening match against Austria, Jordan will look to Ali Olwan to spearhead the offensive effort alongside key player Mousa Al Tamari. This tactical reliance comes as the team manages the impact of significant injuries ahead of their\n\n\u2022 Austria vs. Jordan - Live Score - June 17, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-austria-vs-jordan-jun-17-2026-game-boxscore-647632\n  -128\n\nOVER 2.5\n\n+103\n\nUNDER 2.5\n\n### Preview\n\n### World Cup Match Day 6: Messi, Mbapp\u00e9, Haaland Headline Star-Studded Slate\n\nTuesday is one of the most star-studded days in the group stage of the 2026 FIFA World Cup. \n\n7 HOURS AGO \u2022 FOX SPORTS\n\nPOWERED BY\n\nSanta Clara, CA\n\n60\u00b0\n\nWind 5 mph N\n\n70\u00b0 3:00\n\n67\u00b0 4:00\n\n65\u00b0 5:00\n\n64\u00b0 6:00\n\nAUT\n\nFollow a team and personalize your FOX Sports experience\n\nJOR\n\nTop Leagues\n\n NFL College Football INDYCAR MLB College Basketball NASCAR\n\nTop Shows\n\n The Herd with Colin Cowherd First Things First The Joel Klatt Show Kevin Harvick's Happy Hour Bear Bets\n\nAffiliat\n\n\u2022 Austria vs. Jordan live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/16/sports/austria-vs-jordan-live-updates-world-cup-2026-score-news-and-highlights/\n  Their star, David Alaba, a four-time Champions League winner, has dealt with too many injuries over the past few years. Christian Baumgartner, a breakout candidate fresh off a 17-goal campaign with RB Leipzig, was ruled out due to injury. That leaves Konrad Laimer, a tireless plug-in at central midfield or outside back.\n\nREAD MORE\n\n53 seconds ago\n\n## What to know about Jordan\n\nBy Ethan Sears\n\nCoach Jamal Sellami\u2019s side is defensively organized and looks for scoring opportunities off the counterattack.\n\nEven if that wasn\u2019t Jordan\u2019s preferred style, it probably would become a necessity against s\n\n\u2022 Where to Watch Austria vs Jordan: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-austria-vs-jordan-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Austria vs Jordan Team News\n\nRangnick will be without Christoph Baumgartner due to the injury he picked up ahead of the World Cup.\n\nOn the other side, Jordan has a full squad heading into this game.\n\n## Austria vs Jordan Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Austria to Win | Draw | Jordan to Win |\n| 1xBet | 1.38 | 5.30 | 9.55 |\n| Betway | 1.39 | 4.75 | 8.20 |\n\nKimmich Reports Venomous Snake Sighting at Germany World Cup CampJuventus Target PSG Keeper Lucas ChevalierRoberto Martinez to Step Down as Portugal Head Coach After the 2026 World Cup\n\n89\n\n100 \u20ac\n\nClaim Bonus!Bet now!\n\n\n\n\u2022 Austria vs. Jordan: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-austria-vs-jordan-tv-channel-live-stream-2026-fifa-world-cup-group-j\n  ## How to Watch Austria vs. Jordan\n\n When: Wednesday, June 17, 2026 at 12:00 a.m. ET\n Where: San Francisco Bay Area Stadium, San Francisco Bay Area\n TV: FS1\n Stream: Watch 3 days free on FOX One, FOX Sports, FOX Sports App\n\n### Group J Preview: Argentina, Algeria, Austria, Jordan\n\nHere. Comes. Lionel Messi! Alexi Lalas and David Mosse Break down the defending champions, Argentina, alongside Algeria, Austria and Jordan. What can we expect from Marcel Sabitzer and Austria? Tune in daily for a new group as we speed toward t"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Austria vs Jordan Prediction: Austria Looks To Confirm Early Group Dominance - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/austria-vs-jordan-prediction-for-the-match-on-june-17th-2026/\n  ## Austria: Lineup\n\nDue to a major muscle injury sustained during the warmup session, Christoph Baumgartner has been officially sidelined for the remainder of the competition. Taking his spot in the starting XI is Dejan Lubicic. Meanwhile, the availability of captain David Alaba is still uncertain as he continues to struggle with fitness issues. Additionally, Florian Grillitsch and Patrick Wimmer are both being monitored for minor injuries, making them doubtful for the upcoming match.\n\nPredicted Lineup (4-3-3): A.Schlager, Posch-Lienhart-Alaba-Laimer, X.Schlager-Seiwald-Schmid-Gregoritsch, Sab\n\n\u2022 Where to Watch Austria vs Jordan: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-austria-vs-jordan-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Austria vs Jordan Team News\n\nRangnick will be without Christoph Baumgartner due to the injury he picked up ahead of the World Cup.\n\nOn the other side, Jordan has a full squad heading into this game.\n\n## Austria vs Jordan Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Austria to Win | Draw | Jordan to Win |\n| 1xBet | 1.38 | 5.30 | 9.55 |\n| Betway | 1.39 | 4.75 | 8.20 |\n\nKimmich Reports Venomous Snake Sighting at Germany World Cup CampJuventus Target PSG Keeper Lucas ChevalierRoberto Martinez to Step Down as Portugal Head Coach After the 2026 World Cup\n\n89\n\n100 \u20ac\n\nClaim Bonus!Bet now!\n\n\n\n\u2022 Austria vs. Jordan live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/16/sports/austria-vs-jordan-live-updates-world-cup-2026-score-news-and-highlights/\n  Their star, David Alaba, a four-time Champions League winner, has dealt with too many injuries over the past few years. Christian Baumgartner, a breakout candidate fresh off a 17-goal campaign with RB Leipzig, was ruled out due to injury. That leaves Konrad Laimer, a tireless plug-in at central midfield or outside back.\n\nREAD MORE\n\n53 seconds ago\n\n## What to know about Jordan\n\nBy Ethan Sears\n\nCoach Jamal Sellami\u2019s side is defensively organized and looks for scoring opportunities off the counterattack.\n\nEven if that wasn\u2019t Jordan\u2019s preferred style, it probably would become a necessity against s\n\n\u2022 Austria vs. Jordan - Live Score - June 17, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-austria-vs-jordan-jun-17-2026-game-boxscore-647632\n  1 DAY AGO \u2022 YOUTUBE\n\nPREVIOUS GAMES\n\nAUT\n\n|  |  |  |\n --- \n| 6/1 | TUN (H) | W1-0 |\n| 3/31 | KOR (H) | W1-0 |\n| 3/27 | GHA (H) | W5-1 |\n| 11/18 | BIH (H) | D1-1 |\n| 11/15 | CYP (A) | W2-0 |\n\nJOR\n\n|  |  |  |\n --- \n| 6/7 | COL (A) | L2-0 |\n| 5/31 | SUI (A) | L4-1 |\n| 3/31 | NGA (H) | D2-2 |\n| 3/27 | CRC (H) | D2-2 |\n| 12/18 | MAR (H) | L3-2 |\n\n### TEAM STATS\n\nAUT\n\n- Goals per Game -\n\n- Expected Goals (xG) per Game -\n\n- Goals Against per Game -\n\n- Shots per Game -\n\n- Average Possession (%) -\n\n- Chances Created per Game -\n\nJOR\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $271 would win $371 tota\n\n\u2022 Austria vs. Jordan: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-austria-vs-jordan-tv-channel-live-stream-2026-fifa-world-cup-group-j\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Austria vs. Jordan: How to Watch, TV Channel, Live Stream\n\nPublished Jun. 16, 2026 12:01 p.m. ET\n\nshare\n\nfacebookxredditlink\n\nAustria and Jordan meet in their 2026 FIFA World Cup opener on Wednesday, June 17, 2026 at 12:00 a.m. ET from San Francisco Bay Area Stadium, San Francisco Bay Area.\n\nAustria, ranked 24th by FIFA, are appearing at their eighth "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Austria recent form and results",
+        "data": "\u2022 Austria vs Jordan FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/austria-jordan-world-cup-preview/blt7c1bb3d0f0243ac5\n  Their most recent result was a <strong>1-0 friendly win over Tunisia</strong> on June 1, 2026. They also beat South Korea 1-0 and produced their most eye-catching display with a 5-1 win over Ghana in March.\n\n\u2022 Reuters Austria at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/austria/\n  Follow Austria&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Austria at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d159406296-f54718194327-1000--austria-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  <strong>Austria 2-1 Romania San Marino 0-4 Austria Austria 1-0 Cyprus Bosnia and Herzegovina 1-2 Austria Austria 10-0 San Marino Romania 1-0 Austria Cyprus 0-2 Austria Austria 1-1 Bosnia and Herzegovina</strong> ...\n\n\u2022 Austria at FIFA World Cup 2026: All players, full squad list, key stats and schedule\n  https://www.olympics.com/en/news/fifa-world-cup-2026-austria-players-squad-list-key-stats-schedule\n  Coached by former Manchester United interim manager Ralf Rangnick, <strong>Das Team topped their qualifying group to ensure an eighth appearance at a tournament they placed third in back</strong> ...\n\n\u2022 Austria vs Jordan live updates: World Cup 2026 game latest score and team news - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/austria-vs-jordan-live-updates-world-cup-2026-score-result/kjwPGkbBpY5L/\n  After shocking the 2023 Asian Cup by reaching the final when most thought they would struggle to get past the first round, they qualified for the World Cup for the first time, confirming their place with a <strong>3-0 win against Oman</strong>.\n\n\u2022 [Discussion] The only 8 teams (out of 48) in the 2026 World Cup with rosters entirely made up of players born in their own country: Saudi Arabia, Austria, Brazil, Colombia, the Czech Republic, Panama, South Africa, and Sweden\n  https://www.reddit.com/r/soccer/comments/1twsd11/the_only_8_teams_out_of_48_in_the_2026_world_cup/\n  Couldn't think who in the England squad wasn't born here so looked it up, Guehi was born in the Ivory Coast and moved to England age 1 if anyone else was curious.\n\n\u2022 [Discussion] Did I horribly overpay for a World Cup ticket (Austria vs Jordan @ Santa Clara) ?\n  https://www.reddit.com/r/WorldCup2026Tickets/comments/1tu16nm/did_i_horribly_overpay_for_a_world_cup_ticket/\n  Just enjoy the experience. I don't know if you overpaid but it's \"just\" 200 bucks.\n\n\u2022 [Discussion] Ralf Rangnick\u2019s Official Austria Squad For The 2026 FIFA World Cup\n  https://www.reddit.com/r/worldcup/comments/1thc3ty/ralf_rangnicks_official_austria_squad_for_the/\n  Hopefully they play exciting football like in the last Euros. That game against Turkey when they got knocked out was just one attack after another in the last 10-20 minutes of the game. Hoping for a good showing comparable to 1978 showing and that legendary game when they beat West Germany.\n\n\u2022 [Discussion] Austrian squad for the 2026 World Cup\n  https://www.reddit.com/r/soccer/comments/1tgm9p9/austrian_squad_for_the_2026_world_cup/\n  Probably the last dance for Alaba and Arni so I hope its a good one"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Jordan recent form and results",
+        "data": "\u2022 Austria vs Jordan FIFA World Cup 2026 Preview: Everything you need to know | Goal.com US\n  https://www.goal.com/en-us/news/austria-jordan-world-cup-preview/blt7c1bb3d0f0243ac5\n  Their most recent result was a <strong>1-0 friendly win over Tunisia</strong> on June 1, 2026. They also beat South Korea 1-0 and produced their most eye-catching display with a 5-1 win over Ghana in March.\n\n\u2022 Austria vs Jordan live updates: World Cup 2026 game latest score and team news - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/austria-vs-jordan-live-updates-world-cup-2026-score-result/kjwPGkbBpY5L/\n  After shocking the 2023 Asian Cup by reaching the final when most thought they would struggle to get past the first round, they qualified for the World Cup for the first time, confirming their place with a <strong>3-0 win against Oman</strong>.\n\n\u2022 Jordan 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/jordan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  <strong>Jordan secured their historic ticket to North America by finishing second in Group B during the third round of AFC qualifying</strong>. They navigated a challenging group that included South Korea, Iraq, Oman, Palestine, and Kuwait, ultimately edging ...\n\n\u2022 Jordan | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/jordan/team-news\n  Jordan | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Jordan squad at FIFA World Cup 2026\u2122.\n\n\u2022 Reuters Jordan at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/jordan/\n  Follow Jordan&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Austria vs Jordan live updates: World Cup 2026 game latest score and team news - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/austria-vs-jordan-live-updates-world-cup-2026-score-result/kjwPGkbBpY5L/\n  Austria and Jordan begin their World Cup campaigns with a Group J clash in Santa Clara today. Both teams are in a group alongside defending champions Argentina, who beat Algeria 3-0 earlier today thanks to an historic Lionel Messi hat-trick in Kansas City.\n\n\u2022 Austria vs Jordan Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-austria-vs-jordan\n  Last 5 , <strong>Austria Win 4 , Draw 1 , Lose 0 , Score Win Prob: 80.00% ,Asian Handicap Win%: 80.0% Total Goals Over%: 20.0%</strong> ... Last 5 , Jordan Win 0 , Draw 2 , Lose 3 , Score Win Prob: 0.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 80.0%\n\n\u2022 Austria vs Jordan Head-to-Head & Form Stats | Tips.GG\n  https://tips.gg/article/austria-vs-jordan-head-to-head-wc2026/\n  <strong>There are no recorded head-to-head meetings between Austria and Jordan in international football</strong>. This World Cup 2026 fixture will be the first time the two nations have faced each other at any level, meaning there is no historical data to draw on.\n\n\u2022 Austria vs Jordan: Check Head-to-Head Statistics, Teams Stats Up, Results, Date, Time, Watch Live, Lineups, LIVE Streaming Details, All You Need To Know FIFA World Cup 2026\n  https://sundayguardianlive.com/sports/austria-vs-jordan-check-head-to-head-statistics-teams-stats-up-results-date-time-watch-live-lineups-live-streaming-details-all-you-need-to-know-fifa-world-cup-2026-208388/\n  Their Group J opener at the San Francisco Bay Area Stadium (Levi\u2019s Stadium) in Santa Clara is a brand new, historic matchup for both sides. Since this match-up will be the first between both the sides, we can expect goals galore. ... The Austria vs Jordan FIFA World Cup 2026 match will take place on Wednesday (June 17) as per local time at 9:00 p.m.\n\n\u2022 Form and head to head stats Austria vs Jordan\n  https://www.skysports.com/football/austria-vs-jordan/549785\n  FIFA World Cup match Austria vs Jordan 17.06.2026. Preview and stats followed by live commentary, video highlights and match report.\n\n\u2022 [Discussion] The back page of the internet.\n  https://www.reddit.com/r/soccer/new/\n  The football subreddit. For news, results, and discussion about the beautiful game.\n\n\u2022 [Discussion] LTS: Austria vs Jordan (Match 20) Date: June 16, 2026 Time: 9:00 PM Venue: Levi\u2019s Stadium, Santa Clara, CA. Face Value $620\n  https://www.reddit.com/r/WC2026tix/comments/1u71xco/lts_austria_vs_jordan_match_20_date_june_16_2026/\n  \u26a0\ufe0f BUYING OR SELLING TICKETS? READ THIS FIRST \u26a0\ufe0f Scammers are extremely active targeting World Cup ticket buyers and sellers. Protect yourself: If a user messages you directly without commenting on a post you made, it might be a scam. Ask them to make a comment. Banned users cannot make a comment, and then you know to avoid them. \u26a0\ufe0f REQUIRED INFORMATION (Starting Saturday, April 4th, 2026) \u26a0\ufe0f ALL ticket sale and purchase posts MUST include: Section number Row number Price Screenshot from \"My Tickets\" showing: Match information Section and row visible With the following information REDACTED: Seat numbers Ticket numbers Ticket application numbers Refer to this sticky for more information: https://www.reddit.com/r/WC2026tix/comments/1sbmmvn/important_new_ticket_posting_requirements/ \u2705 Safety Guidelines: FOR BUYERS: Only use official FIFA ticketing platforms when possible Use payment methods with buyer protection (PayPal Goods & Services, credit cards) Never send money to someone you haven't verified Meet in person when possible for local exchanges Verify ticket authenticity before completing payment Check seller's account age and karma FOR SELLERS: Be wary of buyers offering more than asking price Avoid buyers insisting on unusual payment methods Don't click suspicious links sent via DM Use secure platforms with seller protection \u26a0\ufe0f RED"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Match Centre\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021498\n  Alaba: Austria are shooting for the starsAlaba: Austria are shooting for the stars \u00b7 3 days to go: Back from the brink3 days to go: Back from the brink ... World Cup 2026 groups: How teams qualify and tie-breakersWorld Cup 2026 groups: How teams qualify and tie-breakers \u00b7 Jordan: FIFA World Cup 2026 profileJordan: FIFA World Cup 2026 profile\n\n\u2022 Austria vs Jordan FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/austria-jordan-world-cup-preview/blt7c1bb3d0f0243ac5\n  Needing a crucial result against Bosnia and Herzegovina, a late, clutch equaliser from Michael Gregoritsch successfully delivered a <strong>1-1 draw, sealing the top spot in the group with 19 points</strong> and definitively booking Austria&#x27;s direct flight to ...\n\n\u2022 2026 FIFA World Cup Group J - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_J\n  Group J of the 2026 FIFA World Cup will take place from June 16 to 27, 2026. The group consists of Argentina (title holders), Algeria, Austria, and Jordan. <strong>The top two teams, possibly along with the third-placed team, will advance to the round of 32.</strong> ... First match(es) will be played: June ...\n\n\u2022 World Cup Group J standings 2026: Updated results, table and fixtures for Argentina, Austria, Algeria, Jordan | Sporting News\n  https://www.sportingnews.com/uk/football/news/world-cup-group-j-standings-results-table-2026-argentina/bea592e93bc3474fb580a30f\n  Despite being in the twilight of their international careers, these international centurions (Sabitzer will aim to reach triple-digit caps at the tournament itself) are still capable of wrecking the tournament of a higher-ranked side on their best day \u2014 just ask France, who, despite beating Austria in their group opener at Euro 2024, would wind up second behind the Burschen in the final group standings. ... Having qualified for their first-ever World Cup, Jordan are looking to prove they belong.\n\n\u2022 Austria vs Jordan live updates: World Cup 2026 game latest score and team news - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/austria-vs-jordan-live-updates-world-cup-2026-score-result/kjwPGkbBpY5L/\n  At the end of the group stage, <strong>the top two teams in each group will automatically progress to the knockouts \u2014 as well as the eight third-placed teams with the best group record</strong>."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Uses verified national team database to check historical encounters and performance trends against AFC teams.",
+        "data": "URL: https://www.national-football-teams.com/country/17/2026/Bangladesh.html\nTitle: Bangladesh (2026)\n[![National Football Teams](https://www.national-football-teams.com/bundles/nftportofrontend/img/header/logo_luci.png)](https://www.national-football-teams.com/)\n\n-   [Old website](https://www.national-football-teams.com/old/)\n-    [![English](https://www.national-football-teams.com/bundles/nftportofrontend/img/blank.gif) English](# \"English\")\n\n-   [News](https://www.national-football-teams.com/)\n-   [Teams](https://www.national-football-teams.com/national.html \"Info and statistics about all National Football (Soccer) Teams\")\n    -   [Europe](https://www.national-football-teams.com/continent/1/Europe.html)\n    -   [Africa](https://www.national-football-teams.com/continent/2/Africa.html)\n    -   [Asia](https://www.national-football-teams.com/continent/3/Asia.html)\n    -   [Oceania](https://www.national-football-teams.com/continent/4/Oceania.html)\n    -   [South America](https://www.national-football-teams.com/continent/5/South_America.html)\n    -   [North America](https://www.national-football-teams.com/continent/6/North_America.html)\n-   [Matches](https://www.national-football-teams.com/matches.html)\n    -   [African Nations Cup](https://www.national-football-teams.com/matches/tournament/2/2027/0/African_Nations_Cup.html)\n    -   [Asian Cup](https://www.national-football-teams.com/matches/tournament/3/2027/0/Asian_Cup.html)\n    -   [Copa Am\u00e9rica](https://www.national-football-teams.com/matches/tournament/4/2024/0/Copa_America.html)\n    -   [European Championship](https://www.national-football-teams.com/matches/tournament/5/2024/0/European_Championship.html)\n    -   [Gold Cup](https://www.national-football-teams.com/matches/tournament/6/2025/0/Gold_Cup.html)\n    -   [Oceania Cup](https://www.national-football-teams.com/matches/tournament/7/2024/0/Oceania_Cup.html)\n    -   [World Cup](https://www.national-football-teams.com/matches/tournament/1/2026/0/World_Cup.html)\n    -   [Other Tournaments](https://www.national-football-teams.com/matches/other_tournaments.html)\n    -   [Friendlies](https://www.national-football-teams.com/matches/-/-/friendlies.html)\n-   [Clubs](https://www.national-football-teams.com/clubs.html)\n-   [Statistics](https://www.national-football-teams.com/statistics.html)\n-   [Contact](https://www.national-football-teams.com/contact.html)\n-   [Forums](http://www.national-teams.com/forum/index.php?c=1)\n\nYou are using an old browser which is not compatible with our new design. Please update your browser or use our [old website](https://www.national-football-teams.com/old/).\n\n## General Information for **Bangladesh**\n\n##### Bangladesh Football Federation\n\n**Founded**\n\n1972\n\n**FIFA entry**\n\n1976\n\n**Average height in 2026**\n\n1.75m\n\n**Average age in 2026**\n\n25.6\n\n**Confederation**\n\nAFC\n\n**Infos provided by**\n\n##### Emblem\n\n##### Jersey in 2026\n\n![Jersey in 2026](https://www.national-football-teams.com/uploads/country_images/jersey/ban.gi"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Reads the live tournament group stage schedule to establish the exact matchday context.",
+        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n17.06. [Austria - Jordan](https://www.soccerway.com/match/austria-naHiWdnt/jordan-vNcmJoU2/), [Portugal - D.R. Congo](https://www.soccerway.com/match/d-r-congo-phn9mm8H/portugal-WvJrjFVN/), [England - Croatia](https://www.soccerway.com/match/croatia-K8aznggo/england-j9N9ZNFA/), 18.06. [Ghana - Panama](https://www.soccerway.com/match/ghana-nNBjHale/panama-OWKqbCfi/), [Uzbekistan - Colombia](https://www.soccerway.com/match/colombia-G02s4PCS/uzbekistan-EZYKKRMc/), [Czech Republic - South Africa](https://www.soccerway.com/match/czech-republic-6LHwBDGU/south-africa-W2ijYvlr/), [Switzerland - Bosnia & Herzegovina](https://www.soccerway.com/match/bosnia-herzegovina-fqe7WYTr/switzerland-rHJ2vy1B/), 19.06. [Canada - Qatar](https://www.soccerway.com/match/canada-x4toKORL/qatar-zqzHL77i/), [Mexico - South Korea](https://www.soccerway.com/match/mexico-O6iHcNkd/south-korea-K6Gs7P6G/), [USA - Australia](https://www.soccerway.com/match/austral"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Brave Search retrieves recent June 2026 friendly results and Asian qualifier statistics to evaluate defensive form.",
+        "data": "\u2022 Austria vs. Jordan Prediction, Lineups for World Cup 2026\n  https://www.prizepicks.com/playbook-article/austria-vs-jordan-prediction-lineups-world-cup-2026\n  Austria\u2019s defense hasn&#x27;t conceded more than <strong>1 goal</strong> in any qualification or friendly leading up to the 2026 World Cup.\n\n\u2022 Austria \u2013 Jordan Picks & Odds 17.06.2026 - Transfermarkt\n  https://www.transfermarkt.us/online-betting/picks/austria-vs-jordan-picks-17-06-2026/\n  Austria: W, W, W, D, (final friendly) \u2014 notable is the 5\u20131 win over Ghana as the biggest recent victory. Jordan: L, L, D, D, L \u2014 no wins in the last five; conceded <strong>13 goals</strong> across those matches, which flags defensive vulnerability.\n\n\u2022 Austria vs Jordan Prediction: World Cup 2026 Preview & Best Bets - Yahoo Sports\n  https://sports.yahoo.com/articles/austria-vs-jordan-prediction-world-142000464.html\n  They have shown they can score goals, but the defensive record against higher-quality sides is a significant vulnerability. <strong>Austria and Jordan have never met in a competitive or friendly international fixture</strong>.\n\n\u2022 Austria vs Jordan Head-to-Head & Form Stats | Tips.GG\n  https://tips.gg/article/austria-vs-jordan-head-to-head-wc2026/\n  Austria\u2019s recent form stands ... been considerably more consistent, and their defensive record \u2014 conceding just <strong>3 goals in six games</strong> against Jordan\u2019s 12 \u2014 highlights a significant difference between the two sides at ...\n\n\u2022 Austria vs Jordan FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/austria-jordan-world-cup-preview/blt7c1bb3d0f0243ac5\n  Their most recent result was a 1-0 friendly win over Tunisia on June 1, 2026. They also beat South Korea 1-0 and produced their most eye-catching display with a 5-1 win over Ghana in March. Their only blemish across the five matches was a 1-1 draw with Bosnia and Herzegovina in World Cup qualifying last November. Austria scored nine goals and conceded three across those five fixtures."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Analyzes market consensus on the goal spread and totals to gauge implied defensive resilience of Jordan.",
+        "data": "\u2022 Austria vs Jordan prediction: 3-1 Bet Builder tip, odds, team news | World Cup 2026 | Racing Post\n  https://www.racingpost.com/sport/football-tips/world-cup-2026/austria-vs-jordan-world-cup-prediction-team-news-odds-betting-tips-and-bet-builder-aM2Ss5f0OfG4/\n  Austria face Jordan in the group stage of the 2026 World Cup. Get match details, betting tips, predictions and TV info for the big game at Levi&#x27;s Stadium.\n\n\u2022 Austria vs Jordan Betting Odds | Oddschecker\n  https://www.oddschecker.com/football/world-cup/austria-v-jordan/winner\n  Compare odds across 24 UK bookmakers for Austria vs Jordan. Increase your potential winnings by using Oddschecker for a single bet or part of an acca.\n\n\u2022 Austria vs Jordan AI Prediction & Expert Tips 17.06.2026\n  https://oddspedia.com/football/austria-jordan-1654584/predictions\n  On the Asian Handicap, <strong>Austria -1.5 is priced at 2.00, while Jordan +1.5 is 1.90</strong>, suggesting a one or two-goal game is the key debate. For totals, Over 2.75 is 1.89 and Under 2.75 is 2.05, so the market is close, with a slight lean to goals.\n\n\u2022 Austria vs Jordan: World Cup 2026 Betting Preview & Tips\n  https://www.compare.bet/news/austria-vs-jordan-betting-preview-predictions-tips-and-live-odds\n  World Cup debutants Jordan, ranked 63rd, will look to spring a surprise. Q: What are the best betting odds for this match? A: <strong>Austria are roughly 1/3 to win and around 10/11 on the -1 handicap</strong>.\n\n\u2022 Austria vs. Jordan odds, prediction, time: 2026 World Cup picks, best bets from top expert on 31-13 run\n  https://www.cbssports.com/soccer/news/austria-jordan-odds-prediction-time-2026-world-cup-picks-soccer-best-bets/\n  He&#x27;s also <strong>12-8-2</strong> on his World Cup picks entering Tuesday. Anyone wanting to follow his World Cup betting advice at sportsbooks and on betting apps could see big returns. Now, Eimer has studied Austria vs."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Uses GDELT news intelligence to query real-time translingual reporting on last-minute team camp developments.",
+        "data": "{\"topic\":\"Austria vs Jordan World Cup 2026 camp illness injury leak\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Swerver's headless browser search quickly extracts the stadium location, weather forecast, or indoor status.",
+        "data": "\u2022 Austria-Jordan World Cup match at San Francisco ...\n  https://www.nbcbayarea.com/world-cup/world-cup-jordan-austria-san-francisco-bay-area-stadium/4100069/\n  The second of six World Cup matches at San Francisco Bay Area stadium in Santa Clara will kick off at 9 p.m. Tuesday.\n\n\u2022 2026 World Cup Stadiums: Extreme Heat Rising\n  https://www.climatecentral.org/climate-matters/world-cup-stadiums\n  Of the 16 World Cup stadiums, three are fully climate-controlled (Atlanta, Dallas, and Houston), and two have either passive cooling (Los Angeles) or a ...\n\n\u2022 Things are heating up for the 2026 FIFA World Cup! Game ...\n  https://www.instagram.com/reel/DZgTs0nPFbs/\n  Host cities are point seven degrees Celsius hotter than nineteen ninety-four. Every fraction of that is climate change. The same climate change ...\n\n\u2022 FIFA WORLD CUP | AUSTRIA vs. JORDAN\n  https://levisstadium.com/event/fifa-world-cup-group-stage-2026-06-16/\n  Austria vs. Jordan will take place at Levi's\u00ae Stadium on June 16th, 2026 at 9:00 p.m. PT. For this summer's FIFA World Cup 2026\u2122 tournament ...\n\n\u2022 \ufe0f\u26bd Extreme heat, high humidity, and high-altitude venues ...\n  https://www.facebook.com/Aspetar/videos/%EF%B8%8F-extreme-heat-high-humidity-and-high-altitude-venues-could-become-some-of-the-t/1319097800407562/\n  Extreme heat, high humidity, and high-altitude venues could become some of the toughest opponents at the FIFA World Cup 2026."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides up-to-date injury and fitness status of key players right before kickoff using Tavily's AI-ranked news search.",
+        "data": "\u2022 Austria vs. Jordan live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/16/sports/austria-vs-jordan-live-updates-world-cup-2026-score-news-and-highlights/\n  # Austria vs. Jordan live updates: World Cup 2026 score, news and highlights. Jordan is set to kick off at midnight ET from San Francisco Bay Area Stadium. Follow The Post\u2019s live updates for the latest Austria vs. Jordan score, news and highlights from the World Cup 2026. *Editor\u2019s Note: This live blog is updated with the assistance of AI, with oversight from the Post\u2019s editorial team.*. ## Austria's high-intensity style. Ralf Rangnick has been in charge for Austria since 2022, and the former RB Leipzig and Manchester United coach has brought his trademark high-intensity gegenpress (high press\n\n\u2022 Austria vs Jordan Prediction: Austria Looks To Confirm Early Group Dominance - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/austria-vs-jordan-prediction-for-the-match-on-june-17th-2026/\n  # Austria vs Jordan: Prediction for the Match on June 17th, 2026. Image 3: Austria vs Jordan: Prediction for the Match on June 17th, 2026. Austria's national team will open their group stage campaign against Jordan at Levi Stadium. This fixture holds great importance as it features an improving European squad facing a debutant World Cup side, with both teams eager for a victory to keep pace with Argentina and Algeria in the standings. Austria's tactical approach varies by opponent: against Ghana, they relied on swift transitions to exploit turnovers and strike quickly through wide runners.Duri\n\n\u2022 Austria vs. Jordan - Live Score - June 17, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-austria-vs-jordan-jun-17-2026-game-boxscore-647632\n  ## Austria vs Jordan. Journey out of Group J begins for Austria and Jordan. # Austria vs. ## MATCHUP## NEWS## ODDS## STANDINGS. ### Jordan On Playing Austria | Jamal Sellami and Ihsan Haddas Answers Questions. ### Austria Train Before Jordan. ### Team Feature: Jordan | An Ambition Realised For Jordan To Reach World Cup. ### Team Feature: Austria | Sasa Kalajdzic Never Gave Up On His Dream. | 3/31 | KOR (H) | W1-0 |. | 5/31 | SUI (A) | L4-1 |. | 3/31 | NGA (H) | D2-2 |. ### ODDS. A bet of $271 would win $371 total if Austria wins and a bet of $100 would win $788 total if Jordan wins. The combin\n\n\u2022 Austria vs. Jordan: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-austria-vs-jordan-tv-channel-live-stream-2026-fifa-world-cup-group-j\n  FIFA Men's World Cup. FIFA Men's World Cup. 3. ### 2026 World Cup: France Alone Atop Oddsboard After Spain's Shocking Draw### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. Austria and Jordan meet in their 2026 FIFA World Cup opener on Wednesday, June 17, 2026 at 12:00 a.m. ET from San Francisco Bay Area Stadium, San Francisco Bay Area. ## How to Watch Austria vs. ## Austria World Cup Schedule. Jordan \u2014 \n\n\u2022 \ud83c\udf0e 2026 World Cup: meet group J \ud83c\udde6\ud83c\uddf7\ud83c\udde9\ud83c\uddff\ud83c\udde6\ud83c\uddf9\ud83c\uddef\ud83c\uddf4 - Yahoo Sports\n  https://sports.yahoo.com/articles/2026-world-cup-introducing-group-101900285.html\n  + The Boys in the Back. Uncrowned is a new destination for all things MMA, boxing, wrestling, and more, featuring Ariel Helwani. Yahoo Soccer is powered by OneFootball, the ultimate destination for news, live matches, scores, highlights, and more. Yahoo Racing is powered by Motorsport Network, providing expert reporting, analysis, and insider access across the world\u2019s top racing series. * Play 2026 Soccer Pick 'Em. # \ud83c\udf0e 2026 World Cup: meet group J \ud83c\udde6\ud83c\uddf7\ud83c\udde9\ud83c\uddff\ud83c\udde6\ud83c\uddf9\ud83c\uddef\ud83c\uddf4. The presentation of Group J of the 2026 World Cup! 17.06 - 03:00: Argentina vs Algeria. 17.06 - 06:00: Austria vs Jordan. 23.06 - 05:00: J"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Extracts tactical analysis of both teams' formations, high line vulnerability, and transition strategies.",
+        "data": "\u2022 Austria vs Jordan at World Cup 2026: TV channel, how to ...\n  https://www.espn.com/soccer/story/_/id/49058237/fifa-world-cup-2026-austria-vs-jordan-tv-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups\n  *   [Search](https://www.espn.com/soccer/story/_/id/49058237/fifa-world-cup-2026-austria-vs-jordan-tv-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups#). *   [Sports Sports](https://www.espn.com/soccer/story/_/id/49058237/fifa-world-cup-2026-austria-vs-jordan-tv-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups#). *   [Watch Watch](https://www.espn.com/soccer/story/_/id/49058237/fifa-world-cup-2026-austria-vs-jordan-tv-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups#). *   [Fantasy Fantasy](https://www.espn.com/soccer/story/_/id/49058237/fifa-wor\n\n\u2022 Austria v Jordan | Levi's Stadium | The High Press vs The Newcomer\n  https://www.youtube.com/watch?v=sIbdRmdnJzc\n  20 | J | June 16 | Austria v Jordan | Levi's Stadium | The High Press vs The Newcomer\nSoccerTease\n140 subscribers\n2 likes\n248 views\n16 Jun 2026\nHistory in the making: Austria faces World Cup debutants Jordan at Levi\u2019s Stadium tonight (9 p.m. PT). Ralf Rangnick\u2019s Austria bring intense Gegenpressing from a high-line 4-2-3-1 led by captain David Alaba, Bundesliga stars Marcel Sabitzer and Konrad Laimer, and veteran top scorer Marko Arnautovi\u0107 \u2014 back at a World Cup after a 28-year wait. Jordan\u2019s Al-Nashama arrive battle-tested under Jamal Sellami, set up in a compact defensive block and deadly on \n\n\u2022 Austria vs Jordan FIFA World Cup 2026 Preview - Goal.com\n  https://www.goal.com/en-us/news/austria-jordan-world-cup-preview/blt7c1bb3d0f0243ac5\n  *   Clubs- [x]          *   [![Image 2: crest](https://cdn.sportfeeds.io/sdl/images/team/crest/medium/7a7uyvix8axi28h7d3bwl4tbe.png?quality=60&auto=webp&format=pjpg)Inter Miami](https://www.goal.com/en-us/team/inter-miami-cf/7a7uyvix8axi28h7d3bwl4tbe). *   [![Image 3: crest](https://cdn.sportfeeds.io/sdl/images/team/crest/medium/3kq9cckrnlogidldtdie2fkbl.png?quality=60&auto=webp&format=pjpg)Real Madrid](https://www.goal.com/en-us/team/real-madrid/3kq9cckrnlogidldtdie2fkbl). *   [![Image 4: crest](https://cdn.sportfeeds.io/sdl/images/team/crest/medium/agh9ifb2mw3ivjusgedj7c3fe.png?quality=60&au\n\n\u2022 Austria vs Jordan Prediction: World Cup 2026 Preview & Best Bets\n  https://totalfootballanalysis.com/competitions/fifa-world-cup-2026/austria-v-jordan-predictions\n  *   [FIFA World Cup 2026](https://totalfootballanalysis.com/category/competitions/fifa-world-cup-2026). *   [Competitions](https://totalfootballanalysis.com/category/competitions). *   [Coaches](https://totalfootballanalysis.com/category/coaches). *   [All Coaches](https://totalfootballanalysis.com/category/coaches). *   [Teams](https://totalfootballanalysis.com/category/teams). *   [ALL Teams](https://totalfootballanalysis.com/category/teams). *   [International](https://totalfootballanalysis.com/competitions/fifa-world-cup-2026/austria-v-jordan-predictions). [](https://totalfootballanalysis.\n\n\u2022 Austria vs Jordan 2026 World Cup Group J clash preview\n  https://english.mathrubhumi.com/sports/football/austria-vs-jordan-world-cup-2026-group-j-preview-m4hblhhd\n  #### [[](https://english.mathrubhumi.com/sports/football/austria-vs-jordan-world-cup-2026-group-j-preview-m4hblhhd#vuukle-comments)](https://english.mathrubhumi.com/sports/football/austria-vs-jordan-world-cup-2026-group-j-preview-m4hblhhd#vuukle-comments)[![Image 5: Google preferred source](https://english.mathrubhumi.com/images/google-preferred-light.png)![Image 6: Google preferred source](https://english.mathrubhumi.com/images/google-preferred-dark.png)](https://www.google.com/preferences/source?q=Mathrubhumi%20English). ![Image 7: Austria vs Jordan 2026 World Cup Group J clash preview: Line"
+      }
+    ],
+    "research_cost": 0.12,
+    "wallet_before": 2.444,
+    "wallet_after": 2.324,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "confidence_reason": "Austria's superior squad quality and midfield strength make them favorites, but their severe injury crisis and Jordan's dangerous counter-attack cap the confidence.",
+      "reasoning": "While Austria's high-intensity press and midfield quality should carry them to a win, the absence of key creative and defensive figures like Baumgartner and Alaba will allow a fully fit Jordan side to threaten on transition.",
+      "probabilities": {
+        "home": 58,
+        "draw": 24,
+        "away": 18
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Austria enters in excellent form with four wins and a draw in their last five matches, including a 5-1 win over Ghana and a 1-0 victory against Tunisia.",
+      "away_form": "Jordan is winless in their last five matches with three losses and two draws, conceding 13 goals in that span, though they have shown offensive capability by scoring multiple goals against Morocco, Nigeria, and Costa Rica.",
+      "key_injuries": [
+        "Austria: Christoph Baumgartner is officially ruled out of the tournament with a major muscle injury.",
+        "Austria: Captain David Alaba is highly doubtful as he continues to struggle with fitness issues.",
+        "Austria: Florian Grillitsch and Patrick Wimmer are both doubtful and being monitored for minor injuries.",
+        "Jordan: Reported to have a fully fit squad entering the match."
+      ],
+      "tactical_matchup": "Austria's high-intensity gegenpress under Ralf Rangnick will look to suffocate Jordan, but Jordan's disciplined deep defensive block and rapid transition play led by Mousa Al Tamari are designed to exploit the space left behind Austria's high line.",
+      "group_stakes": "With Argentina already leading Group J after a 3-0 win over Algeria, both Austria and Jordan need a positive result in their opening match to position themselves for automatic qualification or a best third-place spot.",
+      "home_win_signals": [
+        "Austria has a superior defensive record, conceding just 3 goals in their last six matches and never conceding more than once in any recent fixture.",
+        "Austria possesses high-level European experience with Bundesliga stars like Konrad Laimer and Marcel Sabitzer anchoring the midfield.",
+        "Austria's recent friendly results show high consistency, including wins over South Korea (1-0) and Tunisia (1-0)."
+      ],
+      "away_win_signals": [
+        "Jordan's lethal transition play can exploit the gaps created when Austria's high-intensity press commits bodies forward.",
+        "Jordan enters with a fully fit squad, whereas Austria is missing key creative midfielder Baumgartner and potentially Alaba."
+      ],
+      "draw_signals": [
+        "Jordan's compact defensive block could frustrate an Austria side missing its main creative spark in Baumgartner.",
+        "Austria's defensive solidity (no more than 1 goal conceded per game recently) combined with Jordan's defensive focus could lead to a low-scoring stalemate."
+      ],
+      "contradictions": [
+        "Bookmakers heavily favor Austria (around 1.38 odds), but Austria's severe injury issues to key players like Baumgartner and Alaba contrast with Jordan's fully fit squad and counter-attacking threat."
+      ],
+      "strategy_applied": [
+        "No specific strategy rules applied as AUT vs JOR is not listed in the rule triggers; analyzed using core principles of fitness, form, and tactical matchup."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting Austria's historical defensive record and friendly wins while discounting how the potential absence of David Alaba and Christoph Baumgartner fundamentally weakens their defensive structure and creative output.",
+        "Assuming Austria's high-intensity gegenpress can be executed flawlessly despite missing key tactical components and facing a rapid transition threat in Mousa Al Tamari."
+      ],
+      "underweighted_factors": [
+        "Jordan's demonstrated ability to score multiple goals against strong opponents (Morocco, Nigeria, Costa Rica) which could exploit a depleted Austrian defense.",
+        "The compounding effect of Austria's injury list (Baumgartner, Alaba, Grillitsch, Wimmer) which severely limits their squad depth and tactical flexibility."
+      ],
+      "draw_risk": "medium \u2014 Austria's lack of creative depth due to Baumgartner's injury may struggle to break Jordan's low block, though Jordan's defensive leakiness makes a clean sheet unlikely for either side.",
+      "favorite": "home",
+      "confidence_cap": 6,
+      "verdict": "Austria remains the favorite on paper due to individual quality, but their severe injury crisis and Jordan's potent counter-attack make the current short odds highly risky."
+    },
+    "full_reasoning": "HOME_PCT: 58\nDRAW_PCT: 24\nAWAY_PCT: 18\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: Austria's superior squad quality and midfield strength make them favorites, but their severe injury crisis and Jordan's dangerous counter-attack cap the confidence.\nREASONING: While Austria's high-intensity press and midfield quality should carry them to a win, the absence of key creative and defensive figures like Baumgartner and Alaba will allow a fully fit Jordan side to threaten on transition.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
