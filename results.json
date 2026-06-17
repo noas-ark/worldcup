@@ -5573,5 +5573,398 @@
     "reflected": true,
     "reflected_at": "2026-06-17T22:30:30.762720+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n- POR vs COD: Prioritize extreme weather and physical low-block over attacking tempo.\n- ENG vs CRO: Prioritize transition pace and defensive flaws over microclimate and history.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 low-block (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transitions (ENG vs CRO)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 flaws (ENG vs CRO)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 administration (POR vs COD)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (ENG vs CRO)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (ENG vs CRO)"
+  },
+  {
+    "match": "GHA vs PAN",
+    "home": "GHA",
+    "away": "PAN",
+    "kickoff": "2026-06-17T23:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n- POR vs COD: Prioritize extreme weather and physical low-block over attacking tempo.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 low-block (POR vs COD)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 administration (POR vs COD)",
+    "information_needs": "FORM\n- What was Ghana's defensive record in their final CAF qualifying rounds, and did they struggle to keep clean sheets against lower-ranked, transition-heavy sides?\n- How did Panama perform in their final CONCACAF qualification matches and early June 2026 warm-up friendlies, specifically regarding their goal-scoring efficiency on neutral turf?\n\nPLAYERS\n- Is Mohammed Kudus fully fit and playing in his preferred central attacking midfield role for Ghana, or is he being deployed on the wing due to fitness concerns surrounding Antoine Semenyo or Ernest Nuamah?\n- Who is starting in goal for Panama, and does their current number-one goalkeeper have a statistically proven vulnerability to defending high crosses and set-pieces?\n\nTACTICS\n- How will Panama's preferred 3-4-3/5-4-1 low-block system cope with Ghana's dynamic, high-tempo wing play and 1v1 isolation situations?\n- Does Ghana's double-pivot midfield possess the defensive discipline required to track and neutralize Panama's primary playmaker, Adalberto Carrasquilla, during quick transition phases?\n\nH2H\n- Have these two nations faced each other in any recent senior international friendlies or youth tournaments, and did those matches reveal any structural mismatches between West African athleticism and Central American physical defending?\n\nCONTEXT\n- Is this the opening match of the 2026 World Cup group stage for both teams, or is it Matchday 2/3, meaning one team must play expansively to chase a win due to the group standings?\n\nMARKET\n- What do the opening Asian Handicap lines (e.g., Ghana -0.5 or -0.75) and the Over/Under goal line suggest about the market's expectation of a low-scoring, cagey affair?\n\nNEWS\n- Are there any reports of camp disharmony, logistical issues, or managerial pressure within either squad leading up to their arrival at the tournament?\n\nVENUE\n- In which 2026 World Cup host city and stadium is this match being played, and does the local climate (e.g., high humidity in Miami or high altitude in Mexico City) favor one team's physical conditioning over the other?",
+    "research_gaps": [
+      {
+        "need": "Real-time biometric and physiological tracking data for Mohammed Kudus during pre-tournament training camps.",
+        "category": "PLAYERS",
+        "ideal_service": "Wearable/biometric sports science data provider API (e.g., Catapult Sports API)."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Ghana vs Panama World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Ghana vs Panama World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ghana World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Ghana recent form and results",
+        "need": "How has Ghana performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Panama World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Panama recent form and results",
+        "need": "How has Panama performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ghana vs Panama head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ghana vs Panama World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Panama starting goalkeeper World Cup 2026 vulnerability crosses set pieces",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies Panama's starting goalkeeper and potential structural weaknesses against Ghana's aerial play.",
+        "need": "Who is starting in goal for Panama, and does their current number-one goalkeeper have a statistically proven vulnerability to defending high crosses and set-pieces?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Panama CONCACAF qualification early June 2026 friendly results goal efficiency",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Assesses Panama's recent offensive productivity and form leading into the tournament.",
+        "need": "How did Panama perform in their final CONCACAF qualification matches and early June 2026 warm-up friendlies, specifically regarding their goal-scoring efficiency on neutral turf?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ghana vs Panama head to head football matches friendlies youth athleticism defending",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Uncovers historical and physical matchups between the two teams' playing styles.",
+        "need": "Have these two nations faced each other in any recent senior international friendlies or youth tournaments, and did those matches reveal any structural mismatches between West African athleticism and Central American physical defending?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ghana vs Panama World Cup 2026 betting odds Asian Handicap Over Under",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Gauges market consensus on match competitiveness and expected goal volume.",
+        "need": "What do the opening Asian Handicap lines (e.g., Ghana -0.5 or -0.75) and the Over/Under goal line suggest about the market's expectation of a low-scoring, cagey affair?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Panama 3-4-3 low block Ghana wingers tactics Carrasquilla transition World Cup 2026",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Analyzes the tactical matchup between Panama's defensive low-block and Ghana's transition defense against Carrasquilla.",
+        "need": "How will Panama's preferred 3-4-3/5-4-1 low-block system cope with Ghana's dynamic, high-tempo wing play and 1v1 isolation situations, and does Ghana's double-pivot midfield possess the defensive discipline required to track and neutralize Panama's primary playmaker, Adalberto Carrasquilla, during quick transition phases?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Ghana Panama World Cup 2026 camp disharmony logistics manager pressure",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Identifies off-pitch distractions or psychological factors affecting squad performance.",
+        "need": "Are there any reports of camp disharmony, logistical issues, or managerial pressure within either squad leading up to their arrival at the tournament?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Ghana vs Panama World Cup 2026 stadium host city climate humidity altitude conditioning",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Determines if environmental conditions like altitude or humidity offer a physical advantage to one side.",
+        "need": "In which 2026 World Cup host city and stadium is this match being played, and does the local climate (e.g., high humidity in Miami or high altitude in Mexico City) favor one team's physical conditioning over the other?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Mohammed Kudus Ghana World Cup 2026 fitness central midfield wing Semenyo Nuamah",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Identifies Kudus's current fitness status and tactical role to understand Ghana's attacking configuration.",
+        "need": "Is Mohammed Kudus fully fit and playing in his preferred central attacking midfield role for Ghana, or is he being deployed on the wing due to fitness concerns surrounding Antoine Semenyo or Ernest Nuamah?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Ghana defensive record CAF qualifying clean sheets 2025 2026 transition",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Evaluates Ghana's defensive resilience and vulnerability to counter-attacks.",
+        "need": "What was Ghana's defensive record in their final CAF qualifying rounds, and did they struggle to keep clean sheets against lower-ranked, transition-heavy sides?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Ghana vs Panama World Cup 2026 group stage schedule matchday standings",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Clarifies matchday context and motivation levels based on group standings.",
+        "need": "Is this the opening match of the 2026 World Cup group stage for both teams, or is it Matchday 2/3, meaning one team must play expansively to chase a win due to the group standings?",
+        "category": "CONTEXT"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Ghana vs Panama Predictions: Form suggests an upset is on the cards - Goal.com\n  https://www.goal.com/en-us/betting/world-cup/ghana-vs-panama-predictions-6-17-2026/A%3Ablt35ed818358f79a9e\n  With this being the first meeting between the sides, there isn\u2019t much history to go on. Ghana have previously faced CONCACAF nations on three occasions, losing one and winning two. However, Panama have the form and momentum to topple Ghana and deliver one of the early shocks of the 2026 tournament.\n\n Ghana vs Panama Prediction 3: 1x2 - Panama Moneyline @+230 with bet365\n\n### Our analysis: Form of both teams\n\n Score prediction: Ghana 1-2 Panama\n Goalscorers prediction: Ghana: Antoine Semenyo - Panama: Ismael Diaz, Jiovany Ramos [...] Panama have been highly efficient under Thomas Christiansen. \n\n\u2022 Ghana vs Panama Prediction: Both Sides are Expected to Score - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/ghana-vs-panama-match-prediction-18-june-2026/\n  ## Ghana vs Panama match prediction, 18th June 2026\n\nGhana and Panama were not exceptional in their recent games, and, on the evidence, a draw seems to be on the cards. The West African Giants enter this game, having not won any of their last six games, and Panama has managed two wins in their last seven. So, nothing special in the performance of the two sides. Nevertheless, I expect both sides to find the back of the net. They have been so impressive in their attack, but their defence has been a mess.\n\nOur betting tip is BTTS (yes) with odds of 1.93 on 1xBet bookmaker.\n\nOur match prediction i\n\n\u2022 Where to Watch Ghana vs Panama: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-ghana-vs-panama-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  Oyebade Oluwafemi\n\n17/06/2026\n\n13:31\n\nGhana will face Panama in their 2026 FIFA World Cup Group L opener on Wednesday, June 17, 2026, at 7:00 p.m. ET at the Toronto Stadium. Here's everything you need to know about how to watch the match, including TV channels, live streaming options, kick-off time, team news, and other key details ahead of the World Cup showdown.\n\nClaim Exclusive World Cup Bonuses on BC Game\n\nImage 2: Ghana vs Panama\n\nGhana vs Panama\n\n## Ghana vs Panama Match Details\n\n   Date: Wednesday, June 17, 2026. \n   Kick-off time: 7:00 p.m. ET \n   Venue: Toronto Stadium, Toronto \n   Re\n\n\u2022 Ghana vs. Panama: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-ghana-vs-panama-tv-channel-live-stream-2026-fifa-world-cup-group-l\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Ghana vs. Panama: How to Watch, TV Channel, Live Stream\n\nPublished Jun. 17, 2026 7:01 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nGhana and Panama meet in their 2026 FIFA World Cup opener on Wednesday, June 17, 2026 at 7:00 p.m. ET from Toronto Stadium.\n\nGhana, ranked 73rd by FIFA, are appearing at their fifth World Cup, with their best finish a quarterfinal run in 2010. Panama enter Group L ranked 34th by FIFA, returning to the W\n\n\u2022 Visa Denial Sidelines Thomas Partey For Ghana's World Cup Opener Against Panama - FOX Sports\n  https://www.foxsports.com/stories/soccer/visa-denial-sidelines-thomas-partey-for-ghanas-world-cup-opener-against-panama-in-toronto\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n FOX Super 6\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Visa Denial Sidelines Thomas Partey For Ghana's World Cup Opener Against Panama\n\nPublished Jun. 12, 2026 3:49 p.m. ET\n\nshare\n\nfacebookxredditlink\n\nGhana midfielder Thomas Partey will not play in his team's World Cup opener Wednesday after Canada denied his visa application while he awaits trial in London on multiple charges of rape."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Ghana at the FIFA World Cup 2026: Kudus-Led Side Face England and Croatia - Telecom Asia Sport\n  https://www.telecomasia.net/in/blog/ghana-at-fifa-world-cup-2026/\n  ## Match schedule - Group Stage\n\n|  |  |  |  |\n ---  --- |\n| Event | Kick-off (local / UTC) | Date | Venue |\n| Ghana vs Panama | 19:00 (EDT) / 23:00 UTC | 17 June 2026 | BMO Field, Toronto |\n| England vs Ghana | 16:00 (EDT) / 20:00 UTC | 23 June 2026 | Gillette Stadium, Foxborough |\n| Croatia vs Ghana | 21:00 (EDT) / 01:00 UTC (28 June) | 27 June 2026 | Lincoln Financial Field, Philadelphia |\n\n## Squad for World Cup 2026\n\nAntoine Semenyo\n\nGhana confirmed their final 26-man squad on 2 June 2026. Notable omissions include Mohammed Kudus, Andre Ayew, and Joseph Paintsil. See our full squad announ\n\n\u2022 Where to Watch Ghana vs Panama: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-ghana-vs-panama-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Ghana vs Panama Team News\n\nNeither team has reported any injuries or suspensions ahead of the match. However, Thomas Partey will miss the game after Canada denied the Ghanaian midfielder entry for the FIFA World Cup.\n\n## Ghana vs Panama Match Odds\n\nBookmakers Ghana to Win Draw Panama to Win\n1xBet 2.42 3.32 3.32\nBetway 2.40 3.25 3.25\n\nClaim Exclusive World Cup Bonuses on 1xBet [...] Oyebade Oluwafemi\n\n17/06/2026\n\n13:31\n\nGhana will face Panama in their 2026 FIFA World Cup Group L opener on Wednesday, June 17, 2026, at 7:00 p.m. ET at the Toronto Stadium. Here's everything you need to know abo\n\n\u2022 Ghana vs Panama Prediction: Both Sides are Expected to Score - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/ghana-vs-panama-match-prediction-18-june-2026/\n  ### Ghana Team News\n\nOver the past few days, the news that Thomas Partey will miss this opener has spread like wildfire. He was denied a visa to Canada. This is compounded by the fact that Tottenham Hotspur midfielder Mohammed Kudus was left at home due to an injury. Nevertheless, I expect Jordan Ayew to lead the team from the attack in their race to make history.\n\n#### Ghana Expected Line Ups\n\nLawrence Ati-Zigi (GK), Marvin Senaya, Jonas Adjetey, Jerome Opoku, Gideon Mensah, Abdul Fatawu, Kwasi Sibo, Elisha Owusu, Kamaldeen Sulemana, Antoine Semenyo, Jordan Ayew.\n\n## Panama: Form and Statisti\n\n\u2022 Ghana vs Panama Predictions: Form suggests an upset is on the cards - Goal.com\n  https://www.goal.com/en-us/betting/world-cup/ghana-vs-panama-predictions-6-17-2026/A%3Ablt35ed818358f79a9e\n  Both sides aim to turn around their recent fortunes and secure maximum points here. As a result, we could be in for a cracking affair in Toronto.\n\n### Probable lineups for Ghana vs Panama\n\nGhana expected lineup: Ati Zigi, Senaya, Adjetey, Opoku, Mensah, Fatawu, Partey, Owusu, Adu, Semenyo, Ayew\n\nPanama expected lineup: Mosquera, Blackman, Rodriguez, Barcenas, Farina, Ramos, Martinez, Harvey, Murillo, Diaz, Andrade [...] With this being the first meeting between the sides, there isn\u2019t much history to go on. Ghana have previously faced CONCACAF nations on three occasions, losing one and winning \n\n\u2022 Ghana vs. Panama: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-ghana-vs-panama-tv-channel-live-stream-2026-fifa-world-cup-group-l\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Ghana vs. Panama: How to Watch, TV Channel, Live Stream\n\nPublished Jun. 17, 2026 7:01 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nGhana and Panama meet in their 2026 FIFA World Cup opener on Wednesday, June 17, 2026 at 7:00 p.m. ET from Toronto Stadium.\n\nGhana, ranked 73rd by FIFA, are appearing at their fifth World Cup, with their best finish a quarterfinal run in 2010. Panama enter Group L ranked 34th by FIFA, r"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Ghana recent form and results",
+        "data": "\u2022 Ghana | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/ghana/team-news\n  Ghana | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Ghana squad at FIFA World Cup 2026\u2122.\n\n\u2022 Reuters Ghana at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/ghana/\n  Follow Ghana&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Ghana: 2026 FIFA World Cup Schedule, Results, Roster, Stats - NBC Sports\n  https://www.nbcsports.com/soccer/world-cup/ghana\n  Full Ghana schedule, results, roster, stats, news, highlights and more from the 2026 FIFA World Cup\n\n\u2022 World Cup 2026 Ultimate Guide: Ghana | Goal.com\n  https://www.goal.com/en/world-cup-teams/group-l/world-cup-2026-guide-ghana/O~bltc1be344a8fe49d80\n  ... The Black Stars arrive at the ... the draw was far from kind. <strong>Ghana have been placed in Group L alongside two elite national teams, England and Croatia, with Panama completing the group</strong>....\n\n\u2022 Africa at the FIFA World Cup 2026 \u2013 Ghana: Can Antoine Semenyo help the Black Stars reach the quarter-finals again?\n  https://www.olympics.com/en/news/africa-fifa-world-cup-2026-ghana-jordan-ayew-lead-black-stars-quarter-finals-again\n  First appearance: Germany 2006 Appearances: 5 (2006, 2010, 2014, 2022, 2026) Best result: Quarter-finals (2010) ... TOYOTA, JAPAN - NOVEMBER 14: Antoine Semenyo of Ghana in action during the international friendly match between Japan and Ghana at Toyota Stadium on November 14, 2025 in Toyota, Aichi, Japan. (Photo by Koji Watanabe/Getty Images) With 17 Premier League goals this season, Antoine Semenyo arrives at the World Cup as Ghana\u2019s in form player."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Panama recent form and results",
+        "data": "\u2022 Panama | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/panama/team-news\n  Panama | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the __ squad at FIFA World Cup 2026\u2122.\n\n\u2022 Panama at the FIFA World Cup 2026: Squad, fixtures and results\n  https://www.reuters.com/graphics/SOCCER-WORLDCUP/mopaoglqkpa/teams/panama/\n  Squad, line-ups and fixture schedule for the Panama team in USA \u00b7 Canada \u00b7 Mexico\n\n\u2022 Panama - fixtures, team info and top players\n  https://www.fotmob.com/teams/5922/overview/panama\n  In the Friendlies, their recent results include a <strong>1-1 draw with South Africa, a 2-1 win against South Africa, a 2-6 loss to Brazil, a 4-2 win against Dominican Republic, and a 1-1 draw with Bosnia and Herzegovina</strong>.\n\n\u2022 Panama national football team WC Qual, CONCACAF standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/panama/table/2026/world-cup-qualification-americas/\n  This page shows the Panama national football team WC Qual, CONCACAF 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Panama national football team WC Qual, CONCACAF 2026 standings changes during the competition.\n\n\u2022 Panama World Cup 2026 team guide | Panama | The Guardian\n  https://www.theguardian.com/football/2026/jun/11/panama-world-cup-2026-team-guide\n  Panama topped their Concacaf group in qualifying, conceding just four goals in the final group phase and sealing their spot at the finals with a <strong>3-0 win against El Salvador</strong> last November.\n\n\u2022 [Discussion] The only 8 teams (out of 48) in the 2026 World Cup with rosters entirely made up of players born in their own country: Saudi Arabia, Austria, Brazil, Colombia, the Czech Republic, Panama, South Africa, and Sweden\n  https://www.reddit.com/r/soccer/comments/1twsd11/the_only_8_teams_out_of_48_in_the_2026_world_cup/\n  Couldn't think who in the England squad wasn't born here so looked it up, Guehi was born in the Ivory Coast and moved to England age 1 if anyone else was curious."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Ghana vs Panama Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-ghana-vs-panama\n  Last 5 , <strong>Ghana Win 0 , Draw 1 , Lose 4 , Score Win Prob: 0.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 20.0%</strong> ... Last 5 , Panama Win 2 , Draw 2 , Lose 1 , Score Win Prob: 40.00% ,Asian Handicap Win%: 80.0% Total Goals Over%: 60.0%\n\n\u2022 Ghana vs. Panama Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/ghana_vs_panama.php\n  In the history of World Cups, Ghana National Team faced Panama in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 Ghana vs. Panama (Jun 17, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760434/panama-ghana\n  GhanaGhanaGHA \u00b7 (0-0-0) (0-0-0, 0 pts) -105 \u00b7 ML \u00b7 +135 \u00b7 o2.5 \u00b7 +135 \u00b7 -0.5 \u00b7 +135 \u00b7 PanamaPanamaPAN \u00b7 (0-0-0) (0-0-0, 0 pts) u2.5 \u00b7 -130 \u00b7 +230 \u00b7 u2.5 \u00b7 -165 \u00b7 +0.5 \u00b7 -170 \u00b7 DrawDrawDraw \u00b7 +255 \u00b7 Draw \u00b7 +215 \u00b7 Here is a look at the players with the most career assists at the FIFA World Cup since 1966. Germany&#x27;s Miroslav Klose scored the most goals in men&#x27;s World Cup history.\n\n\u2022 Ghana VS Panama: Live Scores, Lineups, H2H & Odds\n  https://www.365scores.com/football/match/fifa-world-cup-5930/ghana-panama-5094-5414-5930\n  With 365Scores, you can track how many times Ghana and Panama have faced off this season in the FIFA World Cup. You can also dive into all the head-to-head results, see which team has won more often, who has racked up more away victories, and explore a range of other stats for Ghana vs.\n\n\u2022 Ghana vs Panama | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021510\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group L \u2022 Match 21 \u00b7 Ghana \u00b7 23:00 \u00b7 Panama</strong> \u00b7 Kick-off in: 0 days \u00b7 0 hrs \u00b7 28 min \u00b7 48 sec \u00b7 Ghana \u00b7 23:00 \u00b7 Panama \u00b7 17 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Toronto \u25cfToronto Stadium \u00b7 Where to watch ...\n\n\u2022 [Discussion] Ghana vs Panama Predictions and Picks! BEST World Cup Bets Today!\n  https://www.reddit.com/r/WagerTalk/comments/1u7l2e5/ghana_vs_panama_predictions_and_picks_best_world/\n  Panama\n\n\u2022 [Discussion] You predictions for the upcoming matches and who will you support.\n  https://www.reddit.com/r/FootballAfrica/comments/1u5oies/you_predictions_for_the_upcoming_matches_and_who/\n  I'm Arab first, but I will support all of African teams\n\n\u2022 [Discussion] Ghana vs Panama FIFA World Cup 2026 Preview: Everything you need to know\n  https://www.reddit.com/r/worldcup/comments/1u30vpn/ghana_vs_panama_fifa_world_cup_2026_preview/\n  Hello! Thanks for your submission to r/worldcup , your post is up and running! A general reminder to check out our rules in the sidebar, have fun, and most of all to be civil. Finally, take a closer look at this post regarding our civility rules and reddiquette because we would like for each and everyone to feel welcome on the subreddit and to keep a healthy and safe environment for the community. Please also make sure to Join us on Discord Thank you!  I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 2026 FIFA World Cup Group L - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_L\n  <strong>Group L</strong> of the 2026 FIFA World Cup is taking place from June 17 to 27, 2026. The group consists of England, Croatia, Ghana, and Panama. The top two teams, possibly along with the third-placed team, will advance to the round of 32. ... First match(es) will be played: June 17, 2026.\n\n\u2022 Ghana vs Panama | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021510\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group L</strong> \u2022 Match 21 \u00b7 Ghana \u00b7 23:00 \u00b7 Panama \u00b7 Kick-off in: 0 days \u00b7 0 hrs \u00b7 28 min \u00b7 48 sec \u00b7 Ghana \u00b7 23:00 \u00b7 Panama \u00b7 17 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Toronto \u25cfToronto Stadium \u00b7 Where to watch ...\n\n\u2022 Ghana vs. Panama (Jun 17, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760434/panama-ghana\n  2026 FIFA World Cup, Group Stage \u00b7 GhanaGhanaGHA \u00b7 DLLLL, 0 PTS \u00b7 GHA -0.5 \u00b7 FS1 \u00b7 +2 \u00b7 PanamaPanamaPAN \u00b7 DWLWD, 0 PTS \u00b7 4-4-1-14-4-2 \u00b7 1Zigi \u00b7 14Mensah \u00b7 18Opoku \u00b7 4Adjetey \u00b7 26Senaya \u00b7 24Nuamah \u00b7 3Yirenkyi \u00b7 15Owusu \u00b7 11Semenyo \u00b7 22Sulemana \u00b7\n\n\u2022 Group L in Focus - England, Croatia, Ghana, Panama | FIFA World Cup 2026\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/group-l-focus-teams-fixtures-standings\n  The latter two are set to move on to their sixth tournament in 2026, while Japan&#x27;s Yuto Nagatomo and Germany&#x27;s Manuel Neuer will join Modric on five. At the 2018 World Cup, Modric became the first Croatian to win the adidas Golden Ball, while Harry Kane won the adidas Golden Boot \u2013 the first Englishman to do so since Gary Lineker at the 1986 FIFA World Cup Mexico\u2122. Ghana&#x27;s memorable run to the 2010 FIFA World Cup South Africa\u2122 quarter-finals saw the Black Stars become only the third African nation to reach the last eight after Cameroon in 1990 and Senegal in 2002.\n\n\u2022 Ghana vs Panama FIFA World Cup 2026 Preview: Everything you need to know | Goal.com English Saudi Arabia\n  https://www.goal.com/en-sa/news/ghana-panama-world-cup-preview/bltc57f7610ee6813ff\n  In Group L, <strong>Ghana currently occupy third place while Panama sit fourth</strong>, with both sides yet to play their opening fixture of the 2026 FIFA World Cup.\n\n\u2022 [Discussion] Ghana vs Panama FIFA World Cup 2026 Preview: Everything you need to know\n  https://www.reddit.com/r/worldcup/comments/1u30vpn/ghana_vs_panama_fifa_world_cup_2026_preview/\n  Hello! Thanks for your submission to r/worldcup , your post is up and running! A general reminder to check out our rules in the sidebar, have fun, and most of all to be civil. Finally, take a closer look at this post regarding our civility rules and reddiquette because we would like for each and everyone to feel welcome on the subreddit and to keep a healthy and safe environment for the community. Please also make sure to Join us on Discord Thank you!  I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies Panama's starting goalkeeper and potential structural weaknesses against Ghana's aerial play.",
+        "data": "\u2022 Panama 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/panama-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  Full preview of Panama for the 2026 World Cup, including squad breakdown, key players, and tactical analysis of their chances.\n\n\u2022 Panama squad announcement | FIFA World Cup 2026\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/panama-squad-announcement-thomas-christiansen\n  Among the Russia 2018 veterans returning for this edition are the defensive trio of Amir Murillo, Eric Davis and Fidel Escobar, along with goalkeeper <strong>Luis Mejia</strong>. There is also a nod for experienced midfielder Alberto Quintero, who cruelly missed ...\n\n\u2022 Panama World Cup 2026 Squad \u2014 Official 26-Man List\n  https://worldcupranking.com/world-cup-2026/squads/panama/\n  FIFA&#x27;s published shirt names include T. RODR\u00cdGUEZ, FAJARDO, WATERMAN and LONDONO among the 26 call-ups. Goalkeeper No. 1 MEJ\u00cdA (Club Nacional (URU)) anchors the defensive unit on the sheet. Deep block mandatory. England&#x27;s pace is the threat. Third-place Round of 32; one upset vs Ghana or Panama. Source: FIFA squad list published 2026-06-03.\n\n\u2022 Panama at FIFA World Cup 2026: All players, full squad list, key stats and schedule\n  https://www.olympics.com/en/news/fifa-world-cup-2026-panama-all-players-full-squad-list-key-stats-and-schedule\n  At the World Cup 2026, they are ... African nation Ghana. Here is what you need to know about Panama. ... Goalkeepers: <strong>Orlando Mosquera</strong> (Al-Fayha FC), Luis Mej\u00eda (Club Nacional), C\u00e9sar Samudio (CD Marathon)...\n\n\u2022 All about the Panama team for the 2026 World Cup.\n  https://www.ticombo.com/en/world-cup-2026/teams/panama\n  Panama\u2019s most important modern goalkeeper and a cornerstone of their rise to the World Cup stage. With 137 caps, Penedo provided tournament-level shot-stopping and leadership, starring across multiple Gold Cups (including Golden Glove awards) and starting at the 2018 World Cup to anchor Panama\u2019s most historic era. Follow Panama at the FIFA World Cup 2026 and discover where the team will play throughout the tournament."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Assesses Panama's recent offensive productivity and form leading into the tournament.",
+        "data": "\u2022 Concacaf | Official Website\n  https://www.concacaf.com/competitions/concacaf-qualifiers/index\n  Fixtures, results, standings and news for the Men&#x27;s World Cup Qualifying. Follow every moment with Concacaf.\n\n\u2022 Panama Results, Fixtures and Statistics in North & Central America WC Qualification Concacaf 2026 - SoccerPunter\n  https://www.soccerpunter.com/team/all/21888/18717/Panama-in-North-Central-America-WC-Qualification-Concacaf-2026\n  Panama fixtures and past results in North &amp; Central America WC Qualification Concacaf 2026, team form and players stats.\n\n\u2022 2026 FIFA World Cup qualification (CONCACAF) - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONCACAF)\n  The following teams from CONCACAF qualified for the final tournament. ... ^ a b c Although the United bid was selected on 13 June 2018, the automatic berths allocated to the hosts were not confirmed until a decision by the FIFA Council on 14 February 2023. There were <strong>309 goals</strong> scored in ...\n\n\u2022 Panama Results, Fixtures and Statistics in World WC Qualification Concacaf 2026 - SoccerPunter\n  https://www.soccerpunter.com/team/all/21888/18717/Panama-in-World-WC-Qualification-Concacaf-2026\n  Panama fixtures and past results in World WC Qualification Concacaf 2026, team form and players stats.\n\n\u2022 Panama national football team WC Qual, CONCACAF standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/panama/table/2026/world-cup-qualification-americas/\n  On Fire! Vinicius Jr produces slick assist for Casemiro&#x27;s goal in Brazil&#x27;s thrashing of Panama \u00b7 Vini Jr is enjoying life under Carlo Ancelotti at the Selecao! ... This page shows the Panama national football team WC Qual, CONCACAF 2026 standings."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Uncovers historical and physical matchups between the two teams' playing styles.",
+        "data": "\u2022 Ghana predicted lineup vs Panama for FIFA World Cup 2026\n  https://khelnow.com/football/world-football-ghana-predicted-lineup-vs-panama-fifa-world-cup-202606\n  Under manager Carlos Queiroz, <strong>Ghana has built an exciting unit that combines youthful athleticism with veteran European star players</strong>. However, their preparations heading into the World Cup have been disrupted by significant off-field setbacks.\n\n\u2022 Ghana vs Panama prediction and betting tips 17 June 2026 | Dailysports experts\n  https://dailysports.net/predictions/ghana-vs-panama-prediction-a-clash-that-promises-fireworks-18062026/\n  <strong>The Black Stars always bank on athleticism, pace, and aggressive attacking play</strong>. The African side thrives on a high tempo, makes active use of the flanks, and aims to get the ball into the box as quickly as possible.\n\n\u2022 Ghana vs Panama Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-ghana-vs-panama\n  Ghana vs Panama Head to Head results record history. H2H stats and prediction, goals, past matches.\n\n\u2022 Ghana v Panama LIVE 17/06/2026 | Football - Flashscore\n  https://www.flashscore.com/match/football/ghana-nNBjHale/panama-OWKqbCfi/\n  Follow Ghana v Panama <strong>17/06/2026</strong> live - H2H stats, latest results and more information on Flashscore.\n\n\u2022 Ghana vs Panama \u2013 Predicted lineup and team news - Yahoo Sports\n  https://sports.yahoo.com/articles/ghana-vs-panama-predicted-lineup-060000349.html\n  However, the forward must improve his international record after scoring just three goals in 34 caps. <strong>Ghana will look to use their superior individual quality to unlock a compact Panamanian defence</strong>."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Gauges market consensus on match competitiveness and expected goal volume.",
+        "data": "\u2022 Ghana vs Panama Prediction, Betting Tips, Lineups & Odds | 17 Jun 2026\n  https://www.sportsgambler.com/betting-tips/football/ghana-vs-panama-prediction-lineups-odds-2026-06-17/\n  The draw is available at +215 if you believe that this World Cup clash will finish level, with <strong>Ghana at +138 and Panama chalked up at +225</strong> with the bookmakers to secure a win of their own.\n\n\u2022 Ghana vs Panama Odds, Predictions & World Cup Betting Analysis\n  https://www.oddstrader.com/betting/ghana-vs-panama-world-cup-odds-predictions/\n  <strong>Ghana is favored at +120 on the 3-way moneyline, with Panama at +240 and the draw at +230</strong>. Ghana holds the talent edge, but the short draw price signals a tighter match than the favorite tag suggests.\n\n\u2022 Ghana vs. Panama odds, lines, predictions: 2026 World Cup picks from proven soccer expert - SportsLine.com\n  https://www.sportsline.com/insiders/ghana-vs-panama-odds-lines-predictions-2026-world-cup-picks-from-proven-soccer-expert/\n  Martin Green, who finished the Champions League on an 18-8 roll, reveals his best bets for Ghana vs. Panama in a World Cup 2026 match on Wednesday\n\n\u2022 Ghana vs. Panama odds, prediction, time: 2026 World Cup picks, best bets by expert on 18-8 roll\n  https://www.cbssports.com/soccer/news/ghana-panama-odds-prediction-line-time-2026-world-cup-picks-best-bets/\n  Panama can certainly contribute to the Over as well, as the goal has gone both ways in five of their last six friendlies. An\u00edbal Godoy anchors their midfield, while veteran forwards Cecilio Waterman and Jos\u00e9 Fajardo give them enough quality to test Ghana&#x27;s defense. See Green&#x27;s best bets for Ghana vs.\n\n\u2022 Ghana vs Panama Betting Odds | Oddschecker\n  https://www.oddschecker.com/football/world-cup/ghana-v-panama/winner\n  Compare odds across 24 UK bookmakers for Ghana vs Panama. Increase your potential winnings by using Oddschecker for a single bet or part of an acca."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Analyzes the tactical matchup between Panama's defensive low-block and Ghana's transition defense against Carrasquilla.",
+        "data": "\u2022 Ghana vs Panama Lineups, Team News & Preview - RotoWire\n  https://www.rotowire.com/soccer/article/ghana-vs-panama-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-118362\n  Ghana vs Panama clash at BMO Field in Toronto for their 2026 World Cup Group L opener. Predicted lineups, team news, tactical breakdown and ...\n\n\u2022 THIS IS GHANA BLACKSTARS BEST STARTING 11 TO BEAT ...\n  https://www.youtube.com/watch?v=96d6lsABAPI\n  ... World Cup 2026 clash against Panama. In this video, we take a detailed look at Ghana's possible starting lineup, the key tactical decisions ...\n\n\u2022 Ghana vs Panama World Cup 2026: Group L Preview, Lineups ...\n  https://english.mathrubhumi.com/amp/sports/football/ghana-vs-panama-world-cup-2026-group-l-preview-odr5q351\n  Ghana faces Panama in the 2026 FIFA World Cup Group L opener in Toronto. Check out our expert tactical analysis, predicted lineups, ...\n\n\u2022 Ghana vs Panama FIFA World Cup 2026 Preview - Goal.com\n  https://www.goal.com/en-us/news/ghana-panama-world-cup-preview/bltc57f7610ee6813ff\n  Check out our detailed match preview of Ghana vs Panama at the 2026 World Cup as we talk tactics, team news and more.\n\n\u2022 World Cup Group L tactical guide: Croatia's veterans, Ghana's ...\n  https://www.nytimes.com/athletic/7204528/2026/06/05/2026-world-cup-tactical-guides-group-l/\n  In this article, we will break down Group L, containing England, Croatia, Ghana, and Panama. It is a group that, statistically speaking, is the ..."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Determines if environmental conditions like altitude or humidity offer a physical advantage to one side.",
+        "data": "\u2022 \ufe0f   Extreme heat, high humidity, and high-altitude venues could ...\n  https://www.facebook.com/Aspetar/videos/%EF%B8%8F-extreme-heat-high-humidity-and-high-altitude-venues-could-become-some-of-the-t/1319097800407562/\n  Extreme heat, high humidity, and high-altitude venues could become some of the toughest opponents at the FIFA World Cup 2026.\n\n\u2022 Extreme heat, high humidity, and high-altitude venues could ...\n  https://www.instagram.com/reel/DZbvhTkuiz6/\n  With host cities already 0.7\u00b0C warmer than in 1994, when US last hosted the football world cup, FIFA 2026 may test the limits of player safety.\n\n\u2022 Ghana vs Panama performance-impairing heat | World Cup 2026 ...\n  https://www.climatecentral.org/world-cup-2026/matches/21\n  The June 17 match at Toronto Stadium (Ghana vs. Panama) has a 9% chance of heat that can impair performance. Those odds are 1 percentage point higher due to ...\n\n\u2022 World Cup 2026 Stadiums: A Complete List of all 16 Host Venues\n  https://www.keithprowsetravel.com/blog/world-cup-2026-stadiums/\n  Houston's NRG Stadium (Houston Stadium) provides crucial climate protection in a location renowned for extreme humidity and temperatures reaching 34\u00b0C (93\u00b0F)+ ...\n\n\u2022 World Cup 2026 Stadium Guide - BBC\n  https://www.bbc.co.uk/sport/extra/zwengdni1f/world-cup-2026-stadium-guide\n  The stadium has infrared heating to make it more comfortable during the winter but there is no air conditioning, so the retractable roof is expected to be left ..."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Identifies Kudus's current fitness status and tactical role to understand Ghana's attacking configuration.",
+        "data": "\u2022 Ghana at the FIFA World Cup 2026: Kudus-Led Side Face England and Croatia - Telecom Asia Sport\n  https://www.telecomasia.net/in/blog/ghana-at-fifa-world-cup-2026/\n  # Ghana at the FIFA World Cup 2026: Kudus-Led Side Face England and Croatia. ## Ghana (The Black Stars). * **Key Players:** Antoine Semenyo, Thomas Partey, Jordan Ayew, Inaki Williams, and Abdul Fatawu. Ghana\u2019s Black Stars open their fifth World Cup campaign **this evening, 17 June**, against **Panama** at BMO Field, Toronto (**23:00 UTC**). Carlos Queiroz\u2019s side are in Group L with England and Croatia \u2014 a tough draw after topping CAF qualifying Group I. Ghana's Black Stars have qualified for the FIFA World Cup as one of the nine African nations, making this their fifth appearance in the tourn\n\n\u2022 The Athletic: England Team Recovers Some Stolen 2026 World Cup Equipment - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/the-athletic-england-team-recovers-some-stolen-2026-world-cup-equipment/\n  # The Athletic: England Team Recovers Some Stolen 2026 World Cup Equipment. Image 2: The Athletic: England Team Recovers Some Stolen 2026 World Cup Equipment. **According to The Athletic, the Football Association (FA) has recovered several items of stolen training equipment from the England national team for the 2026 World Cup.**. On June 13, The Sun reported that a large portion of the England team's equipment was stolen from a van while it was being shipped from Florida to the Three Lions' base in Kansas City. Image 3: Austrian National Football Team Head Coach Ralf Rangnick Extends Contract\n\n\u2022 Ghana vs Panama Predictions: Form suggests an upset is on the cards - Goal.com\n  https://www.goal.com/en-us/betting/world-cup/ghana-vs-panama-predictions-6-17-2026/A%3Ablt35ed818358f79a9e\n  # Ghana vs Panama Predictions: Form suggests an upset is on the cards. Check out our soccer expert\u2019s Ghana vs Panama predictions, prior to Wednesday\u2019s 7:00pm ET World Cup clash (6/17). After analysing both sides\u2019 recent form, our betting expert is backing Panama to spring a surprise on the African nation. ## Best Predictions for Ghana vs Panama. * Get your hands on the best World Cup Betting promos or our experts guide on how to bet on the World Cup. * Check out our expert\u2019s guide to the best World Cup betting sites & apps this summer. Both teams are likely to adopt an attacking approach in th\n\n\u2022 France vs Senegal LIVE: Result and reaction as Kylian Mbappe helms Les Bleus\u2019 win - The Independent\n  https://www.independent.co.uk/sport/football/france-vs-senegal-live-stream-score-world-cup-b2996780.html\n  ## Stay up to date with notifications from The\u00a0Independent. # England v Croatia LIVE: Thomas Tuchel makes three major calls with Bukayo Saka on bench for World Cup opener. Arsenal star Saka\u2019s fitness needs to be managed, leaving Noni Madueke starting for a tricky Group L opener against Croatia in Dallas. The time has finally arrived for England to get their World Cup 2026 campaign underway, with Thomas Tuchel\u2019s side ready to meet Croatia in a Group L opener that is a repeat of their semi-final eight years ago. Captain Harry Kane will lead the line in a tournament where the big names have waste\n\n\u2022 England v Croatia LIVE: Thomas Tuchel faces Bukayo Saka decision for World Cup opener - The Independent\n  https://www.independent.co.uk/sport/football/england-croatia-live-score-world-cup-2026-result-b2997634.html\n  Arsenal star Saka\u2019s fitness needs to be managed, leaving Tuchel with a tough call for a tricky Group L opener against Croatia in Dallas. The time has finally arrived for England to get their World Cup 2026 campaign underway, with Thomas Tuchel\u2019s side ready to meet Croatia in a Group L opener that is a repeat of their semi-final eight years ago. Tuchel will have 25 of his 26 players to pick from in Dallas \u2013 late injury replacement Trevoh Chalobah is not yet available \u2013 with captain Harry Kane set to lead the line in a tournament where the big names have wasted no time in making their"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Evaluates Ghana's defensive resilience and vulnerability to counter-attacks.",
+        "data": "\u2022 Ghana at the FIFA World Cup 2026: Kudus-Led Side Face England and Croatia - Telecom Asia Sport\n  https://www.telecomasia.net/in/blog/ghana-at-fifa-world-cup-2026/\n  # Ghana at the FIFA World Cup 2026: Kudus-Led Side Face England and Croatia. ## Ghana (The Black Stars). * **Key Players:** Antoine Semenyo, Thomas Partey, Jordan Ayew, Inaki Williams, and Abdul Fatawu. Ghana\u2019s Black Stars open their fifth World Cup campaign **this evening, 17 June**, against **Panama** at BMO Field, Toronto (**23:00 UTC**). Carlos Queiroz\u2019s side are in Group L with England and Croatia \u2014 a tough draw after topping CAF qualifying Group I. Ghana's Black Stars have qualified for the FIFA World Cup as one of the nine African nations, making this their fifth appearance in the tourn\n\n\u2022 World Cup Match Day 5: Spain, Uruguay, Belgium, Egypt Ready For Spotlight - FOX Sports\n  https://amp.foxsports.com/stories/soccer/world-cup-spain-cape-verde-uruguay-saudi-arabia-iran-belgium-egypt-new-zealand\n  Several elite teams open their campaigns at the 2026 FIFA Men\u2019s World Cup on Monday with four games on the docket. The talented Belgium team then takes on Egypt in Seattle before the action heads to Miami, where two-time champion Uruguay will face Saudi Arabia. Finally, the day concludes in Los Angeles where two veteran-heavy teams in Iran and New Zealand both have eyes on qualifying for their first World Cup knockout round. Cape Verde could not have asked for a more difficult assignment in its first ever World Cup game when it takes on one of the pre-tournament favorites Spain in Atlanta on M\n\n\u2022 Morocco forced into two injury changes ahead of World Cup opener - Reuters\n  https://www.reuters.com/sports/soccer/morocco-forced-into-two-injury-changes-ahead-world-cup-opener-2026-06-11/\n  Item 1 of 2 Soccer Football - CAF Africa Cup of Nations - Morocco 2025 - Final - Senegal v Morocco - Prince Moulay Abdellah Stadium, Rabat, Morocco - January 18, 2026 Morocco's Abde Ezzalzouli in action with Senegal's Idrissa Gueye REUTERS/Siphiwe Sibeko. Soccer Football - CAF Africa Cup of Nations - Morocco 2025 - Final - Senegal v Morocco - Prince Moulay Abdellah Stadium, Rabat, Morocco - January 18, 2026 Morocco's Abde Ezzalzouli in action with Senegal's Idrissa Gueye REUTERS/Siphiwe Sibeko Purchase Licensing Rights, opens new tab. June 11 (Reuters) - Morocco have been hit by the loss of tw\n\n\u2022 2026 World Cup's biggest stars take the field as Lionel Messi's Argentina and Kylian Mbappe's France debut - CBS Sports\n  https://www.cbssports.com/soccer/news/2026-world-cup-biggest-lionel-messi-argentina-kylian-mbappe-france/\n  # 2026 World Cup's biggest stars take the field as Lionel Messi's Argentina and Kylian Mbappe's France debut. ## From Lionel Messi's latest quest for glory to Kylian Mbappe's defensive challenges, it's a massive day of World Cup action. We're very nearly at the end of the first round of World Cup games and today it is the turn of two of the favorites to begin their campaign. Senegal is a repeat of the 2002 opener, one of the biggest shocks in World Cup history, and expectations are similarly high on Les Bleus as they face the side whose African title was deposed from them in the boardrooms of \n\n\u2022 Belgium vs. Egypt Prediction, Odds, Picks For World Cup Match - FOX Sports\n  https://www.foxsports.com/stories/soccer/2026-world-cup-belgium-egypt-odds-prediction-picks\n  FIFA Men's World Cup. FIFA Men's World Cup. 3. ### 2026 World Cup Odds: Japan Surges After Opener### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. Belgium and Egypt will open their 2026 FIFA World Cup campaigns in a Group G clash on June 15, 2026, at Seattle Stadium on FOX. However, heading into the 2026 World Cup, Belgium arrives in a transitional phase, shifting from its long-established core to a new"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Clarifies matchday context and motivation levels based on group standings.",
+        "data": "\u2022 World Cup Group L standings 2026: Updated results, table and fixtures for England, Croatia, Ghana, Panama - sportingnews.com\n  https://www.sportingnews.com/uk/football/news/world-cup-group-l-standings-results-table-2026-england/2d0682fb99015804fecfe1ad\n  # World Cup Group L standings 2026: Updated results, table and fixtures for England, Croatia, Ghana, Panama. * Group L\u00a0fixtures and schedule. * Who is in World Cup Group L? * Odds to win World Cup Group L. * How to watch Group L games. * Group L\u00a0path in World Cup knockout bracket. For the first time since 1982, the FIFA World Cup has a Group L. Following the Three Lions is Croatia \u2014 a nation that has consistently punched above its weight, reaching the World Cup semi-finals twice in the last two tournaments (2018 and 2022). They beat England in the 2018 World Cup semifinals, and the rematch is \n\n\u2022 Ghana vs. Panama: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-ghana-vs-panama-tv-channel-live-stream-2026-fifa-world-cup-group-l\n  FIFA Men's World Cup. FIFA Men's World Cup. Ghana and Panama meet in their 2026 FIFA World Cup opener on Wednesday, June 17, 2026 at 7:00 p.m. ET from Toronto Stadium. ## How to Watch Ghana vs. ### Group L: England, Croatia, Ghana, and Panama | 2026 FIFA World Cup Draw. * June 17, 2026: Watch Ghana vs Panama - Toronto Stadium (7:00 p.m. ET / 4:00 p.m. PT). * June 23, 2026: Watch England vs Ghana - Boston Stadium (4:00 p.m. ET / 1:00 p.m. PT). * June 27, 2026: Watch Croatia vs Ghana - Philadelphia Stadium (5:00 p.m. ET / 2:00 p.m. PT). * June 23, 2026: Watch Panama vs Croatia - Toronto Stadium \n\n\u2022 Ghana at the FIFA World Cup 2026: Kudus-Led Side Face England and Croatia - Telecom Asia Sport\n  https://www.telecomasia.net/in/blog/ghana-at-fifa-world-cup-2026/\n  # Ghana at the FIFA World Cup 2026: Kudus-Led Side Face England and Croatia. ## Ghana (The Black Stars). * **Key Players:** Antoine Semenyo, Thomas Partey, Jordan Ayew, Inaki Williams, and Abdul Fatawu. Ghana\u2019s Black Stars open their fifth World Cup campaign **this evening, 17 June**, against **Panama** at BMO Field, Toronto (**23:00 UTC**). Carlos Queiroz\u2019s side are in Group L with England and Croatia \u2014 a tough draw after topping CAF qualifying Group I. Ghana's Black Stars have qualified for the FIFA World Cup as one of the nine African nations, making this their fifth appearance in the tourn\n\n\u2022 Where to Watch Ghana vs Panama: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-ghana-vs-panama-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  # Where to Watch Ghana vs Panama: 2026 FIFA World Cup TV Channel, Live Stream and Match Details. Ghana will face Panama in their 2026 FIFA World Cup Group L opener on Wednesday, June 17, 2026, at 7:00 p.m. ET at the Toronto Stadium. Here's everything you need to know about how to watch the match, including TV channels, live streaming options, kick-off time, team news, and other key details ahead of the World Cup showdown. Image 2: Ghana vs Panama. ## Ghana vs Panama Match Details. ## How to Watch Ghana vs Panama Match on TV. You can watch the opening match of the 2026 FIFA World Cup between Gh\n\n\u2022 Ghana vs Panama Prediction: Both Sides are Expected to Score - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/ghana-vs-panama-match-prediction-18-june-2026/\n  # Ghana vs Panama Prediction: Both Sides are Expected to Score. ## Ghana vs Panama: Prediction for the Match on June 18, 2026. This is the fifth appearance of the Black Stars at the competition, while Panama are making their second-ever appearance. Ghana are a regular participant at the World Cup, making their 5th appearance since debuting in 2006. They are one of the top African performing teams in the World Cup and the best in West Africa. They have not been impressive in recent games, going winless in their la"
+      }
+    ],
+    "research_cost": 0.144,
+    "wallet_before": 2.092,
+    "wallet_after": 1.948,
+    "prediction": {
+      "pick": "draw",
+      "confidence": 6,
+      "confidence_reason": "A confidence level of 6 is justified by the high probability of a low-scoring stalemate given Ghana's severe midfield depletion and Panama's defensive organization, though cup openers carry inherent volatility.",
+      "reasoning": "Ghana's severe offensive and midfield depletion due to the absences of Kudus and Partey matches up against an organized Panama low-block, pointing strongly toward a low-scoring draw.",
+      "probabilities": {
+        "home": 28,
+        "draw": 40,
+        "away": 32
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Ghana enters the tournament in poor form, winless in their last six matches and disrupted by significant squad omissions and off-field issues.",
+      "away_form": "Panama has shown solid defensive resilience and tactical efficiency under Thomas Christiansen, having topped their CONCACAF qualifying group while conceding only four goals in the final phase.",
+      "key_injuries": [
+        "Ghana: Midfielder Thomas Partey is ruled out of the opener after being denied a visa to Canada.",
+        "Ghana: Star playmaker Mohammed Kudus was excluded from the World Cup squad due to injury.",
+        "Ghana: Experienced attackers Andre Ayew and Joseph Paintsil were omitted from the final 26-man roster."
+      ],
+      "tactical_matchup": "Ghana relies on pace and individual athleticism on the flanks, but Panama's compact defensive block and superior midfield cohesion give them the structural edge against a depleted Ghanaian spine.",
+      "group_stakes": "With Group L heavyweights England and Croatia looming, both teams realistically need a victory in this opening match to harbor serious hopes of advancing.",
+      "home_win_signals": [
+        "Ghana possesses high-caliber individual attackers like Antoine Semenyo, who scored 17 Premier League goals this season.",
+        "Ghana has historically won two of their three previous encounters against CONCACAF nations."
+      ],
+      "away_win_signals": [
+        "Panama's highly organized defensive unit can exploit a disjointed Ghana side missing its primary midfield creators.",
+        "Thomas Christiansen's squad boasts high tactical continuity and tournament experience, featuring veterans like Luis Mejia and Amir Murillo.",
+        "Ghana's defensive transition has been highly vulnerable, conceding frequently in recent winless outings."
+      ],
+      "draw_signals": [
+        "Both teams have struggled for consistent victories recently, with Ghana winless in six and Panama winning just two of their last seven.",
+        "The short draw odds (+215 to +230) indicate bookmakers expect a tight, low-scoring affair.",
+        "Opening match caution could lead to a defensive stalemate as both sides fear an early group-stage defeat."
+      ],
+      "contradictions": [
+        "While bookmakers position Ghana as the nominal favorite, form metrics and critical squad absences suggest Panama is highly capable of securing an upset."
+      ],
+      "strategy_applied": [
+        "Prioritized squad news and key player availability (the absences of Partey and Kudus) over nominal favorite status and historical reputation."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overestimating Antoine Semenyo's individual goal-scoring threat when Ghana's primary midfield creators (Kudus, Partey, Ayew, and Paintsil) are all completely absent to provide service.",
+        "Overreliance on Panama's past CONCACAF qualifying defensive record while overlooking their current mediocre form of only two wins in their last seven matches."
+      ],
+      "underweighted_factors": [
+        "The severe structural paralysis Ghana will face in midfield progression without both Thomas Partey and Mohammed Kudus.",
+        "Panama's own lack of offensive firepower to exploit Ghana's transition vulnerabilities, which likely limits their ability to punish the nominal favorites."
+      ],
+      "draw_risk": "high \u2014 Both teams are struggling for wins, Ghana's creative engine is entirely depleted, and Panama's defensive, low-block style in an opening group match strongly points to a low-scoring stalemate.",
+      "favorite": "none",
+      "confidence_cap": 6,
+      "verdict": "A highly cautious, low-quality encounter is expected where Ghana's severe squad depletion meets Panama's defensive setup, making a low-scoring draw the most sensible expectation despite Ghana's nominal favorite status."
+    },
+    "full_reasoning": "HOME_PCT: 28\nDRAW_PCT: 40\nAWAY_PCT: 32\nPICK: draw\nCONFIDENCE: 6\nCONFIDENCE_REASON: A confidence level of 6 is justified by the high probability of a low-scoring stalemate given Ghana's severe midfield depletion and Panama's defensive organization, though cup openers carry inherent volatility.\nREASONING: Ghana's severe offensive and midfield depletion due to the absences of Kudus and Partey matches up against an organized Panama low-block, pointing strongly toward a low-scoring draw.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
