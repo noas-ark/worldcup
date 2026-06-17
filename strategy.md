@@ -1,50 +1,54 @@
 # Strategy
 
 ## Rules
-- BRA vs MAR: Prioritize defensive organization over individual attack.
-- AUS vs TUR: Prioritize low-block discipline over possession metrics.
-- NED vs JPN: Prioritize defensive resilience over chance volume.
+- BRA vs MAR: Prioritize defense over individual attack.
+- AUS vs TUR: Prioritize low-block over possession.
+- NED vs JPN: Prioritize resilience over volume.
 - QAT vs SUI: Prioritize compact defense over reputation.
-- GER vs CUW: Prioritize tier gaps and form over history.
-- CIV vs ECU: Prioritize home advantage and fitness over risk aversion.
-- SWE vs TUN: Prioritize scoring efficiency over low-block setups.
-- ESP vs CPV: Prioritize physical low-block organization over possession dominance.
-- BEL vs EGY: Prioritize low-block defensive discipline over favorite status.
-- KSA vs URU: Prioritize environmental heat and squad news over historical matchups.
-- IRN vs NZL: Prioritize travel fatigue and low-block resistance over squad quality.
-- FRA vs SEN: Prioritize squad fitness over venue conditions and league familiarity.
+- GER vs CUW: Prioritize form over history.
+- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.
+- SWE vs TUN: Prioritize efficiency over low-block.
+- ESP vs CPV: Prioritize physical low-block over possession.
+- BEL vs EGY: Prioritize defensive discipline over favorite status.
+- KSA vs URU: Prioritize heat/squad news over history.
+- IRN vs NZL: Prioritize fatigue/resistance over quality.
+- FRA vs SEN: Prioritize fitness over venue/familiarity.
+- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.
 
 ## Data sources
-- use: Tournament metrics (https://skim402.com/api/v2/read) — defense (BRA vs MAR)
-- use: Tactical previews (https://news-x402.com/news/recent) — wings (BRA vs MAR)
-- use: Tactical previews (https://news-x402.com/news/recent) — transitions (AUS vs TUR)
-- use: Tournament metrics (https://skim402.com/api/v2/read) — organization (NED vs JPN)
-- use: Tactical previews (https://news-x402.com/news/recent) — compact (QAT vs SUI)
-- use: Tournament metrics (https://skim402.com/api/v2/read) — form (GER vs CUW)
-- use: Tactical previews (https://news-x402.com/news/recent) — fitness (CIV vs ECU)
-- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) — efficiency (SWE vs TUN)
-- use: Tournament metrics (https://skim402.com/api/v2/read) — conversion (ESP vs CPV)
-- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) — tactics (ESP vs CPV)
-- use: Venue search (https://websearch--gw.swerver.net/search) — low-block (BEL vs EGY)
-- use: Search API (https://api.signalfuse.co/v1/gateway/search/brave) — environment (KSA vs URU)
-- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) — squad (KSA vs URU)
-- use: Venue search (https://websearch--gw.swerver.net/search) — travel (IRN vs NZL)
-- use: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) — fitness (FRA vs SEN)
-- skip: Tactical previews (https://news-x402.com/news/recent) — outcomes (BRA vs MAR)
-- skip: Tournament metrics (https://skim402.com/api/v2/read) — mapping (AUS vs TUR)
-- skip: Tactical previews (https://news-x402.com/news/recent) — math (AUS vs TUR)
-- skip: Tactical previews (https://news-x402.com/news/recent) — fitness (NED vs JPN)
-- skip: Tactical previews (https://news-x402.com/news/recent) — sentiment (NED vs JPN)
-- skip: Tournament metrics (https://skim402.com/api/v2/read) — friendlies (QAT vs SUI)
-- skip: Tournament metrics (https://skim402.com/api/v2/read) — metrics (GER vs CUW)
-- skip: Tournament metrics (https://skim402.com/api/v2/read) — history (CIV vs ECU)
-- skip: Venue search (https://websearch--gw.swerver.net/search) — environment (SWE vs TUN)
-- skip: Tactical previews (https://news-x402.com/news/recent) — fragility (SWE vs TUN)
-- skip: Tactical previews (https://news-x402.com/news/recent) — rules (ESP vs CPV)
-- skip: Tactical previews (https://news-x402.com/news/recent) — history (BEL vs EGY)
-- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) — climate (BEL vs EGY)
-- skip: Search API (https://api.signalfuse.co/v1/gateway/search/brave) — history (KSA vs URU)
-- skip: Search API (https://api.signalfuse.co/v1/gateway/search/tavily) — market (KSA vs URU)
-- skip: Tournament metrics (https://skim402.com/api/v2/read) — history (IRN vs NZL)
-- skip: Venue search (https://websearch--gw.swerver.net/search) — venue (FRA vs SEN)
-- skip: Tournament metrics (https://skim402.com/api/v2/read) — familiarity (FRA vs SEN)
+- use: Metrics (https://skim402.com/api/v2/read) — defense (BRA vs MAR)
+- use: Previews (https://news-x402.com/news/recent) — wings (BRA vs MAR)
+- use: Previews (https://news-x402.com/news/recent) — transitions (AUS vs TUR)
+- use: Metrics (https://skim402.com/api/v2/read) — organization (NED vs JPN)
+- use: Previews (https://news-x402.com/news/recent) — compact (QAT vs SUI)
+- use: Metrics (https://skim402.com/api/v2/read) — form (GER vs CUW)
+- use: Previews (https://news-x402.com/news/recent) — fitness (CIV vs ECU)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — efficiency (SWE vs TUN)
+- use: Metrics (https://skim402.com/api/v2/read) — conversion (ESP vs CPV)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — tactics (ESP vs CPV)
+- use: Venue (https://websearch--gw.swerver.net/search) — low-block (BEL vs EGY)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — environment (KSA vs URU)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — squad (KSA vs URU)
+- use: Venue (https://websearch--gw.swerver.net/search) — travel (IRN vs NZL)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — fitness (FRA vs SEN)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — attacks (IRQ vs NOR)
+- skip: Previews (https://news-x402.com/news/recent) — outcomes (BRA vs MAR)
+- skip: Metrics (https://skim402.com/api/v2/read) — mapping (AUS vs TUR)
+- skip: Previews (https://news-x402.com/news/recent) — math (AUS vs TUR)
+- skip: Previews (https://news-x402.com/news/recent) — fitness (NED vs JPN)
+- skip: Previews (https://news-x402.com/news/recent) — sentiment (NED vs JPN)
+- skip: Metrics (https://skim402.com/api/v2/read) — friendlies (QAT vs SUI)
+- skip: Metrics (https://skim402.com/api/v2/read) — metrics (GER vs CUW)
+- skip: Metrics (https://skim402.com/api/v2/read) — history (CIV vs ECU)
+- skip: Venue (https://websearch--gw.swerver.net/search) — environment (SWE vs TUN)
+- skip: Previews (https://news-x402.com/news/recent) — fragility (SWE vs TUN)
+- skip: Previews (https://news-x402.com/news/recent) — rules (ESP vs CPV)
+- skip: Previews (https://news-x402.com/news/recent) — history (BEL vs EGY)
+- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) — climate (BEL vs EGY)
+- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) — history (KSA vs URU)
+- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — market (KSA vs URU)
+- skip: Metrics (https://skim402.com/api/v2/read) — history (IRN vs NZL)
+- skip: Venue (https://websearch--gw.swerver.net/search) — venue (FRA vs SEN)
+- skip: Metrics (https://skim402.com/api/v2/read) — familiarity (FRA vs SEN)
+- skip: Venue (https://websearch--gw.swerver.net/search) — climate (IRQ vs NOR)
+- skip: Previews (https://news-x402.com/news/recent) — format (IRQ vs NOR)
