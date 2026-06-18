@@ -6736,5 +6736,357 @@
     "reflected": true,
     "reflected_at": "2026-06-18T18:30:39.421058+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n- POR vs COD: Prioritize extreme weather and physical low-block over attacking tempo.\n- ENG vs CRO: Prioritize transition pace and defensive flaws over microclimate and history.\n- GHA vs PAN: Prioritize physical and aerial superiority in low-scoring home fixtures over low-block assumptions.\n- UZB vs COL: Prioritize midfield availability and squad quality over environment and history.\n- CZE vs RSA: Prioritize defensive adjustments and attacking efficiency over physical dominance.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 low-block (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transitions (ENG vs CRO)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 flaws (ENG vs CRO)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 aerial (GHA vs PAN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 midfield (UZB vs COL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (CZE vs RSA)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (CZE vs RSA)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 administration (POR vs COD)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (ENG vs CRO)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (ENG vs CRO)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (GHA vs PAN)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (GHA vs PAN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (UZB vs COL)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (UZB vs COL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (CZE vs RSA)"
+  },
+  {
+    "match": "SUI vs BIH",
+    "home": "SUI",
+    "away": "BIH",
+    "kickoff": "2026-06-18T19:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n- POR vs COD: Prioritize extreme weather and physical low-block over attacking tempo.\n- ENG vs CRO: Prioritize transition pace and defensive flaws over microclimate and history.\n- GHA vs PAN: Prioritize physical and aerial superiority in low-scoring home fixtures over low-block assumptions.\n- UZB vs COL: Prioritize midfield availability and squad quality over environment and history.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 low-block (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transitions (ENG vs CRO)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 flaws (ENG vs CRO)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 aerial (GHA vs PAN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 midfield (UZB vs COL)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 administration (POR vs COD)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (ENG vs CRO)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (ENG vs CRO)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (GHA vs PAN)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (GHA vs PAN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (UZB vs COL)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (UZB vs COL)",
+    "information_needs": "FORM\n- How did both teams perform in their opening World Cup Group Stage matches (Matchday 1) just days prior to this June 18 fixture, particularly regarding expected goals (xG) created versus conceded?\n- Did Switzerland sustain their defensive resilience from the UEFA Qualifiers, where they typically concede fewer than 1.0 goal per game, into their recent pre-tournament friendlies?\n\nPLAYERS\n- Is Switzerland's veteran midfield core (such as Granit Xhaka) fully fit and starting, or is Gregor Kobel definitively starting over Yann Sommer in goal for this tournament cycle?\n- Who is starting as Bosnia-Herzegovina's primary goal threat\u2014given Edin D\u017eeko's advanced age by 2026\u2014and does their current frontline possess the pace to exploit Switzerland's high defensive line?\n\nTACTICS\n- How does Bosnia-Herzegovina's preferred low-block defensive structure handle Switzerland's tendency to overload the half-spaces using inverted wingers and overlapping center-backs?\n- Will Switzerland employ an aggressive counter-press to disrupt Bosnia's build-up from the back, or will they drop into a mid-block to conserve energy in the summer heat?\n\nH2H\n- In their rare historical matchups, did Switzerland struggle to break down Bosnia's physical, compact defensive unit, and is there a tactical pattern of low-scoring affairs between them?\n\nCONTEXT\n- What are the exact Group standings heading into Matchday 2? Does Bosnia-Herzegovina need at least a point to avoid early elimination, or can Switzerland secure mathematical qualification to the knockout rounds with a win?\n\nMARKET\n- What do the Asian Handicap lines (e.g., Switzerland -0.75 or -1.0) and the Over/Under goal total (typically set around 2.25 or 2.5) suggest about the market's implied probability of a low-scoring Swiss victory?\n\nNEWS\n- Are there any reported camp disharmonies, disciplinary issues, or sudden coaching staff changes within the Bosnia-Herzegovina squad, which has historically suffered from administrative volatility?\n\nVENUE\n- Which North American host city is staging this match, and will extreme conditions (such as high altitude in Mexico City or intense humidity in Miami/Houston) disproportionately exhaust Bosnia's physical, defensive style compared to Switzerland's possession-heavy rotation?",
+    "research_gaps": [
+      {
+        "need": "Real-time tactical changes and in-game adjustments made by coaches during the match.",
+        "category": "TACTICS",
+        "ideal_service": "A live-match tactical analysis API that streams real-time manager tactical changes, substitutions, and formation shifts."
+      },
+      {
+        "need": "Private training ground data regarding tactical drills or specific set-piece routines prepared for this match.",
+        "category": "TACTICS",
+        "ideal_service": "An insider sports intelligence platform with access to closed-door team training insights."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Switzerland vs Bosnia-Herzegovina World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Switzerland vs Bosnia-Herzegovina World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Switzerland World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Switzerland recent form and results",
+        "need": "How has Switzerland performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Bosnia-Herzegovina World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Bosnia-Herzegovina recent form and results",
+        "need": "How has Bosnia-Herzegovina performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Switzerland vs Bosnia-Herzegovina head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Switzerland vs Bosnia-Herzegovina World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.national-football-teams.com/country/187/Switzerland.html"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Uses a verified source to extract Switzerland's historical head-to-head records against Bosnia-Herzegovina.",
+        "need": "In their rare historical matchups, did Switzerland struggle to break down Bosnia's physical, compact defensive unit, and is there a tactical pattern of low-scoring affairs between them?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Extracts exact group standings, point totals, and qualification scenarios from a verified tournament context URL.",
+        "need": "What are the exact Group standings heading into Matchday 2? Does Bosnia-Herzegovina need at least a point to avoid early elimination, or can Switzerland secure mathematical qualification to the knockout rounds with a win?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Switzerland vs Bosnia-Herzegovina World Cup 2026 tactics low-block counter-press",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Retrieves tactical previews and expert breakdowns of the strategic matchup between the two teams.",
+        "need": "How does Bosnia-Herzegovina's preferred low-block defensive structure handle Switzerland's tendency to overload the half-spaces using inverted wingers and overlapping center-backs?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Bosnia-Herzegovina World Cup 2026 squad camp disharmony coaching changes",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Searches for recent press coverage regarding squad harmony, administrative issues, or coaching updates.",
+        "need": "Are there any reported camp disharmonies, disciplinary issues, or sudden coaching staff changes within the Bosnia-Herzegovina squad, which has historically suffered from administrative volatility?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Switzerland Bosnia-Herzegovina World Cup 2026 match venue city altitude weather",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Identifies the host city, venue, and environmental conditions to assess physical impact on players.",
+        "need": "Which North American host city is staging this match, and will extreme conditions (such as high altitude in Mexico City or intense humidity in Miami/Houston) disproportionately exhaust Bosnia's physical, defensive style compared to Switzerland's possession-heavy rotation?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Switzerland vs Bosnia-Herzegovina World Cup 2026 odds betting lines Asian Handicap",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Obtains real-time betting lines, handicaps, and over/under totals from recent market updates.",
+        "need": "What do the Asian Handicap lines (e.g., Switzerland -0.75 or -1.0) and the Over/Under goal total (typically set around 2.25 or 2.5) suggest about the market's implied probability of a low-scoring Swiss victory?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Switzerland vs Bosnia-Herzegovina World Cup 2026 squad injuries starting lineup Kobel Sommer Xhaka Dzeko",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides up-to-date player fitness, injury updates, and confirmed lineups for both squads.",
+        "need": "Is Switzerland's veteran midfield core (such as Granit Xhaka) fully fit and starting, or is Gregor Kobel definitively starting over Yann Sommer in goal for this tournament cycle? Who is starting as Bosnia-Herzegovina's primary goal threat?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Switzerland Bosnia-Herzegovina World Cup 2026 Matchday 1 results expected goals xG",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Fetches recent match summaries and analytical statistics (like xG) from the opening matchday.",
+        "need": "How did both teams perform in their opening World Cup Group Stage matches (Matchday 1) just days prior to this June 18 fixture, particularly regarding expected goals (xG) created versus conceded?",
+        "category": "FORM"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Switzerland vs. Bosnia & Herzegovina World Cup Betting Preview, Lines & Predictions (6/18/2026) - Deadspin\n  https://deadspin.com/betting/switzerland-vs-bosnia-herzegovina-world-cup-preview-picks-preview-odds-6-18-2026/\n  Reviewed By Vinolin Naidoo\n\nKey Points\n\n Switzerland faces Bosnia & Herzegovina for a direct ticket to the knockouts.\n Both teams drew 1-1 on matchday 1, with Switzerland by a wee-hour equaliser by Qatar, and Bosnia holding an early lead, albeit upended.\n World Cup B in its entirety is currently tied at 1 point each, thus two (2) tickets to the knockout rounds are up for grabs.\n\nSwitzerland faces off against Bosnia & Herzegovina this Thursday (June 18th) at SoFi Stadium in a decider for a direct ticket to knockout-stage progression. This comes following that all four (4) teams in Group B are c\n\n\u2022 Switzerland vs Bosnia and Herzegovina Prediction: Bosnia can keep this tight - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/switzerland-vs-bosnia-and-herzegovina-match-prediction-18-june-2026/\n  ### Bosnia and Herzegovina: Lineup\n\nSergej Barbarez is expected to use a 4-4-2 with a compact midfield line. Nikola Vasilj should start in goal, while Amar Dedic, Nikola Katic, Tarik Muharemovic and Sead Kolasinac form the projected defence. Dzeko is available but not certain to start after his shoulder issue, so Lukic is again projected with Demirovic. Tabakovic is the major attacking absence, and Kolasinac remains a fitness concern after limping off against Canada. That shape is built to protect the middle and limit space between the lines.\n\nExpected XI: Nikola Vasilj, Amar Dedic, Nikola Kat\n\n\u2022 Switzerland vs. Bosnia and Herzegovina - Live Score - June 18, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-switzerland-vs-bosnia-and-herzegovina-jun-18-2026-game-boxscore-647641\n  -184\n\nSUI\n\n+494\n\nBIH\n\nOVER/UNDER 2.5 GOALS\n\nThe combined final score of both teams is set at 2.5\n\n-108\n\nOVER 2.5\n\n-114\n\nUNDER 2.5\n\n### Preview\n\n### Switzerland vs. Bosnia and Herzegovina: How to Watch, TV Channel, Live Stream\n\nLearn which TV channel or how to live stream the Switzerland and Bosnia and Herzegovina FIFA World Cup match. \n\n1 DAY AGO \u2022 FOX SPORTS\n\nPOWERED BY\n\nInglewood, CA\n\nWind 4 mph SW\n\n67\u00b0 6:00\n\n68\u00b0 7:00\n\n70\u00b0 8:00\n\n70\u00b0 9:00\n\nSUI\n\nFollow a team and personalize your FOX Sports experience\n\nBIH\n\nTop Leagues\n\n NFL College Football INDYCAR MLB College Basketball NASCAR\n\nTop Shows\n\n T\n\n\u2022 Switzerland vs. Bosnia and Herzegovina: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-switzerland-vs-bosnia-and-herzegovina-tv-channel-live-stream-2026-fifa-world-cup-group-b\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Switzerland vs. Bosnia and Herzegovina: How to Watch, TV Channel, Live Stream\n\nPublished Jun. 17, 2026 3:01 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nSwitzerland and Bosnia and Herzegovina meet in their 2026 FIFA World Cup second group stage match on Thursday, June 18, 2026 at 3:00 p.m. ET from Los Angeles Stadium.\n\nSwitzerland drew their opening match 1-1, with Breel Embolo finding the net. Bosnia and Herzegovina also drew thei\n\n\u2022 Canada vs. Bosnia and Herzegovina projected lineups, starting 11 for World Cup 2026 Group B game in Toronto - sportingnews.com\n  https://www.sportingnews.com/uk/football/news/canada-bosnia-herzegovina-projected-lineups-starting-11-world-cup-2026/687a9eb899f55e15e661c8f9\n  | DEF | 24 | Nidal Celik | Lens (Ligue 1, France) | 19 | 7 |\n| MID | 16 | Amir Hadziahmetovic | Besiktas (Super Lig, Turkey) | 29 | 34 |\n| MID | 14 | Ivan Sunjic | Pafos (First Division, Cyprus) | 29 | 10 |\n| MID | 13 | Ivan Basic | Astana (Premier League, Kazakhstan) | 24 | 15 |\n| MID | 17 | Dzenis Burnic | Karlsruher (Bundesliga, Germany) | 27 | 18 |\n| MID | 26 | Ermin Mahmic | Slovan Liberec "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Switzerland vs Bosnia and Herzegovina Prediction: Bosnia can keep this tight - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/switzerland-vs-bosnia-and-herzegovina-match-prediction-18-june-2026/\n  ### Bosnia and Herzegovina: Lineup\n\nSergej Barbarez is expected to use a 4-4-2 with a compact midfield line. Nikola Vasilj should start in goal, while Amar Dedic, Nikola Katic, Tarik Muharemovic and Sead Kolasinac form the projected defence. Dzeko is available but not certain to start after his shoulder issue, so Lukic is again projected with Demirovic. Tabakovic is the major attacking absence, and Kolasinac remains a fitness concern after limping off against Canada. That shape is built to protect the middle and limit space between the lines.\n\nExpected XI: Nikola Vasilj, Amar Dedic, Nikola Kat\n\n\u2022 Switzerland vs Bosnia and Herzegovina at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - kwese.espn.com\n  http://www.espn.com/football/story/_/id/49079683/fifa-world-cup-2026-switzerland-vs-bosnia-herzegovina-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  Venue: SoFi Stadium, Inglewood, California, USA\n\nReferee: Joao Pinheiro (Portugal)\n\n## Predicted Lineups\n\nGregor Kobel  \nDenis Zakaria | Nico Elvedi | Manuel Akanji | Ricardo Rodr\u00edguez  \nMichel Aebischer | Granit Xhaka | Remo Freuler  \nDan Ndoye | Breel Embolo | Rub\u00e9n Vargas\n\nBosnia and Herzegovina\n\nNikola Vasilj  \nAmar Dedic | Nikola Katic | Tarik Muharemovic | Sead Kolasinac  \nEsmir Bajraktarevic | Ivan Basic | Benjamin Tahirovic | Amar Memic  \nErmedin Demirovic | Jovo Lukic\n\n## Talking Points\n\n### Stung Switzerland seek improvement [...] ## Talking Points\n\n### Stung Switzerland seek improve\n\n\u2022 Canada vs. Bosnia and Herzegovina projected lineups, starting 11 for World Cup 2026 Group B game in Toronto - sportingnews.com\n  https://www.sportingnews.com/uk/football/news/canada-bosnia-herzegovina-projected-lineups-starting-11-world-cup-2026/687a9eb899f55e15e661c8f9\n  26 WORLD CUP HQ: Latest World Cup news | Full World Cup schedule | Buy World Cup tickets\n\n## Canada projected starting 11\n\n(4-4-2, right to left):Crepeau (GK) - Johnston, De Fougerolles, Cornelius, Laryea - Buchanan, Eustaquio, Kone, Millar - David, Larin\n\n Injured: A. Davies (hamstring), A. Jones (ankle, doubt)\n Suspended: None\n\nBayern Munich star Alphonso Daviesis in the Canada squad but has been dealing with persistent fitness problems since suffering an ACL injury last year. He is still yet to fully recover from a hamstring problem sustained during Bayern's Champions League semifinal again\n\n\u2022 Switzerland vs. Bosnia and Herzegovina - Live Score - June 18, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-switzerland-vs-bosnia-and-herzegovina-jun-18-2026-game-boxscore-647641\n  1.0 Goals Against per Game 1.0\n\n27.0 Shots per Game 8.0\n\n78 Average Possession (%) 44\n\n21.0 Chances Created per Game 5.0\n\nBIH\n\n### TEAM LEADERS\n\nSUI\n\nBreel Embolo\n\n1\n\nGoals\n\nJovo Lukic\n\n1\n\nManuel Akanji\n\n0\n\nAssists\n\nSead Kolasinac\n\n1\n\nBreel Embolo\n\n2\n\nShots on Goal\n\nJovo Lukic\n\n2\n\nBreel Embolo\n\n1.2\n\nExpected Goals (xG)\n\nJovo Lukic\n\n0.9\n\nBreel Embolo\n\n6.9\n\nRating\n\nNikola Katic\n\n6.9\n\nBreel Embolo\n\n1\n\nPlayer of the Match\n\nNikola Katic\n\n1\n\nGregor Kobel\n\n0.00\n\nKeeper Save %\n\nNikola Vasilj\n\n0.15\n\nGregor Kobel\n\n0\n\nClean Sheets\n\nNikola Vasilj\n\n0\n\nBIH\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $184\n\n\u2022 Switzerland vs. Bosnia and Herzegovina live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/18/sports/switzerland-vs-bosnia-and-herzegovina-live-updates-world-cup-2026-score-news-and-highlights/\n  Email\n\nNew York Post\n\nSwitch between CA and NY editions here.\n\nEdition\n\n Sports\n Sports Plus\n Sports Betting\n Columnists\n NFL\n MLB\n NBA\n NHL\n NCAAB\n WNBA\n NWSL\n PWHL\n NCAAF\n Sports Entertainment\n Golf\n Tennis\n Wrestling\n MMA\n Soccer\n Olympics\n\n Soccer\n Scores\n Stats\n Standings\n Teams\n"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Switzerland recent form and results",
+        "data": "\u2022 Switzerland at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d1595c1b77-996be0df685e-1000--switzerland-at-the-world-cup-2026-squad-fixtures-group-a/\n  <strong>Switzerland have made it through the group stage at the last three FIFA World Cup final tournaments but have not reached a quarter-final since 1954</strong>. Murat Yakin&#x27;s side, led by captain Granit Xhaka, face Qatar, Bosnia and Herzegovina and Canada ...\n\n\u2022 Reuters Switzerland at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/switzerland/\n  Follow Switzerland&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Switzerland | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/switzerland/team-news\n  Switzerland | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Switzerland squad at FIFA World Cup 2026\u2122.\n\n\u2022 Switzerland at FIFA World Cup 2026: All Players, Full Squad List, Key Stats and Schedule, Results\n  https://www.whereig.com/football/world-cup/switzerland.html\n  Switzerland have appeared in 13 FIFA World Cups and are one of the most reliable qualifiers in European football, consistently making it to the knockout rounds without ever being considered favourites to go deep. This page covers the full Swiss World Cup record - stats, all-time results, top scorers, head-to-head history, the complete 2026 squad, and their Group B schedule in North America against Canada, Qatar, and Bosnia and Herzegovina from June 13 onward.\n\n\u2022 Switzerland devastated as 'proud' Qatar win 1st World Cup point - ESPN\n  https://www.espn.com/soccer/story/_/id/49053969/switzerland-qatar-world-cup-2026\n  Coach Murat Yakin&#x27;s team produced <strong>four wins and two draws</strong> to secure its sixth straight World Cup appearance and hasn&#x27;t missed one since 2002, but the team has never gotten beyond the quarterfinals."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Bosnia-Herzegovina recent form and results",
+        "data": "\u2022 Bosnia & Herzegovina live score, schedule & player stats | Sofascore\n  https://www.sofascore.com/football/team/bosnia-and-herzegovina/4479\n  World Cup Qual. UEFA ... Bosnia &amp; Herzegovina live scores, players, season schedule and today\u2019s results are available on Sofascore. Bosnia &amp; Herzegovina will play the next match against Switzerland on Jun 18, 2026, 7:00:00 PM UTC in FIFA World Cup.\n\n\u2022 Bosnia and Herzegovina national football team World Cup Qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/bosnia-herzegovina/table/2026/world-cup-qualification/\n  This page shows the Bosnia and Herzegovina national football team World Cup Qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Bosnia and Herzegovina national football team World Cup Qualification 2026 standings changes during the competition.\n\n\u2022 Bosnia and Herzegovina at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d1594a5469-659bdc40eca9-1000--bosnia-and-herzegovina-at-the-world-cup-2026-squad-fixtur/\n  Below you will find everything you need to know about Bosnia and Herzegovina at the 2026 World Cup: their fixtures, squad, qualifying record, key players, coach and tournament history.\n\n\u2022 Bosnia-Herzegovina at the FIFA World Cup 2026: Squad, fixtures and results\n  https://www.reuters.com/graphics/SOCCER-WORLDCUP/mopaoglqkpa/teams/bosnia-herzegovina/\n  Squad, line-ups and fixture schedule for the Bosnia-Herzegovina team in USA \u00b7 Canada \u00b7 Mexico\n\n\u2022 Bosnia and Herzegovina | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/teams/60094--bosnia-and-herzegovina/\n  Visit UEFA.com to find out how Bosnia and Herzegovina are doing in the European Qualifiers, including latest match news, stats, squad list and news updates.\n\n\u2022 [Discussion] [World Cup 2026 Preview] Bosnia and Herzegovina: Chaos, Poker, and One Last Dance in North America (5/48)\n  https://www.reddit.com/r/soccer/comments/1u2qnrr/world_cup_2026_preview_bosnia_and_herzegovina/\n  man that penalty against Italy was pure cinema. Bajraktarevi\u0107 with balls of steel and Barbarez crying after qualification hit me right in feels the poker background is wild though - from literally playing cards for living to managing at World Cup. only in football you get stories like this"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Switzerland vs. Bosnia & Herzegovina\u2014World Cup: Preview, Predictions and Lineups\n  https://www.si.com/soccer/switzerland-vs-bosnia-herzegovina-world-cup-preview-predictions-lineups-6-18-26\n  Head-to-head: Switzerland and Bosnia &amp; Herzegovina have met just once in their history, <strong>a friendly in 2016 which Bosnia won 2\u20130 thanks to goals from Edin D\u017eeko\u2014still part of the squad\u2014and Miralem Pjani\u0107</strong>.\n\n\u2022 Switzerland vs. Bosnia H'vina: Head-to-head record and past meetings ahead of World Cup clash - Sports Mole\n  https://www.sportsmole.co.uk/football/switzerland/head-to-head/switzerland-vs-bosnia-hvina-head-to-head-record-and-past-meetings_599386.html\n  <strong>Mar 29, 2016: Switzerland 0-2 Bosnia-Herzegovina</strong> (International Friendly) Aug 24, 1988: Switzerland 0-2 Yugoslavia (International Friendly) Oct 27, 1983: Switzerland 2-0 Yugoslavia (International Friendly) Apr 26, 1959: Switzerland 1-5 Yugoslavia ...\n\n\u2022 Switzerland vs Bosnia & Herzegovina: All-time head-to-head records ahead of FIFA World Cup 2026\n  https://khelnow.com/football/world-football-switzerland-vs-bosnia-herzegovina-head-to-head-fifa-world-cup-202606\n  Switzerland and Bosnia and Herzegovina ... Yugoslavia are included. <strong>Bosnia and Herzegovina/Yugoslavia hold the upper hand in the rivalry, recording seven victories, while Switzerland have managed two wins</strong>....\n\n\u2022 Switzerland vs Bosnia and Herzegovina, FIFA World Cup 2026: Predicted lineups, head-to-head record, form guide - Sportstar\n  https://sportstar.thehindu.com/football/fifa-world-cup/switzerland-vs-bosnia-and-herzegovina-head-to-head-record-form-guide-predicted-lineups-xi-fifa-world-cup-2026-stats-news/article71117645.ece\n  <strong>Bosnia and Herzegovina won the only meeting between the two teams before this</strong>. Edin Dzeko and Miralem Pjanic scored in the friendly game to secure their team\u2019s 2-0 victory over Switzerland.\n\n\u2022 Switzerland vs. Bosnia and Herzegovina Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/switzerland_vs_bosnia_and_herzegovina.php\n  In the history of World Cups, Switzerland National Team faced Bosnia and Herzegovina in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 2026 FIFA World Cup Group B - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B\n  Updated to match(es) played on June 13, 2026. Source: FIFA Rules for classification: Group stage tiebreakers (H) Hosts Notes: ^ a b c d Fair play points: <strong>Switzerland \u22121, Canada \u22122, Qatar \u22122, Bosnia and Herzegovina \u22123</strong>.\n\n\u2022 Switzerland vs Bosnia and Herzegovina | First Stage\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021446\n  FIFA+ | Action On the Pitch. Stories Off the Pitch.\n\n\u2022 Switzerland vs Bosnia and Herzegovina FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/switzerland-bosnia-herzegovina-world-cup-preview/bltb96d9176142a8fe0\n  With group permutations beginning to crystallise, the sheer gravity of securing safe passage out of <strong>Group B</strong> will dominate the tactical approach from the very first whistle. Read more: How to watch and live stream the 2026 FIFA World Cup\n\n\u2022 World Cup Group B standings 2026: Updated results, table and fixtures for Canada, Switzerland, Qatar, Bosnia and Herzegovina | Sporting News\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-b-standings-results-table-2026-canada/37b86b13d08f8064c2276e2c\n  Here&#x27;s a complete guide to <strong>Group B</strong>&#x27;s teams, match schedule and fixtures for the 2026 FIFA World Cup.\n\n\u2022 2026 FIFA World Cup match schedule: Fixtures, results, features - ESPN\n  https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket\n  Wednesday, June 24: <strong>Group B</strong>: Switzerland vs. Canada (Vancouver, Canada), noon local / 3 p.m. ET <strong>Group B</strong>: Bosnia and Herzegovina vs. Qatar (Seattle), noon local / 3 p.m. ET Group C: Scotland vs."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Uses a verified source to extract Switzerland's historical head-to-head records against Bosnia-Herzegovina.",
+        "data": "URL: https://www.national-football-teams.com/country/187/2026/Togo.html\nTitle: Togo (2026)\n## General Information for **Togo**\n\n##### F\u00e9d\u00e9ration Togolaise de Football\n\n**Founded**\n\n1960\n\n**FIFA entry**\n\n1964\n\n**Average height in 2026**\n\n1.84m\n\n**Average age in 2026**\n\n26.3\n\n**Confederation**\n\nCAF\n\n**Infos provided by**\n\n##### Emblem\n\n![](https://www.national-football-teams.com/uploads/country_images/fifa/Togo_187-58a6270894231.png)\n\n##### Jersey in 2026\n\n![Jersey in 2026](https://www.national-football-teams.com/uploads/country_images/jersey/Togo_187-5afcd6db84be6.jpeg)\n\n### Coaches in 2026\n\n## Players of **Togo** in 2026\n\nFIFA\n\nNon FIFA\n\n[Name](https://www.national-football-teams.com/country/187/2026/Togo.html?sort=player.surname&direction=asc&page=1)\n\n[Day of Birth](https://www.national-football-teams.com/country/187/2026/Togo.html?sort=player.yearOfBirth&direction=asc&page=1)\n\n[Position](https://www.national-football-teams.com/country/187/2026/Togo.html?sort=p.root&direction=asc&page=1)\n\nCurrent Club\n\n[M](https://www.national-football-teams.com/country/187/2026/Togo.html?sort=score.matches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/187/2026/Togo.html?sort=score.substitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/187/2026/Togo.html?sort=score.goals&direction=asc&page=1)\n\n[M](https://www.national-football-teams.com/country/187/2026/Togo.html?sort=score.nonFifaMatches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/187/2026/Togo.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/187/2026/Togo.html?sort=score.nonFifaGoals&direction=asc&page=1)\n\n[Barcola, Malcolm](https://www.national-football-teams.com/player/75514/Malcolm_Barcola.html)\n\n1999-05-14\n\nGoalkeeper\n\n[![Morocco](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Morocco_125-58a618a2cef59.png)](https://www.national-football-teams.com/country/125/2026/Morocco.html)\n\n[IR Tanger](https://www.national-football-teams.com/club/5729/2026/Ir_Tanger.html)\n\n2\n\n1\n\n0\n\n0\n\n0\n\n0\n\n[Mensah, Steven](https://www.national-football-teams.com/player/91354/Steven_Mensah.html)\n\n2003-02-11\n\nGoalkeeper\n\n[![Germany](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Germany_71-5893500c1c4c5.png)](https://www.national-football-teams.com/country/71/2026/Germany.html)\n\n[VfB Oldenburg](https://www.national-football-teams.com/club/1022/2026/Vfb_Oldenburg.html)\n\n1\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Bode, Abdoul-Sabourh](https://www.national-football-teams.com/player/74958/Abdoul_Sabourh_Bode.html)\n\n1995-01-22\n\nRight Back\n\n[![Mali](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Mali_116-58a616a4ea8b8.png)](https://www.national-football-teams.com/country/116/2026/Mali.html)\n\n[Stade Malien Bamako](https://www.national-football-teams.com/club/1581/2026/Stade_Malien_Bama"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Extracts exact group standings, point totals, and qualification scenarios from a verified tournament context URL.",
+        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n18.06. [Switzerland - Bosnia & Herzegovina](https://www.soccerway.com/match/bosnia-herzegovina-fqe7WYTr/switzerland-rHJ2vy1B/), 19.06. [Canada - Qatar](https://www.soccerway.com/match/canada-x4toKORL/qatar-zqzHL77i/), [Mexico - South Korea](https://www.soccerway.com/match/mexico-O6iHcNkd/south-korea-K6Gs7P6G/), [USA - Australia](https://www.soccerway.com/match/australia-xSrf6qMM/usa-fuitL4CF/), 20.06. [Scotland - Morocco](https://www.soccerway.com/match/morocco-IDKYO3R8/scotland-fZRU25WH/), [Brazil - Haiti](https://www.soccerway.com/match/brazil-I9l9aqLq/haiti-nk4v10Z1/), [Turkey - Paraguay](https://www.soccerway.com/match/paraguay-YaNlqp6j/turkey-QeijuHo5/), [Netherlands - Sweden](https://www.soccerway.com/match/netherlands-WYintcWb/sweden-OQyqbHWB/), [Germany - Ivory Coast](https://www.soccerway.com/match/germany-ptQide1O/ivory-coast-G2FRjBgn/), 21.06. [Ecuador - Curacao](https://www.soccerway.com/match/curacao-bLLGpOkQ/ecuado"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Retrieves tactical previews and expert breakdowns of the strategic matchup between the two teams.",
+        "data": "\u2022 Switzerland vs Bosnia and Herzegovina FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/switzerland-bosnia-herzegovina-world-cup-preview/bltb96d9176142a8fe0\n  Switzerland will view this match as the ideal platform to assert their status as the group\u2019s traditional heavyweight, while Bosnia and Herzegovina enter the pitch eager to weaponise their tight-knit organisation and punish any Swiss transition errors. With group permutations beginning to crystallise, the sheer gravity of securing safe passage out of Group B will dominate the tactical approach from the very first whistle. Read more: How to watch and live stream the 2026 FIFA World Cup\n\n\u2022 Switzerland vs. Bosnia-Herzegovina: Why Switzerland's style could play into Bosnia-Herzegovina's hands - Sports Mole\n  https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/feature/switzerland-vs-bosnia-herzegovina-why-switzerlands-style-could-play-into-bosnias-hands_599468.html\n  <strong>Bosnia-Herzegovina are at their best when operating in a deep, compact block and looking to exploit fast counter-attacking chances</strong>, while they are also a considerable threat from set-piece opportunities.\n\n\u2022 Switzerland vs Bosnia and Herzegovina Predictions\n  https://thewavysport.substack.com/p/switzerland-vs-bosnia-and-herzegovina\n  Tactically, <strong>expect Switzerland to dominate possession and territory, with Bosnia sitting in a mid\u2011to\u2011low block and looking for direct balls into Ermedin Demirovic and late support from their midfield</strong>.\n\n\u2022 2026 World Cup Group B Preview: Canada, Bosnia, Qatar & Switzerland | RotoWire\n  https://www.rotowire.com/soccer/article/2026-world-cup-group-b-preview-canada-bosnia-and-herzegovina-qatar-and-switzerland-lineups-odds-predictions-and-tactics-111899\n  Be ready to adapt the press-and-counter approach against Switzerland, who are the group&#x27;s most technically proficient team and whose midfield control will test Bosnia&#x27;s defensive discipline throughout the clash. 2026 World Cup : Bosnia and Herzegovina Predicted Lineup: Vasilj; Dedic, Katic, Muharemovic, Kolasinac; Bajraktarevic, Tahirovic, Sunjic, Memic; Dzeko, Demirovic.\n\n\u2022 Switzerland vs Bosnia and Herzegovina \u2014 World Cup 2026 Preview \u00b7 Bracket Research\n  https://bracketresearch.com/world-cup/match/M026/\n  Sporting Life makes Bosnia-Herzegovina to reach the round of 16 (11/4) its standout Group B bet, arguing their direct, long-ball, aerially strong style can trouble Switzerland in the matchup likely to decide second place. ... RotoWire profiles Bosnia&#x27;s press-and-counter approach built around 40-year-old Edin Dzeko against Switzerland, the group&#x27;s most technically complete side led by Xhaka, framing it as a clash of structure versus directness."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Searches for recent press coverage regarding squad harmony, administrative issues, or coaching updates.",
+        "data": "\u2022 Bosnia and Herzegovina at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d1594a5469-659bdc40eca9-1000--bosnia-and-herzegovina-at-the-world-cup-2026-squad-fixtur/\n  Everything you need to know about Bosnia and Herzegovina at the 2026 World Cup: their fixtures, squad, qualifying record, key players, coach and tournament history.\n\n\u2022 Bosnia and Herzegovina 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/bosnia-and-herzegovina-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  This direct, physical approach ensures they remain competitive against other top international soccer teams 2026. ... <strong>Sergej Barbarez took charge as the Bosnia and Herzegovina coach in the summer of 2024</strong>.\n\n\u2022 Inside Bosnia and Herzegovina's World Cup roster 2026: Edin Dzeko brings experience to Sergej Barbarez's squad | Sporting News\n  https://www.sportingnews.com/in/football/news/bosnia-herzegovina-world-cup-roster-2026-squad-players/107a2dc59a0b6ed8fe20e963\n  The Sporting News has all the key details on Bosnia and Herzegovina&#x27;s World Cup squad below.\n\n\u2022 Bosnia and Herzegovina World Cup 2026 team guide | Bosnia and Herzegovina | The Guardian\n  https://www.theguardian.com/football/2026/may/28/bosnia-and-herzegovina-world-cup-2026-team-guide\n  He gathered close friends and former teammates around him: Emir Spahic became sporting director, while <strong>Sasa Papac and Zlatan Bajramovic joined the coaching staff</strong>. ... In Barbarez\u2019s first year, 16 players made their debuts, most of them raised ...\n\n\u2022 Bosnia and Herzegovina | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/bosnia-herzegovina/team-news\n  Bosnia-Herzegovina | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Bosnia-Herzegovina squad at FIFA World Cup 2026\u2122."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Identifies the host city, venue, and environmental conditions to assess physical impact on players.",
+        "data": "{\"topic\":\"Switzerland Bosnia-Herzegovina World Cup 2026 match venue city altitude weather\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Obtains real-time betting lines, handicaps, and over/under totals from recent market updates.",
+        "data": "\u2022 Switzerland vs Bosnia-Herzegovina Prediction, Betting Tips ...\n  https://www.sportsgambler.com/betting-tips/football/switzerland-vs-bosnia-herzegovina-prediction-lineups-odds-2026-06-18/\n  We fancy Switzerland -1 at odds of -111 for this Group B clash. This Asian Handicap wager can land us a nice payout if the favourites are able ...\n\n\u2022 Switzerland vs Bosnia prediction: 6-1 Bet Builder tip, odds, team news\n  https://www.racingpost.com/sport/football-tips/world-cup-2026/switzerland-vs-bosnia-betting-odds-predictions-betting-tips-team-news-bet-builder-ai9Pc0H28Nj3/\n  Switzerland vs Bosnia prediction: 6-1 Bet Builder tip, odds, team news | World Cup 2026 \u00b7 Johan Manzambi to score anytime \u00b7 Both teams to score.\n\n\u2022 Switzerland vs. Bosnia-Herz (Jun 18, 2026) Odds and Spread - ESPN\n  https://www.espn.com/soccer/odds/_/gameId/760439\n  Find the latest odds, spread and score prediction for the Switzerland vs. Bosnia-Herzegovina Fifa World Cup game on ESPN to be played on June 18, 2026 on ...\n\n\u2022 Switzerland v Bosnia: Jun 18 Betting Odds At FanDuel Sportsbook\n  https://sportsbook.fanduel.com/soccer/fifa-world-cup/switzerland-v-bosnia-35546730\n  Switzerland v Bosnia Odds ; Switzerland to win 1-0, 2-0 or 3-0. +175 ; Switzerland to win 2-1, 3-1 or 4-1. +370 ; Draw 0-0 or 1-1. +390.\n\n\u2022 Switzerland vs. Bosnia and Herzegovina Predictions: World Cup ...\n  https://www.actionnetwork.com/soccer/switzerland-vs-bosnia-and-herzegovina-predictions-world-cup-betting-edges\n  For each game of the 2026 World Cup, I'll have my model projections and top betting edges listed in the widget below. My projections simulate ..."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides up-to-date player fitness, injury updates, and confirmed lineups for both squads.",
+        "data": "\u2022 Inside Bosnia and Herzegovina's World Cup roster 2026: Edin Dzeko brings experience to Sergej Barbarez's squad - sportingnews.com\n  https://www.sportingnews.com/uk/football/news/bosnia-herzegovina-world-cup-roster-2026-squad-players/107a2dc59a0b6ed8fe20e963\n  # Inside Bosnia and Herzegovina's World Cup roster 2026: Edin Dzeko brings experience to Sergej Barbarez's squad. The 2026 World Cup marks just the second time that Bosnia and Herzegovina will appear on global soccer's biggest stage. The European side defeated Italy on penalties in a playoff in March to secure one of the final six places at the tournament being staged across the United States, Canada and Mexico. After exiting at the group stage back in 2014, the\u00a0Golden Lilies will attempt to reach the knockout phase this year with a roster comprising promising young talent and a healthy dose o\n\n\u2022 Switzerland vs. Bosnia and Herzegovina - Live Score - June 18, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-switzerland-vs-bosnia-and-herzegovina-jun-18-2026-game-boxscore-647641\n  ## Switzerland vs Bosnia and Herzegovina. Los Angeles Stadium hosts Group B tussle between Switzerland and Bosnia and Herzegovina. Bosnia and Herzegovina: Jun 18, 2026. ## MATCHUP## NEWS## ODDS## STANDINGS. ### Bosnia and Herzegovina On Playing Switzerland | Barbarez & Katic Answer Questions From The Press. ### Switzerland On Playing Bosnia and Herzegovina | Yakin & Freuler Answer Questions From The Press. ### Switzerland Train Before Bosnia and Herzegovina | FIFA World Cup 2026\u2122. ### Bosnia and Herzegovina Train Before Switzerland | FIFA World Cup 2026\u2122. | 6/13 | QAT | D1-1 |. | 6/6 | AUS (H)\n\n\u2022 Switzerland vs Bosnia and Herzegovina at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - kwese.espn.com\n  http://www.espn.com/football/story/_/id/49079683/fifa-world-cup-2026-switzerland-vs-bosnia-herzegovina-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  On the World Cup's day of stars, Messi towers over Haaland and Mbappe. World Cup Daily: Messi with a historic hat trick, Mbapp\u00e9 and Haaland also score. Haaland on World Cup debut for Norway? Why Michael Olise is the key to France's World Cup chances. A crunch Group B clash at SoFi Stadium on Thursday evening sees Switzerland take on Bosnia and Herzegovina with both teams looking for their first win of the 2026 World Cup, and potentially, a big step towards qualification for the knockout stages. Switzerland were held in their opening game after a stoppage time Qatar equaliser, which gave the As\n\n\u2022 Switzerland vs Bosnia and Herzegovina Prediction: Bosnia can keep this tight - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/switzerland-vs-bosnia-and-herzegovina-match-prediction-18-june-2026/\n  # Switzerland vs Bosnia and Herzegovina Prediction: Bosnia can keep this tight. **Switzerland vs Bosnia And Herzegovina**. ## Switzerland vs Bosnia and Herzegovina: Prediction for the match on June 18, 2026. Switzerland and Bosnia and Herzegovina will lock horns at SoFi Stadium in Inglewood on 18 June 2026 for Group B. Switzerland drew 1-1 with Qatar on 13 June after a 90+4 equaliser; Bosnia drew 1-1 with Canada on 12 June after conceding in the 78th minute. Group B was level on 1 point for all four teams as of 17 June, with Switzerland, Qatar, Canada and Bosnia and Herzegovina each sitting on\n\n\u2022 Canada vs. Bosnia and Herzegovina projected lineups, starting 11 for World Cup 2026 Group B game in Toronto - sportingnews.com\n  https://www.sportingnews.com/uk/football/news/canada-bosnia-herzegovina-projected-lineups-starting-11-world-cup-2026/687a9eb899f55e15e661c8f9\n  Bosnia and Herzegovina projected lineups, starting 11 for World Cup 2026 Group B game in Toronto. Canada will be the second co-host in action when they face Bosnia and Herzegovina in Toronto at the 2026 World Cup. After Mexico got underway with a 2-0 win over nine-man S"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Fetches recent match summaries and analytical statistics (like xG) from the opening matchday.",
+        "data": "\u2022 Switzerland vs. Bosnia and Herzegovina - Live Score - June 18, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-switzerland-vs-bosnia-and-herzegovina-jun-18-2026-game-boxscore-647641\n  ## Switzerland vs Bosnia and Herzegovina. Los Angeles Stadium hosts Group B tussle between Switzerland and Bosnia and Herzegovina. Bosnia and Herzegovina: Jun 18, 2026. ## MATCHUP## NEWS## ODDS## STANDINGS. ### Bosnia and Herzegovina On Playing Switzerland | Barbarez & Katic Answer Questions From The Press. ### Switzerland On Playing Bosnia and Herzegovina | Yakin & Freuler Answer Questions From The Press. ### Switzerland Train Before Bosnia and Herzegovina | FIFA World Cup 2026\u2122. ### Bosnia and Herzegovina Train Before Switzerland | FIFA World Cup 2026\u2122. | 6/13 | QAT | D1-1 |. | 6/6 | AUS (H)\n\n\u2022 Switzerland vs Bosnia and Herzegovina Prediction: Bosnia can keep this tight - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/switzerland-vs-bosnia-and-herzegovina-match-prediction-18-june-2026/\n  # Switzerland vs Bosnia and Herzegovina Prediction: Bosnia can keep this tight. **Switzerland vs Bosnia And Herzegovina**. ## Switzerland vs Bosnia and Herzegovina: Prediction for the match on June 18, 2026. Switzerland and Bosnia and Herzegovina will lock horns at SoFi Stadium in Inglewood on 18 June 2026 for Group B. Switzerland drew 1-1 with Qatar on 13 June after a 90+4 equaliser; Bosnia drew 1-1 with Canada on 12 June after conceding in the 78th minute. Group B was level on 1 point for all four teams as of 17 June, with Switzerland, Qatar, Canada and Bosnia and Herzegovina each sitting on\n\n\u2022 Time for Redemption, Time for Recovery: Accumulator Tips for June 18, 2026 - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/accumulator/accumulator-tip-for-18-june-2026/\n  **Czech Republic vs South Africa**. | \u26bd\ufe0fCzech Republic vs South Africa | \ud83c\udfb2Under 2.5 goals | \ud83c\udfc61.75 |. | \u26bd\ufe0fSwitzerland vs Bosnia & Herzegovina | \ud83c\udfb2Under 2.5 goals | \ud83c\udfc61.84 |. | \u26bd\ufe0fCanada vs Qatar | \ud83c\udfb2Under 2.5 goals | \ud83c\udfc62.15 |. Second-round action begins at the World Cup, with South Africa and the Czech Republic looking for their first point. Switzerland, Bosnia & Herzegovina, Canada, and Qatar enter into the game for a first win in Group B. ### Czech Republic vs South Africa Trends. Czech Republic and South Africa are meeting for the first time ever in the history of the two nations. Both Czech Repu\n\n\u2022 #1 OLB Kaden Henderson commits to Texas A&M on McAfee - ESPN\n  https://www.espn.com/watch/player/_/id/49108476\n  ## Switzerland vs Bosnia-Herzegovina LIVE: World Cup 2026 updates from Group B clash. ## MEN'S WORLD CUP SCOREBOARD. * How can teams qualify for knockout rounds of World Cup? * The 2026 World Cup's wildest warmup kits: The good, the bad and the ugly. * Ranking Europe's top clubs by player performance at World Cup. * Every team's odds to win the World Cup: Mbapp\u00e9 helps France improve odds to win. ## Kane and Bellingham put on a show in England's thrilling win over Croatia. ## England 4-2 Croatia: Harry Kane at the double as Three Lions start World Cup campaign with chaotic win. ## England 4-2 C\n\n\u2022 Switzerland vs Bosnia and Herzegovina at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - kwese.espn.com\n  http://www.espn.com/football/story/_/id/49079683/fifa-world-cup-2026-switzerland-vs-bosnia-herzegovina-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  On the World Cup's day of stars, Messi towers over Haaland and Mbappe. World Cup Daily: Messi with a historic hat trick, Mbapp\u00e9 and Haaland also score. Haaland on World Cup debut for Norway? Why Michael Olise is the key to France's World Cup chances. A crunch Group B clash at SoFi Stadium on Thursday evening sees Switzerland take on Bosnia and Herzegovina with both teams looking for their first win of the 2026 World Cup, and potentially, a big step towards qualification for the knockout stag"
+      }
+    ],
+    "research_cost": 0.12,
+    "wallet_before": 1.668,
+    "wallet_after": 1.548,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "confidence_reason": "A confidence of 6 is chosen because Switzerland's superior squad depth and Bosnia's critical attacking injuries favor a Swiss victory, though Bosnia's compact low-block poses a strong draw risk.",
+      "reasoning": "Switzerland's midfield dominance and high shot volume should eventually break down a depleted Bosnian side missing key attacking threats like Tabakovic and potentially Dzeko.",
+      "probabilities": {
+        "home": 48,
+        "draw": 32,
+        "away": 20
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Switzerland drew 1-1 against Qatar in their opening match, dominating possession with 78% and registering 27 shots but conceding a 94th-minute equalizer.",
+      "away_form": "Bosnia-Herzegovina drew 1-1 against Canada on Matchday 1, holding an early lead before conceding an equalizer in the 78th minute.",
+      "key_injuries": [
+        "Bosnia-Herzegovina: Edin Dzeko is a doubt to start due to a shoulder injury.",
+        "Bosnia-Herzegovina: Sead Kolasinac is a fitness concern after limping off against Canada.",
+        "Bosnia-Herzegovina: Haris Tabakovic is a major attacking absence."
+      ],
+      "tactical_matchup": "Switzerland's possession-heavy style and midfield control will test Bosnia-Herzegovina's compact 4-4-2 low-block, which aims to protect the middle and exploit transition errors.",
+      "group_stakes": "With all four teams in Group B currently tied on 1 point, a victory for either side will put them on the verge of knockout-stage qualification.",
+      "home_win_signals": [
+        "Switzerland's superior technical quality and midfield control led by Granit Xhaka can starve Bosnia of possession.",
+        "Bosnia-Herzegovina's attack is severely depleted with Tabakovic out and Dzeko carrying a shoulder injury.",
+        "Switzerland created high volume in their opener with 27 shots and 1.2 xG from Breel Embolo."
+      ],
+      "away_win_signals": [
+        "Bosnia-Herzegovina's deep, compact block is well-suited to frustrate possession-heavy teams and exploit Swiss transition errors.",
+        "Bosnia's direct, physical, and aerially strong style can exploit Switzerland's defensive vulnerabilities.",
+        "Bosnia won the only previous head-to-head meeting 2-0 in a 2016 friendly."
+      ],
+      "draw_signals": [
+        "Both teams showed a tendency to concede late equalizers in their 1-1 opening draws.",
+        "Bosnia's compact defensive setup is designed to keep games tight, and betting markets heavily favor under 2.5 goals."
+      ],
+      "contradictions": [
+        "Switzerland is considered the group heavyweight but struggled to convert 27 shots into more than one goal against Qatar, while Bosnia's defensive block is highly rated despite conceding late to Canada."
+      ],
+      "strategy_applied": [
+        "QAT vs SUI: Prioritize compact defense over reputation (relevant as Switzerland's high reputation and possession dominance are vulnerable to Bosnia's compact defensive structure)."
+      ]
+    },
+    "stress_test": {
+      "confidence_cap": 6,
+      "draw_risk": "medium"
+    },
+    "full_reasoning": "HOME_PCT: 48\nDRAW_PCT: 32\nAWAY_PCT: 20\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: A confidence of 6 is chosen because Switzerland's superior squad depth and Bosnia's critical attacking injuries favor a Swiss victory, though Bosnia's compact low-block poses a strong draw risk.\nREASONING: Switzerland's midfield dominance and high shot volume should eventually break down a depleted Bosnian side missing key attacking threats like Tabakovic and potentially Dzeko.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
