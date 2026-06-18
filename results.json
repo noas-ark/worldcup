@@ -6385,5 +6385,350 @@
     "reflected": true,
     "reflected_at": "2026-06-18T04:30:46.859346+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n- POR vs COD: Prioritize extreme weather and physical low-block over attacking tempo.\n- ENG vs CRO: Prioritize transition pace and defensive flaws over microclimate and history.\n- GHA vs PAN: Prioritize physical and aerial superiority in low-scoring home fixtures over low-block assumptions.\n- UZB vs COL: Prioritize midfield availability and squad quality over environment and history.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 low-block (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transitions (ENG vs CRO)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 flaws (ENG vs CRO)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 aerial (GHA vs PAN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 midfield (UZB vs COL)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 administration (POR vs COD)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (ENG vs CRO)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (ENG vs CRO)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (GHA vs PAN)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (GHA vs PAN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (UZB vs COL)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (UZB vs COL)"
+  },
+  {
+    "match": "CZE vs RSA",
+    "home": "CZE",
+    "away": "RSA",
+    "kickoff": "2026-06-18T16:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Prioritize defense over individual attack.\n- AUS vs TUR: Prioritize low-block over possession.\n- NED vs JPN: Prioritize resilience over volume.\n- QAT vs SUI: Prioritize compact defense over reputation.\n- GER vs CUW: Prioritize form over history.\n- CIV vs ECU: Prioritize home advantage/fitness over risk aversion.\n- SWE vs TUN: Prioritize efficiency over low-block.\n- ESP vs CPV: Prioritize physical low-block over possession.\n- BEL vs EGY: Prioritize defensive discipline over favorite status.\n- KSA vs URU: Prioritize heat/squad news over history.\n- IRN vs NZL: Prioritize fatigue/resistance over quality.\n- FRA vs SEN: Prioritize fitness over venue/familiarity.\n- IRQ vs NOR: Prioritize multi-dimensional attack over star reliance.\n- ARG vs ALG: Prioritize squad fitness and key player availability over venue conditions.\n- AUT vs JOR: Prioritize high-press/transition dynamics and injury updates over venue and history.\n- POR vs COD: Prioritize extreme weather and physical low-block over attacking tempo.\n- ENG vs CRO: Prioritize transition pace and defensive flaws over microclimate and history.\n- GHA vs PAN: Prioritize physical and aerial superiority in low-scoring home fixtures over low-block assumptions.\n- UZB vs COL: Prioritize midfield availability and squad quality over environment and history.\n\n## Data sources\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 defense (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 wings (BRA vs MAR)\n- use: Previews (https://news-x402.com/news/recent) \u2014 transitions (AUS vs TUR)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 organization (NED vs JPN)\n- use: Previews (https://news-x402.com/news/recent) \u2014 compact (QAT vs SUI)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 form (GER vs CUW)\n- use: Previews (https://news-x402.com/news/recent) \u2014 fitness (CIV vs ECU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 efficiency (SWE vs TUN)\n- use: Metrics (https://skim402.com/api/v2/read) \u2014 conversion (ESP vs CPV)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 tactics (ESP vs CPV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 low-block (BEL vs EGY)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 environment (KSA vs URU)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (KSA vs URU)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 travel (IRN vs NZL)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (FRA vs SEN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 attacks (IRQ vs NOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defense (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (ARG vs ALG)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (AUT vs JOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 injuries (AUT vs JOR)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 low-block (POR vs COD)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transitions (ENG vs CRO)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 flaws (ENG vs CRO)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 aerial (GHA vs PAN)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 midfield (UZB vs COL)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 outcomes (BRA vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 mapping (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 math (AUS vs TUR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fitness (NED vs JPN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (NED vs JPN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 friendlies (QAT vs SUI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 metrics (GER vs CUW)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (CIV vs ECU)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 fragility (SWE vs TUN)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 rules (ESP vs CPV)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (BEL vs EGY)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (KSA vs URU)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 market (KSA vs URU)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (IRN vs NZL)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 venue (FRA vs SEN)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 familiarity (FRA vs SEN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (IRQ vs NOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 format (IRQ vs NOR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 climate (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 market (ARG vs ALG)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 weather (AUT vs JOR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (AUT vs JOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 administration (POR vs COD)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (ENG vs CRO)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (ENG vs CRO)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (GHA vs PAN)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (GHA vs PAN)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environment (UZB vs COL)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (UZB vs COL)",
+    "information_needs": "FORM\n- How did Czechia perform in their opening Group stage match of this tournament, specifically regarding their expected goals (xG) creation versus actual goals scored?\n- What is South Africa's recent form and goal-differential record against non-African (specifically UEFA) opposition in the 12 months leading up to this tournament?\n\nPLAYERS\n- Is Czechia's key midfield engine Tom\u00e1\u0161 Sou\u010dek fully fit, or did he suffer any lingering physical issues during their high-intensity opening group match?\n- Will South Africa start a traditional physical striker like Lyle Foster upfront, or will they opt for a fluid, false-nine system utilizing highly-cohesive domestic players from Mamelodi Sundowns?\n\nTACTICS\n- How does South Africa's relatively short defensive line plan to defend against Czechia's notorious aerial threat on set-pieces and deep crosses?\n- Can South Africa's possession-heavy, short-passing build-up successfully bypass Czechia's aggressive, physical mid-block pressing triggers?\n\nH2H\n- What historical tactical trends can be extracted from the most recent competitive or friendly head-to-head fixtures between these two nations?\n\nCONTEXT\n- What do the current Group standings require from each team to secure qualification or avoid elimination on Matchday 2, and how will this dictate their risk tolerance in the second half?\n\nMARKET\n- Where is the sharp money moving on the Asian Handicap line (e.g., Czechia -0.75 vs. South Africa +0.75), and what does the Over/Under 2.5 line imply about the projected game state?\n\nNEWS\n- Are there any reported suspension risks, squad illness outbreaks, or internal camp unrest in either the Czech or South African camps ahead of this fixture?\n\nVENUE\n- Which North American host city is staging this match, and will the local kickoff time, humidity, or altitude (e.g., if played in a high-altitude venue like Mexico City) disproportionately fatigue Czechia's high-pressing system?",
+    "research_gaps": [
+      {
+        "need": "What historical tactical trends can be extracted from the most recent competitive or friendly head-to-head fixtures between these two nations?",
+        "category": "H2H",
+        "ideal_service": "A specialized historical sports statistics database API (e.g., Opta, Sportradar, or Sofascore H2H endpoints) that offers complete historical lineups, player-specific stats, and tactical formations for past matches between Czechia and South Africa."
+      },
+      {
+        "need": "Where is the sharp money moving on the Asian Handicap line (actual trading volume, liabilities, and exchange backing)?",
+        "category": "MARKET",
+        "ideal_service": "A professional betting exchange API (e.g., Betfair Exchange API or a sharp bookmaker's API feed) that provides real-time traded volumes, liability numbers, and historical price movements to isolate actual sharp money from public consensus."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Czechia vs South Africa World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Czechia vs South Africa World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Czechia World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Czechia recent form and results",
+        "need": "How has Czechia performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "South Africa World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: South Africa recent form and results",
+        "need": "How has South Africa performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Czechia vs South Africa head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Czechia vs South Africa World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Czechia World Cup 2026 matchday 1 xG goals performance",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Retrieves statistical summaries and tactical match reviews of Czechia's opening fixture to assess their attacking efficiency and conversion rates.",
+        "need": "How did Czechia perform in their opening Group stage match of this tournament, specifically regarding their expected goals (xG) creation versus actual goals scored?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Czechia South Africa World Cup 2026 stadium venue altitude kickoff time",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies the match venue and provides environmental metrics (altitude, climate, travel distance) to evaluate potential physical fatigue on Czechia's high-press.",
+        "need": "Which North American host city is staging this match, and will the local kickoff time, humidity, or altitude disproportionately fatigue Czechia's high-pressing system?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "World Cup 2026 Group standings scenarios Czechia South Africa",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Clarifies qualification mathematics and group scenarios, allowing us to predict game state dynamics and tactical urgency in the second half.",
+        "need": "What do the current Group standings require from each team to secure qualification or avoid elimination on Matchday 2, and how will this dictate their risk tolerance in the second half?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Czechia South Africa World Cup 2026 suspensions squad news",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Scans recent translingual and global news sources for immediate alerts regarding late-breaking team news, discipline, or camp disruptions.",
+        "need": "Are there any reported suspension risks, squad illness outbreaks, or internal camp unrest in either the Czech or South African camps ahead of this fixture?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Czechia vs South Africa odds Asian Handicap Over Under movement",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Provides market insights, opening lines, and public consensus shifts to determine where the sharp money is leaning.",
+        "need": "Where is the sharp money moving on the Asian Handicap line (e.g., Czechia -0.75 vs. South Africa +0.75), and what does the Over/Under 2.5 line imply about the projected game state?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Tomas Soucek injury fitness Czechia World Cup 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides immediate injury updates and physical fitness reports on Czechia's key midfielder Tom\u00e1\u0161 Sou\u010dek following Matchday 1.",
+        "need": "Is Czechia's key midfield engine Tom\u00e1\u0161 Sou\u010dek fully fit, or did he suffer any lingering physical issues during their high-intensity opening group match?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "South Africa tactics Lyle Foster Mamelodi Sundowns World Cup 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Uncovers tactical analysis, predicted lineups, and manager statements regarding South Africa's attacking formation and squad cohesion.",
+        "need": "Will South Africa start a traditional physical striker like Lyle Foster upfront, or will they opt for a fluid, false-nine system utilizing highly-cohesive domestic players from Mamelodi Sundowns?",
+        "category": "TACTICS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Czechia vs South Africa Prediction: Essentially A Tournament Knockout Game - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/czechia-vs-south-africa-prediction-for-the-match-on-june-18th-2026/\n  Czechia is currently under significant internal scrutiny to address late-game defensive lapses following the collapse against South Korea. Known for a physical and aerial style of play, evidenced by the fact that seven of their previous 14 World Cup goals were headers, they will look to utilize this strength against a vulnerable South African defense.\n\n## Czechia: Lineup\n\nFor their upcoming 2026 FIFA World Cup Group A fixture, Czechia is expected to utilize a 3-4-2-1 system. Manager Miroslav Koubek appears intent on maintaining his chosen tactical setup, even after the squad suffered a narrow \n\n\u2022 Czechia vs. South Africa Predictions, Picks & Props I 6/18/2026 - Deadspin\n  https://deadspin.com/prediction-markets/trending/czechia-v-south-africa-predictions-picks-props/\n  ### Outright winner: Czechia ( Yes ~55% on Kalshi)\n\nCome into the matchup, Czechia are priced in as the frontrunners to win (~55% implied probability), despite a narrow opener loss. South Korea put them to their paces with a 2-1 loss, but credit where credit is due, the Czechs showed their grit, creating chances and only falling short in the wee hours, when the Koreans scored the decider. Cue the elimination match, and they\u2019re likely to come in hot, with the clinical finisher Patrik Schick at the helm, Tomas Soucek controlling the midfield, and playmakers like Pavel Sulc for set-pieces. All to\n\n\u2022 Time for Redemption, Time for Recovery: Accumulator Tips for June 18, 2026 - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/accumulator/accumulator-tip-for-18-june-2026/\n  Czech Republic and South Africa are meeting for the first time ever in the history of the two nations. The European side is yet to win any game at the World Cup since making their debut in 2006. They suffered a 2-1 loss to South Korea in their Group A opener. Similarly, South Africa lost their first game 2-0 to hosts Mexico, extending their winless run to six straight games. Their focus will be to make it to the next round for the first time ever. But one thing is common to these sides. They have not been exceptional in their attack. South Africa weren\u2019t clinical against the co-hosts, and Mexi\n\n\u2022 Czechia vs. South Africa odds, prediction, time: 2026 World Cup picks, best bets from expert on 18-8 roll - CBS Sports\n  https://www.cbssports.com/soccer/news/czechia-south-africa-odds-prediction-time-2026-world-cup-picks-best-bets/\n  ## SportsLine's Martin Green reveals his Czechia vs. South Africa best bets for their FIFA World Cup 2026 match on Thursday\n\nBy  Adam Thompson\n\n\u2022  2 min read\n\nAdd CBS Sports on Google\n\nImagn Images\n\nCzechia had their seven-game unbeaten streak snapped in a 2-1 loss to South Korea to open their 2026 World Cup experience. It's must-win time now for Czechia and South Africa when they meet in group stage action on Thursday. South Africa also lost in their World Cup opener, 2-0 to Mexico. To make it even tougher for the South Africans, top midfielders Yaya Sithole and Thema Zwane received red cards\n\n\u2022 Czechia vs. South Africa: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-czechia-vs-south-africa-tv-channel-live-stream-2026-fifa-world-cup-group-a\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Czechia vs. South Africa: How to Watch, TV Channel, Live Stream\n\nPublished Jun. 18, 2026 12:02 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nCzechia and South Africa meet in their 2026 FIFA World Cup second group stage match on Thursday, June 18, 2026 at 12:00 p.m. ET from Atlanta Stadium.\n\nCzechia lost their opening match, 2-1, with defender Ladislav Krejci ac"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Czechia vs South Africa Prediction: Essentially A Tournament Knockout Game - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/czechia-vs-south-africa-prediction-for-the-match-on-june-18th-2026/\n  Czechia is currently under significant internal scrutiny to address late-game defensive lapses following the collapse against South Korea. Known for a physical and aerial style of play, evidenced by the fact that seven of their previous 14 World Cup goals were headers, they will look to utilize this strength against a vulnerable South African defense.\n\n## Czechia: Lineup\n\nFor their upcoming 2026 FIFA World Cup Group A fixture, Czechia is expected to utilize a 3-4-2-1 system. Manager Miroslav Koubek appears intent on maintaining his chosen tactical setup, even after the squad suffered a narrow \n\n\u2022 Where to Watch Czech Republic vs South Africa: 2026 FIFA World Cup TV Channel, Live Stream and Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-czech-republic-vs-south-africa-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Czechia vs South Africa Team News\n\nBafana Bafana have been hit by suspension issues ahead of their meeting with Czech Republic, with both Sithole and Zwane unavailable for selection.\n\nThe duo received red cards during South Africa's opening World Cup match against Mexico. While Sithole is set to miss only this fixture before becoming eligible again, Zwane has been handed a tougher punishment, with FIFA imposing a three-match ban that will keep him out for the remainder of the group stage.\n\n## Group A Standings\n\n|  |  |  |  |  |  |  |  |  |\n ---  ---  ---  --- \n| Pos | Team | P | W | D | L |\n\n\u2022 Czechia vs. South Africa Predictions, Picks & Props I 6/18/2026 - Deadspin\n  https://deadspin.com/prediction-markets/trending/czechia-v-south-africa-predictions-picks-props/\n  Prediction Markets\n\n+ Prediction Markets\n+ Prediction Market Apps\n+ Sports Prediction Markets\n+ Politics Prediction Markets\n+ Are Prediction Markets Legal?\n+ How Prediction Markets Work\n+ Kalshi Review\n+ Crypto.com Review\n+ Fanduel Predicts\n+ Polymarket Review\n+ OG Review\n+ Underdog Review\n\nRanking\n\nFitness\n\nSpanish\n\nBrazilian\n\nLifestyle\n\n# Czechia vs. South Africa Predictions, Picks & Props (6/18/2026)\n\nPaul Skidmore\n\nLast Updated on Wed Jun 17 2026\n\nReviewed By Vinolin Naidoo\n\nMatchday 8 of the 2026 World Cup sees the trailing Czechia and Bafana Bafana in Group A, both with zero (0) points, \n\n\u2022 Czechia vs. South Africa Live Updates, Score: Top Moments From Group A Match - FOX Sports\n  https://www.foxsports.com/live-blog/soccer/czechia-south-africa-live-updates-score-2026-world-cup\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# Czechia vs. South Africa Live Updates, Score: Top Moments From Group A Match\n\nUpdated:  Jun 18, 2026 - 11:14 AM ET\n\nshare\n\nfacebookxredditlink\n\nWe got a Group A smackdown on tap!\n\nCzechia and South Africa meet in a crucial clash in Kansas City on Thursday (12 p.m. ET on FOX/FOX One), with both sides already under immense pressure to secure their first positive result of the 2026 World Cup. [...] in this topic\n\nFIFA Men's Wo\n\n\u2022 Czechia vs. South Africa odds, prediction, time: 2026 World Cup picks, best bets from expert on 18-8 roll - CBS Sports\n  https://www.cbssports.com/soccer/news/czechia-south-africa-odds-prediction-time-2026-world-cup-picks-best-bets/\n  ## SportsLine's Martin Green reveals his Czechia vs. South Africa best bets for their FIFA World Cup 2026 match on Thursday\n\nBy  Adam Thompson\n\n\u2022  2 min read\n\nAdd CBS Sports on Google\n\nImagn Images\n\nCzechia had their seven-game unbeaten streak snapped in a 2-1 loss to South Korea to open their 2026 World Cup experience. It's must-win time now for Czechia and South Africa when they meet in group stage action on Thursday. South Africa also lost in their World Cu"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Czechia recent form and results",
+        "data": "\u2022 Czechia at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d15945d06d-c1587a40d2a4-1000--czechia-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  Below you will find everything you need to know about Czechia at the 2026 World Cup: their fixtures, squad, qualifying record, key players, coach and tournament history.\n\n\u2022 Czechia | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/czechia/team-news\n  Czechia | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Czechia squad at FIFA World Cup 2026\u2122.\n\n\u2022 Czechia World Cup 2026 team guide | Czechia | The Guardian\n  https://www.theguardian.com/football/2026/may/27/czechia-world-cup-2026-team-guide\n  Photograph: Adam Davy/PA \u00b7 <strong>Two penalty shootout triumphs in the playoffs</strong> sent the Czechs to a first World Cup in 20 years and an experienced side look capable of progress ... This article is part of the Guardian\u2019s 2026 World Cup Experts\u2019 ...\n\n\u2022 Reuters Czechia at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/czech-republic/\n  Follow Czechia&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Czech Republic at the FIFA World Cup 2026: Squad, fixtures and results\n  https://www.reuters.com/graphics/SOCCER-WORLDCUP/mopaoglqkpa/teams/czech-republic/\n  Squad, line-ups and fixture schedule for the Czech Republic team in USA \u00b7 Canada \u00b7 Mexico\n\n\u2022 [Discussion] Czechia final squad for the 2026 World Cup\n  https://www.reddit.com/r/soccer/comments/1tt1bp8/czechia_final_squad_for_the_2026_world_cup/\n  Remarkable how many are from Slavia"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: South Africa recent form and results",
+        "data": "\u2022 World Cup 2026: What is South Africa's current FIFA world ranking? - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/world-cup-2026-what-is-south-africas-current-fifa-world-ranking/\n  Despite the setback, South Africa responded impressively. ... While Nigeria defeated Benin 4-0 in a decisive match, South Africa secured a convincing <strong>3-0 victory over Rwanda</strong> to book a place at the World Cup.\n\n\u2022 South Africa | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/south-africa/team-news\n  South Africa | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the South Africa squad at FIFA World Cup 2026\u2122.\n\n\u2022 South Africa at FIFA World Cup 2026: Bafana Bafana's results, scores, and standings - full list\n  https://www.olympics.com/en/news/south-africa-fifa-world-cup-2026-football-results-scores-standings\n  11 June, 13:00 CST - <strong>Mexico 2-0 South Africa</strong> (Julian Quinones (9), Raul Jimenez (67) Mexico City (MEX) 18 June, 12:00 EDT - Czechia vs South Africa \u2014 Atlanta (USA) 24 June, 21:00 CDT - South Africa vs Republic of Korea - Monterrey (MEX)\n\n\u2022 Reuters South Africa at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/south-africa/\n  Follow South Africa&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 South Africa at the 2026 World Cup: roster, squad, players, group and schedule - AS USA\n  https://en.as.com/soccer/world-cup/south-africa-at-the-2026-world-cup-roster-squad-players-group-and-schedule-f202606-n-3/\n  South Africa appeared to be cruising through their group before an administrative error saw them <strong>docked three points for fielding the suspended Teboho Mokoena in a victory over Lesotho</strong>.\n\n\u2022 [Discussion] South Africa unveils its squad for the 2026 World Cup\n  https://www.reddit.com/r/soccer/comments/1tpdz4p/south_africa_unveils_its_squad_for_the_2026_world/\n  I had a double take when I saw the name Sithole"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Czechia vs South Africa | First Stage | FIFA World Cup 2026\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021440\n  FIFA World Cup 2026\u2122 \u00b7 When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to.\n\n\u2022 Czechia vs South Africa, FIFA World Cup 2026: Predicted lineups, head-to-head record, form guide - Sportstar\n  https://sportstar.thehindu.com/football/fifa-world-cup/czechia-vs-south-africa-head-to-head-record-form-guide-predicted-lineups-xi-fifa-world-cup-2026-stats-news/article71117143.ece\n  <strong>The two sides have faced off only once before, in 1997 during the Confederations Cup, and that game ended in a 2-2 draw</strong>. ... Czechia (3-4-3): Kovar \u2014 Chaloupek, Hranac, Krejci \u2014 Coufal, Soucek, Sojka, Zeleny \u2014 Provod, Schick, Sulc \u00b7 South ...\n\n\u2022 Czech Republic vs. South Africa Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/czech_republic_vs_south_africa.php\n  In the history of World Cups, Czech Republic National Team faced South Africa in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 Czechia vs South Africa: All-time head-to-head record ahead of FIFA World Cup 2026\n  https://khelnow.com/football/world-football-czechia-vs-south-africa-head-to-head-fifa-world-cup-202606\n  <strong>South Africa were led by Clive Barker, whereas Dusan Uhrim was at the helm of Czechia</strong>. Vladimir Smicer took just 19 minutes to break the deadlock and make it 1-0 for Czechia until Brendan Augustine scored a header.\n\n\u2022 Czechia vs South Africa Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-czechia-vs-south-africa\n  Last 5 , <strong>Czechia Win 2 , Draw 2 , Lose 1 , Score Win Prob: 40.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 80.0%</strong> ... Last 5 , South Africa Win 0 , Draw 3 , Lose 2 , Score Win Prob: 0.00% ,Asian Handicap Win%: 0.0% Total Goals Over%: 25.0%\n\n\u2022 [Discussion] Soccer World Cup Betting and Picks Daily Discussion - 6/18/26 (Thursday)\n  https://www.reddit.com/r/sportsbook/comments/1u8uymn/soccer_world_cup_betting_and_picks_daily/\n  Tuesday, after going 4-0 - \"I am a God\" Wednesday, after going 0-4 - \"I am homeless\"\n\n\u2022 [Discussion] World Cup 2026 Day 1 - Discussion Thread\n  https://www.reddit.com/r/Gunners/comments/1u36t5v/world_cup_2026_day_1_discussion_thread/\n  Korea with Son: 0-1 Korea without Son: 2-0 Spursy\n\n\u2022 [Discussion] Matchday 1 preview in the post - Mexico vs South Africa and South Korea vs Czechia. What are your thoughts on who will progress and what might happen tomorrow? I think Mexico top and SK second\n  https://www.reddit.com/r/worldcup/comments/1u2vabv/matchday_1_preview_in_the_post_mexico_vs_south/\n  Hello! Thanks for your submission to r/worldcup , your post is up and running! A general reminder to check out our rules in the sidebar, have fun, and most of all to be civil. Finally, take a closer look at this post regarding our civility rules and reddiquette because we would like for each and everyone to feel welcome on the subreddit and to keep a healthy and safe environment for the community. Please also make sure to Join us on Discord Thank you!  I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.\n\n\u2022 [Discussion] World Cup Group A: What is everyone's predictions?\n  https://www.reddit.com/r/football/comments/1u2r2q6/world_cup_group_a_what_is_everyones_predictions/\n  The Mexicans qualify - it\u2019s just what they do . The Czechs are very solid and I think the Skoreans kinda fall in via the 3rd place route . South Africa maybe go home but would love to be proved wrong !"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Czechia vs South Africa | First Stage | FIFA World Cup 2026\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021440\n  FIFA World Cup 2026\u2122 \u00b7 We use cookies to personalize content and ads, provide social media features and analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners. You can select your cookie preferences by clicking ...\n\n\u2022 World Cup 2026 Group A guide - fixtures, schedule, standings and odds for Mexico, South Africa, South Korea and Czech Republic | Football News | Sky Sports\n  https://www.skysports.com/football/news/12098/13540670/world-cup-2026-group-a-guide-fixtures-schedule-standings-and-odds-for-mexico-south-africa-south-korea-and-czech-republic\n  <strong>Group A</strong> sees co-hosts Mexico open the World Cup against South Africa in a repeat of the first game of the 2010 tournament, followed by matches against South Korea and Czech Republic.\n\n\u2022 2026 FIFA World Cup Group A - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A\n  <strong>Group A</strong> of the 2026 FIFA World Cup is taking place from June 11 to 24, 2026. The group consists of Mexico (co-host), South Africa, South Korea, and the Czech Republic. The top two teams, and possibly the third-placed team, will advance to the round of 32. ... ^ Although the United bid was selected ...\n\n\u2022 2026 FIFA World Cup match schedule: Fixtures, results, features - ESPN\n  https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket\n  Brazil (Miami Gardens, Fla.), 6 p.m. ET Group C: Morocco vs. Haiti (Atlanta), 6 p.m. ET <strong>Group A</strong>: Czechia vs. Mexico (Mexico City), 7 p.m. local / 9 p.m. ET <strong>Group A</strong>: South Africa vs.\n\n\u2022 2026 World Cup: All the European sides' group stage fixtures and results | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20c3aa0fafe2-4a6b4459a3fc-1000--2026-world-cup-all-the-european-sides-group-stage-fixtures-a/\n  <strong>Group A: Mexico, South Africa, South Korea, Czechia</strong> Group B: Canada, Bosnia and Herzegovina, Qatar, Switzerland Group C: Brazil, Morocco, Haiti, Scotland Group D: USA, Paraguay, Australia, T\u00fcrkiye Group E: Germany, Cura\u00e7ao, C\u00f4te d&#x27;Ivoire, ..."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Retrieves statistical summaries and tactical match reviews of Czechia's opening fixture to assess their attacking efficiency and conversion rates.",
+        "data": "\u2022 Czechia vs. South Africa Prediction, Picks, Lineups for World Cup 2026\n  https://www.prizepicks.com/playbook-article/czechia-vs-south-africa-prediction-picks-lineups-world-cup-2026\n  Both sides were pedestrian in the first half, each only amassing 2 total shots in the first 45 minutes. The teams combined for just <strong>0.35 xG</strong> in the first half of their Matchday 1 outings. Lock in your Czechia vs.\n\n\u2022 2026 FIFA World Cup xG Tracker Results Expected Goals Of Every Match - RealGM Analysis\n  https://soccer.realgm.com/analysis/559/2026-FIFA-World-Cup-xG-Tracker-Results-Expected-Goals-Of-Every-Match\n  South Africa 0.07 xG (0) June 11 (Group A): South Korea 1.84 xG (2) vs. Czechia <strong>0.81 xG (1)</strong> June 12 (Group B): Canada 1.25 xG (1) vs. Bosnia and Herzegovina 0.98 xG (1) June 12 (Group D): United States 1.35 xG (4) vs.\n\n\u2022 World Cup 2026 Stats: xG Trends & Predictions - GoalStatsLab\n  https://goalstatslab.com/blog/world-cup-2026-stats-xg-trends-predictions/\n  Mexico were defensively dominant against South Africa, allowing only 0.07 xG. South Korea, meanwhile, created <strong>1.84 xG</strong> against Czechia. That sets up a strong tactical contrast: Mexico\u2019s control versus South Korea\u2019s chance creation.\n\n\u2022 World Cup 2026 Betting Digest: Czechia vs South Africa, Switzerland vs Bosnia, C... | Tips.GG\n  https://tips.gg/article/czechia-south-africa-switzerland-bosnia-canada-qatar-mexico-south-korea-betting-digest-wc2026/\n  While the Czechs have a clear tactical identity that can make a difference, South Africa have shown absolutely no ideas so far. Against Mexico, the team managed just three shots and accumulated a total of <strong>0.07 xG</strong>.\n\n\u2022 How South Korea came from behind to beat Czech Republic in World Cup 2026 group match - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/south-korea-vs-czech-republic-live-updates-world-cup-2026-score-result/0qmEGbQoQj6c/\n  <strong>South Korea came from a goal down to beat Czech Republic</strong> in Group A on the opening day of the 2026 World Cup."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies the match venue and provides environmental metrics (altitude, climate, travel distance) to evaluate potential physical fatigue on Czechia's high-press.",
+        "data": "\u2022 Czechia vs South Africa | First Stage | FIFA World Cup 2026\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021440\n  FIFA World Cup 2026\u2122 \u00b7 When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to.\n\n\u2022 Czechia vs South Africa at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN\n  https://www.espn.com/soccer/story/_/id/49079982/fifa-world-cup-2026-czechia-vs-south-africa-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups\n  Czechia vs South Africa at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups\n\n\u2022 World Cup Day 1: Schedule, predictions, opening ceremony and what to watch | World Cup 2026 News | Al Jazeera\n  https://www.aljazeera.com/news/2026/6/11/world-cup-day-1-schedule-predictions-opening-ceremony-and-what-to-watch\n  Hosts Mexico then face South Africa at the same venue at 1pm local time (19:00 GMT). Later, South Korea take on Czechia at Estadio Guadalajara (Estadio Akron) in Guadalajara, with kickoff scheduled for <strong>8pm local time (02:00 GMT on June 12).</strong>\n\n\u2022 FIFA World Cup 2026 Schedule: Dates, Times, Matchup and Locations\n  https://worldcupwiki.com/schedule/\n  Tap the button to jump straight to today\u2019s matches. \u26bd Check Today\u2019s Matches ... Opening match: Mexico vs. South Africa at Estadio Azteca, Mexico City at <strong>3:00 PM ET</strong> on June 11\n\n\u2022 World Cup 2026: Full match schedule, groups, teams and start times | World Cup 2026 News | Al Jazeera\n  https://www.aljazeera.com/sports/2026/6/11/world-cup-2026-full-match-schedule-groups-teams-and-start-times\n  Mexico vs South Africa at 1pm CST (19:00 GMT) \u2013 Mexico City Stadium, Mexico City, Mexico \u00b7 South Korea vs Czechia at <strong>8pm CST (02:00 GMT on Friday)</strong> \u2013 Estadio Guadalajara, Zapopan, Mexico\n\n\u2022 [Discussion] World Cup 2026 - First Look\n  https://www.reddit.com/r/SoccerBetting/comments/1thuo4g/world_cup_2026_first_look/\n  Bro just wait you never know what could happen in a month\u2026 one single injury or scandal can cost you your money. I don\u2019t think any of these picks is good even in present day. Not worth it imo, you do you"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Clarifies qualification mathematics and group scenarios, allowing us to predict game state dynamics and tactical urgency in the second half.",
+        "data": "\u2022 World Cup 2026 Group A guide - fixtures, schedule, standings and odds for Mexico, South Africa, South Korea and Czech Republic | Football News | Sky Sports\n  https://www.skysports.com/football/news/12098/13540670/world-cup-2026-group-a-guide-fixtures-schedule-standings-and-odds-for-mexico-south-africa-south-korea-and-czech-republic\n  Thursday June 18: Czech Republic vs South Africa, kick-off 5pm - Mercedes-Benz Stadium, Atlanta, USA\n\n\u2022 World Cup group scenarios 2026: How teams can qualify and advance to Round of 32 knockout bracket | Sporting News\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-scenarios-2026/c5de73c770747e8ee1f43309\n  <strong>Will qualify as group winner if they beat Mexico and South Africa do not beat Czechia</strong>. Will be eliminated if they lose to Czechia and South Korea avoids defeat against Mexico \u00b7 Will be eliminated if they lose to South Africa and Mexico avoids ...\n\n\u2022 2026 FIFA World Cup match schedule: Fixtures, results, features - ESPN\n  https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket\n  Brazil (Miami Gardens, Fla.), 6 p.m. ET Group C: Morocco vs. Haiti (Atlanta), 6 p.m. ET <strong>Group A</strong>: Czechia vs. Mexico (Mexico City), 7 p.m. local / 9 p.m. ET <strong>Group A</strong>: South Africa vs.\n\n\u2022 2026 FIFA World Cup Group A - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A\n  Group A of the 2026 FIFA World Cup is taking place from June 11 to 24, 2026. The group consists of Mexico (co-host), South Africa, South Korea, and the Czech Republic. <strong>The top two teams, and possibly the third-placed team, will advance to the round of 32.</strong> ... ^ Although the United bid was selected ...\n\n\u2022 FIFA World Cup 2026 Groups: All 12 Groups, Predictions & Group of Death\n  https://worldcupwiki.com/groups/\n  Stadium guide: all 16 host venues across the USA, Canada and Mexico. Squads hub: confirmed 26-player rosters for every qualified nation. Opening round: <strong>Mexico 2-0 South Africa, South Korea 2-1 Czechia</strong>..."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Scans recent translingual and global news sources for immediate alerts regarding late-breaking team news, discipline, or camp disruptions.",
+        "data": "{\"topic\":\"Czechia South Africa World Cup 2026 suspensions squad news\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Provides market insights, opening lines, and public consensus shifts to determine where the sharp money is leaning.",
+        "data": "\u2022 Czechia vs South Africa Predictions, Picks & Odds - Covers.com\n  https://www.covers.com/world-cup/czechia-vs-south-africa-prediction-picks-odds-thursday-6-18-2026\n  South Africa predictions are backing Under 2.5 goals. Czechia vs South Africa Over/Under pick: Under 2.5 (-132) Match starts: 28 hrs\n\n\u2022 Czech Republic vs South Africa Betting Picks & Predictions - YouTube\n  https://www.youtube.com/watch?v=hTzLdW_aUmk\n  South Africa in a pivotal Group A matchup at the 2026 FIFA World Cup. The crew analyzes the latest odds, key tactical matchups, betting ...\n\n\u2022 Czechia vs South Africa Betting Pick | World Cup | 2026-06-18 |\n  https://www.goonersguide.com/football-pick-59519-Czechia-vs-South-Africa.htm\n  Take Czechia to win at odds of 1.77 at. Take the European side to win at good odds. The Pick : Czechia 2-0 South Africa. Take Czechia to win at ...\n\n\u2022 Czechia vs South Africa Prediction, Preview, Picks, Best Bets ...\n  https://www.fanduel.com/research/czechia-vs-south-africa-prediction-preview-picks-best-bets-and-lineups-for-world-cup-2026\n  Full Odds \u2014 Czechia vs South Africa ; Czechia ML \u2b50. -132 ; Draw. +268 ; South Africa ML. +363 ; Under 2.5 Goals \u2b50. -130 ; Over 2.5 Goals. +100.\n\n\u2022 South Korea vs. Czechia Prediction, Odds, Best Prop Bet for World ...\n  https://www.si.com/betting/south-korea-vs-czechia-prediction-odds-best-prop-bet-for-world-cup-group-stage-01ktq279n5y4\n  South Korea +165 Czechia +190 Draw +215 Total OVER 2.5 (+125) UNDER 2.5 (-155) Watch Date: Thursday, June 11 Time: 10:00 p.m. ET"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides immediate injury updates and physical fitness reports on Czechia's key midfielder Tom\u00e1\u0161 Sou\u010dek following Matchday 1.",
+        "data": "\u2022 World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad - Sky Sports\n  https://www.skysports.com/football/news/32461/13554613/world-cup-2026-tino-livramento-suffers-hamstring-injury-and-replaced-by-trevoh-chalobah-in-england-squad\n  # World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad. England begin their World Cup Group L campaign against Croatia on Wednesday; Tino Livramento has been replaced by Trevoh Chalobah after suffering a hamstring injury; **Follow England vs Croatia on the Sky Sports app from 7pm**. England\u2019s World Cup campaign has suffered an early setback as Tino Livramento's tournament is over after suffering a hamstring injury, with Trevoh Chalobah to replace him. The 23-year-old Newcastle defender missed the final five weeks of the season with a thigh i\n\n\u2022 World Cup 2026: Tino Livramento suffers calf injury and replaced by Trevoh Chalobah in England squad - Sky Sports\n  https://www.skysports.com/football/news/12016/13554613/world-cup-2026-tino-livramento-suffers-hamstring-injury-and-replaced-by-trevoh-chalobah-in-england-squad\n  # World Cup 2026: Tino Livramento suffers calf injury and replaced by Trevoh Chalobah in England squad. England begin their World Cup Group L campaign against Croatia on Wednesday; Tino Livramento has been replaced by Trevoh Chalobah after suffering a calf injury; **Follow England vs Croatia on the Sky Sports app from 7pm**. Rob Dorsett brings the latest as Trevoh Chalobah replaces Tino Livramento in the England squad. England\u2019s World Cup campaign has suffered an early setback as Tino Livramento's tournament is over after suffering a calf injury, with Trevoh Chalobah replacing him. However, th\n\n\u2022 South Korea vs. Czechia - Final Score - June 11, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/south-korea-vs-czechia-jun-12-2026-game-boxscore-647617\n  ### South Korea vs Czechia Highlights | 2026 FIFA World Cup\u2122. ### Czechia\u2019s Ladislav Krej\u010d\u00ed scores header off set-piece, taking lead over South Korea | 2026 FIFA World Cup\u2122. ## Czechia. ### South Korea vs Czechia Extended Highlights | 2026 FIFA World Cup\u2122. Czechia at the 2026 FIFA World Cup. 4 HOURS AGO \u2022 FOX SPORTS. Here is everything you might have missed from Day 1 of the 2026 FIFA World Cup. 4 HOURS AGO \u2022 FOX SPORTS. ### South Korea's Oh Hyeon-gyu scores goal, taking lead over Czechia | 2026 FIFA World Cup\u2122. ### South Korea's Hwang In-beom Scores Ankle-Breaking Equalizer against Czechia | \n\n\u2022 South Korea vs Czechia Highlights | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-18j026gny6xn16jb\n  # South Korea vs Czechia Highlights | 2026 FIFA World Cup\u2122. ## Check out the full game highlights between South Korea and Czechia in the 2026 FIFA World Cup\u2122. Ladislav Krejci  Hwang In-beom  FIFA World Cup - 4 Minute Game Recaps  FIFA Men's World Cup  South Korea  Czechia  WC - South Korea vs. FIFA MEN'S WORLD CUP. ### South Korea vs Czechia Extended Highlights | 2026 FIFA World Cup\u2122. ### FIRST Goal of the 2026 FIFA World Cup\u2122 \ud83d\udd25 Juli\u00e1n Qui\u00f1ones for Mexico \ud83c\udfa5 EVERY ANGLE. ### South Korea's Oh Hyeon-gyu scores goal, taking lead over Czechia | 2026 FIFA World Cup\u2122. ### South Korea's Hwang In-beom \n\n\u2022 Czech Republic Ends 20-Year World Cup Goalless Streak - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/czech-republic-ends-20-year-world-cup-goalless-streak/\n  **The Czech Republic suffered a 2-1 defeat to the Korean national team in their first match of the 2026 World Cup group stage.**. In the 59th minute of the match, Czech defender Ladislav Krej\u010d\u00ed opened the scoring with a header. This goal was the Czech Republic's first at a World Cup in 20 years. The last Czech Republic goal scorer at a World Cup was forward Jan Koller, who scored in the fifth minute of their 3-0 group stage win over the United States on June 12, 2006. The Czech Republic's next match will be on June 18 against South Africa. In related n"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Uncovers tactical analysis, predicted lineups, and manager statements regarding South Africa's attacking formation and squad cohesion.",
+        "data": "\u2022 World Cup referee Omar Artan will receive full fee from FIFA despite being denied entry to the US - The Sun Chronicle\n  https://www.thesunchronicle.com/sports/world-cup-referee-omar-artan-will-receive-full-fee-from-fifa-despite-being-denied-entry/article_157f7a61-23ac-5a04-bbbc-799cb21154a4.html\n  Referee Omar Artan, who was denied entry to the United States, is welcomed by supporters upon his arrival in Mogadishu, Somalia, Wednesday, June 10, 2026. Referee Omar Artan, center, of Somalia, signals a penalty during the CAF Champions League final soccer match between AS FAR Rabat and Mamelodi Sundowns, in Rabat, Morocco, Sunday, May 24, 2026. Referee Omar Artan, center, of Somalia, is confronted by players after calling a penalty kick during the CAF Champions League final soccer match between AS FAR Rabat and Mamelodi Sundowns, in Rabat, Morocco, Sunday, May 24, 2026. # World Cup referee O\n\n\u2022 Javier Hern\u00e1ndez REACTS to Mexico\u2019s win over South Africa | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-pjiz34zum48qget0\n  # Javier Hern\u00e1ndez REACTS to Mexico\u2019s win over South Africa | 2026 FIFA World Cup\u2122. ## Check out the postgame analysis from Mexico's 2-0 win over South Africa in the 2026 FIFA World Cup\u2122 opening match. Julian Quinones  South Africa  FIFA Men's World Cup  Mexico  WC - Mexico vs. South Africa - 06/11/2026  Raul Jimenez  FIFA World Cup Live. ### All THREE Red Cards \ud83d\udfe5 from Mexico vs. South Africa | 2026 FIFA World Cup\u2122. ### 2026 FIFA World Cup\u2122 Opening Ceremony \ud83c\udf0e. ### Keys to the Match between Mexico and South Africa | 2026 FIFA World Cup\u2122. ### Zlatan Ibrahimovi\u0107, Thierry Henry & Alexi Lalas pick \n\n\u2022 All THREE Red Cards \ud83d\udfe5 from Mexico vs. South Africa | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-t9o0r2emf31ndkjq\n  # All THREE Red Cards \ud83d\udfe5 from Mexico vs. South Africa | 2026 FIFA World Cup\u2122. ## Check out all three red cards from the 2026 FIFA World Cup\u2122 opener between Mexico and South Africa. The most in an opening match in the FIFA World Cup\u2122. Sphephelo Sithole  Cesar Montes  FIFA World Cup Best of the Day  South Africa  FIFA Men's World Cup  Mexico  WC - Mexico vs. South Africa - 06/11/2026  FIFA World Cup Live. ### 2026 FIFA World Cup\u2122 Opening Ceremony \ud83c\udf0e. ### Keys to the Match between Mexico and South Africa | 2026 FIFA World Cup\u2122. The Awakening of America | 2026 FIFA World Cup\u2122. FIFA World Cup 2026\u2122 B\n\n\u2022 Czechia vs. South Africa: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-czechia-vs-south-africa-tv-channel-live-stream-2026-fifa-world-cup-group-a\n  3. ### 2026 World Cup: France Alone Atop Oddsboard After Opening Win### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. FIFA Men's World Cup. FIFA Men's World Cup. Czechia and South Africa meet in their 2026 FIFA World Cup second group stage match on Thursday, June 18, 2026 at 12:00 p.m. ET from Atlanta Stadium. ## How to Watch Czechia vs. ### South Korea vs Czechia Highlights | 2026 FIFA World Cup\u2122. Chec\n\n\u2022 Soccer fans around the world watch the World Cup, in photos - AP News\n  https://apnews.com/article/photos-soccer-world-cup-watch-parties-8e31d2294f237d8f50ad1fc997fe9279\n  People watch the opening match of the FIFA World Cup 2026 between Mexico and South Africa, in Cairo, Egypt, Thursday, June 11, 2026. Fans react as they watch a broadcast of the World Cup soccer match between Mexico and South Africa in Berlin, Germany, Thursday, June 11, 2026. Fans watch the first match of the World Cup between Mexico and South Africa on the National Mall, Thursday, June 11, 2026, in Washington. Mexico fans celebrate their team\u2019s first goal against South Africa as they watch a public viewing of the opening match of the World Cup soccer tournament between Mexico and South Africa"
+      }
+    ],
+    "research_cost": 0.124,
+    "wallet_before": 1.792,
+    "wallet_after": 1.668,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "confidence_reason": "A confidence of 6 is chosen because while South Africa's critical midfield suspensions heavily favor Czechia, Czechia's own modest attacking output and defensive vulnerabilities limit a higher rating.",
+      "reasoning": "Czechia's physical advantage and superior squad depth should prevail against a South African side severely depleted by the red-card suspensions of key midfielders Themba Zwane and Sphephelo Sithole.",
+      "probabilities": {
+        "home": 52,
+        "draw": 28,
+        "away": 20
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Czechia had their seven-game unbeaten streak snapped in a narrow 2-1 opening match defeat to South Korea, despite taking the lead via a Ladislav Krejci header.",
+      "away_form": "South Africa extended their winless run to six matches after a toothless 2-0 defeat to co-hosts Mexico, where they generated a mere 0.07 xG.",
+      "key_injuries": [
+        "Themba Zwane (South Africa) - Suspended (serving a 3-match ban following a red card against Mexico)",
+        "Sphephelo Sithole (South Africa) - Suspended (serving a 1-match ban following a red card against Mexico)"
+      ],
+      "tactical_matchup": "Czechia's physical, aerial-heavy 3-4-2-1 system holds a major structural edge over a depleted South African midfield missing its two key anchors due to suspension.",
+      "group_stakes": "This is a must-win knockout-style game for both teams, as a second consecutive defeat will likely eliminate them from Round of 32 contention.",
+      "home_win_signals": [
+        "Czechia's aerial dominance (7 of their last 14 World Cup goals have been headers) matches up perfectly against a vulnerable South African defense.",
+        "South Africa's midfield is severely depleted due to red card suspensions for key starters Themba Zwane and Sphephelo Sithole.",
+        "Czechia showed far superior attacking threat in their opener, generating 0.81 xG compared to South Africa's abysmal 0.07 xG."
+      ],
+      "away_win_signals": [
+        "Czechia has shown vulnerability to late-game defensive lapses, as seen in their collapse against South Korea.",
+        "South Africa could exploit Czechia's high defensive line on transition if they can find clinical efficiency on the counter."
+      ],
+      "draw_signals": [
+        "Both teams struggled to create high-quality open-play chances in their openers, combining for just 0.35 xG in the first halves of their respective matches.",
+        "Their only historical head-to-head meeting (1997 Confederations Cup) ended in a 2-2 draw."
+      ],
+      "contradictions": [
+        "While Czechia are heavy favorites (~55% implied probability) and possess superior squad depth, they have not won a World Cup match since 2006."
+      ],
+      "strategy_applied": [
+        "Prioritized squad news and key player availability (South Africa's critical midfield suspensions) over historical head-to-head records."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting Czechia's historical World Cup aerial statistics when the team has not won a World Cup match since 2006, making those historical trends highly outdated and irrelevant to the current squad.",
+        "Overestimating Czechia's offensive capabilities based on a modest 0.81 xG output in their opening match.",
+        "Failing to account for how South Africa's 0.07 xG against co-hosts Mexico was heavily skewed by the game state and the red cards they received."
+      ],
+      "underweighted_factors": [
+        "Czechia's lack of modern World Cup pedigree and tournament-winning experience.",
+        "South Africa's potential tactical shift to an ultra-compact low block to salvage a point, which could easily frustrate Czechia's low-volume attack.",
+        "Czechia's defensive vulnerability on the counter-attack when deploying a high defensive line."
+      ],
+      "draw_risk": "medium \u2014 both teams struggled significantly to create high-quality open-play chances in their openers, and a defensive South African adjustment could easily result in a low-scoring stalemate.",
+      "favorite": "home",
+      "confidence_cap": 6,
+      "verdict": "While South Africa's critical midfield suspensions make Czechia the logical favorite, the colleague's reliance on pre-2006 World Cup statistics to justify Czechia's aerial dominance exposes a major analytical flaw."
+    },
+    "full_reasoning": "HOME_PCT: 52\nDRAW_PCT: 28\nAWAY_PCT: 20\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: A confidence of 6 is chosen because while South Africa's critical midfield suspensions heavily favor Czechia, Czechia's own modest attacking output and defensive vulnerabilities limit a higher rating.\nREASONING: Czechia's physical advantage and superior squad depth should prevail against a South African side severely depleted by the red-card suspensions of key midfielders Themba Zwane and Sphephelo Sithole.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
