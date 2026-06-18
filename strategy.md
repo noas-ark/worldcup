@@ -20,6 +20,7 @@
 - ENG vs CRO: Prioritize transition pace and defensive flaws over microclimate and history.
 - GHA vs PAN: Prioritize physical and aerial superiority in low-scoring home fixtures over low-block assumptions.
 - UZB vs COL: Prioritize midfield availability and squad quality over environment and history.
+- CZE vs RSA: Prioritize defensive adjustments and attacking efficiency over physical dominance.
 
 ## Data sources
 - use: Metrics (https://skim402.com/api/v2/read) — defense (BRA vs MAR)
@@ -48,6 +49,8 @@
 - use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — flaws (ENG vs CRO)
 - use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — aerial (GHA vs PAN)
 - use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — midfield (UZB vs COL)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — efficiency (CZE vs RSA)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — tactics (CZE vs RSA)
 - skip: Previews (https://news-x402.com/news/recent) — outcomes (BRA vs MAR)
 - skip: Metrics (https://skim402.com/api/v2/read) — mapping (AUS vs TUR)
 - skip: Previews (https://news-x402.com/news/recent) — math (AUS vs TUR)
@@ -79,3 +82,4 @@
 - skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) — history (GHA vs PAN)
 - skip: Venue (https://websearch--gw.swerver.net/search) — environment (UZB vs COL)
 - skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) — history (UZB vs COL)
+- skip: Venue (https://websearch--gw.swerver.net/search) — market (CZE vs RSA)
