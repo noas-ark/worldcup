@@ -8125,5 +8125,345 @@
     "reflected": true,
     "reflected_at": "2026-06-19T21:30:31.866076+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (SUI vs BIH)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 vulnerability (CAN vs QAT)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 turf (CAN vs QAT)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 efficiency (MEX vs KOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 pressing triggers (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 venue (SUI vs BIH)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (SUI vs BIH)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 counters (CAN vs QAT)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (MEX vs KOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (MEX vs KOR)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 physical profiling (USA vs AUS)"
+  },
+  {
+    "match": "SCO vs MAR",
+    "home": "SCO",
+    "away": "MAR",
+    "kickoff": "2026-06-19T22:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (SUI vs BIH)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 vulnerability (CAN vs QAT)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 turf (CAN vs QAT)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 efficiency (MEX vs KOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 venue (SUI vs BIH)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (SUI vs BIH)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 counters (CAN vs QAT)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (MEX vs KOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (MEX vs KOR)",
+    "information_needs": "FORM\n- How did both teams perform in their opening match of the 2026 World Cup group stage (assuming this is Matchday 2, given the June 19 date), specifically regarding their non-penalty Expected Goals (npxG) created and conceded?\n\nPLAYERS\n- Is Andrew Robertson fully fit to handle 90 minutes of high-intensity tracking at left wing-back, and how does his defensive profile match up against Morocco's dynamic right-sided attack featuring Achraf Hakimi and Brahim D\u00edaz?\n- Who is starting as Scotland's focal point upfront (e.g., Che Adams or Lawrence Shankland), and do they possess the physical profile to contest aerial duels successfully against Morocco's central defensive pairing of Nayef Aguerd and his partner?\n\nTACTICS\n- Will Steve Clarke deploy a conservative 5-4-1 low-block to deny Morocco's technical midfielders space between the lines, or will Scotland attempt a high mid-press to disrupt Morocco's possession-based build-up from the back?\n- How does Morocco's midfield transition defense plan to neutralize Scott McTominay's late, crashing runs into the penalty box, which are central to Scotland's goal-scoring threat?\n\nH2H\n- Are there any tactical or psychological carryovers from their historical encounters\u2014specifically the 1998 World Cup group stage match where Morocco defeated Scotland 3-0\u2014that still influence the national team setups or media narratives?\n\nCONTEXT\n- What are the exact group standings and goal differential scenarios entering this match, and does either team require a high-scoring win to secure progression, or is a conservative draw mutually beneficial?\n\nMARKET\n- What are the current Asian Handicap and Moneyline odds, and has there been any significant market movement (sharp money) favoring Morocco as the technical favorite or Scotland as the physical underdog?\n\nNEWS\n- Are there any late-breaking squad issues, such as a virus outbreak in either camp, suspension updates from Matchday 1, or last-minute fitness tests for crucial transition players like Sofyan Amrabat?\n\nVENUE\n- Which North American host city and stadium is staging this match, what is the projected temperature and humidity for the local kickoff time, and does the stadium use a natural grass pitch or an artificial hybrid surface?",
+    "research_gaps": [
+      {
+        "need": "What are the current Asian Handicap and Moneyline odds, and has there been any significant market movement (sharp money) favoring either side?",
+        "category": "MARKET",
+        "ideal_service": "A sports betting market intelligence API providing real-time odds, moneyline movements, and handicap tracking for World Cup matches."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Scotland vs Morocco World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Scotland vs Morocco World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Scotland World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Scotland recent form and results",
+        "need": "How has Scotland performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Morocco World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Morocco recent form and results",
+        "need": "How has Morocco performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Scotland vs Morocco head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Scotland vs Morocco World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Scrapes the live tournament group standings page to extract precise mathematical progression scenarios for both teams.",
+        "need": "What are the exact group standings and goal differential scenarios entering this match, and does either team require a high-scoring win to secure progression?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Scotland starting striker Che Adams Lawrence Shankland World Cup 2026 Morocco Aguerd",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies Scotland's projected starting striker and the physical/aerial matchup against Morocco's central defense.",
+        "need": "Who is starting as Scotland's focal point upfront (Che Adams or Lawrence Shankland), and do they possess the physical profile to contest aerial duels successfully against Morocco's central defensive pairing?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Scotland Morocco World Cup 2026 Matchday 1 expected goals xG npxG performance",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Retrieves analytical and statistical reviews of Matchday 1 performances, focusing on underlying performance metrics like npxG.",
+        "need": "How did both teams perform in their opening match of the 2026 World Cup group stage, specifically regarding their non-penalty Expected Goals (npxG) created and conceded?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Morocco Scotland World Cup 2026 stadium pitch grass weather injury news Sofyan Amrabat",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Leverages Swerver's fast headless search to capture the most recent local team news, late fitness tests, and venue pitch/weather conditions.",
+        "need": "Are there any late-breaking squad issues, such as a virus outbreak, suspension updates, or last-minute fitness tests for Sofyan Amrabat, and what are the stadium conditions (pitch surface, weather)?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Scotland Morocco 1998 World Cup history media narrative",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Uses GDELT News Intelligence to find recent news articles discussing the psychological weight and historical narratives of the 1998 matchup.",
+        "need": "Are there any tactical or psychological carryovers from their historical encounters\u2014specifically the 1998 World Cup group stage match where Morocco defeated Scotland 3-0?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Scotland Andrew Robertson fitness injury World Cup 2026 Morocco Hakimi Brahim Diaz",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides real-time injury status on Robertson and tactical previews of his matchup against Hakimi and Diaz on Scotland's left flank.",
+        "need": "Is Andrew Robertson fully fit to handle 90 minutes of tracking at left wing-back, and how does his defensive profile match up against Morocco's dynamic right-sided attack featuring Achraf Hakimi and Brahim D\u00edaz?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Scotland tactical preview Morocco World Cup 2026 Steve Clarke low block McTominay runs",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Extracts detailed tactical analysis from recent team previews regarding Steve Clarke's defensive structure and how Morocco intends to track McTominay's deep runs.",
+        "need": "Will Steve Clarke deploy a conservative 5-4-1 low-block to deny Morocco's technical midfielders space, or will Scotland attempt a high mid-press to disrupt Morocco's possession-based build-up?",
+        "category": "TACTICS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Scotland vs. Morocco Prediction: 2026 FIFA World Cup Preview and Pick - VSiN\n  https://vsin.com/soccer/scotland-vs-morocco-prediction-2026-fifa-world-cup-preview-and-pick/\n  Morocco was, in my opinion, the better side in the first half, deservedly took the lead through Ismael Saibari, and showed the same tactical discipline that has become their trademark on the international stage. They play with a compact shape, have an athletic back line, and can limit quality chances, making them a really tough team to break down.\n\nGame state also favors the wager. Scotland already has three points and knows a tie would put them in a strong position to qualify for the knockout stages heading into a final match against Brazil.\n\nExpect Steve Clarke to prioritize defensive organi\n\n\u2022 Scotland vs. Morocco line-ups: World Cup 2026 predicted XIs - ESPN\n  https://www.espn.com/soccer/story/_/id/49107538/scotland-morocco-line-ups-world-cup-predicted-xis\n  It is possible that Clarke decides to go for a back three and a 3-5-1-1 formation, in which case Kieran Tierney would likely come in and Gannon-Doak may miss out.\n\nMorocco will surely be one of the sternest tests Scotland will face in their group games, along with Brazil, and Clarke will need to pick the team he feels can get a result against the team ranked the 11th best in the world by FIFA. -- by Hannah Ryan [...] In their final training session ahead of Friday's showdown, Scotland had a full complement of players available, which will come as a relief to Clarke after centre-back Scott McKe\n\n\u2022 Scotland vs Morocco Prediction: Morocco's control meets Scotland's set pieces - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/scotland-vs-morocco-match-prediction-19-june-2026/\n  On 13 June 2026, Morocco drew 1-1 with Brazil at New York/New Jersey Stadium after Ismael Saibari put Mohamed Ouahbi's side in front from a Brahim Diaz assist. Morocco started strongly in that match, and Saibari is expected to keep the starting role against Scotland on 19 June at Boston Stadium in Foxborough. Ouahbi's projected 4-2-3-1 has Yassine Bounou behind Achraf Hakimi, Issa Diop, Chadi Riad and Noussair Mazraoui, with Neil El Aynaoui and Ayyoub Bouaddi listed in midfield. The attacking line in the possible XI is Brahim Diaz, Azzedine Ounahi, Bilal El Khannouss and Saibari, and Morocco h\n\n\u2022 Scotland vs. Morocco projected lineups, starting 11 for World Cup 2026 Group C game at Gillette Stadium - sportingnews.com\n  https://www.sportingnews.com/in/football/news/scotland-vs-morocco-lineups-starting-11-world-cup-2026-group-c/31c73e734beb77e708babfe5\n  If Christie starts, Clarke may opt for a more midfield-heavy setup, leaving Che Adams as the lone striker. John McGinn's winner against Haiti should ensure he keeps his place, while Ben Gannon-Doak's pace and direct running remain key weapons as Scotland target a result that would move them closer to the knockout stage.\n\n## Morocco projected starting 11\n\n(4-3-3, right to left): 1. Y. Bounou (GK) \u2014 2. A. Hakimi, 18. N. Aguerd, 5. C. Riad, 3. N. Mazraoui \u2014 8. A. Bouaddi, 6. N. El Aynaoui, 15. A. Ounahi \u2014 10. B. Diaz, 11. I. Saibari, 23. B. El Khannouss\n\nInjured: None  \nSuspended: None [...] ## S\n\n\u2022 Scotland vs. Morocco odds, prediction, time: 2026 World Cup picks, best bets from expert on 18-9 run - CBS Sports\n  https://www.cbssports.com/soccer/news/scotland-morocco-odds-prediction-line-time-2026-world-cup-picks-best-bets/\n  By  Daniel Lewis\n\n\u2022  2 min read\n\nAdd CBS Sports on Google\n\nImagn Images\n\nThe 2026 World Cup continues Friday with an important Group C matchup between Scotland and Morocco. An early goal from John McGinn was the difference in Scotland's win over Haiti in their opener. Morocco, meanwhile, posted an impressive result as they earned a point against Brazil with a draw in their opener as they look for another deep run after making the semifinals in the 2022 World Cup. A win would position either side extremely well to ad"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Scotland vs. Morocco projected lineups, starting 11 for World Cup 2026 Group C game at Gillette Stadium - sportingnews.com\n  https://www.sportingnews.com/in/football/news/scotland-vs-morocco-lineups-starting-11-world-cup-2026-group-c/31c73e734beb77e708babfe5\n  Injured: None  \nSuspended: None\n\nMorocco are expected to stick with the side that impressed in a 1-1 draw against Brazil on matchday one. Ismael Saibari should continue in attack after scoring against the five-time world champions, while Achraf Hakimi remains the team's key outlet from right-back.\n\nMohamed Ouahbi's side are likely to dominate possession against Scotland, with Azzedine Ounahi, Neil El Aynaoui and Ayyoub Bouaddi tasked with controlling the midfield. The challenge for Morocco will be turning that territorial advantage into clear-cut chances against what is expected to be a discip\n\n\u2022 Scotland vs. Morocco line-ups: World Cup 2026 predicted XIs - ESPN\n  https://www.espn.com/soccer/story/_/id/49107538/scotland-morocco-line-ups-world-cup-predicted-xis\n  Scott McKenna did not feature against Haiti, owing to a calf issue, and missed training again on Wednesday. In his place, the experienced Grant Hanley was partnered with Jack Hendry at centre-back. Captain Andy Robertson will no doubt start at left-back, while Aaron Hickey is likely to retain his place at right-back after the Haiti match.\n\nAgainst Haiti, McGinn was preferred to Ryan Christie in midfield and McGinn repaid his manager's faith by scoring the only goal of the game. There is a possibility, though, that Scotland will need an extra central midfielder to deal with Morocco, which may m\n\n\u2022 Scotland vs Morocco Prediction: Morocco's control meets Scotland's set pieces - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/scotland-vs-morocco-match-prediction-19-june-2026/\n  Scotland beat Haiti 1-0 at Boston Stadium in their opener, with John McGinn the matchwinner and Aaron Hickey and Findlay Curtis booked. That left Steve Clarke's side top of Group C on 3 points after one game, with 1 goal scored and 0 conceded, and it was Scotland's first men's World Cup win since 1990. The Haiti performance was described as scrappy, and Clarke said on 14 June that Morocco and Brazil require \u201ca different approach\u201d after praising the resilience and character in the 1-0 win. The possible XI keeps Angus Gunn behind Aaron Hickey, Jack Hendry, Grant Hanley and Andy Robertson in a 4-\n\n\u2022 Where to Watch Scotland vs Morocco: 2026 FIFA World Cup TV Channel Live Stream & Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-scotland-vs-morocco-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Group C Standings\n\n|  |  |  |  |  |\n ---  --- \n| Pos | Team | MP | G | PTS |\n| 1 | Scotland | 1 | 1:0 | 3 |\n| 2 | Morocco | 1 | 1:1 | 1 |\n| 3 | Brazil | 1 | 1:1 | 1 |\n| 4 | Haiti | 1 | 0:1 | 0 |\n\n## Scotland vs Morocco Team News\n\nScotland could be without key defender Kieran Tierney for their upcoming fixture as he continues his recovery from a lingering hamstring injury.\n\n## Scotland vs Morocco Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Scotland to Win | Draw | Morocco to Win |\n| 1xBet | 5.66 | 3.76 | 1.75 |\n| Betway | 5.50 | 3.70 | 1.72 |\n\nClaim Exclusive World Cup Bonuses on 1x\n\n\u2022 Scotland vs. Morocco - Live Score - June 19, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-scotland-vs-morocco-jun-19-2026-game-boxscore-647646\n  MAR\n\n|  |  |  |\n --- \n| 6/13 | BRA | D1-1 |\n| 6/7 | NOR (H) | D1-1 |\n| 6/2 | MAD (H) | W4-0 |\n| 5/26 | BDI (H) | W5-0 |\n| 3/31 | PAR (H) | W2-1 |\n\n### TEAM STATS\n\nSCO\n\n1.0 Goals per Game 1.0\n\n1.2 Expected Goals (xG) per Game 1.4\n\n0.0 Goals Against per Game 1.0\n\n8.0 Shots per Game 13.0\n\n56 Average Possession (%) 51\n\n7.0 Chances Created per Game 8.0\n\nMAR\n\n### TEAM LEADERS\n\nSCO\n\nJohn McGinn\n\n1\n\nGoals\n\nIsmael Saibari\n\n1\n\nLyndon Dykes\n\n0\n\nAssists\n\nBrahim Diaz\n\n1\n\nBen Gannon-Doak\n\n1\n\nShots on Goal\n\nIsmael"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Scotland recent form and results",
+        "data": "\u2022 Scotland at the 2026 World Cup: Schedule, results, how to watch, news, analysis, injuries, more - ESPN\n  https://www.espn.com/soccer/story/_/id/48701669/scotland-world-cup-2026-schedule-fixtures-results-scores-group-c-how-watch-uk-news-analysis-injuries\n  World Cup 2026 Power Rankings after one game: U.S. cracks top 10, but who is No. 1? ... Mexico rejoice after sealing knockout spot. Now the real work begins ... All 48 teams in the World Cup have played once: It&#x27;s time to overreact! ... First week of World Cup betting brings record action at U.S. sportsbooks ... Scotland are back at the World Cup after a 28-year absence.\n\n\u2022 Reuters Scotland at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/scotland/\n  Scotland have never managed to get past the group stage at a World Cup or \u200cEuropean Championship in 12 previous attempts but could break that jinx after earning a scrappy <strong>1-0 win over Haiti</strong> in their Group C match at the global finals on Saturday.\n\n\u2022 Scotland at the 2026 World Cup: Schedule, results, how to ...\n  https://www.espn.co.uk/football/story/_/id/48701669/scotland-world-cup-2026-schedule-fixtures-results-scores-group-c-how-watch-uk-news-analysis-injuries\n  We cannot provide a description for this page right now\n\n\u2022 Scotland | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/scotland/fixtures\n  FIFA World Cup 2026\u2122 \u00b7 First Stage \u00b7 Group C \u00b7 Boston Stadium06/14/2026 \u00b7 Haiti \u00b7 Scotland \u00b7 FT \u00b7 0 \u00b7 1 \u00b7 Round of 32Round of 16Quarter-finalSemi-finalFinal \u00b7 M74 \u00b7 06/29/2026 \u00b7 20:30 \u00b7 1E \u00b7 3ABCDF \u00b7 M77 \u00b7 06/30/2026 \u00b7 21:00 \u00b7 1I \u00b7 3CDFGH \u00b7 M73 \u00b7\n\n\u2022 World Cup 2026 results: Scotland delighted and Australia stun | The Independent\n  https://www.independent.co.uk/bulletin/sport/did-scotland-win-last-night-world-cup-b2995382.html\n  Morocco and Brazil drew 1-1 in New Jersey earlier in the day which means Scotland top the group with three points going into the second fixture against AFCON champions at the same venue next Friday before travelling to Miami to face the Brazilians on June 24 and looking to qualify for the knockout stages for the first time. Australia provided the surprise result so far of the 2026 World Cup as they began their Group D campaign with a 2-0 win over Turkey in Vancouver."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Morocco recent form and results",
+        "data": "\u2022 Reuters Morocco at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/morocco/\n  Follow Morocco&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Morocco World Cup 2026 team guide | World Cup 2026 | The Guardian\n  https://www.theguardian.com/football/2026/may/30/morocco-world-cup-2026-team-guide\n  ... That switch means the Atlas Lions will not have much time to get used to the coach\u2019s tactics and philosophy. In late March, <strong>Morocco drew 1-1 against Ecuador and beat Paraguay 2-1</strong>, showing signs of improvement compared with their recent ...\n\n\u2022 Morocco | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/morocco/squad\n  Morocco | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Morocco squad at FIFA World Cup 2026\u2122.\n\n\u2022 2026 FIFA Men's World Cup: How Morocco can reach the Round of 32 - The Athletic\n  https://www.nytimes.com/athletic/interactive/fifa-mens-world-cup-2026-tracker/group-knockout-chances-country/morocco/\n  Morocco has an <strong>82% chance of making it to the Round of 32</strong> in the 2026 World Cup.\n\n\u2022 Morocco at FIFA World Cup 2026: All Players, Full Squad List, Key Stats and Schedule, Results\n  https://www.whereig.com/football/world-cup/morocco.html\n  Morocco announced themselves as a genuine force at Qatar 2022, becoming the first African nation ever to reach the semi-finals, and now carry those expectations into the 2026 World Cup with a squad built around that historic generation. This page covers the Atlas Lions&#x27; complete World Cup stats, records, top scorers, head-to-head results, the full 2026 squad, and their Group C schedule against Brazil, Haiti, and Scotland opening on June 13.\n\n\u2022 [Discussion] 2026 WC Morocco squad\n  https://www.reddit.com/r/soccer/comments/1tofl9w/2026_wc_morocco_squad/\n  At some point they stop being a dark horse and just become one of the best teams outside Europe and South America."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Scotland vs. Morocco: Head-to-head record and past meetings ahead of 2026 World Cup fixture - Sports Mole\n  https://www.sportsmole.co.uk/football/scotland/world-cup-2026/head-to-head/scotland-vs-morocco-head-to-head-record-and-past-meetings_599444.html\n  As it stands, <strong>Scotland are top of Group C, beating Haiti 1-0 in their tournament opener, while Morocco are second, having drawn 1-1 with Brazil last time out</strong>. Here, Sports Mole takes an in-depth look at the head-to-head record and previous meetings ...\n\n\u2022 Morocco vs. Scotland Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/morocco_vs_scotland.php\n  In the history of World Cups, Morocco National Team faced Scotland in 1 opportunity, with <strong>1 win, 0 draws and 0 lossess</strong>.\n\n\u2022 When did Scotland last play Morocco? Head to head record ahead of World Cup clash and latest odds\n  https://www.scotsman.com/sport/football/international/when-did-scotland-last-play-morocco-head-to-head-record-ahead-of-world-cup-clash-and-latest-odds-8748725\n  Scotland record against UEFA teams at the FIFA World Cup is as follows: ... <strong>Scotland have never beaten Morocco in a competitive game, or an international friendly, as the sides have only played each other once</strong>.\n\n\u2022 Scotland vs Morocco: All-time Head-to-head record ahead of FIFA World Cup 2026\n  https://khelnow.com/football/world-football-scotland-vs-morocco-head-to-head-fifa-world-cup-202606\n  Their only previous meeting came during the <strong>1998 FIFA World Cup, where Morocco registered a convincing victory</strong>. As a result, the Atlas Lions hold a perfect record against Scotland and will be looking to maintain that advantage when the two sides ...\n\n\u2022 Scotland vs Morocco Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-morocco-vs-scotland\n  Last 5 , <strong>Scotland Win 3 , Draw 0 , Lose 2 , Score Win Prob: 60.00% ,Asian Handicap Win%: 40.0% Total Goals Over%: 40.0%</strong> ... Last 5 , Morocco Win 3 , Draw 2 , Lose 0 , Score Win Prob: 60.00% ,Asian Handicap Win%: 80.0% Total Goals Over%: 60.0%\n\n\u2022 [Discussion] Match Thread: Scotland vs Morocco Live Score | World Cup 2026 | Jun 19, 2026\n  https://www.reddit.com/r/CasualUK/comments/1ua5vrf/match_thread_scotland_vs_morocco_live_score_world/\n  I know Scotland hate us but I'd be happy to see them win. Always need the chance of an easier tie next round\n\n\u2022 [Discussion] Morocco midfielder Ounahi expresses concern about Scotland match: \"More important and more difficult than against Brazil\"\n  https://www.reddit.com/r/Scotland/comments/1u9m0xx/morocco_midfielder_ounahi_expresses_concern_about/\n  This post has been tagged as Casual, which means that any comments relating to and/or mentioning politics will be removed by moderators. If the flair was chosen incorrectly, please delete the post and try again with a different flair. Thanks for your cooperation. I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.\n\n\u2022 [Discussion] Morocco's Ounahi : \"Scotland match is more difficult than Brazil\"\n  https://www.reddit.com/r/soccer/comments/1u9lw3j/moroccos_ounahi_scotland_match_is_more_difficult/\n  Steve Clarke about to show the world why he\u2019s the biggest football terrorist at this World Cup\n\n\u2022 [Discussion] When Scotland have to face Morocco next and then Brazil.\n  https://www.reddit.com/r/ThreeLions/comments/1u9ezzx/when_scotland_have_to_face_morocco_next_and_then/\n  I think their \"anyone but England\" thing is super cute and would love to see them do well to be fair. Like your annoying little brother haha.\n\n\u2022 [Discussion] Will Scotland Beat Morocco in Fridays World Cup Match?\n  https://www.reddit.com/r/worldcup/comments/1u901f9/will_scotland_beat_morocco_in_fridays_world_cup/\n  Hello! Thanks for your submission to r/worldcup , your post is up and running! A general reminder to check out our rules in the sidebar, have "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Scotland v Morocco: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021454\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group C</strong> \u2022 Match 30 \u00b7 Scotland \u00b7 22:00 \u00b7 Morocco \u00b7 Kick-off in: 0 days \u00b7 0 hrs \u00b7 31 min \u00b7 16 sec \u00b7 Scotland \u00b7 22:00 \u00b7 Morocco \u00b7 19 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Boston \u25cfBoston Stadium \u00b7 Where ...\n\n\u2022 2026 FIFA World Cup Group C - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_C\n  Despite Morocco registering 12 shots by the 30th minute, Brazil managed to strike back in the 32nd after Vin\u00edcius J\u00fanior received the ball inside the Morocco penalty area before cutting inside and striking a right-footed effort into the corner of the net to make it 1\u20131. Both sides had promising chances to win the game in the second half, including from Danilo Santos for Brazil and Ayoube Amaimouni for Morocco, however the match ultimately ended in a draw. ... The two teams had never met before. After both sides had previously managed to create promising opportunities in their opponents halves, Scott McTominay struck the post in the 16th minute for Scotland after being set up by Ben Gannon-Doak.\n\n\u2022 World Cup Group C standings 2026: Updated results, table and fixtures Brazil, Morocco, Scotland, Haiti | Sporting News\n  https://www.sportingnews.com/uk/football/news/world-cup-group-c-standings-results-table-2026-brazil/c79b62229f6707e1d2775b24\n  In the World Cup draw on December 5, five-time champions Brazil landed in <strong>Group C</strong> alongside Morocco, Haiti and Scotland. The four-team pod represented one of the more intriguing \u2014 and difficult \u2014 pairings crafted at the event.\n\n\u2022 Scotland Vs Morocco LIVE Score, FIFA World Cup 2026: McGinn Looks To Find Scoring Boots Yet Again | Outlook India\n  https://www.outlookindia.com/sports/football/scotland-vs-morocco-live-score-fifa-world-cup-2026-group-c-sco-vs-mar-updates-boston-stadium-highlights\n  Ultimately, Steve Clarke&#x27;s side stood firm to secure three vital points, moving them to the top of <strong>Group C</strong> and keeping their knockout stage ambitions firmly in their own hands. ... Morocco opened their 2026 FIFA World Cup campaign with a gritty ...\n\n\u2022 Scotland vs Morocco live updates: World Cup 2026 game latest news and buildup - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/scotland-vs-morocco-live-updates-world-cup-2026-score-result/91XXKVvHrEtX/\n  At the end of the group stage, <strong>the top two teams in each group will automatically progress to the knockouts \u2014 as well as the eight third-placed teams with the best group record</strong>.\n\n\u2022 [Discussion] Match Thread: Scotland vs Morocco Live Score | World Cup 2026 | Jun 19, 2026\n  https://www.reddit.com/r/CasualUK/comments/1ua5vrf/match_thread_scotland_vs_morocco_live_score_world/\n  I know Scotland hate us but I'd be happy to see them win. Always need the chance of an easier tie next round"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Scrapes the live tournament group standings page to extract precise mathematical progression scenarios for both teams.",
+        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n20.06. [Scotland - Morocco](https://www.soccerway.com/match/morocco-IDKYO3R8/scotland-fZRU25WH/), [Brazil - Haiti](https://www.soccerway.com/match/brazil-I9l9aqLq/haiti-nk4v10Z1/), [Turkey - Paraguay](https://www.soccerway.com/match/paraguay-YaNlqp6j/turkey-QeijuHo5/), [Netherlands - Sweden](https://www.soccerway.com/match/netherlands-WYintcWb/sweden-OQyqbHWB/), [Germany - Ivory Coast](https://www.soccerway.com/match/germany-ptQide1O/ivory-coast-G2FRjBgn/), 21.06. [Ecuador - Curacao](https://www.soccerway.com/match/curacao-bLLGpOkQ/ecuador-8tbm8Tri/), [Tunisia - Japan](https://www.soccerway.com/match/japan-ULXPdOUj/tunisia-QqZVYk95/), [Spain - Saudi Arabia](https://www.soccerway.com/match/saudi-arabia-biSY8ox4/spain-bLyo6mco/), [Belgium - Iran](https://www.soccerway.com/match/belgium-GbB957na/iran-xrRx85iA/), 22.06. [Uruguay - Cape Verde](https://www.soccerway.com/match/cape-verde-MocyWdm7/uruguay-xMk44orG/), [New Zealand - Egyp"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies Scotland's projected starting striker and the physical/aerial matchup against Morocco's central defense.",
+        "data": "\u2022 Scotland vs. Morocco projected lineups, starting 11 for World Cup 2026 Group C game at Gillette Stadium | Sporting News\n  https://www.sportingnews.com/us/soccer/news/scotland-vs-morocco-lineups-starting-11-world-cup-2026-group-c/31c73e734beb77e708babfe5\n  If Christie starts, Clarke may opt for a more midfield-heavy setup, leaving Che Adams as the lone striker. John McGinn&#x27;s winner against Haiti should ensure he keeps his place, while Ben Gannon-Doak&#x27;s pace and direct running remain key weapons as Scotland target a result that would move them closer to the knockout stage. (4-3-3, right to left): 1. Y. Bounou (GK) \u2014 2. A. Hakimi, 18. N. Aguerd, 5.\n\n\u2022 Scotland vs. Morocco line-ups: World Cup 2026 predicted XIs - ESPN\n  https://www.espn.com/soccer/story/_/id/49107538/scotland-morocco-line-ups-world-cup-predicted-xis\n  Predicted line-up: <strong>Angus Gunn, Grant Hanley, Jack Hendry, Aaron Hickey, Andy Robertson, Ryan Christie, Lewis Ferguson, Ben Gannon-Doak, John McGinn, Scott McTominay, Ch\u00e9 Adams</strong>.\n\n\u2022 Scotland XI vs Morocco: Starting lineup, confirmed team news, injury latest for World Cup today | The Standard\n  https://www.standard.co.uk/sport/football/scotland-xi-vs-morocco-starting-lineup-confirmed-team-news-injury-latest-world-cup-2026-today-b1286736.html\n  <strong>He has switched to a more adventurous 4-4-2 shape in recent weeks and months, incorporating the prolific Lawrence Shankland into his attack to partner Che Adams</strong>.\n\n\u2022 Scotland vs. Morocco\u2014World Cup: Preview, Predictions and Lineups\n  https://www.si.com/soccer/scotland-vs-morocco-world-cup-preview-predictions-lineups-6-19-26\n  The way to do that would be to <strong>sacrifice one striker\u2014Lawrence Shankland or Ch\u00e9 Adams\u2014in order to include an extra midfielder to even up the numbers</strong>.\n\n\u2022 Scotland vs Morocco | June 19, 2026 | Lineups, Kick-off Time & Live Score\n  https://worldcuplocaltime.com/match/scotland-morocco-2026-06-19/\n  Angus Gunn; Aaron Hickey, Jack Hendry, Grant Hanley, Andrew Robertson; Ben Gannon-Doak, Lewis Ferguson, Scott McTominay, John McGinn; Che Adams, Lawrence Shankland."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Retrieves analytical and statistical reviews of Matchday 1 performances, focusing on underlying performance metrics like npxG.",
+        "data": "\u2022 Scotland vs. Morocco Prediction, Picks, Lineups for World Cup 2026\n  https://www.prizepicks.com/playbook-article/scotland-vs-morocco-prediction-picks-lineups-world-cup-2026\n  Find our Scotland vs. Morocco prediction and World Cup 2026 picks, including lineups, payouts, total goals, spread, player picks, and how to watch.\n\n\u2022 We simulated Scotland vs Morocco on EA FC 26 to predict exact World Cup score - The Mirror\n  https://www.mirror.co.uk/gaming/scotland-morocco-world-cup-simulated-37318626\n  Expected Goals (xG): <strong>2.3.</strong>\n\n\u2022 Scotland v Morocco: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021454\n  First Stage, Boston Stadium, 2026-06-19T18:00:00Z\n\n\u2022 Scotland vs. Morocco (Jun 19, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760445/morocco-scotland\n  Live coverage of the Scotland vs. Morocco Fifa World Cup game on ESPN, including live score, highlights and updated stats.\n\n\u2022 Scotland vs Morocco: World Cup 2026 Betting Preview\n  https://www.compare.bet/news/scotland-vs-morocco-betting-preview-predictions-tips-and-live-odds\n  Scotland: Steve Clarke\u2019s men arrive with three points banked after a 1-0 opening win, a crucial result in a group where margins look slim. Their underlying numbers\u2014an <strong>xG of 1.52</strong> and a shot accuracy of just 16.67%\u2014point to a side that maximises ..."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Leverages Swerver's fast headless search to capture the most recent local team news, late fitness tests, and venue pitch/weather conditions.",
+        "data": "\u2022 Morocco present different physical issue for Scotland says Strachan\n  https://www.facebook.com/ScottishSunSport/posts/morocco-present-different-physical-issue-for-scotland-says-strachan-/1438993228270463/\n  Morocco present different physical issue for Scotland says Strachan.\n\n\u2022 Sofyan Amrabat - Soccer News, Rumors, & Updates | FOX Sports\n  https://www.foxsports.com/soccer/sofyan-amrabat-player\n  Impact Amrabat is still dealing with a foot injury and won't be available for the time being. The midfielder has been a regular starter under coach Manuel ...\n\n\u2022 Injured Man United midfielder Sofyan Amrabat pulls out of Morocco ...\n  https://apnews.com/article/man-united-amrabat-injury-morocco-099d707357491aca05965bfd371ee30d\n  Manchester United midfielder Sofyan Amrabat pulled out of Morocco's upcoming international games because of injury, the Premier League club said Friday.\n\n\u2022 Scotland vs. Morocco line-ups: World Cup 2026 predicted XIs - ESPN\n  https://www.espn.com/football/story/_/id/49107538/scotland-morocco-line-ups-world-cup-predicted-xis\n  Scotland will be seeking to build on their 1-0 over Haiti -- their first win in a World Cup match since 1990 -- when they take on Morocco at ...\n\n\u2022 Scotland XI vs Morocco: Predicted lineup and confirmed team news\n  https://www.standard.co.uk/sport/football/scotland-xi-vs-morocco-predicted-lineup-confirmed-team-news-injury-latest-world-cup-2026-today-b1286736.html\n  Scotland have one injury concern going into their huge World Cup encounter with Morocco today. Steve Clarke is likely to be without defender ..."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Uses GDELT News Intelligence to find recent news articles discussing the psychological weight and historical narratives of the 1998 matchup.",
+        "data": "{\"topic\":\"Scotland Morocco 1998 World Cup history media narrative\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides real-time injury status on Robertson and tactical previews of his matchup against Hakimi and Diaz on Scotland's left flank.",
+        "data": "\u2022 Scotland vs. Morocco projected lineups, starting 11 for World Cup 2026 Group C game at Gillette Stadium - sportingnews.com\n  https://www.sportingnews.com/in/football/news/scotland-vs-morocco-lineups-starting-11-world-cup-2026-group-c/31c73e734beb77e708babfe5\n  If Christie starts, Clarke may opt for a more midfield-heavy setup, leaving Che Adams as the lone striker. John McGinn's winner against Haiti should ensure he keeps his place, while Ben Gannon-Doak's pace and direct running remain key weapons as Scotland target a result that would move them closer to the knockout stage.\n\n## Morocco projected starting 11\n\n(4-3-3, right to left): 1. Y. Bounou (GK) \u2014 2. A. Hakimi, 18. N. Aguerd, 5. C. Riad, 3. N. Mazraoui \u2014 8. A. Bouaddi, 6. N. El Aynaoui, 15. A. Ounahi \u2014 10. B. Diaz, 11. I. Saibari, 23. B. El Khannouss\n\nInjured: None  \nSuspended: None [...] ## S\n\n\u2022 World Cup 2026: England & Scotland Rankings after first group stage games - BBC\n  https://www.bbc.com/sport/football/live/cx2w5xw35wkt\n  \"It\u2019s up to us to be at our best and its up to us to do as the game plan says and if we can do that, then we get the point or the three points to make history.\"\n\n   Share page\n\n   About sharing\n8. ### Hakimi 'best full back in world'published at 18:05 BST 18:05 BST\n\n   Scotland v Morocco (Fri, 23:00 BST)\n\n   Scotland\n\n   Scotland captain, Andy Robertson on coming up against Morocco's Achraf Hakimi:\n\n   \"I think he\u2019s the best full back in the world at the minute. Him and Nuno Mendes at PSG.\n\n   \"We\u2019ve played against them twice in the last two years in the Champions League and they are both phen\n\n\u2022 Scotland vs Morocco Prediction: Morocco's control meets Scotland's set pieces - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/scotland-vs-morocco-match-prediction-19-june-2026/\n  On 13 June 2026, Morocco drew 1-1 with Brazil at New York/New Jersey Stadium after Ismael Saibari put Mohamed Ouahbi's side in front from a Brahim Diaz assist. Morocco started strongly in that match, and Saibari is expected to keep the starting role against Scotland on 19 June at Boston Stadium in Foxborough. Ouahbi's projected 4-2-3-1 has Yassine Bounou behind Achraf Hakimi, Issa Diop, Chadi Riad and Noussair Mazraoui, with Neil El Aynaoui and Ayyoub Bouaddi listed in midfield. The attacking line in the possible XI is Brahim Diaz, Azzedine Ounahi, Bilal El Khannouss and Saibari, and Morocco h\n\n\u2022 Scotland vs. Morocco Prediction: 2026 FIFA World Cup Preview and Pick - VSiN\n  https://vsin.com/soccer/scotland-vs-morocco-prediction-2026-fifa-world-cup-preview-and-pick/\n  - Opta AI NBA Prop Projections\n    - NBA Injury Report\n    - Daily Matchup Ratings\n    - Makinen NBA Power Ratings\n    - NBA Prop Bet Analyzer\n    - Team Bets Analyzer\n    - NBA Referee Analyzer\n    - NBA Betting Strategies\n  + NHL\n    - Vegas NHL Odds\n    - Today\u2019s NHL Games\n    - NHL Injury Report\n    - Makinen Power Ratings\n  + College Basketball\n    - Vegas CBB Odds\n    - Daily CBB Betting Picks\n    - Today\u2019s CBB Games\n    - Daily Matchup Ratings\n    - Greg Peterson\u2019s Daily Lines\n    - Makinen Power Ratings\n    - Circa College Hoops\n    - CBB Team Analyzer\n  + MLB\n    - Today\u2019s MLB Games\n \n\n\u2022 Scotland vs. Morocco - Live Score - June 19, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-scotland-vs-morocco-jun-19-2026-game-boxscore-647646\n  MAR\n\n|  |  |  |\n --- \n| 6/13 | BRA | D1-1 |\n| 6/7 | NOR (H) | D1-1 |\n| 6/2 | MAD (H) | W4-0 |\n| 5/26 | BDI (H) | W5-0 |\n| 3/31 | PAR (H) | W2-1 |\n\n### TEAM STATS\n\nSCO\n\n1.0 Goals per Game 1.0\n\n1.2 Expected Goals (xG) per Game 1.4\n\n0.0 Goals Against per Game 1.0\n\n8.0 Shots per Game 13.0\n\n56 Average Possession (%) 51\n\n7.0 Chances Created per Game 8.0\n\nMAR\n\n### TEAM LEADERS\n\nSCO\n\nJohn McGinn\n\n1\n\nGoals\n\nIsmael Saibari\n\n1\n\nLyndon Dykes\n\n0\n\nAssists\n\nBrahim Diaz\n\n1\n\nBen Gannon-Doak\n\n1\n\nShots on Goal\n\nIsmael Saibari\n\n1\n\nChe Adams\n\n0.5\n\nExpected Goals (xG)\n\nIsmael Saibari\n\n0.5\n\nLewis Ferguson\n\n6.4\n\nRati"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Extracts detailed tactical analysis from recent team previews regarding Steve Clarke's defensive structure and how Morocco intends to track McTominay's deep runs.",
+        "data": "\u2022 Scotland vs. Morocco Prediction: 2026 FIFA World Cup Preview and Pick - VSiN\n  https://vsin.com/soccer/scotland-vs-morocco-prediction-2026-fifa-world-cup-preview-and-pick/\n  Morocco was, in my opinion, the better side in the first half, deservedly took the lead through Ismael Saibari, and showed the same tactical discipline that has become their trademark on the international stage. They play with a compact shape, have an athletic back line, and can limit quality chances, making them a really tough team to break down.\n\nGame state also favors the wager. Scotland already has three points and knows a tie would put them in a strong position to qualify for the knockout stages heading into a final match against Brazil.\n\nExpect Steve Clarke to prioritize defensive organi\n\n\u2022 Scotland at World Cup: Steve Clarke says his side are more comfortable as underdogs ahead of Morocco match - Sky Sports\n  https://www.skysports.com/football/news/12017/13555452/scotland-at-world-cup-steve-clarke-says-his-side-are-more-comfortable-as-underdogs-ahead-of-morocco-match\n  \"Morocco reached the last four of the World Cup in Qatar. This Morocco side is every bit as good, if not better. They'll have aspirations of reaching the last four again. It's a big challenge for us.\"\n\nThe Scotland boss has repeatedly stressed the quality of Mohamed Ouahbi's side and expects his players to be tested both in and out of possession.\n\n\"Any time you play a team that's inside the world's top 10, you know you're going to have to be good in what you do both without the ball and with the ball. We're under no illusion about the size of the task.\n\n\"I feel Morocco are a really good side.\"\n\n\u2022 Scotland vs. Morocco projected lineups, starting 11 for World Cup 2026 Group C game at Gillette Stadium - sportingnews.com\n  https://www.sportingnews.com/in/football/news/scotland-vs-morocco-lineups-starting-11-world-cup-2026-group-c/31c73e734beb77e708babfe5\n  ## Scotland projected starting 11\n\n(4-2-3-1, right to left): 1. A. Gunn (GK) \u2014 2. A. Hickey, 13. J. Hendry, 5. G. Hanley, 3. A. Robertson \u2014 8. R. Christie, 19. L. Ferguson \u2014 17. B. Gannon-Doak, 7. J. McGinn, 4. S. McTominay \u2014 10. C. Adams\n\nInjured: S. McKenna (calf)  \nSuspended: None\n\nScotland could make one notable change from the side that beat Haiti on matchday one, with Ryan Christie potentially coming into midfield as Steve Clarke looks to match Morocco's technical quality. [...] | MID | 23 | Kenny McLean | Norwich City (Championship, England) | 34 | 56 |\n| MID | 4 | Scott McTominay | Nap\n\n\u2022 Scotland vs Morocco Prediction: Morocco's control meets Scotland's set pieces - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/scotland-vs-morocco-match-prediction-19-june-2026/\n  Scotland beat Haiti 1-0 at Boston Stadium in their opener, with John McGinn the matchwinner and Aaron Hickey and Findlay Curtis booked. That left Steve Clarke's side top of Group C on 3 points after one game, with 1 goal scored and 0 conceded, and it was Scotland's first men's World Cup win since 1990. The Haiti performance was described as scrappy, and Clarke said on 14 June that Morocco and Brazil require \u201ca different approach\u201d after praising the resilience and character in the 1-0 win. The possible XI keeps Angus Gunn behind Aaron Hickey, Jack Hendry, Grant Hanley and Andy Robertson in a 4-\n\n\u2022 Scotland vs. Morocco line-ups: World Cup 2026 predicted XIs - ESPN\n  https://www.espn.com/soccer/story/_/id/49107538/scotland-morocco-line-ups-world-cup-predicted-xis\n  It is possible that Clarke decides to go for a back three and a 3-5-1-1 formation, in which case Kieran Tierney would likely come in and Gannon-Doak may miss out.\n\nMorocco will surely be one of the sternest tests Scotland will face in their group games, along with Brazil, and Clarke will need to pick the team he feels can get a result against the team ranked the 11th best in the world by FIFA. -- by Hannah Ryan [...] - Full hearts, empty kegs, can't lose: Scotlan"
+      }
+    ],
+    "research_cost": 0.118,
+    "wallet_before": 1.19,
+    "wallet_after": 1.072,
+    "prediction": {
+      "pick": "draw",
+      "confidence": 6,
+      "confidence_reason": "Scotland's strong motivation to secure a point for progression combined with Morocco's midfield adjustment due to Amrabat's absence elevates the likelihood of a tactical stalemate.",
+      "reasoning": "Scotland's defensive setup and desire for a qualifying point will likely neutralize Morocco's superior technical quality, resulting in a closely contested draw.",
+      "probabilities": {
+        "home": 20,
+        "draw": 42,
+        "away": 38
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Scotland secured a scrappy 1-0 victory over Haiti in their opening match, marking their first World Cup win since 1990.",
+      "away_form": "Morocco earned an impressive 1-1 draw against Brazil, taking the lead through Ismael Saibari and demonstrating excellent tactical discipline.",
+      "key_injuries": [
+        "Scotland: Scott McKenna (calf injury, highly doubtful)",
+        "Scotland: Kieran Tierney (hamstring recovery, doubtful)",
+        "Morocco: Sofyan Amrabat (foot injury, unavailable)"
+      ],
+      "tactical_matchup": "Morocco's technical midfield and possession dominance will test Scotland's defensive block, with Morocco holding the structural edge due to their superior athletic backline and creative outlets like Achraf Hakimi and Brahim Diaz.",
+      "group_stakes": "Scotland can put one foot in the knockout stages with a draw, whereas Morocco needs a victory to capitalize on their opening draw against Brazil before facing Haiti.",
+      "home_win_signals": [
+        "John McGinn's clinical form and knack for scoring crucial goals from midfield.",
+        "Ben Gannon-Doak's direct running and pace to exploit Morocco on the counter-attack.",
+        "Scotland's strength in set-piece situations to bypass Morocco's possession control."
+      ],
+      "away_win_signals": [
+        "Morocco's technical superiority in midfield with Ounahi, El Aynaoui, and Bouaddi expected to dominate possession.",
+        "The attacking threat of Brahim Diaz and Ismael Saibari, who combined effectively against Brazil.",
+        "Achraf Hakimi's world-class ability to create overloads from the right flank."
+      ],
+      "draw_signals": [
+        "Steve Clarke is highly likely to prioritize defensive organization and play for a point, knowing 4 points virtually guarantees progression.",
+        "Morocco's compact defensive shape and athletic backline make them exceptionally difficult to break down.",
+        "Scotland's proven defensive resilience, having kept a clean sheet against Haiti."
+      ],
+      "contradictions": [
+        "Reports conflict on Scotland's shape, with some suggesting an adventurous 4-4-2 partnership of Adams and Shankland, while others predict Clarke will sacrifice a striker for a defensive 4-2-3-1 or 3-5-1-1 to match Morocco's midfield."
+      ],
+      "strategy_applied": [
+        "No direct strategy rules apply to SCO vs MAR, but the 'BRA vs MAR: Defense over attack' rule highlights Morocco's compact, defensive-first nature in this group."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting Scotland's defensive resilience based on a clean sheet against Haiti, who represent a significantly lower tier of opposition than Morocco.",
+        "Assuming Morocco will easily dominate possession and transition without acknowledging how the absence of their key midfield anchor, Sofyan Amrabat, impacts their structural stability."
+      ],
+      "underweighted_factors": [
+        "Scotland's critical defensive injuries to Scott McKenna and Kieran Tierney, which severely compromise their ability to execute a reliable low-block or back-three system.",
+        "The asymmetry in urgency, where Morocco is highly incentivized to chase a win to capitalize on their Brazil draw, while Scotland may become overly passive playing for a point."
+      ],
+      "draw_risk": "high \u2014 Scotland's clear motivation to play for a single point to secure progression, combined with Morocco's compact defensive nature and the loss of Amrabat, heavily favors a low-scoring, stalemated affair",
+      "favorite": "away",
+      "confidence_cap": 6,
+      "verdict": "Morocco holds the technical and athletic edge, but Scotland's defensive injuries coupled with Amrabat's absence for Morocco point toward a cagey, high-risk draw."
+    },
+    "full_reasoning": "HOME_PCT: 20\nDRAW_PCT: 42\nAWAY_PCT: 38\nPICK: draw\nCONFIDENCE: 6\nCONFIDENCE_REASON: Scotland's strong motivation to secure a point for progression combined with Morocco's midfield adjustment due to Amrabat's absence elevates the likelihood of a tactical stalemate.\nREASONING: Scotland's defensive setup and desire for a qualifying point will likely neutralize Morocco's superior technical quality, resulting in a closely contested draw.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
