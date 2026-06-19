@@ -24,14 +24,18 @@
 - SUI vs BIH: Squad over venue.
 - CAN vs QAT: Turf over counter.
 - MEX vs KOR: Opponent transition inefficiency over passive defense.
+- USA vs AUS: Tactical pressing over low-block stability.
 
 ## Data sources
 - use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — squad (SUI vs BIH)
 - use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — vulnerability (CAN vs QAT)
 - use: Venue (https://websearch--gw.swerver.net/search) — turf (CAN vs QAT)
 - use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — efficiency (MEX vs KOR)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — pressing triggers (USA vs AUS)
 - skip: Previews (https://news-x402.com/news/recent) — venue (SUI vs BIH)
 - skip: Metrics (https://skim402.com/api/v2/read) — history (SUI vs BIH)
 - skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — counters (CAN vs QAT)
 - skip: Venue (https://websearch--gw.swerver.net/search) — climate (MEX vs KOR)
 - skip: Previews (https://news-x402.com/news/recent) — sentiment (MEX vs KOR)
+- skip: Venue (https://websearch--gw.swerver.net/search) — microclimate (USA vs AUS)
+- skip: Previews (https://news-x402.com/news/recent) — physical profiling (USA vs AUS)

@@ -8115,9 +8115,15 @@
     },
     "full_reasoning": "HOME_PCT: 35\nDRAW_PCT: 40\nAWAY_PCT: 25\nPICK: draw\nCONFIDENCE: 4\nCONFIDENCE_REASON: Confidence is capped at 4 due to the high likelihood of a tactical stalemate given Pulisic's absence and both teams' strong group positions.\nREASONING: The USA's attack will struggle to break down Australia's disciplined low-block without the injured Christian Pulisic, making a low-scoring draw highly beneficial for both teams' qualification hopes.",
     "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 2,
+      "away_score": 0,
+      "winner": "home"
+    },
+    "correct": false,
+    "evaluation": "MISTAKE:\n- The prediction incorrectly backed a draw based on the assumption that the USA would fail to score without Pulisic.\n- I overestimated the defensive stability of Australia's low-block and underestimated Pochettino's tactical pressing scheme.\nDATA:\n- useful: https://api.signalfuse.co/v1/gateway/search/tavily \u2014 Revealed Pochettino's pressing triggers which successfully disrupted Australia's build-up and generated the goals.\n- useless: https://websearch--gw.swerver.net/search \u2014 Microclimate and playing surface conditions had zero impact on the tactical outcome.\n- useless: https://news-x402.com/news/recent \u2014 Historical physical profiling did not account for Australia's immediate structural breakdown under pressure.",
+    "reflected": true,
+    "reflected_at": "2026-06-19T21:30:31.866076+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (SUI vs BIH)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 vulnerability (CAN vs QAT)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 turf (CAN vs QAT)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 efficiency (MEX vs KOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 pressing triggers (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 venue (SUI vs BIH)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (SUI vs BIH)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 counters (CAN vs QAT)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (MEX vs KOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (MEX vs KOR)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 physical profiling (USA vs AUS)"
   }
 ]
