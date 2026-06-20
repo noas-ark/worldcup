@@ -27,9 +27,9 @@
 - USA vs AUS: Tactical pressing over low-block stability.
 - SCO vs MAR: Technical quality over defensive motivation.
 - BRA vs HAI: Winger breakthrough over low-block.
+- TUR vs PAR: Defensive block over midfield quality.
 
 ## Data sources
-- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — defensive structure (BRA vs HAI)
-- skip: Venue (https://websearch--gw.swerver.net/search) — climate (BRA vs HAI)
-- skip: Metrics (https://skim402.com/api/v2/read) — history (BRA vs HAI)
-- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — fitness (BRA vs HAI)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — defensive structure (TUR vs PAR)
+- skip: Venue (https://websearch--gw.swerver.net/search) — travel and pitch (TUR vs PAR)
+- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — individual fitness (TUR vs PAR)
