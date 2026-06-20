@@ -9894,5 +9894,326 @@
     "reflected": true,
     "reflected_at": "2026-06-20T22:30:20.754589+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 lateral mobility and injury data (GER vs CIV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 physical fatigue projections (GER vs CIV)\n- skip: Historical (https://skim402.com/api/v2/read) \u2014 outdated European records (GER vs CIV)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 general head-to-head history (GER vs CIV)"
+  },
+  {
+    "match": "ECU vs CUW",
+    "home": "ECU",
+    "away": "CUW",
+    "kickoff": "2026-06-21T00:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 lateral mobility and injury data (GER vs CIV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 physical fatigue projections (GER vs CIV)\n- skip: Historical (https://skim402.com/api/v2/read) \u2014 outdated European records (GER vs CIV)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 general head-to-head history (GER vs CIV)",
+    "information_needs": "FORM\n- How did Ecuador's defensive unit perform in the final stretch of the CONMEBOL World Cup Qualifiers, and did they sustain their reputation for keeping clean sheets against lower-ranked opposition?\n- What was Cura\u00e7ao's run of form in the final rounds of CONCACAF qualification, and did their results rely on defensive low-blocks or high-scoring transition play?\n\nPLAYERS\n- Is Ecuador's midfield anchor Mois\u00e9s Caicedo fully fit and available, or is he carrying fatigue or disciplinary suspensions heading into this match?\n- Which Dutch-based dual-national players have committed to Cura\u00e7ao's squad for this tournament, and are their key creative outlets like Juninho Bacuna in peak physical condition?\n\nTACTICS\n- How does Ecuador's high-pressing, intense physical style under their coaching staff match up against Cura\u00e7ao's preference for Dutch-style possession and building out from the back?\n- Can Cura\u00e7ao's defensive mid-block successfully nullify Ecuador's dynamic wing play and overlapping runs from fullbacks like Pervis Estupi\u00f1\u00e1n?\n\nH2H\n- Have these two nations met in any recent friendly matches or played common CONCACAF opponents (e.g., Costa Rica, Panama) during the 2024\u20132026 cycle that provide a tactical blueprint?\n\nCONTEXT\n- Given this is a 2026 World Cup Group Stage fixture, what do the group standings dictate? Does Ecuador need a high-margin victory to secure a goal-difference advantage over the group's top seed?\n\nMARKET\n- What is the current Asian Handicap line, and does the Over/Under market imply a heavily lopsided, high-scoring Ecuadorian victory or a frustrating, low-scoring affair?\n\nNEWS\n- Are there any late-breaking injury updates, camp illnesses, or internal squad disruptions reported from either the Ecuadorian or Cura\u00e7aoan training camps?\n\nVENUE\n- Which North American host city is staging this match, and will the local climate (such as extreme summer humidity in the US South or high altitude in Mexico) favor Ecuador's acclimatized squad over Cura\u00e7ao's European-based players?",
+    "research_gaps": [
+      {
+        "need": "What is the current Asian Handicap line, and does the Over/Under market imply a heavily lopsided, high-scoring Ecuadorian victory or a frustrating, low-scoring affair?",
+        "category": "MARKET",
+        "ideal_service": "A real-time sports betting odds aggregator API providing Asian Handicap, 1X2, and Over/Under lines for World Cup matches."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Ecuador vs Cura\u00e7ao World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Ecuador vs Cura\u00e7ao World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ecuador World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Ecuador recent form and results",
+        "need": "How has Ecuador performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Cura\u00e7ao World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Cura\u00e7ao recent form and results",
+        "need": "How has Cura\u00e7ao performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ecuador vs Cura\u00e7ao head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ecuador vs Cura\u00e7ao World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ecuador defensive form clean sheets CONMEBOL World Cup Qualifiers 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Retrieves recent match analysis and defensive stats for Ecuador in CONMEBOL qualification.",
+        "need": "How did Ecuador's defensive unit perform in the final stretch of the CONMEBOL World Cup Qualifiers, and did they sustain their reputation for keeping clean sheets against lower-ranked opposition?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Curacao national team tactical analysis defensive mid block possession style",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Provides tactical breakdowns of Cura\u00e7ao's defensive structure and possession-based build-up play.",
+        "need": "Can Cura\u00e7ao's defensive mid-block successfully nullify Ecuador's dynamic wing play and overlapping runs from fullbacks like Pervis Estupi\u00f1\u00e1n?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Ecuador vs Curacao World Cup 2026 match venue stadium climate altitude",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Determines the exact match location, altitude, and expected weather conditions to analyze environmental advantages.",
+        "need": "Which North American host city is staging this match, and will the local climate favor Ecuador's acclimatized squad over Cura\u00e7ao's European-based players?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Ecuador World Cup 2026 group stage goal difference standings",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Scans recent news reports for group permutation analysis, highlighting whether Ecuador needs to chase goals.",
+        "need": "Given this is a 2026 World Cup Group Stage fixture, what do the group standings dictate? Does Ecuador need a high-margin victory to secure a goal-difference advantage over the group's top seed?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Moises Caicedo Ecuador World Cup 2026 fitness injury suspension",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides the latest injury, fatigue, and disciplinary updates on Ecuador's key midfielder Mois\u00e9s Caicedo.",
+        "need": "Is Ecuador's midfield anchor Mois\u00e9s Caicedo fully fit and available, or is he carrying fatigue or disciplinary suspensions heading into this match?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Curacao World Cup 2026 squad Dutch dual nationals Juninho Bacuna fitness",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Identifies dual-national call-ups for Cura\u00e7ao and provides physical condition reports on key players like Juninho Bacuna.",
+        "need": "Which Dutch-based dual-national players have committed to Cura\u00e7ao's squad, and are their key creative outlets like Juninho Bacuna in peak physical condition?",
+        "category": "PLAYERS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Ecuador vs Curacao: Prediction & Betting Tips for the Match on 21 June 2026 - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/ecuador-vs-curacao-prediction-and-betting-tips-for-the-world-cup-match-21-june-2026/\n  ### Ecuador: Lineup\n\nEcuador do not have any fresh injury report heading into this game. Alan Minda didn\u2019t have the best of the first game and might find himself dropped from the bench here. With this, we can set up with Hernan Galindez at the goalpost, Willian Pacho, and Joel Ordonez in the heart of the defence. Enner Valencia is expected to start from the attack.\n\nEcuador Expected IX: Hernan Galindez (GK), Angelo Preciado, Willian Pacho, Joel Ordonez, Piero Hincapie, Moises Caicedo, Alan Franco, John Yeboah, Pedro Vite, Gonzalo Plata, Enner Valencia.\n\n## Curacao [...] Ecuador and Curacao wil\n\n\u2022 Ecuador vs Curacao at FIFA World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN\n  https://www.espn.com/soccer/story/_/id/49108038/ecuador-curacao-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  ### A chance for Enner Valencia and co. to find the target\n\nAgainst Ivory Coast, Ecuador gave as good as they got. Having come into the World Cup with the reputation (and track record) of being a stingy team that builds its success on 1-0s, they played expansive football for much of their World Cup opener. Creating 1.01 xG, they took 12 shots, three of which slammed off the woodwork. Enner Valencia, their talismanic captain, may be 36 but he looked as sharp as ever and will want to add to his tally of three World Cup goals against a Curacao side that was ripped apart by Germany in their opener\n\n\u2022 Ecuador vs. Curacao - Live Score - June 20, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-ecuador-vs-curacao-jun-20-2026-game-boxscore-647650\n  -806\n\nECU\n\n+1925\n\nCUW\n\nOVER/UNDER 2.5 GOALS\n\nThe combined final score of both teams is set at 2.5\n\n-173\n\nOVER 2.5\n\n+136\n\nUNDER 2.5\n\n### Preview\n\n### Ecuador vs. Curacao: How to Watch, TV Channel, Live Stream, Time\n\nLearn which TV channel or how to live stream the Ecuador and Curacao FIFA World Cup match. \n\n4 HOURS AGO \u2022 FOX SPORTS\n\n### Germany, Netherlands, Japan Among Top World Cup Teams In Action On Match Day 10\n\nAmong the teams that are in action on Saturday include numerous contender teams, including Germany, the Netherlands and Japan. \n\n11 HOURS AGO \u2022 FOX SPORTS\n\nPOWERED BY\n\nKansas City, \n\n\u2022 Where to watch Ecuador vs. Curacao live stream, TV channel, start time for World Cup Group E match - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/watch-ecuador-vs-curacao-live-stream-channel-time-world-cup/01d330f9aa5e6a3674269060\n  # Where to watch Ecuador vs. Curacao live stream, TV channel, start time for World Cup Group E match\n\nDaniel Mader\n\n\u2022\n\n Add The Sporting News on Google \n\nThe action continues at World Cup 2026 on Saturday night as Ecuador and Curacao meet in Kansas City.\n\nIt will be the second Group E matchup of the tournament for both teams, with Ecuador seeking to advance past the group stage for the first time since 2016, while Curacao is making its World Cup debut, qualifying for the first time ever.\n\nSTREAM: Every World Cup 2026 match, including Ecuador vs. Curacao, LIVE on fubo (free trial)\n\nWith Group E\n\n\u2022 Ecuador vs. Cura\u00e7ao live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/20/sports/ecuador-vs-curacao-live-updates-world-cup-2026-score-news-and-highlights/\n  Email\n\nNew York Post\n\nSwitch between CA and NY editions here.\n\nEdition\n\n Sports\n Sports Plus\n Sports Betting\n Columnists\n NFL\n MLB\n NBA\n NHL\n NCAAB\n WNBA\n NWSL\n PWHL\n NCAAF\n Sports Entertainment\n Golf\n Tennis\n Wrestling\n MMA\n Soccer\n Olympics\n\n Soccer\n Scores\n Stats\n Standings\n Teams\n Players\n\n#### Recommended\n\nSoccer \n\nlive\n\n# Ecuador vs. Cura\u00e7ao live updates: World Cup 2026 score, news and highlights\n\nBy\n\n"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Ecuador vs Curacao: Prediction & Betting Tips for the Match on 21 June 2026 - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/ecuador-vs-curacao-prediction-and-betting-tips-for-the-world-cup-match-21-june-2026/\n  ### Ecuador: Lineup\n\nEcuador do not have any fresh injury report heading into this game. Alan Minda didn\u2019t have the best of the first game and might find himself dropped from the bench here. With this, we can set up with Hernan Galindez at the goalpost, Willian Pacho, and Joel Ordonez in the heart of the defence. Enner Valencia is expected to start from the attack.\n\nEcuador Expected IX: Hernan Galindez (GK), Angelo Preciado, Willian Pacho, Joel Ordonez, Piero Hincapie, Moises Caicedo, Alan Franco, John Yeboah, Pedro Vite, Gonzalo Plata, Enner Valencia.\n\n## Curacao [...] ## Curacao\n\nCuracao suf\n\n\u2022 Ecuador vs. Curacao - Live Score - June 20, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-ecuador-vs-curacao-jun-20-2026-game-boxscore-647650\n  ### TEAM STATS\n\nECU\n\n0.0 Goals per Game 1.0\n\n0.5 Expected Goals (xG) per Game 0.4\n\n1.0 Goals Against per Game 7.0\n\n10.0 Shots per Game 7.0\n\n57 Average Possession (%) 39\n\n6.0 Chances Created per Game 5.0\n\nCUW\n\n### TEAM LEADERS\n\nECU\n\nMoises Caicedo\n\n0\n\nGoals\n\nLivano Comenencia\n\n1\n\nMoises Caicedo\n\n0\n\nAssists\n\nEloy Room\n\n0\n\nGonzalo Plata\n\n1\n\nShots on Goal\n\nLivano Comenencia\n\n1\n\nJohn Yeboah\n\n0.2\n\nExpected Goals (xG)\n\nLeandro Bacuna\n\n0.1\n\nGonzalo Plata\n\n6.4\n\nRating\n\nSontje Hansen\n\n7.7\n\nHernan Galindez\n\n0.25\n\nKeeper Save %\n\nEloy Room\n\n0.15\n\nHernan Galindez\n\n0\n\nClean Sheets\n\nEloy Room\n\n0\n\nCUW\n\n### ODD\n\n\u2022 Ecuador vs Curacao at FIFA World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN\n  https://www.espn.com/soccer/story/_/id/49108038/ecuador-curacao-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  Ecuador vs Curacao at FIFA World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups\n\nRanking Europe's top clubs by player performance at World Cup\n\nAll 48 teams in the World Cup have played once: It's time to overreact!\n\n7hRyan O'Hanlon\n\nMessi's family confirm father has health issue\n\n27mLizzy Becherano\n\nBrazil's Neymar (calf injury) also out vs. Haiti\n\n3hESPN News Services\n\nRonaldo: Portugal's World Cup 'far from over'\n\n9hAdriana Garcia\n\nPulisic training solo in race to be fit vs. Australia\n\n23hJeff Carlisle\n\nIvory Coast's Wahi denied Canada WCup visa\n\n\n\u2022 Ecuador vs. Cura\u00e7ao live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/20/sports/ecuador-vs-curacao-live-updates-world-cup-2026-score-news-and-highlights/\n  Email\n\nNew York Post\n\nSwitch between CA and NY editions here.\n\nEdition\n\n Sports\n Sports Plus\n Sports Betting\n Columnists\n NFL\n MLB\n NBA\n NHL\n NCAAB\n WNBA\n NWSL\n PWHL\n NCAAF\n Sports Entertainment\n Golf\n Tennis\n Wrestling\n MMA\n Soccer\n Olympics\n\n Soccer\n Scores\n Stats\n Standings\n Teams\n Players\n\n#### Recommended\n\nSoccer \n\nlive\n\n# Ecuador vs. Cura\u00e7ao live updates: World Cup 2026 score, news and highlights\n\nBy\n\nPost Sports Desk\n\nPublished  June 20, 2026, 7:00 p.m. ET\n\nSee more of our coverage in your search results.\n\n Add The New York Post on Google\n\nEcuador vs. Cura\u00e7ao is set to kick off at 8 p.m\n\n\u2022 Where to watch Ecuador vs. Curacao live stream, TV channel, start time for World Cup Group E match - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/watch-ecuador-vs-curacao-live-stream-channel-time-world-cup/01d330f9aa5e6a3674269060\n  # Where to watch Ecuador vs. Curacao live stream, TV channel, start time for World Cup Group E match\n\nDaniel Mader\n\n\u2022\n\n Add The Sporting News on Google \n\nThe action continues at World Cup 2026 on Saturday night as Ecuador and Curacao meet in Kansas City.\n\nIt will be the second Group E matchup of the tournament for both teams, with Ecuador seeking to advance past the group stage for the first time since 2016,"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Ecuador recent form and results",
+        "data": "\u2022 Ecuador 2026 Results - ESPN\n  https://www.espn.com/soccer/team/results/_/id/209/ecuador\n  Get all the Ecuador results for the 2026 season on ESPN. Includes all the Ecuador results from all national and international games.\n\n\u2022 Ecuador | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/ecuador/team-news\n  Ecuador | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Ecuador squad at FIFA World Cup 2026\u2122.\n\n\u2022 Ecuador Profile | FIFA World Cup 2026\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-profile\n  Discover La Tri\u2019s World Cup history, records and memorable moments. Follow their road to the tournament with the latest on their fixtures, group and coach.\n\n\u2022 Ecuador at the FIFA World Cup 2026: Squad, fixtures and results\n  https://www.reuters.com/graphics/SOCCER-WORLDCUP/mopaoglqkpa/teams/ecuador/\n  Squad, line-ups and fixture schedule for the Ecuador team in USA \u00b7 Canada \u00b7 Mexico\n\n\u2022 Reuters Ecuador at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/ecuador/\n  Follow Ecuador&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 [Discussion] Hater's Guide to the 2026 FIFA World Cup (for us Filthy Americans)\n  https://www.reddit.com/r/UrinatingTree/comments/1u1cck8/haters_guide_to_the_2026_fifa_world_cup_for_us/\n  > For the smallest Spanish-speaking South American country Well\u2026 second smallest Spanish speaking country in South America. That honor goes to Uruguay btw"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Cura\u00e7ao recent form and results",
+        "data": "\u2022 Cura\u00e7ao at the FIFA World Cup - Wikipedia\n  https://en.wikipedia.org/wiki/Cura%C3%A7ao_at_the_FIFA_World_Cup\n  Cura\u00e7ao appeared in the FIFA World Cup for the first time in 2026. On 18 November 2025, they <strong>topped their qualifying group and qualified for the 2026 FIFA World Cup</strong>, becoming the smallest nation by both population and area to qualify for the tournament. *Draws include knockout matches decided ...\n\n\u2022 Cura\u00e7ao | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/curacao/team-news\n  Cura\u00e7ao | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Cura\u00e7ao squad at FIFA World Cup 2026\u2122.\n\n\u2022 Germany begin World Cup with crushing win. But did Curacao fall foul of the hydration break? - The Athletic\n  https://www.nytimes.com/athletic/7357554/2026/06/14/germany-vs-curacao-world-cup-2026-score-results-takeaways/\n  Germany overpowered tournament debutants Curacao to begin their World Cup campaign with a dominant <strong>7-1 victory</strong> \u2014 but only after the tiny Caribbean island enjoyed a famous moment and briefly threatened an upset.\n\n\u2022 Curacao Tables & Standings - 2026 | Goal.com\n  https://www.goal.com/en/team/curacao/table/3csexoalt9hfesmo2p4619ga4\n  Latest Curacao table and standing positions for World Cup, Friendlies, CONCACAF Gold Cup, CONCACAF Nations League, World Cup Qualification CONCACAF, CONCACAF Gold Cup Qualification, CONCACAF Nations League Qualification\n\n\u2022 Reuters Cura\u00e7ao at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/curacao/\n  Follow Curacao&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 [Discussion] [ Removed by moderator ]\n  https://www.reddit.com/r/worldcup/comments/1u7brnr/curacaos_loss_is_still_a_win_for_the_nation_a/\n  This sub has made me realise that European and some american fans are the most boring fans ever, don\u2019t even know why they watch the world cup, literally no passion for the sport at all Cura\u00e7ao scoring against germany is amazing, they made history and forever changed the football scene in their country. My head can\u2019t phantom how people could see their reaction and still think it was insignificant or not be happy for them\n\n\u2022 [Discussion] [World Cup 2026 Preview] Cura\u00e7ao: The Ultimate Diaspora Dream, CONCACAF Absurdity and the Smallest Nation on the Grandest Stage (18/48)\n  https://www.reddit.com/r/soccer/comments/1u5foaf/world_cup_2026_preview_cura%C3%A7ao_the_ultimate/\n  As I said, I guess I'm sobering after Socceroos game so I will finish previews for team that play today. We now move on 18th\u2026"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 FIFA World Cup 2026 \u2014 Ecuador vs Curacao head-to-head record; Form guide; Predicted XI - Sportstar\n  https://sportstar.thehindu.com/football/fifa-world-cup/ecuador-vs-curacao-head-to-head-record-h2h-form-predicted-lineups-xi-fifa-world-cup-2026-stats-news/article71124972.ece\n  Ecuador vs Curacao: Read the form guide, head-to-head and predicted XIs for the FIFA World Cup 2026 Group E match on June 20, 2026.\n\n\u2022 Form and head to head stats Ecuador vs Curacao\n  https://www.skysports.com/football/ecuador-vs-curacao/549799\n  FIFA World Cup match Ecuador vs Curacao 21.06.2026. Preview and stats followed by live commentary, video highlights and match report.\n\n\u2022 Ecuador vs Cura\u00e7ao Stats, H2H, xG | FootyStats\n  https://footystats.org/international/ecuador-national-team-vs-curacao-national-team-h2h-stats\n  These two clubs have never met before domestically based on our database and have <strong>no previous head to head stats that we can show</strong>. However, in the current season Ecuador is in excellent home form while Cura\u00e7ao are performing good away from home.\n\n\u2022 Ecuador vs Curacao Head-to-Head & Form Stats | Tips.GG\n  https://tips.gg/article/ecuador-vs-curacao-head-to-head-wc2026/\n  Ecuador and Curacao have <strong>no recorded head-to-head meetings in international football</strong>. There is no historical win/draw/loss split, no goals data, and no previous encounters to reference.\n\n\u2022 Ecuador vs Cura\u00e7ao | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021465\n  FIFA+ | Action On the Pitch. Stories Off the Pitch.\n\n\u2022 [Discussion] North America World Cup 2026 - Group E Analysis - The Group of Death\n  https://www.reddit.com/r/football/comments/1u5pld6/north_america_world_cup_2026_group_e_analysis_the/\n  Die Mannschaft being used in an international context is pretty hilarious. That branding burned spectacularly in Germany and DFB officially dropped it on 2022 when they realized it got broadly rejected by the public."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Curacao and Ecuador's updated FIFA rankings before 2026 World Cup game - Bolavip US\n  https://bolavip.com/en/world-cup/curacao-and-ecuadors-updated-fifa-rankings-before-2026-world-cup-game\n  Despite those setbacks, both teams still have a mathematical chance of competing for progression in Group E. ... While <strong>Ecuador arrive ranked 29th in the FIFA standings, Curacao sit significantly lower at 83rd with 1,287 points</strong>.\n\n\u2022 2026 FIFA World Cup Group E - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_E\n  <strong>Group E</strong> of the 2026 FIFA World Cup is taking place from June 14 to 25, 2026. The group consists of Germany, Cura\u00e7ao, Ivory Coast, and Ecuador. The top two teams, possibly along with the third-placed team, will advance to the round of 32. ... Updated to match(es) played on June 20, 2026.\n\n\u2022 Ecuador vs Cura\u00e7ao | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021465\n  FIFA+ | Action On the Pitch. Stories Off the Pitch.\n\n\u2022 World Cup Group E standings 2026: Updated results, table and fixtures for Germany, Ecuador, Ivory Coast, Curacao | Sporting News\n  https://www.sportingnews.com/au/football/news/world-cup-group-e-standings-results-table-2026/ea1559d39ede0c137c543bfa\n  A commanding 3-0 win over Kenya in their final <strong>Group F</strong> match sealed top spot ahead of Gabon and punched their ticket to the 2026 tournament in Canada, Mexico and the USA. The Elephants now gear up for their fourth appearance at football&#x27;s biggest ...\n\n\u2022 FIFA World Cup Standings 2026: Live Group Tables, Results & Qualification Scenarios\n  https://www.covers.com/world-cup/group-standings\n  Live World Cup 2026 group standings with updated tables, qualification rules, tiebreakers, and betting context for group-stage matches."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Retrieves recent match analysis and defensive stats for Ecuador in CONMEBOL qualification.",
+        "data": "\u2022 Ecuador 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/ecuador-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  They conceded an astonishingly low five goals across 18 fixtures, keeping <strong>13 clean sheets</strong> to boast the best defensive record in the region. While the attack managed only 14 goals, veteran Enner Valencia led the line effectively, finishing as ...\n\n\u2022 The Perfect Tournament Team? Ecuador\u2019s Defensive Steel Could Make Them the World Cup\u2019s Surprise Package | Opta Analyst\n  https://theanalyst.com/articles/ecuador-defensive-steel-world-cup-2026-surprise-package\n  Having progressed beyond the group ... ever produced. La Tri conceded just five goals across 18 CONMEBOL qualifiers and kept <strong>13 clean sheets</strong>, with no South American nation boasting a stronger defensive record....\n\n\u2022 FIFA World Cup 2026: Ecuador Preview - Defensive Discipline\n  https://technosports.co.in/world-cup-2026-ecuador-preview-defensive-elite/\n  La Tri conceded just five goals across 18 CONMEBOL qualifiers and kept <strong>13 clean sheets</strong> \u2014 no South American nation boasted a stronger defensive record.\n\n\u2022 Ecuador squad World Cup 2026: Which players will make it to the showpiece in USA, Mexico and Canada? | Goal.com\n  https://www.goal.com/en/lists/ecuador-squad-world-cup-2026/blt0d6faa95026c07f5\n  They conceded just five goals, the fewest in the qualifiers and <strong>racked up an impressive number of clean sheets</strong>. The backline has consistently held its shape under Sebastian Beccacece, with high hopes of replicating that form at the 2026 World Cup.\n\n\u2022 Ecuador Profile | FIFA World Cup 2026\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/ecuador-profile\n  Discover La Tri\u2019s World Cup history, records and memorable moments. Follow their road to the tournament with the latest on their fixtures, group and coach."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Provides tactical breakdowns of Cura\u00e7ao's defensive structure and possession-based build-up play.",
+        "data": "\u2022 Curacao 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/curazao-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  The preferred Curacao formation ... conceded just three goals in their final six matches. ... In possession, <strong>they often bypass the midfield press</strong>....\n\n\u2022 Cura\u00e7ao World Cup 2026: Diaspora & Discipline | Site Name\n  https://whyfootball.org/teams/curacao-brief.html\n  Cura\u00e7ao operates a <strong>highly compressed mid-to-low defensive block</strong>, designed to choke central passing lanes and strictly manage risk. They are a team schooled in the Dutch positional tradition, relying on winger-led width, early deliveries, and ...\n\n\u2022 Cura\u00e7ao Football Team Analysis - 2026 World Cup Profile | Footlab Data\n  https://footlab-data.com/world-cup/equipe/curacao\n  Cura\u00e7ao primarily operates within ... seeking maximum efficiency on free kicks. Defensive Phase: <strong>Compact mid-to-low block aimed at forcing the opponent to play wide</strong>....\n\n\u2022 Ecuador vs Curacao Preview, Lineups & Team News | RotoWire\n  https://www.rotowire.com/soccer/article/ecuador-vs-curacao-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-e-118799\n  <strong>Curacao&#x27;s reshaped defense has to be far more organized than it was against Germany, or this gets away from them quickly</strong>. Caicedo will control the tempo and spring Ecuador&#x27;s attack, and how Curacao&#x27;s midfield copes with his range and ball-winning ...\n\n\u2022 Cura\u00e7ao World Cup 2026 Odds, Predictions & Best Bets | OneFootball\n  https://onefootball.com/en/news/curacao-world-cup-2026-odds-predictions-best-bets-42990307\n  Cura\u00e7ao\u2019s tactical identity under Advocaat centres on a disciplined <strong>4-2-3-1 or 4-3-3 shape</strong>, emphasising compactness and structural integrity over high-pressing or positional dominance.\n\n\u2022 [Discussion] [World Cup 2026 Preview] Cura\u00e7ao: The Ultimate Diaspora Dream, CONCACAF Absurdity and the Smallest Nation on the Grandest Stage (18/48)\n  https://www.reddit.com/r/soccer/comments/1u5foaf/world_cup_2026_preview_cura%C3%A7ao_the_ultimate/\n  65 votes, 29 comments. As I said, I guess I'm sobering after Socceroos game so I will finish previews for team that play today. We now move on 18th\u2026"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Determines the exact match location, altitude, and expected weather conditions to analyze environmental advantages.",
+        "data": "\u2022 Ecuador vs Cura\u00e7ao performance-impairing heat | World Cup 2026 ...\n  https://www.climatecentral.org/world-cup-2026/matches/34\n  The June 20 match at Kansas City Stadium (Ecuador vs. Cura\u00e7ao) has a 68% chance of heat that can impair performance. to climate change. heat above 28\u00b0C (82.4\u00b0F)\n\n\u2022 Introduction to Kansas City! \u26bd\ufe0f Cura\u00e7ao's men's national team got ...\n  https://www.facebook.com/KSHB41/posts/introduction-to-kansas-city-%EF%B8%8Fcura%C3%A7aos-mens-national-team-got-its-first-look-at-k/1440815514756894/\n  Kansas City is officially hosting seven national teams for the 2026 World Cup at Arrowhead Stadium: Argentina Algeria Ecuador ...\n\n\u2022 Ecuador vs Curacao at FIFA World Cup 2026: TV channel, how to ...\n  https://www.espn.com/soccer/story/_/id/49108038/ecuador-curacao-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  Venue: Arrowhead stadium, Kansas City. Referee: Ning Ma (China). PREDICTED LINEUPS. Ecuador. Hern\u00e1n Galindez Willian Pacho | Joel Ord\u00f3\u00f1ez | Alan ...\n\n\u2022 FIFA World Cup 26 Kansas City-bound breakdown: Group E - KSHB\n  https://www.kshb.com/sports/world-cup/fifa-world-cup-26-kansas-city-bound-breakdown-group-e-ecuador-vs-curacao\n  Ecuador vs Curacao World Cup match. GEHA Field at Arrowhead Stadium. battle June 20, 2026. Banco Pichincha stadium in Guayaquil, Ecuador,\n\n\u2022 World Cup 2026 Stadiums: A Complete List of all 16 Host Venues\n  https://www.keithprowsetravel.com/blog/world-cup-2026-stadiums/\n  At 2,240 metres above sea level, the altitude does affect both players and spectators, so hydration is key. Ecuador v Curacao,"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Scans recent news reports for group permutation analysis, highlighting whether Ecuador needs to chase goals.",
+        "data": "{\"topic\":\"Ecuador World Cup 2026 group stage goal difference standings\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides the latest injury, fatigue, and disciplinary updates on Ecuador's key midfielder Mois\u00e9s Caicedo.",
+        "data": "\u2022 Ivory Coast vs Ecuador Highlights | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-43wd33qm20poy8zk\n  # Ivory Coast vs Ecuador Highlights | 2026 FIFA World Cup\u2122. ## Check out the full game highlights between Ivory Coast and Ecuador in the 2026 FIFA World Cup\u2122. Enner Valencia  Moises Caicedo  Franck Kessie  Amad Diallo  FIFA Men's World Cup  FIFA World Cup - 4 Minute Game Recaps  Ecuador  Ivory Coast  WC - Ivory Coast vs. Ecuador - 06/14/2026  JP Dellacamera. FIFA MEN'S WORLD CUP. ### Ivory Coast vs Ecuador Extended Highlights | 2026 FIFA World Cup\u2122. ### Ivory Coast\u2019s Amad Diallo scores clutch goal late to seal win against Ecuador | FIFA World Cup 2026\u2122. ### Ecuador hits crossbar twice in first\n\n\u2022 Ecuador vs. Curacao: How to Watch, TV Channel, Live Stream, Time - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-ecuador-vs-curacao-tv-channel-live-stream-2026-fifa-world-cup-group-e\n  FIFA Men's World Cup. FIFA Men's World Cup. 3. ### 2026 World Cup: USA\u2019s Odds Skyrocket After Win Over Australia### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. Ecuador and Curacao meet in their 2026 FIFA World Cup second group stage match on Saturday, June 20, 2026 at 8:00 PM ET from Kansas City Stadium. ## How to Watch Ecuador vs. ### Ivory Coast vs Ecuador Highlights | 2026 FIFA World Cup\u2122. Check ou\n\n\u2022 Ivory Coast\u2019s Amad Diallo scores clutch goal late to seal win against Ecuador | FIFA World Cup 2026 - FOX Sports\n  https://www.foxsports.com/watch/fmc-cg0nl4zfn5r4pfmf\n  # Ivory Coast\u2019s Amad Diallo scores clutch goal late to seal win against Ecuador | FIFA World Cup 2026\u2122. ## Ivory Coast\u2019s Amad Diallo scored a clutch goal that sealed a 1-0 win Ecuador. 15 MINS AGO\u30fbFIFA Men's World Cup\u30fb1:09. Amad Diallo  FIFA Men's World Cup  Ivory Coast. FIFA MEN'S WORLD CUP. ### Ivory Coast vs Ecuador Highlights | 2026 FIFA World Cup\u2122. ### Ecuador hits crossbar twice in first half, score stays even against Ivory Coast | 2026 FIFA World Cup\u2122. ### WHAT A GAME \ud83d\udea8 FIFA World Cup Now reacts to Japan and Netherlands' ELECTRIC 2-2 draw \u26bd\ufe0f. ### \u2019Game of World Cup\u2122 So Far\u2019 \ud83d\udea8 Instant Re\n\n\u2022 Ecuador vs Curacao at FIFA World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups - ESPN\n  https://www.espn.com/soccer/story/_/id/49108038/ecuador-curacao-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  Ecuador vs Curacao at FIFA World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups. Ranking Europe's top clubs by player performance at World Cup. All 48 teams in the World Cup have played once: It's time to overreact! Ronaldo: Portugal's World Cup 'far from over'. The 2026 World Cup's wildest warmup kits: The good, the bad and the ugly. Chicago to Chivas: Guti\u00e9rrez is the American leading Mexico at this World Cup. Portugal have a Ronaldo problem (again) after Congo DR draw to open their World Cup. Kane and Bellingham put on a show in England's thrilli\n\n\u2022 Alexander Isak scores Sweden\u2019s second goal, extending lead over Tunisia | 2026 FIFA World Cup - FOX Sports\n  https://www.foxsports.com/watch/fmc-un30p41es4irenog\n  # Alexander Isak scores Sweden\u2019s second goal, extending lead over Tunisia | 2026 FIFA World Cup\u2122. JUST IN\u30fbFIFA Men's World Cup\u30fb1:10. FIFA Men's World Cup  Alexander Isak  Sweden  WC - Sweden vs. FIFA MEN'S WORLD CUP. Tunisia | 2026 FIFA World Cup\u2122. ### Ivory Coast vs Ecuador Extended Highlights | 2026 FIFA World Cup\u2122. ### Ivory Coast vs Ecuador Highlights | 2026 FIFA World Cup\u2122. ### Ivory Coast\u2019s Amad Diallo scores clutch goal late to seal win against Ecuador | FIFA World Cup 2026\u2122. ### Ecuador hits crossbar twice in first half, score stays even against Ivory Coast | 2026 FIFA World Cup\u2122. ### "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Identifies dual-national call-ups for Cura\u00e7ao and provides physical condition reports on key players like Juninho Bacuna.",
+        "data": "\u2022 Cura\u00e7ao\u2019s 1st World Cup goal sparks belief before Germany\u2019s floodgates open - Bozeman Daily Chronicle\n  https://www.bozemandailychronicle.com/ap_news/sports/cura-ao-s-1st-world-cup-goal-sparks-belief-before-germany-s-floodgates-open/article_f7edfb40-9abb-5327-a491-edddba157f96.html\n  Cura\u00e7ao goalkeeper Eloy Room and his teammates applaud the fans at the end of the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Members of Curacao acknowledge fans after a loss during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Germany, in white, and Cura\u00e7ao, in blue, players react at the end of the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Germany's Nico Schlotterbeck (15) is tackled by Cura\u00e7ao's Jeremy Antonisse, left, as Cura\u00e7ao's Juninho \n\n\u2022 World Cup 2026: All you need to know about Dick Advocaat's Curacao - the tournament's smallest ever nation - Sky Sports\n  https://www.skysports.com/football/news/12098/13545528/world-cup-2026-curacao-caribbean-nations-historic-first-appearance\n  # World Cup 2026: All you need to know about Dick Advocaat's Curacao - the tournament's smallest ever nation. Legendary Dutch manager Dick Advocaat will lead Curacao into their first ever World Cup; 'The Blue Wave' are the smallest ever nation to reach the tournament; many of their players play or have played in the UK including Juninho and Leandro Bacuna, Tahith Chong and Ar'jany Martha. Jamaica - led by Steve McClaren - trailed their opponents by one point, so needed to win to reach the tournament for the second time, and the first time since France '98. Curacao - led by Dick Advocaat - only\n\n\u2022 Tiny Curacao faces giant Germany to open Sunday\u2019s World Cup action, in photos - AP News\n  https://apnews.com/photo-gallery/world-cup-curacao-germany-netherlands-sweden-8510055527c0a080f1347a21d59200c1\n  Curacao fans on the stands wait for the start of the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Cura\u00e7ao\u2019s Livano Comenencia celebrates after scoring during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Germany\u2019s Jamal Musiala scores during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Cura\u00e7ao\u2019s Juninho Bacuna, left, and Germany\u2019s Felix Nmecha jump for the ball during the World Cup Group E soccer match between Germany and Curacao in Houston, \n\n\u2022 Cura\u00e7ao makes history in loss to Germany and other World Cup matches, in photos - Bozeman Daily Chronicle\n  https://www.bozemandailychronicle.com/ap_news/sports/cura-ao-makes-history-in-loss-to-germany-and-other-world-cup-matches-in-photos/article_3eac5385-462d-577f-afe6-e1a661f7a489.html\n  Cura\u00e7ao's Livano Comenencia celebrates after scoring during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Curacao fans on the stands wait for the start of the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Curacao fans pose before the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Cura\u00e7ao's Juninho Bacuna, left, and Germany's Felix Nmecha fight for the ball during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June\n\n\u2022 Cura\u00e7ao makes history in loss to Germany at the World Cup in Houston - Bozeman Daily Chronicle\n  https://www.bozemandailychronicle.com/ap_news/sports/cura-ao-makes-history-in-loss-to-germany-at-the-world-cup-in-houston/article_3eac5385-462d-577f-afe6-e1a661f7a489.html\n  Cura\u00e7ao's Livano Comenencia celebrates after scoring during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Curacao fans on the stands wait for the start of the World Cup Group E soccer match between Germany and Curacao in Houston, Sun"
+      }
+    ],
+    "research_cost": 0.116,
+    "wallet_before": 0.61,
+    "wallet_after": 0.494,
+    "prediction": {
+      "pick": "home",
+      "confidence": 7,
+      "confidence_reason": "Ecuador's clear class advantage is tempered by the extreme Kansas City heat and their historical finishing inefficiency against low blocks.",
+      "reasoning": "Ecuador's superior physical and tactical quality will overcome Cura\u00e7ao's fragile defense, though the oppressive heat and a defensive Cura\u00e7ao setup will likely limit the scoreline.",
+      "probabilities": {
+        "home": 74,
+        "draw": 18,
+        "away": 8
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Ecuador lost 1-0 to Ivory Coast in their Group E opener despite an expansive performance where they created 1.01 xG and hit the woodwork twice.",
+      "away_form": "Cura\u00e7ao was thoroughly outclassed in a 7-1 defeat to Germany in their debut World Cup match, despite scoring a historic consolation goal.",
+      "key_injuries": [
+        "Ecuador reports no fresh injuries, though winger Alan Minda may be dropped to the bench after a quiet opening match.",
+        "Cura\u00e7ao has no new injuries but faces major defensive selection dilemmas after conceding seven goals to Germany."
+      ],
+      "tactical_matchup": "Ecuador's physical, high-pressing style and veteran attack led by Enner Valencia holds a massive structural edge over Cura\u00e7ao's fragile and disorganized defensive block.",
+      "group_stakes": "Both teams are searching for their first points in Group E to keep their qualification hopes alive, with Ecuador also needing a high-scoring win to repair their goal difference.",
+      "home_win_signals": [
+        "Ecuador's underlying metrics against Ivory Coast (12 shots, 1.01 xG, hitting the woodwork twice) suggest their attack is highly functional despite failing to score.",
+        "Cura\u00e7ao's defensive line was completely exposed by Germany, conceding 7 goals and showing poor lateral mobility.",
+        "Ecuador possesses elite defensive pedigree, having kept 13 clean sheets and conceded just 5 goals in 18 CONMEBOL qualifiers."
+      ],
+      "away_win_signals": [
+        "Cura\u00e7ao's ability to transition quickly and score against Germany shows they possess some offensive threat through Livano Comenencia.",
+        "If Ecuador over-commits to chasing goal difference, Cura\u00e7ao's direct style bypassing the midfield could catch them on the break."
+      ],
+      "draw_signals": [
+        "Cura\u00e7ao's potential to park a highly compressed mid-to-low block that frustrates Ecuador's finishing.",
+        "Ecuador replicating their opening match inefficiency where they failed to convert multiple high-value chances."
+      ],
+      "contradictions": [
+        "Ecuador is historically a defensive-first team built on 1-0 wins, but they played highly expansive football in their opener, leaving them vulnerable to counter-attacks."
+      ],
+      "strategy_applied": [
+        "Form over history: Prioritizing Cura\u00e7ao's recent 7-1 defensive collapse over their historic qualification achievements.",
+        "Fitness over risk: Managing player fatigue in the performance-impairing Kansas City heat (68% chance of heat above 28\u00b0C) over high-risk tactical systems."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting Ecuador's historical CONMEBOL defensive pedigree when their current tournament setup has shifted to a vulnerable, highly expansive style.",
+        "Extrapolating Cura\u00e7ao's defensive collapse against an elite German attack to assume they will be similarly dismantled by a historically lower-scoring Ecuador.",
+        "Assuming Ecuador can easily chase goal difference when they have a proven track record of finishing inefficiency and failed to score from 1.01 xG in their opener."
+      ],
+      "underweighted_factors": [
+        "The physical toll of the Kansas City heat (68% chance of temperatures above 28\u00b0C) on Ecuador's high-pressing, high-exertion tactical system.",
+        "Cura\u00e7ao's likely tactical adjustment to a highly compressed low block to avoid another blowout, which directly targets Ecuador's struggle to break down defensive teams."
+      ],
+      "draw_risk": "medium \u2014 Ecuador's finishing inefficiency combined with oppressive heat and Cura\u00e7ao's defensive retreat increases the likelihood of a frustrating, low-scoring stalemate.",
+      "favorite": "home",
+      "confidence_cap": 7,
+      "verdict": "While Ecuador holds a clear structural advantage, their finishing struggles and the extreme Kansas City heat make a high-margin victory far from guaranteed, elevating the value of a low-scoring outcome."
+    },
+    "full_reasoning": "HOME_PCT: 74\nDRAW_PCT: 18\nAWAY_PCT: 8\nPICK: home\nCONFIDENCE: 7\nCONFIDENCE_REASON: Ecuador's clear class advantage is tempered by the extreme Kansas City heat and their historical finishing inefficiency against low blocks.\nREASONING: Ecuador's superior physical and tactical quality will overcome Cura\u00e7ao's fragile defense, though the oppressive heat and a defensive Cura\u00e7ao setup will likely limit the scoreline.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
