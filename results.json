@@ -8461,10 +8461,16 @@
     },
     "full_reasoning": "HOME_PCT: 20\nDRAW_PCT: 42\nAWAY_PCT: 38\nPICK: draw\nCONFIDENCE: 6\nCONFIDENCE_REASON: Scotland's strong motivation to secure a point for progression combined with Morocco's midfield adjustment due to Amrabat's absence elevates the likelihood of a tactical stalemate.\nREASONING: Scotland's defensive setup and desire for a qualifying point will likely neutralize Morocco's superior technical quality, resulting in a closely contested draw.",
     "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 0,
+      "away_score": 1,
+      "winner": "away"
+    },
+    "correct": false,
+    "evaluation": "MISTAKE:\n- The prediction incorrectly backed a draw, failing to foresee Morocco breaching Scotland's defensive block to win 1-0.\n- The reasoning overvalued Scotland's defensive motivation for a point and underestimated Morocco's superior technical ability to convert a single decisive chance.\nDATA:\n- useful: tavily \u2014 Detailed the Hakimi/Diaz matchup against Robertson, highlighting where Morocco would find the winning breakthrough.\n- useless: news-x402.com/news/recent \u2014 Historical narratives regarding the 1998 matchup provided no actionable tactical value.\n- useless: skim402.com/api/v2/read \u2014 Mathematical progression scenarios did not translate to on-pitch performance.",
+    "reflected": true,
+    "reflected_at": "2026-06-20T00:30:28.555206+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (SUI vs BIH)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 vulnerability (CAN vs QAT)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 turf (CAN vs QAT)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 efficiency (MEX vs KOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 pressing triggers (USA vs AUS)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 matchups (SCO vs MAR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 venue (SUI vs BIH)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (SUI vs BIH)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 counters (CAN vs QAT)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (MEX vs KOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (MEX vs KOR)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 physical profiling (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (SCO vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 progression (SCO vs MAR)"
   },
   {
     "match": "BRA vs HAI",
