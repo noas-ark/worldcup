@@ -9540,5 +9540,353 @@
     "reflected": true,
     "reflected_at": "2026-06-20T19:30:21.704313+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 home performance metrics (NED vs SWE)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 environmental conditions (NED vs SWE)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 individual attacking lineups (NED vs SWE)"
+  },
+  {
+    "match": "GER vs CIV",
+    "home": "GER",
+    "away": "CIV",
+    "kickoff": "2026-06-20T20:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defensive structure (TUR vs PAR)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 travel and pitch (TUR vs PAR)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 individual fitness (TUR vs PAR)",
+    "information_needs": "FORM\n- What were the specific expected goals (xG) and expected goals against (xGA) figures for both Germany and Ivory Coast in their respective Matchday 1 fixtures of this tournament?\n- How have Ivory Coast\u2019s defensive metrics (specifically shots allowed from open play and box entries conceded) trended over their last five competitive matches leading into this tournament?\n\nPLAYERS\n- Is Germany\u2019s primary central creative outlet (such as Florian Wirtz or Jamal Musiala) fully fit after Matchday 1, or will Germany have to rely on a profile that profile-shifts their attacking transitions?\n- How does the aerial duel success rate of Ivory Coast's starting center-backs (e.g., Evan Ndicka) compare to the aerial efficiency of Germany\u2019s projected starting central striker in crowded penalty areas?\n\nTACTICS\n- How does Ivory Coast's defensive mid-block plan to restrict Germany's half-space occupations, and do they possess the lateral mobility in midfield to prevent Germany from overloading the wide areas?\n- Will Germany deploy a high-pressing scheme (targeting a low PPDA) to disrupt Ivory Coast's build-up, or will they drop into a mid-block to mitigate the threat of Ivory Coast\u2019s rapid transition wingers?\n\nH2H\n- In their rare historical head-to-head encounters or similar matchups against elite European opposition, has Ivory Coast struggled specifically against teams that utilize a fluid, strikerless system or a traditional \"target man\" profile?\n\nCONTEXT\n- What are the exact group standings and goal differences heading into this Matchday 2 fixture, and does a draw mathematically benefit one team significantly more than the other based on the group's parallel fixture?\n\nMARKET\n- Where has the smart money moved on the Asian Handicap line (e.g., opening at Germany -1.25 and moving to -1.5), and what does the implied probability of the Over/Under 2.75 goal line suggest about the expected game state?\n\nNEWS\n- Are there any reports of camp disharmony, tactical disagreements, or illness outbreaks within either squad during their preparation at their respective North American base camps?\n\nVENUE\n- Is this match being played in an open-air stadium with high June humidity (e.g., Miami, Houston) or a climate-controlled indoor venue, and how will the local climate impact the physical drop-off of both teams after the 70th minute?",
+    "research_gaps": [
+      {
+        "need": "How have Ivory Coast\u2019s defensive metrics (specifically shots allowed from open play and box entries conceded) trended over their last five competitive matches leading into this tournament?",
+        "category": "FORM",
+        "ideal_service": "Opta or StatsBomb API providing micro-level defensive action and box entry tracking data."
+      },
+      {
+        "need": "How does the aerial duel success rate of Ivory Coast's starting center-backs (e.g., Evan Ndicka) compare to the aerial efficiency of Germany\u2019s projected starting central striker in crowded penalty areas?",
+        "category": "PLAYERS",
+        "ideal_service": "Wyscout or Comparisonator API containing detailed individual player performance metrics in contested aerial duels."
+      },
+      {
+        "need": "What are the exact group standings and goal differences heading into this Matchday 2 fixture, and does a draw mathematically benefit one team significantly more than the other based on the group's parallel fixture?",
+        "category": "CONTEXT",
+        "ideal_service": "FIFA Official World Cup Tournament API or real-time Flashscore group calculator."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Germany vs Ivory Coast World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Germany vs Ivory Coast World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Germany World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Germany recent form and results",
+        "need": "How has Germany performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Ivory Coast World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Ivory Coast recent form and results",
+        "need": "How has Ivory Coast performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Germany vs Ivory Coast head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Germany vs Ivory Coast World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.national-football-teams.com/country/107/Ivory-Coast.html"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Analyzes Ivory Coast's historical performance records against elite European nations to identify systemic tactical vulnerabilities.",
+        "need": "In their rare historical head-to-head encounters or similar matchups against elite European opposition, has Ivory Coast struggled specifically against teams that utilize a fluid, strikerless system or a traditional 'target man' profile?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Germany Ivory Coast World Cup 2026 Matchday 1 expected goals xG xGA",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Retrieves underlying performance metrics (xG/xGA) from Matchday 1 to evaluate actual performance quality over raw results.",
+        "need": "What were the specific expected goals (xG) and expected goals against (xGA) figures for both Germany and Ivory Coast in their respective Matchday 1 fixtures of this tournament?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Germany Ivory Coast World Cup 2026 camp disharmony illness squad news",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies off-pitch disruptors, squad morale issues, or sudden illness outbreaks affecting team selection.",
+        "need": "Are there any reports of camp disharmony, tactical disagreements, or illness outbreaks within either squad during their preparation at their respective North American base camps?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Germany vs Ivory Coast betting odds Asian Handicap Over Under 2.75 World Cup 2026",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Provides market consensus and smart money movements to infer the expected game state and goal-scoring environment.",
+        "need": "Where has the smart money moved on the Asian Handicap line (e.g., opening at Germany -1.25 and moving to -1.5), and what does the implied probability of the Over/Under 2.75 goal line suggest about the expected game state?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Germany vs Ivory Coast World Cup 2026 stadium venue climate humidity impact",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Determines the stadium type, local weather forecast, and how physical fatigue might influence tactical changes late in the game.",
+        "need": "Is this match being played in an open-air stadium with high June humidity (e.g., Miami, Houston) or a climate-controlled indoor venue, and how will the local climate impact the physical drop-off of both teams after the 70th minute?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Germany World Cup 2026 Florian Wirtz Jamal Musiala injury fitness Matchday 2",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides real-time injury and fitness updates on Germany's key creative midfielders leading into Matchday 2.",
+        "need": "Is Germany\u2019s primary central creative outlet (such as Florian Wirtz or Jamal Musiala) fully fit after Matchday 1, or will Germany have to rely on a profile that profile-shifts their attacking transitions?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Ivory Coast tactical analysis defensive mid-block World Cup 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Extracts tactical analysis from recent match previews regarding Ivory Coast's defensive shape and lateral mobility.",
+        "need": "How does Ivory Coast's defensive mid-block plan to restrict Germany's half-space occupations, and do they possess the lateral mobility in midfield to prevent Germany from overloading the wide areas?",
+        "category": "TACTICS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Germany vs. Ivory Coast projected lineups, starting 11 for World Cup 2026 Group E game in Toronto - sportingnews.com\n  https://www.sportingnews.com/au/football/news/germany-vs-ivory-coast-lineup-starting-11-world-cup-group-e/a1b872cb3dde32c3ae36335a\n  2026 WORLD CUP HQ: Latest World Cup news | Full World Cup schedule | Buy World Cup tickets\n\n## Germany projected starting 11\n\n(4-2-3-1, right to left):1. M. Neuer (GK) \u2014 6. J. Kimmich, 4. J. Tah, 15. N. Schlotterbeck, 18. N. Brown \u2014 5. A. Pavlovic, 23. F. Nmecha \u2014 19. L. Sane, 10. J. Musiala, 17. F. Wirtz \u2014 7. K. Havertz\n\n Injured: None\n Suspended: None\n\nDeniz Undavcame off the bench against Curacao to score, extending his superb international record to seven goals in 10 internationals, and the Stuttgart forward is pushing for a start.\n\nHowever, the four-pronged attack of Leroy Sane. Jamal Mus\n\n\u2022 Germany vs C\u00f4te d'Ivoire Prediction: German control against Ivorian speed - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/germany-vs-cote-d-ivoire-match-prediction-20-june-2026/\n  Germany beat Cura\u00e7ao 7-1 in their Group E opener, with Manuel Neuer starting after a pre-tournament calf issue and Nathaniel Brown scoring and assisting from left-back. Deniz Undav came off the bench in that same match and produced one goal plus two assists, so Julian Nagelsmann has a continuity case for the 4-2-3-1 used in media projections. After one round, Germany sit first in Group E with 3 points, 7 goals scored, 1 conceded and a +6 goal difference. The expected XI has Neuer in goal, Joshua Kimmich at right-back, Jonathan Tah and Nico Schlotterbeck in central defence, Brown at left-back, \n\n\u2022 Germany and Ivory Coast aim to seal World Cup knockout place: All to know - Al Jazeera\n  https://www.aljazeera.com/sports/2026/6/19/germany-and-ivory-coast-aim-to-seal-world-cup-knockout-place\n  Bonny and unused subs from the first game, Oumar Diakite and Evann Guessand, are alternative options in attack.\n\nDiallo came off the bench to win it, and the Manchester United attacking midfielder will be pushing to start, which might mean a switch of flanks for teenage starlet Yan Diomande, who stole the show on the right against Ecuador and will be eager to put on a show against the nation in which he plays for RB Leipzig.\n\n## Germany predicted XI:\n\nNeuer (goalkeeper); Kimmich, Tah, Schlotterbeck, Brown; Pavlovic, Nmecha; Sane, Musiala, Wirtz; Havertz.\n\n## Ivory Coast predicted XI:\n\nY. Fofan\n\n\u2022 Is Germany v Ivory Coast on TV? Channel, kick-off time and how to watch World Cup 2026 match - Yahoo Sports\n  https://sports.yahoo.com/articles/germany-v-ivory-coast-tv-053220841.html\n  ## Team news\n\nNagelsmann has no fresh injury concerns and seems likely to stick with Jamal Musiala in the No. 10 role instead of Denis Undav.\n\nAdvertisement\n\nAdvertisement\n\nAdvertisement\n\nIvorian defender Evan N'Dicka continues to struggle with a hamstring injury, while forward Elye Wahi has been denied entry to Canada owing to a previous arrest\n\n## Predicted line-ups\n\nGermany XI: Neuer; Kimmich, Tah, Sclotterbeck, Raum; Goretzka, Pavlovic; Sane, Musiala, Wirtz; Havertz\n\nIvory Coast XI: Fofana; Doue, Kossounou, Diomande, Konan; Kessie, Sangare; Amad, Toure, Diomande; Bonny. [...] Advertisement\n\n\u2022 Germany vs. Ivory Coast prediction, lineups, odds and bet builder tips for World Cup Group E clash - sportingnews.com\n  https://www.sportingnews.com/uk/football/news/germany-vs-ivory-coast-prediction-lineups-odds-bet-builder-tips-world-cup/329aee9f0a0f2556d0fd41c8\n  Julien Nagelsmann is likely to stick with the same side that put seven past Curacao.\n The only possible change would be Deniz Undav - who scored one and provided two from the bench on Sunday - coming in for Leroy Sane.\n Manuel Neuerwill go sixth in the all-time World Cup appearances list with his 21st game.\n\n### Ivory Coast predicted lineup to play Germany\n\nY. Fofana (GK) - Doue, Singo, Agbadou, Konan - Amad, Kessie, S. Fofana, Diomande - Pepe, Toure\n"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Is Germany v Ivory Coast on TV? Channel, kick-off time and how to watch World Cup 2026 match - Yahoo Sports\n  https://sports.yahoo.com/articles/germany-v-ivory-coast-tv-053220841.html\n  ## Team news\n\nNagelsmann has no fresh injury concerns and seems likely to stick with Jamal Musiala in the No. 10 role instead of Denis Undav.\n\nAdvertisement\n\nAdvertisement\n\nAdvertisement\n\nIvorian defender Evan N'Dicka continues to struggle with a hamstring injury, while forward Elye Wahi has been denied entry to Canada owing to a previous arrest\n\n## Predicted line-ups\n\nGermany XI: Neuer; Kimmich, Tah, Sclotterbeck, Raum; Goretzka, Pavlovic; Sane, Musiala, Wirtz; Havertz\n\nIvory Coast XI: Fofana; Doue, Kossounou, Diomande, Konan; Kessie, Sangare; Amad, Toure, Diomande; Bonny. [...] Advertisement\n\n\u2022 Germany vs. Ivory Coast projected lineups, starting 11 for World Cup 2026 Group E game in Toronto - sportingnews.com\n  https://www.sportingnews.com/au/football/news/germany-vs-ivory-coast-lineup-starting-11-world-cup-group-e/a1b872cb3dde32c3ae36335a\n  2026 WORLD CUP HQ: Latest World Cup news | Full World Cup schedule | Buy World Cup tickets\n\n## Germany projected starting 11\n\n(4-2-3-1, right to left):1. M. Neuer (GK) \u2014 6. J. Kimmich, 4. J. Tah, 15. N. Schlotterbeck, 18. N. Brown \u2014 5. A. Pavlovic, 23. F. Nmecha \u2014 19. L. Sane, 10. J. Musiala, 17. F. Wirtz \u2014 7. K. Havertz\n\n Injured: None\n Suspended: None\n\nDeniz Undavcame off the bench against Curacao to score, extending his superb international record to seven goals in 10 internationals, and the Stuttgart forward is pushing for a start.\n\nHowever, the four-pronged attack of Leroy Sane. Jamal Mus\n\n\u2022 Germany and Ivory Coast aim to seal World Cup knockout place: All to know - Al Jazeera\n  https://www.aljazeera.com/sports/2026/6/19/germany-and-ivory-coast-aim-to-seal-world-cup-knockout-place\n  Bonny and unused subs from the first game, Oumar Diakite and Evann Guessand, are alternative options in attack.\n\nDiallo came off the bench to win it, and the Manchester United attacking midfielder will be pushing to start, which might mean a switch of flanks for teenage starlet Yan Diomande, who stole the show on the right against Ecuador and will be eager to put on a show against the nation in which he plays for RB Leipzig.\n\n## Germany predicted XI:\n\nNeuer (goalkeeper); Kimmich, Tah, Schlotterbeck, Brown; Pavlovic, Nmecha; Sane, Musiala, Wirtz; Havertz.\n\n## Ivory Coast predicted XI:\n\nY. Fofan\n\n\u2022 Surprising Ivory Coast not lacking confidence against Germany - Deadspin\n  https://deadspin.com/surprising-ivory-coast-not-lacking-confidence-against-germany/\n  Ivory Coast should pose a far more formidable test for Germany after their impressive 1-0 win over Ecuador in Les Elephants' first World Cup match since 2014.\n\nThe 19-year-old Yan Diomande was exceptional on both flanks in a Man of the Match performance, while substitute Amad Diallo scored a clinical 90th-minute winner.\n\nManager Emerse Fae embraces the rising expectations for his squad, the youngest of 48 at this tournament.\n\n\"We're not coming to watch the Germans play. We're coming to beat them, we're coming to get that qualification for the second round,\" Fae said. \"But above all, we want to\n\n\u2022 Manuel Neuer fit to start for Germany vs. Cura\u00e7ao - Nagelsmann - ESPN\n  https://www.espn.com/soccer/story/_/id/49055167/manuel-neuer-fit-start-germany-curacao-nagelsmann\n  3dSam Borden\n\nSix complaints about 2026 World Cup, and why it might be better than we think\n\n3dGabriele Marcotti\n\n2026 World Cup betting preview: One bet to make on every team\n\n4dVictoria Matiash and Liz Loza\n\n# Manuel Neuer fit to start for Germany vs. Cura\u00e7ao - Nagelsmann\n\n Bill ConnellyJun 13, 2026, 09:13 PM ET\n\n  Close\n  Bill Connelly is a writer for ESPN. He covers college football, soccer and tennis. He has been at ESPN since 2019.\n\n  Follow on X\n\nMultiple Authors\n\n Copy Link\n Email\n Print\n\nHOUSTON -- At a news conference the evening before Germany's first 2026 World Cup match against Cu"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Germany recent form and results",
+        "data": "\u2022 Germany at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d1594eb137-0095e9baf9f5-1000--germany-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  Coach: Julian Nagelsmann Captain: Joshua Kimmich World Cup appearances: 21 Best finish: Winners (1954, 1974, 1990, 2014) <strong>14 June: Germany 7-1 Cura\u00e7ao (Houston)</strong> 20 June: Germany vs C\u00f4te d&#x27;Ivoire (Toronto, 22:00 CET) 25 June: Ecuador vs Germany ...\n\n\u2022 Germany | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/germany/team-news\n  Germany v Cura\u00e7ao | Group E | FIFA World Cup 2026\u2122 | Highlights | International Sign Language (IS) Havertz: This result will give us a lot of confidence\n\n\u2022 Reuters Germany at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/germany/\n  ... Germany coach Julian Nagelsmann will not let his players rest on their laurels following their thumping <strong>7-1 World Cup Group E victory over Curacao</strong> \u200bon Sunday as he knows tougher assignments lie ahead if they \u200care to go deep into the ...\n\n\u2022 Germany World Cup schedule 2026: Dates, times, more to know for Die Mannschaft at FIFA men's soccer tournament | Sporting News\n  https://www.sportingnews.com/us/soccer/news/germany-world-cup-2026-schedule-results-group-fifa/0b46e81ef1869709724e86e4\n  Here&#x27;s a full breakdown of Germany in the 2026 World Cup.\n\n\u2022 World Cup 2026 results: Germany begin campaign with dominant victory over Curacao | The Independent\n  https://www.independent.co.uk/bulletin/sport/world-cup-2026-results-germany-netherlands-sweden-b2995675.html\n  Germany began their World Cup campaign with a dominant <strong>7-1 victory over debutants Curacao</strong>, featuring a brace from Kai Havertz. The Netherlands and Japan played out a gripping 2-2 draw in Dallas, with Japanese supporters earning praise for cleaning ..."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Ivory Coast recent form and results",
+        "data": "\u2022 Reuters Ivory Coast at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/cote-divoire/\n  ... Manager Emerse Fae said Ivory \u200bCoast&#x27;s <strong>1-0 victory over Ecuador</strong> showed his young side&#x27;s World Cup ambitions are \u200cgenuine, after substitute Amad Diallo&#x27;s 90th-minute winner secured a winning start to their campaign on Sunday.\n\n\u2022 C\u00f4te d'Ivoire | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/cote-d-ivoire/team-news\n  C\u00f4te d&#x27;Ivoire | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the C\u00f4te d&#x27;Ivoire squad at FIFA World Cup 2026\u2122.\n\n\u2022 How Amad\u2019s late winner saw Ivory Coast snatch a World Cup 2026 group win over Ecuador - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/ivory-coast-vs-ecuador-live-updates-world-cup-2026-score-result/3Pdsw9vuFKSW/\n  <strong>Ivory Coast have beaten Ecuador 1-0</strong> in their first match of the 2026 World Cup. The match looked set to finish as the first goalless draw of the tournament until Amad scored the winning goal in the 90th minute.\n\n\u2022 Ivory Coast 1-0 Ecuador: Amad scores late winner as Ecuador rue misses - as it happened - ESPN\n  https://www.espn.com/soccer/story/_/id/49064087/ivory-coast-ecuador-live-world-cup-2026-latest-updates-commentary-score-result\n  <strong>Amad proved to be the difference in a tight contest, giving the Ivory Coast all three points against Ecuador</strong>.\n\n\u2022 Ivory Coast at the 2026 World Cup: roster, list, players and group stage schedule - AS USA\n  https://en.as.com/soccer/world-cup/ivory-coast-at-the-2026-world-cup-roster-list-players-and-group-stage-schedule-f202606-n/\n  Having featured in three consecutive World Cups between 2006 and 2014, Ivory Coast\u2019s participation in the 2026 tournament ends a 12-year drought <strong>without qualification</strong>. Despite boasting some of world soccer\u2019s top stars in the 2000s and 2010s, ...\n\n\u2022 [Discussion] Why do you think the Ivory Coast has always underperformed at World Cups? Or do you think they perform at their level?\n  https://www.reddit.com/r/football/comments/1u2qwe9/why_do_you_think_the_ivory_coast_has_always/\n  You underestimate just how difficult it is to get out of group stages in a world cup let alone qualifying for it in Africa.  The post 2018 teams were not as good as the Drogba/Yaya era I think they have performed appropriately to their rank.  Which is making it to the World cup often for an African team consitently."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Germany vs. Ivory Coast: Head-to-head record and past meetings ahead of World Cup clash - Sports Mole\n  https://www.sportsmole.co.uk/football/germany/head-to-head/germany-vs-ivory-coast-head-to-head-record-and-past-meetings_599493.html\n  Ahead of Saturday&#x27;s 2026 World Cup Group E clash between Germany and Ivory Coast, Sports Mole looks at the head-to-head records and previous meetings between the two nations.\n\n\u2022 Germany vs Ivory Coast: All-time head-to-head record ahead of FIFA World Cup 2026\n  https://khelnow.com/football/world-football-germany-vs-ivory-coast-head-to-head-record-fifa-world-cup-202606\n  The result remains the only previous meeting between Germany and Ivory Coast. <strong>With the head-to-head record perfectly balanced</strong>, their FIFA World Cup 2026 encounter will determine which side gains the upper hand in this fixture.\n\n\u2022 Germany vs. Ivory Coast at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups\n  https://www.espn.com/soccer/story/_/id/49103529/fifa-world-cup-2026-germany-vs-ivory-coast-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  First week of World Cup betting brings record action at U.S. sportsbooks ... Robson: <strong>Germany&#x27;s 7-1 win</strong> vs. Cura\u00e7ao was a training game (1:58) ... Germany take on the Ivory Coast in a top-of-the-table Group E clash at the 2026 FIFA World Cup ...\n\n\u2022 Germany v C\u00f4te d'Ivoire: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021469\n  First Stage, Toronto Stadium, 2026-06-20T16:00:00Z\n\n\u2022 Germany vs Ivory Coast: Where to watch, TV channel, live stream & kick-off time | World Cup 2026 | Goal.com\n  https://www.goal.com/en/news/live-stream-online-tv-where-to-watch-germany-v-ivory-coast/blt5764a21b6ede56b3\n  The only meeting in the available data is a 2-2 draw in a friendly on November 18, 2009, played in Germany. <strong>There is no further head-to-head data beyond that single fixture</strong>. In Group E, Germany currently sit top after Matchday 1, with Ivory ...\n\n\u2022 [Discussion] Fan Parade to Toronto Stadium - Germany vs Ivory Coast\n  https://www.reddit.com/r/askTO/comments/1u8nq7r/fan_parade_to_toronto_stadium_germany_vs_ivory/\n  Amsterdam BrewHouse according to this post: https://www.reddit.com/r/toronto/s/U7qqDwBiBO\n\n\u2022 [Discussion] [World Cup Watch] Group Stage Game 1 | Germany vs Curacao | Netherlands vs Japan | Ivory Coast vs Ecuador | Sweden vs Tunisia\n  https://www.reddit.com/r/reddevils/comments/1u5otq0/world_cup_watch_group_stage_game_1_germany_vs/\n  An Amad goal and a new Van Dijk meme is all I ask for today\n\n\u2022 [Discussion] Looking for Germany vs Ivory Coast ticket\n  https://www.reddit.com/r/WorldCup2026Tickets/comments/1u4qv9y/looking_for_germany_vs_ivory_coast_ticket/\n  Hi! I have 1 ticket available.\n\n\u2022 [Discussion] Selling two Tickets to M33, Germany vs Ivory Coast, in Toronto on 6/20 at Face Value\n  https://www.reddit.com/r/WorldCup2026Tickets/comments/1tz177y/selling_two_tickets_to_m33_germany_vs_ivory_coast/\n  CAD?"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Germany vs. Ivory Coast at World Cup 2026: TV channel, how to watch, kick-off time, live stream, referee, predicted line-ups\n  https://www.espn.com/soccer/story/_/id/49103529/fifa-world-cup-2026-germany-vs-ivory-coast-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  Robson: Germany&#x27;s 7-1 win vs. Cura\u00e7ao was a training game (1:58) ... Germany take on the Ivory Coast in a top-of-the-table <strong>Group E</strong> clash at the 2026 FIFA World Cup in Toronto, Canada.\n\n\u2022 Germany vs Ivory Coast FIFA World Cup 2026 Preview: Everything you need to know | Goal.com US\n  https://www.goal.com/en-us/news/germany-ivory-coast-world-cup-preview/bltf447b5794f5d1174\n  Germany truly turned the screw in the second half, with Jamal Musiala, Nathaniel Brown, substitute Deniz Undav, and Havertz again all finding the net to cap a statement performance that sent Germany straight to the top of <strong>Group E</strong>.Getty Images ...\n\n\u2022 2026 FIFA World Cup Group E - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_E\n  <strong>Group E</strong> of the 2026 FIFA World Cup is taking place from June 14 to 25, 2026. The group consists of Germany, Cura\u00e7ao, Ivory Coast, and Ecuador. The top two teams, possibly along with the third-placed team, will advance to the round of 32. ... Updated to match(es) played on June 14, 2026.\n\n\u2022 Germany vs Ivory Coast expert predictions, picks for World Cup 2026\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/20/germany-ivory-coast-world-cup-prediction-analysis-odds/90625446007/\n  <strong>Each group will play a round robin style where teams are awarded three points for a win and one point for a draw</strong>. The top two teams in each group advance to the Round of 32 along with the eight best third-place squads.\n\n\u2022 FIFA World Cup Standings 2026: Live Group Tables, Results & Qualification Scenarios\n  https://www.covers.com/world-cup/group-standings\n  Live World Cup 2026 group standings with updated tables, qualification rules, tiebreakers, and betting context for group-stage matches."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Analyzes Ivory Coast's historical performance records against elite European nations to identify systemic tactical vulnerabilities.",
+        "data": "URL: https://www.national-football-teams.com/country/107/2026/Liechtenstein.html\nTitle: Liechtenstein (2026)\n## General Information for **Liechtenstein**\n\n##### Liechtensteiner Fussballverband\n\n**Founded**\n\n1934\n\n**FIFA entry**\n\n1976\n\n**Average height in 2026**\n\n1.78m\n\n**Average age in 2026**\n\n26.3\n\n**Confederation**\n\nUEFA\n\n**Infos provided by**\n\n##### Emblem\n\n##### Jersey in 2026\n\n![Jersey in 2026](https://www.national-football-teams.com/uploads/country_images/jersey/lie.gif)\n\n### Coaches in 2026\n\n#### F\u00fcnfst\u00fcck, Konrad (Coach)\n\n**Day of Birth**\n\n1980-10-07\n\n**Place of Birth**\n\nBayreuth (Germany)\n\n**Matches**\n\n3 (0 / 3)\n\n## Players of **Liechtenstein** in 2026\n\nFIFA\n\nNon FIFA\n\n[Name](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html?sort=player.surname&direction=asc&page=1)\n\n[Day of Birth](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html?sort=player.yearOfBirth&direction=asc&page=1)\n\n[Position](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html?sort=p.root&direction=asc&page=1)\n\nCurrent Club\n\n[M](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html?sort=score.matches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html?sort=score.substitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html?sort=score.goals&direction=asc&page=1)\n\n[M](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html?sort=score.nonFifaMatches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html?sort=score.nonFifaGoals&direction=asc&page=1)\n\n[B\u00fcchel, Benjamin](https://www.national-football-teams.com/player/27477/Benjamin_Buechel.html)\n\n1989-07-04\n\nGoalkeeper\n\n[![Liechtenstein](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Liechtenstein_107-589360842236b.png)](https://www.national-football-teams.com/country/107/2026/Liechtenstein.html)\n\n[FC Vaduz](https://www.national-football-teams.com/club/2477/2026/Fc_Vaduz.html)\n\n2\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Ospelt, Justin](https://www.national-football-teams.com/player/79640/Justin_Ospelt.html)\n\n1999-09-07\n\nGoalkeeper\n\n[![Germany](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Germany_71-5893500c1c4c5.png)](https://www.national-football-teams.com/country/71/2026/Germany.html)\n\n[Sportfreunde Siegen](https://www.national-football-teams.com/club/3788/2026/Sportfreunde_Siegen.html)\n\n1\n\n1\n\n0\n\n0\n\n0\n\n0\n\n[G\u00f6ppel, Maximilian](https://www.national-football-teams.com/player/64593/Maximilian_Goppel.html)\n\n1997-08-31\n\nLeft Back\n\n[![Switzerland](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Switzerland_180-58946786bca58.png)](htt"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Retrieves underlying performance metrics (xG/xGA) from Matchday 1 to evaluate actual performance quality over raw results.",
+        "data": "\u2022 2026 FIFA World Cup xG Tracker Results Expected Goals Of Every Match - RealGM Analysis\n  https://soccer.realgm.com/analysis/559/2026-FIFA-World-Cup-xG-Tracker-Results-Expected-Goals-Of-Every-Match\n  Our 2026 FIFA World Cup xG Tracker logs expected goals (xG) and final scores for every match of the tournament.\n\n\u2022 xG World Cup 2026 - Expected Goals and xG Stats | xGscore\n  https://xgscore.io/xg-statistics/world-cup/2026\n  World Cup xGscore&#x27;s Expected Goals (xG) stats and analyses, tournament table and result fairness. Advanced xG: On Target, Set Play, First / Second half and other\n\n\u2022 2026 World Cup: Germany vs. Ivory Coast Match Prediction, Betting Tips, And Odds (6/20/26)\n  https://www.canadasportsbetting.ca/news/world-cup/germany-ivory-coast-june-20-world-cup-prediction/\n  Their attack looked like a well-oiled machine, generating an impressive <strong>4.22 expected goals</strong> (xG). Meanwhile, Ivory Coast had to grind out a tough 1-0 victory against a disciplined Ecuador side, snatching the win in the 90th minute.\n\n\u2022 Germany vs Ivory Coast FIFA World Cup 2026 Preview: Everything you need to know | Goal.com US\n  https://www.goal.com/en-us/news/germany-ivory-coast-world-cup-preview/bltf447b5794f5d1174\n  GOAL brings you everything you need to know about Germany vs Ivory Coast at the 2026 FIFA World Cup.\n\n\u2022 World Cup xG (Expected Goals) | FootyStats\n  https://footystats.org/international/world-cup/xg\n  This table describes the xG per match of each team in the World Cup. <strong>xG = Expected Goals to be scored. xGA = Expected Goals to be conceded</strong>. xG vs Actual measures the team&#x27;s actual goals scored against the expected goals scored.\n\n\u2022 [Discussion] Why do you think the Ivory Coast has always underperformed at World Cups? Or do you think they perform at their level?\n  https://www.reddit.com/r/football/comments/1u2qwe9/why_do_you_think_the_ivory_coast_has_always/\n  You underestimate just how difficult it is to get out of group stages in a world cup let alone qualifying for it in Africa.  The post 2018 teams were not as good as the Drogba/Yaya era I think they have performed appropriately to their rank.  Which is making it to the World cup often for an African team consitently."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies off-pitch disruptors, squad morale issues, or sudden illness outbreaks affecting team selection.",
+        "data": "\u2022 Germany vs Ivory Coast FIFA World Cup 2026 Preview: Everything you need to know | Goal.com US\n  https://www.goal.com/en-us/news/germany-ivory-coast-world-cup-preview/bltf447b5794f5d1174\n  Germany are managed by Julian Nagelsmann, and <strong>no injury or suspension information has been provided ahead of this fixture</strong>. No probable starting lineup has been confirmed at this stage.\n\n\u2022 Which players are out of World Cup 2026? | FourFourTwo\n  https://www.fourfourtwo.com/competition/which-players-are-out-of-world-cup-2026\n  48 teams will compete at World Cup 2026 but these players have suffered injuries at the worst possible time\n\n\u2022 Germany at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d1594eb137-0095e9baf9f5-1000--germany-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  Everything you need to know about Germany at the 2026 World Cup: their fixtures, squad, qualifying record, key players, coach and tournament history.\n\n\u2022 Preview: Germany vs Ivory Coast - prediction, team news, lineups | World Cup 2026 - Sports Mole\n  https://www.sportsmole.co.uk/football/germany/world-cup-2026/preview/germany-vs-ivory-coast-prediction-team-news-lineups_599489.html\n  Sports Mole previews Saturday&#x27;s 2026 World Cup Group E clash between Germany and Ivory Coast, including predictions, team news and possible lineups.\n\n\u2022 2026 World Cup news live updates: Injuries, storylines as the tournament kicks off - Yahoo Sports\n  https://sports.yahoo.com/soccer/live/2026-world-cup-news-live-updates-injuries-squads-storylines-as-the-tournament-looms-200000776.html\n  Follow every major update from the 2026 World Cup, from roster announcements and injuries to ticketing, travel, fan information and more.\n\n\u2022 [Discussion] [World Cup 2026 Previews] C\u00f4te d'Ivoire: Les Elephants Look for Another Resurrection (21/48)\n  https://www.reddit.com/r/soccer/comments/1u5gmu1/world_cup_2026_previews_c%C3%B4te_divoire_les/\n  Diomande is going to have more scouts watching than supporters."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Provides market consensus and smart money movements to infer the expected game state and goal-scoring environment.",
+        "data": "\u2022 Germany vs. Ivory Coast odds, prediction, time: 2026 World Cup ...\n  https://www.cbssports.com/soccer/news/germany-ivory-coast-odds-prediction-time-2026-world-cup-picks-best-bets/\n  Ivory Coast odds. Germany at -200 (risk $200 to win $100) Ivory Coast at +500 and a draw at +360. The over/under for total goals is 2.5.\n\n\u2022 Germany vs Ivory Coast Predictions, Picks & Odds - Covers.com\n  https://www.covers.com/world-cup/germany-vs-ivory-coast-prediction-picks-odds-saturday-6-20-2026\n  Ivory Coast predictions expect the Germans to win on the spread. Germany vs Ivory Coast: Germany -1.5 (+146) Germany vs Ivory Coast Over/Under ...\n\n\u2022 World Cup Picks & Best Bets | August Young - YouTube\n  https://www.youtube.com/watch?v=_XHCN6brrj0\n  Germany vs Ivory Coast prediction and free World Cup pick today, Saturday, June 20, 2026, from August Young at Doc's Sports.\n\n\u2022 Germany vs Ivory Coast Prediction, Betting Tips, Lineups & Odds\n  https://www.sportsgambler.com/betting-tips/football/germany-vs-ivory-coast-prediction-lineups-odds-2026-06-20/\n  We're expecting Ivory Coast to give a good you can get Asian Handicap odds of -102 about the Elephants with a +1 goal start. Ivory Coast are ...\n\n\u2022 Germany vs. Ivory Coast (Jun 20, 2026) Odds and Spread - ESPN\n  https://www.espn.com/soccer/odds/_/gameId/760448\n  Find the latest odds, spread and score prediction for the Germany vs. Ivory Coast Fifa World Cup game on ESPN to be played on June 20, 2026 on ESPN."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Determines the stadium type, local weather forecast, and how physical fatigue might influence tactical changes late in the game.",
+        "data": "\u2022 Climate Change Big Player at FIFA World Cup 2026\n  https://www.worldweatherattribution.org/climate-change-big-player-at-fifa-world-cup-2026/\n  Surpassing the 26\u00b0C and 28\u00b0C thresholds is extremely likely now in the air conditioned stadiums, but there is also a strong increase in the ...\n\n\u2022 Germany vs Ivory Coast performance-impairing heat - Climate Central\n  https://www.climatecentral.org/world-cup-2026/matches/33\n  The June 20 match at Toronto Stadium (Germany vs. Ivory Coast) has a 9% chance of heat that can impair performance. Those odds are 1 percentage point higher ...\n\n\u2022 Things are heating up for the 2026 FIFA World Cup! Game-time ...\n  https://www.instagram.com/reel/DZgTs0nPFbs/\n  At 45\u00b0C air temperature with just 20% humidity, WBGT sits at 31.9\u00b0C .No action required. What's crazy is that heat risk gets extremely well ...\n\n\u2022 Germany vs. Ivory Coast at World Cup 2026: TV channel, how to ...\n  https://www.espn.com/soccer/story/_/id/49103529/fifa-world-cup-2026-germany-vs-ivory-coast-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups\n  Everything you need to know ahead 2026 World Cup encounter between Germany and the Ivory Coast ... Venue: BMO Field, Toronto, Canada Referee: Juan ...\n\n\u2022 \ufe0f   Extreme heat, high humidity, and high-altitude venues could ...\n  https://www.facebook.com/Aspetar/videos/%EF%B8%8F-extreme-heat-high-humidity-and-high-altitude-venues-could-become-some-of-the-t/1319097800407562/\n  Extreme heat, high humidity, and high-altitude venues could become some of the toughest opponents at the FIFA World Cup 2026."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides real-time injury and fitness updates on Germany's key creative midfielders leading into Matchday 2.",
+        "data": "\u2022 Germany and Ivory Coast aim to seal World Cup knockout place: All to know - Al Jazeera\n  https://www.aljazeera.com/sports/2026/6/19/germany-and-ivory-coast-aim-to-seal-world-cup-knockout-place\n  # Germany and Ivory Coast aim to seal World Cup knockout place: All to know. *Team news, prediction, and lineups as Germany and Ivory Coast meet in Group E aiming to secure last-32 qualification.*. One of the most mouthwatering matches in the second round of games in the World Cup 2026 group stage sees four-time champions Germany facing a talented Ivory Coast outfit in Toronto on Saturday evening. After disappointing group-stage exits in 2018 and 2022, Germany came into this tournament somewhat under the radar, with the perennial powerhouse ranked only seventh-favourites to lift their fifth Wo\n\n\u2022 Havertz sparks Germany\u2019s 7-1 rout of Cura\u00e7ao after underdogs\u2019 historic 1st goal in World Cup - Bozeman Daily Chronicle\n  https://www.bozemandailychronicle.com/ap_news/sports/havertz-sparks-germany-s-7-1-rout-of-cura-ao-after-underdogs-historic-1st-goal/article_4fd7b38d-b44c-56ab-8dc4-e25ff0d49ec7.html\n  Germany's Jonathan Tah, front , and Cura\u00e7ao's Tahith Chong fight for the ball during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Germany's Florian Wirtz, left, attempts a shot at goal during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Germany's Nico Schlotterbeck (15) celebrates with teammates after scoring his side's second goal during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Germany's Jamal Musiala falls to the ground in front of\n\n\u2022 Germany surges to a 3-1 halftime lead as Curacao nets its 1st World Cup goal - AP News\n  https://apnews.com/article/world-cup-germany-curacao-score-c6e9fff3fc605a39fe99837d1aef2419\n  Test Your News I.Q. 2026 Elections Election Results Election calendar White House Congress Supreme Court The latest AP-NORC polls Ground Game. ## Havertz sparks Germany\u2019s 7-1 rout of Cura\u00e7ao after underdogs\u2019 historic 1st goal in World Cup. Germany\u2019s Kai Havertz celebrates with teammate Jonathan Tah, left, after scoring his side\u2019s third goal during the World Cup Group E soccer match between Germany and Curacao in Houston, Sunday, June 14, 2026. Germany\u2019s Kai Havertz celebrates with teammate Jonathan Tah, left, after scoring his side\u2019s third goal during the World Cup Group E soccer match between\n\n\u2022 Three Observations from Germany\u2019s nostalgic 7-1 win over Cura\u00e7ao - Bavarian Football Works\n  https://www.bavarianfootballworks.com/fifa-world-cup/216116/germany-vs-curacao-match-observations-analysis-kai-havertz-jamal-musiala-nathaniel-brown\n  # Three Observations from Germany\u2019s nostalgic 7-1 win over Cura\u00e7ao. Germany blew past Cura\u00e7ao with plenty of contributions from the Bayern Munich contingent. HOUSTON, TEXAS - JUNE 14: Nathaniel Brown #18 of Germany celebrates scoring his team\u2019s fifth goal during the FIFA World Cup 2026 Group E match between Germany and Curacao at Houston Stadium on June 14, 2026 in Houston, Texas. People may have forgotten, after all these tournaments where Germany came up short, but this is a nation that is World Cup royalty. That\u2019s why this was a nostalgic performance. No, Cura\u00e7ao is not Brazil, but this was\n\n\u2022 Germany\u2019s Jamal Musiala nets early second half goal to extend lead against Cura\u00e7ao | 2026 FIFA World Cup - FOX Sports\n  https://www.foxsports.com/watch/fmc-9gs6cfz8x64wtfoq\n  # Germany\u2019s Jamal Musiala nets early second half goal to extend lead against Cura\u00e7ao | 2026 FIFA World Cup\u2122. ## Jamal Musiala scored a goal in 47' that extend Germany's lead to 4-1 against Cura\u00e7ao. 2 MINS AGO\u30fbFIFA Men's World Cup\u30fb0:34. FIFA Men's World Cup  Jamal Musiala  Germany  WC - Germany vs. FIFA MEN'S WORLD CUP. ### Germany\u2019s Kai Havertz converts penalty to extend lead against Cura\u00e7ao | 2026 FIFA World Cup\u2122. ### Germany\u2019s Nico Schlotterbeck scores header off corner, ta"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Extracts tactical analysis from recent match previews regarding Ivory Coast's defensive shape and lateral mobility.",
+        "data": "\u2022 2026 World Cup: Ivory Coast stuns Ecuador on last-gasp goal in Group E u - Yahoo Sports\n  https://sports.yahoo.com/soccer/article/2026-world-cup-ivory-coast-stuns-ecuador-on-last-gasp-goal-in-group-010603912.html\n  Ivory Coast started the 2026 World Cup on an incredible note, defeating Ecuador in a surprise 1-0 win off a late goal in the final minutes. It was a surprisingly fruitless game for the Ecuador attack, with the team not recording a shot on target until midway through the second half. However, Diallo was not the only star of the game: also playing a starring role was the crossbar, which denied three total goals \u2014 two for Ecuador and one for Ivory Coast \u2014 to keep the game level until Diallo finally broke through. It was a statement victory for the Ivory Coast, which has never made it past the gro\n\n\u2022 Ivory Coast\u2019s Elye Wahi denied entry to Canada at World Cup amid betting probe - AP News\n  https://apnews.com/article/wahi-ivory-coast-world-cup-matchfixing-5cf3397edcfd7867219390b51dc803fe\n  Test Your News I.Q. 2026 Elections Election Results Election calendar White House Congress Supreme Court The latest AP-NORC polls Ground Game. Ivory Coast\u2019s Elye Wahi, right, and teammate Nicolas Pepe react after missing a chance to score against Ecuador during a World Cup Group E soccer match in Philadelphia, Sunday, June 14, 2026. Ivory Coast\u2019s Elye Wahi (12) and Ecuador\u2019s Willian Pacho (6) jump to head the ball during the World Cup Group E soccer match between Ivory Coast and Ecuador in Philadelphia, Sunday, June 14, 2026. Ecuador goalkeeper Hernan Galindez, right, makes a save against Ivor\n\n\u2022 Ivory Coast vs Ecuador Highlights | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-43wd33qm20poy8zk\n  # Ivory Coast vs Ecuador Highlights | 2026 FIFA World Cup\u2122. ## Check out the full game highlights between Ivory Coast and Ecuador in the 2026 FIFA World Cup\u2122. Enner Valencia  Moises Caicedo  Franck Kessie  Amad Diallo  FIFA Men's World Cup  FIFA World Cup - 4 Minute Game Recaps  Ecuador  Ivory Coast  WC - Ivory Coast vs. Ecuador - 06/14/2026  JP Dellacamera. FIFA MEN'S WORLD CUP. ### Ivory Coast vs Ecuador Extended Highlights | 2026 FIFA World Cup\u2122. ### Ivory Coast\u2019s Amad Diallo scores clutch goal late to seal win against Ecuador | FIFA World Cup 2026\u2122. ### Ecuador hits crossbar twice in first\n\n\u2022 Ivory Coast vs Ecuador Prediction: Survival of the Fittest - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/ivory-coast-vs-ecuador-match-prediction-15-june-2026/\n  # Ivory Coast vs Ecuador Prediction: Survival of the Fittest. ## Ivory Coast vs Ecuador: Prediction for the Match on June 15, 2026. The two sides are meeting for the first time in history. ## Ivory Coast: Form and Statistics. Ivory Coast were impressive in the CAF World Cup qualifiers, winning eight of ten games. They have since gotten back to winning ways in their recent games with wins over South Korea and Scotland in March and over France and the Philadelphia Union. Ivory Coast and Ecuador are meeting for the first time in the history of the two sides. ## Ivory Coast vs Ecuador match predic\n\n\u2022 Germany vs. Ivory Coast projected lineups, starting 11 for World Cup 2026 Group E game in Toronto - sportingnews.com\n  https://www.sportingnews.com/au/football/news/germany-vs-ivory-coast-lineup-starting-11-world-cup-group-e/a1b872cb3dde32c3ae36335a\n  Ivory Coast projected lineups, starting 11 for World Cup 2026 Group E game in Toronto. Germany and the Ivory Coast each enjoyed contrasting winning starts at the 2026 World Cup. Die Mannschaft were given a brief scare when Livano Comenencia claimed a slice of World Cup history for Group E minnows Curacao by netting an equaliser in Houston. But Julian Nagelsmann's team responded in merciless fashion, Arsenal forward Kai Havertz rounding off a 7-1 win with his second of the match. Ivory Coast's game against Ecuador remained on a knife-edge until Manchester United star Amad Diallo c"
+      }
+    ],
+    "research_cost": 0.118,
+    "wallet_before": 0.728,
+    "wallet_after": 0.61,
+    "prediction": {
+      "pick": "home",
+      "confidence": 7,
+      "confidence_reason": "Germany's fully fit squad and superior bench depth face a fatigued Ivory Coast side missing key defender Evan N'Dicka, justifying a high confidence level up to the cap.",
+      "reasoning": "Germany's fluid attack and physical freshness will exploit a depleted and tired Ivorian defense to secure qualification.",
+      "probabilities": {
+        "home": 68,
+        "draw": 18,
+        "away": 14
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Germany opened their World Cup campaign with a dominant 7-1 victory over Cura\u00e7ao, generating an impressive 4.22 expected goals (xG).",
+      "away_form": "Ivory Coast secured a hard-fought 1-0 victory over Ecuador, clinching the win with a 90th-minute goal from substitute Amad Diallo.",
+      "key_injuries": [
+        "Ivory Coast: Evan N'Dicka (hamstring injury, continues to struggle)",
+        "Ivory Coast: Elye Wahi (forward, denied entry to Canada due to a previous arrest)",
+        "Germany: None reported (Manuel Neuer is fully fit)"
+      ],
+      "tactical_matchup": "Germany's fluid 4-2-3-1 attacking system holds the structural edge over an Ivory Coast defense weakened by the absence of key center-back Evan N'Dicka.",
+      "group_stakes": "Both teams sit on 3 points in Group E, and a victory for either side would secure qualification to the Round of 32.",
+      "home_win_signals": [
+        "Germany's attack is in devastating form, scoring 7 goals from 4.22 xG in their opening match.",
+        "Julian Nagelsmann has a fully fit squad with no injuries or suspensions, allowing for tactical continuity.",
+        "Superb squad depth is highlighted by Deniz Undav, who produced one goal and two assists off the bench in the opening match."
+      ],
+      "away_win_signals": [
+        "Ivory Coast possesses dangerous speed on the flanks, led by teenage starlet Yan Diomande and Amad Diallo.",
+        "Manager Emerse Fae has instilled high confidence in his young squad, publicly stating they are playing to beat Germany rather than just defend."
+      ],
+      "draw_signals": [
+        "The only previous head-to-head meeting between the two nations ended in a 2-2 friendly draw.",
+        "Ivory Coast showed great defensive resilience to keep a clean sheet against a physical Ecuador side."
+      ],
+      "contradictions": [
+        "Germany's 7-1 win suggests overwhelming superiority, but analysts noted it was akin to a 'training game' against tournament debutants, whereas Ivory Coast's 1-0 win was a much more rigorous test against disciplined opposition."
+      ],
+      "strategy_applied": [
+        "GER vs CUW (Form over history) and CIV vs ECU (Fitness over risk) provide context on how both teams approached and emerged from their opening fixtures."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting Germany's 7-1 blowout against a weak tournament debutant as a true measure of their defensive stability.",
+        "Taking Ivory Coast's manager's aggressive public statements at face value despite their severe squad limitations."
+      ],
+      "underweighted_factors": [
+        "The physical toll on Ivory Coast after a grueling match against Ecuador compared to Germany's low-intensity stroll against Cura\u00e7ao.",
+        "The compounding impact of missing key defender Evan N'Dicka and forward Elye Wahi against a fully fit German squad with superior bench depth."
+      ],
+      "draw_risk": "low \u2014 Germany's high-scoring momentum and Ivory Coast's compromised defense make a quiet, low-scoring stalemate highly improbable.",
+      "favorite": "home",
+      "confidence_cap": 7,
+      "verdict": "Germany's squad depth and fitness advantage should easily exploit a depleted Ivory Coast defense, even if Germany's initial 7-1 win was flattered by weak opposition."
+    },
+    "full_reasoning": "HOME_PCT: 68\nDRAW_PCT: 18\nAWAY_PCT: 14\nPICK: home\nCONFIDENCE: 7\nCONFIDENCE_REASON: Germany's fully fit squad and superior bench depth face a fatigued Ivory Coast side missing key defender Evan N'Dicka, justifying a high confidence level up to the cap.\nREASONING: Germany's fluid attack and physical freshness will exploit a depleted and tired Ivorian defense to secure qualification.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
