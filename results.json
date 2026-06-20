@@ -8791,10 +8791,16 @@
     },
     "full_reasoning": "HOME_PCT: 65\nDRAW_PCT: 23\nAWAY_PCT: 12\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: Brazil's superior individual quality makes them strong favorites, but their lack of central creativity without Neymar and Haiti's disciplined low block cap the confidence at 6.\nREASONING: Brazil's elite wingers should eventually break down Haiti's compact defense, though Haiti's aerial threat and defensive resilience will make it a closely contested match.",
     "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 3,
+      "away_score": 0,
+      "winner": "home"
+    },
+    "correct": true,
+    "evaluation": "DATA:\n- useful: https://api.signalfuse.co/v1/gateway/search/brave \u2014 Confirmed Haiti's low-block defensive structure, validating the winger-driven breakthrough angle.\n- useless: https://websearch--gw.swerver.net/search \u2014 Stadium climate and humidity analysis had no impact on a standard 3-0 blowout.\n- useless: https://skim402.com/api/v2/read \u2014 Historical 2016 squad context was completely irrelevant to Haiti's active roster capabilities.\n- useless: https://api.signalfuse.co/v1/gateway/search/tavily \u2014 Over-analyzing Vinicius Junior's fitness was a waste of budget given Brazil's massive squad depth.",
+    "reflected": true,
+    "reflected_at": "2026-06-20T03:00:23.820033+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defensive structure (BRA vs HAI)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (BRA vs HAI)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (BRA vs HAI)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 fitness (BRA vs HAI)"
   },
   {
     "match": "TUR vs PAR",
