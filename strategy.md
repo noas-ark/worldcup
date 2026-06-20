@@ -28,8 +28,9 @@
 - SCO vs MAR: Technical quality over defensive motivation.
 - BRA vs HAI: Winger breakthrough over low-block.
 - TUR vs PAR: Defensive block over midfield quality.
+- NED vs SWE: Home metrics over individual attack.
 
 ## Data sources
-- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — defensive structure (TUR vs PAR)
-- skip: Venue (https://websearch--gw.swerver.net/search) — travel and pitch (TUR vs PAR)
-- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — individual fitness (TUR vs PAR)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — home performance metrics (NED vs SWE)
+- skip: Venue (https://websearch--gw.swerver.net/search) — environmental conditions (NED vs SWE)
+- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — individual attacking lineups (NED vs SWE)
