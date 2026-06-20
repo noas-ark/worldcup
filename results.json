@@ -8465,5 +8465,329 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "BRA vs HAI",
+    "home": "BRA",
+    "away": "HAI",
+    "kickoff": "2026-06-20T00:30Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (SUI vs BIH)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 vulnerability (CAN vs QAT)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 turf (CAN vs QAT)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 efficiency (MEX vs KOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 pressing triggers (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 venue (SUI vs BIH)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (SUI vs BIH)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 counters (CAN vs QAT)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (MEX vs KOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (MEX vs KOR)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 physical profiling (USA vs AUS)",
+    "information_needs": "FORM\n- How did Brazil perform in their opening 2026 World Cup group stage match (assuming this is Matchday 2 or 3), specifically regarding their expected goals (xG) conversion rate and ability to sustain pressure against defensive opposition?\n- What is Haiti's recent defensive record against top-tier CONMEBOL or UEFA opposition in the 12 months leading up to June 2026?\n\nPLAYERS\n- Is Brazil's primary creative winger (e.g., Vin\u00edcius J\u00fanior) or key midfield progressor carrying any fitness concerns or yellow card accumulation risks from their previous match?\n- Are Haiti's key European-based physical assets, such as striker Frantzdy Pierrot and midfielder Danley Jean Jacques, fully fit and available to start to combat Brazil's athletic advantage?\n\nTACTICS\n- Will Haiti employ a compact 5-4-1 deep low-block to compress central space, and how has Brazil's manager historically structured their half-space rotations to unlock ultra-defensive setups?\n- How vulnerable is Brazil's high defensive line to Haiti's direct, long-ball transition play targeting the channels?\n\nH2H\n- Does the psychological weight of their last major competitive meeting (Brazil's 7-1 win at the 2016 Copa Am\u00e9rica Centenario) still influence the tactical conservatism of Haiti's veteran players?\n\nCONTEXT\n- What do the current 2026 World Cup group standings require from each team\u2014does Brazil need a massive goal-difference boost to secure the top seed, or can they afford to rotate and conserve energy?\n\nMARKET\n- Where is the Asian Handicap line currently set (e.g., Brazil -2.5 or -3.0), and has the early market movement favored a high-scoring blowout or a resilient Haitian defensive cover?\n\nNEWS\n- Are there any reports of squad disharmony, tactical friction, or heavy media pressure within the Brazilian camp following their recent performances?\n\nVENUE\n- Which North American host city is staging this match, and will high summer humidity levels (e.g., if played in Miami or Houston) slow down the tempo of Brazil's passing or test Haiti's physical conditioning in the second half?",
+    "research_gaps": [
+      {
+        "need": "Where is the Asian Handicap line currently set (e.g., Brazil -2.5 or -3.0), and has the early market movement favored a high-scoring blowout or a resilient Haitian defensive cover?",
+        "category": "MARKET",
+        "ideal_service": "An x402-enabled sports betting API (e.g., OddsPortal or Betfair API) that provides real-time Asian Handicap lines and market volume/odds movement."
+      },
+      {
+        "need": "What is Haiti's recent defensive record against top-tier CONMEBOL or UEFA opposition in the 12 months leading up to June 2026?",
+        "category": "FORM",
+        "ideal_service": "A sports statistics database API (e.g., Opta or Sofascore API) that allows querying historical team defensive metrics filtered by opponent confederation (CONMEBOL/UEFA) over a specific time range."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Brazil vs Haiti World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Brazil vs Haiti World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Brazil World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Brazil recent form and results",
+        "need": "How has Brazil performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Haiti World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Haiti recent form and results",
+        "need": "How has Haiti performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Brazil vs Haiti head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Brazil vs Haiti World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.national-football-teams.com/country/85/Haiti.html"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Provides historical squad context and veteran player profiles for Haiti to assess if 2016 squad members are still active and potentially affected.",
+        "need": "Does the psychological weight of their last major competitive meeting (Brazil's 7-1 win at the 2016 Copa Am\u00e9rica Centenario) still influence the tactical conservatism of Haiti's veteran players?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Brazil World Cup 2026 opening match expected goals xG performance",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Searches for tactical match reports and statistical performance (xG) of Brazil's opening World Cup match to gauge their efficiency.",
+        "need": "How did Brazil perform in their opening 2026 World Cup group stage match, specifically regarding their expected goals (xG) conversion rate and ability to sustain pressure against defensive opposition?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Haiti defensive tactics low block 5-4-1 Brazil tactical analysis",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies tactical setups, defensive low-block structures for Haiti, and Brazil's historical approach to breaking them down.",
+        "need": "Will Haiti employ a compact 5-4-1 deep low-block to compress central space, and how has Brazil's manager historically structured their half-space rotations to unlock ultra-defensive setups?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Brazil vs Haiti World Cup 2026 match venue city weather humidity",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Finds the exact stadium and city hosting the match along with local climate and humidity forecasts to assess physical impact on both squads.",
+        "need": "Which North American host city is staging this match, and will high summer humidity levels slow down the tempo of Brazil's passing or test Haiti's physical conditioning in the second half?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Brazil World Cup 2026 Vinicius Junior fitness injury news suspensions",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Checks for real-time news on Vinicius Junior's fitness, potential injuries, or suspension risks before the Haiti match.",
+        "need": "Is Brazil's primary creative winger (e.g., Vin\u00edcius J\u00fanior) or key midfield progressor carrying any fitness concerns or yellow card accumulation risks from their previous match?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Haiti World Cup 2026 squad injuries Frantzdy Pierrot Danley Jean Jacques",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Verifies the fitness and availability of Haiti's key European-based physical assets to see if they can start.",
+        "need": "Are Haiti's key European-based physical assets, such as striker Frantzdy Pierrot and midfielder Danley Jean Jacques, fully fit and available to start to combat Brazil's athletic advantage?",
+        "category": "PLAYERS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Brazil vs. Haiti - Live Score - June 19, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-brazil-vs-haiti-jun-19-2026-game-boxscore-647647\n  0\n\nBruno Guimaraes\n\n1\n\nAssists\n\nJean-Ricner Bellegarde\n\n0\n\nDanilo Santos\n\n1\n\nShots on Goal\n\nFrantzdy Pierrot\n\n1\n\nLucas Paqueta\n\n0.2\n\nExpected Goals (xG)\n\nRuben Providence\n\n0.3\n\nDouglas Santos\n\n6.6\n\nRating\n\nHannes Delcroix\n\n6.6\n\nAlisson\n\n0.23\n\nKeeper Save %\n\nJohny Placide\n\n0.25\n\nAlisson\n\n0\n\nClean Sheets\n\nJohny Placide\n\n0\n\nHAI\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $990 would win $1,090 total if Brazil wins and a bet of $100 would win $2,100 total if Haiti wins\n\n-990\n\nBRA\n\n+2000\n\nHAI\n\nOVER/UNDER 3.5 GOALS\n\nThe combined final score of both teams is set at 3.5\n\n-125\n\nOVER 3.5\n\n+100\n\nUNDER \n\n\u2022 Brazil vs Haiti Prediction: An Easy Run for Brazil - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/brazil-vs-haiti-match-prediction-20-june-2026/\n  Where to Watch Canada vs Qatar: 2026 FIFA World Cup TV Channel Live Stream & Match Details\n\nDercksen and De Klerk Steer South Africa to Nervy Victory Over Pakistan\n\nIndia Crush Netherlands by 95 Runs as Mandhana and Verma Put on a Show\n\nSubstance\n\nTo top\n\n1.Brazil vs Haiti: Prediction for the Match on June 20, 20262.Brazil: Form and Statistics3.Brazil Expected Line Ups4.Haiti: Form and Statistics5.Haiti Expected Line Ups6.Brazil vs Haiti: Head-to-Head statistics7.Brazil vs Haiti: Betting Tips & Odds8.Brazil vs Haiti match prediction, 20th June 2026\n\nUSERS' CHOICE\n\n14100 \u20ac\n\n697250 $\n\n020 000 $\n\n\n\u2022 Brazil vs. Haiti prediction, lineups, odds and bet builder tips for World Cup Group C match - sportingnews.com\n  https://www.sportingnews.com/uk/football/news/brazil-vs-haiti-prediction-lineups-odds-bet-builder-tips-world-cup/63fc876562615bbaf977a586\n  Vinicius showed his quality against Morocco, while Raphinha also looked sharp. Expect them to be more ruthless than the Scots were against the limited Haitians.\n\nThat said, the Brazilians aren't effectively matching attacking intent with control at the other end of the pitch. Haiti carry a threat with an attacking style under Sebastien Migne and will fancy themselves to score a famous goal in Pennsylvania.\n\nPrediction: Brazil 5-1 Haiti (20/1 with Bet365)\n\nMORE: World Cup Free Bets 2026 \u2014 Best Betting Offers & Sign-Up Bonuses\n\n## Brazil vs. Haiti best bets\n\nWe've picked out four best bets for B\n\n\u2022 Brazil vs. Haiti projected lineups, starting 11 for World Cup 2026 Group C game in Philadelphia - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/brazil-vs-haiti-lineups-starting-11-world-cup-2026-group-c/a871368ea561f616a581f1e2\n  ## Where to watch Brazil vs. Haiti\n\nIn USA:\n\n TV channel: FS1\n Live stream: fubo,Fox One, Fox Sports app/website\n\nThis match will be broadcast nationally on Fox in the United States with streaming options available on its dedicated platforms.\n\nThe best place to catch the match is on streaming service fubo, with new customers able to sign up for a FREE trial.\n\nSN\n\nStream live Brazil vs. Haiti\n\nWatch Live Sports and TV Without Cable\n\nStart Watching\n\nFubo offers a free trial for new subscribers, so you can try the service before you buy. Stream ESPN, ABC, CBS, Fox and 100+ top channels of live TV\n\n\u2022 Brazil vs. Haiti prediction: World Cup odds, best bets, sportsbook promos and expert picks - sportingnews.com\n  https://www.sportingnews.com/us/betting/news/brazil-vs-haiti-prediction-world-cup-odds-best-bets-picks/63fc876562615bbaf977a586\n  TV channel:Fox\n Live stream:fubo,Fox One, Fox Sports app/website\n\nBrazil's second match of the 2026 FIFA World Cup will be aired nationally on Fox. Fans looking to live stream the game can find it on fubo, which offers new subscribers a free trial.\n\nFubo offers a free trial for new subscribers, so you can try the service before you buy. Stream ESPN, ABC, CBS, Fox and 100+ top channels of live TV and sports without cable. (Participating plans only. Taxes and fees may apply.)\n\nS"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Brazil vs. Haiti projected lineups, starting 11 for World Cup 2026 Group C game in Philadelphia - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/brazil-vs-haiti-lineups-starting-11-world-cup-2026-group-c/a871368ea561f616a581f1e2\n  ## Brazil vs. Haiti World Cup rosters\n\nHere are the names on Brazil and Haiti's World Cup rosters. All caps and stats are correct as of the date of their announcement in May 2026.\n\n### Brazil World Cup Roster\n\n## Brazil World Cup squad\n\nMORE: A complete breakdown of Brazil's 2026 World Cup squad\n\nHead coach:Carlo Ancelotti [...] ### Morocco World Cup Roster\n\n## Morocco World Cup squad\n\nHead coach: Mohamed Ouahbi [...] # Brazil vs. Haiti projected lineups, starting 11 for World Cup 2026 Group C game in Philadelphia\n\nMarios Hamboullas\n\n\u2022\n\n Add The Sporting News on Google \n\nBrazil and Haiti meet \n\n\u2022 Is Neymar playing vs. Haiti? Latest update on Brazil star's World Cup injury recovery - sportingnews.com\n  https://www.sportingnews.com/in/football/news/neymar-playing-vs-haiti-update-brazil-world-cup-injury/e3aa52ccb3cac41820964248\n  Neymar joined up with his Brazilian teammates for the first time on Wednesday. The Santos playmaker appeared to be in a jovial mood as he made his first appearance at Brazil's training ground in Morristown, New Jersey, chumming around with Raphinha, Bruno Guimaraes, Gabriel and Fabinho while jokingly accessing media members if they missed him.\n\n> \ud83d\udea8Neymar to the media as he resumes regular training with the national team:  \n>   \n> \u201cWere you missing me?\u201d \ud83d\ude2d pic.twitter.com/V5sR0bWhYo\n>\n> \u2014 Brasil Football \ud83c\udde7\ud83c\uddf7 (@BrasilEdition) June 17, 2026\n\nAfter a brief spell with the squad, Neymar was sent away \n\n\u2022 Neymar Will Not Play Against Haiti at the 2026 World Cup - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/neymar-will-not-play-against-haiti-at-the-2026-world-cup/\n  Santos and Brazil forward Neymar will not be able to play in Matchday 2 of the World Cup group stage due to his incomplete recovery from injury.\n\nNational team head coach Carlo Ancelotti confirmed that the decision was made not to expose the player to unnecessary risk. Neymar will not travel with the team to Philadelphia, where Brazil will face Haiti on June 20.\n\nThe 34-year-old suffered an injury before the start of the 2026 World Cup and already missed the team's first match at the tournament, a 1-1 draw with Morocco.\n\nThe 2026 World Cup is being held in the United States, Canada, and Mexico\n\n\u2022 Brazil Prepared to Keep Neymar Sidelined for Group Matches to Prevent Re-Injury - FOX Sports\n  https://www.foxsports.com/stories/soccer/brazil-prepared-keep-neymar-sidelined-group-matches-prevent-re-injury\n  share\n\nrecommended\n\n1. ### 2026 World Cup Round of 16 Odds: Which Teams Will Make It?### How to Watch the 2026 FIFA World Cup: Scores, Schedule, Dates for Every Match### 4 Takeaways From Mexico's World Cup Roster Selection\n2. ### 2026 World Cup Quarterfinal Odds: Which Squads Will Make Final 8?### 2026 World Cup Odds: Who Will Score the Most Goals For Their Countries?### 2026 World Cup Power Rankings: Every Team Ranked From 48 to 1\n3. ### 2026 World Cup: France Alone Atop Oddsboard After Spain's Shocking Draw### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Player\n\n\u2022 France Defender Malo Gusteau Injured Ahead of 2026 World Cup Match Against Iraq - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/france-defender-malo-gusteau-injured-ahead-of-2026-world-cup-match-against-iraq/\n  The 2026 World Cup takes place from June 11 to July 19 in Canada, the United States, and Mexico. Didier Deschamps's team will face Iraq, Senegal, and Norway in Group I.\n\n\u201cPutting Ronaldo in the Starting Lineup Is a Mistake\u201d: Agent Barbosa on Portugal2026 World Cup Top Scorers as of June 18, 2026England and Croatia Announce Starting Lineups for World Cup Match\n\nSource: Metaratings\n\nFollow Telecom Asia Sport!\n\n89\n\n-\n\nClaim Bonus!Bet now!\n\nTags:\n\n1xBetFootballFIFA 2026 World Cup\n\n"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Brazil recent form and results",
+        "data": "\u2022 Reuters Brazil at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/brazil/\n  Follow Brazil&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Brazil World Cup schedule 2026: Dates, times, more to know for Selecao at FIFA men's soccer tournament | Sporting News\n  https://www.sportingnews.com/us/soccer/news/brazil-world-cup-2026-schedule-results-group-fifa/59e3c5f4d8e3467240d92aa1\n  Brazil are the most historically successful side in the competition with five titles and remain the only country to have featured at every World Cup. Despite their pedigree, the team has endured a prolonged dip in form and is now close to matching its longest drought without winning the tournament since their first triumph: 24 years, between 1970 and 1994 \u2014 and now between 2002 and 2026.\n\n\u2022 World Cup 2026: Biggest takeaways from Brazil-Morocco group match | World Cup 2026 News | Al Jazeera\n  https://www.aljazeera.com/sports/2026/6/14/world-cup-2026-biggest-takeaways-from-brazil-morocco-group-match\n  A fifth-placed finish in South American qualifying underlined the scale of the challenge facing Ancelotti, and this performance has done little to ease concerns about the quality of the Brazil squad. A number of their players struggled to cope with the intensity of the Moroccan team, with midfielder Casemiro subbed off at half-time after a difficult opening 45 minutes in the heat. The World Cup final is a long way off in New Jersey, but Brazil will have to vastly improve if they are to have any hope of making it.\n\n\u2022 Brazil 2026 FIFA World Cup Results - ESPN\n  https://www.espn.com/soccer/team/results/_/id/205/league/FIFA.WORLD\n  Get all the Brazil results for the 2026 FIFA World Cup season on ESPN. Includes game summary and statistics for every Brazil game.\n\n\u2022 Brazil | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/brazil/fixtures\n  Brazil | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Brazil squad at FIFA World Cup 2026\u2122."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Haiti recent form and results",
+        "data": "\u2022 Reuters Haiti at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/haiti/\n  Follow Haiti&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Haiti national football team WC Qual, CONCACAF standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/haiti/table/2026/world-cup-qualification-americas/\n  Haiti national football team standings in WC Qual, CONCACAF 2026, the team\u2019s position, group, number of matches, wins, draws and losses on Tribuna.com\n\n\u2022 Haiti | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/haiti/team-news\n  Haiti | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Haiti squad at FIFA World Cup 2026\u2122.\n\n\u2022 World Cup 2026: Haiti's message of hope in rare appearance at finals - BBC Sport\n  https://www.bbc.com/sport/football/articles/c23yvvv7kr3o\n  Who are the Haiti players to look out for against Scotland? ... Last year&#x27;s qualification for the World Cup was achieved on an already significant day for Haiti, with 18 November also the date of the slave revolt that overthrew Napoleon&#x27;s colonial rule at the Battle of Vertieres in 1803.\n\n\u2022 Haiti 2026 Results - ESPN\n  https://www.espn.com/soccer/team/results/_/id/2654/haiti\n  Get all the Haiti results for the 2026 season on ESPN. Includes all the Haiti results from all national and international games."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Brazil vs. Haiti: Head-to-head record and past meetings ahead of 2026 World Cup contest - Sports Mole\n  https://www.sportsmole.co.uk/football/brazil/world-cup-2026/head-to-head/brazil-vs-haiti-head-to-head-record-and-past-meetings_599515.html\n  <strong>The only competitive meeting between Brazil and Haiti came in the group stage of the 2016 Copa America, and it ended in a thumping 7-1 win</strong> for the five-time world champions.\n\n\u2022 Brazil vs. Haiti (Jun 19, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760444/haiti-brazil\n  BrazilBrazilBRA \u00b7 (0-1-0) (0-1-0) -1200 \u00b7 ML \u00b7 -900 \u00b7 o3.5 \u00b7 -130 \u00b7 -2.5 \u00b7 -125 \u00b7 HaitiHaitiHAI \u00b7 (0-0-1) (0-0-1) u3.5 \u00b7 +125 \u00b7 +2000 \u00b7 u3.5 \u00b7 +105 \u00b7 +2.5 \u00b7 +100 \u00b7 DrawDrawDraw \u00b7 +1000 \u00b7 Draw \u00b7 +1000 \u00b7 BRA \u00b7 Last Matchup \u00b7 HAI \u00b7 7 \u00b7 2016 Copa Am\u00e9rica, Group Stage \u00b7 FT \u00b7 @ BRA \u00b7 1 \u00b7 4m \u00b7 Celebrities aren&#x27;t hard to find at the 2026 FIFA World Cup in North America.\n\n\u2022 Brazil vs Haiti: All-time head-to-head record ahead of FIFA World Cup 2026\n  https://khelnow.com/football/world-cup-brazil-vs-haiti-head-to-head-fifa-world-cup-202606\n  They won the first two friendly matches between the two nations, <strong>4-0 in April 1974 and 6-0 in August 2004.</strong> The five-time world champions defeated Haiti 7-1 in their sole competitive encounter, which took place in the 2016 Copa America group stage.\n\n\u2022 Brazil vs Haiti Head to Head, H2H Record, Goals & Meetings | FWC Times\n  https://fwctimes.com/brazil-vs-haiti-head-to-head/\n  Brazil vs Haiti head to head record: 4 meetings, <strong>Brazil lead 3-1</strong>, with goals, rankings and World Cup 2026 match details.\n\n\u2022 Brazil vs Haiti | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021457\n  The official site of the international governing body of football with news, national associations, competitions, results, fixtures, development, organisation, world rankings, statistics, the International Football Association Board, history, laws of the game, futsal, publications, downloads, and contact details.\n\n\u2022 [Discussion] Haiti vs Brazil 6/19 9pm \u2014 The Most Historically Significant Match Nobody Is Talking About\n  https://www.reddit.com/r/haiti/comments/1u7nd4h/haiti_vs_brazil_619_9pm_the_most_historically/\n  Lol\u2026yall overhype shit\n\n\u2022 [Discussion] Petition \u00b7 FIFA: Investigate Referee Mustapha Ghorbal & VAR for Robbing Haiti vs Scotland (World Cup - United States \u00b7 Change.org\n  https://www.reddit.com/r/haiti/comments/1u6e6h6/petition_fifa_investigate_referee_mustapha/\n  Don't even watch much soccer but it was apparent from the start the refs favored Scotland."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 How Brazil's win, draw, or loss vs Haiti could impact the 2026 World Cup Group C standings - World Soccer Talk\n  https://worldsoccertalk.com/amp/world-cup/how-brazils-win-draw-or-loss-vs-haiti-could-impact-the-2026-world-cup-group-c-standings/\n  Because of this, their place in the Round of 32 of the 2026 World Cup is not secured. With this in mind, the Canarinha face Haiti today, under more pressure than usual, meaning that a win, a draw, or a defeat could change the <strong>Group C</strong> standings.\n\n\u2022 Brazil vs Haiti | First Stage | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021457\n  The official site of the international governing body of football with news, national associations, competitions, results, fixtures, development, organisation, world rankings, statistics, the International Football Association Board, history, laws of the game, futsal, publications, downloads, and contact details.\n\n\u2022 Brazil vs. Haiti live score, result, highlights from 2026 World Cup Group C match | Sporting News\n  https://www.sportingnews.com/us/soccer/news/brazil-vs-haiti-world-cup-live-score-result-highlights/e1b381b8adf12af12fbe8a25\n  After entering the 2026 World Cup as the massive favorite to advance past <strong>Group C</strong> play, Brazil isn&#x27;t quite in the position it would&#x27;ve hoped to be in after one match. As the country continues its quest to end a 24-year World Cup championship ...\n\n\u2022 World Cup Group C standings 2026: Updated results, table and fixtures Brazil, Morocco, Scotland, Haiti | Sporting News\n  https://www.sportingnews.com/uk/football/news/world-cup-group-c-standings-results-table-2026-brazil/c79b62229f6707e1d2775b24\n  In the World Cup draw on December 5, five-time champions Brazil landed in <strong>Group C</strong> alongside Morocco, Haiti and Scotland. The four-team pod represented one of the more intriguing \u2014 and difficult \u2014 pairings crafted at the event.\n\n\u2022 Brazil vs Haiti FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/brazil-haiti-world-cup-preview/blte15b62338e20169d\n  In <strong>Group C</strong> of the 2026 FIFA World Cup, both Brazil and Haiti currently sit third in the standings heading into matchday two."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides historical squad context and veteran player profiles for Haiti to assess if 2016 squad members are still active and potentially affected.",
+        "data": "URL: https://www.national-football-teams.com/country/85/2026/Iceland.html\nTitle: Iceland (2026)\n## General Information for **Iceland**\n\n##### Knattspyrnusamband \u00cdslands\n\n**Founded**\n\n1947\n\n**FIFA entry**\n\n1947\n\n**Average height in 2026**\n\n1.84m\n\n**Average age in 2026**\n\n27.6\n\n**Confederation**\n\nUEFA\n\n**Infos provided by**\n\n##### Emblem\n\n![](https://www.national-football-teams.com/uploads/country_images/fifa/logo_isl.gif)\n\n##### Jersey in 2026\n\n![No jersey in 2026](https://www.national-football-teams.com/bundles/nftportofrontend/img/icons/jersey-none.png)\n\n### Coaches in 2026\n\n#### Gunnlaugsson, Arnar (Coach)\n\n**Day of Birth**\n\n1973-03-06\n\n**Place of Birth**\n\nAkranes (Iceland)\n\n**Height**\n\n1.85m\n\n**Matches**\n\n4 (0 / 4)\n\n## Players of **Iceland** in 2026\n\nFIFA\n\nNon FIFA\n\n[Name](https://www.national-football-teams.com/country/85/2026/Iceland.html?sort=player.surname&direction=asc&page=1)\n\n[Day of Birth](https://www.national-football-teams.com/country/85/2026/Iceland.html?sort=player.yearOfBirth&direction=asc&page=1)\n\n[Position](https://www.national-football-teams.com/country/85/2026/Iceland.html?sort=p.root&direction=asc&page=1)\n\nCurrent Club\n\n[M](https://www.national-football-teams.com/country/85/2026/Iceland.html?sort=score.matches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/85/2026/Iceland.html?sort=score.substitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/85/2026/Iceland.html?sort=score.goals&direction=asc&page=1)\n\n[M](https://www.national-football-teams.com/country/85/2026/Iceland.html?sort=score.nonFifaMatches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/85/2026/Iceland.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/85/2026/Iceland.html?sort=score.nonFifaGoals&direction=asc&page=1)\n\n[Valdimarsson, H\u00e1kon Rafn](https://www.national-football-teams.com/player/85252/Hakon_Rafn_Valdimarsson.html)\n\n2001-10-13\n\nGoalkeeper\n\n[![England](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/England_59-58934b3eb5aa0.png)](https://www.national-football-teams.com/country/59/2026/England.html)\n\n[Brentford FC](https://www.national-football-teams.com/club/708/2026/Brentford_Fc.html)\n\n2\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Einarsson, Anton Ari](https://www.national-football-teams.com/player/73253/Anton_Ari_Einarsson.html)\n\n1994-08-25\n\nGoalkeeper\n\n[![Iceland](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Iceland_85-589358a539fbe.png)](https://www.national-football-teams.com/country/85/2026/Iceland.html)\n\n[Brei\u00f0ablik K\u00f3pavogur](https://www.national-football-teams.com/club/1182/2026/Brei_Ablik_Kopavogur.html)\n\n1\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[\u00d3lafsson, El\u00edas Rafn](https://www.national-football-teams.com/player/84247/Elias_Rafn_Olafsson.html)\n\n2000-03-11\n\nGoalkeeper\n\n[![Denmark](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_imag"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Searches for tactical match reports and statistical performance (xG) of Brazil's opening World Cup match to gauge their efficiency.",
+        "data": "\u2022 xG World Cup 2026 - Expected Goals and xG Stats | xGscore\n  https://xgscore.io/xg-statistics/world-cup/2026\n  World Cup xGscore&#x27;s Expected Goals (xG) stats and analyses, tournament table and result fairness. Advanced xG: On Target, Set Play, First / Second half and other\n\n\u2022 Brazil vs. Haiti\u2014World Cup: Preview, Predictions and Lineups\n  https://www.si.com/soccer/brazil-vs-haiti-world-cup-preview-predictions-lineups-6-19-26\n  Brazil hopes its 2026 World Cup gets going on Friday, up against Haiti as Group C moves into matchday two of the tournament and looking for a first win.\n\n\u2022 2026 FIFA World Cup xG Tracker Results Expected Goals Of Every Match - RealGM Analysis\n  https://soccer.realgm.com/analysis/559/2026-FIFA-World-Cup-xG-Tracker-Results-Expected-Goals-Of-Every-Match\n  Bosnia and Herzegovina 0.98 xG (1) June 12 (Group D): United States 1.35 xG (4) vs. Paraguay 0.47 xG (1) June 13 (Group B): Qatar 0.76 xG (1) vs. Switzerland 3.24 xG (1) June 13 (Group C): Brazil <strong>1.23 xG (1)</strong> vs.\n\n\u2022 World Cup 2026 Stats: xG Trends & Predictions - GoalStatsLab\n  https://goalstatslab.com/blog/world-cup-2026-stats-xg-trends-predictions/\n  Against Haiti, Brazil will be expected to control the ball, create more shots inside the box and turn possession into better xG. The United States started with a <strong>4-1 win</strong>, which is excellent for confidence and goal difference.\n\n\u2022 World Cup xG (Expected Goals) | FootyStats\n  https://footystats.org/international/world-cup/xg\n  Expected Goals data for the International World Cup - including xG, xG Against (Conceded), and xG at home and away. Stats use advanced xG modelling for the World Cup.\n\n\u2022 [Discussion] Who do you think will be top scorer during World Cup 2026?\n  https://www.reddit.com/r/worldcup/comments/1txe51p/who_do_you_think_will_be_top_scorer_during_world/\n  Hello! Thanks for your submission to r/worldcup , your post is up and running! A general reminder to check out our rules in the sidebar, have fun, and most of all to be civil. Finally, take a closer look at this post regarding our civility rules and reddiquette because we would like for each and everyone to feel welcome on the subreddit and to keep a healthy and safe environment for the community. Please also make sure to Join us on Discord Thank you!  I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.\n\n\u2022 [Discussion] [ Removed by moderator ]\n  https://www.reddit.com/r/football/comments/1tufact/who_is_going_to_win_the_world_cup_2026/\n  Curacao and it aint even close.\n\n\u2022 [Discussion] Opta FIFA World Cup predictions\n  https://www.reddit.com/r/soccer/comments/1ttq751/opta_fifa_world_cup_predictions/\n  team | top group | Final | champ | ESP | 75.27% | 25.56% | 16.12% | FRA | 60.32% | 21.25% | 12.98% | ENG | 67.94% | 18.95% |\u2026\n\n\u2022 [Discussion] [Transfermarkt] Most goal contributions in World Cup history\n  https://www.reddit.com/r/soccer/comments/1tqkxtx/transfermarkt_most_goal_contributions_in_world/\n  The way Klose could have a mid club season but then come alive when playing for Germany was always so cool to me"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies tactical setups, defensive low-block structures for Haiti, and Brazil's historical approach to breaking them down.",
+        "data": "\u2022 Brazil vs Haiti Preview: Predicted Lineups, Team News & Tactical Analysis | 2026 World Cup Group C\n  https://www.rotowire.com/soccer/article/brazil-vs-haiti-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-118660\n  Vinicius attacking the space down Haiti&#x27;s right is Brazil&#x27;s most dangerous and most repeatable threat. Against a deep block, his ability to beat his man one-on-one and create from nothing is exactly what unlocks packed defenses. If Haiti double up on him, it frees space for Raphinha and Luiz Henrique; if they do not, Vinicius will torment them.\n\n\u2022 Haiti 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/haiti-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  ... Opponents will likely target their transitional vulnerabilities and attempt to break down the low block with sustained wide overloads. This Haiti tactical analysis <strong>reveals a team prioritizing defensive solidity over an expansive Haiti formation</strong>.\n\n\u2022 How to watch Brazil vs Haiti in USA: 2026 World Cup, Live Stream, TV & Preview\n  https://worldsoccertalk.com/watch-on-us-tv/how-to-watch-brazil-vs-haiti-in-the-usa-live-stream-and-tv-for-world-cup-2026/\n  The tactical battle will likely pit Brazil\u2019s possession-heavy, creative attack against Haiti\u2019s disciplined, low block. Ancelotti may be forced to tweak his system, which appeared overly dependent on imprecise crosses and the brilliance of his wingers. Introducing more control in the midfield could be key to breaking down Haiti\u2018s defense.\n\n\u2022 World Cup 2026 tactics: Tactical trends as Brazil join others in adopting a 4-4-2 - BBC Sport\n  https://www.bbc.com/sport/football/articles/c3dy8147dmzo\n  Many teams are opting for such a shape out of possession including Ecuador, Ivory Coast, Morocco, Brazil, Haiti, Scotland and Japan, at times.\n\n\u2022 Haiti World Cup 2026: Squad, Key Players, Tactics and Predictions\n  https://leaguelane.com/haiti-world-cup-2026-squad-key-players-tactics-predictions/\n  Against Brazil and Morocco, the tactics will be entirely defensive; <strong>stay compact, limit space in behind, and hope for a set-piece or moment of individual quality to steal something</strong>."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Finds the exact stadium and city hosting the match along with local climate and humidity forecasts to assess physical impact on both squads.",
+        "data": "\u2022 FOX Weather is providing exclusive and specialized ROWI (Risk of ...\n  https://www.facebook.com/fox6news/posts/fox-weather-is-providing-exclusive-and-specialized-rowi-risk-of-weather-impact-f/1591766159203535/\n  FOX Weather is providing exclusive and specialized ROWI (Risk of Weather Impact) Forecasts daily for relevant World Cup Matches.\n\n\u2022 FIFA match forecast: Cooler, less humid conditions Friday for Brazil ...\n  https://sports.yahoo.com/articles/fifa-match-forecast-cooler-less-110325067.html\n  FIFA match forecast: Cooler, less humid conditions Friday for Brazil vs. Haiti \u00b7 Expect highs of 82 degrees Friday for the city's second FIFA ...\n\n\u2022 In which city and stadium are Brazil vs Haiti playing today ... - Bolavip\n  https://bolavip.com/en/amp/world-cup/in-which-city-and-stadium-are-brazil-vs-haiti-playing-today-attendance-weather-for-wc-game\n  The weather is expected to be pristine for both squads to play comfortably. On a cool evening, Brazil unfortunately won't be wearing its classic ...\n\n\u2022 World Cup Weather Forecast: USA vs Australia match should ...\n  https://www.facebook.com/StormTeamWGAL/posts/world-cup-weather-forecast-usa-vs-australia-match-should-stay-dry-in-seattle-thi/1649953603805125/\n  Dangerously hot, humid weather is likely at many of the 2026 World Cup soccer venues. We crunched the numbers to see which matches are most at ...\n\n\u2022 Brazil vs Haiti performance-impairing heat | World Cup 2026 Climate ...\n  https://www.climatecentral.org/world-cup-2026/matches/29\n  Brazil vs Haiti at Philadelphia Stadium on June 19, 2026. 43% likelihood of performance-impairing heat with climate change."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Checks for real-time news on Vinicius Junior's fitness, potential injuries, or suspension risks before the Haiti match.",
+        "data": "\u2022 Brazil-Morocco and Scotland-Haiti games highlight Saturday World Cup action, in photos - Bozeman Daily Chronicle\n  https://www.bozemandailychronicle.com/ap_news/sports/brazil-morocco-and-scotland-haiti-games-highlight-saturday-world-cup-action-in-photos/article_24c75d79-4e5c-519f-8c1d-20aeec2c34c4.html\n  You have permission to edit this article. Brazil's Raphinha (11) and Morocco's Achraf Hakimi go up for a head ball during the World Cup Group C soccer match in East Rutherford, N.J., near New York, Saturday, June 13, 2026. A Morocco fan reacts before during the World Cup Group C soccer match between Brazil and Morocco in East Rutherford, N.J., near New York, Saturday, June 13, 2026. Brazil's Vinicius Junior, top, and Morocco's Achraf Hakimi battle for the ball during the World Cup Group C soccer match between Brazil and Morocco in East Rutherford, N.J., near New York, Saturday, June 13, 2026. \n\n\u2022 Ancelotti's Brazil escape Morocco scare after first-half horror show - Reuters\n  https://www.reuters.com/sports/soccer/ancelottis-brazil-escape-morocco-scare-after-first-half-horror-show-2026-06-14/\n  # Ancelotti's Brazil escape Morocco scare after first-half horror show. Item 1 of 4 Soccer Football - FIFA World Cup 2026 - Group C - Brazil v Morocco - New York/New Jersey Stadium, East Rutherford, New Jersey, U.S. - June 13, 2026 Brazil's Vinicius Junior scores their first goal REUTERS/Mike Segar Purchase Licensing Rights, opens new tab. Soccer Football - FIFA World Cup 2026 - Group C - Brazil v Morocco - New York/New Jersey Stadium, East Rutherford, New Jersey, U.S. - June 13, 2026 Brazil's Vinicius Junior scores their first goal REUTERS/Mike Segar. EAST RUTHERFORD, New Jersey, June 13 (Reu\n\n\u2022 Brazilian soccer fans at the World Cup heed warning not to dress Rocky statue in team gear - The Daily Review\n  https://www.thedailyreview.com/ap/sports/brazilian-soccer-fans-at-the-world-cup-heed-warning-not-to-dress-rocky-statue-in/article_3ce3ae67-cd74-578b-addf-ebcf4a6ffb40.html\n  ## Brazilian fans visiting Philadelphia for the World Cup are avoiding dressing the Rocky statue in their team colors. Brazilian and other soccer fans climb the steps leading to the Rocky statue, marked with a FIFA World Cup logo, in Philadelphia, on Thursday, June 18, 2026, ahead of Friday's FIFA World Cup Group C match between Brazil and Haiti./The Philadelphia Inquirer via AP). Brazil's Vinicius Junior (7) celebrates with teammate Bruno Guimaraes (8) after scoring during the World Cup Group C soccer match against Morocco in East Rutherford, N.J., near New York, Saturday, June 13, 2026. Braz\n\n\u2022 Brazil rallies for 1-1 draw against Morocco in its World Cup opener behind Vin\u00edcius J\u00fanior goal - AP News\n  https://apnews.com/article/brazil-morocco-score-f7c99c7947a903c46562344462d12057\n  Test Your News I.Q. 2026 Elections Election Results Election calendar White House Congress Supreme Court The latest AP-NORC polls Ground Game. Brazil\u2019s Vinicius Junior (7) reacts after being tripped in the first half during the World Cup Group C soccer match between Brazil and Morocco in East Rutherford, N.J., near New York, Saturday, June 13, 2026. Brazil\u2019s Vinicius Junior (7) celebrates a goal in the first half during the World Cup Group C soccer match between Brazil and Morocco in East Rutherford, N.J., near New York, Saturday, June 13, 2026. Morocco\u2019s Ismael Saibari celebrates scoring his \n\n\u2022 Brazil vs Morocco Extended Highlights | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-1uj90tcmue75neas\n  # Brazil vs Morocco Extended Highlights | 2026 FIFA World Cup\u2122. ## Check out the full game highlights between Brazil and Morocco in the 2026 FIFA World Cup\u2122. JUST IN\u30fbFIFA Men's World Cup\u30fb21:18. Ismael Saibari  Achraf Hakimi  FIFA Men's World Cup  Vinicius Junior  Raphinha  FIFA World Cup - 30 Minute Recaps  Brazil  WC - Brazil vs. Morocco - 06/13/2026  Morocco  John Strong  Stu Holden. FIFA MEN'S WORLD CUP. ### Brazil\u2019s Alisson Becker makes clutch double save in "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Verifies the fitness and availability of Haiti's key European-based physical assets to see if they can start.",
+        "data": "\u2022 Best Moments of 2026 FIFA World Cup\u2122 Match Day Three - FOX Sports\n  https://www.foxsports.com/watch/fmc-xscnqagsxg8dg04o\n  # Best Moments of 2026 FIFA World Cup\u2122 Match Day Three. ## Check out the Best Moments of 2026 FIFA World Cup\u2122 Match Day Three. Ismael Saibari  FIFA Men's World Cup  John McGinn  Vinicius Junior  Frantzdy Pierrot  Nestory Irankunda  Brazil  Scotland  T\u00fcrkiye  Morocco  Haiti  Australia  Alisson. FIFA MEN'S WORLD CUP. ### Nestory Irankunda scores Australia\u2019s first goal of 2026 FIFA World Cup\u2122, taking lead over T\u00fcrkiye. ### EVERY ANGLE of Vin\u00edcius J\u00fanior GOAL \ud83d\udd25 Brazil vs Morocco 2026 FIFA World Cup\u2122. ### INSTANT REACTION \ud83d\udea8 \u2019Haiti was more impressive than Scotland\u2019 Zlatan on Scotland\u2019s 1-0 win vs H\n\n\u2022 Haiti vs Scotland Extended Highlights | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-18dusllp99r1bw6q\n  # Haiti vs Scotland Extended Highlights | 2026 FIFA World Cup\u2122. ## Check out the full game highlights between Haiti and Scotland in the 2026 FIFA World Cup\u2122. FIFA Men's World Cup  Scott Mctominay  John McGinn  FIFA World Cup - 30 Minute Recaps  Scotland  WC - Haiti vs. Scotland - 06/13/2026  Haiti. FIFA MEN'S WORLD CUP. ### Haiti's Frantzdy Pierrot nearly equalizes with header against Scotland | 2026 FIFA World Cup\u2122. ### Haiti vs Scotland Highlights | 2026 FIFA World Cup\u2122. ### John McGinn scores Scotland\u2019s first goal of 2026 FIFA World Cup\u2122, taking lead over Haiti. ### INSTANT REACTION \ud83d\udea8 FIFA \n\n\u2022 EVERY ANGLE of Vin\u00edcius J\u00fanior GOAL \ud83d\udd25 Brazil vs Morocco 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-39rex1nrkc4cl9dl\n  # EVERY ANGLE of Vin\u00edcius J\u00fanior GOAL \ud83d\udd25 Brazil vs Morocco 2026 FIFA World Cup\u2122. ## Watch this stunning goal from Vin\u00edcius J\u00fanior from every angle as Brazil kicks off its 2026 FIFA World Cup\u2122 campaign. 3 MINS AGO\u30fbFIFA Men's World Cup\u30fb1:02. FIFA Men's World Cup  Vinicius Junior  FIFA World Cup - Every Angle  Brazil  WC - Brazil vs. FIFA MEN'S WORLD CUP. ### INSTANT REACTION \ud83d\udea8 \u2019Haiti was more impressive than Scotland\u2019 Zlatan on Scotland\u2019s 1-0 win vs Haiti. ### Haiti vs Scotland Extended Highlights | 2026 FIFA World Cup\u2122. ### Haiti's Frantzdy Pierrot nearly equalizes with header against Scotland |\n\n\u2022 Will Aussies WORRY United States? \ud83d\udea8 Instant Reaction from Australia\u2019s DOMINANT 2-0 win over T\u00fcrkiye - FOX Sports\n  https://www.foxsports.com/watch/fmc-w5rgstivhmip6eoo\n  \ud83d\udea8 Instant Reaction from Australia\u2019s DOMINANT 2-0 win over T\u00fcrkiye. ## Check out the instant reaction to Australia\u2019s win over T\u00fcrkiye. 4 MINS AGO\u30fbFIFA Men's World Cup\u30fb15:21. FIFA Men's World Cup  T\u00fcrkiye  United States  Australia. FIFA MEN'S WORLD CUP. ### Australia vs T\u00fcrkiye Extended Highlights | 2026 FIFA World Cup\u2122. ### Australia vs T\u00fcrkiye Highlights | 2026 FIFA World Cup\u2122. ### Best Moments of 2026 FIFA World Cup\u2122 Match Day Three. ### Australia\u2019s Mathew Leckie hits absolute screamer to extend lead over T\u00fcrkiye | 2026 FIFA World Cup\u2122. ### Nestory Irankunda scores Australia\u2019s first goal of 2\n\n\u2022 Australia vs T\u00fcrkiye Extended Highlights | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-a7v7b1fca7i9unew\n  # Australia vs T\u00fcrkiye Extended Highlights | 2026 FIFA World Cup\u2122. ## Check out the full game highlights between Australia and T\u00fcrkiye in the 2026 FIFA World Cup\u2122. FIFA Men's World Cup  Arda Guler  Nestory Irankunda  FIFA World Cup - 30 Minute Recaps  T\u00fcrkiye  Australia  WC - Australia vs. FIFA MEN'S WORLD CUP. ### Australia vs T\u00fcrkiye Highlights | 2026 FIFA World Cup\u2122. ### Australia\u2019s Mathew Leckie hits absolute screamer to extend lead over T\u00fcrkiye | 2026 FIFA World Cup\u2122. ### Nestory Irankunda scores Australia\u2019s first goal of 2026 FIFA World Cup\u2122, taking lead over T\u00fcrkiye. ### Haiti vs Scotla"
+      }
+    ],
+    "research_cost": 0.108,
+    "wallet_before": 1.072,
+    "wallet_after": 0.964,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "confidence_reason": "Brazil's superior individual quality makes them strong favorites, but their lack of central creativity without Neymar and Haiti's disciplined low block cap the confidence at 6.",
+      "reasoning": "Brazil's elite wingers should eventually break down Haiti's compact defense, though Haiti's aerial threat and defensive resilience will make it a closely contested match.",
+      "probabilities": {
+        "home": 65,
+        "draw": 23,
+        "away": 12
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Brazil rallied to secure a 1-1 draw against Morocco in their opener, showing attacking spark through Vinicius Junior but lacking defensive control.",
+      "away_form": "Haiti fell 0-1 to Scotland in their opening match despite a highly disciplined defensive display and a near-equalizer from Frantzdy Pierrot.",
+      "key_injuries": [
+        "Neymar (Brazil) - Out (ankle/fitness, ruled out of the match by Carlo Ancelotti to avoid re-injury risk)"
+      ],
+      "tactical_matchup": "Brazil's possession-heavy, winger-reliant attack faces Haiti's compact, disciplined low block that prioritizes defensive solidity and aerial strength.",
+      "group_stakes": "Brazil needs a win to get their Group C campaign on track after drawing their opener, while Haiti needs a positive result to avoid early elimination.",
+      "home_win_signals": [
+        "Vinicius Junior and Raphinha provide elite 1v1 threat on the wings to stretch and break down Haiti's low block.",
+        "Carlo Ancelotti's tactical adjustments to introduce more midfield control can prevent transition vulnerabilities.",
+        "Cooler, less humid weather in Philadelphia will prevent the physical fatigue that plagued Brazil in their opener."
+      ],
+      "away_win_signals": [
+        "Frantzdy Pierrot's aerial dominance poses a significant threat to a Brazilian defense that has struggled with control.",
+        "Haiti's quick transition play under Sebastien Migne can exploit space left behind by Brazil's advancing full-backs."
+      ],
+      "draw_signals": [
+        "The absence of Neymar leaves Brazil lacking central creativity, potentially leading to predictable wide overloads.",
+        "Haiti's defensive resilience, which limited Scotland to a single goal, could frustrate Brazil into a low-scoring stalemate."
+      ],
+      "contradictions": [
+        "Pundits expect a comfortable Brazil victory, yet tactical previews warn of Brazil's defensive instability and Haiti's threat on the counter."
+      ],
+      "strategy_applied": [
+        "None of the specific strategy rules apply directly to BRA vs HAI, but principles of evaluating low-block stability against possession-heavy favorites were used."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overestimating the impact of cooler Philadelphia weather on solving Brazil's fundamental defensive control issues.",
+        "Assuming Carlo Ancelotti's tactical adjustments will seamlessly fix midfield control when the opening match exposed deep transition vulnerabilities.",
+        "Overvaluing the 1v1 threat of wingers while simultaneously acknowledging that Neymar's absence makes the attack predictable and easy to crowd out."
+      ],
+      "underweighted_factors": [
+        "The compounding pressure on Brazil after dropping points in the opener, which could lead to over-committing and exposing transition space.",
+        "Frantzdy Pierrot's aerial dominance targeting a Brazilian defense that has already demonstrated a lack of control.",
+        "The ease with which Haiti can neutralize a predictable, wide-only attack without central creative threats like Neymar."
+      ],
+      "draw_risk": "medium \u2014 Brazil's lack of central penetration without Neymar could lead to a predictable attack that plays right into Haiti's compact, low-block defensive strength.",
+      "favorite": "home",
+      "confidence_cap": 6,
+      "verdict": "Brazil's elite individual talent makes them the logical favorite, but their defensive instability and predictable attack without Neymar make a frustrating, low-scoring draw a highly plausible risk."
+    },
+    "full_reasoning": "HOME_PCT: 65\nDRAW_PCT: 23\nAWAY_PCT: 12\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: Brazil's superior individual quality makes them strong favorites, but their lack of central creativity without Neymar and Haiti's disciplined low block cap the confidence at 6.\nREASONING: Brazil's elite wingers should eventually break down Haiti's compact defense, though Haiti's aerial threat and defensive resilience will make it a closely contested match.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
