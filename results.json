@@ -9884,9 +9884,15 @@
     },
     "full_reasoning": "HOME_PCT: 68\nDRAW_PCT: 18\nAWAY_PCT: 14\nPICK: home\nCONFIDENCE: 7\nCONFIDENCE_REASON: Germany's fully fit squad and superior bench depth face a fatigued Ivory Coast side missing key defender Evan N'Dicka, justifying a high confidence level up to the cap.\nREASONING: Germany's fluid attack and physical freshness will exploit a depleted and tired Ivorian defense to secure qualification.",
     "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 2,
+      "away_score": 1,
+      "winner": "home"
+    },
+    "correct": true,
+    "evaluation": "DATA:\n- useful: https://api.signalfuse.co/v1/gateway/search/tavily \u2014 Pinpointed Ivory Coast's lateral defensive mobility issues and injury depletion, which Germany exploited.\n- useful: https://websearch--gw.swerver.net/search \u2014 Accurately projected high physical fatigue late in the game, validating the freshness angle.\n- useless: https://skim402.com/api/v2/read \u2014 Historical records against European teams offered no actionable insights for current squad dynamics.\n- useless: https://api.signalfuse.co/v1/gateway/search/brave \u2014 General head-to-head history was outdated and irrelevant to the active tournament stakes.",
+    "reflected": true,
+    "reflected_at": "2026-06-20T22:30:20.754589+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 lateral mobility and injury data (GER vs CIV)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 physical fatigue projections (GER vs CIV)\n- skip: Historical (https://skim402.com/api/v2/read) \u2014 outdated European records (GER vs CIV)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 general head-to-head history (GER vs CIV)"
   }
 ]

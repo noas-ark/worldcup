@@ -29,8 +29,10 @@
 - BRA vs HAI: Winger breakthrough over low-block.
 - TUR vs PAR: Defensive block over midfield quality.
 - NED vs SWE: Home metrics over individual attack.
+- GER vs CIV: Lateral mobility and freshness over history.
 
 ## Data sources
-- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — home performance metrics (NED vs SWE)
-- skip: Venue (https://websearch--gw.swerver.net/search) — environmental conditions (NED vs SWE)
-- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — individual attacking lineups (NED vs SWE)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — lateral mobility and injury data (GER vs CIV)
+- use: Venue (https://websearch--gw.swerver.net/search) — physical fatigue projections (GER vs CIV)
+- skip: Historical (https://skim402.com/api/v2/read) — outdated European records (GER vs CIV)
+- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) — general head-to-head history (GER vs CIV)
