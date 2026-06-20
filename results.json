@@ -8795,5 +8795,370 @@
     "correct": null,
     "evaluation": null,
     "reflected": false
+  },
+  {
+    "match": "TUR vs PAR",
+    "home": "TUR",
+    "away": "PAR",
+    "kickoff": "2026-06-20T03:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 squad (SUI vs BIH)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 vulnerability (CAN vs QAT)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 turf (CAN vs QAT)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 efficiency (MEX vs KOR)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 pressing triggers (USA vs AUS)\n- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 matchups (SCO vs MAR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 venue (SUI vs BIH)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 history (SUI vs BIH)\n- skip: Search (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 counters (CAN vs QAT)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 climate (MEX vs KOR)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 sentiment (MEX vs KOR)\n- skip: Venue (https://websearch--gw.swerver.net/search) \u2014 microclimate (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 physical profiling (USA vs AUS)\n- skip: Previews (https://news-x402.com/news/recent) \u2014 history (SCO vs MAR)\n- skip: Metrics (https://skim402.com/api/v2/read) \u2014 progression (SCO vs MAR)",
+    "information_needs": "FORM\n- How did T\u00fcrkiye perform in their opening World Cup group match (assuming this is Matchday 2), specifically regarding their defensive transition metrics and expected goals (xG) creation?\n- Did Paraguay's Matchday 1 fixture and preceding warm-up friendlies show a continuation of their historically low-scoring, high-pressing defensive trend, or have they shown increased attacking efficiency?\n\nPLAYERS\n- Is T\u00fcrkiye\u2019s key playmaker Arda G\u00fcler fully fit to start, and how has his tactical role in the national team evolved compared to his utilization at Real Madrid?\n- How is Paraguay managing the fitness and deployment of Miguel Almir\u00f3n and Julio Enciso, and who is slated to start as their primary central striker to convert chances?\n\nTACTICS\n- How will Paraguay's compact defensive low-block handle T\u00fcrkiye\u2019s fluid, possession-based wing rotations and underlapping runs from fullbacks like Ferdi Kad\u0131o\u011flu?\n- Does T\u00fcrkiye\u2019s high-pressing system leave them vulnerable to Paraguay\u2019s direct, vertical counter-attacks, particularly in the spaces vacated by T\u00fcrkiye\u2019s advancing central midfielders?\n\nH2H\n- Have these two nations played any recent friendly matches, or does their historical head-to-head record (such as the 2002 World Cup) offer any relevant tactical or psychological precedents for this intercontinental clash?\n\nCONTEXT\n- What are the exact group standings heading into this Matchday 2 fixture, and how does the point requirement for the newly expanded 2026 World Cup Round of 32 affect each team's risk tolerance in the second half?\n\nMARKET\n- What do the current Asian Handicap lines (e.g., T\u00fcrkiye -0.5) and the Over/Under total goals market tell us about the implied probability of a low-scoring draw versus a decisive Turkish victory?\n\nNEWS\n- Are there any reports of camp illness, training ground injuries, or tactical discord within either squad following their opening matches of the tournament?\n\nVENUE\n- Which North American host city and stadium is staging this match, what are the expected temperature and humidity levels at kickoff, and does the travel distance from their Matchday 1 venues give one team a recovery advantage?",
+    "research_gaps": [
+      {
+        "need": "Real-time physical telemetry and tracking data for Arda G\u00fcler during training sessions to assess exact muscle load.",
+        "category": "PLAYERS",
+        "ideal_service": "FIFA Player App / Catapult Sports private API access for national team physical data."
+      },
+      {
+        "need": "Closed-door tactical training ground whiteboard sessions and set-piece routines practiced by T\u00fcrkiye.",
+        "category": "TACTICS",
+        "ideal_service": "Direct internal video analysis platform or encrypted team hub access."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "T\u00fcrkiye vs Paraguay World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "T\u00fcrkiye vs Paraguay World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "T\u00fcrkiye World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: T\u00fcrkiye recent form and results",
+        "need": "How has T\u00fcrkiye performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Paraguay World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Paraguay recent form and results",
+        "need": "How has Paraguay performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "T\u00fcrkiye vs Paraguay head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "T\u00fcrkiye vs Paraguay World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.national-football-teams.com/country/200/T\u00fcrkiye.html"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Retrieves the verified historical record and match results between Turkey and Paraguay to establish psychological precedents.",
+        "need": "Have these two nations played any recent friendly matches, or does their historical head-to-head record (such as the 2002 World Cup) offer any relevant tactical or psychological precedents?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Provides precise, verified standings and point rules to model both managers' risk-reward calculations as the match progresses.",
+        "need": "What are the exact group standings heading into this Matchday 2 fixture, and how does the point requirement for the newly expanded 2026 World Cup Round of 32 affect each team's risk tolerance in the second half?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Paraguay World Cup 2026 Matchday 1 performance attacking efficiency defensive press",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Establishes Paraguay's current tactical state and performance metrics from their most recent competitive outing.",
+        "need": "Did Paraguay's Matchday 1 fixture and preceding warm-up friendlies show a continuation of their historically low-scoring, high-pressing defensive trend, or have they shown increased attacking efficiency?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Turkey wing rotations Ferdi Kadioglu underlapping runs vs Paraguay defensive low block",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Analyzes the crucial tactical matchup between Turkey's primary attacking mechanism and Paraguay's defensive structure.",
+        "need": "How will Paraguay's compact defensive low-block handle T\u00fcrkiye\u2019s fluid, possession-based wing rotations and underlapping runs from fullbacks like Ferdi Kad\u0131o\u011flu?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Turkey vs Paraguay World Cup 2026 betting odds Asian Handicap over under",
+          "count": 3
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Extracts the implied probability distributions of different match outcomes according to global betting markets.",
+        "need": "What do the current Asian Handicap lines (e.g., T\u00fcrkiye -0.5) and the Over/Under total goals market tell us about the implied probability of a low-scoring draw versus a decisive Turkish victory?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Turkey vs Paraguay World Cup 2026 stadium venue weather travel distance recovery",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Evaluates environmental factors, stadium turf, and travel-induced fatigue which can significantly influence late-game physical output.",
+        "need": "Which North American host city and stadium is staging this match, what are the expected temperature and humidity levels at kickoff, and does the travel distance from their Matchday 1 venues give one team a recovery advantage?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Arda Guler fitness Turkey national team tactical role World Cup 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides real-time injury updates and tactical analysis regarding Arda G\u00fcler's deployment and fitness ahead of Matchday 2.",
+        "need": "Is T\u00fcrkiye\u2019s key playmaker Arda G\u00fcler fully fit to start, and how has his tactical role in the national team evolved compared to his utilization at Real Madrid?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Turkey vs Paraguay World Cup 2026 camp illness injury squad news",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Uncovers sudden, late-breaking squad issues, disruptions, or tactical friction within either camp that could heavily impact performance.",
+        "need": "Are there any reports of camp illness, training ground injuries, or tactical discord within either squad following their opening matches of the tournament?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Turkey vs Paraguay Prediction: A Do-Or Die Match For Both Sides - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/1x2/turkey-vs-paraguay-prediction-for-the-match-on-june-19th-2026/\n  ## Turkey vs Paraguay Match Prediction June 20th, 2026\n\nWhile Turkey utilizes a fluid, possession-oriented 4-2-3-1 system built around a deep-lying playmaker, Paraguay employs a disciplined 4-4-2 low block designed to withstand pressure and strike on the break through explosive counter-attacks. My major predictions are:\n\n My Prediction is for a BTTS - YES at 1.86 odds from 1xbet Sportsbook.\n\nFollowing their respective losses in the opening round, both squads are compelled to adopt a high-intensity, offensive style of play to sustain their hopes of reaching the World Cup knockout stage. Turkey \n\n\u2022 Turkiye vs. Paraguay Predictions, Picks & Props I 6/19/2026 - Deadspin\n  https://deadspin.com/prediction-markets/trending/turkiye-v-paraguay-predictions-picks-props/\n  As much as we like to convince ourselves that former Newcastle United midfielder Miguel Almiron will suddenly turn into a real-life version of Santiago Mu\u00f1ez and lead Paraguay to an upset victory, the truth of the matter is that Turkiye simply possesses too much technical quality in the midfield and the final third. We like to think that Paraguay\u2019s best path to victory here is built around set pieces and quick transitions through Almiron\u2019s pace, but that approach becomes much harder if Turkiye controls possession and forces them to defend for long stretches. While Paraguay\u2019s physicality cannot\n\n\u2022 T\u00fcrkiye vs. Paraguay - Live Score - June 19, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-turkiye-vs-paraguay-jun-19-2026-game-boxscore-647644\n  Mauricio\n\n1\n\nFerdi Kadioglu\n\n0\n\nAssists\n\nJulio Enciso\n\n1\n\nArda Guler\n\n3\n\nShots on Goal\n\nDiego Gomez\n\n1\n\nArda Guler\n\n0.4\n\nExpected Goals (xG)\n\nMauricio\n\n0.3\n\nMerih Demiral\n\n6.3\n\nRating\n\nMauricio\n\n7.0\n\nUgurcan Cakir\n\n0.25\n\nKeeper Save %\n\nOrlando Gill\n\n0.24\n\nUgurcan Cakir\n\n0\n\nClean Sheets\n\nOrlando Gill\n\n0\n\nPAR\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $100 would win $205 total if T\u00fcrkiye wins and a bet of $100 would win $374 total if Paraguay wins\n\n+105\n\nTUR\n\n+274\n\nPAR\n\nOVER/UNDER 2.5 GOALS\n\nThe combined final score of both teams is set at 2.5\n\n+105\n\nOVER 2.5\n\n-131\n\nUNDER 2.5\n\n### Preview\n\n#\n\n\u2022 Where to Watch Turkey vs Paraguay: 2026 FIFA World Cup TV Channel Live Stream & Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-turkey-vs-paraguay-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  # Where to Watch Turkey vs Paraguay: 2026 FIFA World Cup TV Channel Live Stream & Match Details\n\nOyebade Oluwafemi\n\nTurkey faces Paraguay in their 2026 FIFA World Cup second group stage match on Friday, June 19, 2026, at 11:00 p.m. ET at San Francisco Bay Area Stadium. Both nations will aim to bounce back after suffering defeats in their opening round games. Here's everything you need to know about how to watch the match, including TV channels, live streaming options, kick-off time, team news, and other key details ahead of the World Cup showdown.\n\nClaim Exlcusive World Cup Bonuses on BC Game\n\n\n\u2022 T\u00fcrkiye vs. Paraguay: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-turkiye-vs-paraguay-tv-channel-live-stream-2026-fifa-world-cup-group-d\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n Stories\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nFIFA Men's World Cup\n\nFIFA Men's World Cup\n\n# T\u00fcrkiye vs. Paraguay: How to Watch, TV Channel, Live Stream\n\nPublished Jun. 18, 2026 8:22 a.m. ET\n\nshare\n\nfacebookxredditlink\n\nT\u00fcrkiye and Paraguay meet in their 2026 FIFA World Cup second group stage match on Friday, June 19, 2026 at 11:00 p.m. ET from San Francisco Bay Area Stadium.\n\nT\u00fcrkiye lost their opening match to Australia 2-0, while Paraguay also lost their opener, conceding four goals in a defeat to th"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Paraguay XI vs Turkiye \u2013 Predicted lineup and team news - Yahoo Sports\n  https://sports.yahoo.com/articles/paraguay-xi-vs-turkiye-predicted-071000460.html\n  ## Paraguay team news\n\nAlfaro faces a couple of fitness concerns ahead of kick-off. Gustavo Caballero missed the opener entirely and continues to battle a muscular issue, while Ramon Sosa requires a late assessment on an ankle problem before a final decision is made on his involvement. Rodrigo Gill retains his place in goal.\n\nOmar Alderete and captain Gustavo Gomez are expected to continue at centre-back. Junior Alonso could make way at left-back, with Alexandro Maidana ready to come in and provide greater defensive solidity on that flank. Juan Jose Caceres continues at right-back.\n\nAdvertisem\n\n\u2022 T\u00fcrkiye vs. Paraguay - Live Score - June 19, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-turkiye-vs-paraguay-jun-19-2026-game-boxscore-647644\n  12 HOURS AGO \u2022 YOUTUBE\n\n### Team Feature: T\u00fcrkiye | T\u00fcrkiye Reflect On Their Return To The World Cup After 24 Years Away\n\n19 HOURS AGO \u2022 YOUTUBE\n\nSHOW MORE VIDEOS\n\nPREVIOUS GAMES\n\nTUR\n\n|  |  |  |\n --- \n| 6/14 | AUS | L2-0 |\n| 6/6 | VEN (A) | W2-1 |\n| 6/1 | MKD (H) | W4-0 |\n| 3/31 | KVX (A) | W1-0 |\n| 3/26 | ROU (H) | W1-0 |\n\nPAR\n\n|  |  |  |\n --- \n| 6/12 | USA | L4-1 |\n| 6/5 | NCA (H) | W4-0 |\n| 3/31 | MAR (A) | L2-1 |\n| 3/27 | GRE (A) | W1-0 |\n| 11/18 | MEX (A) | W2-1 |\n\n### TEAM STATS\n\nTUR\n\n0.0 Goals per Game 1.0\n\n1.6 Expected Goals (xG) per Game 0.6\n\n2.0 Goals Against per Game 4.0\n\n28.0 Shot\n\n\u2022 Turkey vs Paraguay Prediction: A Do-Or Die Match For Both Sides - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/1x2/turkey-vs-paraguay-prediction-for-the-match-on-june-19th-2026/\n  ## Turkey vs Paraguay Match Prediction June 20th, 2026\n\nWhile Turkey utilizes a fluid, possession-oriented 4-2-3-1 system built around a deep-lying playmaker, Paraguay employs a disciplined 4-4-2 low block designed to withstand pressure and strike on the break through explosive counter-attacks. My major predictions are:\n\n My Prediction is for a BTTS - YES at 1.86 odds from 1xbet Sportsbook.\n\nFollowing their respective losses in the opening round, both squads are compelled to adopt a high-intensity, offensive style of play to sustain their hopes of reaching the World Cup knockout stage. Turkey \n\n\u2022 Turkiye vs. Paraguay Predictions, Picks & Props I 6/19/2026 - Deadspin\n  https://deadspin.com/prediction-markets/trending/turkiye-v-paraguay-predictions-picks-props/\n  Prediction Markets\n\n+ Prediction Markets\n+ Prediction Market Apps\n+ Sports Prediction Markets\n+ Politics Prediction Markets\n+ Are Prediction Markets Legal?\n+ How Prediction Markets Work\n+ Kalshi Review\n+ Crypto.com Review\n+ Fanduel Predicts\n+ Polymarket Review\n+ OG Review\n+ Underdog Review\n\nRanking\n\nFitness\n\nSpanish\n\nBrazilian\n\nLifestyle\n\n# Turkiye vs. Paraguay Predictions, Picks & Props (6/19/2026)\n\nPaul Skidmore\n\nLast Updated on Thu Jun 18 2026\n\nReviewed By Vinolin Naidoo\n\nAfter struggling to find their rhythm in the tournament opener, Turkiye and Paraguay will be eager to prove they can bou\n\n\u2022 Where to Watch Turkey vs Paraguay: 2026 FIFA World Cup TV Channel Live Stream & Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-turkey-vs-paraguay-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  # Where to Watch Turkey vs Paraguay: 2026 FIFA World Cup TV Channel Live Stream & Match Details\n\nOyebade Oluwafemi\n\nTurkey faces Paraguay in their 2026 FIFA World Cup second group stage match on Friday, June 19, 2026, at 11:00 p.m. ET at San Francisco Bay Area Stadium. Both nations will aim to bounce back after suffering defeats in their opening round games. Here's everything you need to know about how to watch the match, including TV channels, live streaming options, kick-off time, team news, and other key details ahead of the World Cup showdown.\n\nClaim Exlcusive World Cup Bonuses on BC Game\n"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: T\u00fcrkiye recent form and results",
+        "data": "\u2022 T\u00fcrkiye at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d15969649d-c1471bfa3c52-1000--turkiye-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  <strong>T\u00fcrkiye ended a 24-year absence from the finals by qualifying for the FIFA World Cup 2026</strong>. Vincenzo Montella&#x27;s side, led by captain Hakan \u00c7alhano\u011flu, face Australia, Paraguay and USA in Group D.\n\n\u2022 Turkey at the FIFA World Cup 2026: Squad, fixtures and results\n  https://www.reuters.com/graphics/SOCCER-WORLDCUP/mopaoglqkpa/teams/turkey/\n  Squad, line-ups and fixture schedule for the Turkey team in USA \u00b7 Canada \u00b7 Mexico\n\n\u2022 Turkey national football team World Cup Qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/turkey/table/2026/world-cup-qualification/\n  This page shows the Turkey national football team World Cup Qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Turkey national football team World Cup Qualification 2026 standings changes during the competition.\n\n\u2022 T\u00fcrkiye | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/turkiye/team-news\n  The FIFA World Cup 2026\u2122 will be the 23rd edition of the tournament but the first to feature 48 teams and three host countries: Canada, Mexico and the United States.\n\n\u2022 Turkey at the FIFA World Cup - Wikipedia\n  https://en.wikipedia.org/wiki/Turkey_at_the_FIFA_World_Cup\n  This is a record of Turkey&#x27;s results at the FIFA World Cup. <strong>Turkey has qualified for the tournament on three occasions, most recently in 2026</strong>. Their highest-place finish was in 2002, where they finished third. *Draws include knockout matches decided via penalty shoot-out ...\n\n\u2022 [Discussion] FIFA M3 Market Flood (trickle?)\n  https://www.reddit.com/r/CanadaSoccer/comments/1tzhx84/fifa_m3_market_flood_trickle/\n  I think you will be able to get for $500 in coming days.\n\n\u2022 [Discussion] T\u00fcrkiye squad for the World Cup 26\n  https://www.reddit.com/r/soccer/comments/1tukf9n/t%C3%BCrkiye_squad_for_the_world_cup_26/\n  Including S\u00f6y\u00fcnc\u00fc, \u00d6zcan, Kahveci and Ayhan in the squad is crazy. At least Uzun is in too"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Paraguay recent form and results",
+        "data": "\u2022 Paraguay 2026 Results - ESPN\n  https://www.espn.com/soccer/team/results/_/id/210/paraguay\n  Get all the Paraguay results for the 2026 season on ESPN. Includes all the Paraguay results from all national and international games.\n\n\u2022 Paraguay | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/paraguay/team-news\n  Paraguay | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Paraguay squad at FIFA World Cup 2026\u2122.\n\n\u2022 Paraguay team profile and history | FIFA World Cup 2026\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/paraguay-profile-history\n  Of Paraguay\u2019s seven World Cup wins to date, two stand out as their highest-scoring victories in recent times. The first came in a heroic display at Korea/Japan 2002 against Slovenia. By half-time, the South Americans were a goal down and a man short, following Carlos Paredes\u2019s dismissal.\n\n\u2022 Paraguay - fixtures, team info and top players\n  https://www.fotmob.com/teams/6724/overview/paraguay\n  Paraguay have been in strong form recently, <strong>winning 3 of their last 5 matches (60% win rate).</strong> They have scored 9 goals and conceded 7 during this period. Overall, they have shown good attacking threat.\n\n\u2022 Reuters Paraguay at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/paraguay/\n  Follow Paraguay&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 [Discussion] [ Removed by moderator ]\n  https://www.reddit.com/r/soccer/comments/1u3nbtd/paraguay_not_at_world_cup_to_make_up_the_numbers/\n  Their group is the most interesting one to me because I genuinely can see every team ending up in every position. No possible scenario can surprise me there."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Turkey vs. Paraguay: Head-to-head record and past meetings ahead of 2026 World Cup clash - Sports Mole\n  https://www.sportsmole.co.uk/football/turkey/world-cup-2026/head-to-head/turkey-vs-paraguay-head-to-head-record-and-past-meetings_599517.html\n  ... This is a fixture that has only been played on one previous occasion, with <strong>the pair locking horns in a friendly back in June 1995, and it finished 0-0</strong>. As a result, a lot of history could be made on Friday, as Turkey and Paraguay prepare ...\n\n\u2022 Turkey vs Paraguay: All-time head-to-head record ahead of FIFA World Cup 2026\n  https://khelnow.com/football/world-football-turkey-vs-paraguay-head-to-head-fifa-world-cup-202606\n  Preview: Turkey vs Paraguay prediction, odds, where to watch, time | FIFA World Cup 2026 \u00b7 <strong>This match has only ever been played once, in a friendly between the two teams in June 1995 that ended in a scoreless draw</strong>.\n\n\u2022 Turkiye vs. Paraguay\u2014World Cup: Preview, Predictions and Lineups\n  https://www.si.com/soccer/turkiye-vs-paraguay-world-cup-preview-predictions-lineups-6-19-26\n  Paraguay will have also learned ... scoreline. Head to head record: <strong>T\u00fcrkiye and Paraguay have only met one previous time, an international friendly that ended in a goalless draw back in 1995</strong>....\n\n\u2022 Turkey vs Paraguay Head to Head, H2H Record, Goals & Meetings | FWC Times\n  https://fwctimes.com/turkey-paraguay-h2h/\n  Turkey vs Paraguay head to head record: <strong>one 0-0 draw</strong>, FIFA rankings, recent form and World Cup 2026 Group D match details.\n\n\u2022 Turkiye vs Paraguay Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-paraguay-vs-turkiye\n  Last 5 , <strong>Paraguay Win 3 , Draw 0 , Lose 2</strong> , Score Win Prob: 60.00% ,Asian Handicap Win%: 60.0% Total Goals Over%: 80.0%\n\n\u2022 [Discussion] I just rewatched Australia-Turkey. I don't think Australia can be beaten.\n  https://www.reddit.com/r/ussoccer/comments/1ua4gtk/i_just_rewatched_australiaturkey_i_dont_think/\n  Bro it\u2019s Australia calm down, they aren\u2019t France we can beat this team\n\n\u2022 [Discussion] Our National Team Has Completed Its Preparations for the Match Against Paraguay\n  https://www.reddit.com/r/superlig/comments/1u9yjci/our_national_team_has_completed_its_preparations/\n  Ligler bittikten sonra iyi antrenman yapmam\u0131\u015flar, bu ilk ma\u00e7ta bariz g\u00f6r\u00fcld\u00fc, kimse istedi\u011fini yapamad\u0131, v\u00fccutlar \u00e7ok ham, oyun temposu kaybedilmi\u015f, biraz tatil havas\u0131na girilmi\u015f, Paraguay ma\u00e7\u0131 hi\u00e7 kolay olmayacak, ilk gol\u00fc yersek b\u00fcy\u00fck ihtimalle d\u00f6nemeyiz, s\u0131k\u0131nt\u0131l\u0131 bir ma\u00e7\n\n\u2022 [Discussion] Anyone who went to the Paraguay game and sat in the \u201cParaguay supporter section\u201d have any insight on how that looked like because I have tickets in the Turkey supporter section for the game on the 25th and was wondering how it is and if I should be worried? Regardless, I\u2019m excited and pumped up.\n  https://www.reddit.com/r/ussoccer/comments/1u945fp/anyone_who_went_to_the_paraguay_game_and_sat_in/\n  Turkey and Paraguay are two different beasts as far as supporters go.\n\n\u2022 [Discussion] USMNT vs. Paraguay WORLD CUP OFFICIAL MATCH THREAD\n  https://www.reddit.com/r/usmnt/comments/1u4boq2/usmnt_vs_paraguay_world_cup_official_match_thread/\n  This might be the single greatest half of play from the USMNT I\u2019ve EVER SEEN\n\n\u2022 [Discussion] r/ussoccer\n  https://www.reddit.com/r/ussoccer/new/\n  The home for US national soccer teams, players, and the US Soccer Federation.\n\n\u2022 [Discussion] So Disappointed in FIFA - USA VS PARAGUAY\n  https://www.reddit.com/r/WorldCup2026Tickets/comments/1u1qu68/so_disappointed_in_fifa_usa_vs_paraguay/\n  Too bad u couldnt scalp lmao, take the L and actually use the ticket then\n\n\u2022 [Discussion] With just days left, the U.S. opening match at the World Cup is still not sold out\n  https://www.reddit.com/r/sports/comments/1u0fvgh/with_just_days_left_the_us_opening_match_at_the/\n  what? No way! Who would have thought with those cheap ticket prices!\n\n\u2022 [Discussion] USA vs Paraguay: Are we re"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 World Cup 2026 Group D guide - fixtures, schedule, standings and odds for USA, Paraguay, Australia and Turkey | Football News | Sky Sports\n  https://www.skysports.com/football/news/12098/13543088/world-cup-2026-group-d-guide-fixtures-schedule-standings-and-odds-for-usa-paraguay-australia-and-turkey\n  World Cup <strong>Group D</strong> sees co-hosts the United States of America play the first fixture in their home country against Paraguay before facing Australia and Turkey.\n\n\u2022 Turkey vs Paraguay live updates: World Cup 2026 game latest team news and build-up - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/turkey-vs-paraguay-live-updates-world-cup-2026-score-result/B8Y4b4OwUQyF/\n  For those hoping to be crowned world champions, it means winning one more match than in the past, with eight games rather than seven standing between them and the famous trophy. ... Both Turkey and Paraguay go into their second game at this tournament knowing they absolutely need to win or, more likely than not, they will be heading home.\n\n\u2022 T\u00fcrkiye v Paraguay: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021460\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group D</strong> \u2022 Match 31 \u00b7 T\u00fcrkiye \u00b7 03:00 \u00b7 Paraguay \u00b7 Kick-off in: 0 days \u00b7 0 hrs \u00b7 29 min \u00b7 7 sec \u00b7 T\u00fcrkiye \u00b7 03:00 \u00b7 Paraguay \u00b7 20 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 San Francisco Bay Area \u25cfSan Francisco ...\n\n\u2022 2026 FIFA World Cup standings: Group stage table, results - CBS Sports\n  https://www.cbssports.com/soccer/news/world-cup-group-standings-table-results/\n  Friday, June 19 <strong>USA 2, Australia 0</strong> Turkiye vs. Paraguay, 12 a.m.\n\n\u2022 2026 World Cup Standings: Full list of teams - Yahoo Sports\n  https://sports.yahoo.com/articles/2026-world-cup-standings-full-180000944.html\n  Here, we are keeping track of the standings for each of the 12 groups at the 2026 FIFA World Cup."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Retrieves the verified historical record and match results between Turkey and Paraguay to establish psychological precedents.",
+        "data": "URL: https://www.national-football-teams.com/country/200/2026/Usa.html\nTitle: USA (2026)\n[![National Football Teams](https://www.national-football-teams.com/bundles/nftportofrontend/img/header/logo_luci.png)](https://www.national-football-teams.com/)\n\n-   [Old website](https://www.national-football-teams.com/old/)\n-    [![English](https://www.national-football-teams.com/bundles/nftportofrontend/img/blank.gif) English](# \"English\")\n\n-   [News](https://www.national-football-teams.com/)\n-   [Teams](https://www.national-football-teams.com/national.html \"Info and statistics about all National Football (Soccer) Teams\")\n    -   [Europe](https://www.national-football-teams.com/continent/1/Europe.html)\n    -   [Africa](https://www.national-football-teams.com/continent/2/Africa.html)\n    -   [Asia](https://www.national-football-teams.com/continent/3/Asia.html)\n    -   [Oceania](https://www.national-football-teams.com/continent/4/Oceania.html)\n    -   [South America](https://www.national-football-teams.com/continent/5/South_America.html)\n    -   [North America](https://www.national-football-teams.com/continent/6/North_America.html)\n-   [Matches](https://www.national-football-teams.com/matches.html)\n    -   [African Nations Cup](https://www.national-football-teams.com/matches/tournament/2/2027/0/African_Nations_Cup.html)\n    -   [Asian Cup](https://www.national-football-teams.com/matches/tournament/3/2027/0/Asian_Cup.html)\n    -   [Copa Am\u00e9rica](https://www.national-football-teams.com/matches/tournament/4/2024/0/Copa_America.html)\n    -   [European Championship](https://www.national-football-teams.com/matches/tournament/5/2024/0/European_Championship.html)\n    -   [Gold Cup](https://www.national-football-teams.com/matches/tournament/6/2025/0/Gold_Cup.html)\n    -   [Oceania Cup](https://www.national-football-teams.com/matches/tournament/7/2024/0/Oceania_Cup.html)\n    -   [World Cup](https://www.national-football-teams.com/matches/tournament/1/2026/0/World_Cup.html)\n    -   [Other Tournaments](https://www.national-football-teams.com/matches/other_tournaments.html)\n    -   [Friendlies](https://www.national-football-teams.com/matches/-/-/friendlies.html)\n-   [Clubs](https://www.national-football-teams.com/clubs.html)\n-   [Statistics](https://www.national-football-teams.com/statistics.html)\n-   [Contact](https://www.national-football-teams.com/contact.html)\n-   [Forums](http://www.national-teams.com/forum/index.php?c=1)\n\n-   [Home](https://www.national-football-teams.com/)\n-   [Teams](https://www.national-football-teams.com/national.html)\n-   [Countries of North America](https://www.national-football-teams.com/continent/6/North_America.html)\n-   [USA (2026)](https://www.national-football-teams.com/country/200/2026/Usa.html)\n\nYou are using an old browser which is not compatible with our new design. Please update your browser or use our [old website](https://www.national-football-teams.com/old/).\n\n## General Information for **USA**\n\n##### United States Soccer Feder"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides precise, verified standings and point rules to model both managers' risk-reward calculations as the match progresses.",
+        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n20.06. [Turkey - Paraguay](https://www.soccerway.com/match/paraguay-YaNlqp6j/turkey-QeijuHo5/), [Netherlands - Sweden](https://www.soccerway.com/match/netherlands-WYintcWb/sweden-OQyqbHWB/), [Germany - Ivory Coast](https://www.soccerway.com/match/germany-ptQide1O/ivory-coast-G2FRjBgn/), 21.06. [Ecuador - Curacao](https://www.soccerway.com/match/curacao-bLLGpOkQ/ecuador-8tbm8Tri/), [Tunisia - Japan](https://www.soccerway.com/match/japan-ULXPdOUj/tunisia-QqZVYk95/), [Spain - Saudi Arabia](https://www.soccerway.com/match/saudi-arabia-biSY8ox4/spain-bLyo6mco/), [Belgium - Iran](https://www.soccerway.com/match/belgium-GbB957na/iran-xrRx85iA/), 22.06. [Uruguay - Cape Verde](https://www.soccerway.com/match/cape-verde-MocyWdm7/uruguay-xMk44orG/), [New Zealand - Egypt](https://www.soccerway.com/match/egypt-bejDn7NN/new-zealand-rLctHkpU/), [Argentina - Austria](https://www.soccerway.com/match/argentina-f9OppQjp/austria-naHiWdnt/), [France"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Establishes Paraguay's current tactical state and performance metrics from their most recent competitive outing.",
+        "data": "\u2022 World Cup Group D view from Paraguay: the reborn team no one wants to face | World Cup 2026 | The Guardian\n  https://www.theguardian.com/football/blog/2026/jun/13/world-cup-group-d-matches-paraguay-national-football-team-strengths-weaknesses\n  Central defender Omar Alderete has been outstanding, while captain Gustavo G\u00f3mez remains one of the best centre-backs in South America. As proof of their solidity, Paraguay conceded just <strong>10 goals in 18 qualifiers</strong> \u2013 the best defensive record ...\n\n\u2022 Paraguay World Cup 2026: Fixtures, manager, squad depth & tactical analysis | Squawka | EN\n  https://www.squawka.com/en/news/world-cup/paraguay-world-cup-2026-fixtures-squad-analysis-june-13/\n  Paraguay do struggle to create ... Enciso in their squad. <strong>They lean heavily on defensive structure, high work-rate and physicality to get results, rather than the attacking dynamism of those players.</strong>...\n\n\u2022 Paraguay 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/paraguay-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  Success will require perfect defensive execution and <strong>maximum efficiency on the counter-attack to survive the opening stage</strong>. ... A dominant 4-1 victory for the USMNT over Paraguay at Los Angeles Stadium has blasted the host nation to the top ...\n\n\u2022 Paraguay at the 2026 World Cup: Strengths, weaknesses and what it all means for the USMNT - AS USA\n  https://en.as.com/soccer/world-cup/paraguay-at-the-2026-world-cup-strengths-weaknesses-and-what-it-all-means-for-the-usmnt-f202606-n-2/\n  So the defense just became a bit more stable.\u201d \u00b7 Julio Enciso and Miguel Almir\u00f3n are two of Paraguay&#x27;s key attacking players, although the former is currently struggling with an injury.\n\n\u2022 2026 World Cup Power Rankings: USA Up, Portugal Down After Matchday 1\n  https://www.prizepicks.com/playbook-article/2026-world-cup-power-rankings-usa-portugal-matchday-1\n  But it was 18-year-old midfielder Ayyoub Bouaddi who stole the show, bossing the midfield like a seasoned veteran and linking defense and attack. This Moroccan side might actually be more dangerous than the previous version. ... Paraguay allowed just 10 goals in 18 World Cup qualification matches. They got ripped apart for 4 by the USMNT. Mauricio Pochettino unleashed a set of tactics we\u2019d not yet seen with this American side, and it worked to near perfection. Folarin Balogun scored the first American brace at the World Cup in nearly a century, and their counter-press prevented Paraguay from getting any room to breathe.\n\n\u2022 [Discussion] Post-Match Thread: United States 4-1 Paraguay | World Cup | Group D\n  https://www.reddit.com/r/worldcup/comments/1u4fkd9/postmatch_thread_united_states_41_paraguay_world/\n  This was an excellent game all around, but how cool that they can review when a player fraudulently tries to sell contact and fix it. I hope every other sport adopts that."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Analyzes the crucial tactical matchup between Turkey's primary attacking mechanism and Paraguay's defensive structure.",
+        "data": "\u2022 World Cup Group D tactical guide: Crunch time for USMNT, Turkey\u2019s attacking rotations, and are Paraguay dark horses? - The Athletic\n  https://www.nytimes.com/athletic/7288444/2026/06/05/world-cup-group-d-analysis-usmnt/\n  In the 1-0 win against Kosovo, for example, Guler has drifted into a wide-left position to pick up the ball, dragging an opposition winger up the pitch. Meanwhile, left-back Ferdi Kadioglu wanders inside, taking a marker away from the flanks and freeing up more space for dangerous winger Kenan Yildiz to receive the ball.\n\n\u2022 Turkey vs Paraguay Preview: Predicted Lineups, Team News & Tactical Analysis | 2026 World Cup Group D\n  https://www.rotowire.com/soccer/article/turkey-vs-paraguay-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-d-118661\n  Turkey predicted starting XI (<strong>4-2-3-1</strong>): Ugurcan Cakir (GK); Mert Muldur, Abdulkerim Bardakci, Merih Demiral, Ferdi Kadioglu (DEF); Hakan Calhanoglu, Ismail Yuksek (DM); Yunus Akgun, Arda Guler, Kenan Yildiz (AM); Kerem Akturkoglu (FW).\n\n\u2022 Turkey lineup vs Paraguay: Predicted XI for World Cup 2026 Group D clash as Kenan Yildiz vies for first start - Sports Mole\n  https://www.sportsmole.co.uk/football/turkey/world-cup-2026/predicted-lineups/yildiz-doubt-persists-for-montella-predicted-turkey-lineup-vs-paraguay_599445.html\n  Width is usually provided by full-backs Zeki Celik and Ferdi Kadioglu, both of whom have operated at wing-back for much of their club career.\n\n\u2022 Turkey vs Paraguay live updates: World Cup 2026 game latest team news and build-up - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/turkey-vs-paraguay-live-updates-world-cup-2026-score-result/B8Y4b4OwUQyF/\n  Turkey (4-2-3-1): <strong>Cakir (GK); Demiral, Bardakci, Muldur, Kadioglu; Calhanoglu (c), Yuksek; Guler, Yildizm, Akgun; Akturkoglu</strong>.\n\n\u2022 Preview: Turkey vs Paraguay - prediction, team news, lineups | World Cup 2026 - Sports Mole\n  https://www.sportsmole.co.uk/football/turkey/world-cup-2026/preview/turkey-vs-paraguay-prediction-team-news-lineups_599370.html\n  Either Kerem Akturkoglu or Deniz Gul is expected to start up front, while captain Hakan Calhanoglu takes care of set-piece duty in midfield and <strong>full-back Ferdi Kadioglu - who created five chances last time out - will patrol the left flank</strong>."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Extracts the implied probability distributions of different match outcomes according to global betting markets.",
+        "data": "\u2022 Turkey vs Paraguay Prediction, Betting Tips, Lineups & Odds | 19 Jun 2026\n  https://www.sportsgambler.com/betting-tips/football/turkey-vs-paraguay-prediction-lineups-odds-2026-06-19/\n  The +102 about them triumphing means a 50% chance of coming out on top based on their current betting odds. If you\u2019re interested in wagering Paraguay, you can get <strong>+295 for the underdog</strong>. There are different ways to bet on Turkey including the ...\n\n\u2022 Turkey vs Paraguay Predictions & Picks \u2014 Who Will Win Tonight's World Cup Match?\n  https://www.covers.com/world-cup/turkey-vs-paraguay-prediction-picks-odds-friday-6-19-2026\n  Odds courtesy of Kalshi. Check out FIFA&#x27;s official 2026 World Cup website for more information.\n\n\u2022 Turkey vs Paraguay Prediction: World Cup 2026 Preview & Best Bets - Yahoo Sports\n  https://sports.yahoo.com/articles/turkey-vs-paraguay-prediction-world-145000483.html\n  <strong>Turkey 2-1 Paraguay</strong> \u2014 Paraguay have shown they can score \u2014 they got a goal back against the United States \u2014 but their defensive record suggests Turkey will find the net more than once.\n\n\u2022 [Discussion] Soccer World Cup Betting and Picks Daily Discussion - 6/12/26 (Friday)\n  https://www.reddit.com/r/sportsbook/comments/1u3hz3t/soccer_world_cup_betting_and_picks_daily/\n  I can already tell the World Cup threads are gonna be so fun on here. What a start to Day 1 with Mexico and SK. Keep the picks coming everyone!!\n\n\u2022 [Discussion] World Cup 2026 Winner Betting Odds Discussion\n  https://www.reddit.com/r/sportsbook/comments/1tzxv7c/world_cup_2026_winner_betting_odds_discussion/\n  France or Portugal. Spain is so ridiculously overrated\n\n\u2022 [Discussion] [OC] Where my World Cup 2026 model disagrees with the betting market \u2014 the knockout bracket\n  https://www.reddit.com/r/dataisbeautiful/comments/1tz4cn8/oc_where_my_world_cup_2026_model_disagrees_with/\n  I mean, the market seems to be biased toward European countries, which is not surprising, they have more money than latin americans countries and can bet more, and also they dislike latin American countries in soccer, so yeah, not surprise that there are disagreements."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Evaluates environmental factors, stadium turf, and travel-induced fatigue which can significantly influence late-game physical output.",
+        "data": "\u2022 Weather at the 2026 Fifa World Cup will be an issue at ... - Instagram\n  https://www.instagram.com/reel/DXyExB5AYCa/\n  ... and outside the stadiums. So be prepared! Travel Advice for this year's world cup in the US, Canada, and Mexico #worldcup #2026fifaworldcup\".\n\n\u2022 FIFA WORLD CUP | TURKEY VS. PARAGUAY - Levi's\u00ae Stadium\n  https://levisstadium.com/event/fifa-world-cup-group-stage-2026-06-19/\n  Paraguay vs. Turkey will be playing at Levi's\u00ae Stadium on June 19th, 2026 at 8:00 p.m. PT. For this summer's FIFA World Cup 2026\u2122 tournament ...\n\n\u2022 Turkey vs Paraguay performance-impairing heat | World Cup 2026 ...\n  https://www.climatecentral.org/world-cup-2026/matches/31\n  The June 19 match at San Francisco Bay Area Stadium (Turkey vs. Paraguay) has a 17% chance of heat that can impair performance. above 28\u00b0C (82.4\u00b0F)\n\n\u2022 T\u00fcrkiye vs. Paraguay at World Cup 2026: TV channel, how to watch ...\n  https://www.espn.com/soccer/story/_/id/49091743/turkiye-vs-paraguay-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups\n  Venue: San Francisco Bay Area Stadium. Referee: Ivan Arcides Barton Cisneros. Team News. T\u00fcrkiye - Predicted XI: GK: Ugurcan \u00c7akir LB: Ferdi ...\n\n\u2022 World Cup 2026 weather updates: Forecasts for key matches ...\n  https://www.accuweather.com/en/sports/live-news/world-soccer-2026-weather-updates-forecasts-for-key-matches-stadium-conditions-and-fan-impacts/1898671\n  The pitch is located indoors, but fans outside the stadium should prepare for hot weather with temperatures in the low 90s F (low 30s C) and AccuWeather ..."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides real-time injury updates and tactical analysis regarding Arda G\u00fcler's deployment and fitness ahead of Matchday 2.",
+        "data": "\u2022 Guler to lead Turkey on World Cup return against Australia - Reuters\n  https://www.reuters.com/sports/soccer/guler-lead-turkey-world-cup-return-against-australia-2026-06-14/\n  # Guler to lead Turkey on World Cup return against Australia. Item 1 of 2 Soccer Football - FIFA World Cup 2026 - Group D - Australia v Turkey - BC Place, Vancouver, Canada - June 13, 2026 Turkey's Arda Guler arrives at the stadium before the match REUTERS/Agustin Marcarian. **[1/2]**Soccer Football - FIFA World Cup 2026 - Group D - Australia v Turkey - BC Place, Vancouver, Canada - June 13, 2026 Turkey's Arda Guler arrives at the stadium before the match REUTERS/Agustin Marcarian Purchase Licensing Rights, opens new tab. VANCOUVER, June 13 (Reuters) - Arda Guler will take on the role of \u200bplay\n\n\u2022 Australia spoils Turkey's return to the World Cup with a 2-0 victory - The Sun Chronicle\n  https://www.thesunchronicle.com/sports/australia-spoils-turkeys-return-to-the-world-cup-with-a-2-0-victory/article_16bbf95b-ef26-5a81-ab75-1efd8dd50aa6.html\n  Australia's Nestory Irankunda (17) celebrates scoring the first goal against Turkey during the World Cup Group D soccer match, in Vancouver, British Columbia, Saturday, June 13, 2026. Australia goalkeeper Patrick Beach (18) during the World Cup Group D soccer match between Australia and Turkey in Vancouver, British Columbia, Saturday, June 13, 2026. Turkey's Arda Guler (8) reacts after missing a shot during the World Cup Group D soccer match between Australia and Turkey in Vancouver, British Columbia, Saturday, June 13, 2026. # Australia spoils Turkey's return to the World Cup with a 2-0 victo\n\n\u2022 Australia spoils Turkey's return to the World Cup with a 2-0 victory - Bozeman Daily Chronicle\n  https://www.bozemandailychronicle.com/ap_news/sports/australia-spoils-turkeys-return-to-the-world-cup-with-a-2-0-victory/article_425c48d7-33bd-523d-8e5e-b6c31cc68007.html\n  Australia's Nestory Irankunda (17) celebrates scoring the first goal against Turkey during the World Cup Group D soccer match, in Vancouver, British Columbia, Saturday, June 13, 2026. Australia's Nestory Irankunda (17) celebrates his goal during a World Cup Group D soccer match, in Vancouver, Canada, Saturday, June 13, 2026. Australia goalkeeper Patrick Beach (18) during the World Cup Group D soccer match between Australia and Turkey in Vancouver, British Columbia, Saturday, June 13, 2026. Turkey's Arda Guler (8) reacts after missing a shot during the World Cup Group D soccer match between Aus\n\n\u2022 Australia spoils Turkey\u2019s return to the World Cup with a 2-0 victory - AP News\n  https://apnews.com/article/australia-turkey-score-690429346bffc3d906fb01005df38010\n  Test Your News I.Q. 2026 Elections Election Results Election calendar White House Congress Supreme Court The latest AP-NORC polls Ground Game. Australia\u2019s Nestory Irankunda (17) celebrates scoring the first goal against Turkey during the World Cup Group D soccer match, in Vancouver, British Columbia, Saturday, June 13, 2026. Australia goalkeeper Patrick Beach (18) during the World Cup Group D soccer match between Australia and Turkey in Vancouver, British Columbia, Saturday, June 13, 2026. Turkey\u2019s Arda Guler (8) reacts after missing a shot during the World Cup Group D soccer match between Aus\n\n\u2022 Australia vs. Turkey prediction: World Cup picks, odds, best bets - New York Post\n  https://nypost.com/2026/06/13/betting/australia-vs-turkey-prediction-world-cup-picks-odds-best-bets/\n  *The Crescent Eagles* always have a couple of star players in their ranks, and they have a clear identity that is forged in one of the world\u2019s great soccer cultures. Just how far Turkey goes at the World Cup will largely rest on the shoulders of a pair of 21-year-old superstars, Arda Guler and Kenan Yildiz, but it\u2019ll be up to the rest of the squad to do the dirty work to provide Guler and Yildiz a platform to be difference-makers. Turkey will open its World Cup campaign as favorites to beat Australia at midnight ET on Sunday in"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Uncovers sudden, late-breaking squad issues, disruptions, or tactical friction within either camp that could heavily impact performance.",
+        "data": "\u2022 Paraguay XI vs Turkiye \u2013 Predicted lineup and team news - Yahoo Sports\n  https://sports.yahoo.com/articles/paraguay-xi-vs-turkiye-predicted-071000460.html\n  # Paraguay XI vs Turkiye \u2013 Predicted lineup and team news. **Paraguay** **arrive at San Francisco Bay Area Stadium in Santa Clara desperate to rebuild after a chastening opening defeat.**. Gustavo Alfaro watched his side's defensive structure crumble against the United States on matchday one. Gustavo Caballero missed the opener entirely and continues to battle a muscular issue, while Ramon Sosa requires a late assessment on an ankle problem before a final decision is made on his involvement. Junior Alonso could make way at left-back, with Alexandro Maidana ready to come in and provide greater \n\n\u2022 T\u00fcrkiye vs. Paraguay - Live Score - June 19, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-turkiye-vs-paraguay-jun-19-2026-game-boxscore-647644\n  ## T\u00fcrkiye vs Paraguay. Tomorrow at 3:00 AM on. T\u00fcrkiye, Paraguay both looking for first group stage points. # T\u00fcrkiye vs. ## MATCHUP## NEWS## ODDS## STANDINGS. ### Paraguay Train Before T\u00fcrkiye. ### T\u00fcrkiye Train Before Paraguay. ### Paraguay On Playing T\u00fcrkiye | Coach Gustavo Alfaro and Matias Galarza Answer Questions. ### T\u00fcrkiye On Playing Paraguay | Coach Vincenzo Montella Answers Questions. ### Team Feature: T\u00fcrkiye | T\u00fcrkiye Reflect On Their Return To The World Cup After 24 Years Away. | 6/6 | VEN (A) | W2-1 |. | 6/1 | MKD (H) | W4-0 |. | 3/31 | MAR (A) | L2-1 |. 0.0 Goals per Game 1.0.\n\n\u2022 Turkey vs Paraguay Prediction: A Do-Or Die Match For Both Sides - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/1x2/turkey-vs-paraguay-prediction-for-the-match-on-june-19th-2026/\n  # Turkey vs Paraguay Prediction: A Do-Or Die Match For Both Sides. ## Turkey vs Paraguay: Prediction for the Match on June 20th, 2026. In what is essentially a knockout fixture, Turkey faces Paraguay with significant stakes on the line. Given that both nations suffered losses in their first matches of the tournament, a further defeat would almost certainly result in their elimination. While they enjoyed a period of dominance throughout the early stages of 2026, their progress was interrupted by a 2-0 loss to Australia in their tournament opener. For their second World Cup fixture, the team is \n\n\u2022 USA vs Australia \u2013 Match preview and team news - Yahoo Sports\n  https://sports.yahoo.com/articles/usa-vs-australia-match-preview-071000060.html\n  # USA vs Australia \u2013 Match preview and team news. **Co-hosts USA return to action tonight, aiming to build on a spectacular opening victory at the 2026 World Cup.**. Meanwhile, Australia arrive in Seattle following a monumental upset against fancied Turkey on matchday one. ## USA team news. The AC Milan forward has been restricted to individual training sessions since that match, though the mood in the camp is calm. Folarin Balogun, who scored twice on his World Cup debut against Paraguay, also picked up a minor knock but is similarly expected to be fit. ## Australia team news. Mo Tour\u00e9 is the\n\n\u2022 T\u00fcrkiye vs. Paraguay: How to Watch, TV Channel, Live Stream - FOX Sports\n  https://www.foxsports.com/stories/soccer/how-to-watch-turkiye-vs-paraguay-tv-channel-live-stream-2026-fifa-world-cup-group-d\n  FIFA Men's World Cup. FIFA Men's World Cup. 3. ### 2026 World Cup: France Favored, England Rises After Opening Wins### 2026 World Cup Odds: Which Player Will Lead the Tournament in Assists?### 4 Players Who Could Steal The Show At The 2026 World Cup. Get more from the FIFA Men's World Cup Follow your favorites to get information about games, news and more. T\u00fcrkiye and Paraguay meet in their 2026 FIFA World Cup second group stage match on Friday, June 19, 2026 at 11:00 p.m. ET from San Francisco Bay Area Stadium. ## How to Watch T\u00fcrkiye vs. ### United States vs Paraguay Extended Highlights | 20"
+      }
+    ],
+    "research_cost": 0.118,
+    "wallet_before": 0.964,
+    "wallet_after": 0.846,
+    "prediction": {
+      "pick": "home",
+      "confidence": 4,
+      "confidence_reason": "Confidence is capped at 4 due to the conflict between T\u00fcrkiye's struggle against low blocks and Paraguay's severe injury crisis and defensive vulnerabilities.",
+      "reasoning": "T\u00fcrkiye's superior technical midfield quality should narrowly overcome Paraguay's low block, which is severely weakened by key injuries to their transition threats.",
+      "probabilities": {
+        "home": 41,
+        "draw": 32,
+        "away": 27
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "T\u00fcrkiye lost their opening match 2-0 to Australia despite dominating possession and generating 1.6 xG, following a string of friendly wins in early 2026.",
+      "away_form": "Paraguay suffered a heavy 4-1 defeat to the USA in their group opener, contrasting with their strong defensive record in CONMEBOL qualifying.",
+      "key_injuries": [
+        "Paraguay: Gustavo Caballero (muscular issue, missed opener)",
+        "Paraguay: Ramon Sosa (ankle injury, late fitness test required)",
+        "Paraguay: Julio Enciso (carrying a knock/struggling with fitness)",
+        "T\u00fcrkiye: Kenan Yildiz (vying for first start but has minor fitness doubts)"
+      ],
+      "tactical_matchup": "T\u00fcrkiye's fluid, possession-oriented 4-2-3-1 system will look to dominate midfield and break down Paraguay's disciplined 4-4-2 low block, which relies on physical defending and quick transitions.",
+      "group_stakes": "With both teams sitting on zero points after opening-round defeats, this is a must-win match for both sides to keep their knockout stage hopes alive.",
+      "home_win_signals": [
+        "T\u00fcrkiye possesses superior technical quality in the midfield and final third with Arda Guler, Kenan Yildiz, and Hakan Calhanoglu.",
+        "Left-back Ferdi Kadioglu is in excellent creative form, having created five chances in the opening match against Australia.",
+        "Paraguay's defensive structure showed severe vulnerability in their 4-1 loss to the USA, which T\u00fcrkiye's attackers can exploit."
+      ],
+      "away_win_signals": [
+        "Paraguay can exploit quick transitions and set pieces through Miguel Almiron's pace against a Turkish defense that struggled with counter-attacks against Australia.",
+        "Reports indicate T\u00fcrkiye's squad has struggled with physical fitness and match tempo since the domestic season ended, which favors Paraguay's high-intensity, physical style.",
+        "Paraguay's central defensive pairing of Gustavo Gomez and Omar Alderete is highly experienced and capable of executing a rigid low block."
+      ],
+      "draw_signals": [
+        "The only previous head-to-head meeting between these two nations ended in a 0-0 friendly draw in 1995.",
+        "If Paraguay successfully implements a low block similar to Australia's, they could frustrate T\u00fcrkiye's possession play and force a low-scoring stalemate.",
+        "Both teams may play with increased caution to avoid conceding first, as a second defeat would likely eliminate them from the tournament."
+      ],
+      "contradictions": [
+        "Paraguay's reputation as a defensive powerhouse (conceding only 10 goals in 18 qualifiers) directly contradicts their opening-match performance where they conceded 4 goals to the USA.",
+        "T\u00fcrkiye generated 1.6 xG and dominated possession against Australia but failed to score, showing a disconnect between their creative metrics and clinical finishing."
+      ],
+      "strategy_applied": [
+        "AUS vs TUR (Low-block over possession): Used as a tactical reference to analyze how Paraguay's low block might frustrate T\u00fcrkiye's possession-heavy style."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting Paraguay's historical CONMEBOL defensive reputation despite their recent 4-1 defensive collapse against the USA.",
+        "Assuming Paraguay can easily replicate Australia's successful low block while ignoring their own severe fitness and injury issues to key players like Enciso and Sosa."
+      ],
+      "underweighted_factors": [
+        "The 'Low-block over possession' strategy rule, which suggests T\u00fcrkiye's possession-heavy style is structurally primed to be frustrated by defensive setups.",
+        "Paraguay's extensive injury list (Caballero, Sosa, Enciso) which severely cripples their transition threat and ability to punish T\u00fcrkiye on the counter."
+      ],
+      "draw_risk": "medium \u2014 while the must-win stakes for both teams could force late-game risks, T\u00fcrkiye's struggle against low blocks and Paraguay's defensive focus point to a highly possible low-scoring stalemate.",
+      "favorite": "none",
+      "confidence_cap": 5,
+      "verdict": "T\u00fcrkiye's possession style is highly vulnerable to a low block, but Paraguay's defensive vulnerabilities and mounting injuries make them too weak to confidently exploit this tactical edge."
+    },
+    "full_reasoning": "HOME_PCT: 41\nDRAW_PCT: 32\nAWAY_PCT: 27\nPICK: home\nCONFIDENCE: 4\nCONFIDENCE_REASON: Confidence is capped at 4 due to the conflict between T\u00fcrkiye's struggle against low blocks and Paraguay's severe injury crisis and defensive vulnerabilities.\nREASONING: T\u00fcrkiye's superior technical midfield quality should narrowly overcome Paraguay's low block, which is severely weakened by key injuries to their transition threats.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
