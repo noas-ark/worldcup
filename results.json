@@ -10570,9 +10570,15 @@
     },
     "full_reasoning": "HOME_PCT: 20\nDRAW_PCT: 42\nAWAY_PCT: 38\nPICK: draw\nCONFIDENCE: 5\nCONFIDENCE_REASON: Capped at 5 due to high volatility from Japan's severe injury crisis, Tunisia's sudden managerial change, and extreme Monterrey heat.\nREASONING: Japan's depleted midfield and attack, missing Endo, Kubo, and Mitoma, will struggle to break down a compact Herv\u00e9 Renard-led Tunisian low-block in extreme Monterrey heat.",
     "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 0,
+      "away_score": 4,
+      "winner": "away"
+    },
+    "correct": false,
+    "evaluation": "MISTAKE:\n- I predicted a low-scoring draw but Japan completely outclassed Tunisia in a 4-0 blowout.\n- I overindexed on the absence of Japan's key attackers and overestimated Tunisia's defensive durability, ignoring Japan's system-driven depth.\nDATA:\n- useful: https://websearch--gw.swerver.net/search \u2014 Market sentiment and line movement heavily backed Japan, correctly signaling that the public trusted their squad depth.\n- useless: https://api.signalfuse.co/v1/gateway/search/brave \u2014 Environmental and pitch analysis did not slow down Japan's transition play or cause the expected fatigue.\n- useless: https://skim402.com/api/v2/read \u2014 Historical head-to-head data failed to capture the current disparity in tactical execution and roster quality.",
+    "reflected": true,
+    "reflected_at": "2026-06-21T06:30:19.481969+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n- TUN vs JPN: System depth over individual absences.\n\n## Data sources\n- use: Market sentiment (https://websearch--gw.swerver.net/search) \u2014 squad depth validation (TUN vs JPN)\n- skip: Pitch/weather (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transition impact (TUN vs JPN)\n- skip: History (https://skim402.com/api/v2/read) \u2014 head-to-head relevance (TUN vs JPN)"
   }
 ]

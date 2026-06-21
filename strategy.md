@@ -31,8 +31,9 @@
 - NED vs SWE: Home metrics over individual attack.
 - GER vs CIV: Lateral mobility and freshness over history.
 - ECU vs CUW: Low-block and heat over physical quality.
+- TUN vs JPN: System depth over individual absences.
 
 ## Data sources
-- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — opponent defensive structure (ECU vs CUW)
-- use: Venue (https://websearch--gw.swerver.net/search) — heat impact on tempo (ECU vs CUW)
-- skip: News (news-x402.com/news/recent) — group permutation analysis (ECU vs CUW)
+- use: Market sentiment (https://websearch--gw.swerver.net/search) — squad depth validation (TUN vs JPN)
+- skip: Pitch/weather (https://api.signalfuse.co/v1/gateway/search/brave) — transition impact (TUN vs JPN)
+- skip: History (https://skim402.com/api/v2/read) — head-to-head relevance (TUN vs JPN)
