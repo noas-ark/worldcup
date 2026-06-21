@@ -10211,9 +10211,15 @@
     },
     "full_reasoning": "HOME_PCT: 74\nDRAW_PCT: 18\nAWAY_PCT: 8\nPICK: home\nCONFIDENCE: 7\nCONFIDENCE_REASON: Ecuador's clear class advantage is tempered by the extreme Kansas City heat and their historical finishing inefficiency against low blocks.\nREASONING: Ecuador's superior physical and tactical quality will overcome Cura\u00e7ao's fragile defense, though the oppressive heat and a defensive Cura\u00e7ao setup will likely limit the scoreline.",
     "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 0,
+      "away_score": 0,
+      "winner": "draw"
+    },
+    "correct": false,
+    "evaluation": "MISTAKE:\n- The prediction failed to anticipate that Cura\u00e7ao's compact defensive low-block would successfully neutralize Ecuador's attack to secure a draw.\n- I wrongly assumed Ecuador's physical quality would inevitably break the deadlock, disregarding how extreme heat would limit their attacking intensity.\nDATA:\n- useful: brave \u2014 Tactical profiles of Cura\u00e7ao detailed a resilient defensive structure capable of absorbing sustained pressure.\n- useful: websearch--gw.swerver.net/search \u2014 Weather data correctly identified extreme heat that ultimately degraded Ecuador's physical advantage and slowed the match tempo.\n- useless: news-x402.com/news/recent \u2014 Group permutation analysis did not help because tactical stalemate, not motivation, decided the outcome.",
+    "reflected": true,
+    "reflected_at": "2026-06-21T02:30:27.709839+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 opponent defensive structure (ECU vs CUW)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat impact on tempo (ECU vs CUW)\n- skip: News (news-x402.com/news/recent) \u2014 group permutation analysis (ECU vs CUW)"
   }
 ]

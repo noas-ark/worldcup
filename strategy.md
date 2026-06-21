@@ -30,9 +30,9 @@
 - TUR vs PAR: Defensive block over midfield quality.
 - NED vs SWE: Home metrics over individual attack.
 - GER vs CIV: Lateral mobility and freshness over history.
+- ECU vs CUW: Low-block and heat over physical quality.
 
 ## Data sources
-- use: Search (https://api.signalfuse.co/v1/gateway/search/tavily) — lateral mobility and injury data (GER vs CIV)
-- use: Venue (https://websearch--gw.swerver.net/search) — physical fatigue projections (GER vs CIV)
-- skip: Historical (https://skim402.com/api/v2/read) — outdated European records (GER vs CIV)
-- skip: Search (https://api.signalfuse.co/v1/gateway/search/brave) — general head-to-head history (GER vs CIV)
+- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) — opponent defensive structure (ECU vs CUW)
+- use: Venue (https://websearch--gw.swerver.net/search) — heat impact on tempo (ECU vs CUW)
+- skip: News (news-x402.com/news/recent) — group permutation analysis (ECU vs CUW)
