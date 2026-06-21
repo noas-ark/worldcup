@@ -11261,5 +11261,355 @@
     "reflected": true,
     "reflected_at": "2026-06-21T21:30:39.890272+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Transition inefficiency over passive defense.\n- USA vs AUS: Pressing over low-block.\n- SCO vs MAR: Quality over motivation.\n- BRA vs HAI: Wingers over low-block.\n- TUR vs PAR: Block over midfield.\n- NED vs SWE: Home over attack.\n- GER vs CIV: Freshness over history.\n- ECU vs CUW: Heat over quality.\n- TUN vs JPN: Depth over absences.\n- ESP vs KSA: Transition over block.\n- BEL vs IRN: Low-block and key absences over possession.\n\n## Data sources\n- use: Analytics (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (BEL vs IRN)\n- skip: Climate (https://websearch--gw.swerver.net/search) \u2014 venue (BEL vs IRN)\n- skip: History (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (BEL vs IRN)"
+  },
+  {
+    "match": "URU vs CPV",
+    "home": "URU",
+    "away": "CPV",
+    "kickoff": "2026-06-21T22:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n- TUN vs JPN: System depth over individual absences.\n- ESP vs KSA: Transition speed and xG over weather and defensive block.\n\n## Data sources\n- use: Advanced analytics (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 xG and transition validation (ESP vs KSA)\n- skip: Climate data (https://websearch--gw.swerver.net/search) \u2014 environmental impact (ESP vs KSA)\n- skip: Historical data (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defensive block relevance (ESP vs KSA)",
+    "information_needs": "FORM\n- How did Uruguay perform in their opening World Cup group match (given this June 21 date suggests Matchday 2 or 3), specifically regarding their non-penalty xG creation and defensive transition efficiency?\n- Did Cape Verde manage to limit high-value chances and overperform their expected goals against (xGA) in their most recent competitive fixtures leading up to this match?\n\nPLAYERS\n- Is Federico Valverde showing signs of physical fatigue or carrying a minor injury after a grueling club season with Real Madrid and intense national team travel?\n- Who is starting in goal for Cape Verde, and what is their current post-shot expected goals (PSxG) +/- rating over their last ten international and club appearances?\n\nTACTICS\n- How will Cape Verde's defensive block attempt to neutralize Uruguay's high-intensity, vertical wing-play, and do they have the fullback pace to cope with Uruguay's wide overloads?\n\nH2H\n- Since there is little to no modern head-to-head history between these two nations, how has Uruguay historically performed against athletic, disciplined CAF opponents (such as Ghana or Senegal) in recent tournament settings?\n\nCONTEXT\n- What do the Group standings dictate for both teams on June 21\u2014does Uruguay need a high-margin win to secure the top spot, or is Cape Verde fighting for a historic point to qualify as a best third-place team?\n\nMARKET\n- What is the current Asian Handicap line, and has there been significant sharp money backing Cape Verde to cover (e.g., moving from Uruguay -1.75 to -1.5)?\n\nNEWS\n- Are there any reports of camp discord, travel exhaustion, or sudden training injuries within the Cape Verde squad since arriving at their tournament base camp?\n\nVENUE\n- Which North American host city and stadium is staging this match, and is it a climate-controlled indoor venue or an outdoor stadium subject to extreme June heat and humidity?",
+    "research_gaps": [
+      {
+        "need": "What is the current Asian Handicap line, and has there been significant sharp money backing Cape Verde to cover (e.g., moving from Uruguay -1.75 to -1.5)?",
+        "category": "MARKET",
+        "ideal_service": "An x402 sports betting intelligence API providing real-time Asian Handicap odds, line movement history, and sharp money flow analysis."
+      },
+      {
+        "need": "Who is starting in goal for Cape Verde, and what is their current post-shot expected goals (PSxG) +/- rating over their last ten international and club appearances?",
+        "category": "PLAYERS",
+        "ideal_service": "An advanced player statistics API (equivalent to Opta/FBref) containing detailed goalkeeper shot-stopping metrics and PSxG differentials."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Uruguay vs Cape Verde World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Uruguay vs Cape Verde World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Uruguay World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Uruguay recent form and results",
+        "need": "How has Uruguay performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Cape Verde World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Cape Verde recent form and results",
+        "need": "How has Cape Verde performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Uruguay vs Cape Verde head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Uruguay vs Cape Verde World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.national-football-teams.com/country/208/Uruguay.html"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Analyzes Uruguay's historic performance metrics and tactical struggles when facing athletic, disciplined African nations in major tournaments.",
+        "need": "Since there is little to no modern head-to-head history between these two nations, how has Uruguay historically performed against athletic, disciplined CAF opponents (such as Ghana or Senegal) in recent tournament settings?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Uruguay World Cup 2026 opening match performance xG transition efficiency",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Evaluates Uruguay's structural form, non-penalty expected goals, and defensive vulnerabilities on transition from their last match.",
+        "need": "How did Uruguay perform in their opening World Cup group match, specifically regarding their non-penalty xG creation and defensive transition efficiency?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Cape Verde tactical defensive block fullbacks pace Uruguay wide overloads World Cup 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Determines Cape Verde's tactical approach to counter Uruguay's vertical wing-play and identifies potential mismatches in fullback pace.",
+        "need": "How will Cape Verde's defensive block attempt to neutralize Uruguay's high-intensity, vertical wing-play, and do they have the fullback pace to cope with Uruguay's wide overloads?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Uruguay Cape Verde World Cup 2026 group standings qualification scenarios",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Identifies the motivation levels and tournament context based on live group standings and tiebreaker requirements on June 21.",
+        "need": "What do the Group standings dictate for both teams on June 21\u2014does Uruguay need a high-margin win to secure the top spot, or is Cape Verde fighting for a historic point to qualify as a best third-place team?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Uruguay vs Cape Verde June 21 World Cup 2026 stadium venue weather city climate",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Determines the venue's climate conditions, which directly impact physical fatigue, high-pressing intensity, and squad rotation strategies.",
+        "need": "Which North American host city and stadium is staging this match, and is it a climate-controlled indoor venue or an outdoor stadium subject to extreme June heat and humidity?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Federico Valverde Uruguay World Cup 2026 injury fatigue Real Madrid",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Fetches real-time fitness, training, and injury updates on Uruguay's key midfielder Federico Valverde.",
+        "need": "Is Federico Valverde showing signs of physical fatigue or carrying a minor injury after a grueling club season with Real Madrid and intense national team travel?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Cape Verde squad news injuries World Cup 2026 discord training base camp",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides crucial intelligence on Cape Verde's internal camp dynamics, training injuries, and squad readiness.",
+        "need": "Are there any reports of camp discord, travel exhaustion, or sudden training injuries within the Cape Verde squad since arriving at their tournament base camp?",
+        "category": "NEWS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Cape Verde XI vs Uruguay \u2013 Predicted lineup and team news - Yahoo Sports\n  https://sports.yahoo.com/articles/cape-verde-xi-vs-uruguay-074000205.html\n  Vozinha starts in goal once more. The 40-year-old produced seven saves to deny Spain and has become one of the tournament\u2019s most talked-about figures overnight. Diney Borges and Roberto Lopes continue at centre-back, with Steven Moreira and Sidny Lopes Cabral as the wide defenders.\n\nKevin Lenini and Laros Duarte form the midfield base, with Jamiro Monteiro providing energy in the more advanced central role. Ryan Mendes provides experience and flair from the right, with Jovane Cabral expected on the opposite flank if he clears his fitness test. Dailon Livramento leads the line as the sole strik\n\n\u2022 Uruguay vs Cape Verde \u2013 Predicted lineup and team news - Yahoo Sports\n  https://sports.yahoo.com/articles/uruguay-vs-cape-verde-predicted-074000335.html\n  Agustin Canobbio offers pace and directness from the flank. Maximiliano Araujo, who scored the late equaliser against Saudi Arabia, is expected to retain his place.\n\n## Uruguay predicted lineup\n\nUruguay possible starting XI: Muslera; Varela, Caceres, Olivera, Sanabria; Valverde, Bentancur, Ugarte, Araujo; Canobbio, Nunez\n\n## When does the match kick off?\n\nThe Group H fixture kicks off at 23:00 BST on Sunday, 21 June 2026, at Miami Stadium, Miami.\n\n## How to watch Uruguay vs Cape Verde?\n\nUK viewers can watch the match live and free-to-air on BBC One, with a live stream available via BBC iPlayer\n\n\u2022 Uruguay vs. Cape Verde Predictions, Picks & Props I 6/21/2026 - Deadspin\n  https://deadspin.com/prediction-markets/trending/uruguay-v-cape-verde-predictions-picks-props/\n  ### Doubts grow over Uruguay\u2019s ability to dominate\n\nAfter seeing what Cape Verde did versus Spain, there seems to be a growing belief that Uruguay may not have an easy path to a convincing victory. As a matter of fact, top World Cup prediction markets are only giving the Sky Blue a 37% chance of covering the 1.5 goal spread. The concern for Uruguay is not necessarily whether they can secure the victory but whether they can create the type of attacking dominance needed to win comfortably. Cape Verde\u2019s performance against Spain really showed that they can limit quality chances and stay competiti\n\n\u2022 Uruguay vs Cape Verde Prediction: Cape Verde dreams of its first win - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/uruguay-vs-cape-verde-match-prediction-21-june-2026/\n  # Uruguay vs Cape Verde Prediction: Cape Verde dreams of its first win\n\n21/06/2026 23:00\n\nDay\n\nHours\n\nMinutes\n\nSeconds\n\nFIFA World Cup 2026, Group H\n\nUruguay vs Cape Verde\n\nStadium: Miami, USA\n\nReferee: Espen Esk\u00e5s\n\nMarco Silva\n\nStatistics of the month:\n\n0\n\n30.77%\n\nROI:  -42.23%\n\nStatistics\n\nOdds\n\nBet Type\n\nBookmaker\n\nClaim Bonus!\n\nOdds1,60\n\nBet TypeUruguay to win & TU 4.5\n\nBookmaker\n\nBonus100 \u20ac\n\nBet now!\n\n## Uruguay vs Cape Verde: Prediction for the match on June 21, 2026\n\nUruguay and Cape Verde will meet in Miami for their second World Cup match. In Group H, all the teams have one point, and\n\n\u2022 Uruguay vs. Cape Verde - Live Score - June 21, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-uruguay-vs-cape-verde-jun-21-2026-game-boxscore-647654\n  1.9 Expected Goals (xG) per Game 0.4\n\n1.0 Goals Against per Game 0.0\n\n27.0 Shots per Game 6.0\n\n72 Average Possession (%) 42\n\n16.0 Chances Created per Game 6.0\n\nCPV\n\n### TEAM LEADERS\n\nURU\n\nMaxi Araujo\n\n1\n\nGoals\n\nRyan Mendes\n\n0\n\nRodrigo Bentancur\n\n0\n\nAssists\n\nRyan Mendes\n\n0\n\nFederico Vinas\n\n3\n\nShots on Goal\n\nDiney Borges\n\n1\n\nFederico Vinas\n\n0.7\n\nExpected Goals (xG)\n\nDiney Borges\n\n0.1\n\nMaxi Araujo\n\n7.1\n\nRating\n\nVozinha\n\n8.4\n\nFernando Muslera\n\n0.29\n\nKeeper Save %\n\nVozinha\n\n0.35\n\nFernando Muslera\n\n0\n\nClean Sheets\n\nVozinha\n\n1\n\nCPV\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $222 would win $322 to"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Cape Verde XI vs Uruguay \u2013 Predicted lineup and team news - Yahoo Sports\n  https://sports.yahoo.com/articles/cape-verde-xi-vs-uruguay-074000205.html\n  Vozinha starts in goal once more. The 40-year-old produced seven saves to deny Spain and has become one of the tournament\u2019s most talked-about figures overnight. Diney Borges and Roberto Lopes continue at centre-back, with Steven Moreira and Sidny Lopes Cabral as the wide defenders.\n\nKevin Lenini and Laros Duarte form the midfield base, with Jamiro Monteiro providing energy in the more advanced central role. Ryan Mendes provides experience and flair from the right, with Jovane Cabral expected on the opposite flank if he clears his fitness test. Dailon Livramento leads the line as the sole strik\n\n\u2022 Uruguay vs Cape Verde \u2013 Predicted lineup and team news - Yahoo Sports\n  https://sports.yahoo.com/articles/uruguay-vs-cape-verde-predicted-074000335.html\n  Advertisement\n\nAdvertisement\n\nAdvertisement\n\nUruguay head to Miami Stadium on Sunday, desperate to secure their first victory of the tournament.\n\nLa Celeste controlled early possession against Saudi Arabia but struggled to convert that dominance into meaningful chances, ultimately settling for a frustrating 1-1 draw. Marcelo Bielsa will demand a far more ruthless attacking display against Cape Verde. With European champions Spain waiting on matchday three, maximum points here are not just important \u2014 they are essential.\n\n## Uruguay team news\n\nBielsa is without two key players ahead of this fix\n\n\u2022 Uruguay vs Cape Verde Prediction: Cape Verde dreams of its first win - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/uruguay-vs-cape-verde-match-prediction-21-june-2026/\n  ### Uruguay: Lineup\n\nThere are some doubts as to whether Darwin Nu\u00f1ez will start after a disappointing first game. Cannobio could come into the lineup in place of Nu\u00f1ez or Vi\u00f1as. Ronald Ara\u00fajo and De Arrascaeta are expected to remain sidelined.\n\n\ud83d\udd16Uruguay starting lineup (4-4-2)\n\nMuslera \u2013 Varela, Caceres, Olivera, Sanabria \u2013 Valverde, Ugarte, Bentancur, Maxi Ara\u00fajo \u2013 Canobbio, Nu\u00f1ez\n\n\u274cOut: Ronald Ara\u00fajo, De Arrascaeta (injured)\n\n\ud83d\udc64Head Coach: Marcelo Bielsa\n\n## Cape Verde: Form and statistics [...] # Uruguay vs Cape Verde Prediction: Cape Verde dreams of its first win\n\n21/06/2026 23:00\n\nDay\n\nHo\n\n\u2022 Uruguay vs. Cape Verde - Live Score - June 21, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-uruguay-vs-cape-verde-jun-21-2026-game-boxscore-647654\n  1.9 Expected Goals (xG) per Game 0.4\n\n1.0 Goals Against per Game 0.0\n\n27.0 Shots per Game 6.0\n\n72 Average Possession (%) 42\n\n16.0 Chances Created per Game 6.0\n\nCPV\n\n### TEAM LEADERS\n\nURU\n\nMaxi Araujo\n\n1\n\nGoals\n\nRyan Mendes\n\n0\n\nRodrigo Bentancur\n\n0\n\nAssists\n\nRyan Mendes\n\n0\n\nFederico Vinas\n\n3\n\nShots on Goal\n\nDiney Borges\n\n1\n\nFederico Vinas\n\n0.7\n\nExpected Goals (xG)\n\nDiney Borges\n\n0.1\n\nMaxi Araujo\n\n7.1\n\nRating\n\nVozinha\n\n8.4\n\nFernando Muslera\n\n0.29\n\nKeeper Save %\n\nVozinha\n\n0.35\n\nFernando Muslera\n\n0\n\nClean Sheets\n\nVozinha\n\n1\n\nCPV\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $222 would win $322 to\n\n\u2022 Saudi Arabia vs. Uruguay projected lineups, starting 11 for World Cup 2026 Group H game in Miami Gardens - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/saudi-arabia-vs-uruguay-lineups-starting-11-world-cup-2026-group-h/29b2a893ee795461fcf80d25\n  Uruguay have a handful of injury concerns, particularly in defence, meaning Juan Manuel Sanabria could be deployed at the back. The absences of Ronald Araujo and Jose Maria Gimenez will be keenly felt at the heart of the back four if neither is available, although the focus will be on getting them back fit at least for the game with Spain.\n\nCentral midfield is Uruguay's main strength. Manuel Ugarte has had a difficult time at Manchester United but is a hugely valuable disruptor at the heart of his national team. Rodrigo Bentancur provides good balance alongside Federico Valverde, who has an ar"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Uruguay recent form and results",
+        "data": "\u2022 How Uruguay scored late to rescue a 2026 World Cup point against Saudi Arabia - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/saudi-arabia-vs-uruguay-live-updates-world-cup-2026-score-result/69nsNqgcLx1t/\n  The Athletic Live TeamJune 16, 2026 at 8:48 PM EDT ... Uruguay left it late to snatch a point against Saudi Arabia in a <strong>1-1 draw</strong> that leaves World Cup Group H wide open. Abdulelah Al Amri poked Saudi Arabia into an unlikely lead after Uruguay ...\n\n\u2022 Reuters Uruguay at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/uruguay/\n  Follow Uruguay&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Uruguay World Cup 2026 Squad, Roster, Standings, Fixtures, and Kits - FWC Times\n  https://fwctimes.com/uruguay/\n  <strong>Uruguay qualified directly for the 2026 FIFA World Cup after finishing fourth in the CONMEBOL qualifiers with 28 points</strong>. Marcelo Bielsa leads a balanced squad featuring Jos\u00e9 Mar\u00eda Gim\u00e9nez as captain and a strong midfield core.\n\n\u2022 Saudi Arabia 1-1 Uruguay: World Cup 2026 \u2013 as it happened | World Cup 2026 | The Guardian\n  https://www.theguardian.com/football/live/2026/jun/15/saudi-arabia-v-uruguay-world-cup-2026-live\n  World Cup official cleared by Fifa and says gesture was \u2018subconscious twitch\u2019 ... A poacher\u2019s goal from Abdulelah Amri has given Saudi Arabia a half-time lead against a tepid Uruguay\n\n\u2022 Uruguay World Cup history, records and 2026 fixtures | FIFA\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uruguay-team-profile-history\n  Explore Uruguay&#x27;s World Cup history, records and memorable moments. Follow their road to the tournament with the latest on their fixtures, group and coach."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Cape Verde recent form and results",
+        "data": "\u2022 Cabo Verde | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/cabo-verde/team-news\n  Cabo Verde | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Cabo Verde squad at FIFA World Cup 2026\u2122.\n\n\u2022 How Cape Verde drew with Spain in one of the biggest shocks in World Cup history - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/spain-vs-cape-verde-live-updates-world-cup-2026-score-result/9mdmI2O6yHFw/\n  It has only been an independent ... U.S. On Monday, they produced one of the great World Cup results, drawing <strong>0-0 with European champions Spain</strong>....\n\n\u2022 Cape Verde Scores, Stats and Highlights - ESPN\n  https://www.espn.com/soccer/team/_/id/2597/cape-verde\n  Visit ESPN for Cape Verde live scores, video highlights, and latest news. Find standings and the full 2026 season schedule.\n\n\u2022 Spain held by 67th-ranked Cape Verde in 1st major World Cup shock - ESPN\n  https://www.espn.com/soccer/story/_/id/49073839/spain-held-67th-ranked-cape-verde-1st-major-world-cup-shock\n  Though the result was a huge shock given the difference in starting XIs, Cape Verde&#x27;s ranking and Spain&#x27;s status in many betting markets as joint favorites with France, the European giants&#x27; recent World Cup form has not been impressive.\n\n\u2022 Spain 0-0 Cape Verde: 40-year-old goalkeeper Vozinha the hero as debutants earn historic point - as it happened - ESPN\n  https://www.espn.com/soccer/story/_/id/49071783/spain-cape-verde-live-world-cup-2026-latest-updates-commentary-score-result\n  World Cup 2026 Power Rankings after one game: U.S. cracks top 10, but who is No. 1? ... Mexico rejoice after sealing knockout spot. Now the real work begins ... First week of World Cup betting brings record action at U.S. sportsbooks ... Debutants Cape Verde have held tournament contenders Spain to a stunning goalless draw in Atlanta -- in no small part thanks to the heroics of their 40-year-old goalkeeper Vozinha.\n\n\u2022 [Discussion] [World Cup 2026 Preview] Cape Verde: Rotterdam Connections, Inverted Fullbacks, and an Atlantic Fairytale (25/48)\n  https://www.reddit.com/r/soccer/comments/1u6gjq4/world_cup_2026_preview_cape_verde_rotterdam/\n  Sidny Cabral is no longer with Benfica, was transferred to Trabzonspor around 2 weeks ago!"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Uruguay vs. Cape Verde: Head-to-head record and past meetings - Sports Mole\n  https://www.sportsmole.co.uk/football/uruguay/world-cup-2026/head-to-head/uruguay-vs-cape-verde-head-to-head-record-and-past-meetings_599670.html\n  Cape Verde are a relatively new ... international football having won two World Cups, but it should be noted that <strong>they last won the competition in 1950</strong>....\n\n\u2022 Uruguay v Cabo Verde: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021487\n  Spain aim for first win and Uruguay meet Cabo VerdeSpain aim for first win and Uruguay meet Cabo Verde \u00b7 World Cup 2026: Routes to the finalWorld Cup 2026: Routes to the final\n\n\u2022 Preview: Uruguay vs Cape Verde - prediction, team news, lineups | World Cup 2026 - Sports Mole\n  https://www.sportsmole.co.uk/football/uruguay/world-cup-2026/preview/uruguay-vs-cape-verde-prediction-team-news-lineups_599604.html\n  All four teams in Group H are level on one point, but <strong>Uruguay come into the weekend&#x27;s clash in first place having drawn 1-1 with Saudi Arabia on June 15,</strong> whereas fourth-placed Cape Verde earned one of the greatest ever World Cup results by holding ...\n\n\u2022 Uruguay vs Cape Verde prediction, betting tips & preview \u2013 World Cup 2026\n  https://footballwhispers.com/blog/uruguay-vs-cape-verde-prediction-betting-tips-preview-world-cup-2026/\n  They have won six of their previous nine World Cup group matches, and four of their five meetings with African nations at World Cup finals, so <strong>history is certainly on Uruguay&#x27;s side</strong>.\n\n\u2022 Uruguay vs Cape Verde live updates: World Cup 2026 game latest team news and buildup - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/uruguay-vs-cape-verde-live-updates-world-cup-2026-score-result/zQHCeTEgvSM0/\n  ... In a World Cup that has already brought more than its share of memorable moments and enjoyable matches, it was a <strong>0-0 draw</strong> that captured the public imagination more than any other."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 How Uruguay\u2019s win, draw, or loss vs Cape Verde could impact the 2026 World Cup Group H standings - World Soccer Talk\n  https://worldsoccertalk.com/amp/world-cup/how-uruguays-win-draw-or-loss-vs-cape-verde-could-impact-the-2026-world-cup-group-h-standings/\n  With only two points in <strong>Group H</strong>, they would need a victory against Spain in the last match. However, they would have a difficult task to secure the first place in the group as they would depend on the results of the other teams.\n\n\u2022 2026 FIFA World Cup Group H - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H\n  ^ a b Team conduct points: <strong>Uruguay 0, Saudi Arabia \u22121</strong>. ... The winner of Group H will advance to play the runner-up of Group J. The runner-up of Group H will advance to play the winner of Group J. The third-placed team of Group H might advance to play the winner of Group A, Group G, Group ...\n\n\u2022 World Cup 2026 Group H guide - fixtures, schedule, standings and odds for Spain, Cape Verde, Saudi Arabia and Uruguay | Football News | Sky Sports\n  https://www.skysports.com/football/news/12098/13543099/world-cup-2026-group-h-guide-fixtures-schedule-standings-and-odds-for-spain-cape-verde-saudi-arabia-and-uruguay\n  World Cup <strong>Group H</strong> includes Spain, Cape Verde, Saudi Arabia and Uruguay; matches to take place in Zapopan, Mexico and USA cities Atalanta, Miami and Houston\n\n\u2022 Uruguay vs Cape Verde: Group H World Cup 2026 Match Preview | Mathrubhumi English\n  https://english.mathrubhumi.com/sports/football/football-world-cup-2026-uruguay-vs-cape-verde-match-preview-lr9tv885\n  <strong>Uruguay sit technically in first place in the group</strong> following their hard-fought 1-1 draw against Saudi Arabia on 15 June. Meanwhile, tournament debutants Cape Verde pulled off one of the greatest shocks in World Cup history by holding European ...\n\n\u2022 World Cup 2026 \u2013 Group H guide: Spain take on Uruguay as Cape Verde fairytale begins\n  https://www.independent.co.uk/sport/football/world-cup-2026-group-h-spain-uruguay-saudi-arabia-cape-verde-b2996238.html\n  Two-time winners Uruguay will provide ... place is up for grabs \u2013 on paper anyway \u2013 between 61st ranked Saudi Arabia and <strong>69th ranked Cape Verde</strong>, who are one of the feel-good stories of the summer after qualifying for a first World ..."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Analyzes Uruguay's historic performance metrics and tactical struggles when facing athletic, disciplined African nations in major tournaments.",
+        "data": "URL: https://www.national-football-teams.com/country/208/2026/Zimbabwe.html\nTitle: Zimbabwe (2026)\nYou are using an old browser which is not compatible with our new design. Please update your browser or use our [old website](https://www.national-football-teams.com/old/).\n\n## General Information for **Zimbabwe**\n\n##### Zimbabwe Football Association\n\n**Founded**\n\n1965\n\n**FIFA entry**\n\n1965\n\n**Average height in 2026**\n\n1.81m\n\n**Average age in 2026**\n\n26.4\n\n**Confederation**\n\nCAF\n\n**Infos provided by**\n\n##### Emblem\n\n![](https://www.national-football-teams.com/uploads/country_images/fifa/logo_zim.gif)\n\n##### Jersey in 2026\n\n![Jersey in 2026](https://www.national-football-teams.com/uploads/country_images/jersey/Zimbabwe_208-5afcd9d415f4a.jpeg)\n\n### Coaches in 2026\n\n## Players of **Zimbabwe** in 2026\n\nFIFA\n\nNon FIFA\n\n[Name](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=player.surname&direction=asc&page=1)\n\n[Day of Birth](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=player.yearOfBirth&direction=asc&page=1)\n\n[Position](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=p.root&direction=asc&page=1)\n\nCurrent Club\n\n[M](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.matches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.substitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.goals&direction=asc&page=1)\n\n[M](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.nonFifaMatches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html?sort=score.nonFifaGoals&direction=asc&page=1)\n\n[Chipezeze, Elvis](https://www.national-football-teams.com/player/74473/Elvis_Chipezeze.html)\n\n1990-03-11\n\nGoalkeeper\n\n[![South Africa](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/South_Africa_172-58a62236cea77.png)](https://www.national-football-teams.com/country/172/2026/South_Africa.html)\n\n[Magesi Polokwane](https://www.national-football-teams.com/club/25074/2026/Magesi_Polokwane.html)\n\n2\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Sibanda, Future](https://www.national-football-teams.com/player/104979/Future_Sibanda.html)\n\n1996-07-06\n\nGoalkeeper\n\n[![Zimbabwe](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Zimbabwe_208-58a62a57c77cf.png)](https://www.national-football-teams.com/country/208/2026/Zimbabwe.html)\n\n[ZPC Kariba](https://www.national-football-teams.com/club/16726/2026/Zpc_Kariba.html)\n\n1\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Tavaziva, Marley](https://www.national-football-teams.com/player/100180/Marley_Tavaziva.html)\n\n2004-12-17\n\nGoalkeeper\n\n[![England](https://www.national-football-teams.com/"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Evaluates Uruguay's structural form, non-penalty expected goals, and defensive vulnerabilities on transition from their last match.",
+        "data": "\u2022 2026 FIFA World Cup xG Tracker Results Expected Goals Of Every Match - RealGM Analysis\n  https://soccer.realgm.com/analysis/559/2026-FIFA-World-Cup-xG-Tracker-Results-Expected-Goals-Of-Every-Match\n  Our 2026 FIFA World Cup xG Tracker logs expected goals (xG) and final scores for every match of the tournament.\n\n\u2022 The soccer metric that proves the 2026 World Cup is providing historic levels of entertainment - The Athletic\n  https://www.nytimes.com/athletic/7377077/2026/06/21/the-soccer-metric-that-proves-the-2026-world-cup-is-providing-historic-levels-of-entertainment/\n  There have been <strong>109 goals scored from an xG tally of 90,</strong> meaning we have seen 19 goals more than the quality of chances would suggest.\n\n\u2022 xG World Cup 2026 - Expected Goals and xG Stats | xGscore\n  https://xgscore.io/xg-statistics/world-cup/2026\n  World Cup xGscore&#x27;s Expected Goals (xG) stats and analyses, tournament table and result fairness. Advanced xG: On Target, Set Play, First / Second half and other\n\n\u2022 World Cup xG (Expected Goals) | FootyStats\n  https://footystats.org/international/world-cup/xg\n  Expected Goals data for the International World Cup - including xG, xG Against (Conceded), and xG at home and away. Stats use advanced xG modelling for the World Cup.\n\n\u2022 Numbers game: stats that tell stories from the first 24 World Cup matches | World Cup 2026 | The Guardian\n  https://www.theguardian.com/football/datablog/2026/jun/18/numbers-game-stats-that-tell-stories-from-the-first-24-world-cup-matches\n  Spain averaged 0.08 xG per shot, with <strong>Uruguay (0.06)</strong> and Turkey (0.04) among the teams below them. That is worse than Burnley and Wolves averaged in the Premier League this season (0.09), two teams nobody is looking to emulate."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Determines Cape Verde's tactical approach to counter Uruguay's vertical wing-play and identifies potential mismatches in fullback pace.",
+        "data": "\u2022 Cape Verde 2026 World Cup preview: Squad breakdown, key player, and tactical analysis - World Soccer Talk\n  https://worldsoccertalk.com/amp/world-cup/cape-verde-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/\n  When facing superior opposition this summer, the team will likely spend extended periods in a low defensive block. They rely on their work rate in transition to progress the ball from deep areas, using their wingers to isolate opposing fullbacks on the counterattack. However, their main tactical vulnerability lies in the attacking third.\n\n\u2022 r/soccer on Reddit: [World Cup 2026 Preview] Cape Verde: Rotterdam Connections, Inverted Fullbacks, and an Atlantic Fairytale (25/48)\n  https://www.reddit.com/r/soccer/comments/1u6gjq4/world_cup_2026_preview_cape_verde_rotterdam/\n  Spain&#x27;s technical dominance and Uruguay&#x27;s relentless intensity will likely overwhelm their defensive structure. They have a genuine shot at securing points against Saudi Arabia, but escaping the group feels like a bridge too far. Group stage exit, but with their heads held extremely high. ... been following cape verde&#x27;s qualifying run and this breakdown is spot on about their tactical setup. the inverted fullback system is actually pretty clever for a team with their resources - it maximizes the technical ability of players like monteiro while giving their pace merchants space to operate\n\n\u2022 Uruguay vs Cape Verde World Cup 2026: Preview, Prediction & Analysis\n  https://worldcupwiki.com/uruguay-vs-cape-verde-world-cup-2026/\n  Uruguay have the better players and, after dropping points already, the bigger need to win. Bielsa\u2019s side should dominate the ball and pin Cape Verde deep, with <strong>Valverde driving from midfield and the full-backs pushing high to create overloads</strong>.\n\n\u2022 Cape Verde 2026 World Cup preview: Squad breakdown, key player, and tactical analysis\n  https://www.msn.com/en-us/sports/soccer/cape-verde-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ar-AA25Gzzb\n  When facing superior opposition this summer, the team will likely spend extended periods in a low defensive block. They rely on their work rate in transition to progress the ball from deep areas, using their wingers to isolate opposing fullbacks on the counterattack. However, their main tactical vulnerability lies in the attacking third.\n\n\u2022 Uruguay vs Cape Verde: World Cup 2026 Prediction | Squawka\n  https://www.squawka.com/us/news/world-cup/match-preview-uruguay-vs-cape-verde-06-21-26-world-cup-2026/\n  <strong>Facundo Pellistri</strong> (Uruguay): Wide creator who provides the assist threat for Nunez. He carries the kind of pace that gets in behind a low Cape Verde block.\n\n\u2022 [Discussion] Post-Match Thread: Brazil vs Morocco | FIFA World Cup 2026 | Group Stage, Group C\n  https://www.reddit.com/r/soccer/comments/1u567tg/postmatch_thread_brazil_vs_morocco_fifa_world_cup/\n  The future for Brasil is looking bright. All they need is two wing backs, a completely new midfield and a striker.\n\n\u2022 [Discussion] Hater's Guide to the 2026 FIFA World Cup (for us Filthy Americans)\n  https://www.reddit.com/r/UrinatingTree/comments/1u1cck8/haters_guide_to_the_2026_fifa_world_cup_for_us/\n  > For the smallest Spanish-speaking South American country Well\u2026 second smallest Spanish speaking country in South America. That honor goes to Uruguay btw"
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Identifies the motivation levels and tournament context based on live group standings and tiebreaker requirements on June 21.",
+        "data": "{\"topic\":\"Uruguay Cape Verde World Cup 2026 group standings qualification scenarios\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Determines the venue's climate conditions, which directly impact physical fatigue, high-pressing intensity, and squad rotation strategies.",
+        "data": "\u2022 Lightning strikes lit up Miami Stadium on Saturday as storms ...\n  https://www.instagram.com/reel/DZ16kRIM6qt/\n  Uruguay vs Cape Verde FIFA World Cup 2026 \u2013 Group H, Match 37 Venue: Hard Rock Stadium Location: Miami, Florida, USA\n\n\u2022 Uruguay vs Cape Verde performance-impairing heat - Climate Central\n  https://www.climatecentral.org/world-cup-2026/matches/37\n  The June 21 match at Miami Stadium (Uruguay vs. Cape Verde) has a 88% chance of heat that can impair performance. heat above 28\u00b0C (82.4\u00b0F)\n\n\u2022 Dramatic flashes of lightning illuminated Miami Stadium as severe ...\n  https://www.facebook.com/TimesofIndia/posts/dramatic-flashes-of-lightning-illuminated-miami-stadium-as-severe-weather-swept-/1450900293750820/\n  Dramatic flashes of lightning illuminated Miami Stadium as severe weather swept across the area ahead of the FIFA World Cup 2026 match ...\n\n\u2022 60 per cent thunderstorm chance for Uruguay vs Cape Verde in Miami\n  https://www.nytimes.com/athletic/7380641/2026/06/21/world-cup-weather-miami-uruguay/\n  At 12 p.m. expect mostly sunny skies with temperatures warming to near 80F (27C). Temperatures after the game will be near 85F (29C). ...\n\n\u2022 Where to watch Uruguay vs. Cape Verde live stream, TV channel ...\n  https://sports.yahoo.com/articles/where-watch-uruguay-vs-cape-100001556.html\n  This World Cup clash kicks off on Sunday, June 21 at 6 p.m. local time at Hard Rock Stadium in Miami Gardens, Florida."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Fetches real-time fitness, training, and injury updates on Uruguay's key midfielder Federico Valverde.",
+        "data": "\u2022 World Cup schedule today: How to watch Spain v Saudi Arabia, TV channels & live stream Sunday 21 June - The Guardian\n  https://www.theguardian.com/football/2026/jun/21/how-to-watch-world-cup-spain-saudi-arabia-tv-streaming\n  # World Cup schedule today: How to watch Spain v Saudi Arabia, TV channels & live stream Sunday 21 June. Billed as pre-tournament favourites, Spain are looking to give their World Cup campaign a kick after a disappointing goalless draw against Cape Verde. A follow-up encounter with Saudi Arabia will give them the opportunity to do so. Rudi Garcia\u2019s side struggled in a 1-1 draw against Egypt, who caused problems for the Red Devils on the counter-attack. Meanwhile, Iran and New Zealand will attempt to follow up their thrilling 2-2 draw in Los Angeles with another encouraging result and performan\n\n\u2022 World Cup Day 11 What to Watch: Can Spain get win over Saudi Arabia after draw with Cape Verde? - Yahoo Sports\n  https://sports.yahoo.com/soccer/article/world-cup-day-11-what-to-watch-can-spain-get-win-over-saudi-arabia-after-draw-with-cape-verde-044506091.html\n  # World Cup Day 11 What to Watch: Can Spain get win over Saudi Arabia after draw with Cape Verde? The second Sunday of the 2026 World Cup is the sequel to a draw-filled day earlier in the tournament. It was the first time in 66 years that there had been four World Cup draws on the same day. ## Spain vs. Sunday is the day that Spain scores its first goal of the 2026 World Cup and gets its first win, right? Spain tied Cape Verde 0-0 to open this World Cup, while Saudi Arabia got a late goal to secure a draw against Uruguay. Belgium couldn't complete the comeback in its 1-1 tie against Egypt, whi\n\n\u2022 Defender R\u00fcdiger 'not done here' as he signs 1-year contract extension at Real Madrid - The Washington Post\n  https://www.washingtonpost.com/sports/soccer/2026/06/16/antonio-rudiger-real-madrid-contract/02bd62ba-6967-11f1-830e-133d20cadd28_story.html\n  # Defender R\u00fcdiger 'not done here' as he signs 1-year contract extension at Real Madrid. Antonio R\u00fcdiger is staying at Real Madrid for another season after the German defender signed a one-year contract extension while at the World Cup. FILE - Real Madrid\u2019s Antonio Rudiger, right, congratulates Federico Valverde after scoring during a Spanish La Liga soccer match between Real Madrid and Elche CF, in Madrid, March 14, 2026. (AP Photo/Manu Fernandez, File). MADRID \u2014 Antonio R\u00fcdiger is \u201cnot done\u201d at Real Madrid as the German defender stays for another season, signing a one-year contract extension\n\n\u2022 Real Madrid in talks with World Cup winner over \u00a3120m move - sportingnews.com\n  https://www.sportingnews.com/us/soccer/real-madrid/news/real-madrid-talks-world-cup-winner-over-%C2%A3120m-move/314a9773301b1097dd568216\n  The next few months are set to be quite a busy time period for Enzo Fern\u00e1ndez, as after only having a small break following the conclusion of the Premier League season, he had to report to Argentina's camp for the 2026 FIFA World Cup. So it's safe to say that the Argentine is set to have some tired legs whenever his time in the global spectacle comes to an end. But performing on the global stage isn't the only thing that has been on Fernandez's mind, as a potential move is on the cards, with the top candidate being Real Madrid, according to recent reports. Having a transfer come in the midst o\n\n\u2022 Saudi Arabia vs Uruguay Extended Highlights | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-wk0kul396k37au4s\n  # Saudi Arabia vs Uruguay Extended Highlights | 2026 FIFA World Cup\u2122. ## Check out the full game highlights between Saudi Arabia and Uruguay in the 2026 FIFA World Cup\u2122. 1 MIN AGO\u30fbFIFA Men's World Cup\u30fb16:48. Federico Valverde  FIFA Men's World Cup  FIFA World Cup - 30 Minute Recaps  Saudi Arabia  Uruguay  WC - Saudi Arabia vs. FIFA MEN'S WORLD CUP. ### Catch Up with Highlights. ### Saudi Arabia vs Uruguay Highlights | 2026 FIFA World Cup\u2122. ### Uruguay\u2019s Maximiliano Ara\u00fajo scores "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides crucial intelligence on Cape Verde's internal camp dynamics, training injuries, and squad readiness.",
+        "data": "\u2022 Cape Verde XI vs Spain \u2013 Predicted lineup and team news - Yahoo Sports\n  https://sports.yahoo.com/articles/cape-verde-xi-vs-spain-053500694.html\n  # Cape Verde XI vs Spain \u2013 Predicted lineup and team news. **Cape Verde face Spain in Atlanta on Monday to make absolute World Cup history.**. Bubista\u2019s side arrive in the United States in incredibly high spirits after winning their last three matches. They face a massive mismatch against the second-ranked team in the world but carry extreme motivation. Cape Verde fully understand the immense difficulty of this opening challenge against the reigning European champions. The African side will rely on extreme tactical discipline and full commitment to frustrate their elite opponents. ## Cape Verd\n\n\u2022 Spain vs. Cape Verde projected lineups, starting 11 for World Cup 2026 Group H game in Atlanta - sportingnews.com\n  https://www.sportingnews.com/in/football/news/spain-cape-verde-projected-lineups-starting-11-world-cup-2026/7bd30f56de618d1fdb26eb38\n  Cape Verde projected lineups, starting 11 for World Cup 2026 Group H game in Atlanta. European champions Spain begin their quest for a second global title when they face Cape Verde in their World Cup Group H opener. Luis de la Fuente's side defeated England 2-1 in Berlin in the final of Euro 2024 to claim continental glory for a fourth time and the third time in five European Championships. Cape Verde World Cup rosters. Here are the names on Spain and Cape Verde's World Cup rosters. | GK | 13 | **Joan Garcia** | Barcelona (La Liga, Spain) | 25 | 1 |. | DEF | 22 | **Pau Cubarsi** | Barcelona (L\n\n\u2022 Stephen A. proclaims the Knicks America's team - ESPN\n  https://www.espn.com/watch/player/_/id/49082233\n  ## World Cup 2026 today: Live updates, latest news as Livramento out of World Cup - June 16. It's day six at the World Cup, and after Monday night's games produced some shock draws, you can follow all of the day's news right here, with ESPN. ## England's Tino Livramento out of World Cup, Trevoh Chalobah in. Tino Livramento has been ruled out of the World Cup with a hamstring injury and will be replaced by Chelsea defender Trevoh Chalobah, England announced on Tuesday. ## Cape Verde GK Vozinha stopped World Cup favorites Spain ... Cape Verde GK Vozinha is a 40-year-old journeyman who is now one\n\n\u2022 Cape Verde stunned Spain: Can they do it again vs. Uruguay? - USA Today\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/20/cape-verde-uruguay-world-cup-blue-sharks-spain-draw-miracle/90632214007/\n  MIAMI GARDENS, FL \u2014 When Cape Verde faces Uruguay tomorrow in Miami Stadium, all eyes will be on the World Cup's newest Cinderella team. A day before their next match, the squad is still riding the high of its 0-0 draw with Spain. \u201cI hope tomorrow we can have another beautiful day for us and for our nation.\u201d. Cape Verde\u2019s goalkeeper, Vozinha, delivered the performance of a lifetime, making a series of acrobatic saves that turned him into a global sensation. The archipelago nation off the west coast of Africa was the only one of the four debutants at the 2026 tournament to avoid a first-game de\n\n\u2022 Cape Verde and Spain play scoreless draw and Iran ties New Zealand on day 5 of World Cup, in photos - Bozeman Daily Chronicle\n  https://www.bozemandailychronicle.com/ap_news/sports/cape-verde-and-spain-play-scoreless-draw-and-iran-ties-new-zealand-on-day-5/article_93245e01-12e0-5bf9-a0ea-567eebcc470f.html\n  You have permission to edit this article. Cape Verde huddles during the World Cup Group H soccer match between Spain and Cape Verde in Atlanta, Monday, June 15, 2026. Cape Verde fans cheer during the World Cup Group H soccer match between Spain and Cape Verde in Atlanta, Monday, June 15, 2026. Spain's Aymeric Laporte (14) and Cape Verde's Dailon Livramento (19) go up for a header during the World Cup Group H soccer match between Spain and Cape Verde in Atlanta, Monday, June 15, 2026. Spain's Pedri tries to save the ball in front of Cabo Verde's Kevi"
+      }
+    ],
+    "research_cost": 0.118,
+    "wallet_before": 0.156,
+    "wallet_after": 0.038,
+    "prediction": {
+      "pick": "draw",
+      "confidence": 6,
+      "confidence_reason": "Cape Verde's proven low-block resilience against Spain and Uruguay's severe defensive absences and inefficient shot conversion strongly support a low-scoring stalemate.",
+      "reasoning": "Cape Verde's disciplined defensive block and goalkeeper Vozinha's form are perfectly suited to frustrate a depleted Uruguayan side that struggles with low-quality chance creation.",
+      "probabilities": {
+        "home": 38,
+        "draw": 44,
+        "away": 18
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Uruguay drew 1-1 against Saudi Arabia in their opener, dominating possession but relying on a late Maximiliano Araujo equalizer after a tepid attacking display.",
+      "away_form": "Cape Verde secured a historic 0-0 draw against European champions Spain, driven by a highly disciplined defensive low-block and heroics from their goalkeeper.",
+      "key_injuries": [
+        "Uruguay: Ronald Araujo (injured - out)",
+        "Uruguay: Jose Maria Gimenez (injured - out)",
+        "Uruguay: De Arrascaeta (injured - out)",
+        "Uruguay: Darwin Nunez (disappointing form - doubt to start)",
+        "Cape Verde: Jovane Cabral (fitness test pending)"
+      ],
+      "tactical_matchup": "Cape Verde's compact low-block and transition work rate will look to frustrate Marcelo Bielsa's high-possession, intense Uruguay side, which lacks key defensive pillars and struggled to convert dominance in their opener.",
+      "group_stakes": "With all four teams in Group H currently tied on 1 point, a victory is essential for both sides to control their destiny ahead of the final group matchday.",
+      "home_win_signals": [
+        "Uruguay possesses a world-class midfield core featuring Federico Valverde, Rodrigo Bentancur, and Manuel Ugarte to control the tempo.",
+        "Uruguay generated 1.9 xG and registered 27 shots in their opening match, demonstrating high attacking volume.",
+        "Pace and directness from wingers like Facundo Pellistri and Agustin Canobbio can stretch Cape Verde's deep defensive line."
+      ],
+      "away_win_signals": [
+        "Cape Verde can exploit a depleted Uruguayan defense missing both Ronald Araujo and Jose Maria Gimenez through quick counterattacks.",
+        "Winger Ryan Mendes provides experienced transition threat to isolate Uruguay's stand-in fullbacks."
+      ],
+      "draw_signals": [
+        "Cape Verde's low-block successfully neutralized Spain's elite attack to a 0-0 draw, proving their capability to frustrate possession-heavy teams.",
+        "Uruguay's low xG per shot of 0.06 indicates highly inefficient chance creation, making them vulnerable to a compact defense.",
+        "40-year-old Cape Verde goalkeeper Vozinha is in outstanding form, having made 7 saves against Spain to keep a clean sheet."
+      ],
+      "contradictions": [
+        "Uruguay's high volume of shots (27) and xG (1.9) suggests offensive dominance, but their low quality per shot (0.06 xG) contradicts their ability to easily break down Cape Verde's resilient defense."
+      ],
+      "strategy_applied": [
+        "ESP vs CPV (Low-block over possession): Prioritized Cape Verde's defensive structure and low-block efficiency over Uruguay's high possession metrics.",
+        "KSA vs URU (Heat/squad over history): Evaluated Uruguay's current squad limitations and defensive absences rather than relying on their historical pedigree against African nations.",
+        "Advanced analytics used: Validated the matchup using xG per shot (0.06 for Uruguay) and defensive save metrics instead of historical trends."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overweighting Uruguay's raw attacking volume of 27 shots and 1.9 xG without properly discounting their abysmal 0.06 xG per shot quality",
+        "Assuming Uruguay's star-studded midfield can easily break down a low-block when they failed to do so effectively against Saudi Arabia",
+        "Overestimating Cape Verde's transition threat to actually win the match, given their primary output was a ultra-defensive scoreless draw against Spain"
+      ],
+      "underweighted_factors": [
+        "The compounding impact of Darwin Nunez's poor form and De Arrascaeta's absence on an already highly inefficient Uruguayan frontline",
+        "The defensive vulnerability of Uruguay's makeshift backline under Marcelo Bielsa's high-pressing system without Ronald Araujo and Jose Maria Gimenez",
+        "Cape Verde's defensive organization and goalkeeper Vozinha's form perfectly aligning to exploit Uruguay's low-quality shot selection"
+      ],
+      "draw_risk": "high \u2014 Cape Verde's proven ability to frustrate elite possession sides combined with Uruguay's highly inefficient, high-volume shooting style strongly points to another low-scoring stalemate.",
+      "favorite": "none",
+      "confidence_cap": 6,
+      "verdict": "Uruguay's depleted defense and highly inefficient attack are primed to struggle against Cape Verde's disciplined low-block, making a low-scoring draw the most value-aligned projection."
+    },
+    "full_reasoning": "HOME_PCT: 38\nDRAW_PCT: 44\nAWAY_PCT: 18\nPICK: draw\nCONFIDENCE: 6\nCONFIDENCE_REASON: Cape Verde's proven low-block resilience against Spain and Uruguay's severe defensive absences and inefficient shot conversion strongly support a low-scoring stalemate.\nREASONING: Cape Verde's disciplined defensive block and goalkeeper Vozinha's form are perfectly suited to frustrate a depleted Uruguayan side that struggles with low-quality chance creation.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
