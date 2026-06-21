@@ -10913,9 +10913,15 @@
     },
     "full_reasoning": "HOME_PCT: 38\nDRAW_PCT: 42\nAWAY_PCT: 20\nPICK: draw\nCONFIDENCE: 4\nCONFIDENCE_REASON: Severe Atlanta heat and Spain's key attacker Lamine Yamal being unfit cap the confidence in a decisive outcome.\nREASONING: Spain's high-possession style is likely to be neutralized by Saudi Arabia's disciplined low block in oppressive weather conditions, leading to a low-scoring draw.",
     "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 4,
+      "away_score": 0,
+      "winner": "home"
+    },
+    "correct": false,
+    "evaluation": "MISTAKE:\n- The prediction missed a 4-0 Spain victory by forecasting a low-scoring draw.\n- I incorrectly assumed oppressive weather and a deep defensive block would neutralize Spain's high-possession attack.\nDATA:\n- useful: https://api.signalfuse.co/v1/gateway/search/tavily \u2014 Matchday 1 advanced analytics highlighted Spain's elite xG creation and transition speed.\n- useless: https://websearch--gw.swerver.net/search \u2014 Stadium environmental and climate intelligence failed to translate into any physical disadvantage for Spain.\n- useless: https://api.signalfuse.co/v1/gateway/search/brave \u2014 Historical data on Saudi Arabia playing European sides created a false impression of defensive stability.",
+    "reflected": true,
+    "reflected_at": "2026-06-21T18:30:16.121717+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n- TUN vs JPN: System depth over individual absences.\n- ESP vs KSA: Transition speed and xG over weather and defensive block.\n\n## Data sources\n- use: Advanced analytics (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 xG and transition validation (ESP vs KSA)\n- skip: Climate data (https://websearch--gw.swerver.net/search) \u2014 environmental impact (ESP vs KSA)\n- skip: Historical data (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defensive block relevance (ESP vs KSA)"
   }
 ]

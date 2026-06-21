@@ -32,8 +32,9 @@
 - GER vs CIV: Lateral mobility and freshness over history.
 - ECU vs CUW: Low-block and heat over physical quality.
 - TUN vs JPN: System depth over individual absences.
+- ESP vs KSA: Transition speed and xG over weather and defensive block.
 
 ## Data sources
-- use: Market sentiment (https://websearch--gw.swerver.net/search) — squad depth validation (TUN vs JPN)
-- skip: Pitch/weather (https://api.signalfuse.co/v1/gateway/search/brave) — transition impact (TUN vs JPN)
-- skip: History (https://skim402.com/api/v2/read) — head-to-head relevance (TUN vs JPN)
+- use: Advanced analytics (https://api.signalfuse.co/v1/gateway/search/tavily) — xG and transition validation (ESP vs KSA)
+- skip: Climate data (https://websearch--gw.swerver.net/search) — environmental impact (ESP vs KSA)
+- skip: Historical data (https://api.signalfuse.co/v1/gateway/search/brave) — defensive block relevance (ESP vs KSA)
