@@ -10221,5 +10221,358 @@
     "reflected": true,
     "reflected_at": "2026-06-21T02:30:27.709839+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 opponent defensive structure (ECU vs CUW)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat impact on tempo (ECU vs CUW)\n- skip: News (news-x402.com/news/recent) \u2014 group permutation analysis (ECU vs CUW)"
+  },
+  {
+    "match": "TUN vs JPN",
+    "home": "TUN",
+    "away": "JPN",
+    "kickoff": "2026-06-21T04:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n\n## Data sources\n- use: Search (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 opponent defensive structure (ECU vs CUW)\n- use: Venue (https://websearch--gw.swerver.net/search) \u2014 heat impact on tempo (ECU vs CUW)\n- skip: News (news-x402.com/news/recent) \u2014 group permutation analysis (ECU vs CUW)",
+    "information_needs": "FORM\n- How did Japan perform in their final AFC qualifying round and their opening group match of this tournament, specifically regarding their expected goals (xG) creation and defensive solidity?\n- How did Tunisia fare in their CAF World Cup qualifiers leading up to June 2026, particularly in away or neutral-ground matches against higher-ranked opponents?\n\nPLAYERS\n- Are Japan's key European-based stars (such as Kaoru Mitoma or Takefusa Kubo) fully fit and sharp after a grueling club season, or are they carrying injuries?\n- Who is starting in goal for Tunisia, and what are their post-shot expected goals (PSxG) metrics and cross-claim success rates over their last 10 international matches?\n\nTACTICS\n- How does Tunisia's compact low-block defensive transition match up against Japan's high-tempo, fluid wing play and quick combinations in the half-spaces?\n- Does Japan's manager deploy a 4-2-3-1 or a back-three system (3-4-3) when facing defensively stubborn, physical African sides, and how successful has each system been in breaking down deep blocks?\n\nH2H\n- What are the tactical takeaways from their most recent head-to-head meetings (such as the Kirin Cup in 2022 and friendly in 2023)? Did those matches feature the same core managers and tactical setups?\n\nCONTEXT\n- What are the current Group standings going into this matchday, and what does each team mathematically need (e.g., does Tunisia need a win to stay alive, or would a draw suit Japan's qualification chances)?\n\nMARKET\n- What are the current Asian Handicap and Over/Under lines for this match, and has there been any significant sharp money movement since the opening odds were released?\n\nNEWS\n- Are there any reports of internal camp discord, illness, or travel fatigue within either squad following their arrival at their World Cup base camp?\n\nVENUE\n- Which North American city and stadium is hosting this match, what is the pitch type (natural grass vs. temporary grass over turf), and will the local summer heat and humidity levels favor one team's physical profile?",
+    "research_gaps": [
+      {
+        "need": "Tunisia starting goalkeeper's precise post-shot expected goals (PSxG) and cross-claim success rates over their last 10 international matches.",
+        "category": "PLAYERS",
+        "ideal_service": "An x402-enabled Opta or FBref API integration that bypasses scraping blocks to deliver specialized goalkeeper performance analytics."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Tunisia vs Japan World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Tunisia vs Japan World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Tunisia World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Tunisia recent form and results",
+        "need": "How has Tunisia performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Japan World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Japan recent form and results",
+        "need": "How has Japan performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Tunisia vs Japan head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Tunisia vs Japan World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.national-football-teams.com/country/101/Japan.html"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Retrieves reliable historical H2H results and squad rosters to evaluate patterns in previous encounters.",
+        "need": "What are the tactical takeaways and manager setups from their most recent head-to-head meetings (Kirin Cup 2022, friendly 2023)?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Allows calculation of qualification permutations and motivational incentives for both teams.",
+        "need": "What are the current Group standings going into this matchday, and what does each team mathematically need to qualify?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Japan national football team World Cup 2026 qualification results expected goals xG",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Provides statistical insights into Japan's recent performance metrics and defensive organization.",
+        "need": "How did Japan perform in their final AFC qualifying round and opening group match regarding xG creation and defensive solidity?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Japan vs Tunisia World Cup 2026 stadium location pitch grass weather humidity",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies critical environmental factors and pitch type that could influence player fatigue and ball movement.",
+        "need": "Which North American city and stadium is hosting this match, the pitch type, and will local summer heat/humidity favor one team?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Tunisia World Cup camp news illness fatigue discord",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Scans real-time news sources for camp updates, disruptions, or team selection issues.",
+        "need": "Are there any reports of internal camp discord, illness, or travel fatigue within either squad after arrival at base camp?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Japan vs Tunisia World Cup 2026 betting odds Asian Handicap Over Under movement",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Fetches current market sentiment, point spreads, and volume flow direction to identify sharp betting value.",
+        "need": "What are the current Asian Handicap and Over/Under lines for this match, and has there been any significant sharp money movement?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Japan World Cup 2026 squad injury news Kaoru Mitoma Takefusa Kubo fitness",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides up-to-date reports on the physical condition and fitness status of Japan's key creative stars.",
+        "need": "Are Japan's key European-based stars (such as Kaoru Mitoma or Takefusa Kubo) fully fit and sharp, or are they carrying injuries?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Japan vs Tunisia World Cup 2026 tactical preview projected lineups defensive block",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "general"
+        },
+        "cost": 0.012,
+        "reason": "Extracts tactical analysis of Tunisia's defensive shape and how Japan plans to break down deep blocks.",
+        "need": "How does Tunisia's compact low-block defensive transition match up against Japan's fluid wing play and combinations?",
+        "category": "TACTICS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Tunisia vs. Japan projected lineups, starting 11 for World Cup 2026 Group F game in Monterrey - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/tunisia-vs-japan-lineups-starting-11-world-cup-2026-group-f/5137419228e722db5af202dd\n  Defeat would not mathematically eliminate either side given the expanded tournament and the number of teams progressing from the group, but it would leave the loser staring at an early exit. For Tunisia in particular, anything other than a good result would all but end their hopes.\n\nHere is how we expect the teams to line up.\n\n2026 WORLD CUP HQ: Latest World Cup news | Full World Cup schedule | Buy World Cup tickets\n\n## Tunisia projected starting 11\n\n(4-2-3-1, right to left): 16. A. Dahmen (GK) \u2014 2. Y. Valery, 6. D. Bronn, 3. M. Talbi, 21. A. Abdi \u2014 17. E. Skhiri, 14. R. Khedira \u2014 7. E. Achour\n\n\u2022 Tunisia vs Japan Prediction: A pivotal match for both teams - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/tunisia-vs-japan-match-prediction-21-june-2026/\n  Draw (X) \u2013 4.21 at 1xBet\n\nJapan to win (2) \u2013 1.58 at 1xBet\n\n## Tunisia vs Japan match prediction, 21 June 2026\n\nJapan has a better squad, but it has to prove it on the field. Tunisia showed a weak defense in its first game, and we'll see if the new coach can improve the team's back line.\n\nPrediction: Japan to win & TU 5.5 \u2013 1.61 at 1xBet\n\nJapan must win to virtually qualify and avoid having to decide everything in the final match against Sweden. I'm going to bet on a Japanese victory with a maximum of five goals scored to boost the odds.\n\nBetting tip: BTTS - Yes \u2013 2.15 at Betway\n\nTunisia and J\n\n\u2022 Tunisia vs. Japan - Live Score - June 21, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-tunisia-vs-japan-jun-21-2026-game-boxscore-647651\n  Assists\n\nTakefusa Kubo\n\n1\n\nElias Achouri\n\n1\n\nShots on Goal\n\nDaichi Kamada\n\n1\n\nOmar Rekik\n\n0.1\n\nExpected Goals (xG)\n\nKeito Nakamura\n\n0.2\n\nMohamed Amine Ben Hmida\n\n7.3\n\nRating\n\nDaichi Kamada\n\n7.3\n\nMouhib Chamakh\n\n0.08\n\nKeeper Save %\n\nZion Suzuki\n\n0.45\n\nMouhib Chamakh\n\n0\n\nClean Sheets\n\nZion Suzuki\n\n0\n\nJPN\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $100 would win $706 total if Tunisia wins and a bet of $197 would win $297 total if Japan wins\n\n+606\n\nTUN\n\n-197\n\nJPN\n\nOVER/UNDER 2.5 GOALS\n\nThe combined final score of both teams is set at 2.5\n\n+108\n\nOVER 2.5\n\n-134\n\nUNDER 2.5\n\n### Preview\n\n### Tunis\n\n\u2022 Where to Watch Tunisia vs Japan: 2026 FIFA World Cup TV Channel Live Stream & Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-tunisia-vs-japan-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Group F Standings\n\n|  |  |  |  |  |\n ---  --- \n| Pos | Team | MP | G | PTS |\n| 1 | Netherlands | 2 | 7:3 | 4 |\n| 2 | Sweden | 2 | 6:6 | 3 |\n| 3 | Japan | 1 | 2:2 | 1 |\n| 4 | Tunisia | 1 | 1:5 | 0 |\n\n## Tunisia vs Japan Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Tunisia to Win | Draw | Japan to Win |\n| 1xBet | 8.05 | 4.40 | 1.51 |\n| Betway | 7.50 | 4.30 | 1.50 |\n\nClaim Exclusive World Cup Bonuses on 1xBet\n\nCape Verde Goalkeeper Vozinha's Mother Arrives in the United StatesTurki Alalshikh Intends to Unite Key Boxing Promoters as His Health Declines\u201cOlise Remains Real Madrid\u2019s Bigges\n\n\u2022 New head coach Herv\u00e9 Renard makes change at goalkeeper for Tunisia vs. Japan - USA Today\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/20/herve-renard-debut-change-keeper-dahmen/90625325007/\n  Sports newsletter Readers' Choice \ud83d\udc10 World Cup mania \u26bd\ufe0f \ud83c\udfc6 Best online casinos \ud83c\udfb0 \ud83c\udfb2\n\nWORLD CUP\n\nMen's World Cup\n\n# New head coach Herve\u0301 Renard makes change at goalkeeper for Tunisia vs. Japan\n\nEvan Waldman\n\nSpecial to USA TODAY\n\nJune 20, 2026, 11:19 p.m. ET\n\nMONTERREY, Mexico \u2014 In his first match as Tunisia\u2019s head coach, Herve\u0301 Renard is making a change at the goalkeeper position for the Eagles of Carthage.\n\nAymen Dahmen will start for the Tunisians against Japan on Saturday, June 20 as they look to secure "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Tunisia vs. Japan projected lineups, starting 11 for World Cup 2026 Group F game in Monterrey - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/tunisia-vs-japan-lineups-starting-11-world-cup-2026-group-f/5137419228e722db5af202dd\n  ## Japan projected starting 11\n\n(3-4-2-1, right to left): 12. Z. Suzuki (GK) \u2014 16. T. Tomiyasu, 22. K. Itakura, 26. H. Ito \u2014 14. J. Ito, 15. D. Kamada, 17. A. Tanaka, 9. K. Nakamura \u2014 11. T. Kubo, 8. R. Doan \u2014 19. A. Ueda\n\n Injured: W. Endo (foot)\n Suspended: None\n\nHajime Moriyasu's biggest issue is how to convert good performances into wins against Europe's best, having battled to a draw against the Netherlands.\n\nJapan are without Kaoru Mitoma, arguably their finest player, who misses the tournament with a hamstring injury, but there is real quality to step up in his absence. Takefusa Kubo an\n\n\u2022 Tunisia vs. Japan - Live Score - June 21, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-tunisia-vs-japan-jun-21-2026-game-boxscore-647651\n  21 HOURS AGO \u2022 YOUTUBE\n\n### Japan On Playing Tunisia | Hajime Moriyasu Answers Questions\n\n22 HOURS AGO \u2022 YOUTUBE\n\nSHOW MORE VIDEOS\n\nPREVIOUS GAMES\n\nTUN\n\n|  |  |  |\n --- \n| 6/14 | SWE | L5-1 |\n| 6/6 | BEL (A) | L5-0 |\n| 6/1 | AUT (A) | L1-0 |\n| 3/31 | CAN (A) | D0-0 |\n| 3/28 | HAI (A) | W1-0 |\n\nJPN\n\n|  |  |  |\n --- \n| 6/14 | NED | D2-2 |\n| 5/31 | ISL (H) | W1-0 |\n| 3/31 | ENG (A) | W1-0 |\n| 3/28 | SCO (A) | W1-0 |\n| 11/18 | BOL (H) | W3-0 |\n\n### TEAM STATS\n\nTUN\n\n1.0 Goals per Game 2.0\n\n0.3 Expected Goals (xG) per Game 0.7\n\n5.0 Goals Against per Game 2.0\n\n5.0 Shots per Game 8.0\n\n57 Average Posse\n\n\u2022 Tunisia vs Japan Prediction: A pivotal match for both teams - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/tunisia-vs-japan-match-prediction-21-june-2026/\n  ### Japan: Lineup\n\nKubo suffered a knee injury, which is a major blow to the team. The Real Sociedad player is expected to miss the upcoming matches. If Kubo returns to play in this World Cup, it will be in the knockout stage, provided Japan qualifies.\n\n\ud83d\udd16Japan starting lineup (3-4-2-1)\n\nSuzuki \u2013 Taniguchi, Watanabe, Hiroki Ito \u2013 Sugawara, Kamada, Sano, Nakamura \u2013 Doan, Maeda \u2013 Ueda\n\n\u274cOut: Kubo (injured)\n\n\ud83d\udc64Head Coach: Hajime Moriyasu\n\n## Tunisia vs Japan: Head-to-head statistics\n\nThe two nations have met six times. Tunisia has won one, while Japan has won five matches, including a 2-0 win at th\n\n\u2022 Where to Watch Tunisia vs Japan: 2026 FIFA World Cup TV Channel Live Stream & Match Details - Telecom Asia Sport\n  https://www.telecomasia.net/blog/where-to-watch-tunisia-vs-japan-2026-fifa-world-cup-tv-channel-live-stream-and-match-details/\n  ## Group F Standings\n\n|  |  |  |  |  |\n ---  --- \n| Pos | Team | MP | G | PTS |\n| 1 | Netherlands | 2 | 7:3 | 4 |\n| 2 | Sweden | 2 | 6:6 | 3 |\n| 3 | Japan | 1 | 2:2 | 1 |\n| 4 | Tunisia | 1 | 1:5 | 0 |\n\n## Tunisia vs Japan Match Odds\n\n|  |  |  |  |\n ---  --- |\n| Bookmakers | Tunisia to Win | Draw | Japan to Win |\n| 1xBet | 8.05 | 4.40 | 1.51 |\n| Betway | 7.50 | 4.30 | 1.50 |\n\nClaim Exclusive World Cup Bonuses on 1xBet\n\nCape Verde Goalkeeper Vozinha's Mother Arrives in the United StatesTurki Alalshikh Intends to Unite Key Boxing Promoters as His Health Declines\u201cOlise Remains Real Madrid\u2019s Bigges\n\n\u2022 Tunisia appoint Herve Renard to replace fired Sabri Lamouchi - Deadspin\n  https://deadspin.com/tunisia-appoint-herve-renard-to-replace-fired-sabri-lamouchi/\n  Prediction Markets\n\n+ Prediction Markets\n+ Prediction Market Apps\n+ Sports Prediction Markets\n+ Politics Prediction Markets\n+ Are Prediction Markets Legal?\n+ How Prediction Markets Work\n+ Kalshi Review\n+ Crypto.com Review\n+ Fanduel Predicts\n+ Polymarket Review\n+ OG Review\n+ Underdog Review\n\nRanking\n\nFitness\n\nSpanish\n\nBrazilian\n\nLifestyle\n\nBRWatch\n\n# Tunisia appoint Herve Renard to replace fired Sabri Lamouchi\n\nField Level Media|published: Tue 16th June, 14:02 2026\n\nCoach Herve Renard on March 31, 2026.\n\nTunisia hired former Morocco and Saudi Arabia World C"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Tunisia recent form and results",
+        "data": "\u2022 Reuters Tunisia at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/tunisia/\n  Latest Tunisia World Cup 2026 news, fixtures, results and squad updates \u00b7 ago \u00b7 Underdogs Tunisia eye upset against Japan in 1,000th World Cup finals game \u00b7 Tunisia&#x27;snew coach Herve Renard said their performance must be perfect to have any hope against Japan on Saturday in Monterrey \u200bin what will be the landmark 1,000th World Cup finals \u200bmatch.\n\n\u2022 Tunisia | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/tunisia/team-news\n  Tunisia | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the __ squad at FIFA World Cup 2026\u2122.\n\n\u2022 Tunisia vs Japan live updates: World Cup 2026 game latest score and team news - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/tunisia-vs-japan-live-updates-world-cup-2026-score-result/HQ6gL589tfI6/\n  <strong>Japan (3-4-2-1): Suzuki (GK); Tomiyasu, Itakura (c), Hiroki Ito; Doan, Sano, Kamada, Nakamura; Junya Ito, Tanaka; Ueda</strong>. Four changes to the team from Moriyasu feels quite a lot. ... Here we go.\n\n\u2022 Tunisia Tables & Standings - 2026 | Goal.com\n  https://www.goal.com/en/team/tunisia/table/ctp7ovvf34m7fzshua9ogbr6i\n  Latest Tunisia table and standing positions for World Cup, Friendlies, Africa Cup of Nations, FIFA Arab Cup, Africa Cup of Nations Qualification, World Cup Qualification CAF, African Nations Championship Qualification, African Nations Championship\n\n\u2022 Tunisia qualify | FIFA World Cup 26\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-qualify\n  Thanks to their <strong>1-0 victory over Equatorial Guinea</strong>, the Carthage Eagles have qualified for the FIFA World Cup 26\u2122. Tunisia have secured their place in the first-ever 48-team FIFA World Cup\n\n\u2022 [Discussion] Hater's Guide to the 2026 FIFA World Cup (for us Filthy Americans)\n  https://www.reddit.com/r/UrinatingTree/comments/1u1cck8/haters_guide_to_the_2026_fifa_world_cup_for_us/\n  > For the smallest Spanish-speaking South American country Well\u2026 second smallest Spanish speaking country in South America. That honor goes to Uruguay btw"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Japan recent form and results",
+        "data": "\u2022 Reuters Japan at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/japan/\n  Japan showed their battling qualities to salvage a <strong>2-2 draw with the Netherlands</strong> in their World Cup Group \u200bF opener on Sunday as Hajime Moriyasu&#x27;s side backed up their desire to make an impact at the tournament with \u200ca gritty display.\n\n\u2022 Japan 2026 Results - ESPN\n  https://www.espn.com/soccer/team/results/_/id/627/japan\n  Get all the Japan results for the 2026 season on ESPN. Includes all the Japan results from all national and international games.\n\n\u2022 Japan World Cup 2026 qualifying | Fixtures and results\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/japan-qualification-results-fixtures\n  Making short work of Korea DPR, Myanmar and Syria, they <strong>won all six matches, scoring 24 and not conceding once. That set Hajime Moriyasu&#x27;s side up nicely to go on and secure a top two finish in the third round, which began in September, and secure their passage to a record eighth consecutive global finals, a feat they achieved by qualifying for FIFA World Cup 26\u2122 with three games to spare. Matchday One Japan 5-0 Myanmar</strong> ...\n\n\u2022 Japan national football team Asia: World Cup qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/japan/table/2026/world-cup-qualification-asia/\n  This page shows the Japan national football team Asia: World Cup qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Japan national football team Asia: World Cup qualification 2026 standings changes during the competition.\n\n\u2022 Japan: 2026 FIFA World Cup Schedule, Results, Roster, Stats - NBC Sports\n  https://www.nbcsports.com/soccer/world-cup/japan\n  Full Japan schedule, results, roster, stats, news, highlights and more from the 2026 FIFA World Cup\n\n\u2022 [Discussion] Match Thread: Japan vs Netherlands | FIFA World Cup | Jun 14, 2026\n  https://www.reddit.com/r/MLS/comments/1u5uc53/match_thread_japan_vs_netherlands_fifa_world_cup/\n  Announcers: Japan can't go for headers. Japan: scores equalizer on header."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Tunisia vs. Japan: Head-to-head record and past meetings ahead of 2026 World Cup fixture - Sports Mole\n  https://www.sportsmole.co.uk/football/tunisia/world-cup/head-to-head/tunisia-vs-japan-head-to-head-record-and-past-meetings_599624.html\n  Oct 17, 2023: <strong>Japan 2-0 Tunisia</strong> (Kirin Challenge Cup) ... How to watch Tunisia vs. Japan: Date, time, live stream and TV channel ... Kubo injury blow, Sugawara, Doan decisions: Predicted Japan lineup vs.\n\n\u2022 Tunisia vs. Japan Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/tunisia_vs_japan.php\n  In the history of World Cups, Tunisia National Team faced Japan in 1 opportunity, with <strong>0 wins, 0 draws and 1 losses</strong>.\n\n\u2022 Japan vs. Tunisia Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/japan_vs_tunisia.php\n  In the history of World Cups, Japan National Team faced Tunisia in 1 opportunity, with <strong>1 win, 0 draws and 0 lossess</strong>.\n\n\u2022 Tunisia vs Japan Prediction: World Cup 2026 Preview & Best Bets\n  https://totalfootballanalysis.com/competitions/fifa-world-cup-2026/tunisia-v-japan-predictions\n  Japan have won four of the five meetings, with Tunisia\u2019s only victory coming in the 2022 Kirin Cup, a 3-0 win in Japan. ... <strong>The only World Cup meeting between these two nations ended 2-0 to Japan in the 2002 group stage</strong>.\n\n\u2022 Tunisia vs Japan: All-time head-to-head record ahead of FIFA World Cup 2026\n  https://khelnow.com/football/world-football-tunisia-vs-japan-head-to-head-fifa-world-cup-202606\n  Check out the all-time head-to-head record between Tunisia and Japan ahead of their FIFA World Cup 2026 clash."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Tunisia v Japan: Line-ups, Score & Live Updates | First Stage\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021475\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group F</strong> \u2022 Match 36 \u00b7 Tunisia \u00b7 04:00 \u00b7 Japan \u00b7 Kick-off in: 0 days \u00b7 2 hrs \u00b7 15 min \u00b7 53 sec \u00b7 Tunisia \u00b7 04:00 \u00b7 Japan \u00b7 21 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Monterrey \u25cfMonterrey Stadium \u00b7 Where ...\n\n\u2022 2026 FIFA World Cup Group F - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_F\n  <strong>Group F</strong> of the 2026 FIFA World Cup is taking place from June 14 to 25, 2026. The group consists of the Netherlands, Japan, Sweden, and Tunisia. The top two teams, possibly along with the third-placed team, will advance to the round of 32. ... ^ a b As the identity of the UEFA second round Path ...\n\n\u2022 Tunisia vs Japan Set for Historic 1,000th FIFA World Cup Match Amid Tunisia Turmoil\n  https://heavy.com/sports/soccer/world-cup/tunisia-vs-japan-set-for-historic-1000th-fifa-world-cup-match-amid-tunisia-turmoil/\n  The occasion also brings together representatives from Africa and Asia in a match that could have a major impact on the <strong>Group F</strong> standings. History favors Japan heading into the game.\n\n\u2022 Tunisia vs Japan FIFA World Cup 2026 Preview: Everything you need to know | Goal.com\n  https://www.goal.com/en/news/tunisia-japan-world-cup-preview/blt6f5bc99ab7c81265\n  Moving to three points would climb Tunisia right back into the qualification race, giving them a massive psychological platform ahead of a decisive final-day showdown against the Netherlands. Conversely, this scenario would freeze Japan on a single point, dropping them below Tunisia and forcing the Samurai Blue into a high-pressure, must-win final match against group heavyweights Sweden just to stand a chance of advancing.\n\n\u2022 FIFA World Cup Standings 2026: Live Group Tables, Results & Qualification Scenarios\n  https://www.covers.com/world-cup/group-standings\n  Live World Cup 2026 group standings with updated tables, qualification rules, tiebreakers, and betting context for group-stage matches."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Retrieves reliable historical H2H results and squad rosters to evaluate patterns in previous encounters.",
+        "data": "URL: https://www.national-football-teams.com/country/101/2026/Laos.html\nTitle: Laos (2026)\nYou are using an old browser which is not compatible with our new design. Please update your browser or use our [old website](https://www.national-football-teams.com/old/).\n\n## General Information for **Laos**\n\n##### F\u00e9d\u00e9ration Lao de Football\n\n**Founded**\n\n1951\n\n**FIFA entry**\n\n1952\n\n**Average height in 2026**\n\n1.68m\n\n**Average age in 2026**\n\n22.8\n\n**Confederation**\n\nAFC\n\n**Infos provided by**\n\n##### Emblem\n\n![](https://www.national-football-teams.com/uploads/country_images/fifa/logo_lao.gif)\n\n##### Jersey in 2026\n\n![Jersey in 2026](https://www.national-football-teams.com/uploads/country_images/jersey/lao.gif)\n\n### Coaches in 2026\n\n## Players of **Laos** in 2026\n\nFIFA\n\nNon FIFA\n\n[Name](https://www.national-football-teams.com/country/101/2026/Laos.html?sort=player.surname&direction=asc&page=1)\n\n[Day of Birth](https://www.national-football-teams.com/country/101/2026/Laos.html?sort=player.yearOfBirth&direction=asc&page=1)\n\n[Position](https://www.national-football-teams.com/country/101/2026/Laos.html?sort=p.root&direction=asc&page=1)\n\nCurrent Club\n\n[M](https://www.national-football-teams.com/country/101/2026/Laos.html?sort=score.matches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/101/2026/Laos.html?sort=score.substitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/101/2026/Laos.html?sort=score.goals&direction=asc&page=1)\n\n[M](https://www.national-football-teams.com/country/101/2026/Laos.html?sort=score.nonFifaMatches&direction=asc&page=1)\n\n[S](https://www.national-football-teams.com/country/101/2026/Laos.html?sort=score.nonFifaSubstitutions&direction=asc&page=1)\n\n[G](https://www.national-football-teams.com/country/101/2026/Laos.html?sort=score.nonFifaGoals&direction=asc&page=1)\n\n[Souvannasangso, Keo-Oudone](https://www.national-football-teams.com/player/84883/Keo_Oudone_Souvannasangso.html)\n\n2000-06-19\n\nGoalkeeper\n\n[![Laos](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Laos_101-589d943b04142.png)](https://www.national-football-teams.com/country/101/2026/Laos.html)\n\n[Lao Army FC](https://www.national-football-teams.com/club/3446/2026/Lao_Army_Fc.html)\n\n1\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Sangvilay, Phoutthavong](https://www.national-football-teams.com/player/84965/Phoutthavong_Sangvilay.html)\n\n2004-10-16\n\nLeft Back\n\n[![Thailand](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Thailand_186-589db18e79a5a.png)](https://www.national-football-teams.com/country/186/2026/Thailand.html)\n\n[BG Pathum United](https://www.national-football-teams.com/club/23585/2026/Bg_Pathum_United.html)\n\n1\n\n0\n\n0\n\n0\n\n0\n\n0\n\n[Somsanid, Phetdavanh](https://www.national-football-teams.com/player/86908/Phetdavanh_Somsanid.html)\n\n2004-04-24\n\nCentre Back\n\n[![Laos](https://www.national-football-teams.com/media/cache/flag_mini/uploads/country_images/flag/Laos_101-589d"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Allows calculation of qualification permutations and motivational incentives for both teams.",
+        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n21.06. [Tunisia - Japan](https://www.soccerway.com/match/japan-ULXPdOUj/tunisia-QqZVYk95/), [Spain - Saudi Arabia](https://www.soccerway.com/match/saudi-arabia-biSY8ox4/spain-bLyo6mco/), [Belgium - Iran](https://www.soccerway.com/match/belgium-GbB957na/iran-xrRx85iA/), 22.06. [Uruguay - Cape Verde](https://www.soccerway.com/match/cape-verde-MocyWdm7/uruguay-xMk44orG/), [New Zealand - Egypt](https://www.soccerway.com/match/egypt-bejDn7NN/new-zealand-rLctHkpU/), [Argentina - Austria](https://www.soccerway.com/match/argentina-f9OppQjp/austria-naHiWdnt/), [France - Iraq](https://www.soccerway.com/match/france-QkGeVG1n/iraq-K8aAGt6r/), 23.06. [Norway - Senegal](https://www.soccerway.com/match/norway-8rP6JO0H/senegal-hOIsJLJr/), [Jordan - Algeria](https://www.soccerway.com/match/algeria-nc87N1BR/jordan-vNcmJoU2/), [Portugal - Uzbekistan](https://www.soccerway.com/match/portugal-WvJrjFVN/uzbekistan-EZYKKRMc/), [England - Ghana](https:/"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Provides statistical insights into Japan's recent performance metrics and defensive organization.",
+        "data": "\u2022 Japan national football team Asia: World Cup qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/japan/table/2026/world-cup-qualification-asia/\n  Here you can see the team\u2019s position in the tournament, check match results, and follow how the team\u2019s place in the Japan national football team Asia: World Cup qualification 2026 standings changes during the competition.\n\n\u2022 Japan World Cup 2026 team guide | Japan | The Guardian\n  https://www.theguardian.com/football/2026/jun/02/japan-world-cup-2026-team-guide\n  There he has become the focal point of the attack and he continues to play a decisive role for the national team as well. Against Bahrain, he provided the assist for the opening goal before scoring another that in effect sealed Japan\u2019s qualification for the World Cup. ... Takefusa Kubo is Japan\u2019s most important attacking option. Photograph: Tomohiro Ohsumi/FIFA/Getty Images \u00b7 The man entrusted with keeping Japan\u2019s goal safe is Zion Suzuki. Blessed with outstanding physical attributes, he also possesses every essential quality expected of a top-class goalkeeper.\n\n\u2022 Reuters Japan at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/japan/\n  Follow Japan&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Goals, Growth and a Glass Ceiling: Japan Aiming Higher at 2026 World Cup Despite Key Absences | Opta Analyst\n  https://theanalyst.com/articles/japan-world-cup-2026-preview-curse-stats\n  But even at this expanded edition, the World Cup can expose small vulnerabilities, and the margins are far tighter than in qualification. Japan are no longer content with making up the numbers, but how will they cope this time around when hope of springing the odd surprise is replaced by genuine expectation? We\u2019re about to find out. Add Opta Analyst as a preferred source by clicking here. Enjoy this? Subscribe to our football newsletter to receive exclusive weekly content.\n\n\u2022 Japan 2026 Results - ESPN\n  https://www.espn.com/soccer/team/results/_/id/627/japan\n  Get all the Japan results for the 2026 season on ESPN. Includes all the Japan results from all national and international games.\n\n\u2022 [Discussion] Japan\u2019s 2026 World Cup path looks really sensitive to group finish\n  https://www.reddit.com/r/JLeague/comments/1u08emc/japans_2026_world_cup_path_looks_really_sensitive/\n  According to my simulation results, the probabilities of facing the following opponents in the Round of 32, based on group standings, are as follows: Opponent  -  1st place  -  2nd place Brazil  - 27.7% - 55.0% Morocco - 35.3% - 27.9% Scotland - 24.6% - 12.5% Haiti - 12.5% - 4.6% Opponent  -  3rd place France - 48.3% Norway - 22.6% In other words, if Japan finishes first, they are most likely to face Morocco; if second, Brazil; and if third, France. Japan\u2019s chances of winning the tournament depend heavily on their opponent in the first round of the knockout stage, and that opponent is determined by their final group ranking."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies critical environmental factors and pitch type that could influence player fatigue and ball movement.",
+        "data": "\u2022 In which city and stadium are Tunisia vs Japan playing today? Weather, attendance for WC game - Bolavip US\n  https://bolavip.com/en/world-cup/in-which-city-and-stadium-are-tunisia-vs-japan-playing-today-weather-attendance-for-wc-game\n  The area is experiencing daytime temperatures hovering around 28\u00b0C to 30\u00b0C with <strong>high humidity</strong> and a 50% to 70% chance of ongoing thunderstorms, bringing muggy and wet conditions to the open-air venue.\n\n\u2022 World Cup 2026 Stadium Guide\n  https://www.bbc.co.uk/sport/extra/zwengdni1f/world-cup-2026-stadium-guide\n  Built at a cost of $352m, it also features climate control \u2013 ideal given the <strong>hot and humid outdoor conditions expected in June and July</strong>. It initially had a grass pitch but this was replaced with artificial turf in 2015, so a temporary natural ...\n\n\u2022 World Cup 2026 weather updates: Forecasts for key matches, stadium conditions and fan impacts\n  https://www.accuweather.com/en/sports/live-news/world-cup-2026-weather-updates-forecasts-for-key-matches-stadium-conditions-and-fan-impacts/1898671\n  The pitch is located indoors, but fans outside the stadium should prepare for <strong>hot weather with temperatures in the low 90s F (low 30s C) and AccuWeather RealFeel\u00ae Temperatures topping 100 F (37 C).</strong> AccuWeather meteorologists warn that these ...\n\n\u2022 Tunisia v Japan: Line-ups, Score & Live Updates | First Stage\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021475\n  Tunisia \u00b7 04:00 \u00b7 Japan \u00b7 21 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Monterrey \u25cf<strong>Monterrey Stadium</strong> \u00b7 Where to watch \u00b7 OVERVIEW \u00b7 LIVE BLOG \u00b7 STATS \u00b7 POWER RANKINGS \u00b7 TABLE \u00b7 RELATED MATCHES \u00b7 NEWS \u00b7 Tunisia \u00b7 data collected live ...\n\n\u2022 World Cup stadium rankings: Which venue is best for atmosphere, location and suitability for soccer? - The Athletic\n  https://www.nytimes.com/athletic/7372419/2026/06/18/world-cup-stadium-rankings/\n  Where the stadium lacks is looks: the world\u2019s largest retractable roof will remain closed on matchdays as FIFA wants to avoid shadows on the pitch for TV audiences. But with the pleasantly moderate June weather in the city, not having an open roof for afternoon kick-offs feels like a letdown."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Fetches current market sentiment, point spreads, and volume flow direction to identify sharp betting value.",
+        "data": "\u2022 Japan vs Tunisia Predictions, Picks & Odds: Today's World ...\n  https://sports.yahoo.com/articles/japan-vs-tunisia-predictions-picks-180000929.html\n  Japan vs Tunisia: Japan -1.5 (+140) When. Play this down to +160. TOp pick Japan vs Tunisia Over/Under pick: Over 2.5 (+109) Tunisia has ...\n\n\u2022 Japan vs Tunisia Odds & Live Scores - June 21, 2026\n  https://www.actionnetwork.com/worldcup-game/japan-tunisia-score-odds-june-21-2026/284376\n  See betting odds, player props, and live scores for the Japan vs Tunisia WORLDCUP game on June 21, 2026.\n\n\u2022 Our FAVORITE Bet for Japan vs Tunisia | World Cup 2026\n  https://www.youtube.com/watch?v=mMCk0aW5JC4\n  Japan vs. Tunisia, analyze the latest odds, and deliver their favorite betting picks, predictions, and best bets\n\n\u2022 Japan vs. Tunisia World Cup Prediction, Best Bets, Props ...\n  https://www.fanduel.com/research/japan-vs-tunisia-world-cup-prediction-best-bets-props-and-picks-for-today-june-20\n  Japan Moneyline (-200) Japan Over 1.5 Goals (-132) Japan's quick passing and movement should create similar issues. Japan Over 1.5 Goals (-132)\n\n\u2022 Japan vs. Tunisia odds, predictions: 2026 World Cup picks ...\n  https://www.sportsline.com/insiders/japan-vs-tunisia-odds-predictions-2026-world-cup-picks-from-proven-soccer-expert/\n  The latest Japan vs. Tunisia odds. Japan at -230 (risk $230 to win $100) Tunisia at +650 and a draw at +360. The over/under for total goals is ..."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides up-to-date reports on the physical condition and fitness status of Japan's key creative stars.",
+        "data": "\u2022 Nagoya vs. Shimizu (Aug 8, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/401877178/shimizu-s-pulse-nagoya-grampus\n  | 5/10/26 | vsKYO | W3-0 | 2026 Japanese J1 League, 2026 J1 100 Year Vision League |. | 5/17/26 | @OKA | L2-0 | 2026 Japanese J1 League, 2026 J1 100 Year Vision League |. 2026 Japanese J1 League, 2026 J1 100 Year Vision League. Japan wingback Yukinari Sugawara has reiterated that his team are at the World Cup not just to participate, but to win it.## Tete Yengi credits journeyman career for World Cup call-up. Socceroos bolter Tete Yengi says his journey to the national team has not been straightforward, but he believes these adventures have played a key role in his pursuit of becoming the \"ult\n\n\u2022 Why Keito Nakamura could be Japan's ace in the pack in more ways than one - ESPN\n  https://www.espn.com/soccer/story/_/id/49119506/why-keito-nakamura-japans-ace-pack-more-ways-one\n  World Cup 2026 Power Rankings after one game: U.S. cracks top 10, but who is No. 1? Star duo Takumi Minamino and Kaoru Mitoma were not even included in the squad, before captain Wataru Endo was an 11th-hour withdrawal -- robbing the Samurai Blue of three guaranteed starters who played pivotal roles throughout the Asian qualifiers for the World Cup. Because of the reshuffle in personnel that Japan coach Hajime Moriyasu, Nakamura -- who started just four of ten games in the third round of the Asian qualifiers where the Samurai Blue booked their ticket to North America -- has been one of those wh\n\n\u2022 World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad - Sky Sports\n  https://www.skysports.com/football/news/32461/13554613/world-cup-2026-tino-livramento-suffers-hamstring-injury-and-replaced-by-trevoh-chalobah-in-england-squad\n  # World Cup 2026: Tino Livramento suffers hamstring injury and replaced by Trevoh Chalobah in England squad. England begin their World Cup Group L campaign against Croatia on Wednesday; Tino Livramento has been replaced by Trevoh Chalobah after suffering a hamstring injury; **Follow England vs Croatia on the Sky Sports app from 7pm**. England\u2019s World Cup campaign has suffered an early setback as Tino Livramento's tournament is over after suffering a hamstring injury, with Trevoh Chalobah to replace him. The 23-year-old Newcastle defender missed the final five weeks of the season with a thigh i\n\n\u2022 Why Wataru Endo isn't playing for Japan at the World Cup - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/why-wataru-endo-isnt-playing-japan-world-cup/545866f64a0c4ba1f24062f0\n  # Why Wataru Endo isn't playing for Japan at the World Cup. Add The Sporting News on Google. Wataru Endo has been one of the most reliable Japanese international footballers for more than a decade, growing into their captain. But in a late twist, the Liverpool midfielder won't be taking part in the 2026 FIFA World Cup. The update came only within the past week. ## Why isn't Wataru Endo playing at the World Cup? Endo actually retired from international football only days before Japan's opening match at the 2026 World Cup. He was initially announced as having withdrawn from the squad due to a fo\n\n\u2022 Japan's Keito Nakamura responds with equalizer against Netherlands | 2026 FIFA World Cup - FOX Sports\n  https://www.foxsports.com/watch/fmc-gvzq648uzvwmxv64\n  # Japan's Keito Nakamura responds with equalizer against Netherlands | 2026 FIFA World Cup\u2122. ## Japan's Keito Nakamura responded with an equalizer against the Netherlands. JUST IN\u30fbFIFA Men's World Cup\u30fb1:16. Keito Nakamura  FIFA Men's World Cup  Japan. FIFA MEN'S WORLD CUP. ### Players to Watch Between Netherlands and Japan | 2026 FIFA World Cup\u2122. ### Germany vs Cura\u00e7ao Extended Highlights | 2026 FIFA World Cup\u2122. ### INSTANT REACTION \ud83d\udea8Germany Scores SEVEN Goals Against Gritty Cura\u00e7ao Team | 2026 FIFA World Cup\u2122. ### Germany vs Cura\u00e7ao Highlights | 2026 FIFA World Cup\u2122. ### Germany\u2019s Kai Havertz"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Extracts tactical analysis of Tunisia's defensive shape and how Japan plans to break down deep blocks.",
+        "data": "\u2022 Tunisia vs Japan prediction: I asked ChatGPT who\u2019d win FIFA World Cup 2026 clash; AI picks winner in Group F match | Mint\n  https://www.livemint.com/sports/football-news/tunisia-vs-japan-prediction-i-asked-chatgpt-who-d-win-fifa-world-cup-2026-clash-ai-picks-winner-in-group-f-tun-vs-jpn-11781984478307.html\n  # Tunisia vs Japan prediction: I asked ChatGPT who\u2019d win FIFA World Cup 2026 clash; AI picks winner in Group F match. ## Tunisia\u2019s fighting spirit under new coach Herve Renard will be tested against Japan\u2019s technical quality and tactical discipline led by Hajime Moriyasu. I asked ChatGPT who\u2019d win Tunisia vs Japan. Tunisia and Japan will face off in what is being billed as the 1000th match in FIFA World Cup history, a Group F encounter at Estadio BBVA in Monterrey. Tunisia are looking to bounce back after a heavy 5-1 defeat to Sweden in their opening fixture, while Japan earned a respectable p\n\n\u2022 Tunisia vs Japan FIFA World Cup 2026 Preview - Goal.com\n  https://www.goal.com/en-us/news/tunisia-japan-world-cup-preview/blt6f5bc99ab7c81265\n  *   [![Image 4: crest](https://cdn.sportfeeds.io/sdl/images/team/crest/medium/agh9ifb2mw3ivjusgedj7c3fe.png?quality=60&auto=webp&format=pjpg)Barcelona](https://www.goal.com/en-us/team/barcelona/agh9ifb2mw3ivjusgedj7c3fe). *   [![Image 7: crest](https://cdn.sportfeeds.io/sdl/images/team/crest/medium/c8h9bw1l82s06h77xxrelzhur.png?quality=60&auto=webp&format=pjpg)Liverpool](https://www.goal.com/en-us/team/liverpool/c8h9bw1l82s06h77xxrelzhur). *   International- [x]          *   [![Image 14: crest](https://cdn.sportfeeds.io/sdl/images/team/crest/medium/9vh2u1p4ppm597tjfahst2m3n.png?quality=60&auto\n\n\u2022 2026 FIFA World Cup Tunisia vs Japan Preview - YouTube\n  https://www.youtube.com/watch?v=3bZoG986mD0\n  2026 FIFA World Cup Tunisia vs Japan Preview\nBlackburn Roverseas\n49200 subscribers\n4 likes\n102 views\n16 Jun 2026\nIn this video, we break down the upcoming World Cup clash, analyzing both teams' recent form, key players, tactical matchups, and what to expect when these two sides meet on the pitch. We'll also share our match prediction and discuss the factors that could determine the outcome.\n\n\u26bd Match: Tunisia vs Japan\n\nTopics covered:\n\u2022 Team news and expected lineups\n\u2022 Key players to watch\n\u2022 Tactical analysis\n\u2022 Head-to-head insights\n\u2022 Match prediction\n\nWho do you think will win? Let us know you\n\n\u2022 2026 World Cup Group F Preview: Netherlands, Japan, Sweden ...\n  https://www.rotowire.com/soccer/article/2026-world-cup-group-f-preview-netherlands-japan-sweden-and-tunisia-lineups-odds-predictions-and-tactics-112643\n  # 2026 World Cup Group F Preview: Netherlands, Japan, Sweden and Tunisia Lineups, Odds, Predictions and Tactics. Your complete 2026 World Cup Group F breakdown: Netherlands, Japan, Sweden & Tunisia tactics, predicted lineups, set pieces and latest betting odds. The **Netherlands** arrive as the group's most complete team, but they carry the familiar weight of a country that has reached three World Cup finals without winning one, and their March friendlies, a 2-1 win over Norway followed by a 1-1 draw with Ecuador, offered both encouragement and the kind of individual errors that can define tou\n\n\u2022 Japan lineup today vs Tunisia prediction: World Cup starting XI\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/20/japan-lineup-tunisia-world-cup/90627792007\n  Japan lost its star player, Wataru Endo, on eve of the 2026 World Cup because of a lingering foot injury. Despite that, the Samurai Blue managed to get a positive result in their first match of the tournament. Japan played to a 2-2 draw against the Netherlands in its opening match. Now, Japan will look to build upon that thrilling finish and log its first win of the 2026 World Cup. The Samurai Blue will get a matchup against a Tunisia squad coming off a 5-1 drubbing at the hands of Sweden. Midfielder Takefusa Kubo suffered a left knee injury in the 75th minute of Japan's draw with the Netherla"
+      }
+    ],
+    "research_cost": 0.11,
+    "wallet_before": 0.494,
+    "wallet_after": 0.384,
+    "prediction": {
+      "pick": "draw",
+      "confidence": 5,
+      "confidence_reason": "Capped at 5 due to high volatility from Japan's severe injury crisis, Tunisia's sudden managerial change, and extreme Monterrey heat.",
+      "reasoning": "Japan's depleted midfield and attack, missing Endo, Kubo, and Mitoma, will struggle to break down a compact Herv\u00e9 Renard-led Tunisian low-block in extreme Monterrey heat.",
+      "probabilities": {
+        "home": 20,
+        "draw": 42,
+        "away": 38
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Tunisia enters the match in poor form after a devastating 5-1 loss to Sweden in their Group F opener, prompting the immediate hiring of manager Herv\u00e9 Renard.",
+      "away_form": "Japan showed impressive resilience by securing a 2-2 draw against the Netherlands in their opening match, extending a strong run of recent performances.",
+      "key_injuries": [
+        "Takefusa Kubo (Japan) - Out with a knee injury suffered against the Netherlands",
+        "Wataru Endo (Japan) - Withdrew from the tournament due to a foot injury",
+        "Kaoru Mitoma (Japan) - Misses the tournament with a hamstring injury"
+      ],
+      "tactical_matchup": "Tunisia will likely deploy a compact defensive low-block under new manager Herv\u00e9 Renard to stop the defensive bleeding, while a depleted Japanese attack must rely on quick transitional passing to break them down.",
+      "group_stakes": "Tunisia must secure a positive result to avoid near-certain elimination, while Japan needs a victory to put themselves in a strong position to qualify before facing Sweden.",
+      "home_win_signals": [
+        "Herv\u00e9 Renard's debut as manager could provide a tactical 'new manager bounce' and defensive organization.",
+        "Renard is starting goalkeeper Aymen Dahmen to address the defensive vulnerabilities exposed in the 5-1 loss to Sweden.",
+        "Japan is missing its three most influential players in Kubo, Mitoma, and Endo, severely limiting their attacking depth."
+      ],
+      "away_win_signals": [
+        "Japan has historically dominated Tunisia, winning five of their six head-to-head meetings, including a 2-0 win in their only prior World Cup clash.",
+        "Tunisia's defense has leaked 10 goals over their last two matches against European opposition (Sweden and Belgium).",
+        "Japan's technical quality and squad depth remain superior, as demonstrated by Keito Nakamura's clinical equalizer against the Netherlands."
+      ],
+      "draw_signals": [
+        "Tunisia's primary objective under Renard will be damage limitation, likely resulting in an ultra-defensive setup that is difficult to break down.",
+        "The extreme heat and high humidity in Monterrey (RealFeel temperatures topping 100\u00b0F/37\u00b0C outside) could sap player energy and slow the match tempo.",
+        "Japan's lack of creative sparks (Kubo and Mitoma) may lead to difficulties in converting possession into clear-cut goals against a low-block."
+      ],
+      "contradictions": [
+        "Bookmakers heavily favor Japan (odds around 1.50) despite the Samurai Blue missing their most creative attacking outlets and Tunisia having a proven tournament specialist in Herv\u00e9 Renard."
+      ],
+      "strategy_applied": [
+        "SWE vs TUN: Efficiency over low-block",
+        "NED vs JPN: Resilience over volume"
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overestimating the immediate tactical impact of Herv\u00e9 Renard's hiring, assuming a 'new manager bounce' can instantly fix a defense that just leaked five goals.",
+        "Overvaluing Japan's squad depth and historical dominance while ignoring that the absence of Kubo, Mitoma, and Endo strips away their entire creative and midfield spine."
+      ],
+      "underweighted_factors": [
+        "The compounding physical toll of Monterrey's extreme heat (RealFeel >100\u00b0F) on a depleted Japanese side coming off a high-intensity draw against the Netherlands.",
+        "Tunisia's systemic defensive fragility, which may be too severe for a simple goalkeeper change (Dahmen) to resolve in a matter of days."
+      ],
+      "draw_risk": "high \u2014 Extreme heat and high humidity will sap energy and slow the tempo, making it highly difficult for a depleted Japanese attack to break down Tunisia's desperate low-block.",
+      "favorite": "none",
+      "confidence_cap": 5,
+      "verdict": "While bookmakers heavily favor Japan, their severe injury crisis combined with extreme weather and Tunisia's emergency defensive setup makes this a highly volatile match where a low-scoring draw is heavily undervalued."
+    },
+    "full_reasoning": "HOME_PCT: 20\nDRAW_PCT: 42\nAWAY_PCT: 38\nPICK: draw\nCONFIDENCE: 5\nCONFIDENCE_REASON: Capped at 5 due to high volatility from Japan's severe injury crisis, Tunisia's sudden managerial change, and extreme Monterrey heat.\nREASONING: Japan's depleted midfield and attack, missing Endo, Kubo, and Mitoma, will struggle to break down a compact Herv\u00e9 Renard-led Tunisian low-block in extreme Monterrey heat.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
