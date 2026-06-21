@@ -10923,5 +10923,337 @@
     "reflected": true,
     "reflected_at": "2026-06-21T18:30:16.121717+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n- TUN vs JPN: System depth over individual absences.\n- ESP vs KSA: Transition speed and xG over weather and defensive block.\n\n## Data sources\n- use: Advanced analytics (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 xG and transition validation (ESP vs KSA)\n- skip: Climate data (https://websearch--gw.swerver.net/search) \u2014 environmental impact (ESP vs KSA)\n- skip: Historical data (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 defensive block relevance (ESP vs KSA)"
+  },
+  {
+    "match": "BEL vs IRN",
+    "home": "BEL",
+    "away": "IRN",
+    "kickoff": "2026-06-21T19:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n- TUN vs JPN: System depth over individual absences.\n\n## Data sources\n- use: Market sentiment (https://websearch--gw.swerver.net/search) \u2014 squad depth validation (TUN vs JPN)\n- skip: Pitch/weather (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transition impact (TUN vs JPN)\n- skip: History (https://skim402.com/api/v2/read) \u2014 head-to-head relevance (TUN vs JPN)",
+    "information_needs": "FORM\n- How did Belgium and Iran perform in their respective World Cup Matchday 1 fixtures, specifically regarding Expected Goals (xG) created versus conceded?\n- What is Iran's clean-sheet rate in competitive matches over the last 12 months when playing against top-20 FIFA-ranked opposition?\n\nPLAYERS\n- How is Domenico Tedesco managing Kevin De Bruyne's minutes and physical load in this tournament, and is Romelu Lukaku (or his starting successor) fully fit to lead the line?\n- Who is starting in Iran's central midfield, and do they have the defensive work rate and mobility to track late runs from Belgium's box-to-box midfielders?\n\nTACTICS\n- How does Iran's defensive low-block (likely a 5-4-1 or 4-5-1) plan to handle Belgium's wing-isolation play and overlapping fullbacks?\n- Does Belgium's counter-press effectively neutralize Iran's transition triggers, particularly direct long balls aimed at Mehdi Taremi or Sardar Azmoun?\n\nH2H\n- Have these two teams met in any friendly or competitive fixtures during the 2022-2026 cycle, and did Belgium struggle to break down Iran's defensive structure in those meetings?\n\nCONTEXT\n- What are the Group standings after Matchday 1, and does either team face a \"must-win\" scenario to avoid premature elimination or to secure the top spot?\n\nMARKET\n- What is the current Asian Handicap line, and has the market shifted significantly toward Iran (e.g., from +1.5 to +1.25) following the Matchday 1 results?\n\nNEWS\n- Are there any reported squad injuries, suspension risks, or internal camp friction in either camp following their opening group-stage matches?\n\nVENUE\n- Which North American host city is staging this match, and will the local climate (such as the high humidity of Houston/Miami or the altitude of Mexico City) degrade Belgium's high-tempo passing game?",
+    "research_gaps": [
+      {
+        "need": "What is Iran's clean-sheet rate in competitive matches over the last 12 months when playing against top-20 FIFA-ranked opposition?",
+        "category": "FORM",
+        "ideal_service": "A historical sports database API supporting granular query filters for opponent FIFA ranking bands and defensive metrics."
+      },
+      {
+        "need": "Who is starting in Iran's central midfield, and do they have the defensive work rate and mobility to track late runs from Belgium's box-to-box midfielders?",
+        "category": "PLAYERS",
+        "ideal_service": "An advanced player scouting and performance tracking API (e.g., Opta/StatsBomb) with heat maps and physical performance data."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Belgium vs Iran World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Belgium vs Iran World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Belgium recent form and results",
+        "need": "How has Belgium performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Iran World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Iran recent form and results",
+        "need": "How has Iran performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium vs Iran head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium vs Iran World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Provides official group standings, goal differences, and qualification permutations.",
+        "need": "What are the Group standings after Matchday 1, and does either team face a must-win scenario?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://www.transfermarkt.com/belgien/spielplandatum/verein/3382/plus/0/saison_id/2025"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Allows checking Belgium's historic results against defensive Asian opposition or direct head-to-head records if they occurred in this cycle.",
+        "need": "Did Belgium struggle to break down Iran's defensive structure in any recent friendly or competitive fixtures during the 2022-2026 cycle?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium Iran Matchday 1 World Cup 2026 xG stats results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Retrieves analytical match reports and underlying performance metrics (xG) from the opening fixtures.",
+        "need": "How did Belgium and Iran perform in their respective World Cup Matchday 1 fixtures, specifically regarding Expected Goals (xG) created versus conceded?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Belgium vs Iran Asian Handicap odds market movement World Cup 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Tracks betting market sentiment, line movements, and handicap values for the fixture.",
+        "need": "What is the current Asian Handicap line, and has the market shifted significantly toward Iran following the Matchday 1 results?",
+        "category": "MARKET"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Belgium vs Iran World Cup 2026 stadium venue weather climate altitude",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Identifies the match venue and evaluates environmental factors like heat, humidity, or altitude.",
+        "need": "Which North American host city is staging this match, and will the local climate degrade Belgium's high-tempo passing game?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Belgium squad fitness De Bruyne minutes Lukaku injury news World Cup 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides real-time injury updates and tactical training camp reports regarding Belgium's key attackers.",
+        "need": "How is Domenico Tedesco managing Kevin De Bruyne's minutes and physical load, and is Romelu Lukaku fully fit to lead the line?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Iran defensive tactics low block Belgium wingers World Cup 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Extracts tactical previews detailing Iran's defensive setup and how they plan to counter Belgium's wide threats.",
+        "need": "How does Iran's defensive low-block plan to handle Belgium's wing-isolation play and overlapping fullbacks?",
+        "category": "TACTICS"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Belgium vs. Iran World Cup Match Betting Preview, Lines & Predictions (6/21/2026) - Deadspin\n  https://deadspin.com/betting/belgium-vs-iran-world-cup-preview-picks-preview-odds-6-21-2026/\n  Expect fireworks when Belgium and Iran clash this Sunday at Los Angeles Stadium, with both teams looking to secure all three points after settling for separate draws in their World Cup openers.\n\nThe Red Devils will be aiming to bounce back here after settling for a disappointing 1-1 stalemate versus Egypt while the Iranians are hoping to build on their own 2-2 draw against New Zealand and prove they can compete with one of Europe\u2019s biggest names. Both nations need a win badly to take control of Group G, so let\u2019s see below who\u2019s likely to come out on top in this crucial showdown.\n\n## Belgium vs\n\n\u2022 Belgium vs Iran Prediction: Possession edge points to Belgian pressure - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/belgium-vs-iran-match-prediction-21-june-2026/\n  Belgium and IR Iran meet at Los Angeles Stadium, commonly known as SoFi Stadium, in Inglewood on June 21, 2026, with all four Group G teams on 1 point after Matchday 1. Belgium drew 1-1 with Egypt in Seattle, and Romelu Lukaku\u2019s second-half role has put Charles De Ketelaere\u2019s No.9 place under pressure in Rudi Garcia\u2019s 4-2-3-1. I expect Belgium to get more of the ball through Kevin De Bruyne, Jeremy Doku and Leandro Trossard, but Iran\u2019s 2-2 draw with New Zealand showed Mehdi Taremi still gives Amir Ghalenoei a counter-attacking outlet. AP reported Iran had to return to Tijuana after the New Zea\n\n\u2022 Belgium vs. Iran predicted lineups, starting 11 for World Cup 2026 Group G game at SoFi Stadium - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/belgium-vs-iran-lineup-starting-11-world-cup-group-g/cb8e85773039308dc031475d\n  The Sporting News brings you a look at the projected starting lineups for both teams, as well as an overview of their World Cup squads, plus odds, predictions, and how to watch the game.\n\n2026 WORLD CUP HQ: Latest World Cup news | Full World Cup schedule | Buy World Cup tickets\n\n## Belgium predicted starting 11\n\n4-2-3-1, right to left: 1. Courtois (GK) \u2014 15. Meunier, 25. Ngoy, 4. Mechele, 5. De Cuyper \u2014 24. Onana, 8. Tielemans \u2014 10. Trossard, 7. De Bruyne, 11. Doku \u2014 9. Lukaku.\n\n Injured: None\n Suspended: None\n On a yellow card: Castagne, De Cuyper [...] Belgium head coach Rudi Garcia has a bi\n\n\u2022 Belgium vs. Iran - Live Score - June 21, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-belgium-vs-iran-jun-21-2026-game-boxscore-647653\n  10.0 Chances Created per Game 12.0\n\nIRN\n\n### TEAM LEADERS\n\nBEL\n\nKevin De Bruyne\n\n0\n\nGoals\n\nRamin Rezaeian\n\n1\n\nKevin De Bruyne\n\n0\n\nAssists\n\nRamin Rezaeian\n\n1\n\nKevin De Bruyne\n\n1\n\nShots on Goal\n\nRamin Rezaeian\n\n1\n\nKevin De Bruyne\n\n0.2\n\nExpected Goals (xG)\n\nRamin Rezaeian\n\n0.3\n\nBrandon Mechele\n\n6.1\n\nRating\n\nRamin Rezaeian\n\n8.2\n\nThibaut Courtois\n\n0.21\n\nKeeper Save %\n\nAlireza Beiranvand\n\n0.46\n\nThibaut Courtois\n\n0\n\nClean Sheets\n\nAlireza Beiranvand\n\n0\n\nIRN\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $234 would win $334 total if Belgium wins and a bet of $100 would win $738 total if Iran wins\n\n-234\n\n\u2022 Belgium vs. Iran prediction: World Cup odds, best bets, sportsbook promos and expert picks - sportingnews.com\n  https://www.sportingnews.com/us/betting/news/belgium-vs-iran-prediction-world-cup-odds-best-bets-picks/f8745ee53465bcc13f53e177\n  The winner of Sunday's game in Los Angeles will take a massive step towards the World Cup knockout stages. Belgium, who finished in third in 2018 but missed the knockout stages completely in 2022, will need to play a much better game than the opener against a fiesty Iran team with plenty of World Cup experience.\n\nHere is a complete preview for Sunday night's matchup, including odds, best bets and a prediction.\n\nMORE: Complete World Cup betting strategy guide\n\n## Belgium vs. Iran prediction\n\nThough Belgium is not one of the f"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Belgium vs. Iran predicted lineups, starting 11 for World Cup 2026 Group G game at SoFi Stadium - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/belgium-vs-iran-lineup-starting-11-world-cup-group-g/cb8e85773039308dc031475d\n  Belgium head coach Rudi Garcia has a big call to make up front, as Romelu Lukaku came off the bench against Egypt and forced the equalizing own-goal. Yet he also missed a number of big chances to win the game, so it will be interesting to see if he's done enough to earn the start or whether Garcia sticks with the false nine of Charles De Ketelaere.\n\nThere are also questions about how to potentially fit Alexis Saelemaekers or Dodi Lukebakio into the XI to re-energize the attack some.\n\n## Iran predicted starting 11\n\n3-4-3, right to left: 21. Beiranvand (GK) \u2014 23. Rezaeian, 4. Khalilzadeh, 19. Ne\n\n\u2022 Doku Will Not Play for Belgium in Matchday 2 Against Iran at the 2026 World Cup - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/doku-will-not-play-for-belgium-in-matchday-2-against-iran-at-the-2026-world-cup/\n  # Doku Will Not Play for Belgium in Matchday 2 Against Iran at the 2026 World Cup\n\nMarina Magomedova\n\nBelgium national team winger J\u00e9r\u00e9my Doku will not be able to play in the second round of Group G against Iran at the 2026 World Cup, according to Sporza.\n\nThe publication reports that the 24-year-old soccer player's respiratory infection has worsened. He had previously experienced breathing problems after returning from Belgium with a severe cold. On Saturday, Doku's condition deteriorated, and after consultation with the team's doctors, it was decided that he would miss the second match and b\n\n\u2022 Belgium vs. Iran - Live Score - June 21, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-belgium-vs-iran-jun-21-2026-game-boxscore-647653\n  10.0 Chances Created per Game 12.0\n\nIRN\n\n### TEAM LEADERS\n\nBEL\n\nKevin De Bruyne\n\n0\n\nGoals\n\nRamin Rezaeian\n\n1\n\nKevin De Bruyne\n\n0\n\nAssists\n\nRamin Rezaeian\n\n1\n\nKevin De Bruyne\n\n1\n\nShots on Goal\n\nRamin Rezaeian\n\n1\n\nKevin De Bruyne\n\n0.2\n\nExpected Goals (xG)\n\nRamin Rezaeian\n\n0.3\n\nBrandon Mechele\n\n6.1\n\nRating\n\nRamin Rezaeian\n\n8.2\n\nThibaut Courtois\n\n0.21\n\nKeeper Save %\n\nAlireza Beiranvand\n\n0.46\n\nThibaut Courtois\n\n0\n\nClean Sheets\n\nAlireza Beiranvand\n\n0\n\nIRN\n\n### ODDS\n\nSEE ALL ODDS\n\nTEAM TO WIN\n\nA bet of $234 would win $334 total if Belgium wins and a bet of $100 would win $738 total if Iran wins\n\n-234\n\n\u2022 Inside Iran\u2019s soccer team: A complete roster and more about 2026 World Cup squad - sportingnews.com\n  https://www.sportingnews.com/in/football/news/inside-iran-soccer-team-complete-roster-more-2026-world-cup-squad/ddc74bd3307937fc7b47f5e5\n  ### Defenders\n\n|  |  |  |  |  |\n ---  --- \n| Player | Team | Age | Foot | Caps |\n| Saleh Hardani | Esteghlal FC | 27 | R | 18 |\n| Ehsan Hajsafi | Sepahan SC | 36 | L | 143 |\n| Shoja Khalilzadeh | Tractor FC | 37 | R | 57 |\n| Milad Mohammadi | Persepolis FC | 32 | L | 75 |\n| Hossein Kanani | Persepolis FC | 32 | R | 64 |\n| Arya Yousefi | Sepahan FC | 24 | R | 12 |\n| Ali Nemati | Foolad FC | 30 | L | 18 |\n| Ramin Rezaeian | Foolad FC | 36 | R | 75 |\n| Danial Iri | Malavan Bandar Anzali | 22 | R | 0 |\n\n### Midfielders [...] ### Midfielders\n\n|  |  |  |  |  |\n ---  --- \n| Player | Team | Age | Foot\n\n\u2022 \ud83e\udd15 Raphinha isn't alone! Injuries keep ruling stars out in the Copa - Yahoo Sports\n  https://sports.yahoo.com/articles/raphinha-isnt-alone-injuries-keep-010100191.html\n  This Saturday (20), the Borussia Dortmund center-back, who would reportedly be one of Real Madrid\u2019s targets in this mid-year transfer window, went off injured in the 2-1 comeback win over Ivory Coast.\n\nThe coach of the four-time world champions, Julian Nagelsmann, expressed concern about Schlotterbeck\u2019s medical condition in a press conference.\n\nAdvertisement\n\nAdvertisement\n\nAdvertisement\n\n\"Honestly, it doesn\u2019t look very good. We have to wait for the MRI scans after returning to the training center.\"\n\nTo round off a \"tragic\" Saturday "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Belgium recent form and results",
+        "data": "\u2022 Belgium | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/belgium/fixtures\n  Belgium \u00b7 03:00 \u00b7 +(1) FIFA World Cup 2026\u2122 \u00b7 First Stage \u00b7 Group G \u00b7 Seattle Stadium06/15/2026 \u00b7 Belgium \u00b7 Egypt \u00b7 FT \u00b7 1 \u00b7 1 \u00b7 Round of 32Round of 16Quarter-finalSemi-finalFinal \u00b7 M74 \u00b7 06/29/2026 \u00b7 20:30 \u00b7 1E \u00b7 3ABCDF \u00b7 M77 \u00b7 06/30/2026 \u00b7\n\n\u2022 Belgium at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d159584345-7c4009d41554-1000--belgium-at-the-world-cup-2026-squad-fixtures-group-and-hi/\n  Belgium are appearing in their 15th finals after qualifying for the FIFA World Cup 2026. Rudi Garcia\u2019s side, led by captain Youri Tielemans, are up against Egypt, IR Iran and New Zealand in Group G.\n\n\u2022 Reuters Belgium at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/belgium/\n  U.S. defends Iran World Cup travel restrictions, says discussions ongoing ... Belgium are disappointed by a <strong>1-1 draw with Egypt</strong> in their World Cup Group G opener on Monday, coach Rudi Garcia \u200bsaid, urging his side to put it right in their ...\n\n\u2022 Belgium national football team World Cup Qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/belgium/table/2026/world-cup-qualification/\n  Former star Alessandro Matri on Romelu Lukaku\u2019s crucial impact for Belgium: &#x27;Roles became more defined&#x27; ... This page shows the Belgium national football team World Cup Qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow ...\n\n\u2022 Belgium World Cup Squad 2026: Full 26-Player Roster\n  https://worldcuppass.com/belgium-world-cup-squad-2026/\n  Belgium World Cup 2026 Squad. Garcia&#x27;s full 26-player roster, schedule, key players, and Group G breakdown. <strong>Fofana out, De Bruyne and Lukaku lead the Red Devils!</strong>"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Iran recent form and results",
+        "data": "\u2022 Reuters Iran at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/iran/\n  Follow Iran&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Iran national football team Asia: World Cup qualification standings 2026 on Tribuna.com\n  https://tribuna.com/en/team/iran/table/2026/world-cup-qualification-asia/\n  You&#x27;ll get a bookmaker odds comparison, ... squads&#x27; form heading into Matchday 2. We also cover the head-to-head record, predicted lineups, expert betting tips, and where to watch the game live. ... All the strange stories around the tournament. ... This page shows the Iran national football team Asia: World Cup qualification 2026 standings. Here you can see the team\u2019s position in the tournament, check match results, and follow ...\n\n\u2022 Iran twice come from behind to claim draw in World Cup opener with New Zealand | World Cup 2026 | The Guardian\n  https://www.theguardian.com/football/2026/jun/16/iran-new-zealand-world-cup-2026-group-g-match-report\n  Iran did not seem bogged down by political baggage as they let their football do the talking in a <strong>2-2 draw</strong> against New Zealand in Los Angeles\n\n\u2022 2026 FIFA World Cup Group G - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G\n  Group G of the 2026 FIFA World Cup is taking place from June 15 to 26, 2026. The group consists of Belgium, Egypt, Iran, and New Zealand. The top two teams, possibly along with the third-placed team, will advance to the round of 32.\n\n\u2022 IR Iran | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/ir-iran\n  Spain-Cabo Verde, Belgium-Egypt, Saudi-Arabia-Uruguay and <strong>IR Iran-New Zealand</strong> finished all square on Matchday 5 of the FIFA World Cup 2026.\n\n\u2022 [Discussion] After failing to pass the group stage multiple times, the Egyptian national team players got ahead of the mockery this time and made self-deprecating comedy sketches before the World Cup even started\n  https://www.reddit.com/r/worldcup/comments/1u27uwg/after_failing_to_pass_the_group_stage_multiple/\n  Lol this is hilarious \"You mean advancing onto the plane back home?\""
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Belgium vs. Iran Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/belgium_vs_iran.php\n  In the history of World Cups, Belgium National Team faced Iran in 0 opportunity, with <strong>0 wins, 0 draws and 0 lossess</strong>.\n\n\u2022 Belgium vs Iran, FIFA World Cup 2026: Predicted line-ups, Head-to-head, form guide - Sportstar\n  https://sportstar.thehindu.com/football/fifa-world-cup/belgium-vs-iran-head-to-head-record-h2h-form-predicted-lineups-xi-fifa-world-cup-2026-stats-news/article71127080.ece\n  Belgium vs Iran: Read the form guide, head-to-head and predicted XIs for the FIFA World Cup 2026 Group G match on June 21, 2026.\n\n\u2022 Belgium v IR Iran: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021477\n  FIFA World Cup 2026\u2122 \u00b7 Group G \u2022 Match 39 \u00b7 Belgium \u00b7 19:00 \u00b7 IR Iran \u00b7 Kick-off in: 0 days \u00b7 2 hrs \u00b7 52 min \u00b7 1 sec \u00b7 Belgium \u00b7 19:00 \u00b7 IR Iran \u00b7 <strong>21 Jun 2026</strong> \u00b7 FIFA World Cup 2026\u2122 \u00b7 Los Angeles \u25cfLos Angeles Stadium \u00b7 Where to watch \u00b7\n\n\u2022 Form and head to head stats Belgium vs Iran\n  https://www.skysports.com/football/belgium-vs-iran/549802\n  FIFA World Cup match Belgium vs Iran 21.06.2026. Preview and stats followed by live commentary, video highlights and match report.\n\n\u2022 Belgium vs. Iran (Jun 21, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760451/iran-belgium\n  Live coverage of the Belgium vs. Iran Fifa World Cup game on ESPN, including live score, highlights and updated stats.\n\n\u2022 [Discussion] Does anyone have 1 or 2 tickets for Iran vs Belgium? Let me know, thanks!\n  https://www.reddit.com/r/AskLosAngeles/comments/1u8ikeh/does_anyone_have_1_or_2_tickets_for_iran_vs/\n  This is an automated message that is applied to every post. Just a general reminder, r/AskLosAngeles is a friendly question and answer subreddit for the region of Los Angeles, California. Please follow the subreddit rules , report content that does not follow rules, and feel empowered to contribute to the subreddit wiki or to ask questions of your fellow community members. The vibe should be helpful and friendly and the quality of your contribution makes a difference. Unhelpful comments are discouraged, rude interactions are bannable. Ambiguously scoped questions, requests, or self promotions are only allowed in the monthly \"Open Discussion\" pinned thread. I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 2026 FIFA World Cup Group G - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G\n  <strong>Group G of the 2026 FIFA World Cup is taking place from June 15 to 26, 2026. The group consists of Belgium, Egypt, Iran, and New Zealand. The top two teams, possibly along with the third-placed team, will advance to the round of 32.</strong>\n\n\u2022 Belgium's updated FIFA ranking before 2026 World Cup clash with Iran - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/belgiums-updated-fifa-ranking-before-2026-world-cup-clash-with-iran/\n  <strong>Iran enters the pitch sitting in 22nd place globally</strong>, marking this out as a true heavyweight matchup between two top soccer nations. ... Trailing behind leaders like Argentina and Spain, Belgium\u2019s current 10th-place rank reflects a golden ...\n\n\u2022 Belgium vs. Iran (Jun 21, 2026) Live Score - ESPN\n  https://www.espn.com/soccer/match/_/gameId/760451/iran-belgium\n  Who can secure qualification before the group stage ends, and whose World Cup dreams could be shattered? Here&#x27;s what you need to know. ... Lamine Yamal needed just 10 minutes of his first start at a World Cup to get his first goal on soccer&#x27;s biggest stage. ... All 104 matches at the 2026 World Cup are stopping for two hydration breaks.\n\n\u2022 Belgium v IR Iran: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021477\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group G</strong> \u2022 Match 39 \u00b7 Belgium \u00b7 19:00 \u00b7 IR Iran \u00b7 Kick-off in: 0 days \u00b7 2 hrs \u00b7 52 min \u00b7 1 sec \u00b7 Belgium \u00b7 19:00 \u00b7 IR Iran \u00b7 21 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Los Angeles \u25cfLos Angeles Stadium \u00b7 Where to watch \u00b7\n\n\u2022 World Cup Group G standings 2026: Updated results, table and fixtures for Belgium, Egypt, Iran, New Zealand | Sporting News\n  https://www.sportingnews.com/uk/football/news/world-cup-group-g-standings-results-table-2026/1718b02f21d1b076ccc56614\n  Belgium and Iran are favored to make it out of <strong>Group G</strong>. These odds will be updated as available. In the United States, the World Cup will be broadcast in English on Fox, with streaming options available via Fubo, who are offering a free trial."
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Provides official group standings, goal differences, and qualification permutations.",
+        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n21.06. [Belgium - Iran](https://www.soccerway.com/match/belgium-GbB957na/iran-xrRx85iA/), 22.06. [Uruguay - Cape Verde](https://www.soccerway.com/match/cape-verde-MocyWdm7/uruguay-xMk44orG/), [New Zealand - Egypt](https://www.soccerway.com/match/egypt-bejDn7NN/new-zealand-rLctHkpU/), [Argentina - Austria](https://www.soccerway.com/match/argentina-f9OppQjp/austria-naHiWdnt/), [France - Iraq](https://www.soccerway.com/match/france-QkGeVG1n/iraq-K8aAGt6r/), 23.06. [Norway - Senegal](https://www.soccerway.com/match/norway-8rP6JO0H/senegal-hOIsJLJr/), [Jordan - Algeria](https://www.soccerway.com/match/algeria-nc87N1BR/jordan-vNcmJoU2/), [Portugal - Uzbekistan](https://www.soccerway.com/match/portugal-WvJrjFVN/uzbekistan-EZYKKRMc/), [England - Ghana](https://www.soccerway.com/match/england-j9N9ZNFA/ghana-nNBjHale/), 24.06. [Panama - Croatia](https://www.soccerway.com/match/croatia-K8aznggo/panama-OWKqbCfi/), [Colombia - D.R. Congo](ht"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Allows checking Belgium's historic results against defensive Asian opposition or direct head-to-head records if they occurred in this cycle.",
+        "data": "URL: https://www.transfermarkt.com/belgien/spielplandatum/verein/3382/plus/0/saison_id/2025\nTitle: Belgium - Fixtures by date\nThis is an overview of all fixtures of the club in chronological order.\n\nYear:\n\nCompetition:\n\nWeekday:\n\nVenue:\n\nResult:\n\nPeriod:\n\n\\-\n\nMatchday\n\nDate\n\nTime\n\nVenue\n\nRanking\n\nOpponent\n\nSystem of play\n\nAttendance\n\nResult\n\n![Freundschaftsspiele](https://tmssl.akamaized.net//images/logo/tiny/fs.png?lm=1713854091 \"Freundschaftsspiele\")\u00a0\u00a0[International Friendlies](https://www.transfermarkt.com/freundschaftsspiele/startseite/wettbewerb/FS \"International Friendlies\")\n\n[7](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/7)\n\nSat 28/03/26\n\n8:30 PM\n\nA\n\n[![United States](https://tmssl.akamaized.net//images/flagge/tiny/184.png?lm=1520611569 \"United States\")](https://www.transfermarkt.com/vereinigte-staaten/spielplan/verein/3505/saison_id/2025 \"United States\")\n\n[USA](https://www.transfermarkt.com/vereinigte-staaten/spielplan/verein/3505/saison_id/2025 \"United States\")\n\n4-2-3-1\n\n66.867\n\n[2:5](https://www.transfermarkt.com/spielbericht/index/spielbericht/4803814 \"Match report\")\n\n[8](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/8)\n\nWed 01/04/26\n\n3:00 AM\n\nA\n\n[![Mexico](https://tmssl.akamaized.net//images/flagge/tiny/110.png?lm=1520611569 \"Mexico\")](https://www.transfermarkt.com/mexiko/spielplan/verein/6303/saison_id/2025 \"Mexico\")\n\n[Mexico](https://www.transfermarkt.com/mexiko/spielplan/verein/6303/saison_id/2025 \"Mexico\")\n\n4-2-3-1\n\n[1:1](https://www.transfermarkt.com/spielbericht/index/spielbericht/4803815 \"Match report\")\n\n[9](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/9)\n\nTue 02/06/26\n\n6:00 PM\n\nA\n\n[![Croatia](https://tmssl.akamaized.net//images/flagge/tiny/37.png?lm=1520611569 \"Croatia\")](https://www.transfermarkt.com/kroatien/spielplan/verein/3556/saison_id/2025 \"Croatia\")\n\n[Croatia](https://www.transfermarkt.com/kroatien/spielplan/verein/3556/saison_id/2025 \"Croatia\")\n\n3-5-2\n\n7.555\n\n[0:2](https://www.transfermarkt.com/spielbericht/index/spielbericht/4807942 \"Match report\")\n\n[10](https://www.transfermarkt.com/freundschaftsspiele/spieltag/wettbewerb/FS/saison_id/2025/spieltag/10)\n\nSat 06/06/26\n\n3:00 PM\n\nH\n\n[![Tunisia](https://tmssl.akamaized.net//images/flagge/tiny/173.png?lm=1520611569 \"Tunisia\")](https://www.transfermarkt.com/tunesien/spielplan/verein/3670/saison_id/2025 \"Tunisia\")\n\n[Tunisia](https://www.transfermarkt.com/tunesien/spielplan/verein/3670/saison_id/2025 \"Tunisia\")\n\n4-2-3-1\n\n40.236\n\n[5:0](https://www.transfermarkt.com/spielbericht/index/spielbericht/4809516 \"Match report\")\n\n![Weltmeisterschaft](https://tmssl.akamaized.net//images/logo/tiny/fiwc.png?lm=1747989919 \"Weltmeisterschaft\")\u00a0\u00a0[World Cup](https://www.transfermarkt.com/weltmeisterschaft/startseite/pokalwettbewerb/FIWC \"World Cup\")\n\nGroup Stage\n\nMon 15/06/26\n\n9:00 PM\n\nH\n\n[![Egypt](https://tmssl.akamaized.net//images/fla"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Retrieves analytical match reports and underlying performance metrics (xG) from the opening fixtures.",
+        "data": "\u2022 Belgium v IR Iran: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021477\n  These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms.\n\n\u2022 Belgium vs Iran live updates: World Cup 2026 game latest news and buildup - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/belgium-vs-iran-live-updates-world-cup-2026-score-result/1uf9X2ZKohJM/\n  Follow live coverage as Belgium and Iran both look to secure their first win of the tournament.\n\n\u2022 2026 FIFA World Cup xG Tracker Results Expected Goals Of Every Match - RealGM Analysis\n  https://soccer.realgm.com/analysis/559/2026-FIFA-World-Cup-xG-Tracker-Results-Expected-Goals-Of-Every-Match\n  Tunisia 0.28 xG (1) June 15 (Group H): Spain 2.29 xG (0) vs. Cape Verde 0.30 xG (0) June 15 (Group G): <strong>Belgium 1.35 xG (1)</strong> vs. Egypt 1.08 xG (1) June 15 (Group H): Saudi Arabia 0.99 xG (1) vs.\n\n\u2022 Belgium vs Iran Prediction: World Cup 2026 Match Preview | Opta Analyst\n  https://theanalyst.com/articles/belgium-vs-iran-prediction-world-cup-2026-match-preview\n  Indeed, Belgium have failed to score from any of their last 46 shots at the tournament, despite those attempts totalling <strong>5.66 expected goals</strong> (xG). While finishing remains a concern, Garcia can still rely on the chaotic energy of J\u00e9r\u00e9my Doku ...\n\n\u2022 Belgium vs. Iran Prediction, Picks, Lineups for World Cup 2026 Today\n  https://www.prizepicks.com/playbook-article/belgium-vs-iran-prediction-picks-lineups-world-cup-2026-today\n  Here are the key stats and trends for Belgium vs. Iran before making your World Cup 2026 predictions on PrizePicks. Iran managed 17 shots vs. New Zealand, but put just 4 of those efforts on target. That led to <strong>2 goals from 1.50 xG</strong>."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Tracks betting market sentiment, line movements, and handicap values for the fixture.",
+        "data": "\u2022 Belgium vs Iran Prediction, Betting Tips, Lineups & Odds | 21 Jun 2026\n  https://www.sportsgambler.com/betting-tips/football/belgium-vs-iran-prediction-lineups-odds-2026-06-21/\n  Belgium can prove too strong for Iran and we\u2019re backing them on the Asian Handicap <strong>-1.25 at odds of -112</strong>. We need a two-goal margin of victory, although half our stake is returned if the favourites win by one goal.\n\n\u2022 Belgium vs Iran Prediction: Lineups, Picks & Best Bets World Cup 2026 Today Group G | FanDuel Research\n  https://www.fanduel.com/research/belgium-vs-iran-prediction-lineups-picks-and-best-bets-world-cup-2026-today-group-g\n  If Belgium ML -230 feels too short, Belgium -1.5 at +115 is the value alternative \u2014 a positive-odds bet on <strong>Belgium winning by 2+</strong>. Sportsgambler confirms Belgium have covered the -1.25 Asian Handicap in 6 of their last 10 games.\n\n\u2022 FIFA World Cup Odds & Win Probability 2026: Favorites & Analysis\n  https://www.covers.com/world-cup/odds\n  Back Belgium vs. Iran \u00b7 Back Uruguay vs. Cape Verde \u00b7 Back Egypt vs. New Zealand ... Updated World Cup odds for the 2026 FIFA World Cup, including outright futures, market movement, and expert analysis.\n\n\u2022 Belgium vs Iran Betting Pick | World Cup | 2026-06-21 |\n  https://www.goonersguide.com/football-pick-59542-Belgium-vs-Iran.htm\n  The oddsmakers pricing <strong>Belgium to Win to Nil at 2.20</strong> implies just a 45% likelihood, giving us a very clear, professional positive expected value (+EV) edge on a match where Iran simply does not possess the tools to score against a traditionally ...\n\n\u2022 Belgium vs Iran Picks, Prediction, Odds, and Line Movement for Sunday, June 21, 2026\n  https://winnersandwhiners.com/free-picks/world-cup/belgium-vs-iran-picks-prediction-odds-and-line-movement-for-sunday-june-21-2026\n  <strong>Iran +1.5 is the preferred handicap</strong>. Belgium moneyline can be used only at a manageable price, while under 3.5 supports the same score range. Compare markets on the World Cup odds page, review our World Cup best bets, and return to the World Cup predictions hub."
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Identifies the match venue and evaluates environmental factors like heat, humidity, or altitude.",
+        "data": "\u2022 Belgium vs Iran performance-impairing heat | World Cup 2026 ...\n  https://www.climatecentral.org/world-cup-2026/matches/39\n  The June 21 match at Los Angeles Stadium (Belgium vs. Iran) has a 32% chance of heat that can impair performance. is heat above 28\u00b0C (82.4\u00b0F) lower, less far, ...\n\n\u2022 \ufe0f   Extreme heat, high humidity, and high-altitude venues could ...\n  https://www.facebook.com/Aspetar/videos/%EF%B8%8F-extreme-heat-high-humidity-and-high-altitude-venues-could-become-some-of-the-t/1319097800407562/\n  Extreme heat, high humidity, and high-altitude venues could become some of the toughest opponents at the FIFA World Cup 2026.\n\n\u2022 World Cup weather: Record heat for Belgium vs Egypt, storm threat ...\n  https://www.nytimes.com/athletic/7362354/2026/06/15/world-cup-heat-storm-forecast/\n  This World Cup is going to be hot and at times stormy, with a sizeable chunk of its 104 games set to be played above 90F (32C).\n\n\u2022 Extreme heat, high humidity, and high-altitude venues could ...\n  https://www.instagram.com/reel/DZbvhTkuiz6/\n  FIFA World Cup 2026 'Player Performance' in Peril! 'Climate Change' Heat Threatens 'Global Football'! New analysis warns 'climate change' will ...\n\n\u2022 Belgium vs. IR Iran - SoFi Stadium\n  https://www.sofistadium.com/events/detail/fifa-world-cup-belgium-iran\n  Parking Lots Open: 8:00 AM. Gates Open: 9:00 AM. Stadium Fan Experience Opens: 9:00 AM. Kickoff: 12:00 PM. Less Info. How do I get to SoFi Stadium?"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides real-time injury updates and tactical training camp reports regarding Belgium's key attackers.",
+        "data": "\u2022 Belgium vs Iran Prediction: Possession edge points to Belgian pressure - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/belgium-vs-iran-match-prediction-21-june-2026/\n  ## Belgium vs Iran: Prediction for the Match on June 21, 2026. Belgium's first Group G match ended 1-1 against Egypt, with Romelu Lukaku coming off the bench after an injury-plagued season and Kevin De Bruyne available in Rudi Garcia's 26-man squad. Belgium's last match was a 1-1 World Cup draw with Egypt, with Romelu Lukaku used from the bench after GOAL noted Belgium's cohesion issues before his second-half impact. Their last five results are 1-1 against Egypt, 5-0 against Tunisia, 2-0 away to Croatia, 1-1 away to Mexico, and 5-2 away to the United States. Iran's last match was a 2-2 draw wi\n\n\u2022 Belgium vs. Egypt projected lineups, starting 11 for World Cup 2026 Group G game in Seattle - sportingnews.com\n  https://www.sportingnews.com/au/football/news/belgium-egypt-projected-lineups-starting-11-world-cup-2026/34594672b924daa5e842c6a3\n  Egypt projected lineups, starting 11 for World Cup 2026 Group G game in Seattle. Mohamed Salah and Kevin De Bruyne, two greats of the past Premier League decade, begin their World Cup campaigns facing off against one another. Belgium takes on Egypt in Seattle in a match where the winner will be firm favorites to claim top spot in Group G. Salah scored in both of his appearances at the 2018 World Cup, but Egypt bowed out at the group stage in Russia, with their star man still hampered by the shoulder injury he sustained during Liverpool's Champions League final defeat to Real Madrid. ## Belgium\n\n\u2022 Lukaku seizes spotlight from Salah, De Bruyne in Belgium's draw with Egypt - ESPN\n  https://www.espn.com/soccer/story/_/id/49076525/lukaku-seizes-spotlight-salah-de-bruyne-belgium-draw-egypt-2026-world-cup\n  # Lukaku seizes spotlight from Salah, De Bruyne in Belgium's draw with Egypt - ESPN. *   Men's World Cup World Cup. ## World Cup. GamecastStatistics 55' FS1 Tele Peacock * Image 2 Saudi Arabia Saudi Arabia KSA 1 * Image 3 Uruguay Uruguay URU 0 2026 FIFA World Cup. FT * Image 4 Spain Spain ESP 0 * Image 5 Cape Verde Cape Verde CPV 0 2026 FIFA World Cup. FT * Image 6 Belgium Belgium BEL 1 * Image 7 Egypt Egypt EGY 1 2026 FIFA World Cup. Tues 1:00 AM UTC FS1 Tele Peacock IRN -125 * Image 8 Iran Iran IRN * Image 9 New Zealand New Zealand NZL 2026 FIFA World Cup. Lukaku seizes spotlight from Salah,\n\n\u2022 Belgium vs Egypt Highlights | 2026 FIFA World Cup\u2122 - FOX Sports\n  https://www.foxsports.com/watch/fmc-syr4km937atxg6dx\n  # Belgium vs Egypt Highlights | 2026 FIFA World Cup\u2122. ## Check out the full game highlights between Belgium and Egypt in the 2026 FIFA World Cup\u2122. Mohamed Salah  Romelu Lukaku  Kevin De Bruyne  FIFA Men's World Cup  FIFA World Cup - 4 Minute Game Recaps  Belgium  Egypt  WC - Belgium vs. FIFA MEN'S WORLD CUP. ### Egypt\u2019s Mostafa Shobeir makes remarkable save, keeping score level against Belgium | 2026 FIFA World Cup\u2122. ### Belgium levels score through Egypt own goal after Romelu Lukaku enters game | 2026 FIFA World Cup\u2122. ### Spain vs Cape Verde Extended Highlights | 2026 FIFA World Cup\u2122. ### Egy\n\n\u2022 Belgium hero Romelu Lukaku not ready to 'start a game' - ESPN\n  https://www.espn.com/soccer/story/_/id/49076865/belgium-hero-romelu-lukaku-not-ready-start-game\n  # Belgium hero Romelu Lukaku not ready to 'start a game' - ESPN. *   Men's World Cup World Cup. ## World Cup. SummaryReport FT * Image 2 Spain Spain ESP 0 * Image 3 Cape Verde Cape Verde CPV 0 2026 FIFA World Cup. FT * Image 4 Belgium Belgium BEL 1 * Image 5 Egypt Egypt EGY 1 2026 FIFA World Cup. FT * Image 6 Saudi Arabia Saudi Arabia KSA 1 * Image 7 Uruguay Uruguay URU 1 2026 FIFA World Cup. Tues 1:00 AM UTC FS1 Tele Peacock IRN -120 * Image 8 Iran Iran IRN * Image 9 New Zealand New Zealand NZL 2026 FIFA World Cup. Belgium hero Lukaku not ready to 'start a game'. Group G at the 2026 World Cup"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Extracts tactical previews detailing Iran's defensive setup and how they plan to counter Belgium's wide threats.",
+        "data": "\u2022 Doku Will Not Play for Belgium in Matchday 2 Against Iran at the 2026 World Cup - Telecom Asia Sport\n  https://www.telecomasia.net/news/football/doku-will-not-play-for-belgium-in-matchday-2-against-iran-at-the-2026-world-cup/\n  # Doku Will Not Play for Belgium in Matchday 2 Against Iran at the 2026 World Cup. **Belgium national team winger J\u00e9r\u00e9my Doku will not be able to play in the second round of Group G against Iran at the 2026 World Cup, according to Sporza.**. On Saturday, Doku's condition deteriorated, and after consultation with the team's doctors, it was decided that he would miss the second match and begin taking antibiotics. The match against Iran will take place today, June 21. The match will be held at SoFi Arena in Inglewood, USA. Neuer Sets World Cup Goalkeeper Appearance RecordMessi and Olise Lead FIFA\n\n\u2022 Belgium vs. Iran - Live Score - June 21, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-belgium-vs-iran-jun-21-2026-game-boxscore-647653\n  ## Belgium vs Iran. Belgium will need to slow down Rezaeian (1 G, 1 A in last match) as they meet Iran. # Belgium vs. ## MATCHUP## NEWS## ODDS## STANDINGS. ### IR Iran Train Before Belgium | FIFA World Cup 2026\u2122. ### Belgium On Playing IR Iran | Rudi Garcia & Thomas Meunier Answer Questions. ### Belgium Train Before IR Iran | FIFA World Cup 2026\u2122. ### Team Feature: IR Iran | Ghalenoei Focused On Taking IR Iran Into The Knockout Stages. ### Team Feature: Belgium | Players Describe 'That Feeling' Of Playing At A World Cup. | 6/15 | EGY | D1-1 |. | 6/6 | TUN (H) | W5-0 |. | 6/2 | CRO (A) | W2-0 |\n\n\u2022 Belgium vs. Iran predicted lineups, starting 11 for World Cup 2026 Group G game at SoFi Stadium - sportingnews.com\n  https://www.sportingnews.com/us/soccer/news/belgium-vs-iran-lineup-starting-11-world-cup-group-g/cb8e85773039308dc031475d\n  Iran predicted lineups, starting 11 for World Cup 2026 Group G game at SoFi Stadium. * Belgium and Iran World Cup rosters. With Group G still very wide open, Belgium hope to salvage their\u00a02026 FIFA World Cup as they meet embattled Iran in Los Angeles on Sunday. The Red Devils were held to a 1-1 draw against Egypt in their opening match, needing an own-goal to finish level after conceding early in the first half. The \"golden generation\" of Belgium has been largely disappointing at the World Cup recently, following up their third-place finish in 2018 with a group stage exit in 2022, leaving 2026\n\n\u2022 Belgium vs. Iran World Cup prediction: Odds, picks, best bet for Group G match on Sunday - New York Post\n  https://nypost.com/2026/06/21/betting/belgium-vs-iran-world-cup-prediction-odds-picks-best-bet-for-group-g-match-on-sunday/\n  Iran World Cup prediction: Odds, picks, best bet for Group G match on Sunday. Belgium, Egypt, Iran, and New Zealand are all on a level playing field with one point and an even goal difference, but the two teams that will be most disappointed with their first World Cup match are undoubtedly Belgium and Iran. And it wasn\u2019t just the result that would have left both Belgium and Iran with bitter tastes in their mouth after their first match. Although Iran came into the tournament with a reputation of being a rugged, defensively sound opponent, the *Lions of Persia* looked out of their depth at time\n\n\u2022 Belgium vs. Iran prediction: World Cup odds, best bets, sportsbook promos and expert picks - sportingnews.com\n  https://www.sportingnews.com/us/betting/news/belgium-vs-iran-prediction-world-cup-odds-best-bets-picks/f8745ee53465bcc13f53e177\n  Iran prediction: World Cup odds, best bets, sportsbook promos and expert picks. Following a disappointing 1-1 draw with Egypt in their opener, Belgium enters Matchday 2 of the FIFA World Cup facing early desperation against Iran. The Red Devils picked up just one point in the opening game in Seattle; stars like Jeremy Doku, Kevin De Bruyne and Leandro Trossard were unable to find the net, though an own-goal salvaged a point against the Egyptians. Belgium, who finished i"
+      }
+    ],
+    "research_cost": 0.11,
+    "wallet_before": 0.266,
+    "wallet_after": 0.156,
+    "prediction": {
+      "pick": "home",
+      "confidence": 6,
+      "confidence_reason": "While Belgium's superior midfield quality makes them favorites, their ongoing finishing struggles and key absences like J\u00e9r\u00e9my Doku cap the confidence level.",
+      "reasoning": "Belgium's midfield control should overcome a fatigued Iranian side, though the absence of J\u00e9r\u00e9my Doku and a bench role for Romelu Lukaku will limit their attacking efficiency.",
+      "probabilities": {
+        "home": 55,
+        "draw": 27,
+        "away": 18
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Belgium drew 1-1 against Egypt in their World Cup opener, following a strong 5-0 friendly win over Tunisia.",
+      "away_form": "Iran fought back to secure a 2-2 draw against New Zealand in their opening match.",
+      "key_injuries": [
+        "J\u00e9r\u00e9my Doku (Belgium) - OUT (worsened respiratory infection)",
+        "Romelu Lukaku (Belgium) - Not fully fit to start (expected bench role)"
+      ],
+      "tactical_matchup": "Belgium's possession-heavy attack led by De Bruyne faces Iran's counter-attacking threat, but Doku's absence severely limits Belgium's lateral winger breakthrough capability.",
+      "group_stakes": "With all Group G teams tied on 1 point, a victory is vital for either side to take control of the group.",
+      "home_win_signals": [
+        "Belgium's midfield dominance with Kevin De Bruyne and Youri Tielemans controlling the tempo.",
+        "Iran's potential travel fatigue after returning to Tijuana following their opening match in Los Angeles.",
+        "Belgium's high chance creation metrics, registering 1.35 xG in their opening match."
+      ],
+      "away_win_signals": [
+        "Mehdi Taremi and Ramin Rezaeian's highly effective counter-attacking partnership.",
+        "Belgium's ongoing finishing struggles, failing to score from open play in their last 46 tournament shots before the Egypt own-goal."
+      ],
+      "draw_signals": [
+        "Both teams coming off opening-day draws and potentially adopting a cautious approach to avoid defeat.",
+        "Belgium's lack of a clinical starting striker with Lukaku restricted to a bench role and Doku sidelined."
+      ],
+      "contradictions": [
+        "Bookmakers heavily favor Belgium (-234), but their lack of clinical finishing and Doku's absence conflict with their short odds."
+      ],
+      "strategy_applied": [
+        "IRN vs NZL: Fatigue over quality (evaluating Iran's travel demands and quick turnaround)",
+        "BEL vs EGY: Discipline over favorite (cautioning against overvaluing Belgium's favorite status due to cohesion and finishing issues)"
+      ]
+    },
+    "stress_test": {
+      "confidence_cap": 6,
+      "draw_risk": "medium"
+    },
+    "full_reasoning": "HOME_PCT: 55\nDRAW_PCT: 27\nAWAY_PCT: 18\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: While Belgium's superior midfield quality makes them favorites, their ongoing finishing struggles and key absences like J\u00e9r\u00e9my Doku cap the confidence level.\nREASONING: Belgium's midfield control should overcome a fatigued Iranian side, though the absence of J\u00e9r\u00e9my Doku and a bench role for Romelu Lukaku will limit their attacking efficiency.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
