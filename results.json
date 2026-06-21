@@ -11251,9 +11251,15 @@
     },
     "full_reasoning": "HOME_PCT: 55\nDRAW_PCT: 27\nAWAY_PCT: 18\nPICK: home\nCONFIDENCE: 6\nCONFIDENCE_REASON: While Belgium's superior midfield quality makes them favorites, their ongoing finishing struggles and key absences like J\u00e9r\u00e9my Doku cap the confidence level.\nREASONING: Belgium's midfield control should overcome a fatigued Iranian side, though the absence of J\u00e9r\u00e9my Doku and a bench role for Romelu Lukaku will limit their attacking efficiency.",
     "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 0,
+      "away_score": 0,
+      "winner": "draw"
+    },
+    "correct": false,
+    "evaluation": "MISTAKE:\n- The pick incorrectly backed Belgium to win instead of a draw against a highly disciplined opponent.\n- I wrongly assumed midfield possession would yield goals, ignoring that the absence of Doku and Lukaku left the attack toothless against a low block.\nDATA:\n- useful: https://api.signalfuse.co/v1/gateway/search/tavily \u2014 Detailed Iran's low-block tactics and plans to neutralize Belgium's wingers, which accurately predicted the scoreless outcome.\n- useless: https://websearch--gw.swerver.net/search \u2014 Environmental and venue data provided no actionable insights for this tactical matchup.\n- useless: https://api.signalfuse.co/v1/gateway/search/brave \u2014 Historical head-to-head records were too outdated to have any relevance to current squad dynamics.",
+    "reflected": true,
+    "reflected_at": "2026-06-21T21:30:39.890272+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Transition inefficiency over passive defense.\n- USA vs AUS: Pressing over low-block.\n- SCO vs MAR: Quality over motivation.\n- BRA vs HAI: Wingers over low-block.\n- TUR vs PAR: Block over midfield.\n- NED vs SWE: Home over attack.\n- GER vs CIV: Freshness over history.\n- ECU vs CUW: Heat over quality.\n- TUN vs JPN: Depth over absences.\n- ESP vs KSA: Transition over block.\n- BEL vs IRN: Low-block and key absences over possession.\n\n## Data sources\n- use: Analytics (https://api.signalfuse.co/v1/gateway/search/tavily) \u2014 tactics (BEL vs IRN)\n- skip: Climate (https://websearch--gw.swerver.net/search) \u2014 venue (BEL vs IRN)\n- skip: History (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 history (BEL vs IRN)"
   }
 ]

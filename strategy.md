@@ -23,18 +23,19 @@
 - CZE vs RSA: Defense over physical.
 - SUI vs BIH: Squad over venue.
 - CAN vs QAT: Turf over counter.
-- MEX vs KOR: Opponent transition inefficiency over passive defense.
-- USA vs AUS: Tactical pressing over low-block stability.
-- SCO vs MAR: Technical quality over defensive motivation.
-- BRA vs HAI: Winger breakthrough over low-block.
-- TUR vs PAR: Defensive block over midfield quality.
-- NED vs SWE: Home metrics over individual attack.
-- GER vs CIV: Lateral mobility and freshness over history.
-- ECU vs CUW: Low-block and heat over physical quality.
-- TUN vs JPN: System depth over individual absences.
-- ESP vs KSA: Transition speed and xG over weather and defensive block.
+- MEX vs KOR: Transition inefficiency over passive defense.
+- USA vs AUS: Pressing over low-block.
+- SCO vs MAR: Quality over motivation.
+- BRA vs HAI: Wingers over low-block.
+- TUR vs PAR: Block over midfield.
+- NED vs SWE: Home over attack.
+- GER vs CIV: Freshness over history.
+- ECU vs CUW: Heat over quality.
+- TUN vs JPN: Depth over absences.
+- ESP vs KSA: Transition over block.
+- BEL vs IRN: Low-block and key absences over possession.
 
 ## Data sources
-- use: Advanced analytics (https://api.signalfuse.co/v1/gateway/search/tavily) — xG and transition validation (ESP vs KSA)
-- skip: Climate data (https://websearch--gw.swerver.net/search) — environmental impact (ESP vs KSA)
-- skip: Historical data (https://api.signalfuse.co/v1/gateway/search/brave) — defensive block relevance (ESP vs KSA)
+- use: Analytics (https://api.signalfuse.co/v1/gateway/search/tavily) — tactics (BEL vs IRN)
+- skip: Climate (https://websearch--gw.swerver.net/search) — venue (BEL vs IRN)
+- skip: History (https://api.signalfuse.co/v1/gateway/search/brave) — history (BEL vs IRN)
