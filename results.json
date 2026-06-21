@@ -10580,5 +10580,342 @@
     "reflected": true,
     "reflected_at": "2026-06-21T06:30:19.481969+00:00",
     "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n- TUN vs JPN: System depth over individual absences.\n\n## Data sources\n- use: Market sentiment (https://websearch--gw.swerver.net/search) \u2014 squad depth validation (TUN vs JPN)\n- skip: Pitch/weather (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transition impact (TUN vs JPN)\n- skip: History (https://skim402.com/api/v2/read) \u2014 head-to-head relevance (TUN vs JPN)"
+  },
+  {
+    "match": "ESP vs KSA",
+    "home": "ESP",
+    "away": "KSA",
+    "kickoff": "2026-06-21T16:00Z",
+    "strategy_snapshot": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Opponent transition inefficiency over passive defense.\n- USA vs AUS: Tactical pressing over low-block stability.\n- SCO vs MAR: Technical quality over defensive motivation.\n- BRA vs HAI: Winger breakthrough over low-block.\n- TUR vs PAR: Defensive block over midfield quality.\n- NED vs SWE: Home metrics over individual attack.\n- GER vs CIV: Lateral mobility and freshness over history.\n- ECU vs CUW: Low-block and heat over physical quality.\n- TUN vs JPN: System depth over individual absences.\n\n## Data sources\n- use: Market sentiment (https://websearch--gw.swerver.net/search) \u2014 squad depth validation (TUN vs JPN)\n- skip: Pitch/weather (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transition impact (TUN vs JPN)\n- skip: History (https://skim402.com/api/v2/read) \u2014 head-to-head relevance (TUN vs JPN)",
+    "information_needs": "FORM\n- How did Spain's and Saudi Arabia's respective xG (Expected Goals) and xGA (Expected Goals Against) profiles look in their opening Group Stage matches of this tournament?\n\nPLAYERS\n- Is Spain's key midfield metronome (e.g., Rodri) fully fit to start, and who is slated to start as Saudi Arabia's primary creative outlet/talisman given any recent fitness tests?\n\nTACTICS\n- Will Saudi Arabia's manager deploy a brave, high defensive line to compress the pitch, or will they drop into a deep, compact low-block to deny space to Spain's dynamic wingers like Lamine Yamal and Nico Williams?\n\nH2H\n- How has Saudi Arabia historically performed against Tier-1 UEFA opposition in competitive tournaments over the last five years, and what tactical patterns emerged from those matches?\n\nCONTEXT\n- Given the Group standings after Matchday 1, what specific result does each team require from this Matchday 2 fixture to guarantee progression or avoid early elimination?\n\nMARKET\n- What do the current Over/Under goal totals and Asian Handicap lines imply about the expected margin of victory, and has there been any sharp money movement toward Saudi Arabia covering the spread?\n\nNEWS\n- Are there any reports of camp unrest, tactical disagreements, or sudden illness/flu outbreaks in either team's base camp in the 48 hours leading up to kickoff?\n\nVENUE\n- Which 2026 World Cup host stadium is hosting this match, and do the local altitude, indoor air conditioning status, or expected outdoor humidity levels favor Saudi Arabia's physical conditioning or Spain's high-tempo passing game?",
+    "research_gaps": [
+      {
+        "need": "What do the current Over/Under goal totals and Asian Handicap lines imply about the expected margin of victory, and has there been any sharp money movement toward Saudi Arabia covering the spread?",
+        "category": "MARKET",
+        "ideal_service": "A sports betting odds API that delivers real-time Asian Handicap and Over/Under consensus lines along with betting volume/sharp money indicators."
+      }
+    ],
+    "services_planned": [
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Spain vs Saudi Arabia World Cup 2026 match preview tactics formation",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "need": "Comprehensive pre-match preview and tactical outlook",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Spain vs Saudi Arabia World Cup 2026 squad injuries fitness team news",
+          "search_depth": "advanced",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "need": "Player availability and camp news for both teams",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Spain World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Spain recent form and results",
+        "need": "How has Spain performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Saudi Arabia World Cup 2026 recent form results",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: Saudi Arabia recent form and results",
+        "need": "How has Saudi Arabia performed in recent internationals?",
+        "category": "FORM"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Spain vs Saudi Arabia head to head history World Cup",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "need": "Historical H2H record and patterns between the teams",
+        "category": "H2H"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Spain vs Saudi Arabia World Cup 2026 group standings context",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "need": "Group standings and what each team needs from this match",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://skim402.com/api/v2/read",
+        "method": "get",
+        "params": {
+          "url": "https://int.soccerway.com/international/world/world-cup/2026/group-stage/r77543/"
+        },
+        "body": {},
+        "cost": 0.002,
+        "reason": "Reads live tournament standings and group state data to evaluate progression and elimination scenarios.",
+        "need": "Given the Group standings after Matchday 1, what specific result does each team require from this Matchday 2 fixture to guarantee progression or avoid early elimination?",
+        "category": "CONTEXT"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Saudi Arabia tactical approach Spain Lamine Yamal Nico Williams World Cup 2026",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Identifies tactical previews and manager press conference quotes detailing defensive strategies against Spain's wingers.",
+        "need": "Will Saudi Arabia's manager deploy a brave, high defensive line to compress the pitch, or will they drop into a deep, compact low-block to deny space to Spain's dynamic wingers like Lamine Yamal and Nico Williams?",
+        "category": "TACTICS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "method": "get",
+        "params": {
+          "q": "Saudi Arabia vs European teams Tier 1 UEFA competitive matches history",
+          "count": 5
+        },
+        "body": {},
+        "cost": 0.008,
+        "reason": "Uncovers historical patterns and tactical trends of Saudi Arabia playing against elite European nations.",
+        "need": "How has Saudi Arabia historically performed against Tier-1 UEFA opposition in competitive tournaments over the last five years, and what tactical patterns emerged from those matches?",
+        "category": "H2H"
+      },
+      {
+        "url": "https://news-x402.com/news/recent",
+        "method": "get",
+        "params": {
+          "topic": "Spain Saudi Arabia World Cup camp illness unrest",
+          "hours": 48
+        },
+        "body": {},
+        "cost": 0.01,
+        "reason": "Retrieves immediate global news reporting on team environment, camps, and sudden flu/virus issues.",
+        "need": "Are there any reports of camp unrest, tactical disagreements, or sudden illness/flu outbreaks in either team's base camp in the 48 hours leading up to kickoff?",
+        "category": "NEWS"
+      },
+      {
+        "url": "https://websearch--gw.swerver.net/search",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Spain vs Saudi Arabia World Cup 2026 stadium altitude climate humidity passing game",
+          "count": 5
+        },
+        "cost": 0.01,
+        "reason": "Provides specific environmental stadium intelligence (A/C, altitude, humidity) and how it affects both playstyles.",
+        "need": "Which 2026 World Cup host stadium is hosting this match, and do the local altitude, indoor air conditioning status, or expected outdoor humidity levels favor Saudi Arabia's physical conditioning or Spain's high-tempo passing game?",
+        "category": "VENUE"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Spain Rodri fitness Saudi Arabia creative playmaker injury news World Cup 2026",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Provides real-time injury updates and fitness test results for key players like Rodri and Saudi creative outlets.",
+        "need": "Is Spain's key midfield metronome (e.g., Rodri) fully fit to start, and who is slated to start as Saudi Arabia's primary creative outlet/talisman given any recent fitness tests?",
+        "category": "PLAYERS"
+      },
+      {
+        "url": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "method": "post",
+        "params": {},
+        "body": {
+          "query": "Spain Saudi Arabia World Cup 2026 Matchday 1 expected goals xG xGA stats",
+          "search_depth": "basic",
+          "max_results": 5,
+          "topic": "news"
+        },
+        "cost": 0.012,
+        "reason": "Fetches advanced performance analytics and expected goals metrics from the opening Matchday.",
+        "need": "How did Spain's and Saudi Arabia's respective xG (Expected Goals) and xGA (Expected Goals Against) profiles look in their opening Group Stage matches of this tournament?",
+        "category": "FORM"
+      }
+    ],
+    "services_used": [
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: match preview, tactics, predicted lineups",
+        "data": "\u2022 Spain vs Saudi Arabia Prediction: Spain\u2019s First Win Since 2022 - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/spain-vs-saudi-arabia-prediction-for-the-match-on-june-21st-2026/\n  ## Saudi Arabia: Lineup\n\nFor their upcoming 2026 FIFA World Cup Group H encounter with Spain, Saudi Arabia is anticipated to field an unchanged starting eleven. After securing a commendable 1-1 draw against Uruguay, Manager Donis appears inclined to utilize a tactical 4-4-2 formation to neutralize the European champions.\n\nPredicted lineup (4-4-2): M.Al-Owais, S.Abdulhamid-A.Amri, H.AlTambakti, M.Al-Harbi, M.AbuAl Shamat, M.Kanno-A.Al-Khabari, S.Al-Dawsari, M.Al-Juwayr, F.Al-Buraikan\n\nHead Coach / Manager: Georgios Donis\n\nOut: Nil.\n\n## Spain vs Saudi Arabia Head-to-Head Statistics [...] Saudi A\n\n\u2022 Spain vs. Saudi Arabia predicted lineups, starting 11 for World Cup 2026 Group H game at Mercedes-Benz Stadium - sportingnews.com\n  https://www.sportingnews.com/in/football/news/spain-vs-saudi-arabia-lineup-starting-11-world-cup-group-h/9a1cd6d448397b03cddc29e7\n  The Sporting News brings you a look at the projected starting lineups for both teams, as well as an overview of their World Cup squads, plus odds, predictions, and how to watch the game.\n\n2026 WORLD CUP HQ: Latest World Cup news | Full World Cup schedule | Buy World Cup tickets\n\n## Spain predicted starting 11\n\n4-3-3, right to left: 24. Simon (GK) \u2014 5. Llorente, 22. Cubarsi, 14. Laporte, 24. Cucurella \u2014 8. F. Ruiz, 16. Rodri, 20. Pedri \u2014 19. Lamine Yamal, 21. Oyarzabal, 17. N. Williams.\n\n Injured: None\n Suspended: None\n On a yellow card: Pedri\n\nIt remains to be seen whether Lamine Yamal or Nico\n\n\u2022 Spain starting XI projection: Who will play vs. Saudi Arabia at World Cup? - USA Today\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/20/spain-lineup-saudi-arabia-world-cup/90627321007/\n  ### Midfielders:\n\n Pedri\n Rodri\n Fabian Ruiz\n\n### Forwards:\n\n Mikel Oyarzabal\n Nico Williams\n Lamine Yamal\n\nLineup notes: This lineup projection features two notable changes from Spain's opening match against Cape Verde.\n\nYamal and Williams draw in to replace Gavi and Ferran Torres on the front line. Williams would add a speed element to Spain's attack while Yamal's dribbling an playmaking prowess would be a welcome addition as La Roja look to score their first goal of the 2026 World Cup.\n\n## Spain 2026 World Cup schedule\n\nHere are the remaining matchups for Spain in the group stage of the Wor\n\n\u2022 Spain vs. Saudi Arabia prediction, lineups, odds and bet builder tips for World Cup Group H match - sportingnews.com\n  https://www.sportingnews.com/uk/football/news/spain-vs-saudi-arabia-prediction-lineups-odds-bet-builder-tips-world-cup/3ff71a8f14c4f8ff90a86feb\n  Securing an early goal will be key and if the European champions get it, they should just have far too much for the Saudis.\n\nPrediction: Spain 3-0 Saudi Arabia (8/1 with Bet365)\n\nMORE: World Cup Free Bets 2026 \u2014 Best Betting Offers & Sign-Up Bonuses\n\n## Spain vs. Saudi Arabia best bets\n\nWe've picked out three best bets for  Spain's clash with Saudi Arabia and explored key match facts:\n\n### Over 2.5 goals (1/2 with Betfred)\n\nGiven our predicted score, this is our obvious first pick.\n\nSpain have been full of goals in recent years, scoring 21 goals in just six qualifiers, and should have their sh\n\n\u2022 Spain vs. Saudi Arabia - Live Score - June 21, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-spain-vs-saudi-arabia-jun-21-2026-game-boxscore-647652\n  my favs\n\nAccess and manage your favorites here\n\n FIFA WC 26 \u26bd\n\n SPORTS & TEAMS\n PLAYERS\n SHOWS\n PERSONALITIES\n TOPICS\n\nGROUP H\n\n## Spain vs Saudi Arabia\n\nTomorrow at 4:00 PM on\n\nSaudi Arabia faces group favorite Spain in Atlanta Stadium\n\nAtlanta Stadium,  Atlanta\n\nSOCCER  >  Scores  > \n\n# Spain vs. Saudi Arabia: Jun 21, 2026\n\n## MATCHUP## ODDS## STANDINGS\n\nSaudi Arabia faces group favorite Spain in Atlanta Stadium\n\nTeam Feature: Saudi Arabia | Donis Feels T"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Baseline: squad news, injuries, fitness updates",
+        "data": "\u2022 Spain vs. Saudi Arabia predicted lineups, starting 11 for World Cup 2026 Group H game at Mercedes-Benz Stadium - sportingnews.com\n  https://www.sportingnews.com/in/football/news/spain-vs-saudi-arabia-lineup-starting-11-world-cup-group-h/9a1cd6d448397b03cddc29e7\n  The Sporting News brings you a look at the projected starting lineups for both teams, as well as an overview of their World Cup squads, plus odds, predictions, and how to watch the game.\n\n2026 WORLD CUP HQ: Latest World Cup news | Full World Cup schedule | Buy World Cup tickets\n\n## Spain predicted starting 11\n\n4-3-3, right to left: 24. Simon (GK) \u2014 5. Llorente, 22. Cubarsi, 14. Laporte, 24. Cucurella \u2014 8. F. Ruiz, 16. Rodri, 20. Pedri \u2014 19. Lamine Yamal, 21. Oyarzabal, 17. N. Williams.\n\n Injured: None\n Suspended: None\n On a yellow card: Pedri\n\nIt remains to be seen whether Lamine Yamal or Nico\n\n\u2022 Spain vs Saudi Arabia Prediction: Spain\u2019s First Win Since 2022 - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/spain-vs-saudi-arabia-prediction-for-the-match-on-june-21st-2026/\n  Spain's defense continues to demonstrate exceptional solidity. Led by Unai Sim\u00f3n and rising central defender Pau Cubars\u00ed, the backline has allowed only two goals across their previous five matches. While the squad possesses significant offensive depth, they have sometimes struggled to break down disciplined, deep-seated defensive setups, as evidenced by scoreless draws against Egypt and Cape Verde.\n\nThe highly anticipated return of Golden Boy Lamine Yamal from a hamstring injury occurred when he came off the bench in the match against Cape Verde. As the tournament moves forward, his return to \n\n\u2022 Spain starting XI projection: Who will play vs. Saudi Arabia at World Cup? - USA Today\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/20/spain-lineup-saudi-arabia-world-cup/90627321007/\n  ## Spain 2026 World Cup roster\n\nGoalkeepers:Unai Simon (Athletic Club), David Raya (Arsenal), Joan Garcia (Barcelona)\n\nDefenders:Marc Cucurella (Chelsea), Alex Grimaldo (Bayer Leverkusen), Pau Cubarsi (Barcelona), Aymeric Laporte (Athletic Club), Marc Pubill (Atletico Madrid), Eric Garcia (Barcelona), Marcos Llorente (Atletico Madrid), Pedro Porro (Tottenham)\n\nMidfielders:Pedri (Barcelona), Fabian Ruiz (PSG), Martin Zubimendi (Arsenal), Gavi (Barcelona), Rodri (Manchester City), Alex Baena (Atletico Madrid), Mikel Merino (Arsenal)\n\nForwards:Mikel Oyarzabal (Real Sociedad), Dani Olmo (Barcelona\n\n\u2022 Lamine Yamal Injury: Will the Spanish Star Start Against Saudi Arabia? - Sports Illustrated\n  https://www.si.com/soccer/lamine-yamal-injury-will-the-spanish-star-start-against-saudi-arabia\n  Without Yamal or his fellow direct winger Nico Williams available, De la Fuente fell into the trap of calling upon another central midfielder, Gavi on this occasion, to line up out wide. Ferran Torres wasn\u2019t an easy fit on the right either, robbing Spain almost entirely of any width until Yamal came off the bench.\n\nAgainst Cabo Verde, De la Fuente was curiously reluctant to use Victor Mu\u00f1oz, the Liverpool-bound 22-year-old who is the only other natural winger among Spain\u2019s ranks. Only three La Liga players attempted more than 200 dribbles during the 2025\u201326 season: Yamal, Vinicius Junior and M\n\n\u2022 Lamine Yamal says he's not fully fit and is unlikely to start in Spain's second World Cup game - Houston Chronicle\n  https://www.houstonchronicle.com/sports/article/lamine-yamal-says-he-s-not-fully-fit-and-is-22312719.php\n  Subscribe\n\nSports\n\n# Lamine Yamal says he's not fully fit and is unlikely to start in Spain's second World Cup game\n\nBy TALES AZZONI, AP Sports Writer\n\nLamine Yamal is not feeling 100% fit and is not likely to start for Spain in the match against Saudi Arabia on Sunday at the World Cup.\n\nYamal came into the tournament nursing a left hamstring injury and was only a substitute in the team's opener on Monday \u2014 a disappointing 0-0 draw against Cape Verde.\n\n\u201cI\u2019m fine, I feel good, but it"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Spain recent form and results",
+        "data": "\u2022 Reuters Spain at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/spain/\n  Follow Spain&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 Spain at the World Cup 2026: Squad, fixtures, group and history | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20d159556fdf-60d8385f463f-1000--spain-at-the-world-cup-2026-squad-fixtures-group-and-history/\n  Below you will find everything you need to know about Spain at the 2026 World Cup: their fixtures, squad, qualifying record, key players, coach and tournament history.\n\n\u2022 2026 FIFA World Cup Group H - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H\n  In the first half Spain&#x27;s Ferran Torres hit the bar with a shot from close range after a header back from Marc Cucurella on the left. In the second half Mikel Oyarzabal had a shot blocked by Pico. Late on Diney almost put Cape Verde into the lead when he headed a corner straight at Spanish goalkeeper Unai Simon with the game finishing 0\u20130 and producing one of the biggest shocks of the World Cup. ... The teams had previously faced each other thrice, most recently in Uruguay&#x27;s 1\u20130 win at the 2018 FIFA World Cup.\n\n\u2022 Spain at FIFA World Cup 2026: Results, All Players, Full Squad List, Key Stats and Schedule\n  https://www.whereig.com/football/world-cup/spain.html\n  Spain are the reigning FIFA World Cup holders from 2010 - their only title - but have built an extraordinarily deep squad and enter 2026 as one of the tournament favourites, seeded into Group H alongside Cape Verde, Saudi Arabia, and Uruguay. This page covers La Roja&#x27;s complete World Cup stats, records, top scorers, head-to-head results, the full 2026 squad, and their Group H schedule with the opener on June 15 in Atlanta.\n\n\u2022 Spain: 2026 FIFA World Cup Schedule, Results, Roster, Stats - NBC Sports\n  https://www.nbcsports.com/soccer/world-cup/spain\n  Full Spain schedule, results, roster, stats, news, highlights and more from the 2026 FIFA World Cup"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: Saudi Arabia recent form and results",
+        "data": "\u2022 Saudi Arabia | FIFA World Cup 2026\u2122\n  https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/saudi-arabia/team-news\n  Saudi Arabia | Visit FIFA.com to find the latest news, interviews, key stats, fixtures and results for the Saudi Arabia squad at FIFA World Cup 2026\u2122.\n\n\u2022 Reuters Saudi Arabia at the FIFA World Cup 2026: News, Fixtures, Results & Squad | Reuters\n  https://www.reuters.com/sports/soccer/world-cup/saudi-arabia/\n  Follow Saudi Arabia&#x27;s FIFA World Cup 2026 soccer news, fixtures, results, squad and group standings from Reuters, covering their path through the tournament.\n\n\u2022 2026 World Cup results, standings and schedule: Live scores, group stage updates and how to watch - Yahoo Sports\n  https://sports.yahoo.com/soccer/article/2026-world-cup-results-standings-and-schedule-live-scores-group-stage-updates-and-how-to-watch-050724193.html\n  Monday, June 15: Spain 0, Cape Verde 0 Monday, June 15: <strong>Saudi Arabia 1, Uruguay 1</strong> Sunday, June 21, 12 p.m. (Fox): Spain vs. Saudi Arabia, Mercedes-Benz Stadium (Atlanta) Sunday, June 21, 6 p.m. (FS1): Uruguay vs.\n\n\u2022 Saudi Arabia 2026 Results - ESPN\n  https://www.espn.com/soccer/team/results/_/id/655/saudi-arabia\n  Get all the Saudi Arabia results for the 2026 season on ESPN. Includes all the Saudi Arabia results from all national and international games.\n\n\u2022 2026 FIFA World Cup Group H - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H\n  The teams had previously faced each other thrice, most recently in Uruguay&#x27;s 1\u20130 win at the 2018 FIFA World Cup. In the 41st minute, Saudi Arabia went in front, Hassan Al-Tambakti&#x27;s header from a corner on the right was parried out by Uruguay keeper Fernando Muslera where Abdulelah Al-Amri finished the rebound with his right foot to the net from close range."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: head-to-head history and prior meetings",
+        "data": "\u2022 Spain vs Saudi Arabia Head to Head History - AiScore\n  https://www.aiscore.com/head-to-head/soccer-saudi-arabia-vs-spain\n  Last 5 , <strong>Spain Win 2 , Draw 3 , Lose 0 , Score Win Prob: 40.00% ,Asian Handicap Win%: 20.0% Total Goals Over%: 20.0%</strong> ... Last 5 , Saudi Arabia Win 1 , Draw 2 , Lose 2 , Score Win Prob: 20.00% ,Asian Handicap Win%: 60.0% Total Goals Over%: 40.0%\n\n\u2022 Spain vs. Saudi Arabia: Head-to-head record and past meetings ahead of 2026 World Cup fixture - Sports Mole\n  https://www.sportsmole.co.uk/football/spain/world-cup-2026/head-to-head/spain-vs-saudi-arabia-head-to-head-record-and-past-meetings_599579.html\n  The two teams have since met in friendlies, with <strong>Spain recording a 3-2 victory in May 2010 and then a 5-0 success in their last clash in September 2012.</strong> Sunday&#x27;s contest at the 2026 World Cup will represent just the second-ever competitive meeting ...\n\n\u2022 Spain vs. Saudi Arabia Head-to-Head in the World Cups\n  https://www.thesoccerworldcups.com/head_to_head/spain_vs_saudi_arabia.php\n  In the history of World Cups, Spain National Team faced Saudi Arabia in 1 opportunity, with <strong>1 win, 0 draws and 0 lossess</strong>.\n\n\u2022 Spain vs Saudi Arabia Head to Head, H2H Record, Goals & Meetings | FWC Times\n  https://fwctimes.com/spain-saudi-arabia-head-to-head/\n  The Spain vs Saudi Arabia head to head record sets the historical frame for Match 38 of World Cup 2026. <strong>Spain face Saudi Arabia at Atlanta Stadium on 21 Jun 2026</strong>.\n\n\u2022 Spain v Saudi Arabia: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021483\n  FIFA World Cup 2026\u2122 \u00b7 Group H \u2022 <strong>Match 38</strong> \u00b7 Spain \u00b7 16:00 \u00b7 Saudi Arabia \u00b7 Kick-off in: 0 days \u00b7 0 hrs \u00b7 30 min \u00b7 12 sec \u00b7 Spain \u00b7 16:00 \u00b7 Saudi Arabia \u00b7 21 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Atlanta \u25cfAtlanta Stadium \u00b7 ...\n\n\u2022 [Discussion] Saudi Arabia vs Spain will be fantastic, even though Spain is stronger. But have we forgotten what Saudi Arabia did against Argentina? It was unexpected\n  https://www.reddit.com/r/Jujutsufolk/comments/1u6pfyl/saudi_arabia_vs_spain_will_be_fantastic_even/\n  I just want america to be publicly humiliated on their home turf Shit will be so funny"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Baseline: group context and tournament stakes",
+        "data": "\u2022 Spain v Saudi Arabia: Line-ups, Score & Live Updates | First Stage | FIFA World Cup 2026\u2122 | FIFA\n  https://www.fifa.com/en/match-centre/match/17/285023/289273/400021483\n  FIFA World Cup 2026\u2122 \u00b7 <strong>Group H</strong> \u2022 Match 38 \u00b7 Spain \u00b7 16:00 \u00b7 Saudi Arabia \u00b7 Kick-off in: 0 days \u00b7 0 hrs \u00b7 30 min \u00b7 12 sec \u00b7 Spain \u00b7 16:00 \u00b7 Saudi Arabia \u00b7 21 Jun 2026 \u00b7 FIFA World Cup 2026\u2122 \u00b7 Atlanta \u25cfAtlanta Stadium \u00b7 ...\n\n\u2022 World Cup Group H standings 2026: Updated results, table and fixtures for Spain, Uruguay, Saudi Arabia, Cape Verde | Sporting News\n  https://www.sportingnews.com/us/soccer/news/world-cup-group-h-standings-results-table-2026/d90922c761921d99f9204088\n  <strong>Group H</strong>, which includes one of the world&#x27;s current top two team, houses many such talents. Here&#x27;s a look at the cluster that includes top-dog Spain as well as Cape Verde, Saudi Arabia and Uruguay.\n\n\u2022 Spain VS Saudi Arabia: Live Scores, Lineups, H2H & Odds\n  https://www.365scores.com/football/match/fifa-world-cup-5930/saudi-arabia-spain-5050-5087-5930\n  We cannot provide a description for this page right now\n\n\u2022 2026 FIFA World Cup Group H - Wikipedia\n  https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H\n  <strong>Group H</strong> of the 2026 FIFA World Cup is taking place from June 15 to 26, 2026. The group consists of Spain, Cape Verde, Saudi Arabia, and Uruguay. The top two teams, possibly along with the third-placed team, will advance to the round of 32. ... Updated to match(es) played on June 15, 2026.\n\n\u2022 2026 FIFA World Cup standings: Group stage table, results - CBS Sports\n  https://www.cbssports.com/soccer/news/world-cup-group-standings-table-results/\n  Monday, June 15 <strong>Spain 0, Cabo Verde 0 Saudi Arabia 1, Uruguay 1</strong>"
+      },
+      {
+        "source": "https://skim402.com/api/v2/read",
+        "cost": 0.002,
+        "reason": "Reads live tournament standings and group state data to evaluate progression and elimination scenarios.",
+        "data": "URL: https://www.soccerway.com/\nTitle: World Cup 2026, Football Live Scores, Latest Football Results | Soccerway (Soccer24)\n[![France gouvernement](https://static.flashscore.com/res/_fs/image/2_others/gambling_france_gouvernement.svg)\n\n#### Les jeux d\u2019argent et de hasard peuvent \u00eatre dangereux : pertes d\u2019argent, conflits familiaux, addiction\u2026\n\nRetrouvez nos conseils sur www.joueurs-info-service.fr (09-74-75-13-13, appel non surtax\u00e9)\n\n](https://www.joueurs-info-service.fr/)\n\n18+ | Erlaubtes Gl\u00fccksspiel gem\u00e4\u00df der Whitelist | Suchtrisiken | Hilfe unter [buwei.de](https://www.buwei.de/)\n\n18+. Verantwortungsbewusst wetten.\n\n18+ Jogue com responsabilidade\n\n21+ \u0423\u0447\u0430\u0441\u0442\u044c \u0432 \u0430\u0437\u0430\u0440\u0442\u043d\u0438\u0445 \u0456\u0433\u0440\u0430\u0445 \u043c\u043e\u0436\u0435 \u0432\u0438\u043a\u043b\u0438\u043a\u0430\u0442\u0438 \u0456\u0433\u0440\u043e\u0432\u0443 \u0437\u0430\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c. \u0414\u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b (\u043f\u0440\u0438\u043d\u0446\u0438\u043f\u0456\u0432) \u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u043e\u0457 \u0433\u0440\u0438\n\n**Stay on Top of Football with Live Scores, Stats, and Match Info on Soccerway and Soccer24**\n\nSoccerway is your go-to destination for everything football. Whether you\u2019re looking for real-time live scores, match results, league standings, or detailed head-to-head (H2H) statistics, Soccer 24 has you covered. Our platform covers hundreds of leagues and competitions from around the world, including the biggest names in football like Premier League, LaLiga, Serie A, Bundesliga, and Champions League.\n\nEach match page features essential insights such as line-ups, goal scorers, cards, substitutions, possession stats, xG data, and more. From club form to individual player ratings, Soccerway lets fans track their favourite teams and players across domestic and international competitions.\n\n**You can also explore**\n\n-   Full fixtures and results for all leagues\n-   In-depth team pages with performance data\n-   Player profiles including career stats and achievements\n-   Comprehensive league tables updated in real-time\n\nFrom weekend derbies to midweek thrillers, Soccerway (Soccer24) keeps you connected to the world of football wherever you are.\n\n**Football World Cup 2026 live** on Soccerway.com! Follow Mundial live scores, results, World Cup fixtures and World Cup standings.  \n21.06. [Spain - Saudi Arabia](https://www.soccerway.com/match/saudi-arabia-biSY8ox4/spain-bLyo6mco/), [Belgium - Iran](https://www.soccerway.com/match/belgium-GbB957na/iran-xrRx85iA/), 22.06. [Uruguay - Cape Verde](https://www.soccerway.com/match/cape-verde-MocyWdm7/uruguay-xMk44orG/), [New Zealand - Egypt](https://www.soccerway.com/match/egypt-bejDn7NN/new-zealand-rLctHkpU/), [Argentina - Austria](https://www.soccerway.com/match/argentina-f9OppQjp/austria-naHiWdnt/), [France - Iraq](https://www.soccerway.com/match/france-QkGeVG1n/iraq-K8aAGt6r/), 23.06. [Norway - Senegal](https://www.soccerway.com/match/norway-8rP6JO0H/senegal-hOIsJLJr/), [Jordan - Algeria](https://www.soccerway.com/match/algeria-nc87N1BR/jordan-vNcmJoU2/), [Portugal - Uzbekistan](https://www.soccerway.com/match/portugal-WvJrjFVN/uzbekistan-EZYKKRMc/), [England - Ghana](https://www.soccerway.com/match/england-j9N9ZNFA/ghana-nNBjHale/), 24.06. [Panama - Croatia]"
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Identifies tactical previews and manager press conference quotes detailing defensive strategies against Spain's wingers.",
+        "data": "\u2022 Spain vs. Saudi Arabia: Lamine Yamal and Nico Williams ready to turn sterile possession into World Cup statement - Sports Mole\n  https://www.sportsmole.co.uk/football/spain/world-cup-2026/feature/jitters-not-jeopardy-spain-bank-on-wide-threat-to-revive-world-cup-charge_599657.html\n  Without the stratospheric talent of Lamine Yamal to call on from the start or Nico Williams on the opposite flank, Spain relapsed into old habits of sterile possession.\n\n\u2022 Spain vs Saudi Arabia Preview, Lineups & Team News | RotoWire\n  https://www.rotowire.com/soccer/article/spain-vs-saudi-arabia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-h-118930\n  Spain&#x27;s most direct route to a goal is <strong>Lamine Yamal isolating his full-back and getting at the Saudi back line</strong>. If he can beat his man and pull defenders toward him, the spaces open for Oyarzabal and the late runners.\n\n\u2022 Spain vs Saudi Arabia, FIFA World Cup 2026 Live Score: Under-pressure Spain look to bounce back, Yamal named in the starting XI - The Times of India\n  https://timesofindia.indiatimes.com/sports/football/spain-vs-saudi-arabia-fifa-world-cup-2026-live-score-updates-national-football-team-match-today-fifa-cup-records-rankings-latest-news-lamine-yamal-salem-al-dawsari/liveblog/131892619.cms\n  The massive news out of the Spanish camp is confirmed: <strong>teenage superstar Lamine Yamal has been named in the starting XI by Luis de la Fuente, shaking off his hamstring issue to inject some much-needed magic into the attack.</strong>\n\n\u2022 Spain vs Saudi Arabia live updates: World Cup 2026 game latest news as Yamal starts - The Athletic\n  https://www.nytimes.com/athletic/live-blogs/spain-vs-saudi-arabia-live-updates-world-cup-2026-score-result/mgut3JIrqX66/\n  It is a clear statement from Luis ... Spain something they lacked in their opening draw: <strong>the ability to take on defenders on the right and change the rhythm of their attack</strong>....\n\n\u2022 Spain vs Saudi Arabia Prediction: Lineups, Picks & Best Bets World Cup 2026 Today Group H | FanDuel Research\n  https://www.fanduel.com/research/spain-vs-saudi-arabia-prediction-lineups-picks-and-best-bets-world-cup-2026-today-group-h\n  Tactical note: RotoWire: &quot;<strong>Spain&#x27;s most direct route to a goal is Lamine Yamal isolating his full-back and getting at the Saudi back line</strong>. If he can beat his man and pull defenders toward him, the spaces open for Oyarzabal and the late runners."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/brave",
+        "cost": 0.008,
+        "reason": "Uncovers historical patterns and tactical trends of Saudi Arabia playing against elite European nations.",
+        "data": "\u2022 2026 World Cup: All the European sides' group stage fixtures and results | European Qualifiers | UEFA.com\n  https://www.uefa.com/european-qualifiers/news/02a6-20c3aa0fafe2-4a6b4459a3fc-1000--2026-world-cup-all-the-european-sides-group-stage-fixtures-a/\n  Monday 15 June: D 0-0 vs Cabo Verde (Atlanta) <strong>Sunday 21 June: vs Saudi Arabia (Atlanta, 18:00)</strong> Saturday 27 June: vs Uruguay (Guadalajara, 02:00)\n\n\u2022 Saudi Arabia-North Macedonia | European Qualifiers 2026 | UEFA.com\n  https://www.uefa.com/european-qualifiers/friendlies/match/2045897--saudi-arabia-vs-north-macedonia/statistics/\n  Saudi Arabia vs <strong>North Macedonia</strong>: all the latest Friendly Matches match information including stats, form, history, and more.\n\n\u2022 Saudi Arabia-Serbia | European Qualifiers 2026 | UEFA.com\n  https://www.uefa.com/european-qualifiers/friendlies/match/2047751--saudi-arabia-vs-serbia/\n  Saudi Arabia vs Serbia: all the latest Friendly Matches match information including stats, form, history, and more.\n\n\u2022 Saudi Arabia live score, schedule & player stats | Sofascore\n  https://www.sofascore.com/football/team/saudi-arabia/4834\n  Video highlights are available for most popular football leagues: Spain La Liga BBVA league and Copa del Rey , Italy Serie and Coppa Italia, German Bundesliga and DFB pokal, France Ligue 1 and UEFA Champions League, Europa league and International tournaments like World Championship, European Championship. Sofascore live score has details for each team where you can see last 10 soccer matches, tables, fixtures, results, statistics and much more.\n\n\u2022 What is Saudi Arabia's current FIFA ranking ahead of its 2026 World Cup match vs Spain? - World Soccer Talk\n  https://worldsoccertalk.com/world-cup/what-is-saudi-arabias-current-fifa-ranking-ahead-of-its-2026-world-cup-match-vs-spain/\n  Spain enters the turf in Atlanta carrying the weight of being the reigning European champions and a clear tournament favorite. For Saudi Arabia, their position at 61st reflects a squad in transition, but their modern domestic growth has injected a pool of elite competitive experience into the national setup."
+      },
+      {
+        "source": "https://news-x402.com/news/recent",
+        "cost": 0.01,
+        "reason": "Retrieves immediate global news reporting on team environment, camps, and sudden flu/virus issues.",
+        "data": "{\"topic\":\"Spain Saudi Arabia World Cup camp illness unrest\",\"timespan_hours\":48,\"total_found\":0,\"articles\":[]}"
+      },
+      {
+        "source": "https://websearch--gw.swerver.net/search",
+        "cost": 0.01,
+        "reason": "Provides specific environmental stadium intelligence (A/C, altitude, humidity) and how it affects both playstyles.",
+        "data": "\u2022 The World Cup has brought plenty of concern over weather ...\n  https://www.facebook.com/TimesLIVE/posts/the-world-cup-has-brought-plenty-of-concern-over-weather-conditions-during-games/1444657687707667/\n  Spain will play Saudi Arabia in an air -conditioned stadium, a fan zone in Madrid has been cancelled due to the high temperatures Spain feels ...\n\n\u2022 Two World Cup matches were played in 'severe heat', analysis finds\n  https://www.theguardian.com/football/2026/jun/19/world-cup-matches-severe-heat-level-analysis\n  These games, despite being evening kick offs, were played amid wet-bulb temperatures of 28C (82F) or above, according to temperature and ...\n\n\u2022 Spain vs Saudi Arabia performance-impairing heat - Climate Central\n  https://www.climatecentral.org/world-cup-2026/matches/38\n  The June 21 match at Atlanta Stadium (Spain vs. Saudi Arabia) has a 77% chance of heat that can impair performance. heat above 28\u00b0C (82.4\u00b0F)\n\n\u2022 \ufe0f   Extreme heat, high humidity, and high-altitude venues could ...\n  https://www.facebook.com/Aspetar/videos/%EF%B8%8F-extreme-heat-high-humidity-and-high-altitude-venues-could-become-some-of-the-t/1319097800407562/\n  ... World Cup 2026. With matches taking ... Saudi Arabia FIFA World Cup 2034. Saudi Arabia FIFA ... \udb86\udc8f. Sports. No ...\n\n\u2022 r/worldcup - How hot will it be at the 2026 World Cup and is ... - Reddit\n  https://www.reddit.com/r/worldcup/comments/1ttq6in/how_hot_will_it_be_at_the_2026_world_cup_and_is/\n  It will be hot & humid - the thing is afternoon thunder & lightning - that could effect some matches."
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Provides real-time injury updates and fitness test results for key players like Rodri and Saudi creative outlets.",
+        "data": "\u2022 Spain's Lamine Yamal 'ready' but 'not the moment to play a full game' - ESPN\n  https://www.espn.com/soccer/story/_/id/49117759/lamine-yamal-spain-fitness-world-cup-2026\n  Yamal 'ready' but not the 'moment' to play full 90. The 2026 World Cup's wildest warmup kits: The good, the bad and the ugly. World Cup 2026 Power Rankings after one game: U.S. cracks top 10, but who is No. 1? All 48 teams in the World Cup have played once: It's time to overreact! Portugal have a Ronaldo problem (again) after Congo DR draw to open their World Cup. Kane and Bellingham put on a show in England's thrilling win over Croatia. # Spain's Lamine Yamal 'ready' but 'not the moment to play a full game'. Spain forward Lamine Yamal said that he's \"ready\" to play against Saudi Arabia on Sun\n\n\u2022 World Cup what to know: Spain and Belgium are looking for their 1st wins after opening with draws - The Washington Post\n  https://www.washingtonpost.com/sports/soccer/2026/06/20/world-cup-schedule-results-news/b2e2140c-6cef-11f1-830e-133d20cadd28_story.html\n  # World Cup what to know: Spain and Belgium are looking for their 1st wins after opening with draws. The World Cup closes out the weekend with eight teams looking for their first win of this year\u2019s tournament. Cabo Verde\u2019s Willy Semedo guards Spain\u2019s Lamine Yamal during the World Cup Group H soccer match between Spain and Cape Verde in Atlanta, Monday, June 15, 2026. Sunday\u2019s World Cup action features eight teams looking for their first win of this year\u2019s tournament. Rodri and Spain take on Abdulelah Al-Amri and Saudi Arabia in a Group H game in Atlanta. Romelu Lukaku and Belgium face Iran in \n\n\u2022 Spain starting XI projection: Who will play vs. Saudi Arabia at World Cup? - USA Today\n  https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/20/spain-lineup-saudi-arabia-world-cup/90627321007/\n  Saudi Arabia at World Cup? Spain entered the 2026 World Cup as one of the favorites to win the tournament, but things didn't go as expected for the reigning European champions in their opening group stage game. Spain was widely expected to crush World Cup debutant Cape Verde in its opening match. As a result, Spain will be facing significant pressure to deliver in its second group stage game against Saudi Arabia. But it also wouldn't at all be a surprise to see La Roja tinker with its starting lineup to try to spark its offense in a match that could determine Spain's potential for advancement.\n\n\u2022 Lamine Yamal Injury: Will the Spanish Star Start Against Saudi Arabia? - Sports Illustrated\n  https://www.si.com/soccer/lamine-yamal-injury-will-the-spanish-star-start-against-saudi-arabia\n  # Lamine Yamal Injury: Will the Spanish Star Start Against Saudi Arabia? Yamal is still managing his minutes after a hamstring tear back in April. Spain superstar Lamine Yamal has revealed that it is still \u201ctoo soon\u201d for him to play the full 90 minutes of a match. Yamal was only risked for the final 20 minutes of Spain\u2019s disappointing goalless stalemate with Cabo Verde\u2014and that was his first appearance of any kind since April. Luis de la Fuente has come under fire for his treatment of the teenage phenom in the past\u2014much to the evident chagrin of Barcelona boss Hansi Flick\u2014but is taking a cauti\n\n\u2022 Spain vs. Saudi Arabia live updates: World Cup 2026 score, news and highlights - New York Post\n  https://nypost.com/2026/06/21/sports/spain-vs-saudi-arabia-live-updates-world-cup-2026-score-news-and-highlights/\n  Switch between CA and NY editions here. #### Recommended. # Spain vs. Saudi Arabia live updates: World Cup 2026 score, news and highlights. Published  June 21, 2026, 11:00 a.m. ET. See more of our coverage in your search results. Add The New York Post on Google. Saudi Arabia is set to kick off at noon ET from Atlanta Stadium. Follow The Post\u2019s live updates for the latest Spain vs. Saudi Arabia score, news and highlights from the World Cup 2026. *Editor\u2019s Note: This live blog is updated with the assistance of AI, with oversight from the "
+      },
+      {
+        "source": "https://api.signalfuse.co/v1/gateway/search/tavily",
+        "cost": 0.012,
+        "reason": "Fetches advanced performance analytics and expected goals metrics from the opening Matchday.",
+        "data": "\u2022 Spain vs. Saudi Arabia - Live Score - June 21, 2026 - FOX Sports\n  https://www.foxsports.com/soccer/fifa-world-cup-men-spain-vs-saudi-arabia-jun-21-2026-game-boxscore-647652\n  ## Spain vs Saudi Arabia. Saudi Arabia faces group favorite Spain in Atlanta Stadium. # Spain vs. Saudi Arabia: Jun 21, 2026. ## MATCHUP## ODDS## STANDINGS. Team Feature: Saudi Arabia | Donis Feels The Pride Of The Green Falcons. Team Feature: Spain | It Is All About Staying Together As A Family For Spain's Stars. | 6/15 | CPV | D0-0 |. | 6/8 | PER (H) | W3-1 |. | 3/31 | EGY (H) | D0-0 |. | 6/5 | PUR (H) | W3-0 |. | 3/31 | SRB (A) | L2-1 |. 0.0 Goals per Game 1.0. 1.5 Expected Goals (xG) per Game 1.0. 23.0 Shots per Game 7.0. 16.0 Chances Created per Game 3.0. A bet of $1,064 would win $1,164 \n\n\u2022 Spain vs. Saudi Arabia World Cup prediction: Odds, picks, best bets for Sunday\u2019s match - New York Post\n  https://nypost.com/2026/06/21/betting/spain-vs-saudi-arabia-world-cup-prediction-odds-picks-best-bet-for-sundays-match/\n  Saudi Arabia World Cup prediction: Odds, picks, best bets for Sunday\u2019s match. It wasn\u2019t the start to the World Cup that anyone expected for Spain, which opened as the favorites to win the tournament for the second time. They did everything with the ball but put it in the net, putting seven shots on goal while completing 91.8 percent of their passes \u2014\u00a0the highest clip of Matchday 1. Is there enough to believe that it can change in Sunday\u2019s match against Saudi Arabia? The Green Falcons also settled for a 1-1 draw in their opener with Uruguay, showcasing a mid-to-low block that forced the Uruguay\n\n\u2022 Spain vs Saudi Arabia Preview, Props, & Predictions I 6/21/2026 - Deadspin\n  https://deadspin.com/betting/spain-vs-saudi-arabia-world-cup-betting-preview-lines-predictions-6-21-2026/\n  - World Cup Golden Ball Betting. - World Cup Golden Glove Betting. - Free Sports Betting for Real Money. - Play Free Online Slots for Real Money. - Crown Coins Casino Promo Code. - The Boss Casino Promo Code. - High 5 Casino Promo Code. # Spain vs Saudi Arabia World Cup Betting Preview, Lines & Predictions (6/21/2026). Spain\u2019s 1-1 draw with Cape Verde was the shock result of the World Cup so far. The favorites entering the tournament couldn\u2019t find a way to get past the determined debutant, and now need to kickstart their campaign against Saudi Arabia. ## Spain vs Saudi Arabia Match Preview. Wi\n\n\u2022 Spain vs Saudi Arabia Prediction: Spain\u2019s First Win Since 2022 - Telecom Asia Sport\n  https://www.telecomasia.net/sports-betting/tips/football/spain-vs-saudi-arabia-prediction-for-the-match-on-june-21st-2026/\n  # Spain vs Saudi Arabia: Prediction for the Match on June 21st, 2026. # Spain vs Saudi Arabia Prediction: Spain\u2019s First Win Since 2022. Image 3: Spain vs Saudi Arabia Prediction for the Match on June 21st 2026. In a high-stakes Group H encounter, Spain's La Roja will face off against Saudi Arabia's Green Falcons at the Mercedes Benz Stadium. La Rojas is showing steady but somewhat laboured form, mostly highlighted by a shocking 0-0 draw against World Cup debutants Cape Verde in their opening Group H match While Luis de la Fuente men dominated possession 74% and 23 shots, they were unable to be\n\n\u2022 Saudi Arabia 1-1 Uruguay (Jun 15, 2026) Game Analysis - ESPN\n  https://www.espn.com/soccer/report/_/gameId/760429\n  # Saudi Arabia vs. Uruguay (Jun 15, 2026) Live Score - ESPN. *   Image 8: Watch ESPN Watch. # Saudi Arabia v Uruguay. Image 12: Saudi Arabia4-4-2Image 13: Uruguay4-2-3-1. Kanno M 1 SOG, 0.11 xG 2Total Shots5 F. Vi\u00f1as F 3 SOG, 0.50 xG 532 M. Olivera D 102 PASS, 1 BCC 9912 M. Al-Harbi D 1 TKLW, 6 DUELW 12Defensive Interventions9 M. Olivera D 1 TKLW, 8 DUELW 98 M. Al-Owais G 9 SOGA, 1.56 xGC 8Saves2 F. Muslera G 3 SOGA, 0.99 xGC 2. | Spain | 1 | 0 | 1 | 0 | 0 | 1 |. Egypt, Lukaku's display was a reminder of how valuable experience can be at the World Cup. 1hImage 44: World Cup Daily Live: Uruguay"
+      }
+    ],
+    "research_cost": 0.118,
+    "wallet_before": 0.384,
+    "wallet_after": 0.266,
+    "prediction": {
+      "pick": "draw",
+      "confidence": 4,
+      "confidence_reason": "Severe Atlanta heat and Spain's key attacker Lamine Yamal being unfit cap the confidence in a decisive outcome.",
+      "reasoning": "Spain's high-possession style is likely to be neutralized by Saudi Arabia's disciplined low block in oppressive weather conditions, leading to a low-scoring draw.",
+      "probabilities": {
+        "home": 38,
+        "draw": 42,
+        "away": 20
+      }
+    },
+    "evidence_synthesis": {
+      "data_quality": "high",
+      "home_form": "Spain dominated possession with 74% and registered 23 shots but suffered a disappointing 0-0 draw against Cape Verde in their Group H opener.",
+      "away_form": "Saudi Arabia secured a commendable 1-1 draw against Uruguay in their opening match, utilizing a disciplined defensive structure.",
+      "key_injuries": [
+        "Lamine Yamal (Spain) - Managing a left hamstring injury; although named in the projected starting XI, he has stated he is not 100% fit and unlikely to play a full 90 minutes."
+      ],
+      "tactical_matchup": "Spain's high-possession 4-3-3, bolstered by the return of direct wingers Lamine Yamal and Nico Williams, faces Saudi Arabia's compact and disciplined 4-4-2 mid-to-low block under Georgios Donis.",
+      "group_stakes": "With all four teams in Group H currently tied on 1 point, both Spain and Saudi Arabia urgently need a victory to secure a clear path to the Round of 32.",
+      "home_win_signals": [
+        "The return of natural wingers Lamine Yamal and Nico Williams provides Spain with the direct dribbling and width they lacked in their sterile opening draw.",
+        "Spain's defense remains exceptionally solid, having conceded only two goals across their previous five matches.",
+        "Spain completed 91.8% of their passes in Matchday 1, demonstrating elite control and chance creation (16 chances created) despite failing to score."
+      ],
+      "away_win_signals": [
+        "Saudi Arabia's defensive block successfully neutralized Uruguay's attack, holding them to a 1-1 draw.",
+        "Severe heat and high humidity in Atlanta (77% chance of performance-impairing heat above 28\u00b0C) could sap Spain's energy and disrupt their high-tempo passing game."
+      ],
+      "draw_signals": [
+        "Spain has a documented history of struggling to break down deep-seated, disciplined defensive setups, as seen in recent scoreless draws against Cape Verde and Egypt.",
+        "Lamine Yamal's lack of full match fitness means Spain may lack their most potent attacking spark for the full 90 minutes, potentially leading to another frustrating stalemate."
+      ],
+      "contradictions": [
+        "While some media projections and team sheets confirm Lamine Yamal is starting to inject magic into the attack, Yamal himself publicly stated he is not 100% fit and is unlikely to start or play a full game."
+      ],
+      "strategy_applied": [
+        "ESP vs CPV: Low-block over possession (applied to analyze Spain's vulnerability to Saudi Arabia's compact defensive structure despite dominating possession).",
+        "KSA vs URU: Heat/squad over history (applied to prioritize the severe Atlanta heat conditions and squad physical readiness over historical head-to-head records)."
+      ]
+    },
+    "stress_test": {
+      "blind_spots": [
+        "Overestimating the immediate impact of Lamine Yamal and Nico Williams, ignoring Yamal's public admission of not being 100% fit and the high likelihood of his limited minutes.",
+        "Equating Spain's 91.8% passing accuracy and 16 chances created with offensive efficiency, overlooking their systemic tendency toward sterile possession against low blocks."
+      ],
+      "underweighted_factors": [
+        "The severe Atlanta heat and humidity (77% chance of impairment) which disproportionately drains a high-tempo, possession-based team like Spain compared to a low-block, energy-conserving Saudi Arabia.",
+        "Saudi Arabia's proven defensive stability under Georgios Donis, which successfully neutralized Uruguay and is well-suited to exploit Spain's lack of physical penetration."
+      ],
+      "draw_risk": "high \u2014 Spain's chronic inability to break down deep defensive structures, coupled with oppressive weather and an unfit primary creative outlet, strongly points to another frustrating stalemate.",
+      "favorite": "none",
+      "confidence_cap": 4,
+      "verdict": "Spain's high-possession model is highly vulnerable to being neutralized by Saudi Arabia's disciplined low block in punishing heat, especially with Spain's key winger unfit to play a full match."
+    },
+    "full_reasoning": "HOME_PCT: 38\nDRAW_PCT: 42\nAWAY_PCT: 20\nPICK: draw\nCONFIDENCE: 4\nCONFIDENCE_REASON: Severe Atlanta heat and Spain's key attacker Lamine Yamal being unfit cap the confidence in a decisive outcome.\nREASONING: Spain's high-possession style is likely to be neutralized by Saudi Arabia's disciplined low block in oppressive weather conditions, leading to a low-scoring draw.",
+    "retroactive": false,
+    "result": null,
+    "correct": null,
+    "evaluation": null,
+    "reflected": false
   }
 ]
