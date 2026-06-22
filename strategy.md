@@ -34,8 +34,9 @@
 - TUN vs JPN: Depth over absences.
 - ESP vs KSA: Transition over block.
 - BEL vs IRN: Low-block and key absences over possession.
+- URU vs CPV: Transition over history.
 
 ## Data sources
-- use: Analytics (https://api.signalfuse.co/v1/gateway/search/tavily) — tactics (BEL vs IRN)
-- skip: Climate (https://websearch--gw.swerver.net/search) — venue (BEL vs IRN)
-- skip: History (https://api.signalfuse.co/v1/gateway/search/brave) — history (BEL vs IRN)
+- use: Tactics (https://api.signalfuse.co/v1/gateway/search/brave) — transition pace (URU vs CPV)
+- skip: History (https://api.signalfuse.co/v1/gateway/search/brave) — head-to-head (URU vs CPV)
+- skip: Climate (https://websearch--gw.swerver.net/search) — venue fatigue (URU vs CPV)

@@ -11607,9 +11607,15 @@
     },
     "full_reasoning": "HOME_PCT: 38\nDRAW_PCT: 44\nAWAY_PCT: 18\nPICK: draw\nCONFIDENCE: 6\nCONFIDENCE_REASON: Cape Verde's proven low-block resilience against Spain and Uruguay's severe defensive absences and inefficient shot conversion strongly support a low-scoring stalemate.\nREASONING: Cape Verde's disciplined defensive block and goalkeeper Vozinha's form are perfectly suited to frustrate a depleted Uruguayan side that struggles with low-quality chance creation.",
     "retroactive": false,
-    "result": null,
-    "correct": null,
-    "evaluation": null,
-    "reflected": false
+    "result": {
+      "home_score": 2,
+      "away_score": 2,
+      "winner": "draw"
+    },
+    "correct": true,
+    "evaluation": "DATA:\n- useful: https://skim402.com/api/v2/read \u2014 Identified Uruguay's historical tactical vulnerability and struggles when facing disciplined, athletic low-blocks.\n- useful: https://api.signalfuse.co/v1/gateway/search/brave (Cape Verde tactics) \u2014 Correctly highlighted Cape Verde's pace in transition to exploit Uruguay's defensive vulnerabilities.\n- useless: https://api.signalfuse.co/v1/gateway/search/brave (head-to-head) \u2014 Provided zero value because there were no relevant prior competitive fixtures between these nations.\n- useless: https://websearch--gw.swerver.net/search \u2014 Climate and venue fatigue analysis had no bearing on the open, high-scoring 2-2 result.",
+    "reflected": true,
+    "reflected_at": "2026-06-22T00:30:17.540063+00:00",
+    "strategy_after": "# Strategy\n\n## Rules\n- BRA vs MAR: Defense over attack.\n- AUS vs TUR: Low-block over possession.\n- NED vs JPN: Resilience over volume.\n- QAT vs SUI: Compactness over reputation.\n- GER vs CUW: Form over history.\n- CIV vs ECU: Fitness over risk.\n- SWE vs TUN: Efficiency over low-block.\n- ESP vs CPV: Low-block over possession.\n- BEL vs EGY: Discipline over favorite.\n- KSA vs URU: Heat/squad over history.\n- IRN vs NZL: Fatigue over quality.\n- FRA vs SEN: Fitness over venue.\n- IRQ vs NOR: Multi-attack over stars.\n- ARG vs ALG: Fitness over venue.\n- AUT vs JOR: Transition over history.\n- POR vs COD: Weather over tempo.\n- ENG vs CRO: Transition over microclimate.\n- GHA vs PAN: Aerials over low-block.\n- UZB vs COL: Midfield over environment.\n- CZE vs RSA: Defense over physical.\n- SUI vs BIH: Squad over venue.\n- CAN vs QAT: Turf over counter.\n- MEX vs KOR: Transition inefficiency over passive defense.\n- USA vs AUS: Pressing over low-block.\n- SCO vs MAR: Quality over motivation.\n- BRA vs HAI: Wingers over low-block.\n- TUR vs PAR: Block over midfield.\n- NED vs SWE: Home over attack.\n- GER vs CIV: Freshness over history.\n- ECU vs CUW: Heat over quality.\n- TUN vs JPN: Depth over absences.\n- ESP vs KSA: Transition over block.\n- BEL vs IRN: Low-block and key absences over possession.\n- URU vs CPV: Transition over history.\n\n## Data sources\n- use: Tactics (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 transition pace (URU vs CPV)\n- skip: History (https://api.signalfuse.co/v1/gateway/search/brave) \u2014 head-to-head (URU vs CPV)\n- skip: Climate (https://websearch--gw.swerver.net/search) \u2014 venue fatigue (URU vs CPV)"
   }
 ]
